@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+
+<article>
+    <header>
+        <h1>{{ title }}</h1>
+        {% if date %}
+        <time>{{ date }}</time>
+        {% endif %}
+        {% if tags and tags.length > 0 %}
+        <div class="tags">
+            {% for tag in tags %}
+                {% if tag != "posts" %}
+                <span class="tag">{{ tag }}</span>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+    
+    <div class="content">
+        {{ content | safe }}
+    </div>
+</article>
+
