@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npx eleventy && npx tailwindcss -i ./src/css/style.css -o ./_site/css/style.css --minify",
+    "build:css": "npx tailwindcss -i ./src/css/style.css -o ./_site/css/style.css",
+    "start": "npm run dev",
+    "dev": "concurrently \"npx eleventy --serve\" \"npx tailwindcss -i ./src/css/style.css -o ./_site/css/style.css --watch\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +24,10 @@
   "homepage": "https://github.com/dvdwinden/danielvdwww#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "concurrently": "^9.1.2",
+    "tailwindcss": "^3.4.16"
   }
 }
