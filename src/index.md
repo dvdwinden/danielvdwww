@@ -6,9 +6,9 @@ description: Daniel's personal website
 <section class="introduction">
   I'm an Amsterdam-based (software) designer and writer with a decade of experience designing digital products, leading teams, and setting direction. I've managed and mentored a team of designers, and I've worked with clients of all sizes, from a variety of industries. 
 
-  I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
-
   Most recently I worked for [Ghost](http://ghost.org "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
+
+  I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
 
   I'm currently open to new opportunities (contract or permanent). 
 
