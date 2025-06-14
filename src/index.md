@@ -21,7 +21,7 @@ description: Daniel's personal website
       <span class="md:w-1/4 text-gray-400 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
         <div class="text-xl font-bold font-sans">
-          <h3>Senior Designer at Ghost</h3>
+          <h3>Senior Designer at <a href="http://ghost.org" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
         </div>
       </div>
     </li>
@@ -80,12 +80,20 @@ description: Daniel's personal website
 ## Design
 As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for, and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a landing page.
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none">
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
-  <figcaption>Improved publishing flow in Ghost</figcaption>
+    <figcaption>Improved publishing flow in Ghost</figcaption>
+  </figure>
+
+  <figure class="w-[576px] mr-auto my-24">
+    {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
   </figure>
 </div>
+
+<figure class="w-[576px] ml-auto my-48">
+  {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+</figure>
 
 ## Management
 In an agency setting I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
