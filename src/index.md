@@ -95,8 +95,40 @@ As a designer I'm at my best when thinking holistically, setting direction and s
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
 
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
+  <figure>
+    {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
+    <figcaption>UI for IKEA’s circular rental solution</figcaption>
+  </figure>
+
+  <figure class="w-[576px] mr-auto my-24">
+    {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+  </figure>
+</div>
+
+<figure class="w-[576px] ml-auto my-48">
+  {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+</figure>
+
+
+
 ## Management
 In an agency setting I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
 
 ## Writing
 I've always been interested in writing; short or long-form. I primarily write essays, reviews, and a dash of auto-fiction. I've published two pieces in my magazine, [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine"), and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). Most recently I've acted as the copywriter and editor on the [NoGood](https://book.nogood.studio/ "The NoGood art book") art book.
+
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
+  <figure>
+    {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
+    <figcaption>TRANSCRIPT magazine</figcaption>
+  </figure>
+
+  <figure class="w-[576px] mr-auto my-24">
+    {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+  </figure>
+</div>
+
+<figure class="w-[576px] ml-auto my-48">
+  {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+</figure>
