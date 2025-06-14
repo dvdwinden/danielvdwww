@@ -80,6 +80,7 @@ article time {
 .resume ul li span {
     font-weight: 400;
     color: theme('colors.gray.400');
+    font-family: theme('fontFamily.sans');
 }
 
 .resume ul li:last-child {
@@ -87,6 +88,19 @@ article time {
 }
 
 ::selection {
-    background: #fff9a8;   /* Soft yellow, like a marker */
-    color: #222;           /* Dark text for good contrast */
+    background: #fff9a8;  
+    color: #222;           
+}
+
+.prose a:hover, .prose a:focus {
+    background: #fff9a8;
+    color: #222;
+    transition: background 0.2s, color 0.2s;
+}
+
+.prose a {
+    text-decoration: underline;
+    text-decoration-color: #999;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }

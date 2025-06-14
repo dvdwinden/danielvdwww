@@ -7,11 +7,26 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: [
+          'Degular Demo', // For headings
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'sans-serif'
+        ],
+        'degular-text': [
+          'Degular Text Demo', // For small/body text
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'sans-serif'
+        ],
         serif: ['Blanco Trial', 'Times New Roman', 'Times', 'Georgia', 'serif'],
-        sans: ['Degular Demo', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       fontSize: {
-        lg: '1.25rem', // 20px
+        sm: '1rem', // 16px
+        base: '1.25rem', // 20px
+        lg: '1.375rem', // 22px
       },
       lineHeight: {
         normal: '1.5', // 150%

@@ -31,7 +31,7 @@ description: Daniel's personal website
         <div class="text-xl font-bold font-sans">
           <h3>CDO, Partner at <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
-        <div class="text-gray-500 mt-2 font-sans">
+        <div class="text-gray-500 mt-2 font-degular-text text-sm">
           As Partner, I was involved in setting the company's strategy. As CDO, I focused on our Product Design work and team—from securing projects to hiring new team members, and from elevating our reputation externally to enabling Product Designers to do their best work.
         </div>
       </div>
@@ -42,7 +42,7 @@ description: Daniel's personal website
         <div class="text-xl font-bold font-sans">
           <h3>Designer, Head of <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
         </div>
-        <div class="text-gray-500 mt-2 font-sans">
+        <div class="text-gray-500 mt-2 font-degular-text text-sm">
           Built a multi-disciplinary team of up to 20 people, mentored designers and other team members and helped the company take root in the Netherlands.
         </div>
       </div>
@@ -69,7 +69,7 @@ description: Daniel's personal website
         <div class="text-xl font-bold font-serif">
           <h3>Internship at Faster Forward Interactive</h3>
         </div>
-        <div class="text-gray-500 mt-2 font-sans">
+        <div class="text-gray-500 mt-2 font-degular-text text-sm">
           Followed by a stint as part-time front-end developer.
         </div>
       </div>
@@ -84,4 +84,4 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 In an agency setting I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
 
 ## Writing
-I've always been interested in writing; short or long-form. I primarily write essays, reviews, and a dash of auto-fiction. I've published two pieces in my magazine, [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine"), and write a monthly newsletter about the books I loved reading, called [_Trema_](http://trema.website "Trema"). Most recently I've acted as the copywriter and editor on the [_NoGood_](https://book.nogood.studio/ "The NoGood art book") art book.
+I've always been interested in writing; short or long-form. I primarily write essays, reviews, and a dash of auto-fiction. I've published two pieces in my magazine, [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine"), and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). Most recently I've acted as the copywriter and editor on the [NoGood](https://book.nogood.studio/ "The NoGood art book") art book.
