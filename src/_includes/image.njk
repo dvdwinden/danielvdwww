@@ -1,0 +1,18 @@
+{% macro img(src, alt, sizes="(min-width: 1024px) 100vw, 50vw", class="") %}
+  <div class="{{ class }}">
+    {% image src, alt, sizes %}
+  </div>
+{% endmacro %}
+
+{% macro retinaImg(src, alt, maxWidth=600, class="") %}
+  <div class="{{ class }}">
+    {% retinaImage src, alt, maxWidth %}
+  </div>
+{% endmacro %}
+
+{% macro avatar(src, alt, size=100, class="") %}
+  <div class="{{ class }}">
+    {% retinaImage src, alt, size %}
+  </div>
+{% endmacro %}
+
