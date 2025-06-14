@@ -97,18 +97,18 @@ As a designer I'm at my best when thinking holistically, setting direction and s
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
+<div class="relative w-full px-4 sm:px-0 left-1/2 right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:w-screen sm:max-w-none mt-24 sm:mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
     <figcaption>UI for IKEA's circular rental solution</figcaption>
   </figure>
 
-  <figure class="w-full sm:w-[576px] mr-auto my-12">
+  <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
     {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
   </figure>
 </div>
 
-<figure class="w-full sm:w-[576px] ml-auto my-24">
+<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
 
