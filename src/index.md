@@ -80,35 +80,35 @@ description: Daniel's personal website
 </section>
 
 ## Design
-As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for, and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a landing page.
+As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for, and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
+<div class="relative w-full px-4 sm:px-0 left-1/2 right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:w-screen sm:max-w-none mt-24 sm:mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
     <figcaption>Improved publishing flow in Ghost</figcaption>
   </figure>
-
-  <figure class="w-[576px] mr-auto my-24">
-    {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
-  </figure>
 </div>
 
-<figure class="w-[576px] ml-auto my-48">
+<figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
+  {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+</figure>
+
+<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
 
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
-    <figcaption>UI for IKEA’s circular rental solution</figcaption>
+    <figcaption>UI for IKEA's circular rental solution</figcaption>
   </figure>
 
-  <figure class="w-[576px] mr-auto my-24">
+  <figure class="w-full sm:w-[576px] mr-auto my-12">
     {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
   </figure>
 </div>
 
-<figure class="w-[576px] ml-auto my-48">
+<figure class="w-full sm:w-[576px] ml-auto my-24">
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
 
@@ -126,11 +126,11 @@ I've always been interested in writing; short or long-form. I primarily write es
     <figcaption>TRANSCRIPT magazine</figcaption>
   </figure>
 
-  <figure class="w-[576px] mr-auto my-24">
+  <figure class="w-full sm:w-[576px] mr-auto my-12">
     {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
   </figure>
 </div>
 
-<figure class="w-[576px] ml-auto my-48">
+<figure class="w-full sm:w-[576px] ml-auto my-24">
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
