@@ -7,7 +7,7 @@
     <meta name="description" content="Daniel&#39;s personal website">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="min-h-screen bg-beige text-gray-900 font-sans overflow-x-hidden">
+<body class="min-h-screen bg-beige dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
     <header class="fixed top-0 left-0 z-50 p-6">
         <div class="flex items-center space-x-4">
             <picture><source type="image/avif" srcset="/img/BFHfLjqEbk-20.avif 20w, /img/BFHfLjqEbk-40.avif 40w" sizes="20px"><source type="image/webp" srcset="/img/BFHfLjqEbk-20.webp 20w, /img/BFHfLjqEbk-40.webp 40w" sizes="20px"><img src="/img/BFHfLjqEbk-20.jpeg" alt="Avatar of Daniël van der Winden" loading="lazy" decoding="async" width="40" height="40" srcset="/img/BFHfLjqEbk-20.jpeg 20w, /img/BFHfLjqEbk-40.jpeg 40w" sizes="20px"></picture>
@@ -15,6 +15,10 @@
                 Daniël van der Winden
             </a>
         </div>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="ml-4">
+            <span id="dark-icon">🌙</span>
+            <span id="light-icon" class="hidden">☀️</span>
+        </button>
     </header>
 
     <nav class="fixed bottom-0 left-0 z-50 p-6">
@@ -164,8 +168,13 @@
             <li>
                 <a href="/colophon" title="Colophon">Colophon</a>
             </li>
+            <li>
+                <a href="/feed.xml" rel="external" target="_blank" title="RSS">RSS</a>
+            </li>
         </ul>
     </footer>
+
+    <script src="/assets/dark-mode.js"></script>
 
 </html>
 
