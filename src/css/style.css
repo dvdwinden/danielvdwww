@@ -43,6 +43,10 @@ article time {
     line-height: theme('lineHeight.normal');
 }
 
+.prose-invert {
+    color: #f9f9f9;
+}
+
 .prose h1,
 .prose h2,
 .prose h3,
