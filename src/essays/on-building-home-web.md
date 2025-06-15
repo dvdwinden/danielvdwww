@@ -1,9 +1,9 @@
 ---
 layout: base.njk
-title: Creating a home on the web
+title: On building a home on the web
 date: 2022-02-26
 tags: [posts, hello-world, getting-started]
-description: Welcome to my new blog built with Eleventy
+description: About the decline & revival of the personal website, and on the progress our tools have made.
 ---
 
 Welcome to my first blog post! I'm excited to start sharing my thoughts and experiences here.

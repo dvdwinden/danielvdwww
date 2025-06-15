@@ -7,7 +7,7 @@ deleteme: true
 
 # Essays
 
-Essays...
+A collection of my longer-form writing and explorations.
 
 <ul class="divide-y divide-dotted divide-gray-300 blog">
   {% for post in collections.essays %}
