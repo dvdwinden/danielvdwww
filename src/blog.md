@@ -25,8 +25,3 @@ A collection of my latest writing, thoughts, and resources.
   {% endfor %}
 </ul>
 
-
----
-
-This page is regularly updated. *Last updated: June 2024*
-

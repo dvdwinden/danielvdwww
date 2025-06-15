@@ -109,10 +109,6 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("writing", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/writing/*.md").sort((a, b) => b.date - a.date);
-  });
-
   eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });
