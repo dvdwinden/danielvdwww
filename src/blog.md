@@ -1,10 +1,10 @@
 ---
 layout: base.njk
-title: Links
+title: Blog
 description: Useful links and resources
 ---
 
-# Links
+# Blog
 
 A collection of useful links, tools, and resources I find valuable.
 

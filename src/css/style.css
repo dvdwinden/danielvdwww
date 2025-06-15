@@ -56,6 +56,12 @@ article time {
     font-family: theme('fontFamily.sans');
 }
 
+.prose h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
 .prose h2 {
     font-size: 1.5rem;
     font-weight: 500;

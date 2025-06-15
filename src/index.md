@@ -3,6 +3,8 @@ layout: base.njk
 title: Daniël van der Winden | Software designer, writer
 description: Daniel's personal website
 ---
+
+# Work
 <section class="introduction">
   I'm an Amsterdam-based (software) designer and writer with a decade of experience designing digital products, leading teams, and setting direction. I've managed and mentored a team of designers, and I've worked with clients of all sizes, from a variety of industries. 
 
@@ -16,7 +18,7 @@ description: Daniel's personal website
 </section>
 
 <section class="resume">
-  <h2>Resume</h2>
+  <h2>Resumé</h2>
 
   <ul class="pl-0 ml-0 list-none space-y-10">
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8  pb-8 pl-0 ml-0 border-b border-black border-opacity-5  dark:border-white dark:border-opacity-5">
@@ -118,7 +120,9 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 In an agency setting I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
 
 ## Writing
-I've always been interested in writing; short or long-form. I primarily write essays, reviews, and a dash of auto-fiction. I've published two pieces in my magazine, [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine"), and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). Most recently I've acted as the copywriter and editor on the [NoGood](https://book.nogood.studio/ "The NoGood art book") art book.
+I've always been interested in writing; short or long-form. I primarily write essays, reviews, and a dash of auto-fiction. I've published two pieces in my magazine, [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine"), and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). 
+
+Most recently I've acted as the copywriter and editor on the [NoGood](https://book.nogood.studio/ "The NoGood art book") art book.
 
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
