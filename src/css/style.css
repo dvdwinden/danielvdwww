@@ -199,3 +199,13 @@ footer ul li a:hover {
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
+
+/* Scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
