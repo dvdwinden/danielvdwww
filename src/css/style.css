@@ -128,7 +128,6 @@ article time {
 
 
 /* Navigation */
-
 nav ul li a:hover {
     color: theme('colors.gray.900');
     transition: color 0.2s;
@@ -137,6 +136,13 @@ nav ul li a:hover {
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     cursor: pointer;
+}
+
+nav .underline-custom {
+    text-decoration: underline;
+    text-decoration-color: theme('colors.gray.400');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 /* Introduction */

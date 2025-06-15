@@ -15,7 +15,7 @@
     <meta name="description" content="{{ description or site.description }}">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="min-h-screen bg-beige dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
+<body class="min-h-screen bg-beige dark:bg-[#222] text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
     <header class="fixed top-0 left-0 z-50 p-6 flex justify-between w-full">
         <div class="flex items-center space-x-4">
             {% retinaImage "src/assets/daniel.png", "Avatar of Daniël van der Winden", 20, "rounded-full" %}
@@ -32,18 +32,56 @@
     <nav class="fixed bottom-0 left-0 z-50 p-6">
         <div class="p-4">
             <ul class="space-y-3 text-lg font-serif">
-                <li><a href="/" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Home</a></li>
-                <li><a href="/now" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Now</a></li>
-                <li><a href="/newsletter" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Newsletter</a></li>
-                <li><a href="/links" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Links</a></li>
-                <li><a href="/reading" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Reading</a></li>
-                <li><a href="/watching" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Watching</a></li>
-                <li><a href="http://transcriptmag.store" rel="external" target="_blank" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Magazine</a></li>
+                <li>
+                    <a href="/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       {% if page.url == '/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                        Work
+                    </a>
+                </li>
+                <li>
+                    <a href="/now/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       {% if page.url == '/now/' %} underline underline-custom  text-black dark:text-white {% endif %}">
+                        Now
+                    </a>
+                </li>
+                <li>
+                    <a href="/newsletter/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       {% if page.url == '/newsletter/' %} underline underline-custom  text-black dark:text-white {% endif %}">
+                        Newsletter
+                    </a>
+                </li>
+                <li>
+                    <a href="/links/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       {% if page.url == '/links/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                        Links
+                    </a>
+                </li>
+                <li>
+                    <a href="/reading/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       {% if page.url == '/reading/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                        Reading
+                    </a>
+                </li>
+                <li>
+                    <a href="/watching/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       {% if page.url == '/watching/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                        Watching
+                    </a>
+                </li>
+                <li>
+                    <a href="http://transcriptmag.store" rel="external" target="_blank" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Magazine</a>
+                </li>
             </ul>
         </div>
     </nav>
     
-    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 pb-20 px-6 lg:px-12 flex-1 flex justify-end max-w-full bg-beige dark:bg-gray-900">
+    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 pb-20 px-6 lg:px-12 flex-1 flex justify-end max-w-full bg-beige dark:bg-[#222]">
         <div class="max-w-xl prose prose-lg max-w-none font-serif pt-[25vh] dark:prose-invert">
             {{ content | safe }}
         </div>

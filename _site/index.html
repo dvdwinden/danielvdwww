@@ -11,7 +11,7 @@
     <meta name="description" content="Daniel&#39;s personal website">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="min-h-screen bg-beige dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
+<body class="min-h-screen bg-beige dark:bg-[#222] text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
     <header class="fixed top-0 left-0 z-50 p-6 flex justify-between w-full">
         <div class="flex items-center space-x-4">
             <picture><source type="image/avif" srcset="/img/BFHfLjqEbk-20.avif 20w, /img/BFHfLjqEbk-40.avif 40w" sizes="20px"><source type="image/webp" srcset="/img/BFHfLjqEbk-20.webp 20w, /img/BFHfLjqEbk-40.webp 40w" sizes="20px"><img src="/img/BFHfLjqEbk-20.jpeg" alt="Avatar of Daniël van der Winden" loading="lazy" decoding="async" width="40" height="40" srcset="/img/BFHfLjqEbk-20.jpeg 20w, /img/BFHfLjqEbk-40.jpeg 40w" sizes="20px"></picture>
@@ -28,18 +28,56 @@
     <nav class="fixed bottom-0 left-0 z-50 p-6">
         <div class="p-4">
             <ul class="space-y-3 text-lg font-serif">
-                <li><a href="/" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Home</a></li>
-                <li><a href="/now" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Now</a></li>
-                <li><a href="/newsletter" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Newsletter</a></li>
-                <li><a href="/links" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Links</a></li>
-                <li><a href="/reading" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Reading</a></li>
-                <li><a href="/watching" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Watching</a></li>
-                <li><a href="http://transcriptmag.store" rel="external" target="_blank" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Magazine</a></li>
+                <li>
+                    <a href="/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                        underline underline-custom text-black dark:text-white ">
+                        Work
+                    </a>
+                </li>
+                <li>
+                    <a href="/now/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       ">
+                        Now
+                    </a>
+                </li>
+                <li>
+                    <a href="/newsletter/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       ">
+                        Newsletter
+                    </a>
+                </li>
+                <li>
+                    <a href="/links/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       ">
+                        Links
+                    </a>
+                </li>
+                <li>
+                    <a href="/reading/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       ">
+                        Reading
+                    </a>
+                </li>
+                <li>
+                    <a href="/watching/" 
+                       class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                       ">
+                        Watching
+                    </a>
+                </li>
+                <li>
+                    <a href="http://transcriptmag.store" rel="external" target="_blank" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Magazine</a>
+                </li>
             </ul>
         </div>
     </nav>
     
-    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 pb-20 px-6 lg:px-12 flex-1 flex justify-end max-w-full bg-beige dark:bg-gray-900">
+    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 pb-20 px-6 lg:px-12 flex-1 flex justify-end max-w-full bg-beige dark:bg-[#222]">
         <div class="max-w-xl prose prose-lg max-w-none font-serif pt-[25vh] dark:prose-invert">
             <section class="introduction">
   I'm an Amsterdam-based (software) designer and writer with a decade of experience designing digital products, leading teams, and setting direction. I've managed and mentored a team of designers, and I've worked with clients of all sizes, from a variety of industries. 
@@ -112,10 +150,10 @@
 </section>
 <h2>Design</h2>
 <p>As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for, and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.</p>
-<div class="relative w-full px-4 sm:px-0 left-1/2 right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:w-screen sm:max-w-none mt-24 sm:mt-48">
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
     <picture><source type="image/avif" srcset="/img/lwJkcwkuZ5-600.avif 600w, /img/lwJkcwkuZ5-1200.avif 1200w" sizes="600px"><source type="image/webp" srcset="/img/lwJkcwkuZ5-600.webp 600w, /img/lwJkcwkuZ5-1200.webp 1200w" sizes="600px"><img src="/img/lwJkcwkuZ5-600.jpeg" alt="Improved publishing flow in Ghost" loading="lazy" decoding="async" width="1200" height="853" srcset="/img/lwJkcwkuZ5-600.jpeg 600w, /img/lwJkcwkuZ5-1200.jpeg 1200w" sizes="600px"></picture>
-    <figcaption>Improved publishing flow in Ghost</figcaption>
+    <figcaption class="pl-8 sm:pl-0">Improved publishing flow in Ghost</figcaption>
   </figure>
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
     <picture><source type="image/avif" srcset="/img/Aa014e0Okp-600.avif 600w, /img/Aa014e0Okp-1094.avif 1094w" sizes="600px"><source type="image/webp" srcset="/img/Aa014e0Okp-600.webp 600w, /img/Aa014e0Okp-1094.webp 1094w" sizes="600px"><img src="/img/Aa014e0Okp-600.jpeg" alt="Ghost" loading="lazy" decoding="async" width="1094" height="778" srcset="/img/Aa014e0Okp-600.jpeg 600w, /img/Aa014e0Okp-1094.jpeg 1094w" sizes="600px"></picture>
@@ -124,16 +162,16 @@
 <figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
   <picture><source type="image/avif" srcset="/img/Aa014e0Okp-600.avif 600w, /img/Aa014e0Okp-1094.avif 1094w" sizes="600px"><source type="image/webp" srcset="/img/Aa014e0Okp-600.webp 600w, /img/Aa014e0Okp-1094.webp 1094w" sizes="600px"><img src="/img/Aa014e0Okp-600.jpeg" alt="Ghost" loading="lazy" decoding="async" width="1094" height="778" srcset="/img/Aa014e0Okp-600.jpeg 600w, /img/Aa014e0Okp-1094.jpeg 1094w" sizes="600px"></picture>
 </figure>
-<div class="relative w-full px-4 sm:px-0 left-1/2 right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:w-screen sm:max-w-none mt-24 sm:mt-48">
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
     <picture><source type="image/avif" srcset="/img/lwJkcwkuZ5-600.avif 600w, /img/lwJkcwkuZ5-1200.avif 1200w" sizes="600px"><source type="image/webp" srcset="/img/lwJkcwkuZ5-600.webp 600w, /img/lwJkcwkuZ5-1200.webp 1200w" sizes="600px"><img src="/img/lwJkcwkuZ5-600.jpeg" alt="IKEA's circular rental solution" loading="lazy" decoding="async" width="1200" height="853" srcset="/img/lwJkcwkuZ5-600.jpeg 600w, /img/lwJkcwkuZ5-1200.jpeg 1200w" sizes="600px"></picture>
-    <figcaption>UI for IKEA's circular rental solution</figcaption>
+    <figcaption class="pl-8 sm:pl-0">UI for IKEA's circular rental solution</figcaption>
   </figure>
-  <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
+  <figure class="w-full sm:w-[576px] mr-auto my-12">
     <picture><source type="image/avif" srcset="/img/Aa014e0Okp-600.avif 600w, /img/Aa014e0Okp-1094.avif 1094w" sizes="600px"><source type="image/webp" srcset="/img/Aa014e0Okp-600.webp 600w, /img/Aa014e0Okp-1094.webp 1094w" sizes="600px"><img src="/img/Aa014e0Okp-600.jpeg" alt="IKEA" loading="lazy" decoding="async" width="1094" height="778" srcset="/img/Aa014e0Okp-600.jpeg 600w, /img/Aa014e0Okp-1094.jpeg 1094w" sizes="600px"></picture>
   </figure>
 </div>
-<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
+<figure class="w-full sm:w-[576px] ml-auto my-24">
   <picture><source type="image/avif" srcset="/img/Aa014e0Okp-600.avif 600w, /img/Aa014e0Okp-1094.avif 1094w" sizes="600px"><source type="image/webp" srcset="/img/Aa014e0Okp-600.webp 600w, /img/Aa014e0Okp-1094.webp 1094w" sizes="600px"><img src="/img/Aa014e0Okp-600.jpeg" alt="IKEA" loading="lazy" decoding="async" width="1094" height="778" srcset="/img/Aa014e0Okp-600.jpeg 600w, /img/Aa014e0Okp-1094.jpeg 1094w" sizes="600px"></picture>
 </figure>
 <h2>Management</h2>
@@ -143,7 +181,7 @@
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
     <picture><source type="image/avif" srcset="/img/lwJkcwkuZ5-600.avif 600w, /img/lwJkcwkuZ5-1200.avif 1200w" sizes="600px"><source type="image/webp" srcset="/img/lwJkcwkuZ5-600.webp 600w, /img/lwJkcwkuZ5-1200.webp 1200w" sizes="600px"><img src="/img/lwJkcwkuZ5-600.jpeg" alt="Ghost" loading="lazy" decoding="async" width="1200" height="853" srcset="/img/lwJkcwkuZ5-600.jpeg 600w, /img/lwJkcwkuZ5-1200.jpeg 1200w" sizes="600px"></picture>
-    <figcaption>TRANSCRIPT magazine</figcaption>
+    <figcaption class="pl-8 sm:pl-0">TRANSCRIPT magazine</figcaption>
   </figure>
   <figure class="w-full sm:w-[576px] mr-auto my-12">
     <picture><source type="image/avif" srcset="/img/Aa014e0Okp-600.avif 600w, /img/Aa014e0Okp-1094.avif 1094w" sizes="600px"><source type="image/webp" srcset="/img/Aa014e0Okp-600.webp 600w, /img/Aa014e0Okp-1094.webp 1094w" sizes="600px"><img src="/img/Aa014e0Okp-600.jpeg" alt="Ghost" loading="lazy" decoding="async" width="1094" height="778" srcset="/img/Aa014e0Okp-600.jpeg 600w, /img/Aa014e0Okp-1094.jpeg 1094w" sizes="600px"></picture>
