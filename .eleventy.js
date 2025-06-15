@@ -105,8 +105,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addWatchTarget("./src/assets/");
 
+  // Create collection for blog posts
   eleventyConfig.addCollection("blog", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
+  });
+
+  // Create collection for essays
+  eleventyConfig.addCollection("essays", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/essays/*.md").sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
