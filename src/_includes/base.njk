@@ -7,7 +7,7 @@
     <meta name="description" content="{{ description or site.description }}">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="min-h-screen bg-white text-gray-900 font-sans">
+<body class="min-h-screen bg-white text-gray-900 font-sans overflow-x-hidden">
     <header class="fixed top-0 left-0 z-50 p-6">
         <div class="flex items-center space-x-4">
             {% retinaImage "src/assets/daniel.png", "Avatar of Daniël van der Winden", 20, "rounded-full" %}
@@ -26,13 +26,12 @@
                 <li><a href="/links" class="block text-gray-700 hover:text-gray-900 transition-colors">Links</a></li>
                 <li><a href="/reading" class="block text-gray-700 hover:text-gray-900 transition-colors">Reading</a></li>
                 <li><a href="/watching" class="block text-gray-700 hover:text-gray-900 transition-colors">Watching</a></li>
-                <li><a href="/colophon" class="block text-gray-700 hover:text-gray-900 transition-colors">Colophon</a></li>
                 <li><a href="http://transcriptmag.store" rel="external" target="_blank" class="block text-gray-700 hover:text-gray-900 transition-colors">Magazine</a></li>
             </ul>
         </div>
     </nav>
     
-    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 pb-20 px-6 lg:px-12 flex-1 flex justify-end">
+    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 pb-20 px-6 lg:px-12 flex-1 flex justify-end max-w-full">
         <div class="max-w-xl prose prose-gray prose-lg max-w-none font-serif pt-[25vh]">
             {{ content | safe }}
         </div>
@@ -48,6 +47,12 @@
             </li>
             <li>
                 <a href="https://www.linkedin.com/in/dvdwinden/" title="Find me on LinkedIn">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://github.com/dvdwinden" title="Find me on Github">Github</a>
+            </li>
+            <li>
+                <a href="/colophon" title="Colophon">Colophon</a>
             </li>
         </ul>
     </footer>

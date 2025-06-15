@@ -84,23 +84,8 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 
 <div class="relative w-full px-4 sm:px-0 left-1/2 right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:w-screen sm:max-w-none mt-24 sm:mt-48">
   <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
+    {% retinaImage "src/assets/placeholder-large.png", "Improved publishing flow in Ghost" %}
     <figcaption>Improved publishing flow in Ghost</figcaption>
-  </figure>
-</div>
-
-<figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
-  {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
-</figure>
-
-<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
-  {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
-</figure>
-
-<div class="relative w-full px-4 sm:px-0 left-1/2 right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:w-screen sm:max-w-none mt-24 sm:mt-48">
-  <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
-    <figcaption>UI for IKEA's circular rental solution</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
@@ -110,6 +95,21 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 
 <figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+</figure>
+
+<div class="relative w-full px-4 sm:px-0 left-1/2 right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:w-screen sm:max-w-none mt-24 sm:mt-48">
+  <figure>
+    {% retinaImage "src/assets/placeholder-large.png", "IKEA's circular rental solution" %}
+    <figcaption>UI for IKEA's circular rental solution</figcaption>
+  </figure>
+
+  <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
+    {% retinaImage "src/assets/placeholder-small.png", "IKEA" %}
+  </figure>
+</div>
+
+<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
+  {% retinaImage "src/assets/placeholder-small.png", "IKEA" %}
 </figure>
 
 
