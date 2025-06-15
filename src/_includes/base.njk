@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if title %}{{ title }} - {% endif %}{{ site.name or "Daniel's Website" }}</title>
+    <title>{% if title %}
+        {% if page.url == '/' %}
+            Daniël van der Winden • Software designer & writer
+        {% else %}
+            {{ title }} • Daniël van der Winden
+        {% endif %}
+    {% else %}
+        Daniël van der Winden • Software designer & writer
+    {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -12,7 +20,7 @@
         <div class="flex items-center space-x-4">
             {% retinaImage "src/assets/daniel.png", "Avatar of Daniël van der Winden", 20, "rounded-full" %}
             <a href="/" class="text-xl font-serif text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                {{ site.name or "Daniël van der Winden" }}
+                {{ "Daniël van der Winden" }}
             </a>
         </div>
         <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="ml-4 text-gray-900 dark:text-gray-100">
