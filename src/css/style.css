@@ -215,3 +215,10 @@ footer ul li a:hover {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* Callout */
+.callout {
+    background: #fff9a8;
+    color: #222;
+    padding: 0.1rem 1rem 0.5rem 0.1rem;
+}
