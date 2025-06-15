@@ -2,38 +2,31 @@
 layout: base.njk
 title: Blog
 description: Useful links and resources
+deleteme: true
 ---
 
 # Blog
 
-A collection of useful links, tools, and resources I find valuable.
+A collection of my latest writing, thoughts, and resources.
 
-## Tools & Software
+<ul class="divide-y divide-dotted divide-gray-300">
+  {% for post in collections.blog %}
+  <li class="py-6">
+    <div class="flex items-baseline justify-between">
+      <a href="{{ post.url }}" class="text-2xl font-serif font-semibold hover:underline">
+        {{ post.data.title }}
+      </a>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap">
+        {{ post.date | date('MMM yyyy') }}
+      </span>
+    </div>
+    <p class="text-base text-gray-600 mt-1">{{ post.data.description }}</p>
+  </li>
+  {% endfor %}
+</ul>
 
-- [Tool 1](https://example.com) - Description of what it does
-- [Tool 2](https://example.com) - Another useful tool
-
-## Learning Resources
-
-- [Resource 1](https://example.com) - Great for learning X
-- [Resource 2](https://example.com) - Excellent tutorials on Y
-
-## Blogs & Websites
-
-- [Blog 1](https://example.com) - Interesting thoughts on [topic]
-- [Blog 2](https://example.com) - Regular updates on [topic]
-
-## Reference
-
-- [Documentation](https://example.com) - Official docs for [technology]
-- [Cheat Sheet](https://example.com) - Quick reference for [topic]
-
-## Personal Projects
-
-- [Project 1](https://example.com) - Brief description
-- [Project 2](https://example.com) - Another project
 
 ---
 
-*This page is regularly updated. Last updated: June 2024*
+This page is regularly updated. *Last updated: June 2024*
 

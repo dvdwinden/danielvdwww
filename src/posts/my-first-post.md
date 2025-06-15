@@ -1,6 +1,6 @@
 ---
-layout: post.njk
-title: My First Post
+layout: base.njk
+title: How a Tiny British Publisher Became the Home of Nobel Laureates
 date: 2024-06-13
 tags: [posts, hello-world, getting-started]
 description: Welcome to my new blog built with Eleventy

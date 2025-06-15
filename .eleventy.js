@@ -1,8 +1,9 @@
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
 const fs = require("fs");
+const { DateTime } = require("luxon");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Image optimization function
   async function imageShortcode(src, alt, sizes = "(min-width: 1024px) 100vw, 50vw") {
     let metadata = await Image(src, {
@@ -35,7 +36,7 @@ module.exports = function(eleventyConfig) {
   }
 
   // Transform to automatically optimize images in content
-  eleventyConfig.addTransform("optimizeImages", async function(content, outputPath) {
+  eleventyConfig.addTransform("optimizeImages", async function (content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
       // Find all img tags with src pointing to assets
       const imgRegex = /<img\s+[^>]*src=["']([^"']*\/assets\/[^"']*)["'][^>]*>/gi;
@@ -45,7 +46,7 @@ module.exports = function(eleventyConfig) {
         const src = match[1];
         const altMatch = imgTag.match(/alt=["']([^"']*)["']/);
         const alt = altMatch ? altMatch[1] : "";
-        
+
         try {
           const optimizedImg = await imageShortcode(`src/${src}`, alt);
           content = content.replace(imgTag, optimizedImg);
@@ -99,10 +100,18 @@ module.exports = function(eleventyConfig) {
   // Copy static files (but not assets - we'll process those)
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
-  
+
   // Watch CSS files and assets for changes
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addWatchTarget("./src/assets/");
+
+  eleventyConfig.addCollection("blog", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
+    return DateTime.fromJSDate(dateObj).toFormat(format);
+  });
 
   return {
     dir: {
