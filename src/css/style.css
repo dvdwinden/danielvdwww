@@ -69,8 +69,7 @@ article time {
     margin-bottom: 0.5rem;
 }
 
-/* Lists and buttons */
-
+/* Lists, buttons and links */
 .prose ul {
     list-style-type: disc;
     list-style-position: inside;
@@ -112,6 +111,29 @@ article time {
     display: inline-block;
 }
 
+/* Images and captions */
+
+.prose figure figcaption {
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: theme('colors.gray.400');
+}
+
+
+
+/* Navigation */
+
+nav ul li a:hover {
+    color: theme('colors.gray.900');
+    transition: color 0.2s;
+    text-decoration: underline;
+    text-decoration-color: theme('colors.gray.400');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}
+
 /* Introduction */
 .introduction {
     @apply mb-32;
@@ -132,8 +154,6 @@ article time {
     border-bottom: none;
 }
 
-
-
 /* Footer */
 footer {
     width: 100%;
@@ -141,7 +161,7 @@ footer {
     flex-direction: row;
     justify-content: flex-end;
     align-items: end;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 footer ul {
@@ -151,4 +171,20 @@ footer ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: theme('colors.gray.400');
+    font-family: theme('fontFamily.serif');
+    font-size: 0.875rem;
+}
+
+footer ul li a:hover {
+    color: theme('colors.gray.900');
+    transition: color 0.2s;
+    text-decoration: underline;
+    text-decoration-color: theme('colors.gray.400');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }

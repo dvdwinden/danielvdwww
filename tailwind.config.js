@@ -39,6 +39,9 @@ module.exports = {
           },
         },
       },
+      colors: {
+        'beige': '#f9f5ee',
+      },
     },
   },
   plugins: [

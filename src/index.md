@@ -72,7 +72,7 @@ description: Daniel's personal website
           <h3>Internship at Faster Forward Interactive</h3>
         </div>
         <div class="text-gray-500 mt-2 font-degular-text text-sm">
-          Followed by a stint as part-time front-end developer.
+          Followed by a stint as a part-time front-end developer.
         </div>
       </div>
     </li>
