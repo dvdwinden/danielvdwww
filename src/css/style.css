@@ -178,7 +178,7 @@ footer {
     flex-direction: row;
     justify-content: flex-end;
     align-items: end;
-    padding: 1.5rem 2.5rem 2.5rem 1.5rem;
+    padding: 0 1.5rem 1.5rem 0;
 }
 
 footer ul {
