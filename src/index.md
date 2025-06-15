@@ -6,15 +6,18 @@ description: Daniel's personal website
 
 # Work
 <section class="introduction">
-  I'm an Amsterdam-based (software) designer and writer with a decade of experience designing digital products, leading teams, and setting direction. I've managed and mentored a team of designers, and I've worked with clients of all sizes, from a variety of industries. 
+  I'm an Amsterdam-based (software) designer and writer with over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.
 
   Most recently I worked for [Ghost](http://ghost.org "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
 
+  Before that I helped mould <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today, by shaping strategy, building teams, and delivering products—from zero to one.
+
   I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
 
-  I'm currently open to new opportunities (contract or permanent). 
+  <span class="callout">I'm currently open to new opportunities (contract or permanent). 
 
-  <a href="#" title="Book a call with Daniël" rel="nofollow" target="_blank" class="button font-degular-text text-md dark:bg-white dark:text-black">Book a call</a>
+    <a href="#" title="Book a call with Daniël" rel="nofollow" target="_blank" class="button font-degular-text text-md dark:bg-white dark:text-black">Book a call</a>
+  </span>
 </section>
 
 <section class="resume">
