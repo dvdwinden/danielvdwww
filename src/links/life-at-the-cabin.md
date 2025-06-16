@@ -6,7 +6,7 @@ tags: [youtube, nature, homesteading]
 external_url: https://www.youtube.com/watch?list=TLGGfcmVFkg66IEwMjAxMjAyMw&v=eo8_5d9yGq4
 ---
 
-<div class="relative w-full pb-[56.25%] overflow-hidden">
+<div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe
     class="absolute top-0 left-0 w-full h-full"
     src="https://www.youtube-nocookie.com/embed/eo8_5d9yGq4?si=c-HCtozODO8-y1Lh&amp;controls=0" 

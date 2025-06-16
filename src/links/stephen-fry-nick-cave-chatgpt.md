@@ -6,7 +6,7 @@ tags: [youtube, ai, art]
 external_url: https://youtu.be/iGJcF4bLKd4?si=h3bejLzEzdxIXypb
 ---
 
-<div class="relative w-full pb-[56.25%] overflow-hidden">
+<div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe
     class="absolute top-0 left-0 w-full h-full"
     src="https://www.youtube-nocookie.com/embed/iGJcF4bLKd4?si=h3bejLzEzdxIXypb&amp;controls=0" 

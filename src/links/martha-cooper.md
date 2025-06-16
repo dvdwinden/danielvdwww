@@ -6,7 +6,7 @@ tags: [cinema, trailer]
 external_url: https://youtu.be/zgAjdQBF7JI
 ---
 
-<div class="relative w-full pb-[56.25%] overflow-hidden">
+<div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe
     class="absolute top-0 left-0 w-full h-full"
     src="https://www.youtube-nocookie.com/embed/zgAjdQBF7JI?si=l6-vV_wUdbQdaT9w&amp;controls=0"

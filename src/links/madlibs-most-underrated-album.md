@@ -6,7 +6,7 @@ tags: [music]
 external_url: https://www.youtube.com/watch?v=STynLl-2FqU
 ---
 
-<div class="relative w-full pb-[56.25%] overflow-hidden">
+<div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe
     class="absolute top-0 left-0 w-full h-full"
     src="https://www.youtube-nocookie.com/embed/STynLl-2FqU?si=l6-vV_wUdbQdaT9w&amp;controls=0" 

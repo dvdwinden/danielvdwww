@@ -6,9 +6,9 @@ tags: [youtube, music]
 external_url: https://youtu.be/iWN-kW-qpfc?si=O-Jq7WmpX-_mHl7x
 ---
 
-<div class="relative w-full aspect-video overflow-hidden">
+<div class="relative w-full pb-[56.25%] mt-7 overflow-hidden">
   <iframe
-    class="absolute inset-0 w-full h-full"
+    class="absolute top-0 left-0 w-full h-full"
     src="https://www.youtube-nocookie.com/embed/iWN-kW-qpfc?si=O-Jq7WmpX-_mHl7x&amp;controls=0"
     title="YouTube video player"
     frameborder="0"
@@ -18,4 +18,4 @@ external_url: https://youtu.be/iWN-kW-qpfc?si=O-Jq7WmpX-_mHl7x
   </iframe>
 </div>
 
-I've been replaying James Blake's latest album "Playing Robots Into Heaven" somewhat obsessively, and was reminded of this conversation he had with Brian Eno, for who he plays the music and who then provides him with his honest impression.
+I've been replaying James Blake's latest album “Playing Robots Into Heaven” somewhat obsessively, and was reminded of this conversation he had with Brian Eno, for who he plays the music and who then provides him with his honest impression.
