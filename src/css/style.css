@@ -249,3 +249,12 @@ ul.links li a:hover {
     text-underline-offset: 3px;
     background: none;
 }
+
+/* Icons */
+.icon-sunrise {
+    color: #fff;
+}
+
+.icon-sunset {
+    color: #222;
+}
