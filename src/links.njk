@@ -42,7 +42,7 @@ A regularly updated collection of things I find worth reading, watching, or list
     ← Previous
   </a>
   {% else %}
-  <span class="text-sm font-medium text-gray-300">← Previous</span>
+  <span class="text-sm font-medium text-gray-300">{% include "icons/arrow-left-round.svg" %} Previous</span>
   {% endif %}
 
   <span class="text-sm text-gray-500">
@@ -51,10 +51,10 @@ A regularly updated collection of things I find worth reading, watching, or list
 
   {% if pagination.href.next %}
   <a href="{{ pagination.href.next }}" class="text-sm font-medium text-gray-500 hover:text-gray-700">
-    Next →
+    Next {% include "icons/arrow-right-round.svg" %}
   </a>
   {% else %}
-  <span class="text-sm font-medium text-gray-300">Next →</span>
+  <span class="text-sm font-medium text-gray-300">Next {% include "icons/arrow-right-round.svg" %}</span>
   {% endif %}
 </nav>
 {% endif %} 
