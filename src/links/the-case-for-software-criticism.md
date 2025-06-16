@@ -1,8 +1,8 @@
 ---
 layout: base.njk
-title: "The Case for Software Criticism"
-date: 2022-03-10
-tags: [software, design]
-external_url: https://www.wired.com/story/software-criticism/
+title: "Steven Soderbergh: The State of Cinema"
+date: 2022-03-11
+tags: [cinema]
+external_url: https://www.youtube.com/watch?v=ZQrFSUwFwUM
 ---
-The New York Review of Software. I'd subscribe. (Though reading the sentence that mentions revisiting software a few years later served as a sad reminder that a lot of software wouldn't survive until the revisit.)
+Brought to my attention by [Fabian](https://twitter.com/Fabgreitemann "Fabrian Greitemann on Twitter"), in response to my [essay on the intimacy of experiencing a film in a movie theatre](https://www.daniel.pizza/journal/big-screen-intimacy), Soderbergh's address—dating back to 2013—is an impassioned speech, arguing that film culture is “under assault by the studios”.
