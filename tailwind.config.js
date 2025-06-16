@@ -50,7 +50,7 @@ module.exports = {
         },
       },
       colors: {
-        'beige': '#f9f5ee',
+        'beige': '#fcfaf6',
       },
     },
   },
