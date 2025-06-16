@@ -20,8 +20,34 @@ A collection of my latest writing, thoughts, and resources.
         {{ post.date | date('MMM yyyy') }}
       </span>
     </div>
-    <p class="text-base text-gray-600 mt-1 mb-0">{{ post.data.description }}</p>
+    <div class="prose prose-sm mt-4">
+      {{ post.templateContent | safe }}
+    </div>
   </li>
   {% endfor %}
 </ul>
+
+{% if pagination.href.previous or pagination.href.next %}
+<nav class="flex items-center justify-between mt-8 pt-4 border-t border-gray-200">
+  {% if pagination.href.previous %}
+  <a href="{{ pagination.href.previous }}" class="text-sm font-medium text-gray-500 hover:text-gray-700">
+    ← Previous
+  </a>
+  {% else %}
+  <span class="text-sm font-medium text-gray-300">← Previous</span>
+  {% endif %}
+
+  <span class="text-sm text-gray-500">
+    Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}
+  </span>
+
+  {% if pagination.href.next %}
+  <a href="{{ pagination.href.next }}" class="text-sm font-medium text-gray-500 hover:text-gray-700">
+    Next →
+  </a>
+  {% else %}
+  <span class="text-sm font-medium text-gray-300">Next →</span>
+  {% endif %}
+</nav>
+{% endif %}
 
