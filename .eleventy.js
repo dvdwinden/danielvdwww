@@ -128,7 +128,13 @@ module.exports = function (eleventyConfig) {
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
+    dataTemplateEngine: "njk",
+    pagination: {
+      links: {
+        size: 10,
+        alias: "links"
+      }
+    }
   };
 };
 
