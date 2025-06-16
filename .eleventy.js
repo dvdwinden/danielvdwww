@@ -107,6 +107,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/favicon-32x32.png");
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon.png");
+  
+  // Copy favicon.ico to root directory for default browser behavior
+  eleventyConfig.addPassthroughCopy({"src/assets/favicon.ico": "favicon.ico"});
 
   // Watch CSS files and assets for changes
   eleventyConfig.addWatchTarget("./src/css/");
