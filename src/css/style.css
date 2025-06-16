@@ -301,3 +301,46 @@ a.no-underline:hover span {
 nav.pagination a:hover {
     background: none;
 }
+
+/* Dark mode toggle animation */
+#dark-mode-toggle {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+#dark-icon,
+#light-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+#dark-icon {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#light-icon {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.dark #dark-icon {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.dark #light-icon {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Add a delay to the dark mode transition */
+.dark {
+    transition: background-color 0s 0.25s, color 0s 0.25s;
+}
