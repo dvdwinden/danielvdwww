@@ -8,7 +8,7 @@ pagination:
   size: 10
   alias: links
   reverse: false
-permalink: "links/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: "links/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
 <h1>Links</h1>

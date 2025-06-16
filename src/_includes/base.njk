@@ -48,7 +48,7 @@
             <li>
                 <a href="/links/" 
                    class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
-                   {% if page.url == '/links/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                   {% if page.url.startsWith('/links/') %} underline underline-custom text-black dark:text-white {% endif %}">
                     Links
                 </a>
             </li>
