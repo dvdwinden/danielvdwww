@@ -106,8 +106,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/");
 
   // Create collection for links
-  eleventyConfig.addCollection("blog", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("links", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/links/*.md").sort((a, b) => b.date - a.date);
   });
 
   // Create collection for essays
