@@ -1,14 +1,17 @@
 ---
 layout: base.njk
+title: Links
+description: Links
+deleteme: true
 pagination:
   data: collections.links
   size: 10
   alias: links
-  reverse: true
+  reverse: false
 permalink: "links/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
-# Links
+<h1>Links</h1>
 
 A collection of my latest writing, thoughts, and resources.
 
