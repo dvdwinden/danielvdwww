@@ -40,6 +40,7 @@ module.exports = {
       },
       lineHeight: {
         normal: '1.5', // 150%
+        none: '1', // 100%
       },
       typography: {
         DEFAULT: {
