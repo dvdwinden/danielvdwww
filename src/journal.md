@@ -1,16 +1,16 @@
 ---
 layout: base.njk
-title: Essays
-description: Essays
+title: Journal
+description: Journal
 deleteme: true
 ---
 
-# Essays
+# Journal
 
 A collection of my longer-form writing and explorations.
 
 <ul class="divide-y divide-dotted divide-gray-300 blog">
-  {% for post in collections.essays %}
+  {% for post in collections.journal %}
   <li class="py-3 pl-0">
     <div class="flex items-baseline justify-between">
       <a href="{{ post.url }}" class="text-2xl font-serif font-semibold hover:underline">
