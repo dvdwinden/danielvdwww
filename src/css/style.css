@@ -253,11 +253,6 @@ ul.links {
 ul.links li h2 {
     margin-bottom: 0;
     font-family: theme('fontFamily.serif');
-    text-decoration: none;
-}
-
-ul.links li a {
-    text-decoration: none;
 }
 
 ul.links li p a {
