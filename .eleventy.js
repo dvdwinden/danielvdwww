@@ -133,8 +133,13 @@ module.exports = function (eleventyConfig) {
       links: {
         size: 10,
         alias: "links"
+      },
+      journal: {
+        size: 10,
+        alias: "journal"
       }
     }
+
   };
 };
 

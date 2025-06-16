@@ -1,34 +1,35 @@
 ---
 layout: base.njk
-title: Links
-description: Links
+title: Journal
+description: Journal
 deleteme: true
+bodyClass: bg-green
 pagination:
-  data: collections.links
+  data: collections.journal
   size: 10
-  alias: links
+  alias: journal
   reverse: false
-permalink: "links/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: "journal/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
-<h1>Links</h1>
+<h1>Journal</h1>
 
-A regularly updated collection of things I find worth reading, watching, or listening to. <a href="/links.xml" rel="external" target="_blank" title="Subscribe to RSS">Subscribe to RSS</a>.
+My own writing, in long or short form. <a href="/journal.xml" rel="external" target="_blank" title="Subscribe to RSS">Subscribe to RSS</a>.
 
 <ul class="divide-y divide-gray-300 dark:divide-gray-700 links">
-  {% for post in links %}
+  {% for post in journal %}
   <li class="py-3 pl-0">
     <div class="flex flex-col">
       <div class="flex items-baseline justify-between">
-        <a href="{{ post.data.external_url }}" class="text-2xl font-serif font-semibold hover:underline" target="_blank">
+        <a href="{{ post.url }}" class="text-2xl font-serif font-semibold hover:underline">
          <h2 class="no-underline">{{ post.data.title }}</h2>
         </a>
         <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
-          № {{ collections.links.length - (pagination.pageNumber * pagination.size + loop.index0) }}
+          {{ post.date | date('MMM yyyy') }}
         </span>
       </div>
       <div class="prose prose-sm mt-4 dark:text-gray-300">
-        {{ post.templateContent | safe }}
+        {{ post.data.description }}
       </div>
     </div>
   </li>
