@@ -2,7 +2,7 @@
 layout: base.njk
 title: "What Makes Saul Better"
 date: 2022-03-03
-tags: [work]
+tags: [television]
 external_url: https://youtu.be/obIWs9p0boE?list=TLGGh1jiwBV3SI8xNDAxMjAyMw
 ---
 
