@@ -30,7 +30,7 @@ description: Daniel's personal website
           <h3>Senior Designer at <a href="http://ghost.org" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
         </div>
         <div class="text-gray-500 mt-2 font-degular-text text-sm">
-          I was involved in designing new features as well as coding improvements throughout the product.
+          I was involved in designing new features as well as coding improvements throughout the product and its marketing site.
         </div>
       </div>
     </li>
