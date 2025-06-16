@@ -46,6 +46,7 @@ article time {
     font-size: theme('fontSize.lg');
     line-height: theme('lineHeight.normal');
     hanging-punctuation: first;
+    text-wrap: pretty;
 }
 
 .prose-invert {
