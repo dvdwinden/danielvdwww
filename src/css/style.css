@@ -228,8 +228,8 @@ footer ul li a:hover {
     padding: 0.1rem 1rem 0.5rem 0.1rem;
 }
 
-/* Blog */
-ul.blog {
+/* Links */
+ul.links {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
@@ -237,14 +237,15 @@ ul.blog {
     flex-direction: column;
 }
 
-ul.blog li a {
+ul.links li a {
     text-decoration: none;
 }
 
-ul.blog li a:hover {
+ul.links li a:hover {
     cursor: pointer;
     text-decoration: underline;
     text-decoration-color: theme('colors.gray.400');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+    background: none;
 }
