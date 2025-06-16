@@ -101,11 +101,14 @@ article time {
     color: #222;
 }
 
-.prose a:hover,
-.prose a:focus {
+.prose a:hover {
     background: #fff9a8;
     color: #222;
     transition: background 0.2s, color 0.2s;
+}
+
+.prose a:focus {
+    background: none;
 }
 
 .prose a {
