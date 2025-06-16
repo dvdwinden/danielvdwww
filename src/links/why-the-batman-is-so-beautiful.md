@@ -1,15 +1,15 @@
 ---
 layout: base.njk
-title: "Why The Batman Is So Beautiful"
-date: 2022-04-03
+title: "Madlib's Most Underrated Album"
+date: 2022-04-06
 tags: [music]
-external_url: https://www.youtube.com/watch?v=STynLl-2FqU
+external_url: https://youtu.be/51FxrgujZYQ
 ---
 
 <div class="relative w-full pb-[56.25%] overflow-hidden">
   <iframe
     class="absolute top-0 left-0 w-full h-full"
-    src="https://www.youtube-nocookie.com/embed/STynLl-2FqU?si=l6-vV_wUdbQdaT9w&amp;controls=0"
+    src="https://www.youtube-nocookie.com/embed/51FxrgujZYQ;controls=0"
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -18,4 +18,4 @@ external_url: https://www.youtube.com/watch?v=STynLl-2FqU
   </iframe>
 </div>
 
-[I've written about it before](/journal/big-screen-intimacy "My essay on movie-going"): the cinematography of The Batman is fantastic. It's a dark, immersive world, portrayed with shots wet with rain and dirty with grime. Patrick Tomasso published a video essay last year that details the work that director Matt Reeves and cinematographer Greig Fraser did to achieve it.
+A lovely deep dive into Madlib's “Sound Ancestors”, a highly underrated album, in which the creator identifies a parallel between the combination of Madlib/Four Tet and Miles Davis/Teo Macero.
