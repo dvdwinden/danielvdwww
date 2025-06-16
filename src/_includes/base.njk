@@ -88,17 +88,15 @@
         </ul>
     </nav>
     
-    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 pb-20 px-6 lg:px-12 flex-1 flex justify-end max-w-full">
+    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-full">
         <div class="max-w-xl prose prose-lg max-w-none font-serif pt-[25vh] dark:prose-invert">
             {{ content | safe }}
-        </div>
-    </main>
 
-    <footer>
-      <ul>
-            <li>
-                <a href="mailto:d.vanderwinden@gmail.com" title="Email me" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">Email</a>
-            </li>
+            <footer class="site-footer">
+                <ul>
+                    <li>
+                    <a href="mailto:d.vanderwinden@gmail.com" title="Email me" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">Email</a>
+                </li>
             <li>
                 <a href="https://bsky.app/profile/daniel.pizza" rel="external" target="_blank" title="Follow me on Bluesky" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">Bluesky</a>
             </li>
@@ -117,6 +115,12 @@
         </ul>
     </footer>
 
+        </div>
+
+        
+    </main>
+
+    
     <script src="/js/dark-mode.js"></script>
 
 </html>

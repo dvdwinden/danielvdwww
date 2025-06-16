@@ -217,38 +217,46 @@ nav ul li a span.no-underline:hover {
 }
 
 /* Footer */
-footer {
+.site-footer {
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: end;
-    padding: 0 1.5rem 1.5rem 0;
+    margin: 8rem 0 0 0;
+    padding: 0;
 }
 
-footer ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-left: 0;
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 .6rem 0;
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-footer ul li a {
+.site-footer ul li {
+    list-style: none;
+    padding: 0;
+}
+
+.site-footer ul li a {
     text-decoration: none;
     color: theme('colors.gray.400');
     font-family: theme('fontFamily.serif');
     font-size: 0.875rem;
 }
 
-footer ul li a:hover {
+.site-footer ul li a:hover {
     color: theme('colors.gray.900');
     transition: color 0.2s;
     text-decoration: underline;
     text-decoration-color: theme('colors.gray.400');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+    background: none;
 }
 
 /* Scrollbar */
