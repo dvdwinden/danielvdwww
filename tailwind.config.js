@@ -51,6 +51,7 @@ module.exports = {
       },
       colors: {
         'beige': '#fcfaf6',
+        'brown': '#7c5e00',
       },
     },
   },

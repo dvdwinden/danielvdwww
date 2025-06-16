@@ -45,6 +45,7 @@ article time {
     font-family: theme('fontFamily.serif');
     font-size: theme('fontSize.lg');
     line-height: theme('lineHeight.normal');
+    hanging-punctuation: first;
 }
 
 .prose-invert {
@@ -147,7 +148,7 @@ nav ul li a:hover {
     color: #7c5e00;
     transition: color 0.2s;
     text-decoration: underline;
-    text-decoration-color: #7c5e00;
+    text-decoration-color: theme('colors.brown');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     cursor: pointer;
@@ -249,8 +250,21 @@ ul.links {
     flex-direction: column;
 }
 
+ul.links li h2 {
+    margin-bottom: 0;
+    font-family: theme('fontFamily.serif');
+    text-decoration: none;
+}
+
 ul.links li a {
     text-decoration: none;
+}
+
+ul.links li p a {
+    text-decoration: underline;
+    text-decoration-color: theme('colors.brown');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 ul.links li a:hover {

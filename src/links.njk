@@ -21,7 +21,7 @@ A collection of my latest writing, thoughts, and resources.
     <div class="flex flex-col">
       <div class="flex items-baseline justify-between">
         <a href="{{ post.data.external_url }}" class="text-2xl font-serif font-semibold hover:underline" target="_blank">
-          {{ post.data.title }}
+         <h2 class="no-underline">{{ post.data.title }}</h2>
         </a>
         <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
           № {{ collections.links.length - (pagination.pageNumber * pagination.size + loop.index0) }}
