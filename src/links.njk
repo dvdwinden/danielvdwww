@@ -16,9 +16,12 @@ A collection of my latest writing, thoughts, and resources.
   {% for post in links %}
   <li class="py-3 pl-0">
     <div class="flex items-baseline justify-between">
-      <a href="{{ post.url }}" class="text-2xl font-serif font-semibold hover:underline">
-        {{ post.data.title }}
-      </a>
+      <div class="flex items-baseline">
+        <span class="text-sm text-gray-500 mr-4">{{ collections.links.length - (pagination.pageNumber * pagination.size + loop.index0) }}</span>
+        <a href="{{ post.url }}" class="text-2xl font-serif font-semibold hover:underline">
+          {{ post.data.title }}
+        </a>
+      </div>
       <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
         {{ post.date | date('MMM yyyy') }}
       </span>
