@@ -161,6 +161,20 @@ article time {
     display: inline-block;
 }
 
+.dark .prose .button {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+.dark .prose .button:hover {
+    background: theme('colors.gray.200');
+    color: #000;
+    text-decoration: none;
+}
+
+
+
 /* Images and captions */
 
 .prose figure figcaption {
