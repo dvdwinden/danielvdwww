@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "FLOWER BOY: a conversation"
-date: 2023-06-01
+date: 2023-03-01
 tags: [youtube, music]
 external_url: http://youtube.com/watch?v=WrcwcMIYpQg&
 ---
@@ -9,7 +9,7 @@ external_url: http://youtube.com/watch?v=WrcwcMIYpQg&
 <div class="relative w-full pb-[56.25%] overflow-hidden">
   <iframe
     class="absolute top-0 left-0 w-full h-full"
-    src="https://www.youtube-nocookie.com/embed/WrcwcMIYpQg?si=mU1eML3qhVA-PBy_&amp;controls=0" 
+    src="https://www.youtube-nocookie.com/embed/WrcwcMIYpQg?si=sSEh4O85xGTU0CNf&amp;controls=0" 
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
