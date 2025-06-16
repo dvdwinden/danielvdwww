@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Useful Praise"
-date: 2022-04-20
+date: 2022-07-20
 tags: [essay]
 external_url: https://aworkinglibrary.com/writing/useful-praise
 ---
