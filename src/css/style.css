@@ -289,3 +289,8 @@ a .no-underline {
 a.no-underline:hover span {
     text-decoration: none !important;
 }
+
+/* Pagination */
+nav.pagination a:hover {
+    background: none;
+}
