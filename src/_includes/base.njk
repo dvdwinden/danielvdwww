@@ -36,11 +36,14 @@
     <nav class="fixed bottom-0 left-0 z-50 p-6">
         <ul class="flex flex-row flex-nowrap overflow-x-auto whitespace-nowrap hide-scrollbar justify-start space-x-8 text-base font-serif sm:flex-col sm:space-x-0 sm:space-y-3 sm:text-lg">
             <li>
-                <a href="/" 
-                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
-                   {% if page.url == '/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                <a href="/"
+                   class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                   {% if page.url == '/' %} underline underline-custom text-black dark:text-white{% endif %}">
                     Work
                 </a>
+                <span class="ml-2 inline-block align-middle text-xs text-gray-500 uppercase tracking-widest font-sans bg-[#fff9a8] dark:bg-gray-800 px-2 py-1 rounded-full">
+                    Available
+                </span>
             </li>
             <li>
                 <a href="/links/" 
@@ -57,7 +60,9 @@
                 </a>
             </li>
             <li>
-                <a href="http://transcriptmag.store" rel="external" target="_blank" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">Magazine</a>
+                <a href="http://transcriptmag.store" rel="external" target="_blank" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                    Magazine
+                </a>
             </li>
             <li>
                 <a href="/newsletter/" 

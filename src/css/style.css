@@ -156,6 +156,14 @@ nav .underline-custom {
     text-underline-offset: 3px;
 }
 
+nav ul li a span.no-underline {
+    text-decoration: none !important;
+}
+
+nav ul li a span.no-underline:hover {
+    text-decoration: none !important;
+}
+
 /* Introduction */
 .introduction {
     @apply mb-32;
@@ -257,4 +265,12 @@ ul.links li a:hover {
 
 .icon-sunset {
     color: #222;
+}
+
+a .no-underline {
+    text-decoration: none !important;
+}
+
+a.no-underline:hover span {
+    text-decoration: none !important;
 }
