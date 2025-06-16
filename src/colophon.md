@@ -6,62 +6,8 @@ description: How this site is built
 
 # Colophon
 
-Details about how this website is built, designed, and maintained.
+This website was hand-built by me. My code editor of choice is [Cursor](cursor.com "Cursor, code editor"). I use [Warp](http://warp.dev/ "Warp terminal") for any terminal shenanigans. To get things up and running I've used a simple static site generator called [Eleventy](https://www.11ty.dev/ "Eleventy"), using the [Nunjucks](https://mozilla.github.io/nunjucks/ "Nunjucks") template engine. All of this is publicly available, along with a readme, via my [repository](https://github.com/dvdwinden/danielvdwww "This site's Github repository") on Github.
 
-## Technology Stack
+Headings are set in _Degular_ by Oh No Type Co. Foster Type's _Blanco_ is used for body copy.
 
-- **Static Site Generator**: [Eleventy (11ty)](https://www.11ty.dev/)
-- **Template Engine**: Nunjucks
-- **Styling**: CSS (custom)
-- **Hosting**: [Your hosting provider]
-- **Domain**: [Your domain registrar]
-- **Version Control**: Git
-- **Repository**: [Link to your repo if public]
-
-## Design Philosophy
-
-- **Performance**: Fast loading, minimal JavaScript
-- **Accessibility**: Semantic HTML, keyboard navigation
-- **Simplicity**: Clean, readable typography
-- **Sustainability**: Lightweight, energy-efficient
-
-## Typography
-
-- **Body Text**: [Font family used]
-- **Headings**: [Heading font]
-- **Code**: [Monospace font]
-
-## Tools Used
-
-- **Code Editor**: [Your editor]
-- **Terminal**: [Your terminal]
-- **Design**: [Design tools if any]
-- **Writing**: [Writing tools]
-
-## Inspiration
-
-This site draws inspiration from:
-
-- [Website 1](https://example.com) - Clean typography
-- [Website 2](https://example.com) - Minimal design
-- The [IndieWeb](https://indieweb.org/) movement
-
-## Performance
-
-- Lighthouse Score: [Your scores]
-- Average Load Time: [Time]
-- Total Page Weight: [Size]
-
-## Privacy
-
-- No tracking scripts
-- No cookies (except essential ones)
-- No third-party analytics
-- [Link to privacy policy if you have one]
-
----
-
-*Last updated: June 2024*
-
-*A colophon traditionally appears at the end of a book, describing how it was produced. This is the web equivalent.*
-
+I don't place cookies, and don't use tracking scripts. I do use some basic analytics, which can be found on Umami. The average load time of this website is X, and its page weight is Y. My Lighthouse scores are Z.
