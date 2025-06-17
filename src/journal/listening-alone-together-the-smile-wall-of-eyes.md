@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "Listening alone, together: The Smile's “Wall of Eyes”"
+title: "Listening alone, together: The Smile’s “Wall of Eyes”"
 date: 2024-01-27
 bodyClass: bg-stone
 tags: [music]
