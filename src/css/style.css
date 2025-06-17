@@ -173,10 +173,16 @@ article time {
     text-decoration: none;
 }
 
+/* Header */
+header a picture {
+    margin-right: 0.5rem;
+}
 
+header a:hover picture img {
+    filter: grayscale(100%);
+}
 
 /* Images and captions */
-
 .prose figure figcaption {
     font-size: 1rem;
     font-style: italic;
