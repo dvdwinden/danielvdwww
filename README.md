@@ -1,16 +1,17 @@
 # Daniël van der Winden • Personal Website
 
-A personal website and blog built with Eleventy (11ty) and styled with Tailwind. This site showcases my work, writing, and personal interest.
+A personal website and blog built with Eleventy (11ty) and styled with Tailwind. This site showcases some of my work, some of my writing, and many of my personal interests.
 
 ## Overview
 
-This is a static site generator setup featuring:
+It's a static site setup. It features:
 - **Eleventy (11ty)** for static site generation
 - **Tailwind CSS** with Typography plugin for styling
 - **Image optimization** with responsive image shortcodes
 - **Dark mode** toggle functionality
 - **RSS feed** generation
 - **Development workflow** with live reload
+- **Analytics integration** with Umami for privacy-focused tracking
 
 ## Project Structure
 
@@ -18,13 +19,13 @@ This is a static site generator setup featuring:
 ├── src/                    # Source files
 │   ├── _includes/          # Nunjucks templates
 │   │   └── base.njk        # Base layout template
-│   ├── assets/             # Images and static assets
-│   ├── blog/               # Blog posts (markdown)
-│   ├── essays/             # Essay posts (markdown)
+│   ├── assets/             # Images, favicons, and static assets
+│   ├── links/              # Links to external posts (markdown)
+│   ├── journal/            # Journal posts (markdown)
 │   ├── css/                # Generated CSS (output)
 │   ├── js/                 # JavaScript files
-│   ├── index.md            # Homepage content
-│   ├── newsletter.md       # Newsletter page
+│   ├── index.md            # Homepage (work)
+│   ├── newsletter.md       # Newsletter (books))
 │   ├── reading.md          # Reading list (books)
 │   ├── watching.md         # Watching list (movies)
 │   ├── colophon.md         # Site colophon
@@ -38,21 +39,20 @@ This is a static site generator setup featuring:
 ## Features
 
 ### Content Types
-- **Work Portfolio**: Professional experience and project showcases
-- **Blog Posts**: Technical writing and thoughts
-- **Essays**: Long-form writing and personal reflections
-- **Reading/Watching Lists**: Curated recommendations
+- **Work**: Professional experience and a few project highlights
+- **Links**: Curated links to things to read, watch or listen to
+- **Journal**: My own writing
+- **Reading/Watching lists**: Favourite books and movies
 - **Newsletter**: Monthly book recommendations (Trema)
 
 ### Design & Styling
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
 - **Dark Mode**: Toggle between light and dark themes
-- **Typography**: Custom font stack with serif and sans-serif options
+- **Typography**: Custom font stack with serif (Blanco) and sans-serif (Degular) 
 - **Image Optimization**: Responsive images with retina support
-- **Clean Layout**: Minimalist design focusing on content readability
 
 ### Technical Features
-- **Collections**: Automated grouping of blog posts and essays
+- **Collections**: Automated grouping of link and journal entries
 - **RSS Feed**: Auto-generated feed for blog posts
 - **Image Shortcodes**: Custom Eleventy shortcodes for optimized images
 - **Live Reload**: Development server with automatic refresh
@@ -105,9 +105,9 @@ The `npm run dev` command starts both Eleventy and Tailwind CSS in watch mode us
 - **Input Directory**: `src/`
 - **Output Directory**: `_site/`
 - **Template Formats**: Markdown, Nunjucks, HTML
-- **Collections**: Blog posts and essays with date sorting
+- **Collections**: Journal and links with date sorting
 - **Image Shortcodes**: `retinaImage` for responsive images
-- **RSS Feed**: Automated generation from blog posts
+- **RSS Feed**: Automated generation from links and journal entries
 
 ### Tailwind Configuration (`tailwind.config.js`)
 - **Content Sources**: All source files for purging unused CSS
@@ -118,8 +118,8 @@ The `npm run dev` command starts both Eleventy and Tailwind CSS in watch mode us
 
 ### Content Management
 
-#### Adding Blog Posts
-Create markdown files in `src/blog/` with frontmatter:
+#### Adding links
+Create markdown files in `src/links/` with frontmatter:
 
 ```markdown
 ---
@@ -127,13 +127,15 @@ layout: base.njk
 title: "Your Post Title"
 date: 2024-01-01
 description: "Post description"
+external_url: "URL"
+tags: "tags"
 ---
 
 Your post content here...
 ```
 
-#### Adding Essays
-Create markdown files in `src/essays/` with similar frontmatter structure.
+#### Adding journal entries
+Create markdown files in `src/journal/` with similar frontmatter structure.
 
 #### Images
 Place images in `src/assets/` and use the `retinaImage` shortcode:
