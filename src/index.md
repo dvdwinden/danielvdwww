@@ -10,7 +10,7 @@ description: Daniel's personal website
 
   Most recently I worked for [Ghost](http://ghost.org "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
 
-  Before that I helped mould design studio <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
+  Before that I helped mould the design studio <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
 
   I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
 
