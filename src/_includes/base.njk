@@ -61,7 +61,7 @@
             <li>
                 <a href="/journal/" 
                    class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
-                   {% if page.url == '/journal/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                   {% if page.url.startsWith('/journal/') %} underline underline-custom text-black dark:text-white {% endif %}">
                     Journal
                 </a>
             </li>
