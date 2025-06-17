@@ -54,6 +54,7 @@ module.exports = {
         'beige': '#fcfaf6',
         'brown': '#7c5e00',
         'green': '#F9FFF5',
+        'stone': '#d5d3cc',
       },
     },
   },
