@@ -21,7 +21,7 @@ My own writing, long and short. <a href="/journal.xml" rel="external" target="_b
   <li class="py-3 pl-0">
     <div class="flex flex-col">
       <div class="flex items-baseline justify-between">
-        <a href="{{ post.data.external_url or post.url }}" class="text-2xl font-serif font-semibold hover:underline">
+        <a href="{{ post.data.external_url or post.url }}" class="text-2xl font-serif font-semibold hover:underline" {% if post.data.external_url %}target="_blank" rel="external"{% endif %}>
          <h2 class="no-underline">{{ post.data.title }}</h2>
         </a>
         <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
