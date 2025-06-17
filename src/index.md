@@ -23,7 +23,7 @@ description: Daniel's personal website
   <h2>Resumé</h2>
 
   <ul class="pl-0 ml-0 list-none space-y-10">
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8  pb-8 pl-0 ml-0 border-b border-black border-opacity-5  dark:border-white dark:border-opacity-5">
+    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-gray-400 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
         <div class="text-xl font-bold font-sans">
@@ -34,7 +34,7 @@ description: Daniel's personal website
         </div>
       </div>
     </li>
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 border-b border-black border-opacity-5 pb-8 pl-0 ml-0 dark:border-white dark:border-opacity-5">
+    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-gray-400 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
       <div class="md:w-3/4">
         <div class="text-xl font-bold font-sans">
@@ -45,7 +45,7 @@ description: Daniel's personal website
         </div>
       </div>
     </li>
-      <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 border-b border-black border-opacity-5 pb-8 pl-0 ml-0 dark:border-white dark:border-opacity-5">
+      <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-gray-400 font-sans mb-2 md:mb-0 text-md">2015–2019</span>
       <div class="md:w-3/4">
         <div class="text-xl font-bold font-sans">
@@ -56,7 +56,7 @@ description: Daniel's personal website
         </div>
       </div>
     </li>
-      <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 border-b border-black border-opacity-5 pb-8 pl-0 ml-0 dark:border-white dark:border-opacity-5">
+      <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
         <span class="md:w-1/4 text-gray-400 font-sans mb-2 md:mb-0 text-md">2014–2015</span>
         <div class="md:w-3/4">
           <div class="text-xl font-bold font-sans">
@@ -64,7 +64,7 @@ description: Daniel's personal website
           </div>
         </div>
     </li>
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 border-b border-black border-opacity-5 pb-8 pl-0 ml-0 dark:border-white dark:border-opacity-5">
+    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-gray-400 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
       <div class="md:w-3/4">
         <div class="text-xl font-bold font-serif">
@@ -72,7 +72,7 @@ description: Daniel's personal website
         </div>
       </div>
     </li>
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 border-b border-black border-opacity-5 pb-8 pl-0 ml-0 dark:border-white dark:border-opacity-5">
+    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-gray-400 font-sans mb-2 md:mb-0 text-md">2010–2012</span>
       <div class="md:w-3/4">
         <div class="text-xl font-bold font-serif">
