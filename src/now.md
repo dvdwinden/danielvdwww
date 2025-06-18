@@ -2,6 +2,7 @@
 layout: base.njk
 title: Now
 description: What I'm up to right now
+bodyClass: bg-green
 ---
 
 # Now
