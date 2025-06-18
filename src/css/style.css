@@ -195,9 +195,7 @@ header a:hover {
 /* Images and captions */
 .prose figure figcaption {
     font-size: 1rem;
-    font-style: italic;
     margin-top: 0.5rem;
-    color: theme('colors.gray.400');
 }
 
 /* Navigation */

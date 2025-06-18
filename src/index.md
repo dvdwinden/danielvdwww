@@ -93,7 +93,7 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Improved publishing flow in Ghost" %}
-    <figcaption class="pl-8 sm:pl-0">Improved publishing flow in Ghost</figcaption>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Improved publishing flow in Ghost</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
@@ -105,26 +105,33 @@ As a designer I'm at my best when thinking holistically, setting direction and s
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-auto max-w-none mt-48">
   <figure>
-    {% retinaImage "src/assets/work/circle-video-ui.mp4", "IKEA's circular rental solution" %}
-    <figcaption class="pl-8 sm:pl-0">UI for IKEA's circular rental solution</figcaption>
+    <video autoplay loop muted playsinline class="w-full">
+        <source src="/assets/work/circle-video-interior.mp4" type="video/mp4">
+        IKEA's circular rental solution. Interior models by Astin Le Clercq and Santi Zoraidez.
+    </video>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">IKEA's circular rental solution</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
     {% retinaImage "src/assets/work/circle-01.jpg", "IKEA" %}
-    <figcaption class="pl-8 sm:pl-0">Photo: Bakken & Bæck</figcaption>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Photo: Bakken & Bæck</figcaption>
   </figure>
 </div>
 
-<figure class="w-full sm:w-[576px] ml-auto my-24">
-  {% retinaImage "src/assets/placeholder-small.png", "IKEA" %}
-</figure>
+<figure>
+    <video autoplay loop muted playsinline">
+        <source src="/assets/work/circle-video-chair.mp4" type="video/mp4">
+        IKEA's circular rental solution
+    </video>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">UI for IKEA's circular rental solution</figcaption>
+  </figure>
 
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "AutoStore" %}
-    <figcaption class="pl-8 sm:pl-0">Design tooling for AutoStore</figcaption>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Design tooling for AutoStore</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
@@ -149,7 +156,7 @@ Most recently I've acted as the copywriter and editor on the [NoGood](https://bo
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
-    <figcaption class="pl-8 sm:pl-0">TRANSCRIPT magazine</figcaption>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">TRANSCRIPT Magazine</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">

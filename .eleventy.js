@@ -104,16 +104,19 @@ module.exports = function (eleventyConfig) {
   // Copy static files (but not assets - we'll process those)
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
-  
+
   // Copy favicon files to assets directory
   eleventyConfig.addPassthroughCopy("src/assets/favicon.ico");
   eleventyConfig.addPassthroughCopy("src/assets/favicon-16x16.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon-32x32.png");
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon.png");
-  
+
+  // Copy work directory for videos
+  eleventyConfig.addPassthroughCopy("src/assets/work");
+
   // Copy favicon.ico to root directory for default browser behavior
-  eleventyConfig.addPassthroughCopy({"src/assets/favicon.ico": "favicon.ico"});
+  eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
 
   // Watch CSS files and assets for changes
   eleventyConfig.addWatchTarget("./src/css/");
