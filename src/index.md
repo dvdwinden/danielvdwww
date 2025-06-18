@@ -5,7 +5,7 @@ description: Daniel's personal website
 bodyClass: bg-purple
 ---
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] pb-32 dark:prose-invert">
 <h1>Work</h1>
 
 <section class="introduction">

@@ -6,18 +6,21 @@ date: 2022-05-10
 tags: [cinema]
 description: An ode to experiencing the incredible intimacy of seeing films in a movie theatre.
 ---
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 
-# On the big screen, intimacy is what you’ll find
+<h1>On the big screen, intimacy is what you’ll find</h1>
 <span class="font-sans text-sm">May 10, 2022</span>
 
 On a Sunday morning at twelve, I settled into a chair at a local movie theatre for [_Memoria_](https://letterboxd.com/film/memoria-2021/ "Memoria on Letterboxd"), the latest film by Apichatpong Weerasethakul about an English woman named Jessica (played by Tilda Swinton) who visits her ill sister in Bogota, Colombia, and befriends a young musician and a French archeologist. Each night, as she tries to fall asleep, she's startled by loud, metal-like bangs only she seems to be able to hear, making sleep a fruitless endeavour; the script for the film apparently inspired by the symptoms of "Exploding Head Syndrome", which plagued the director for some time.
-
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-auto max-w-none mt-36">
-  <figure>
+</div>
+<div class="mt-32">
+  <figure class="w-full">
     {% retinaImage "src/assets/journal/memoria.avif", "Tilda Swinton as Jessica and Juan Pablo Urrego as Hernán in Memoria (2022)" %}
     <figcaption class="pl-8 sm:pl-0">Tilda Swinton as Jessica and Juan Pablo Urrego as Hernán in <em>Memoria</em> (2022)</figcaption>
   </figure>
 </div>
+
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif mt-32 dark:prose-invert">
 
 From the first minute, _Memoria_ is wonderfully sensory: running for two and a half hours it consists largely of near silence or ambient noise. The scenes are long and dialogue is used sparingly, which makes every sentence that's spoken—in Spanish or English—feel more important, carry more weight. The sounds of pouring rain, babbling brooks, and cheerful bird song play an important role. The [_sound design_](https://soundsandcolours.com/articles/colombia/memoria-sound-as-a-cinematic-experience-64518/ "On Memoria's sound design") of the film was specifically focused on the theatrical experience; Jessica as a walking microphone, very sensitive to the noises surrounding her, anxiously awaiting that loud bang keeping her from falling asleep. As a viewer, you have no choice but to sway along with her, at times glued to your seat and often enthralled by minute-long shots that endlessly captivate.
 
@@ -27,12 +30,16 @@ From the first minute, _Memoria_ is wonderfully sensory: running for two and a h
 
 Twelve hours before the sensory experience of _Memoria_, I left another darkened movie theatre where I'd just seen [_The Batman_](https://letterboxd.com/film/the-batman/ "The Batman on Letterboxd"). Directed by Matt Reeves, the latest in a long line of directors to take the helm of the franchise, the film leans heavily into its film noir roots. It's long—clocking in at 176 minutes—and, for the most part of its extended runtime, we sit shrouded in darkness, Gotham City portrayed as a place the sun will never reach. It rains near continuously, sounds of pattering and dripping water constantly surrounding you, perfectly translating the feeling of that dark, wet, miserable place.
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-auto max-w-none mt-36">
-  <figure>
+</div>
+
+<div class="mt-32">
+  <figure class="w-full">
     {% retinaImage "src/assets/journal/the-batman.avif", "Still from The Batman (2022)" %}
     <figcaption class="pl-8 sm:pl-0">Still from <em>The Batman</em> (2022)</figcaption>
   </figure>
 </div>
+
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif mt-32 dark:prose-invert">
 
 Visually, _The Batman_ is beautiful: where most superhero-movies feel distant, Reeves knows how to pull the viewer in with exquisite camerawork. Shots are often close-ups of faces, shot over one's shoulder or from behind a window wet with rain, making it feel like you're observing each character from nearby, almost smelling the rain on the tarmac. What little light there is shrouds the city in a glow of red, blue and amber, and _The Batman_ makes [_Drive_](https://letterboxd.com/film/drive-2011/ "Drive on Letterboxd") (Nicolas Winding Refn's 2011 film known for its "neo-noir" sensibilities) look like a carnival.
 
@@ -51,14 +58,16 @@ It's time we adjust our expectations of a cinema visit. Instead of focusing on m
 <div style="text-align: center">*</div>
 
 Evan Puschak ([_The Nerdwriter_](https://www.youtube.com/channel/UCJkMlOu7faDgqh4PfzbpLdg "The Nerdwriter on YouTube")) published a video essay on his YouTube channel titled [_Faces On A Big Screen_](https://www.youtube.com/watch?v=89XKjjsa7PM "Faces On A Big Screen, video essay by The Nerdwriter"), in which he argues that it's not just the pompous action that should move you to visit a cinema, but the complex expressions on the faces you see on-screen. The most important example he highlights is the only scene in [_Licorice Pizza_](https://letterboxd.com/film/licorice-pizza/ "Licorice Pizza on Letterboxd") (Paul Thomas Anderson, 2022) that features Harriet Sansom Harris. She delivers a fantastic monologue that's been etched into my mind since I first watched the film because she's portrayed in incredible close-up, filling the screen, smoke wafting from her cigarette, nearly stinging your eyes as you watch her speak.
+</div>
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-auto max-w-none mt-36">
-  <figure>
+<div class="mt-32">
+  <figure class="w-full">
     {% retinaImage "src/assets/journal/harriet-sansom-harris.webp", "arriet Samson Harris as Mary Grady in Licorice Pizza (2022)" %}
     <figcaption class="pl-8 sm:pl-0">Harriet Samson Harris as Mary Grady in <em>Licorice Pizza</em> (2022)</figcaption>
   </figure>
 </div>
 
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif mt-32 dark:prose-invert">
 It is often said that watching films in one's living room, with all its comforts—curled up on the couch, under a blanket, with a glass of wine in hand—makes for the most intimate film experience. In a cinema you're sat next to strangers gobbling up popcorn or M&Ms, after all. But, in saying so, it's easy to forget about the way in which we consume a film at home. 
 
 You sit down, and pause the film after three minutes; you forgot to put on your comfy socks. Fifteen minutes later, a toilet break, and on the way back to the couch, a new drink. Halfway through the film your partner decides to walk the dog—the last lap of the day—and, after pausing the film, you quickly load the dishwasher. Your phone vibrates when the film reaches its final plot twist, and two minutes later you rewind it to see what just happened. Ten minutes before the end you doze off and subsequently stumble to bed—you'll catch up on the ending tomorrow. 
@@ -76,3 +85,5 @@ It's the music during the most important twist (David Bowie, in [_Inglourious Ba
 Moviegoing can be an intensely intimate experience. I think Weerasethakul's film, like many others I've experienced in a movie theatre, is one I could not have appreciated fully—internalising its most intricate details, overwhelmed by its warm embrace, feeling a part of the journey it took me on—had I not watched it in the comfort of a movie theatre.
 
 <span class="article-footer dark:text-gray-400">Thank you to Julie, Marc and Mechteld for reading a Dutch draft of this essay, and to Megan for reading and editing my English translation.</span>
+
+</div>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <title>{% if title %}
+        {% if page.url == '/' %}
+            Daniël van der Winden • Software designer & writer
+        {% else %}
+            {{ title }} • Daniël van der Winden
+        {% endif %}
+    {% else %}
+        Daniël van der Winden • Software designer & writer
+    {% endif %}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="theme-color" content="#fcfaf6">
+    
+    <!-- RSS Feeds -->
+    <link rel="alternate" type="application/atom+xml" title="Journal Feed" href="/journal/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="Links Feed" href="/links/feed.xml">
+    <!--<script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>-->
+</head>
+<body class="min-h-screen bg-beige dark:bg-[#222] text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden {{ bodyClass }}">
+    <header class="fixed top-0 left-0 z-50 p-6 flex justify-between w-full">
+        <div class="flex items-center space-x-4">
+            <a href="/" class="text-xl font-serif text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center">
+                {% retinaImage "src/assets/daniel.png", "Avatar of Daniël van der Winden", 20, "rounded-full" %}
+                {{ "Daniël van der Winden" }}
+            </a>
+        </div>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="ml-4">
+            <span id="dark-icon">
+                {% include "icons/sunset.svg" %}
+            </span>
+            <span id="light-icon">
+                {% include "icons/sunrise.svg" %}
+            </span>
+        </button>
+    </header>
+
+    <nav class="fixed bottom-0 left-0 z-50 p-6">
+        <ul class="flex flex-row flex-nowrap overflow-x-auto whitespace-nowrap hide-scrollbar justify-start space-x-8 text-base font-serif sm:flex-col sm:space-x-0 sm:space-y-3 sm:text-lg">
+            <li>
+                <a href="/links/" 
+                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                   {% if page.url.startsWith('/links/') %} underline underline-custom text-black dark:text-white {% endif %}">
+                    Links
+                </a>
+            </li>
+            <li>
+                <a href="/journal/" 
+                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                   {% if page.url.startsWith('/journal/') %} underline underline-custom text-black dark:text-white {% endif %}">
+                    Journal
+                </a>
+            </li>
+            <li>
+                <a href="http://transcriptmag.store" rel="external" target="_blank" class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                    Magazine
+                </a>
+            </li>
+            <li>
+                <a href="/newsletter/" 
+                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                   {% if page.url == '/newsletter/' %} underline underline-custom  text-black dark:text-white {% endif %}">
+                    Newsletter
+                </a>
+            </li>
+            <li>
+                <a href="/reading/" 
+                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                   {% if page.url == '/reading/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                    Reading
+                </a>
+            </li>
+            <li>
+                <a href="/watching/" 
+                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                   {% if page.url == '/watching/' %} underline underline-custom text-black dark:text-white {% endif %}">
+                    Watching
+                </a>
+            </li>
+            <li>
+                <a href="/"
+                   class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                   {% if page.url == '/' %} underline underline-custom text-black dark:text-white{% endif %}">
+                    Work
+                </a>
+                <span class="ml-2 inline-block align-middle text-xs text-[#7c5e00] uppercase tracking-widest font-sans font-bold bg-[#fff9a8] dark:bg-gray-700 dark:text-gray-100 border-none px-2 py-1 rounded-full">
+                    Available
+                </span>
+            </li>
+        </ul>
+    </nav>
+    
+    <main class="ml-0 lg:ml-64 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1400px]">
+        <div class="w-full max-w-[1400px]">
+            <div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] pb-32 dark:prose-invert">
+                {{ content | safe }}
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="/js/dark-mode.js"></script>
+
+</html>
+
