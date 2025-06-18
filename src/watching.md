@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Watching
+bodyClass: bg-red
 description: Movies and shows I'm watching
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Newsletter
+bodyClass: bg-white
 description: Subscribe to my newsletter
 ---
 

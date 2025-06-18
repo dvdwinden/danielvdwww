@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Reading
+bodyClass: bg-red
 description: Books I'm reading and have read
 ---
 
