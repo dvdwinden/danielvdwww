@@ -273,7 +273,6 @@ nav ul li a span.no-underline:hover {
 
 .site-footer ul li a {
     text-decoration: none;
-    color: theme('colors.gray.400');
     font-family: theme('fontFamily.serif');
     font-size: 0.875rem;
 }
