@@ -3,7 +3,7 @@ layout: narrow.njk
 title: "Nan Shepherd – The Living Mountain (1977)"
 date: 2024-03-22
 tags: [non-fiction]
-external_url: https://www.trema.website/nan-shepherd-the-living-mountain//?ref=daniel.pizza
+external_url: https://www.trema.website/nan-shepherd-the-living-mountain?ref=daniel.pizza
 image:
   src: /assets/newsletter/jo-ann-beard-collected-works.png
   alt: "Nan Shepherd – The Living Mountain (1977)"
