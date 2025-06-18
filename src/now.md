@@ -17,5 +17,5 @@ In parallel, [Iris](http://iriscuppen.com "Iris Cuppen") and I have started work
 
 On the home-front, [Megan](https://x.com/megantronic "My partner, Megan") and I have rented a 16 m² plot in a greenhouse where we can grow vegetables. We're currently building raised beds, before getting irrigation and winter crops in. It's already proving a lovely, calming respite from day-to-day life.
 
-<span class="font-sans text-xs uppercase tracking-widest text-gray-400">Last updated: June 2025</span>
+<span class="font-sans text-xs uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: June 2025</span>
 
