@@ -88,7 +88,7 @@ bodyClass: bg-purple
 </section>
 
 ## Design
-As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for, and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.
+As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.
 
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
@@ -107,17 +107,33 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 
 <div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
   <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "IKEA's circular rental solution" %}
+    {% retinaImage "src/assets/work/circle-video-ui.mp4", "IKEA's circular rental solution" %}
     <figcaption class="pl-8 sm:pl-0">UI for IKEA's circular rental solution</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
-    {% retinaImage "src/assets/placeholder-small.png", "IKEA" %}
+    {% retinaImage "src/assets/work/circle-01.jpg", "IKEA" %}
+    <figcaption class="pl-8 sm:pl-0">Photo: Bakken & Bæck</figcaption>
   </figure>
 </div>
 
 <figure class="w-full sm:w-[576px] ml-auto my-24">
   {% retinaImage "src/assets/placeholder-small.png", "IKEA" %}
+</figure>
+
+<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
+  <figure>
+    {% retinaImage "src/assets/placeholder-large.png", "AutoStore" %}
+    <figcaption class="pl-8 sm:pl-0">Design tooling for AutoStore</figcaption>
+  </figure>
+
+  <figure class="w-full sm:w-[576px] mr-auto my-12">
+    {% retinaImage "src/assets/placeholder-small.png", "AutoStore" %}
+  </figure>
+</div>
+
+<figure class="w-full sm:w-[576px] ml-auto my-24">
+  {% retinaImage "src/assets/placeholder-small.png", "AutoStore" %}
 </figure>
 
 
