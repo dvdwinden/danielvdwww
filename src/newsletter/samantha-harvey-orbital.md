@@ -10,4 +10,4 @@ image:
   title: "Samantha Harvey – Orbital (2023)"
 ---
 
-I could read a tower of non-fiction books about space, climate change and humanity, and they wouldn't pack the same punch as this 144-page novel. <a href="{{ external_url }}" title="Read my recommendation for Orbital by Samantha Harvey." rel="external" target="_blank">Continue reading</a> →
+I could read a tower of non-fiction books about space, climate change and humanity, and they wouldn't pack the same punch as this 144-page novel. <a href="{{ external_url }}" title="Read my recommendation for Orbital by Samantha Harvey" rel="external" target="_blank">Continue reading</a> →

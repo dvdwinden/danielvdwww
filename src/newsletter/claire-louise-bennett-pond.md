@@ -16,4 +16,4 @@ Shortly before the halfway mark of this book, there's a tiny story named _Stir-F
 
 _Stir-Fry_ is followed by a delightful seven-page story named _Finishing Touch_ about throwing a little party (“I have so many glasses after all”), which I loved. After that comes _Control Knobs_, my favourite in the entire book, about the deteriorating knobs on the narrator's outdated Salton mini-kitchen. 
 
-I don't often read books of short stories. And, as I'm sure you can tell by now, this book is not your average book of short stories, either. But, it struck a chord. It moved me. <a href="{{ external_url }}" title="Read my recommendation for Pond by Claire-Louise Bennett." rel="external" target="_blank">Continue reading</a> →
+I don't often read books of short stories. And, as I'm sure you can tell by now, this book is not your average book of short stories, either. But, it struck a chord. It moved me. <a href="{{ external_url }}" title="Read my recommendation for Pond by Claire-Louise Bennett" rel="external" target="_blank">Continue reading</a> →
