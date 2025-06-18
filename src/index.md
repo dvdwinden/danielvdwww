@@ -149,11 +149,31 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
-In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.com "Coinbase"), [AutoStore](http://autostoresystem.com "AutoStore"), [Pexip](http://pexip.com "Pexip"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/ "Wake"), and [Expo](http://expo.dev "Expo"). More work samples are available on request.
+---
+
+### Pexip
+In collaboration with Pexip's team I led design on their web, iOS and Android apps for videoconferencing. We also designed _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/ "Read more about Pexip Room")_, which allowed people to join Pexip meetings using Logitech hardware. We implemented Pexip’s privacy-first approach to software design and designed the software for Logitech's Tap device based on Android's _Material Design_ language.
+
+</div>
+
+<div class="mt-32">
+ <figure class="w-full sm:w-[576px] mr-auto my-12">
+    {% retinaImage "src/assets/work/pexip-room-tv.png", "Pexip Room" %}
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Pexip Room</figcaption>
+  </figure>
+</div>
+
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
+
+<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
+  {% retinaImage "src/assets/work/pexip-room-tap.png", "Pexip Room" %}
+</figure>
 
 > Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
 
-<span class="uppercase font-sans text-sm mt-0 font-medium tracking-wide text-black/50 dark:text-white/30">— Sven-Petter Mæhle, client (Pexip)</span>
+<span class="uppercase font-sans text-sm mt-0 font-medium tracking-wide text-black/50 dark:text-white/30">— Sven-Petter Mæhle, Pexip</span>
+
+In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.com "Coinbase"), [AutoStore](http://autostoresystem.com "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/ "Wake"), and [Expo](http://expo.dev "Expo"). 
 
 ---
 
