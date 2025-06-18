@@ -19,3 +19,4 @@ On the home-front, [Megan](https://x.com/megantronic "My partner, Megan") and I 
 
 <span class="font-sans text-xs uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: June 2025</span>
 
+{% include "footer.njk" %}
