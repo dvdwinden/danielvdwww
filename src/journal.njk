@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: Journal
 description: Journal
 deleteme: true
@@ -12,7 +12,7 @@ pagination:
 permalink: "journal/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] pb-32 dark:prose-invert">
+
 <h1>Journal</h1>
 
 My own writing, long and short. <a href="/journal/feed.xml" rel="external" target="_blank" title="Subscribe to RSS">Subscribe to RSS</a>.
@@ -62,4 +62,3 @@ My own writing, long and short. <a href="/journal/feed.xml" rel="external" targe
 {% endif %} 
 
 {% include "footer.njk" %}
-</div>
