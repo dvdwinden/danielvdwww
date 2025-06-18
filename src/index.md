@@ -93,7 +93,7 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 ---
 
 ### Ghost
-Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") throughout the product, I designed and helped build an upgraded publishing workflow, lowering the barrier for publishers to share their work with their audience. And, I contributed to the integration of custom fonts.
+Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") throughout the product, I designed and helped build an upgraded publishing workflow, lowering the barrier for publishers to share their work with their audience. I also contributed to the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/ "Custom fonts in Ghost"), and I was involved in Ghost's exploratory brand work.
 
 </div>
 
@@ -107,7 +107,8 @@ Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
-    {% retinaImage "src/assets/work/ghost-custom-fonts.png", "Ghost" %}
+    {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Custom fonts in Ghost</figcaption>
   </figure>
 </div>
 
