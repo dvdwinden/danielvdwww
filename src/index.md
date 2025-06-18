@@ -11,11 +11,9 @@ bodyClass: bg-purple
 <section class="introduction">
   I'm an Amsterdam-based (software) designer and writer with over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.
 
-  Most recently I worked for [Ghost](http://ghost.org "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
-
-  Before that I helped mould the design studio <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
-
-  I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
+  - Most recently I worked for [Ghost](http://ghost.org "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
+  - Before that I helped mould the design studio <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
+  - I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
 
   <span class="callout">I'm open to new opportunities, contract or permanent.</span>
 
@@ -29,7 +27,7 @@ bodyClass: bg-purple
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/30 dark:text-white/30 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
-        <div class="text-xl font-bold font-sans">
+        <div class="text-md font-bold font-sans">
           <h3>Senior Designer at <a href="http://ghost.org" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
         </div>
         <div class="text-black/50 dark:text-white/50 mt-2 font-degular-text text-sm">
@@ -40,7 +38,7 @@ bodyClass: bg-purple
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
       <div class="md:w-3/4">
-        <div class="text-xl font-bold font-sans">
+        <div class="text-md font-bold font-sans">
           <h3>CDO, Partner at <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
         <div class="text-black/50 dark:text-white/50 mt-2 font-degular-text text-sm">
@@ -51,7 +49,7 @@ bodyClass: bg-purple
       <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2015–2019</span>
       <div class="md:w-3/4">
-        <div class="text-xl font-bold font-sans">
+        <div class="text-md font-bold font-sans">
           <h3>Designer, Head of <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
         </div>
         <div class="text-black/50 dark:text-white/50 mt-2 font-degular-text text-sm">
@@ -62,7 +60,7 @@ bodyClass: bg-purple
       <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
         <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2014–2015</span>
         <div class="md:w-3/4">
-          <div class="text-xl font-bold font-sans">
+          <div class="text-md font-bold font-sans">
             <h3>Designer at <a href="http://fabrique.nl" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a></h3>
           </div>
         </div>
@@ -70,7 +68,7 @@ bodyClass: bg-purple
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
       <div class="md:w-3/4">
-        <div class="text-xl font-bold font-serif">
+        <div class="text-md font-bold font-serif">
           <h3>Internships at <a href="http://fabrique.nl" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a> and <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
       </div>
@@ -78,7 +76,7 @@ bodyClass: bg-purple
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2010–2012</span>
       <div class="md:w-3/4">
-        <div class="text-xl font-bold font-serif">
+        <div class="text-md font-bold font-serif">
           <h3>Internship at Faster Forward Interactive</h3>
         </div>
         <div class="text-black/50 dark:text-white/50 mt-2 font-degular-text text-sm">
@@ -95,7 +93,7 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 ---
 
 ### Ghost
-Here goes some text on Ghost.
+Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") throughout the product, I designed an upgraded publishing workflow and contributed to the integration of custom fonts.
 
 </div>
 
@@ -147,29 +145,7 @@ At Bakken & Bæck I led the product design for Circle, IKEA's circular rental so
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
----
-
-### AutoStore
-Here goes some text on AutoStore.
-
-</div>
-
-<div class="mt-32">
-  <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "Digital design tools for AutoStore", "w-full" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Digital design tools for AutoStore</figcaption>
-  </figure>
-
-  <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
-    {% retinaImage "src/assets/placeholder-small.png", "AutoStore" %}
-  </figure>
-</div>
-
-<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
-  {% retinaImage "src/assets/placeholder-small.png", "AutoStore" %}
-</figure>
-
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
+In addition, I've worked on projects for [Coinbase](http://coinbase.com "Coinbase"), [AutoStore](http://autostoresystem.com "AutoStore"), [Pexip](http://pexip.com "Pexip"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/ "Wake"), and [Expo](http://expo.dev "Expo"). More work samples are available on request.
 
 ---
 
