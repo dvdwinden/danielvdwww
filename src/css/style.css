@@ -202,10 +202,10 @@ header a:hover {
 
 /* Navigation */
 nav ul li a:hover {
-    color: #7c5e00;
+    color: theme('colors.hover');
     transition: color 0.2s;
     text-decoration: underline;
-    text-decoration-color: theme('colors.brown');
+    text-decoration-color: theme('colors.hover');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     cursor: pointer;
@@ -213,7 +213,7 @@ nav ul li a:hover {
 
 nav .underline-custom {
     text-decoration: underline;
-    text-decoration-color: theme('colors.gray.400');
+    text-decoration-color: theme('colors.hover');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
