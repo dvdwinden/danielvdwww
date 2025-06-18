@@ -169,6 +169,10 @@ module.exports = function (eleventyConfig) {
       journal: {
         size: 10,
         alias: "journal"
+      },
+      newsletter: {
+        size: 5,
+        alias: "newsletter"
       }
     }
 
