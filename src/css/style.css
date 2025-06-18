@@ -487,7 +487,7 @@ nav.pagination a:hover {
 
 /* Newsletter */
 ul.newsletter picture {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 }
 
 ul.newsletter h2 {
