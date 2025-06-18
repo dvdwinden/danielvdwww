@@ -93,13 +93,16 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 ---
 
 ### Ghost
-Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") throughout the product, I designed an upgraded publishing workflow and contributed to the integration of custom fonts.
+Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") throughout the product, I designed and helped build an upgraded publishing workflow, lowering the barrier for publishers to share their work with their audience. And, I contributed to the integration of custom fonts.
 
 </div>
 
 <div class="mt-32">
   <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "Improved publishing flow in Ghost", "w-full" %}
+    <video autoplay loop muted playsinline class="w-full">
+        <source src="/assets/work/publishing-flow.mp4" type="video/mp4">
+        Improved publishing flow in Ghost
+    </video>
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Improved publishing flow in Ghost</figcaption>
   </figure>
 
@@ -168,12 +171,13 @@ Most recently I've acted as the copywriter and editor on the [NoGood](https://bo
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
-    {% retinaImage "src/assets/placeholder-small.png", "TRANSCRIPT Magazine" %}
+    {% retinaImage "src/assets/work/transcript-visual.png", "TRANSCRIPT Magazine" %}
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans"><em>TRANSCRIPT</em> Magazine, featuring work by Thomas & Jurgen</figcaption>
   </figure>
 </div>
 
 <figure class="w-full sm:w-[576px] ml-auto my-24">
-  {% retinaImage "src/assets/placeholder-small.png", "TRANSCRIPT Magazine" %}
+  {% retinaImage "src/assets/work/transcript-article.png", "TRANSCRIPT Magazine" %}
 </figure>
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
