@@ -145,7 +145,7 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
-In addition, I've worked on projects for [Coinbase](http://coinbase.com "Coinbase"), [AutoStore](http://autostoresystem.com "AutoStore"), [Pexip](http://pexip.com "Pexip"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/ "Wake"), and [Expo](http://expo.dev "Expo"). More work samples are available on request.
+In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.com "Coinbase"), [AutoStore](http://autostoresystem.com "AutoStore"), [Pexip](http://pexip.com "Pexip"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/ "Wake"), and [Expo](http://expo.dev "Expo"). More work samples are available on request.
 
 ---
 
@@ -160,8 +160,11 @@ Most recently I've acted as the copywriter and editor on the [NoGood](https://bo
 
 <div class="mt-32">
   <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "TRANSCRIPT Magazine", "w-full" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">TRANSCRIPT Magazine</figcaption>
+    <video autoplay loop muted playsinline class="w-full">
+        <source src="/assets/work/transcript-video.mp4" type="video/mp4">
+        TRANSCRIPT Magazine
+    </video>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans"><em>TRANSCRIPT</em> Magazine</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
