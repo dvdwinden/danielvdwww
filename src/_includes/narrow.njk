@@ -46,17 +46,17 @@
     <nav class="fixed bottom-0 left-0 z-50 p-6">
         <ul class="flex flex-row flex-nowrap overflow-x-auto whitespace-nowrap hide-scrollbar justify-start space-x-8 text-base font-serif sm:flex-col sm:space-x-0 sm:space-y-3 sm:text-lg">
             <li>
-                <a href="/links/" 
-                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
-                   {% if page.url.startsWith('/links/') %} underline underline-custom text-black dark:text-white {% endif %}">
-                    Links
-                </a>
-            </li>
-            <li>
                 <a href="/journal/" 
                    class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
                    {% if page.url.startsWith('/journal/') %} underline underline-custom text-black dark:text-white {% endif %}">
                     Journal
+                </a>
+            </li>
+            <li>
+                <a href="/links/" 
+                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors
+                   {% if page.url.startsWith('/links/') %} underline underline-custom text-black dark:text-white {% endif %}">
+                    Links
                 </a>
             </li>
             <li>
