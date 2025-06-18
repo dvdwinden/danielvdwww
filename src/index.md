@@ -99,7 +99,7 @@ Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/
 
 <div class="mt-32">
   <figure>
-    <video autoplay loop muted playsinline class="w-full">
+    <video autoplay loop muted playsinline class="w-full" preload="auto">
         <source src="/assets/work/publishing-flow.mp4" type="video/mp4">
         Improved publishing flow in Ghost
     </video>
@@ -107,7 +107,7 @@ Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
-    {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+    {% retinaImage "src/assets/work/ghost-custom-fonts.png", "Ghost" %}
   </figure>
 </div>
 
@@ -125,7 +125,7 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 
 <div class="mt-32">
   <figure>
-    <video autoplay loop muted playsinline class="w-full">
+    <video autoplay loop muted playsinline class="w-full" preload="auto">
         <source src="/assets/work/circle-video-interior.mp4" type="video/mp4">
         IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez
     </video>
@@ -139,7 +139,7 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 </div>
 
 <figure class="ml-auto max-w-xl">
-    <video autoplay loop muted playsinline">
+    <video autoplay loop muted playsinline class="w-full" preload="auto">
         <source src="/assets/work/circle-video-chair.mp4" type="video/mp4">
         UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström
     </video>
@@ -150,10 +150,20 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 
 In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.com "Coinbase"), [AutoStore](http://autostoresystem.com "AutoStore"), [Pexip](http://pexip.com "Pexip"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/ "Wake"), and [Expo](http://expo.dev "Expo"). More work samples are available on request.
 
+> Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
+
+<span class="uppercase font-sans text-sm mt-0 font-medium tracking-wide text-black/50 dark:text-white/30">— Sven-Petter Mæhle, client (Pexip)</span>
+
 ---
 
 ## Management
-In an agency setting I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
+I've previously managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
+
+> Daniël creates a positive, supportive environment where everyone can thrive. When he left the company, it felt like a huge part of the team spirit was missing.
+
+<span class="uppercase font-sans font-medium tracking-wide text-sm mt-0 text-black/50 dark:text-white/30">— Marek Minor, Product Designer</span>
+
+---
 
 ## Writing
 I primarily write essays, reviews, and a dash of auto-fiction. I've published two essays in [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine") and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). 
@@ -163,9 +173,9 @@ Most recently I've acted as the copywriter and editor on the [NoGood](https://bo
 
 <div class="mt-32">
   <figure>
-    <video autoplay loop muted playsinline class="w-full">
-        <source src="/assets/work/transcript-video.mp4" type="video/mp4">
-        TRANSCRIPT Magazine
+    <video autoplay loop muted playsinline class="w-full" preload="auto">
+        <source src="/assets/work/transcript-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
     </video>
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans"><em>TRANSCRIPT</em> Magazine</figcaption>
   </figure>

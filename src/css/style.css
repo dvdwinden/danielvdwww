@@ -96,7 +96,6 @@ iframe {
     font-weight: 500;
     line-height: 1.25;
     margin-bottom: 0.5rem;
-    ;
 }
 
 .prose h3 {
@@ -110,6 +109,17 @@ iframe {
 .prose p em {
     font-style: italic;
     font-weight: 400;
+}
+
+.prose blockquote {
+    font-style: italic;
+    font-weight: 400;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
+}
+
+.dark .prose blockquote {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Lists, buttons and links */
