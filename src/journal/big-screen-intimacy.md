@@ -67,7 +67,7 @@ Evan Puschak ([_The Nerdwriter_](https://www.youtube.com/channel/UCJkMlOu7faDgqh
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif mt-32 dark:prose-invert">
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif mt-32 pb-32 dark:prose-invert">
 It is often said that watching films in one's living room, with all its comforts—curled up on the couch, under a blanket, with a glass of wine in hand—makes for the most intimate film experience. In a cinema you're sat next to strangers gobbling up popcorn or M&Ms, after all. But, in saying so, it's easy to forget about the way in which we consume a film at home. 
 
 You sit down, and pause the film after three minutes; you forgot to put on your comfy socks. Fifteen minutes later, a toilet break, and on the way back to the couch, a new drink. Halfway through the film your partner decides to walk the dog—the last lap of the day—and, after pausing the film, you quickly load the dishwasher. Your phone vibrates when the film reaches its final plot twist, and two minutes later you rewind it to see what just happened. Ten minutes before the end you doze off and subsequently stumble to bed—you'll catch up on the ending tomorrow. 
