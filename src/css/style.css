@@ -484,3 +484,12 @@ nav.pagination a:hover {
 .dark {
     transition: background-color 0s 0.25s, color 0s 0.25s;
 }
+
+/* Newsletter */
+ul.newsletter picture {
+    margin-bottom: 0;
+}
+
+ul.newsletter h2 {
+    margin-top: 0;
+}

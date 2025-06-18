@@ -16,16 +16,19 @@ permalink: "newsletter/{% if pagination.pageNumber > 0 %}page/{{ pagination.page
 
 ...  <a href="/links/feed.xml" rel="external" target="_blank" title="Subscribe to RSS">Subscribe via Ghost</a>.
 
-<ul class="divide-y divide-gray-950/10 dark:divide-white/5 links">
+<ul class="divide-y divide-gray-950/10 dark:divide-white/5 links newsletter">
   {% for post in newsletter %}
   <li class="py-3 pl-0">
     <div class="flex flex-col">
+      {% if post.data.image %}
+        {% image "src" + post.data.image.src, post.data.image.alt, "(min-width: 768px) 50vw, 100vw", "w-full" %}
+      {% endif %}
       <div class="flex items-baseline justify-between">
         <a href="{{ post.data.external_url }}" class="text-2xl font-serif font-semibold hover:underline" target="_blank" rel="external">
          <h2 class="no-underline">{{ post.data.title }}</h2>
         </a>
         <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
-          JUN 2025
+          {{ post.data.date | date("MMM yyyy") | upper }}
         </span>
       </div>
       <div class="prose prose-sm mt-4 dark:text-gray-300">
@@ -51,7 +54,7 @@ permalink: "newsletter/{% if pagination.pageNumber > 0 %}page/{{ pagination.page
   </span>
 
   {% if pagination.href.next %}
-  <a href="{{ pagination.href.next }}" class="text-gray-700 hover:text-hover dark:hover:text-gray-300" aria-label="Next page" alt="Next page">
+  <a href="{{ pagination.href.next }}" class="text-sm font-medium text-gray-700 hover:text-hover dark:hover:text-gray-300" aria-label="Next page" alt="Next page">
     <span>{% include "icons/arrow-right-round.svg" %}</span>
   </a>
   {% else %}

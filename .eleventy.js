@@ -5,6 +5,13 @@ const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
+  // Add regexMatch filter
+  eleventyConfig.addFilter("regexMatch", function (str, pattern) {
+    const regex = new RegExp(pattern);
+    const match = str.match(regex);
+    return match ? match : null;
+  });
+
   // Image optimization function
   async function imageShortcode(src, alt, sizes = "(min-width: 1024px) 100vw, 50vw") {
     let metadata = await Image(src, {
