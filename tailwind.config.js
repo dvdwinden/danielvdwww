@@ -61,6 +61,7 @@ module.exports = {
         'hover': '#4a5568',
         'hover-dark': '#a0aec0',
         'highlight': '#fff9a8',
+        'purple': '#f0e0e8',
       },
     },
   },
