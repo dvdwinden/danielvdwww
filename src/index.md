@@ -5,7 +5,7 @@ description: Daniel's personal website
 bodyClass: bg-purple
 ---
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] pb-32 dark:prose-invert">
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 <h1>Work</h1>
 
 <section class="introduction">
@@ -91,9 +91,15 @@ bodyClass: bg-purple
 
 ## Design
 As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.
+
+---
+
+### Ghost
+Here goes some text on Ghost.
+
 </div>
 
-<div class="mt-48">
+<div class="mt-32">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Improved publishing flow in Ghost", "w-full" %}
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Improved publishing flow in Ghost</figcaption>
@@ -116,7 +122,7 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 Here goes a bit of text on Circle.
 </div>
 
-<div class="mt-48">
+<div class="mt-32">
   <figure>
     <video autoplay loop muted playsinline class="w-full">
         <source src="/assets/work/circle-video-interior.mp4" type="video/mp4">
@@ -143,16 +149,40 @@ Here goes a bit of text on Circle.
 
 ---
 
+### AutoStore
+Here goes some text on AutoStore.
+
+</div>
+
+<div class="mt-32">
+  <figure>
+    {% retinaImage "src/assets/placeholder-large.png", "Digital design tools for AutoStore", "w-full" %}
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Digital design tools for AutoStore</figcaption>
+  </figure>
+
+  <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
+    {% retinaImage "src/assets/placeholder-small.png", "AutoStore" %}
+  </figure>
+</div>
+
+<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
+  {% retinaImage "src/assets/placeholder-small.png", "AutoStore" %}
+</figure>
+
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
+
+---
+
 ## Management
 In an agency setting I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
 
 ## Writing
-I've always been interested in writing; short or long-form. I primarily write essays, reviews, and a dash of auto-fiction. I've published two pieces in my magazine, [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine"), and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). 
+I primarily write essays, reviews, and a dash of auto-fiction. I've published two essays in [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine") and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). 
 
 Most recently I've acted as the copywriter and editor on the [NoGood](https://book.nogood.studio/ "The NoGood art book") art book.
 </div>
 
-<div class="mt-48">
+<div class="mt-32">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "TRANSCRIPT Magazine", "w-full" %}
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">TRANSCRIPT Magazine</figcaption>
