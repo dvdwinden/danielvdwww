@@ -2,6 +2,7 @@ const Image = require("@11ty/eleventy-img");
 const path = require("path");
 const fs = require("fs");
 const { DateTime } = require("luxon");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   // Image optimization function
@@ -88,6 +89,9 @@ module.exports = function (eleventyConfig) {
 
     return Image.generateHTML(metadata, imageAttributes);
   }
+
+  // Add RSS plugin
+  eleventyConfig.addPlugin(pluginRss);
 
   // Add the shortcodes
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
