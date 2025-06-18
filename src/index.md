@@ -95,7 +95,7 @@ As a designer I'm at my best when thinking holistically, setting direction and s
 
 <div class="mt-48">
   <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "Improved publishing flow in Ghost" %}
+    {% retinaImage "src/assets/placeholder-large.png", "Improved publishing flow in Ghost", "w-full" %}
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Improved publishing flow in Ghost</figcaption>
   </figure>
 
@@ -141,6 +141,8 @@ Here goes a bit of text on Circle.
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
+---
+
 ## Management
 In an agency setting I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
 
@@ -152,20 +154,33 @@ Most recently I've acted as the copywriter and editor on the [NoGood](https://bo
 
 <div class="mt-48">
   <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
+    {% retinaImage "src/assets/placeholder-large.png", "TRANSCRIPT Magazine", "w-full" %}
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">TRANSCRIPT Magazine</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
-    {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+    {% retinaImage "src/assets/placeholder-small.png", "TRANSCRIPT Magazine" %}
   </figure>
 </div>
 
 <figure class="w-full sm:w-[576px] ml-auto my-24">
-  {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+  {% retinaImage "src/assets/placeholder-small.png", "TRANSCRIPT Magazine" %}
 </figure>
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
+
+## Speaking
+<div class="flex flex-col">
+  <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+    <p class="my-4">Adyen Studio Day, Amsterdam</p>
+    <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JUL 2025</span>
+  </div>
+  <div class="flex items-baseline justify-between">
+    <p class="my-4">
+      <a href="https://www.seanchoiche.com/" title="Seanchoíche" rel="external" target="_blank">Seanchoíce</a>, Amsterdam</p>
+    <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JAN 2025</span>
+  </div>
+</div>
 
 {% include "footer.njk" %}
 
