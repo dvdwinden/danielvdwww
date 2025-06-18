@@ -5,7 +5,9 @@ description: Daniel's personal website
 bodyClass: bg-purple
 ---
 
-# Work
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<h1>Work</h1>
+
 <section class="introduction">
   I'm an Amsterdam-based (software) designer and writer with over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.
 
@@ -89,8 +91,9 @@ bodyClass: bg-purple
 
 ## Design
 As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.
+</div>
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
+<div class="mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Improved publishing flow in Ghost" %}
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Improved publishing flow in Ghost</figcaption>
@@ -105,45 +108,38 @@ As a designer I'm at my best when thinking holistically, setting direction and s
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-auto max-w-none mt-48">
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
+
+---
+
+### Circle
+Here goes a bit of text on Circle.
+</div>
+
+<div class="mt-48">
   <figure>
     <video autoplay loop muted playsinline class="w-full">
         <source src="/assets/work/circle-video-interior.mp4" type="video/mp4">
-        IKEA's circular rental solution. Interior models by Astin Le Clercq and Santi Zoraidez.
+        IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez
     </video>
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">IKEA's circular rental solution</figcaption>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
     {% retinaImage "src/assets/work/circle-01.jpg", "IKEA" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Photo: Bakken & Bæck</figcaption>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Photo by Osma Harvilahti</figcaption>
   </figure>
 </div>
 
-<figure>
+<figure class="ml-auto max-w-xl">
     <video autoplay loop muted playsinline">
         <source src="/assets/work/circle-video-chair.mp4" type="video/mp4">
-        IKEA's circular rental solution
+        UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström
     </video>
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">UI for IKEA's circular rental solution</figcaption>
-  </figure>
-
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
-  <figure>
-    {% retinaImage "src/assets/placeholder-large.png", "AutoStore" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Design tooling for AutoStore</figcaption>
-  </figure>
-
-  <figure class="w-full sm:w-[576px] mr-auto my-12">
-    {% retinaImage "src/assets/placeholder-small.png", "AutoStore" %}
-  </figure>
-</div>
-
-<figure class="w-full sm:w-[576px] ml-auto my-24">
-  {% retinaImage "src/assets/placeholder-small.png", "AutoStore" %}
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström</figcaption>
 </figure>
 
-
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
 ## Management
 In an agency setting I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
@@ -152,8 +148,9 @@ In an agency setting I've managed and mentored teams of up to 12 product designe
 I've always been interested in writing; short or long-form. I primarily write essays, reviews, and a dash of auto-fiction. I've published two pieces in my magazine, [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine"), and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). 
 
 Most recently I've acted as the copywriter and editor on the [NoGood](https://book.nogood.studio/ "The NoGood art book") art book.
+</div>
 
-<div class="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen max-w-none mt-48">
+<div class="mt-48">
   <figure>
     {% retinaImage "src/assets/placeholder-large.png", "Ghost" %}
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">TRANSCRIPT Magazine</figcaption>
@@ -167,3 +164,30 @@ Most recently I've acted as the copywriter and editor on the [NoGood](https://bo
 <figure class="w-full sm:w-[576px] ml-auto my-24">
   {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
 </figure>
+
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
+<footer class="site-footer">
+    <ul>
+        <li>
+        <a href="mailto:d.vanderwinden@gmail.com" title="Email me" class="text-black/50 dark:text-white/30 hover:text-gray-900 dark:hover:text-gray-100">Email</a>
+    </li>
+<li>
+    <a href="https://bsky.app/profile/daniel.pizza" rel="external" target="_blank" title="Follow me on Bluesky" class="text-black/50 dark:text-white/30 hover:text-gray-900 dark:hover:text-gray-100 ">Bluesky</a>
+</li>
+<li>
+    <a href="https://www.linkedin.com/in/dvdwinden/" rel="external" target="_blank" title="Find me on LinkedIn" class="text-black/50 dark:text-white/30 hover:text-gray-900 dark:hover:text-gray-100">LinkedIn</a>
+</li>
+<li>
+    <a href="https://github.com/dvdwinden" rel="external" target="_blank" title="Find me on Github" class="text-black/50 dark:text-white/30 hover:text-gray-900 dark:hover:text-gray-100">Github</a>
+</li>
+<li>
+    <a href="/colophon" title="Colophon" class="text-black/50 dark:text-white/30 hover:text-gray-900 dark:hover:text-gray-100 {% if page.url == '/colophon/' %} underline underline-custom text-black dark:text-white {% endif %}">
+        Colophon
+    </a>
+</li>
+<li>
+    <a href="/now" title="Now" class="text-black/50 dark:text-white/30 hover:text-gray-900 dark:hover:text-gray-100 {% if page.url == '/now/' %} underline underline-custom text-black dark:text-white {% endif %}">Now</a>
+</li>
+</ul>
+</footer>
+</div>

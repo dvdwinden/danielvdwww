@@ -40,8 +40,15 @@ article time {
     @apply text-gray-600 text-sm block mb-2;
 }
 
+img,
+video,
+iframe {
+    border-radius: 0.1875rem;
+}
+
 /* Typography */
 .prose {
+    --prose-width: 36rem;
     font-family: theme('fontFamily.serif');
     font-size: theme('fontSize.lg');
     line-height: theme('lineHeight.normal');
@@ -59,6 +66,14 @@ article time {
 
 .prose-invert {
     color: #f9f9f9;
+}
+
+.prose hr {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark .prose hr {
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .prose h1,
