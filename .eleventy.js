@@ -101,7 +101,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addJavaScriptFunction("image", imageShortcode);
   eleventyConfig.addJavaScriptFunction("retinaImage", retinaImageShortcode);
 
-  // Copy static files (but not assets - we'll process those)
+  // Copy static files
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
 
@@ -130,6 +130,11 @@ module.exports = function (eleventyConfig) {
   // Create collection for essays
   eleventyConfig.addCollection("journal", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/journal/*.md").sort((a, b) => b.date - a.date);
+  });
+
+  // Create collection for newsletter
+  eleventyConfig.addCollection("newsletter", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/newsletter/*.md").sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
