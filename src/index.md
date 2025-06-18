@@ -2,6 +2,7 @@
 layout: base.njk
 title: Daniël van der Winden | Software designer, writer
 description: Daniel's personal website
+bodyClass: bg-green
 ---
 
 # Work
