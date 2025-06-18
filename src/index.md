@@ -119,7 +119,7 @@ Here goes some text on Ghost.
 ---
 
 ### Circle
-Here goes a bit of text on Circle.
+At Bakken & Bæck I led the product design for Circle, IKEA's circular rental solution for office furnishing. We designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Rapidly iterating, we conceptualised and designed the product from zero to one, laying the groundwork for what would become [Nornorm](https://nornorm.com/ "Nornorm"). 
 </div>
 
 <div class="mt-32">
