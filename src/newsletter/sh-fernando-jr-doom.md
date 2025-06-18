@@ -3,7 +3,7 @@ layout: narrow.njk
 title: "S.H. Fernando Jr. – The Chronicles of DOOM: Unraveling Rap’s Masked Iconoclast (2024)"
 date: 2024-12-27
 tags: [non-fiction]
-external_url: https://www.trema.website/sh-fernando-jr-the-chronicles-of-doom/
+external_url: https://www.trema.website/sh-fernando-jr-the-chronicles-of-doom?ref=daniel.pizza
 image:
   src: /assets/newsletter/jo-ann-beard-collected-works.png
   alt: "S.H. Fernando Jr. – The Chronicles of DOOM: Unraveling Rap’s Masked Iconoclast (2024)"

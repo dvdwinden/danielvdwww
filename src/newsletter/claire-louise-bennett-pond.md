@@ -3,7 +3,7 @@ layout: narrow.njk
 title: "Claire-Louise Bennett – Pond (2015)"
 date: 2024-10-18
 tags: [fiction]
-external_url: https://www.trema.website/claire-louise-bennett-pond/
+external_url: https://www.trema.website/claire-louise-bennett-pond?ref=daniel.pizza
 image:
   src: /assets/newsletter/jo-ann-beard-collected-works.png
   alt: "Claire-Louise Bennett – Pond (2015)"

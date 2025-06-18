@@ -3,7 +3,7 @@ layout: narrow.njk
 title: "Marianne Brooker – Intervals (2024)"
 date: 2025-01-25
 tags: [non-fiction]
-external_url: https://www.trema.website/marianne-brooker-intervals/
+external_url: https://www.trema.website/marianne-brooker-intervals/?ref=daniel.pizza
 image:
   src: /assets/newsletter/jo-ann-beard-collected-works.png
   alt: "Marianne Brooker – Intervals (2024)"

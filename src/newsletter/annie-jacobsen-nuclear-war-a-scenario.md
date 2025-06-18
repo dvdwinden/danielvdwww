@@ -3,7 +3,7 @@ layout: narrow.njk
 title: "Annie Jacobsen – Nuclear War: A Scenario (2024)"
 date: 2025-03-31
 tags: [non-fiction]
-external_url: https://www.trema.website/annie-jacobsen-nuclear-war-a-scenario/
+external_url: https://www.trema.website/annie-jacobsen-nuclear-war-a-scenario?ref=daniel.pizza
 image:
   src: /assets/newsletter/nuclear-war-a-scenario.png
   alt: "Annie Jacobsen – Nuclear War: A Scenario"
