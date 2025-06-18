@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: Colophon
 description: How this site is built
 bodyClass: bg-green
