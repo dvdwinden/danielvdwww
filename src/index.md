@@ -30,7 +30,7 @@ bodyClass: bg-purple
         <div class="text-md font-bold font-sans">
           <h3>Senior Designer at <a href="http://ghost.org" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
         </div>
-        <div class="text-black/50 dark:text-white/50 mt-2 font-degular-text text-sm">
+        <div class="text-black/60 dark:text-white/50 mt-2 font-degular-text text-sm">
           I was involved in designing new features and explorative brand work, and coded numerous improvements throughout the product and its marketing site.
         </div>
       </div>
@@ -41,7 +41,7 @@ bodyClass: bg-purple
         <div class="text-md font-bold font-sans">
           <h3>CDO, Partner at <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
-        <div class="text-black/50 dark:text-white/50 mt-2 font-degular-text text-sm">
+        <div class="text-black/60 dark:text-white/50 mt-2 font-degular-text text-sm">
           As Partner, I was involved in setting the company's strategy. As CDO, I focused on our Product Design work and team—from securing projects to hiring new team members, and from elevating our reputation externally to enabling Product Designers to do their best work.
         </div>
       </div>
@@ -52,7 +52,7 @@ bodyClass: bg-purple
         <div class="text-md font-bold font-sans">
           <h3>Designer, Head of <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
         </div>
-        <div class="text-black/50 dark:text-white/50 mt-2 font-degular-text text-sm">
+        <div class="text-black/60 dark:text-white/50 mt-2 font-degular-text text-sm">
           Built a multi-disciplinary team of up to 20 people, mentored designers and other team members and helped the company take root in the Netherlands.
         </div>
       </div>
@@ -79,7 +79,7 @@ bodyClass: bg-purple
         <div class="text-md font-bold font-serif">
           <h3>Internship at Faster Forward Interactive</h3>
         </div>
-        <div class="text-black/50 dark:text-white/50 mt-2 font-degular-text text-sm">
+        <div class="text-black/60 dark:text-white/50 mt-2 font-degular-text text-sm">
           Followed by a stint as a part-time front-end developer.
         </div>
       </div>
