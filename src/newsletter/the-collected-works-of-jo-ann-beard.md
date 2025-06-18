@@ -7,6 +7,6 @@ external_url: https://www.trema.website/the-collected-works-of-jo-ann-beard-2023
 
 ---
 
-![3D model of the home](/assets/links/quartey-accra.avif "3D model of the home")
+![The Collected Works of Jo-Ann Beard](/assets/newsletter/jo-ann-beard-collected-works.png "The Collected Works of Jo-Ann Beard")
 
-...
+“My first love was poetry, my second love was fiction and my third and lasting love was the essay.”

@@ -112,8 +112,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon.png");
 
-  // Copy work directory for videos
+  // Copy work directory for videos and images
   eleventyConfig.addPassthroughCopy("src/assets/work");
+
+  // Copy newsletter directory for images
+  eleventyConfig.addPassthroughCopy("src/assets/newsletter");
 
   // Copy favicon.ico to root directory for default browser behavior
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
@@ -127,7 +130,7 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/links/*.md").sort((a, b) => b.date - a.date);
   });
 
-  // Create collection for essays
+  // Create collection for journal
   eleventyConfig.addCollection("journal", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/journal/*.md").sort((a, b) => b.date - a.date);
   });
