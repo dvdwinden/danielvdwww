@@ -105,13 +105,13 @@ article time {
 }
 
 ::selection {
-    background: #fff9a8;
-    color: #222;
+    background: theme('colors.highlight');
+    color: theme('colors.black');
 }
 
 .prose a:hover {
-    background: #fff9a8;
-    color: #222;
+    background: theme('colors.highlight');
+    color: theme('colors.black');
     transition: background 0.2s, color 0.2s;
 }
 
@@ -136,9 +136,7 @@ article time {
 
 .dark .prose a:hover {
     background: none;
-    color: #fff;
     text-decoration: underline;
-    text-decoration-color: #fff;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
@@ -170,6 +168,12 @@ article time {
 .dark .prose .button:hover {
     background: theme('colors.gray.200');
     color: #000;
+    text-decoration: none;
+}
+
+.dark .prose p a:hover {
+    color: theme('colors.black');
+    background: theme('colors.highlight');
     text-decoration: none;
 }
 
@@ -322,8 +326,8 @@ nav ul li a span.no-underline:hover {
 
 /* Callout */
 .callout {
-    background: #fff9a8;
-    color: #222;
+    background: theme('colors.highlight');
+    color: theme('colors.black');
     padding: 0.1rem 1rem 0.5rem 0.1rem;
 }
 
@@ -341,6 +345,24 @@ ul.links li h2 {
     font-family: theme('fontFamily.serif');
 }
 
+ul.links li a:hover h2 {
+    color: theme('colors.hover');
+    background: none !important;
+}
+
+.dark ul.links li a:hover h2 {
+    color: theme('colors.hover-dark') !important;
+    background: none !important;
+    text-decoration: underline !important;
+    text-decoration-color: theme('colors.hover-dark') !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 3px !important;
+}
+
+ul.links li a:hover {
+    background: none !important;
+}
+
 ul.links li p a {
     text-decoration: underline;
     text-decoration-color: theme('colors.brown');
@@ -348,14 +370,19 @@ ul.links li p a {
     text-underline-offset: 3px;
 }
 
-ul.links li a:hover {
+ul.links li p a:hover {
     cursor: pointer;
-    color: #7c5e00;
+    color: theme('colors.black');
     text-decoration: underline;
     text-decoration-color: #7c5e00;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    background: none;
+    background: theme('colors.highlight') !important;
+}
+
+.dark ul.links li p a:hover {
+    color: theme('colors.black');
+    text-decoration: none;
 }
 
 /* Icons */

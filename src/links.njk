@@ -39,7 +39,7 @@ A regularly updated collection of things I find worth reading, watching, or list
 {% if pagination.href.previous or pagination.href.next %}
 <nav class="pagination flex items-center justify-between mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
   {% if pagination.href.previous %}
-  <a href="{{ pagination.href.previous }}" class="text-sm font-medium text-gray-700 hover:brown dark:hover:text-gray-300" aria-label="Previous page" alt="Previous page">
+  <a href="{{ pagination.href.previous }}" class="text-sm font-medium text-gray-700 hover:text-hover dark:hover:text-gray-300" aria-label="Previous page" alt="Previous page">
     <span>{% include "icons/arrow-left-round.svg" %}</span>
   </a>
   {% else %}
@@ -51,7 +51,7 @@ A regularly updated collection of things I find worth reading, watching, or list
   </span>
 
   {% if pagination.href.next %}
-  <a href="{{ pagination.href.next }}" class="text-gray-700 hover:brown dark:hover:text-gray-300" aria-label="Next page" alt="Next page">
+  <a href="{{ pagination.href.next }}" class="text-gray-700 hover:text-hover dark:hover:text-gray-300" aria-label="Next page" alt="Next page">
     <span>{% include "icons/arrow-right-round.svg" %}</span>
   </a>
   {% else %}
