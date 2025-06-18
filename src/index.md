@@ -15,7 +15,7 @@ bodyClass: bg-purple
   - Before that I helped mould the design studio <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
   - I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
 
-  <span class="callout">I'm open to new opportunities, contract or permanent</span>, and primarily interested in working with companies operating in the space of publishing, culture, music, film, media or design tooling.
+  <span class="callout">I'm open to new opportunities, contract or permanent</span>: primarily I'm interested in working with consumer-facing companies operating in the space of publishing, culture, music, film, media or design tooling.
 
   <a href="#" title="Book a call with Daniël" rel="nofollow" target="_blank" class="button font-degular-text text-md dark:bg-white dark:text-black">Book a call</a>
 </section>
