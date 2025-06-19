@@ -178,7 +178,7 @@ In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.c
 ---
 
 ## Management
-I've previously managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
+I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
 
 > Daniël creates a positive, supportive environment where everyone can thrive. When he left the company, it felt like a huge part of the team spirit was missing.
 
