@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Colophon
 description: How this site is built
-bodyClass: bg-green
+bodyClass: bg-blue
 ---
 
 # Colophon

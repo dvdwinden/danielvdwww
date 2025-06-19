@@ -2,7 +2,7 @@
 layout: base.njk
 title: Daniël van der Winden | Software designer, writer
 description: Daniel's personal website
-bodyClass: bg-purple
+bodyClass: bg-blue
 ---
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
