@@ -88,7 +88,7 @@ bodyClass: bg-blue
 </section>
 
 ## Design
-As a designer I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.
+I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work for and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.
 
 ---
 
