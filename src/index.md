@@ -118,6 +118,10 @@ Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
 
+> Whether leading his own projects or working as part of a team, Daniël’s work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
+
+<span class="uppercase font-sans text-sm mt-0 font-medium tracking-wide text-black/50 dark:text-white/30">— Sodbileg Gansukh, Product Designer at Ghost</span>
+
 ---
 
 ### Circle
