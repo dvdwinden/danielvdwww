@@ -125,6 +125,9 @@ module.exports = function (eleventyConfig) {
   // Copy newsletter directory for images
   eleventyConfig.addPassthroughCopy("src/assets/newsletter");
 
+  // Copy now directory for images
+  eleventyConfig.addPassthroughCopy("src/assets/now");
+
   // Copy favicon.ico to root directory for default browser behavior
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
 
