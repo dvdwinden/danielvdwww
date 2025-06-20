@@ -150,7 +150,7 @@ While at Ghost I designed an upgraded publishing workflow, lowering the barrier 
 <h2 class="work-title">Circle</h2>
 <h3 class="text-black/60 dark:text-white/40 work-desc">Product design for a circular office furniture rental platform</h3>
 
-At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/case/circle "Bakken & Bæck's Circle case study"), IKEA's circular rental solution for office furnishing. We designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Rapidly iterating, we conceptualised and designed the product from zero to one, laying the groundwork for what would become [Nornorm](https://nornorm.com/?ref=daniel.pizza "Nornorm"). 
+At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/case/circle?ref=daniel.pizza "Bakken & Bæck's Circle case study"), IKEA's circular rental solution for office furnishing. We designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Rapidly iterating, we conceptualised and designed the product from zero to one, laying the groundwork for what would become [Nornorm](https://nornorm.com/?ref=daniel.pizza "Nornorm").
 </div>
 
 <div class="mt-32">
@@ -204,7 +204,7 @@ In collaboration with Pexip's team I led design on their web, iOS and Android ap
 
 <span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— <a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip</span>
 
-In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.com "Coinbase"), [AutoStore](http://autostoresystem.com "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/ "Wake"), and [Expo](http://expo.dev "Expo"). 
+In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake"), and [Expo](http://expo.dev?ref=daniel.pizza "Expo").
 
 ---
 
