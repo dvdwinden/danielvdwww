@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Daniël van der Winden | Software designer, writer
-description: Daniel's personal website
+description: Amsterdam-based (software) designer and writer with over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes. 
 bodyClass: bg-blue
 ---
 
@@ -19,7 +19,19 @@ bodyClass: bg-blue
   If you are in need of someone with my profile, please reach out.
   I'm especially interested in working with consumer-facing companies in the space of publishing, culture, music, film, media or design tooling.
 
-  <a href="mailto:d.vanderwinden@gmail.com" title="Send me an email" rel="nofollow" target="_blank" class="button font-degular-text text-md dark:bg-white dark:text-black">Send me an email</a>
+  <a href="mailto:d.vanderwinden@gmail.com" title="Send me an email" rel="nofollow" target="_blank" class="cta-button font-degular-text text-md dark:bg-white dark:text-black">Send me an email</a>
+  <a href="http://linkedin.com/in/dvdwinden" title="Message me on LinkedIn" target="_blank" class="cta-link text-sm">
+    <svg class="inline w-4 h-4 mr-1" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    LinkedIn
+  </a>
+  <a href="https://bsky.app/profile/daniel.pizza" title="DM me on Bluesky" target="_blank" class="cta-link text-sm">
+    <svg class="inline w-4 h-4 mr-1" viewBox="0 0 600 530" fill="currentColor">
+      <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+    </svg>
+    Bluesky
+  </a>
 </section>
 
 <section class="resume">
@@ -120,7 +132,7 @@ Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
 
-> Whether leading his own projects or working as part of a team, Daniël’s work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
+> Whether leading his own projects or working as part of a team, Daniël's work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
 
 <span class="uppercase font-sans text-sm mt-0 font-medium tracking-wide text-black/50 dark:text-white/30">— Sodbileg Gansukh, Product Designer at Ghost</span>
 
@@ -158,7 +170,7 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 ---
 
 ### Pexip
-In collaboration with Pexip's team I led design on their web, iOS and Android apps for videoconferencing. We also designed _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/ "Read more about Pexip Room")_, which allowed people to join Pexip meetings using Logitech hardware. We implemented Pexip’s privacy-first approach to software design and designed the software for Logitech's Tap device based on Android's _Material Design_ language.
+In collaboration with Pexip's team I led design on their web, iOS and Android apps for videoconferencing. We also designed _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/ "Read more about Pexip Room")_, which allowed people to join Pexip meetings using Logitech hardware. We implemented Pexip's privacy-first approach to software design and designed the software for Logitech's Tap device based on Android's _Material Design_ language.
 
 </div>
 

@@ -180,7 +180,7 @@ iframe {
     text-underline-offset: 3px;
 }
 
-.prose .button {
+.prose .cta-button {
     text-decoration: none;
     background: #222;
     color: #fff;
@@ -191,24 +191,31 @@ iframe {
     display: inline-block;
 }
 
-.prose .button:hover {
+.prose .cta-button:hover {
     background: #000;
     color: #fff;
     transition: background 0.2s, color 0.2s;
     display: inline-block;
 }
 
-.dark .prose .button {
+.dark .prose .cta-button {
     background: #fff;
     color: #000;
     text-decoration: none;
 }
 
-.dark .prose .button:hover {
+.dark .prose .cta-button:hover {
     background: theme('colors.gray.200');
     color: #000;
     text-decoration: none;
 }
+
+.prose .cta-link {
+    text-decoration: none;
+    color: theme('colors.black');
+    font-family: theme('fontFamily.sans');
+}
+
 
 .dark .prose p a:hover {
     color: theme('colors.black');
