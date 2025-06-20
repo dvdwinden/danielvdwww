@@ -30,3 +30,5 @@ Thumbs.db
 .env.test.local
 .env.production.local
 
+keys
+keys.pub
