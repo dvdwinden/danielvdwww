@@ -18,6 +18,6 @@ external_url: https://www.youtube.com/watch?list=TLGGfcmVFkg66IEwMjAxMjAyMw&v=eo
   </iframe>
 </div>
 
-A Dutch man named [Martijn](https://twitter.com/martijndoolaard?ref=daniel.pizza) purchased two historic cabins on top of a hill in Italy with the goal to renovate them and create a homestead. He's a photographer, so the process of him doing so is incredibly well documented. I've seen folks get put off a bit by the idea of him "being alone in nature, yet followed persistently by a drone", but I've really enjoyed watching these videos.
+A Dutch man named [Martijn](https://twitter.com/martijndoolaard?ref=daniel.pizza "Martijn on Twitter") purchased two historic cabins on top of a hill in Italy with the goal to renovate them and create a homestead. He's a photographer, so the process of him doing so is incredibly well documented. I've seen folks get put off a bit by the idea of him "being alone in nature, yet followed persistently by a drone", but I've really enjoyed watching these videos.
 
-They're very soothing, and you can watch them actively or have them on in the background. It's fascinating to see him go about everything from shielding himself from the cold, to setting up solar panels, or driving wood up the hill to build a temporary cabin. Lovely stuff. Thanks for sharing, [Marius](https://twitter.com/mariusfeldmann?ref=daniel.pizza)!
+They're very soothing, and you can watch them actively or have them on in the background. It's fascinating to see him go about everything from shielding himself from the cold, to setting up solar panels, or driving wood up the hill to build a temporary cabin. Lovely stuff. Thanks for sharing, [Marius](https://twitter.com/mariusfeldmann?ref=daniel.pizza "Marius on Twitter")!

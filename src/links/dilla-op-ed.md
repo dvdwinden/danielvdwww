@@ -7,4 +7,4 @@ external_url: https://www.latimes.com/opinion/story/2022-02-18/op-ed-hip-hop-bea
 
 ---
 
-After reading Dan Charnas' book on J Dilla, I am even more convinced he belongs among the legends. This op-ed in the LA Times briefly explains why. If you're a fan of J Dilla—or The Roots, or Thundercat, or Kamasi Washington, or Erykah Badu, or...—I highly recommend you read [[Dilla Time](https://oku.club/book/dilla-time-by-dan-charnas-GLFJR?ref=daniel.pizza "Dilla Time on Oku").
+After reading Dan Charnas' book on J Dilla, I am even more convinced he belongs among the legends. This op-ed in the LA Times briefly explains why. If you're a fan of J Dilla—or The Roots, or Thundercat, or Kamasi Washington, or Erykah Badu, or...—I highly recommend you read [Dilla Time](https://oku.club/book/dilla-time-by-dan-charnas-GLFJR?ref=daniel.pizza "Dilla Time on Oku").
