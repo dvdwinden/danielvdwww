@@ -171,6 +171,10 @@ iframe {
     margin-bottom: 0.5rem;
 }
 
+.prose h3 a {
+    font-weight: 500;
+}
+
 .prose p em {
     font-style: italic;
     font-weight: 400;
