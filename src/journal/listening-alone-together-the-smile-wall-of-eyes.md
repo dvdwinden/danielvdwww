@@ -57,7 +57,9 @@ Finally, once the evening ends, I applaud. We all applaud, somewhat reluctantly,
 
 I applaud them for that. I applaud my individual experience of the music. And, I applaud the fact that each and every one of the 300 people in this room just experienced these eight songs in 300 different ways, together.
 
-<span class="article-footer dark:text-gray-400">Continue down the rabbit hole: read [On The Smile](https://iriscuppen.com/On-The-Smile) by Iris Cuppen. The full album is now available on [The Smile's YouTube channel](https://www.youtube.com/playlist?list=PLf_OT-1c3m3B2hsZkUrKYO5QVnRnfBfSw). On there, you'll find the music videos Paul Thomas Anderson directed for _Wall of Eyes_ and _Friend Of A Friend_, as well as the animations we were shown on the big screen for the remaining six songs.</span>
+<p class="article-footer">
+Continue down the rabbit hole: read <a href="https://iriscuppen.com/On-The-Smile">On The Smile</a> by Iris Cuppen. The full album is now available on <a href="https://www.youtube.com/playlist?list=PLf_OT-1c3m3B2hsZkUrKYO5QVnRnfBfSw">The Smile's YouTube channel</a>. On there, you'll find the music videos Paul Thomas Anderson directed for <em>Wall of Eyes</em> and <em>Friend Of A Friend</em>, as well as the animations we were shown on the big screen for the remaining six songs.
+</p>
 
 <div class="relative w-full pb-[56.25%] mt-7 overflow-hidden">
   <iframe

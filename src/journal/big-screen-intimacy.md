@@ -8,7 +8,7 @@ description: An ode to experiencing the incredible intimacy of seeing films in a
 ---
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 
-<h1>On the big screen, intimacy is what you’ll find</h1>
+<h1>On the big screen, intimacy is what you'll find</h1>
 <span class="font-sans text-sm">May 10, 2022</span>
 
 On a Sunday morning at twelve, I settled into a chair at a local movie theatre for [_Memoria_](https://letterboxd.com/film/memoria-2021/ "Memoria on Letterboxd"), the latest film by Apichatpong Weerasethakul about an English woman named Jessica (played by Tilda Swinton) who visits her ill sister in Bogota, Colombia, and befriends a young musician and a French archeologist. Each night, as she tries to fall asleep, she's startled by loud, metal-like bangs only she seems to be able to hear, making sleep a fruitless endeavour; the script for the film apparently inspired by the symptoms of "Exploding Head Syndrome", which plagued the director for some time.
@@ -84,6 +84,6 @@ It's the music during the most important twist (David Bowie, in [_Inglourious Ba
 
 Moviegoing can be an intensely intimate experience. I think Weerasethakul's film, like many others I've experienced in a movie theatre, is one I could not have appreciated fully—internalising its most intricate details, overwhelmed by its warm embrace, feeling a part of the journey it took me on—had I not watched it in the comfort of a movie theatre.
 
-<span class="article-footer dark:text-gray-400">Thank you to Julie, Marc and Mechteld for reading a Dutch draft of this essay, and to Megan for reading and editing my English translation.</span>
+<p class="article-footer">Thank you to Julie, Marc and Mechteld for reading a Dutch draft of this essay, and to Megan for reading and editing my English translation.</p>
 
 </div>

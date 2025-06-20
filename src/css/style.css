@@ -56,14 +56,6 @@ iframe {
     text-wrap: pretty;
 }
 
-.prose .article-footer {
-    line-height: theme('lineHeight.none') !important;
-    margin-top: 2rem;
-    font-size: theme('fontSize.sm');
-    font-family: theme('fontFamily.sans');
-    color: theme('colors.gray.600');
-}
-
 .prose-invert {
     color: #f9f9f9;
 }

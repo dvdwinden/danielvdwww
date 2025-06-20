@@ -19,7 +19,7 @@ bodyClass: bg-blue
   If you are in need of someone with my profile, please reach out.
   I'm especially interested in working with consumer-facing companies in the space of publishing, culture, music, film, media or design tooling.
 
-  <div class="bg-gray-50 dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-4 px-4">
+  <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-4 px-4">
     <div class="flex justify-between items-center">
       <a href="mailto:d.vanderwinden@gmail.com" title="Send me an email" rel="nofollow" target="_blank" class="cta-button font-degular-text dark:bg-white dark:text-black">Email me</a>
       <div class="flex">

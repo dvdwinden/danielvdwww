@@ -47,6 +47,20 @@ module.exports = {
           css: {
             fontSize: '1.25rem', // 20px
             lineHeight: '1.5',
+            '.article-footer': {
+              'font-size': '1rem',
+              'line-height': '1.5',
+              'font-family': 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+              'margin-top': '2rem',
+              'color': 'rgba(0, 0, 0, 0.5)',
+            },
+          },
+        },
+        invert: {
+          css: {
+            '.article-footer': {
+              'color': 'rgba(255, 255, 255, 0.4)',
+            },
           },
         },
       },
