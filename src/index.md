@@ -142,7 +142,7 @@ While at Ghost I designed an upgraded publishing workflow, lowering the barrier 
 
 > Whether leading his own projects or working as part of a team, Daniël's work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
 
-<span class="uppercase font-sans text-sm mt-0 font-medium tracking-wide text-black/50 dark:text-white/30">— Sodbileg Gansukh, Product Designer at Ghost</span>
+<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— <a href="https://sodo.is/?ref=daniel.pizza" title="Sodbileg's website" rel="external" target="_blank">Sodbileg Gansukh</a>, Product Designer at Ghost</span>
 
 ---
 
@@ -201,7 +201,7 @@ In collaboration with Pexip's team I led design on their web, iOS and Android ap
 
 > Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
 
-<span class="uppercase font-sans text-sm mt-0 font-medium tracking-wide text-black/50 dark:text-white/30">— Sven-Petter Mæhle, Pexip</span>
+<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— <a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip</span>
 
 In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.com "Coinbase"), [AutoStore](http://autostoresystem.com "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/ "Wake"), and [Expo](http://expo.dev "Expo"). 
 
@@ -212,7 +212,7 @@ I've managed and mentored teams of up to 12 product designers with varying level
 
 > Daniël creates a positive, supportive environment where everyone can thrive. When he left the company, it felt like a huge part of the team spirit was missing.
 
-<span class="uppercase font-sans font-medium tracking-wide text-sm mt-0 text-black/50 dark:text-white/30">— Marek Minor, Product Designer</span>
+<span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial">— <a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek's website" rel="external" target="_blank">Marek Minor</a>, Product Designer</span>
 
 ---
 

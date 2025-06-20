@@ -493,6 +493,10 @@ ul.links li a:hover h2 {
     background: none !important;
 }
 
+span.testimonial a {
+    font-weight: 500;
+}
+
 .dark ul.links li a:hover h2 {
     color: theme('colors.hover-dark') !important;
     background: none !important;
