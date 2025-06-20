@@ -217,6 +217,7 @@ I've managed and mentored teams of up to 12 product designers with varying level
 ---
 
 <h2 class="work-title">Writing</h2>
+
 I write essays, reviews, and a dash of auto-fiction. I've published two essays in [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine") and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema").</p>
 
 Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/ "The NoGood art book"), due for publication this summer.

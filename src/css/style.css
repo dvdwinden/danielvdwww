@@ -50,6 +50,7 @@ iframe {
 .prose {
     --prose-width: 36rem;
     font-family: theme('fontFamily.serif');
+    font-weight: 400;
     font-size: theme('fontSize.lg');
     line-height: theme('lineHeight.normal');
     hanging-punctuation: first;
