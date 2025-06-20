@@ -78,8 +78,8 @@ iframe {
 }
 
 .prose h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 500;
     margin-bottom: 1rem;
 }
 
@@ -232,6 +232,18 @@ iframe {
     color: theme('colors.black');
     background: theme('colors.highlight');
     text-decoration: none;
+}
+
+/* Work */
+.prose h2.work-title {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.prose h3.work-desc {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
 }
 
 /* Header */

@@ -1,11 +1,11 @@
-<header class="fixed top-0 left-0 z-50 p-6 flex justify-between w-full">
+<header class="fixed top-0 left-0 z-50 p-6 flex justify-between items-center w-full">
   <div class="flex items-center space-x-4">
       <a href="/" class="text-xl font-serif text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center">
           {% retinaImage "src/assets/daniel.png", "Avatar of Daniël van der Winden", 20, "rounded-full" %}
           {{ "Daniël van der Winden" }}
       </a>
   </div>
-  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="ml-4">
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center">
       <span id="dark-icon">
           {% include "icons/sunset.svg" %}
       </span>

@@ -108,13 +108,14 @@ bodyClass: bg-blue
   </ul>
 </section>
 
-## Design
-I'm at my best when thinking holistically, setting direction and solving complicated problems with design. Improving the status quo for the businesses I work with and the users I design for, I deliver polished user interfaces and quality prototypes. I have a strong interest in typography and a knack for storytelling; I'm equally comfortable designing complex flows as I am putting together a marketing website.
+I deliver polished user interfaces and quality prototypes. With a strong interest in typography and a knack for storytelling, I'm equally comfortable designing complex flows as I am putting together a marketing website.
 
 ---
 
-### Ghost
-Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") throughout the product, I designed and helped build an upgraded publishing workflow, lowering the barrier for publishers to share their work with their audience. I also contributed to the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/ "Custom fonts in Ghost"), and I was involved in Ghost's exploratory brand work.
+<h2 class="work-title">Ghost</h2> 
+<h3 class="text-black/60 dark:text-white/40 work-desc">Designing and building tools for writers, journalists and publishers</h3>
+
+While at Ghost I designed an upgraded publishing workflow, lowering the barrier for publishers to share their work with their audience. I also contributed to the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/ "Custom fonts in Ghost"), was involved in Ghost's exploratory brand work, and I designed and built [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") throughout the product.
 
 </div>
 
@@ -145,7 +146,9 @@ Aside from working on [numerous improvements](https://github.com/TryGhost/Ghost/
 
 ---
 
-### Circle
+<h2 class="work-title">Circle</h2>
+<h3 class="text-black/60 dark:text-white/40 work-desc">Product design for a circular office rental platform</h3>
+
 At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/case/circle "Bakken & Bæck's Circle case study"), IKEA's circular rental solution for office furnishing. We designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Rapidly iterating, we conceptualised and designed the product from zero to one, laying the groundwork for what would become [Nornorm](https://nornorm.com/ "Nornorm"). 
 </div>
 
@@ -176,7 +179,9 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 
 ---
 
-### Pexip
+<h2 class="work-title">Pexip</h2> 
+<h3 class="text-black/60 dark:text-white/40 work-desc">Designing a suite of videoconferencing software</h3>
+
 In collaboration with Pexip's team I led design on their web, iOS and Android apps for videoconferencing. We also designed _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/ "Read more about Pexip Room")_, which allowed people to join Pexip meetings using Logitech hardware. We implemented Pexip's privacy-first approach to software design and designed the software for Logitech's Tap device based on Android's _Material Design_ language.
 
 </div>
@@ -202,7 +207,7 @@ In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.c
 
 ---
 
-## Management
+<h2 class="work-title">Design Leadership</h2>
 I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
 
 > Daniël creates a positive, supportive environment where everyone can thrive. When he left the company, it felt like a huge part of the team spirit was missing.
@@ -211,7 +216,8 @@ I've managed and mentored teams of up to 12 product designers with varying level
 
 ---
 
-## Writing
+<h2 class="work-title">Writing</h2>
+
 I write essays, reviews, and a dash of auto-fiction. I've published two essays in [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine") and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema"). 
 
 Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/ "The NoGood art book"), due for publication this summer.
@@ -238,7 +244,7 @@ Most recently I've acted as the copywriter and editor on the [NoGood art book](h
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
 
-## Speaking
+<h2 class="work-title">Speaking</h2>
 <div class="flex flex-col">
   <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
     <p class="my-4">Adyen Studio Day, Amsterdam</p>
