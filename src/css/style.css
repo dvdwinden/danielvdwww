@@ -383,6 +383,10 @@ nav ul li a span.no-underline:hover {
     color: theme('colors.black');
 }
 
+.dark .callout {
+    color: theme('colors.white');
+}
+
 /* Resume */
 .resume {
     @apply mb-32;
