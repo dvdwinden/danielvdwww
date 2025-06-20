@@ -43,8 +43,11 @@
         </button>
     </header>
 
-    <nav class="fixed bottom-0 left-0 z-50 p-6">
-        {% include "navigation.njk" %}
+    <nav class="fixed bottom-4 left-4 right-4 z-50 sm:bottom-6 sm:left-6 sm:right-auto">
+        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg py-4 px-4 sm:bg-transparent sm:border-0 sm:p-0 relative overflow-hidden">
+            <div class="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white dark:from-gray-900 to-transparent pointer-events-none sm:hidden"></div>
+            {% include "navigation.njk" %}
+        </div>
     </nav>
     
     <main class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1400px]">
