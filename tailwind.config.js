@@ -18,17 +18,15 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'Degular Demo', // For headings
+          'Degular', 
           'Inter',
+          'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
-          'sans-serif'
-        ],
-        'degular-text': [
-          'Degular Text Demo', // For small/body text
-          'Inter',
-          '-apple-system',
-          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
           'sans-serif'
         ],
         serif: ['Blanco', 'Times New Roman', 'Times', 'Georgia', 'serif'],
