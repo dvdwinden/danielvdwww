@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "Natalia Ginzburg – The Dry Heart (1947)"
 date: 2023-05-27
-tags: [non-fiction]
+tags: [fiction]
 external_url: https://www.trema.website/natalia-ginzburg-the-dry-heart/?ref=daniel.pizza
 image:
   src: /assets/newsletter/jo-ann-beard-collected-works.png
