@@ -18,7 +18,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'Degular', 
+          'Degular',
           'Inter',
           'system-ui',
           '-apple-system',
@@ -30,6 +30,7 @@ module.exports = {
           'sans-serif'
         ],
         serif: ['Blanco', 'Times New Roman', 'Times', 'Georgia', 'serif'],
+        'degular': ['Degular', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       fontSize: {
         sm: '1rem', // 16px
