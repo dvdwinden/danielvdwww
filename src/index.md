@@ -12,9 +12,9 @@ bodyClass: bg-blue
 <section class="introduction">
   <span class="callout">I'm an Amsterdam-based (software) designer and writer with over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.</span>
 
-  - Most recently I worked for [Ghost](http://ghost.org "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
-  - Before that I helped mould the design studio <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
-  - I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
+  - Most recently I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
+  - Before that I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
+  - I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine").
 
   I'm open to new opportunities, contract or permanent. \
   If you are in need of someone with my profile, please reach out.
@@ -49,8 +49,8 @@ bodyClass: bg-blue
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/50 dark:text-white/30 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
-        <div class="text-md font-bold font-sans">
-          <h3>Senior Designer at <a href="http://ghost.org" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
+      <div class="text-md font-bold font-sans">
+          <h3>Senior Designer at <a href="http://ghost.org?ref=daniel.pizza" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
         </div>
         <div class="text-black/60 dark:text-white/50 mt-2 font-degular text-[18px]">
           I was involved in designing new features and explorative brand work, and coded numerous improvements throughout the product and its marketing site.
@@ -60,8 +60,8 @@ bodyClass: bg-blue
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
       <div class="md:w-3/4">
-        <div class="text-md font-bold font-sans">
-          <h3>CDO, Partner at <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
+      <div class="text-md font-bold font-sans">
+          <h3>CDO, Partner at <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
         <div class="text-black/60 dark:text-white/50 mt-2 font-degular text-[18px]">
           As Partner, I was involved in setting the company's strategy. As CDO, I focused on our Product Design work and team—from securing projects to hiring new team members, and from elevating our reputation externally to enabling Product Designers to do their best work.
@@ -71,8 +71,8 @@ bodyClass: bg-blue
       <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2015–2019</span>
       <div class="md:w-3/4">
-        <div class="text-md font-bold font-sans">
-          <h3>Designer, Head of <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
+      <div class="text-md font-bold font-sans">
+          <h3>Designer, Head of <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
         </div>
         <div class="text-black/60 dark:text-white/50 mt-2 font-degular text-[18px]">
           Built a multi-disciplinary team of up to 20 people, mentored designers and other team members and helped the company take root in the Netherlands.
@@ -83,7 +83,7 @@ bodyClass: bg-blue
         <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2014–2015</span>
         <div class="md:w-3/4">
           <div class="text-md font-bold font-sans">
-            <h3>Designer at <a href="http://fabrique.nl" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a></h3>
+            <h3>Designer at <a href="http://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a></h3>
           </div>
         </div>
     </li>
@@ -91,7 +91,7 @@ bodyClass: bg-blue
       <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
       <div class="md:w-3/4">
         <div class="text-md font-bold font-serif">
-          <h3>Internships at <a href="http://fabrique.nl" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a> and <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
+          <h3>Internships at <a href="http://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a> and <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
       </div>
     </li>
@@ -116,7 +116,7 @@ I deliver polished user interfaces and quality prototypes. With a strong interes
 <h2 class="work-title">Ghost</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Designing and building tools for writers, journalists and publishers</h3>
 
-While at Ghost I designed an upgraded publishing workflow, lowering the barrier for publishers to share their work with their audience. I also contributed to the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/ "Custom fonts in Ghost"), was involved in Ghost's exploratory brand work, and I designed and built [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden "My pull requests on Ghost's Github repository") throughout the product.
+While at Ghost I designed an upgraded publishing workflow, lowering the barrier for publishers to share their work with their audience. I also contributed to the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza "Custom fonts in Ghost"), was involved in Ghost's exploratory brand work, and I designed and built [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") throughout the product.
 
 </div>
 
@@ -183,7 +183,7 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 <h2 class="work-title">Pexip</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Designing a suite of videoconferencing software</h3>
 
-In collaboration with Pexip's team I led design on their web, iOS and Android apps for videoconferencing. We also designed _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/ "Read more about Pexip Room")_, which allowed people to join Pexip meetings using Logitech hardware. We implemented Pexip's privacy-first approach to software design and designed the software for Logitech's Tap device based on Android's _Material Design_ language.
+In collaboration with Pexip's team I led design on their web, iOS and Android apps for videoconferencing. We also designed _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_, which allowed people to join Pexip meetings using Logitech hardware. We implemented Pexip's privacy-first approach to software design and designed the software for Logitech's Tap device based on Android's _Material Design_ language.
 
 </div>
 
@@ -219,9 +219,9 @@ I've managed and mentored teams of up to 12 product designers with varying level
 
 <h2 class="work-title">Writing</h2>
 
-I write essays, reviews, and a dash of auto-fiction. I've published two essays in [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine") and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website "Trema").</p>
+I write essays, reviews, and a dash of auto-fiction. I've published two essays in [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website?ref=daniel.pizza "Trema").</p>
 
-Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/ "The NoGood art book"), due for publication this summer.
+Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer.
 </div>
 
 <div class="mt-32">
@@ -253,7 +253,7 @@ Most recently I've acted as the copywriter and editor on the [NoGood art book](h
   </div>
   <div class="flex items-baseline justify-between">
     <p class="my-4">
-      <a href="https://www.seanchoiche.com/" title="Seanchoíche" rel="external" target="_blank">Seanchoíce</a>, Amsterdam</p>
+      <a href="https://www.seanchoiche.com/?ref=daniel.pizza" title="Seanchoíche" rel="external" target="_blank">Seanchoíce</a>, Amsterdam</p>
     <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JAN 2025</span>
   </div>
 </div>
