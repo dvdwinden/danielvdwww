@@ -5,7 +5,7 @@ date: 2025-04-30
 tags: [fiction]
 external_url: https://www.trema.website/caoilinn-hughes-the-alternatives?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/caoilinn-hughes-the-alternatives.png
   alt: "Caoilinn Hughes – The Alternatives"
   title: "Caoilinn Hughes – The Alternatives"
 ---

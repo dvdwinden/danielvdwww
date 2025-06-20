@@ -5,7 +5,7 @@ date: 2023-12-07
 tags: [non-fiction]
 external_url: https://www.trema.website/joan-didion-the-year-of-magical-thinking/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/joan-didion-the-year-of-magical-thinking.png
   alt: "Joan Didion – The Year of Magical Thinking (2005)"
   title: "Joan Didion – The Year of Magical Thinking (2005)"
 ---
