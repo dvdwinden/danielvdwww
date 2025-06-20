@@ -381,7 +381,6 @@ nav ul li a span.no-underline:hover {
 .callout {
     font-size: 1.6rem;
     color: theme('colors.black');
-    font-style: italic;
 }
 
 /* Resume */
