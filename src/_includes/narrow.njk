@@ -18,6 +18,15 @@
     {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
     <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Pre-load font files -->
+    <link rel="preload" href="/assets/fonts/Blanco-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/assets/fonts/Blanco-Medium.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/assets/fonts/Blanco-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Blanco-Italic.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/assets/fonts/Blanco-MediumItalic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Blanco-MediumItalic.woff" as="font" type="font/woff" crossorigin>
+    
     <meta name="theme-color" content="#fcfaf6">
     
     <!-- RSS Feeds -->
