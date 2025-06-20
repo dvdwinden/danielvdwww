@@ -3,7 +3,7 @@ layout: base.njk
 title: "Typography is the foundation of any design system"
 date: 2025-20-06
 tags: [design, youtube]
-external_url: https://youtu.be/n0iAYEpU0Fk?si=-DBpi2PULMSEKIQ0
+external_url: https://youtu.be/n0iAYEpU0Fk?si=-DBpi2PULMSEKIQ0&ref=daniel.pizza
 ---
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
@@ -18,4 +18,4 @@ external_url: https://youtu.be/n0iAYEpU0Fk?si=-DBpi2PULMSEKIQ0
   </iframe>
 </div>
 
-[Elliott Jay Stocks](https://elliotjaystocks.com/ "Elliott Jay Stocks's personal website"), who I've followed ever since he did [_8 Faces_](https://8faces.com/ "8 Faces Magazine"), shared a great few nerdy typographic nuggets in his talk at Config 2025. Product Designers, take note.
+[[Elliott Jay Stocks](https://elliotjaystocks.com/?ref=daniel.pizza "Elliott Jay Stocks's personal website"), who I've followed ever since he did [[_8 Faces_](https://8faces.com/?ref=daniel.pizza "8 Faces Magazine"), shared a great few nerdy typographic nuggets in his talk at Config 2025. Product Designers, take note.

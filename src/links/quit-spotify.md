@@ -3,7 +3,7 @@ layout: base.njk
 title: "Why I Finally Quit Spotify"
 date: 2024-07-31
 tags: [software, music]
-external_url: https://www.newyorker.com/culture/infinite-scroll/why-i-finally-quit-spotify
+external_url: https://www.newyorker.com/culture/infinite-scroll/why-i-finally-quit-spotify?ref=daniel.pizza
 ---
 
 ![Illustration by Ariel Davis](/assets/links/spotify.webp "Illustration by Ariel Davis")

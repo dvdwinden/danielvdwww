@@ -3,7 +3,7 @@ layout: base.njk
 title: "Talking Robots Into Heaven: A conversation between James Blake and Brian Eno"
 date: 2023-11-28
 tags: [youtube, music]
-external_url: https://youtu.be/iWN-kW-qpfc?si=O-Jq7WmpX-_mHl7x
+external_url: https://youtu.be/iWN-kW-qpfc?si=O-Jq7WmpX-_mHl7x&ref=daniel.pizza
 ---
 
 <div class="relative w-full pb-[56.25%] mt-7 overflow-hidden">

@@ -3,7 +3,7 @@ layout: base.njk
 title: "Losing Alice"
 date: 2023-10-25
 tags: [publishing, software, internet]
-external_url: https://pioneerworks.org/broadcast/claire-evans-sheila-heti-ai
+external_url: https://pioneerworks.org/broadcast/claire-evans-sheila-heti-ai?ref=daniel.pizza
 ---
 
 ![Photograph by Kendall Waldman](/assets/links/losing-alice.avif "Photograph by Kendall Waldman")

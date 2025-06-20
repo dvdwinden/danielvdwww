@@ -3,7 +3,7 @@ layout: base.njk
 title: "Kendrick Lamar’s Unconstrained Next Chapter"
 date: 2022-04-15
 tags: [music]
-external_url: https://www.nytimes.com/2022/12/27/magazine/kendrick-lamar-dave-free.html
+external_url: https://www.nytimes.com/2022/12/27/magazine/kendrick-lamar-dave-free.html?ref=daniel.pizza
 ---
 ![Kendrick Lamar, by Greg Noire](/assets/links/kendrick-lamar.webp "Kendrick Lamar, by Greg Noire")
 

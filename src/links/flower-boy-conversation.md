@@ -3,7 +3,7 @@ layout: base.njk
 title: "FLOWER BOY: a conversation"
 date: 2023-03-01
 tags: [youtube, music]
-external_url: http://youtube.com/watch?v=WrcwcMIYpQg&
+external_url: http://youtube.com/watch?v=WrcwcMIYpQg&ref=daniel.pizza
 ---
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
@@ -18,4 +18,4 @@ external_url: http://youtube.com/watch?v=WrcwcMIYpQg&
   </iframe>
 </div>
 
-As I watched Jerrod Carmichael's latest special _[Rothaniel](https://www.hbo.com/movies/jerrod-carmichael-rothaniel "Rothaniel on HBO")_ – which is really, really special – I was reminded of this conversation he had with Tyler, The Creator back in 2018. An interview unlike any other, and I've thought about it often since I first saw it.
+As I watched Jerrod Carmichael's latest special _[[Rothaniel](https://www.hbo.com/movies/jerrod-carmichael-rothaniel?ref=daniel.pizza "Rothaniel on HBO")_ – which is really, really special – I was reminded of this conversation he had with Tyler, The Creator back in 2018. An interview unlike any other, and I've thought about it often since I first saw it.

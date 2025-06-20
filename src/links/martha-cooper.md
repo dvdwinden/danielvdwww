@@ -3,7 +3,7 @@ layout: base.njk
 title: "Martha Cooper: A Picture Story"
 date: 2022-04-01
 tags: [cinema, trailer]
-external_url: https://youtu.be/zgAjdQBF7JI
+external_url: https://youtu.be/zgAjdQBF7JI?ref=daniel.pizza
 ---
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">

@@ -3,7 +3,7 @@ layout: base.njk
 title: "Thinking Is Work"
 date: 2023-06-03
 tags: [design, software]
-external_url: https://daneden.me/blog/2021/thinking-is-work
+external_url: https://daneden.me/blog/2021/thinking-is-work?ref=daniel.pizza
 
 ---
 

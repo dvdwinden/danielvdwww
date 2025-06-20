@@ -3,7 +3,7 @@ layout: base.njk
 title: "How a Tiny British Publisher Became the Home of Nobel Laureates"
 date: 2023-10-18
 tags: [publishing, literature, profile]
-external_url: https://www.nytimes.com/2022/10/13/books/fitzcarraldo-nobel-prize-ernaux.html
+external_url: https://www.nytimes.com/2022/10/13/books/fitzcarraldo-nobel-prize-ernaux.html?ref=daniel.pizza
 ---
 
 ![Photo by Kalpesh Lathigra](/assets/links/fitzcarraldo.webp "Photo by Kalpesh Lathigra")

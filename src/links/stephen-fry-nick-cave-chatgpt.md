@@ -3,7 +3,7 @@ layout: base.njk
 title: "Stephen Fry reads Nick Cave's stirring letter about ChatGPT and human creativity"
 date: 2023-11-23
 tags: [youtube, ai, art]
-external_url: https://youtu.be/iGJcF4bLKd4?si=h3bejLzEzdxIXypb
+external_url: https://youtu.be/iGJcF4bLKd4?si=h3bejLzEzdxIXypb&ref=daniel.pizza
 ---
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
@@ -18,4 +18,4 @@ external_url: https://youtu.be/iGJcF4bLKd4?si=h3bejLzEzdxIXypb
   </iframe>
 </div>
 
-“ChatGPT rejects any notion of creative struggle.” Nick Cave's [elaborate and thorough answer to questions about ChatGPT and creativity](https://www.theredhandfiles.com/chatgpt-making-things-faster-and-easier/ "Nick Cave on The Red Hand Files, responding to a question on ChatGPT"), written on his Red Hand Files blog, read aloud by Stephen Fry.
+“ChatGPT rejects any notion of creative struggle.” Nick Cave's [[elaborate and thorough answer to questions about ChatGPT and creativity](https://www.theredhandfiles.com/chatgpt-making-things-faster-and-easier/?ref=daniel.pizza "Nick Cave on The Red Hand Files, responding to a question on ChatGPT"), written on his Red Hand Files blog, read aloud by Stephen Fry.

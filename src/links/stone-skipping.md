@@ -3,7 +3,7 @@ layout: base.njk
 title: "Stone Skipping Is a Lost Art. Kurt Steiner Wants the World to Find It."
 date: 2024-09-13
 tags: [essay, nature]
-external_url: https://magazine.frontier.is/shelf-space/
+external_url: https://magazine.frontier.is/shelf-space/?ref=daniel.pizza
 ---
 
 ![Photos: Caroline Tompkins](/assets/links/stone-skipping.avif "Photos: Caroline Tompkins")

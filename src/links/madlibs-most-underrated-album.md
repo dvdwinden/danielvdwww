@@ -3,7 +3,7 @@ layout: base.njk
 title: "Why The Batman Is So Beautiful"
 date: 2022-04-03
 tags: [music]
-external_url: https://www.youtube.com/watch?v=STynLl-2FqU
+external_url: https://www.youtube.com/watch?v=STynLl-2FqU&ref=daniel.pizza
 ---
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
