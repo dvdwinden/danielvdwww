@@ -2,9 +2,7 @@
 
 A personal website and blog built with Eleventy (11ty) and styled with Tailwind. This site showcases some of my work, some of my writing, and many of my personal interests.
 
-<figure>
-{% retinaImage "src/assets/site.png", "daniel.pizza" %}
-</figure>
+![daniel.pizza](src/assets/site.png)
 
 ## Overview
 
