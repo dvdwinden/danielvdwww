@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "Claire Wilcox – Patch Work: A Life Amongst Clothes (2020)"
 date: 2023-02-28
-tags: [fiction]
+tags: [non-fiction]
 external_url: https://www.trema.website/claire-wilcox-patch-work/?ref=daniel.pizza
 image:
   src: /assets/newsletter/jo-ann-beard-collected-works.png

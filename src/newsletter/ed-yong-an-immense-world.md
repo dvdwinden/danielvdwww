@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "Ed Yong – An Immense World (2022)"
 date: 2023-03-30
-tags: [fiction]
+tags: [non-fiction]
 external_url: https://www.trema.website/ed-yong-an-immense-world/?ref=daniel.pizza
 image:
   src: /assets/newsletter/jo-ann-beard-collected-works.png
