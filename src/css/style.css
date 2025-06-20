@@ -237,13 +237,14 @@ iframe {
 /* Work */
 .prose h2.work-title {
     font-size: 2rem;
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
 }
 
 .prose h3.work-desc {
     font-size: 1.75rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
+    margin-top: -1.5rem;
 }
 
 /* Header */
