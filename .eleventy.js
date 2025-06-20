@@ -134,6 +134,10 @@ module.exports = function (eleventyConfig) {
   // Watch CSS files and assets for changes
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addWatchTarget("./src/assets/");
+  
+  // Ignore _site directory to prevent infinite loops
+  eleventyConfig.ignores.add("_site/**");
+  eleventyConfig.ignores.add("_site/");
 
   // Create collection for links
   eleventyConfig.addCollection("links", function (collectionApi) {
