@@ -26,22 +26,7 @@
     <!--<script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>-->
 </head>
 <body class="min-h-screen bg-beige dark:bg-[#222] text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden {{ bodyClass }}">
-    <header class="fixed top-0 left-0 z-50 p-6 flex justify-between w-full">
-        <div class="flex items-center space-x-4">
-            <a href="/" class="text-xl font-serif text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center">
-                {% retinaImage "src/assets/daniel.png", "Avatar of Daniël van der Winden", 20, "rounded-full" %}
-                {{ "Daniël van der Winden" }}
-            </a>
-        </div>
-        <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="ml-4">
-            <span id="dark-icon">
-                {% include "icons/sunset.svg" %}
-            </span>
-            <span id="light-icon">
-                {% include "icons/sunrise.svg" %}
-            </span>
-        </button>
-    </header>
+    {% include "header.njk" %}
 
     <nav class="fixed bottom-4 left-4 right-4 z-50 sm:bottom-6 sm:left-6 sm:right-auto">
         <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg py-4 px-4 sm:bg-transparent sm:dark:bg-transparent sm:border-0 sm:p-0 relative overflow-hidden">
