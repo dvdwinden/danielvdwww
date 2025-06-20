@@ -15,9 +15,11 @@ bodyClass: bg-blue
   - Before that I helped mould the design studio <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
   - I curate, edit, design and publish a printed, literary magazine called [_TRANSCRIPT_](http://transcriptmag.store "TRANSCRIPT Magazine").
 
-  <span class="callout">I'm open to new opportunities, contract or permanent</span>: primarily I'm interested in working with consumer-facing companies operating in the space of publishing, culture, music, film, media or design tooling.
+  I'm open to new opportunities, contract or permanent. \
+  If you are in need of someone with my profile, please reach out.
+  I'm especially interested in working with consumer-facing companies in the space of publishing, culture, music, film, media or design tooling.
 
-  <a href="#" title="Book a call with Daniël" rel="nofollow" target="_blank" class="button font-degular-text text-md dark:bg-white dark:text-black">Book a call</a>
+  <a href="mailto:d.vanderwinden@gmail.com" title="Send me an email" rel="nofollow" target="_blank" class="button font-degular-text text-md dark:bg-white dark:text-black">Send me an email</a>
 </section>
 
 <section class="resume">
@@ -25,7 +27,7 @@ bodyClass: bg-blue
 
   <ul class="pl-0 ml-0 list-none space-y-10">
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/30 dark:text-white/30 text-md font-sans mb-2 md:mb-0">2023–2025</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/30 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
         <div class="text-md font-bold font-sans">
           <h3>Senior Designer at <a href="http://ghost.org" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
@@ -36,7 +38,7 @@ bodyClass: bg-blue
       </div>
     </li>
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
       <div class="md:w-3/4">
         <div class="text-md font-bold font-sans">
           <h3>CDO, Partner at <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
@@ -47,7 +49,7 @@ bodyClass: bg-blue
       </div>
     </li>
       <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2015–2019</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2015–2019</span>
       <div class="md:w-3/4">
         <div class="text-md font-bold font-sans">
           <h3>Designer, Head of <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
@@ -58,7 +60,7 @@ bodyClass: bg-blue
       </div>
     </li>
       <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-        <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2014–2015</span>
+        <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2014–2015</span>
         <div class="md:w-3/4">
           <div class="text-md font-bold font-sans">
             <h3>Designer at <a href="http://fabrique.nl" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a></h3>
@@ -66,7 +68,7 @@ bodyClass: bg-blue
         </div>
     </li>
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
       <div class="md:w-3/4">
         <div class="text-md font-bold font-serif">
           <h3>Internships at <a href="http://fabrique.nl" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a> and <a href="http://bakkenbaeck.com" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
@@ -74,7 +76,7 @@ bodyClass: bg-blue
       </div>
     </li>
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/30 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2010–2012</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2010–2012</span>
       <div class="md:w-3/4">
         <div class="text-md font-bold font-serif">
           <h3>Internship at Faster Forward Interactive</h3>
