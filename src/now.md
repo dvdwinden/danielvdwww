@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: Now
-description: What I'm up to right now
+description: A snapshot of current projects, interests, and life updates.
 bodyClass: bg-blue
 ---
 
