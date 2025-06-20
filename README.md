@@ -2,6 +2,10 @@
 
 A personal website and blog built with Eleventy (11ty) and styled with Tailwind. This site showcases some of my work, some of my writing, and many of my personal interests.
 
+<figure>
+{% retinaImage "src/assets/site.png", "daniel.pizza" %}
+</figure>
+
 ## Overview
 
 It's a static site setup. It features:
@@ -25,9 +29,7 @@ It's a static site setup. It features:
 │   ├── css/                # Generated CSS (output)
 │   ├── js/                 # JavaScript files
 │   ├── index.md            # Homepage (work)
-│   ├── newsletter.md       # Newsletter (books))
-│   ├── reading.md          # Reading list (books)
-│   ├── watching.md         # Watching list (movies)
+│   ├── newsletter.md       # Newsletter (monthly book recommendations)
 │   ├── colophon.md         # Site colophon
 │   └── now.md              # Current activities
 ├── .eleventy.js            # Eleventy configuration
@@ -42,7 +44,6 @@ It's a static site setup. It features:
 - **Work**: Professional experience and a few project highlights
 - **Links**: Curated links to things to read, watch or listen to
 - **Journal**: My own writing
-- **Reading/Watching lists**: Favourite books and movies
 - **Newsletter**: Monthly book recommendations (Trema)
 
 ### Design & Styling
