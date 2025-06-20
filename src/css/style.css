@@ -494,3 +494,21 @@ ul.newsletter picture {
 ul.newsletter h2 {
     margin-top: 0;
 }
+
+.only-light {
+    display: block;
+}
+
+.only-dark {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .only-light {
+        display: none;
+    }
+
+    .only-dark {
+        display: block;
+    }
+}
