@@ -373,6 +373,12 @@ nav ul li a span.no-underline:hover {
     @apply mb-32;
 }
 
+/* Callout */
+.callout {
+    font-size: 1.6rem;
+    color: theme('colors.black');
+}
+
 /* Resume */
 .resume {
     @apply mb-32;
@@ -464,10 +470,7 @@ nav ul li a span.no-underline:hover {
     scrollbar-width: none;
 }
 
-/* Callout */
-.callout {
-    font-size: 1.6rem;
-}
+
 
 /* Links */
 ul.links {
