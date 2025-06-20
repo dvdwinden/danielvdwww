@@ -131,6 +131,9 @@ module.exports = function (eleventyConfig) {
   // Copy fonts directory for custom fonts
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
 
+  // Copy _redirects file for Netlify redirects
+  eleventyConfig.addPassthroughCopy("src/_redirects");
+
   // Copy favicon.ico to root directory for default browser behavior
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
 
@@ -159,6 +162,15 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
     return DateTime.fromJSDate(dateObj).toFormat(format);
+  });
+
+  // Set up redirects from /writing/* to /journal/* both for local dev and production
+  eleventyConfig.setServerOptions({
+    domdiff: false,
+    port: 8080,
+    redirects: {
+      "/writing/*": "/journal/:splat",
+    }
   });
 
   return {
