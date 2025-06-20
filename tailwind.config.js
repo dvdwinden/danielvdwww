@@ -31,7 +31,7 @@ module.exports = {
           'BlinkMacSystemFont',
           'sans-serif'
         ],
-        serif: ['Blanco Trial', 'Times New Roman', 'Times', 'Georgia', 'serif'],
+        serif: ['Blanco', 'Times New Roman', 'Times', 'Georgia', 'serif'],
       },
       fontSize: {
         sm: '1rem', // 16px

@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font declarations for Blanco */
+@font-face {
+    font-family: 'Blanco';
+    src: url('../assets/fonts/Blanco-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Blanco';
+    src: url('../assets/fonts/Blanco-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Blanco';
+    src: url('../assets/fonts/Blanco-Italic.woff2') format('woff2'),
+        url('../assets/fonts/Blanco-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Blanco';
+    src: url('../assets/fonts/Blanco-MediumItalic.woff2') format('woff2'),
+        url('../assets/fonts/Blanco-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
 html {
     overflow-y: scroll;
 }
@@ -156,6 +191,7 @@ iframe {
     text-decoration-color: #999;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+    font-weight: 400;
 }
 
 .dark .prose a {
@@ -411,10 +447,12 @@ ul.links {
 ul.links li h2 {
     margin-bottom: 0;
     font-family: theme('fontFamily.serif');
+    font-weight: 500;
 }
 
 ul.links li a:hover h2 {
     color: theme('colors.hover');
+    text-decoration-color: theme('colors.hover');
     background: none !important;
 }
 
@@ -433,9 +471,11 @@ ul.links li a:hover {
 
 ul.links li p a {
     text-decoration: underline;
-    text-decoration-color: theme('colors.brown');
+    text-decoration-color: theme('colors.hover');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+    font-family: theme('fontFamily.serif');
+    font-weight: 400;
 }
 
 ul.links li p a:hover {

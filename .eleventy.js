@@ -128,13 +128,16 @@ module.exports = function (eleventyConfig) {
   // Copy now directory for images
   eleventyConfig.addPassthroughCopy("src/assets/now");
 
+  // Copy fonts directory for custom fonts
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
+
   // Copy favicon.ico to root directory for default browser behavior
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
 
   // Watch CSS files and assets for changes
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addWatchTarget("./src/assets/");
-  
+
   // Ignore _site directory to prevent infinite loops
   eleventyConfig.ignores.add("_site/**");
   eleventyConfig.ignores.add("_site/");
