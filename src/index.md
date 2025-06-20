@@ -43,7 +43,7 @@ bodyClass: bg-blue
 </section>
 
 <section class="resume">
-  <h2>Resumé</h2>
+  <h2 class="work-title">Resumé</h2>
 
   <ul class="pl-0 ml-0 list-none space-y-10">
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
@@ -148,7 +148,7 @@ While at Ghost I designed an upgraded publishing workflow, lowering the barrier 
 ---
 
 <h2 class="work-title">Circle</h2>
-<h3 class="text-black/60 dark:text-white/40 work-desc">Product design for a circular office rental platform</h3>
+<h3 class="text-black/60 dark:text-white/40 work-desc">Product design for a circular office furniture rental platform</h3>
 
 At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/case/circle "Bakken & Bæck's Circle case study"), IKEA's circular rental solution for office furnishing. We designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Rapidly iterating, we conceptualised and designed the product from zero to one, laying the groundwork for what would become [Nornorm](https://nornorm.com/ "Nornorm"). 
 </div>
