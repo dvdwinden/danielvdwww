@@ -488,6 +488,11 @@ ul.links li p a:hover {
     background: theme('colors.highlight') !important;
 }
 
+ul.links li p span a {
+    font-family: theme('fontFamily.sans');
+    ;
+}
+
 .dark ul.links li p a:hover {
     color: theme('colors.black');
     text-decoration: none;
