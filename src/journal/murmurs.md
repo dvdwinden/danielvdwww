@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Murmurs
+title: Murmurs ↗
 bodyClass: bg-stone
 date: 2025-01-16
 tags: [essay]

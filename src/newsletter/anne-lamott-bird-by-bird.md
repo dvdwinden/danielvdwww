@@ -5,7 +5,7 @@ date: 2023-11-07
 tags: [non-fiction]
 external_url: https://www.trema.website/anne-lamott-bird-by-bird/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/anne-lamott-bird-by-bird.png
   alt: "Anne Lamott – Bird by Bird: Some Instructions on Writing and Life (1994)"
   title: "Anne Lamott – Bird by Bird: Some Instructions on Writing and Life (1994)"
 ---

@@ -5,7 +5,7 @@ date: 2024-11-25
 tags: [fiction]
 external_url: https://www.trema.website/samantha-harvey-orbital-2023/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/samantha-harvey-orbital.png
   alt: "Samantha Harvey – Orbital (2023)"
   title: "Samantha Harvey – Orbital (2023)"
 ---

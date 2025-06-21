@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Lest I Forget
+title: Lest I Forget ↗
 bodyClass: bg-stone
 date: 2024-08-01
 tags: [essay, grief]

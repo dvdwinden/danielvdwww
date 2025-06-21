@@ -5,7 +5,7 @@ date: 2023-10-24
 tags: [fiction]
 external_url: https://www.trema.website/olga-tokarczuk-drive-your-plow-over-the-bones-of-the-dead/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/olga-tokarczuk-drive-your-plow-over-the-bones-of-the-dead.png
   alt: "Olga Tokarczuk – Drive Your Plow Over the Bones of the Dead (2018)"
   title: "Olga Tokarczuk – Drive Your Plow Over the Bones of the Dead (2018)"
 ---

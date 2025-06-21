@@ -5,7 +5,7 @@ date: 2023-08-31
 tags: [non-fiction]
 external_url: https://www.trema.website/john-hersey-hiroshima/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/john-hersey-hiroshima.png
   alt: "John Hersey – Hiroshima (1946)"
   title: "John Hersey – Hiroshima (1946)"
 ---

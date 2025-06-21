@@ -5,7 +5,7 @@ date: 2022-12-19
 tags: [non-fiction]
 external_url: https://www.trema.website/benjamin-moser-sontag-her-life/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/benjamin-moser-sontag.png
   alt: "Benjamin Moser – Sontag: Her Life (2019)"
   title: "Benjamin Moser – Sontag: Her Life (2019)"
 ---

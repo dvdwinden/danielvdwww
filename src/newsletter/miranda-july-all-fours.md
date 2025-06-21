@@ -5,7 +5,7 @@ date: 2024-09-30
 tags: [fiction]
 external_url: https://www.trema.website/miranda-july-all-fours/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/miranda-july-all-fours.png
   alt: "Miranda July – All Fours (2024)"
   title: "Miranda July – All Fours (2024)"
 ---

@@ -5,7 +5,7 @@ date: 2023-07-03
 tags: [non-fiction]
 external_url: https://www.trema.website/cave-ohagan-faith-hope-carnage/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/faith-hope-carnage.png
   alt: "Nick Cave & Seán O'Hagan – Faith, Hope and Carnage (2022)"
   title: "Nick Cave & Seán O'Hagan – Faith, Hope and Carnage (2022)"
 ---

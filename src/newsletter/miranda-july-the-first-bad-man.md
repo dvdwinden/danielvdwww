@@ -5,7 +5,7 @@ date: 2024-06-04
 tags: [fiction]
 external_url: https://www.trema.website/miranda-july-the-first-bad-man?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/miranda-july-first-bad-man.png
   alt: "Miranda July – The First Bad Man (2015)"
   title: "Miranda July – The First Bad Man (2015)"
 ---
