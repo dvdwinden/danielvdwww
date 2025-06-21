@@ -153,10 +153,6 @@ While at Ghost I designed an upgraded publishing workflow, lowering the barrier 
 At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/case/circle?ref=daniel.pizza "Bakken & Bæck's Circle case study"), IKEA's circular rental solution for office furniture. 
 
 We conceptualised, designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Working with a team from [_SPACE10_](https://space10.com/ "SPACE10"), we took the product from zero to one through rapid iteration. 
-
-I oversaw the design direction for the digital product, crafted UI with another Product Designer, bridged the gap between product and brand, and managed client communication. 
-
-Over the course of one summer we laid the groundwork for what would grow into [Nornorm](https://nornorm.com/?ref=daniel.pizza "Nornorm"), a successful stand-alone business venture.
 </div>
 
 <div class="mt-32">
@@ -183,6 +179,10 @@ Over the course of one summer we laid the groundwork for what would grow into [N
 </figure>
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
+
+I oversaw the design direction for the digital product, crafted UI with another Product Designer, bridged the gap between product and brand, and managed client communication. 
+
+Over the course of one summer we laid the groundwork for what would grow into [Nornorm](https://nornorm.com/?ref=daniel.pizza "Nornorm"), a successful stand-alone business venture.
 
 ---
 
