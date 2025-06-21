@@ -109,7 +109,7 @@ bodyClass: bg-blue
   </ul>
 </section>
 
-I deliver polished user interfaces and quality prototypes. With a strong interest in typography and a knack for storytelling, I'm equally comfortable designing complex flows as I am putting together a marketing website.
+I deliver polished user interfaces and quality prototypes. With a strong interest in typography and a knack for storytelling, I'm equally comfortable designing complex flows as I am putting together a marketing website. I've worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake"), and [Expo](http://expo.dev?ref=daniel.pizza "Expo"), among others.
 
 ---
 
@@ -183,7 +183,9 @@ At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/
 <h2 class="work-title">Pexip</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Designing a suite of videoconferencing software</h3>
 
-In collaboration with Pexip's team I led design on their web, iOS and Android apps for videoconferencing. We also designed _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_, which allowed people to join Pexip meetings using Logitech hardware. We implemented Pexip's privacy-first approach to software design and designed the software for Logitech's Tap device based on Android's _Material Design_ language.
+In collaboration with Pexip's team I led design on their web, iOS and Android apps, modernising their videoconferencing offering and designing  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand Pexip's tools to Logitech hardware for meeting rooms.
+
+I crafted UI based on Pexip's existing brand guidelines, oversaw the product direction together with one other Product Designer and Pexip's Product Design Lead, and managed the client relationship. Beyond the interface, I defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
 
 </div>
 
@@ -197,21 +199,30 @@ In collaboration with Pexip's team I led design on their web, iOS and Android ap
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
 <figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
-  {% retinaImage "src/assets/work/pexip-room-tap.png", "Pexip Room" %}
+  {% retinaImage "src/assets/work/pexip-ui.png", "Pexip UI" %}
 </figure>
+
+</div>
+
+<div class="mt-32">
+ <figure class="w-full sm:w-[576px] mr-auto my-12">
+    {% retinaImage "src/assets/work/pexip-icons.png", "Pexip icons" %}
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans">Pexip icons, designed by Hemmo de Jonge</figcaption>
+  </figure>
+</div>
+
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
 > Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
 
 <span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— <a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip</span>
-
-In addition, I've worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake"), and [Expo](http://expo.dev?ref=daniel.pizza "Expo").
 
 ---
 
 <h2 class="work-title">Design Leadership</h2>
 I've managed and mentored teams of up to 12 product designers with varying levels of experience, balancing their personal goals and needs with those of the business. 
 
-> Daniël creates a positive, supportive environment where everyone can thrive. When he left the company, it felt like a huge part of the team spirit was missing.
+> What really sets Daniël apart is how much he cares about the people he works with. He creates a positive, supportive environment where everyone can thrive. If you’re looking for someone who will bring expertise, dedication, and a genuine care for his colleagues, Daniël is your person.
 
 <span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial">— <a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek's website" rel="external" target="_blank">Marek Minor</a>, Product Designer</span>
 

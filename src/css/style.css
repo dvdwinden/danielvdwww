@@ -341,7 +341,8 @@ header a:hover {
 }
 
 /* Images and captions */
-figcaption {
+figcaption,
+.prose figcaption {
     font-size: 1rem;
     margin-top: 0.5rem;
 }
