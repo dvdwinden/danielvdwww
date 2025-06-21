@@ -18,7 +18,7 @@
     {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
     <link rel="stylesheet" href="/css/style.css">
-    
+
     <!-- Pre-load font files -->
     <link rel="preload" href="/assets/fonts/Blanco-Regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/assets/fonts/Blanco-Medium.woff" as="font" type="font/woff" crossorigin>
@@ -26,7 +26,7 @@
     <link rel="preload" href="/assets/fonts/Blanco-Italic.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/assets/fonts/Blanco-MediumItalic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/Blanco-MediumItalic.woff" as="font" type="font/woff" crossorigin>
-    
+
     <link rel="preload" href="/assets/fonts/Degular-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/Degular-Regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/assets/fonts/Degular-Medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -35,32 +35,37 @@
     <link rel="preload" href="/assets/fonts/Degular-Italic.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/assets/fonts/Degular-MediumItalic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/Degular-MediumItalic.woff" as="font" type="font/woff" crossorigin>
-    
+
     <meta name="theme-color" content="#fcfaf6">
-    
+
+    <meta name="view-transition" content="same-origin">
+
     <!-- RSS Feeds -->
     <link rel="alternate" type="application/atom+xml" title="Journal Feed" href="/journal/feed.xml">
     <link rel="alternate" type="application/atom+xml" title="Links Feed" href="/links/feed.xml">
     <!--<script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>-->
 </head>
-<body class="min-h-screen bg-beige dark:bg-[#222] text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden {{ bodyClass }}">
-    {% include "header.njk" %}
+<body class="min-h-screen bg-beige dark:bg-[#222] text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
+    <!-- Background layer -->
+    <div id="page-background" class="fixed inset-0 -z-10 {{ bodyClass }}"></div>
 
-    <nav class="fixed bottom-4 left-4 right-4 z-50 sm:bottom-6 sm:left-6 sm:right-auto">
-        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg py-4 px-4 sm:bg-transparent sm:dark:bg-transparent sm:border-0 sm:p-0 relative overflow-hidden">
-            <div class="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white dark:from-gray-900 to-transparent pointer-events-none sm:hidden"></div>
-            {% include "navigation.njk" %}
-        </div>
-    </nav>
-    
-    <main class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1400px]">
-        <div class="w-full max-w-[1400px]">
-            {{ content | safe }}
-        </div>
-    </main>
+    <!-- Content wrapper -->
+    <div id="page-content">
+        {% include "header.njk" %}
 
-    
+        <nav class="fixed z-50 bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-auto">
+            <div class="relative px-4 py-4 overflow-hidden bg-white border border-gray-200 rounded-lg dark:bg-gray-900 dark:border-gray-700 sm:bg-transparent sm:dark:bg-transparent sm:border-0 sm:p-0">
+                <div class="absolute inset-y-0 right-0 w-12 pointer-events-none bg-gradient-to-l from-white dark:from-gray-900 to-transparent sm:hidden"></div>
+                {% include "navigation.njk" %}
+            </div>
+        </nav>
+
+        <main class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1400px]">
+            <div class="w-full max-w-[1400px]">
+                {{ content | safe }}
+            </div>
+        </main>
+    </div>
+
     <script src="/js/dark-mode.js"></script>
-
 </html>
-
