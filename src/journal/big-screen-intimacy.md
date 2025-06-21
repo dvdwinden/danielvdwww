@@ -6,8 +6,8 @@ date: 2022-05-10
 tags: [cinema]
 description: An ode to experiencing the incredible intimacy of seeing films in a movie theatre.
 image:
-  src: /assets/newsletter/anne-lamott-bird-by-bird.png
-  alt: "On the big screen, intimacy is what you'll find "
+  src: /assets/journal/memoria.avif
+  alt: "Still from Memoria (2022)"
   title: "On the big screen, intimacy is what you'll find"
 ---
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
