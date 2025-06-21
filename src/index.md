@@ -108,7 +108,9 @@ bodyClass: bg-blue
   </ul>
 </section>
 
-I deliver polished user interfaces and quality prototypes. With a strong interest in typography and a love for storytelling, I'm equally comfortable designing complex flows as I am putting together a marketing website. 
+My contribution as a designer is holistic: I deliver thought-through flows, polished user interfaces, and quality prototypes. I sweat the details, but make sure everyone understands the bigger picture. 
+
+I have a strong interest in typography and a love for storytelling, and I'm equally comfortable designing complex flows as I am putting together a marketing website. 
 
 I've worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake"), and [Expo](http://expo.dev?ref=daniel.pizza "Expo"), among others.
 
