@@ -75,7 +75,7 @@ bodyClass: bg-blue
           <h3>Designer, Head of <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
         </div>
         <div class="text-black/60 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          Built a local, multi-disciplinary team of up to 20 people to help the company take root in the Netherlands. Mentored Product Designers and other team members.
+          Set up shope in the Netherlands and built a local, multi-disciplinary team of up to 20 people to help the company take root. Mentored Product Designers and other team members. Designed digital products and websites.
         </div>
       </div>
     </li>
