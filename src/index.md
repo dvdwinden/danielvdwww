@@ -102,7 +102,7 @@ bodyClass: bg-blue
           <h3>Internship at Faster Forward Interactive</h3>
         </div>
         <div class="text-black/60 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          Followed by a stint as a part-time front-end developer.
+          Followed by a stint as a part-time Front-End Developer.
         </div>
       </div>
     </li>
