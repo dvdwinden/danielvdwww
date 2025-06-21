@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@view-transition {
+    navigation: auto;
+}
+
+#page-background {
+    view-transition-name: bg;
+    transform: translateZ(0);
+}
+
+#page-content {
+    view-transition-name: content;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Reset transforms during capture */
+::view-transition-old(content) {
+    transform: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+}
+
+/* Hide old content immediately */
+::view-transition-old(content) {
+    animation: none;
+    opacity: 0;
+}
+
+/* Show new content immediately */
+::view-transition-new(content) {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0) !important;
+    top: 0 !important;
+}
+
+/* Smooth background color morph */
+::view-transition-group(bg) {
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+/* Make sure the rest of the element's don't animate or scroll */
+::view-transition-group(*) {
+    animation: none;
+}
+
 /* Font declarations for Blanco */
 @font-face {
     font-family: 'Blanco';
