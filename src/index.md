@@ -234,11 +234,11 @@ I've hired, managed and mentored teams of up to twelve Product Designers with va
 
 ---
 
-<h2 class="work-title">Writing</h2>
+<h2 class="work-title">Writing & Storytelling</h2>
 
-I write essays, reviews, and a dash of auto-fiction. I've published two essays in [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") and write a monthly newsletter about the books I loved reading, called [Trema](http://trema.website?ref=daniel.pizza "Trema").</p>
+My knack for writing is beneficial when designing digital products or marketing websites. I have a keen eye for storytelling, and I work well with other writers.
 
-Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer.
+Most recently I've curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. And, I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer. 
 </div>
 
 <div class="mt-32">
@@ -247,11 +247,11 @@ Most recently I've acted as the copywriter and editor on the [NoGood art book](h
         <source src="/assets/work/transcript-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans"><em>TRANSCRIPT</em> Magazine</figcaption>
+    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans"><em>TRANSCRIPT</em> Magazine (issue one)</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
-    {% retinaImage "src/assets/work/transcript-visual.png", "TRANSCRIPT Magazine" %}
+    {% retinaImage "src/assets/work/transcript-visual.png", "TRANSCRIPT Magazine (issue one, with work by Thomas & Jurgen)" %}
     <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans"><em>TRANSCRIPT</em> Magazine, featuring work by Thomas & Jurgen</figcaption>
   </figure>
 </div>
