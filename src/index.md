@@ -189,7 +189,7 @@ Over the course of one summer we laid the groundwork for what would grow into [N
 <h2 class="work-title">Pexip</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Designing a suite of videoconferencing software</h3>
 
-In collaboration with Pexip's team I led design on their web, iOS and Android apps, modernising their videoconferencing offering and designing  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand Pexip's tools to Logitech hardware for meeting rooms.
+In collaboration with Pexip's team I led design on their web, iOS and Android apps, modernising their videoconferencing offering and designing  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand Pexip's tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
 
 I crafted UI based on Pexip's existing brand guidelines, oversaw the product direction together with one other Product Designer and Pexip's Product Design Lead, and managed the client relationship. Beyond the interface, I defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
 
