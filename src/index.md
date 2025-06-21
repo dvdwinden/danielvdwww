@@ -108,7 +108,7 @@ bodyClass: bg-blue
   </ul>
 </section>
 
-My contribution as a designer is holistic: I deliver thought-through flows, polished user interfaces, and quality prototypes. I sweat the details, but make sure everyone understands the bigger picture. 
+My contribution as a designer is holistic: I deliver thorough flows, polished user interfaces, and quality prototypes. I sweat the details, but make sure everyone understands the bigger picture. 
 
 I have a strong interest in typography and a love for storytelling, and I'm equally comfortable designing complex flows as I am putting together a marketing website. 
 
