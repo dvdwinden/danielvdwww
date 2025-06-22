@@ -761,13 +761,11 @@ ul.newsletter h2 {
     @apply mr-auto my-8 sm:my-24;
     margin-top: -220px;
     margin-left: 100px;
-    rotate: 3deg;
 }
 
 .hero-image.studio {
     background-image: url('/assets/work/studio-square.png');
     @apply mr-auto my-8 sm:my-24;
-    rotate: -5deg;
 }
 
 @media (max-width: 1400px) {
