@@ -712,3 +712,62 @@ ul.newsletter h2 {
         display: block;
     }
 }
+
+/* Hero images */
+.hero-images {
+    @apply relative;
+    position: absolute;
+    top: 25vh;
+    left: 24rem;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-image {
+    @apply relative;
+    background-color: hsl(200, 50%, 90%);
+    background-blend-mode: multiply;
+    background-size: contain;
+    border-radius: 0.1875rem;
+    width: 100%;
+    max-width: 360px;
+    height: 360px;
+    pointer-events: none;
+}
+
+.hero-image.daniel {
+    background-image: url('/assets/work/daniel-square.png');
+    @apply mr-auto my-8 sm:my-24;
+    margin-top: -220px;
+    margin-left: 100px;
+    rotate: 5deg;
+}
+
+.hero-image.studio {
+    background-image: url('/assets/work/studio-square.png');
+    @apply mr-auto my-8 sm:my-24;
+    rotate: -5deg;
+}
+
+/* Main content spacing for hero images */
+
+@media (max-width: 640px) {
+    .hero-images {
+        top: 6rem;
+    }
+
+    .hero-image {
+        max-width: 240px;
+        height: 240px;
+    }
+
+    .hero-image.studio {
+        margin-top: -150px;
+        margin-left: 50px;
+    }
+
+    .main-content {
+        margin-top: 24rem;
+    }
+}
