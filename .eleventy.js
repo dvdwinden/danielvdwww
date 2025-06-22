@@ -60,7 +60,7 @@ module.exports = function (eleventyConfig) {
     });
 
     console.log(`Processing image: ${srcPath} (${originalName}${originalExt})`);
-    
+
     try {
       const metadata = await Image(srcPath, {
         widths: widths,
@@ -104,7 +104,7 @@ module.exports = function (eleventyConfig) {
       "_site/assets/work",
       "_site/assets/now"
     ];
-    
+
     for (const dir of dirs) {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
@@ -116,27 +116,40 @@ module.exports = function (eleventyConfig) {
     const imageExtensions = [".avif", ".webp", ".jpg", ".jpeg", ".png", ".JPG", ".PNG"];
     const imagePatterns = imageExtensions.map(ext => `src/assets/**/*${ext}`);
     const imageFiles = [];
-    
+
     for (const pattern of imagePatterns) {
       const files = await glob(pattern);
       imageFiles.push(...files);
     }
-    
+
+    // Filter out favicon files - they should not be processed by the image optimization system
+    const faviconFiles = imageFiles.filter(file => {
+      const fileName = path.basename(file).toLowerCase();
+      return fileName.includes('favicon') || fileName.includes('apple-touch-icon');
+    });
+
+    const filesToProcess = imageFiles.filter(file => {
+      const fileName = path.basename(file).toLowerCase();
+      return !fileName.includes('favicon') && !fileName.includes('apple-touch-icon');
+    });
+
     console.log(`Found ${imageFiles.length} images to process`);
-    
+    console.log(`Excluding ${faviconFiles.length} favicon files from processing`);
+    console.log(`Processing ${filesToProcess.length} images`);
+
     // Process each image and build a mapping of original references to processed images
-    for (const file of imageFiles) {
+    for (const file of filesToProcess) {
       try {
         // Get the relative path that would be used in markdown/html
         const relativePath = file.replace(/^src\//, '');
-        
+
         // Process the image - this will also add it to the FILE_PATH_CACHE
         await processImage(file);
       } catch (err) {
         console.error(`Error processing image ${file}:`, err);
       }
     }
-    
+
     console.log("Finished processing all images");
   }
 
@@ -147,6 +160,12 @@ module.exports = function (eleventyConfig) {
   });
 
   async function imageShortcode(src, alt, sizes = "(min-width: 1024px) 100vw, 50vw") {
+    // Skip favicon files - they should not be processed by the image optimization system
+    const fileName = path.basename(src).toLowerCase();
+    if (fileName.includes('favicon') || fileName.includes('apple-touch-icon')) {
+      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+    }
+
     // Extract the directory structure from the source path to maintain it in output
     // Remove leading slash if present
     const cleanSrc = src.startsWith('/') ? src.substring(1) : src;
@@ -158,7 +177,7 @@ module.exports = function (eleventyConfig) {
     // Check if we already have this path in the cache
     if (FILE_PATH_CACHE.has(relativePath)) {
       const pathInfo = FILE_PATH_CACHE.get(relativePath);
-      
+
       // If the source path is cached and already processed, use it directly
       if (pathInfo.sourcePath && IMAGE_CACHE.has(pathInfo.sourcePath)) {
         return Image.generateHTML(IMAGE_CACHE.get(pathInfo.sourcePath), {
@@ -173,12 +192,12 @@ module.exports = function (eleventyConfig) {
     // Handle the case where src includes size and format suffixes
     const sizeFormatRegex = /-(\d+)\.(jpeg|jpg|png|webp|avif)$/i;
     const sizeFormatMatch = src.match(sizeFormatRegex);
-    
+
     if (sizeFormatMatch) {
       // This is a reference to a sized/formatted version, extract the base path
       const basePath = src.replace(sizeFormatRegex, '');
       const baseRelativePath = basePath.startsWith('/') ? basePath.substring(1) : basePath;
-      
+
       // Try to find the original file with various extensions
       const potentialExtensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
       for (const ext of potentialExtensions) {
@@ -193,7 +212,7 @@ module.exports = function (eleventyConfig) {
 
     // List of possible extensions to try
     const extensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
-    
+
     // Try to find the actual file with correct extension
     let actualFilePath = srcPath;
     if (!await tryFile(actualFilePath)) {
@@ -245,21 +264,27 @@ module.exports = function (eleventyConfig) {
       const imgRegex = /<img\s+[^>]*src=["'](?:\/|src\/)?([^"']*\/assets\/[^"']*)["'][^>]*>/gi;
       let match;
       const processed = new Set(); // Keep track of already processed tags to avoid duplicates
-      
+
       while ((match = imgRegex.exec(content)) !== null) {
         const imgTag = match[0];
-        
+
         // Skip if we've already processed this exact tag
         if (processed.has(imgTag)) {
           continue;
         }
         processed.add(imgTag);
-        
+
         const src = match[1];
         const altMatch = imgTag.match(/alt=["']([^"']*)["']/);
         const alt = altMatch ? altMatch[1] : "";
         const titleMatch = imgTag.match(/title=["']([^"']*)["']/);
         const title = titleMatch ? titleMatch[1] : "";
+
+        // Skip favicon files - they should not be processed by the image optimization system
+        const fileName = path.basename(src).toLowerCase();
+        if (fileName.includes('favicon') || fileName.includes('apple-touch-icon')) {
+          continue;
+        }
 
         try {
           // Clean source path and create relative path for cache lookup
@@ -270,7 +295,7 @@ module.exports = function (eleventyConfig) {
           // First check if we have this path in our file path cache
           if (FILE_PATH_CACHE.has(relativePath)) {
             const pathInfo = FILE_PATH_CACHE.get(relativePath);
-            
+
             // Check if the source path is in the image cache
             if (pathInfo.sourcePath && IMAGE_CACHE.has(pathInfo.sourcePath)) {
               const metadata = IMAGE_CACHE.get(pathInfo.sourcePath);
@@ -281,7 +306,7 @@ module.exports = function (eleventyConfig) {
                 decoding: "async",
               };
               const optimizedImg = Image.generateHTML(metadata, imageAttributes);
-              
+
               // Replace all occurrences of this exact img tag
               const escapedImgTag = imgTag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
               const replaceRegex = new RegExp(escapedImgTag, 'g');
@@ -289,17 +314,17 @@ module.exports = function (eleventyConfig) {
               continue;
             }
           }
-          
+
           // Handle the case where the src directly includes size and format suffixes
           const sizeFormatRegex = /-(\d+)\.(jpeg|jpg|png|webp|avif)$/i;
           const sizeFormatMatch = src.match(sizeFormatRegex);
-          
+
           if (sizeFormatMatch) {
             // This is a reference to a sized/formatted version, extract the base path
             const size = sizeFormatMatch[1];
             const format = sizeFormatMatch[2];
             const basePath = src.replace(sizeFormatRegex, '');
-            
+
             // Try to find the base file in various formats
             const baseRelativePath = basePath.startsWith('/') ? basePath.substring(1) : basePath;
             const potentialPaths = [
@@ -311,7 +336,7 @@ module.exports = function (eleventyConfig) {
               path.join('src', baseRelativePath + '.JPG'),
               path.join('src', baseRelativePath + '.PNG')
             ];
-            
+
             let foundPath = null;
             for (const p of potentialPaths) {
               if (await tryFile(p)) {
@@ -319,11 +344,11 @@ module.exports = function (eleventyConfig) {
                 break;
               }
             }
-            
+
             if (foundPath) {
               // Process and use this image
               const optimizedImg = await imageShortcode(foundPath, alt);
-              
+
               // Replace all occurrences of this exact img tag
               const escapedImgTag = imgTag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
               const replaceRegex = new RegExp(escapedImgTag, 'g');
@@ -331,10 +356,10 @@ module.exports = function (eleventyConfig) {
               continue;
             }
           }
-          
+
           // If direct cache lookup failed, try to find the file by trying different extensions
           let actualFilePath = srcPath;
-          
+
           // Try to find file with correct extension if needed
           if (!await tryFile(actualFilePath)) {
             const extensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
@@ -347,12 +372,12 @@ module.exports = function (eleventyConfig) {
               }
             }
           }
-          
+
           // If we found the actual file path, process it
           if (actualFilePath && await tryFile(actualFilePath)) {
             // Process the image using the imageShortcode which will cache it
             const optimizedImg = await imageShortcode(actualFilePath, alt);
-            
+
             // Replace all occurrences of this exact img tag
             const escapedImgTag = imgTag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             const replaceRegex = new RegExp(escapedImgTag, 'g');
@@ -360,7 +385,7 @@ module.exports = function (eleventyConfig) {
           } else {
             // If we still can't find the file, log a warning and use the original tag
             console.warn(`Could not find image file for transform: ${src}`);
-            
+
             // Just keep the original tag
             continue;
           }
@@ -375,6 +400,12 @@ module.exports = function (eleventyConfig) {
 
   // Retina-optimized image shortcode
   async function retinaImageShortcode(src, alt, maxWidth = 600) {
+    // Skip favicon files - they should not be processed by the image optimization system
+    const fileName = path.basename(src).toLowerCase();
+    if (fileName.includes('favicon') || fileName.includes('apple-touch-icon')) {
+      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+    }
+
     // Extract the directory structure from the source path to maintain it in output
     // Remove leading slash if present
     const cleanSrc = src.startsWith('/') ? src.substring(1) : src;
@@ -386,20 +417,20 @@ module.exports = function (eleventyConfig) {
     // Check if we already have this path in the cache
     if (FILE_PATH_CACHE.has(relativePath)) {
       const pathInfo = FILE_PATH_CACHE.get(relativePath);
-      
+
       // If the source path is cached and already processed, use it directly
       if (pathInfo.sourcePath && IMAGE_CACHE.has(pathInfo.sourcePath)) {
         let cachedMetadata = IMAGE_CACHE.get(pathInfo.sourcePath);
-        
+
         // Filter to only include retina sizes
         const formats = Object.keys(cachedMetadata);
         const filteredMetadata = {};
-        
+
         for (const format of formats) {
-          filteredMetadata[format] = cachedMetadata[format].filter(item => 
+          filteredMetadata[format] = cachedMetadata[format].filter(item =>
             item.width === maxWidth || item.width === maxWidth * 2);
         }
-        
+
         return Image.generateHTML(filteredMetadata, {
           alt,
           sizes: `${maxWidth}px`,
@@ -412,12 +443,12 @@ module.exports = function (eleventyConfig) {
     // Handle the case where src includes size and format suffixes
     const sizeFormatRegex = /-(\d+)\.(jpeg|jpg|png|webp|avif)$/i;
     const sizeFormatMatch = src.match(sizeFormatRegex);
-    
+
     if (sizeFormatMatch) {
       // This is a reference to a sized/formatted version, extract the base path
       const basePath = src.replace(sizeFormatRegex, '');
       const baseRelativePath = basePath.startsWith('/') ? basePath.substring(1) : basePath;
-      
+
       // Try to find the original file with various extensions
       const potentialExtensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
       for (const ext of potentialExtensions) {
@@ -432,7 +463,7 @@ module.exports = function (eleventyConfig) {
 
     // List of possible extensions to try
     const extensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
-    
+
     // Try to find the actual file with correct extension
     let actualFilePath = srcPath;
     if (!await tryFile(actualFilePath)) {
@@ -457,11 +488,11 @@ module.exports = function (eleventyConfig) {
     let metadata;
     if (IMAGE_CACHE.has(actualFilePath)) {
       metadata = IMAGE_CACHE.get(actualFilePath);
-      
+
       // Filter to only include retina sizes if needed
       const formats = Object.keys(metadata);
       for (const format of formats) {
-        metadata[format] = metadata[format].filter(item => 
+        metadata[format] = metadata[format].filter(item =>
           item.width === maxWidth || item.width === maxWidth * 2);
       }
     } else {
@@ -509,7 +540,7 @@ module.exports = function (eleventyConfig) {
   // Don't passthrough asset directories since they're handled by the image optimization
   // Only passthrough files that should not be optimized
   eleventyConfig.addPassthroughCopy("src/assets/**/*.mp4");
-  
+
   // Copy fonts directory for custom fonts
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
 
@@ -531,9 +562,9 @@ module.exports = function (eleventyConfig) {
   // Watch CSS files and assets for changes
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addWatchTarget("./src/assets/");
-  
+
   // Add a custom shortcode to support image paths in markdown
-  eleventyConfig.addShortcode("markdownImage", function(src, alt, title) {
+  eleventyConfig.addShortcode("markdownImage", function (src, alt, title) {
     // Handle image paths for both with and without leading slash
     if (src.includes('/assets/') || src.includes('assets/')) {
       // This is just a placeholder that will be replaced by the transform
@@ -545,12 +576,12 @@ module.exports = function (eleventyConfig) {
   });
 
   // Add a function to help with debugging image paths
-  eleventyConfig.addFilter("debugImagePath", function(src) {
+  eleventyConfig.addFilter("debugImagePath", function (src) {
     if (!src) return "No source provided";
-    
+
     const cleanSrc = src.startsWith('/') ? src.substring(1) : src;
     const srcPath = cleanSrc.startsWith('src/') ? cleanSrc : path.join('src', cleanSrc);
-    
+
     try {
       const stats = fs.statSync(srcPath);
       return `File exists: ${srcPath} (${stats.size} bytes)`;
@@ -590,7 +621,7 @@ module.exports = function (eleventyConfig) {
       "/writing/*": "/journal/:splat",
     }
   });
-  
+
   // Add a custom markdown-it renderer to handle image processing in markdown files
   const markdownIt = require("markdown-it");
   const markdownItOptions = {
@@ -598,11 +629,11 @@ module.exports = function (eleventyConfig) {
     breaks: true,
     linkify: true
   };
-  
+
   const markdownLib = markdownIt(markdownItOptions).disable('image');
-  
+
   // Add custom image renderer
-  markdownLib.renderer.rules.image = function(tokens, idx, options, env, self) {
+  markdownLib.renderer.rules.image = function (tokens, idx, options, env, self) {
     const token = tokens[idx];
     const srcIndex = token.attrIndex('src');
     const src = token.attrs[srcIndex][1];
@@ -610,7 +641,7 @@ module.exports = function (eleventyConfig) {
     const alt = altIndex >= 0 ? token.attrs[altIndex][1] : '';
     const titleIndex = token.attrIndex('title');
     const title = titleIndex >= 0 ? token.attrs[titleIndex][1] : '';
-    
+
     // For assets, generate image tag that will be picked up by transform
     if (src.includes('/assets/') || src.includes('assets/')) {
       return `<img src="${src}" alt="${alt}" title="${title}" />`;
@@ -619,9 +650,9 @@ module.exports = function (eleventyConfig) {
       return `<img src="${src}" alt="${alt}" title="${title}" />`;
     }
   };
-  
+
   eleventyConfig.setLibrary("md", markdownLib);
-  
+
   // We don't need to create directories explicitly anymore - the beforeBuild event will handle this
 
   return {
