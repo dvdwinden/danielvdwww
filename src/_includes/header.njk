@@ -1,3 +1,4 @@
+{% if page.url != "/" %}
 <header class="fixed top-0 left-0 z-50 p-6 flex justify-between items-center w-full">
   <div class="flex items-center space-x-4">
       <a href="/" class="text-lg font-sans font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors flex items-center">
@@ -13,3 +14,22 @@
       </span>
   </button>
 </header>
+{% endif %}
+
+{% if page.url == "/" %}
+<header class="fixed top-0 left-0 z-50 p-6 flex justify-between items-center w-full">
+  <div class="flex items-center space-x-4">
+      <a href="/" class="text-lg font-sans font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors flex items-center">
+          <h1>{{ "Daniël van der Winden" }}</h1>
+      </a>
+  </div>
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center">
+      <span id="dark-icon">
+          {% include "icons/sunset.svg" %}
+      </span>
+      <span id="light-icon">
+          {% include "icons/sunrise.svg" %}
+      </span>
+  </button>
+</header>
+{% endif %}

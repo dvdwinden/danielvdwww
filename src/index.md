@@ -12,10 +12,10 @@ bodyClass: bg-blue
 
 <div class="relative w-full max-w-xl ml-auto prose prose-lg font-serif pt-[6vh] sm:pt-[25vh] dark:prose-invert main-content">
 
-<h1>Work</h1>
+<h2 class="home-subtitle mt-0 text-black/80 dark:text-white/80">Digital product & web designer; writer.</h2>
 
 <section class="introduction">
-  <span class="callout">I'm an Amsterdam-based (software) designer and writer with over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.</span>
+  <span class="callout">I have over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.</span>
 
   - Most recently I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
   - Before that I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.

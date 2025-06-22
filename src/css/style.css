@@ -401,6 +401,11 @@ iframe {
     margin-bottom: 1.5rem;
 }
 
+.prose h2.home-subtitle {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
 .prose h3.work-desc {
     font-size: 1.75rem;
     font-weight: 500;
@@ -464,7 +469,8 @@ nav ul li a span.no-underline:hover {
 
 /* Introduction */
 .introduction {
-    @apply mb-32;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
 }
 
 /* Callout */
