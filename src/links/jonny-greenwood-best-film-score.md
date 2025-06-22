@@ -6,6 +6,6 @@ tags: [music, profile]
 external_url: https://www.newyorker.com/culture/the-new-yorker-interview/how-jonny-greenwood-wrote-the-years-best-film-score?ref=daniel.pizza
 ---
 
-![Jonny Greenwood illustration by Uli Knörzer](/assets/links/jonny-greenwood.webp "Jonny Greenwood illustration by Uli Knörzer")
+{% retinaImage "src/assets/links/jonny-greenwood.webp", "Jonny Greenwood illustration by Uli Knörzer" %}
 
 A fantastic profile of Jonny Greenwood, best known for his work with Radiohead and The Smile, elaborating on his work as a composer of incredible film scores.

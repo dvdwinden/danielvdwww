@@ -6,6 +6,6 @@ tags: [publishing, software, internet]
 external_url: https://pioneerworks.org/broadcast/claire-evans-sheila-heti-ai?ref=daniel.pizza
 ---
 
-![Photograph by Kendall Waldman](/assets/links/losing-alice.avif "Photograph by Kendall Waldman")
+{% retinaImage "src/assets/links/losing-alice.avif", "Photograph by Kendall Waldman" %}
 
 “For the last two years, Sheila Heti has been writing to—and with—a chatbot. But what happens when the software gets updated?”

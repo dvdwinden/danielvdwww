@@ -6,6 +6,6 @@ tags: [publishing, literature, profile]
 external_url: https://www.nytimes.com/2022/10/13/books/fitzcarraldo-nobel-prize-ernaux.html?ref=daniel.pizza
 ---
 
-![Photo by Kalpesh Lathigra](/assets/links/fitzcarraldo.webp "Photo by Kalpesh Lathigra")
+{% retinaImage "src/assets/links/fitzcarraldo.webp", "Photo by Kalpesh Lathigra" %}
 
-Three of Fitzcarraldo's authors have been awarded the Nobel Prize in Literature, and they have not been in business for even 10 years. The New York Times published a profile on the publishing house. Trying to account for the Nobel success, Testard [the founder of Fitzcarraldo] said that his taste just happened to align with “a bunch of older bourgeois Swedish people.” Delightful!
+Three of Fitzcarraldo's authors have been awarded the Nobel Prize in Literature, and they have not been in business for even 10 years. The New York Times published a profile on the publishing house. Trying to account for the Nobel success, Testard [the founder of Fitzcarraldo] said that his taste just happened to align with "a bunch of older bourgeois Swedish people." Delightful!
