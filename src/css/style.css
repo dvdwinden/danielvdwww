@@ -780,15 +780,10 @@ ul.newsletter h2 {
         pointer-events: auto;
         display: flex;
         flex-direction: row;
-        /* Display side-by-side */
         justify-content: center;
-        /* Center the group horizontally */
         align-items: center;
-        /* Align vertically */
         margin-top: 4rem;
         margin-bottom: 4rem;
-        height: 360px;
-        /* Contain rotated images */
     }
 
     .hero-image {
@@ -800,19 +795,14 @@ ul.newsletter h2 {
     .hero-image.studio,
     .hero-image.daniel {
         margin: 0;
-        height: 360px;
     }
 
     .hero-image.daniel {
         margin-left: -120px;
         margin-top: 60px;
-        /* Create horizontal overlap */
     }
 
-    /* Reset the text content position */
     div.prose {
-        padding-top: 0 !important;
-        /* Override inline pt-[25vh] */
         margin-left: auto;
         margin-right: auto;
     }
@@ -846,6 +836,27 @@ ul.newsletter h2 {
     .hero-image.daniel {
         margin-left: -140px;
     }
+
+    /* Mobile typography adjustments */
+    .prose {
+        font-size: 1.125rem;
+    }
+
+    .prose h1 {
+        font-size: 2rem;
+    }
+
+    .prose h2 {
+        font-size: 1.25rem;
+    }
+
+    .prose h3 {
+        font-size: 1.125rem;
+    }
+
+    .callout {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -860,5 +871,32 @@ ul.newsletter h2 {
 
     .hero-image.daniel {
         margin-left: -120px;
+    }
+
+    .prose {
+        font-size: 1.125rem;
+
+    }
+
+    .prose h1 {
+        font-size: 2rem;
+    }
+
+    .prose h2 {
+        font-size: 1.25rem;
+    }
+
+    .prose h3 {
+        font-size: 1.125rem;
+
+    }
+
+    .callout {
+        font-size: 1.25rem;
+    }
+
+    figcaption,
+    .prose figcaption {
+        padding-left: 0 !important;
     }
 }

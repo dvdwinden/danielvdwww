@@ -23,14 +23,14 @@ Years ago, I staked out a corner of the internet and made it my own, chipping aw
 I remember following people like [Jason Santa Maria](https://jasonsantamaria.com/ "Jason Santa Maria"), [Ethan Marcotte](https://ethanmarcotte.com/ "Ethan Marcotte") and [Jeffrey Zeldman](https://www.zeldman.com/ "Jeffrey Zeldman"), or the likes of [Dan Mall](https://danmall.com/ "Dan Mall"), [Jessica Hische](https://jessicahische.is/ "Jessica Hische") and [Chris Shiflett](https://shiflett.org/ "Chris Shiflett") (Europe wasn't very well represented in my bubble at the time). Their websites were never done, and every couple of weeks or months they’d release a new version implementing what they’d discovered—fun new features or ideas—and leave the previous version accessible for picking apart, a trail zig-zagging across various iterations of their home on the Internet.
 </div>
 
-<div class="mt-32">
+<div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/building-home-web.avif", "The websites of Jeffrey Zeldman (2004), Jason Santa Maria (2008), and Jessica Hische (2012)." %}
     <figcaption class="pl-8 sm:pl-0">The websites of Jeffrey Zeldman (2004), Jason Santa Maria (2008), and Jessica Hische (2012).</figcaption>
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 Websites like these consisted, usually, of a combination of people's work and interests, with the latter taking centre stage. They housed a few projects, a collection of blog posts—long or very short—and otherwise revolved around things you’d stumble upon in one’s physical living room: movies, music, books, or other things of particular significance. 
 
@@ -69,14 +69,14 @@ That is to say, I'm seeing personality seep back into the web.
 I've seen websites as reading lists ([Thijs](https://thijs.niks.nu/ "Thijs Niks"), [Mandy](https://aworkinglibrary.com/ "Mandy Brown")) or personal operating systems ([Brian](https://brianlovin.com/ "Brian Lovin"), [Rauno](https://rauno.me/ "Rauno Freiberg")), websites that house obsessions ([Folkert](https://folkert.link/ "Folkert Gorter")) or  ... whatever we shall call [Aneta's](https://www.seksyplanety.com/ "Seksy Planety") fun-lovin' website: things are getting personal again!
 </div>
 
-<div class="mt-32">
+<div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/fun-personal-websites.avif", "The websites of Brian Lovin, Folkert Gorter and Aneta Junkova." %}
     <figcaption class="pl-8 sm:pl-0">The websites of Brian Lovin, Folkert Gorter and Aneta Junkova.</figcaption>
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 The tools we have access to as designers have matured, and evolved to a point where they make creating and maintaining an online personality—not a business card—easier than ever. By not having to obsess over the nuts and bolts of a website as much, the bar for experimentation and expression has been lowered significantly. For someone who only codes occasionally (like me), building a website no longer has to be daunting, and there are many tools to choose from: link together a few pages in a [Figma](http://figma.com/prototyping "Figma") prototype and point a domain to it; drag and drop components using your phone, on [Universe](https://onuniverse.com/ "Universe"); design a website on the canvas and click one button to publish it, with [Framer](http://framer.com "Framer"); or, use what feels like the web's Photoshop to build a fully functioning online platform, using [Webflow](https://webflow.com "Webflow")— this should allow everyone to more easily use our websites as a medium again, instead of leaving them to be a dead end because we dread the process or don't have the full technical knowhow.
 
