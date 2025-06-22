@@ -12,9 +12,27 @@ document.addEventListener('DOMContentLoaded', function () {
       document.head.appendChild(themeColorMeta);
     }
 
+    // Check if we're in dark mode first
     if (html.classList.contains('dark')) {
       themeColorMeta.content = '#222';
+      return;
+    }
+
+    // Check the page background class to determine the appropriate theme color
+    const pageBackground = document.getElementById('page-background');
+    if (pageBackground) {
+      const backgroundClasses = pageBackground.className;
+
+      if (backgroundClasses.includes('bg-stone')) {
+        themeColorMeta.content = '#e8e6e0'; // Stone background
+      } else if (backgroundClasses.includes('bg-blue')) {
+        themeColorMeta.content = '#f5f7fa'; // Blue background
+      } else {
+        // Default fallback
+        themeColorMeta.content = '#f5f7fa';
+      }
     } else {
+      // Fallback if page-background element doesn't exist
       themeColorMeta.content = '#f5f7fa';
     }
   }
