@@ -19,8 +19,8 @@ On a Sunday morning at twelve, I settled into a chair at a local movie theatre f
 </div>
 <div class="mt-32">
   <figure class="w-full">
-    {% retinaImage "src/assets/journal/memoria.avif", "Tilda Swinton as Jessica and Juan Pablo Urrego as Hernán in Memoria (2022)" %}
-    <figcaption class="pl-8 sm:pl-0">Tilda Swinton as Jessica and Juan Pablo Urrego as Hernán in <em>Memoria</em> (2022)</figcaption>
+    {% retinaImage "src/assets/journal/memoria.avif", "Tilda Swinton as Jessica in Memoria (2022)" %}
+    <figcaption class="pl-8 sm:pl-0">Tilda Swinton as Jessica in <em>Memoria</em> (2022)</figcaption>
   </figure>
 </div>
 

@@ -415,6 +415,7 @@ figcaption,
     font-family: theme('fontFamily.sans');
     color: theme('colors.black');
     opacity: 0.5;
+    letter-spacing: 0.025em;
 }
 
 .dark figcaption,
