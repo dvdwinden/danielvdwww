@@ -478,6 +478,10 @@ nav ul li a span.no-underline:hover {
     @apply mb-32;
 }
 
+.resume ul {
+    padding-left: 0;
+}
+
 .resume ul li span {
     font-weight: 400;
     font-family: theme('fontFamily.sans');
