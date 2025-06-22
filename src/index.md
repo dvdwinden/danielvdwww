@@ -5,7 +5,12 @@ description: Amsterdam-based software designer and writer specialising in digita
 bodyClass: bg-blue
 ---
 
-<div class="relative w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="hero-images">
+  <figure class="hero-image studio"></figure>
+  <figure class="hero-image daniel"></figure>
+</div>
+
+<div class="relative w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert main-content">
 
 <h1>Work</h1>
 
@@ -231,7 +236,7 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
 <h2 class="work-title">Design Leadership</h2>
 I've hired, managed and mentored teams of up to twelve Product Designers with varying levels of experience, balancing their personal goals and needs with those of the business for over five years.
 
-> What really sets Daniël apart is how much he cares about the people he works with. He creates a positive, supportive environment where everyone can thrive. If you’re looking for someone who will bring expertise, dedication, and a genuine care for his colleagues, Daniël is your person.
+> What really sets Daniël apart is how much he cares about the people he works with. He creates a positive, supportive environment where everyone can thrive. If you're looking for someone who will bring expertise, dedication, and a genuine care for his colleagues, Daniël is your person.
 
 <span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial">— <a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek's website" rel="external" target="_blank">Marek Minor</a>, Product Designer</span>
 

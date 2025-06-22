@@ -741,7 +741,7 @@ ul.newsletter h2 {
     @apply mr-auto my-8 sm:my-24;
     margin-top: -220px;
     margin-left: 100px;
-    rotate: 5deg;
+    rotate: 3deg;
 }
 
 .hero-image.studio {
@@ -750,11 +750,89 @@ ul.newsletter h2 {
     rotate: -5deg;
 }
 
-/* Main content spacing for hero images */
+@media (max-width: 1400px) {
 
-@media (max-width: 640px) {
+    /* For 1400px and below, show images side-by-side above content */
     .hero-images {
-        top: 6rem;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        z-index: auto;
+        pointer-events: auto;
+        display: flex;
+        flex-direction: row;
+        /* Display side-by-side */
+        justify-content: center;
+        /* Center the group horizontally */
+        align-items: center;
+        /* Align vertically */
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        height: 360px;
+        /* Contain rotated images */
+    }
+
+    .hero-image {
+        pointer-events: auto;
+        max-width: 360px;
+        height: 360px;
+    }
+
+    .hero-image.studio,
+    .hero-image.daniel {
+        margin: 0;
+        height: 360px;
+    }
+
+    .hero-image.daniel {
+        margin-left: -120px;
+        margin-top: 60px;
+        /* Create horizontal overlap */
+    }
+
+    /* Reset the text content position */
+    div.prose {
+        padding-top: 0 !important;
+        /* Override inline pt-[25vh] */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-images {
+        height: 320px;
+    }
+
+    .hero-image {
+        max-width: 320px;
+        height: 320px;
+    }
+
+    .hero-image.daniel {
+        margin-left: -160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-images {
+        height: 280px;
+    }
+
+    .hero-image {
+        max-width: 280px;
+        height: 280px;
+    }
+
+    .hero-image.daniel {
+        margin-left: -140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-images {
+        height: 240px;
     }
 
     .hero-image {
@@ -762,12 +840,7 @@ ul.newsletter h2 {
         height: 240px;
     }
 
-    .hero-image.studio {
-        margin-top: -150px;
-        margin-left: 50px;
-    }
-
-    .main-content {
-        margin-top: 24rem;
+    .hero-image.daniel {
+        margin-left: -120px;
     }
 }
