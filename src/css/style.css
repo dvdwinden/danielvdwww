@@ -263,7 +263,7 @@ iframe {
 .prose ul {
     list-style: disc;
     list-style-position: outside;
-    padding-left: 0;
+    padding-left: 1em;
 }
 
 .prose ul li {
@@ -352,6 +352,12 @@ iframe {
     text-decoration: none;
     color: theme('colors.black');
     font-family: theme('fontFamily.sans');
+    display: inline-flex;
+    align-items: center;
+}
+
+.prose .cta-link svg {
+    vertical-align: middle;
 }
 
 .prose .cta-link:hover {
@@ -364,6 +370,12 @@ iframe {
 .dark .prose .cta-link {
     color: theme('colors.white');
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dark .prose .cta-link svg {
+    vertical-align: middle;
 }
 
 .dark .prose .cta-link:hover {
