@@ -759,7 +759,7 @@ ul.newsletter h2 {
 .hero-image.daniel {
     background-image: url('/assets/work/daniel-square.png');
     @apply mr-auto my-8 sm:my-24;
-    margin-top: -220px;
+    margin-top: -200px;
     margin-left: 100px;
 }
 
