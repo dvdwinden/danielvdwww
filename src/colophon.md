@@ -19,6 +19,6 @@ I use some basic analytics, which can be found on [Umami](https://eu.umami.is/we
 - Best Practices: 96/100
 - SEO: 100/100
 
-The photo of me, top left, was taken by [Remy van der Winden](http://remyvdw.nl "Remy van der Winden").
+The photo of me on my homepage was taken by [Remy van der Winden](http://remyvdw.nl "Remy van der Winden"). The framed work in the photo of my studio space is by [Nazif Lopulissa](https://www.naziflopulissa.com/ "Nazif Lopulissa") and [Grilli Type](https://www.grillitype.com/ "Grilli Type").
 
 {% include "footer.njk" %}
