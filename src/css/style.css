@@ -259,6 +259,10 @@ iframe {
     color: theme('colors.white');
 }
 
+.prose picture {
+    margin-bottom: 0;
+}
+
 /* Lists, buttons and links */
 .prose ul {
     list-style: disc;
@@ -759,17 +763,21 @@ ul.newsletter h2 {
 
 .hero-image.daniel {
     background-image: url('/assets/work/daniel-square.webp');
+
     @supports not (background-image: url('/assets/work/daniel-square.webp')) {
         background-image: url('/assets/work/daniel-square-optimized.png');
     }
+
     @apply mr-auto my-8 sm:my-24;
     margin-top: -200px;
     margin-left: 100px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .hero-image.daniel {
         background-image: url('/assets/work/daniel-square@2x.webp');
+
         @supports not (background-image: url('/assets/work/daniel-square@2x.webp')) {
             background-image: url('/assets/work/daniel-square@2x.png');
         }
@@ -778,15 +786,19 @@ ul.newsletter h2 {
 
 .hero-image.studio {
     background-image: url('/assets/work/studio-square.webp');
+
     @supports not (background-image: url('/assets/work/studio-square.webp')) {
         background-image: url('/assets/work/studio-square-optimized.png');
     }
+
     @apply mr-auto my-8 sm:my-24;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .hero-image.studio {
         background-image: url('/assets/work/studio-square@2x.webp');
+
         @supports not (background-image: url('/assets/work/studio-square@2x.webp')) {
             background-image: url('/assets/work/studio-square@2x.png');
         }
