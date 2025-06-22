@@ -5,8 +5,8 @@
 
 /* Define animation variables */
 :root {
-	--view-transition-duration: 1s;
-	--view-transition-easing: linear;
+    --view-transition-duration: 1s;
+    --view-transition-easing: linear;
 }
 
 @view-transition {
@@ -19,8 +19,8 @@
 }
 
 html.dark #page-background {
-	view-transition-name: none;
-	background-color: #222 !important;
+    view-transition-name: none;
+    background-color: #222 !important;
 }
 
 #page-content {
@@ -186,7 +186,7 @@ iframe {
     font-size: theme('fontSize.lg');
     line-height: theme('lineHeight.normal');
     hanging-punctuation: first;
-    text-wrap: pretty;
+    ;
 }
 
 .prose-invert {
@@ -233,6 +233,10 @@ iframe {
 
 .prose h3 a {
     font-weight: 500;
+}
+
+.prose p {
+    text-wrap: pretty;
 }
 
 .prose p em {

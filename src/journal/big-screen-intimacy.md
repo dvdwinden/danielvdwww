@@ -90,4 +90,6 @@ Moviegoing can be an intensely intimate experience. I think Weerasethakul's film
 
 <p class="article-footer">Thank you to Julie, Marc and Mechteld for reading a Dutch draft of this essay, and to Megan for reading and editing my English translation.</p>
 
+{% include "footer.njk" %}
+
 </div>

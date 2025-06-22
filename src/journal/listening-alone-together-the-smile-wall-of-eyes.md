@@ -73,4 +73,6 @@ Continue down the rabbit hole: read <a href="https://iriscuppen.com/On-The-Smile
   </iframe>
 </div>
 
+{% include "footer.njk" %}
+
 </div>
