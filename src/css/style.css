@@ -397,10 +397,6 @@ header a picture {
     margin-right: 0.5rem;
 }
 
-header a:hover picture img {
-    filter: grayscale(100%);
-}
-
 header a:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
