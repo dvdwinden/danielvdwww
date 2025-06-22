@@ -176,6 +176,9 @@ img,
 video,
 iframe {
     border-radius: 0.1875rem;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 /* Typography */
@@ -409,6 +412,15 @@ figcaption,
 .prose figcaption {
     font-size: 1rem;
     margin-top: 0.5rem;
+    font-family: theme('fontFamily.sans');
+    color: theme('colors.black');
+    opacity: 0.5;
+}
+
+.dark figcaption,
+.dark .prose figcaption {
+    color: theme('colors.white');
+    opacity: 0.4;
 }
 
 /* Navigation */

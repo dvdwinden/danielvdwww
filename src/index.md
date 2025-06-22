@@ -129,12 +129,12 @@ While at Ghost I designed an upgraded publishing workflow, lowering the barrier 
         <source src="/assets/work/publishing-flow.mp4" type="video/mp4">
         Improved publishing flow in Ghost
     </video>
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide">Improved publishing flow in Ghost</figcaption>
+    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Improved publishing flow in Ghost</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
     {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide">Custom fonts in Ghost</figcaption>
+    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Custom fonts in Ghost</figcaption>
   </figure>
 </div>
 
@@ -164,12 +164,12 @@ We conceptualised, designed and built a digital solution that enabled small busi
         <source src="/assets/work/circle-video-interior.mp4" type="video/mp4">
         IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez
     </video>
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide">IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez</figcaption>
+    <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
     {% retinaImage "src/assets/work/circle-01.jpg", "IKEA" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide">Photo by Osma Harvilahti</figcaption>
+    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Photo by Osma Harvilahti</figcaption>
   </figure>
 </div>
 
@@ -178,7 +178,7 @@ We conceptualised, designed and built a digital solution that enabled small busi
         <source src="/assets/work/circle-video-chair.mp4" type="video/mp4">
         UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström
     </video>
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide">UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström</figcaption>
+    <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström</figcaption>
 </figure>
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
@@ -201,7 +201,7 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
 <div class="mt-32">
  <figure class="w-full sm:w-[576px] mr-auto my-12">
     {% retinaImage "src/assets/work/pexip-room-tv.png", "Pexip Room" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide">Pexip Room</figcaption>
+    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip Room</figcaption>
   </figure>
 </div>
 
@@ -216,7 +216,7 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
 <div class="mt-32">
  <figure class="w-full sm:w-[576px] mr-auto my-12">
     {% retinaImage "src/assets/work/pexip-icons.png", "Pexip icons" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide">Pexip icons, designed by Hemmo de Jonge</figcaption>
+    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip icons, designed by Hemmo de Jonge</figcaption>
   </figure>
 </div>
 
@@ -250,12 +250,12 @@ Most recently I've curated, edited, designed and published three issues of [_TRA
         <source src="/assets/work/transcript-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine (issue one)</figcaption>
+    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine (issue one)</figcaption>
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-12">
     {% retinaImage "src/assets/work/transcript-visual.png", "TRANSCRIPT Magazine (issue one, with work by Thomas & Jurgen)" %}
-    <figcaption class="pl-8 sm:pl-0 text-black/50 dark:text-white/40 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine, featuring work by Thomas & Jurgen</figcaption>
+    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine, featuring work by Thomas & Jurgen</figcaption>
   </figure>
 </div>
 
