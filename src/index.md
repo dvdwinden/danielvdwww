@@ -233,7 +233,7 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
 ---
 
 <h2 class="work-title">Design Leadership</h2>
-I've hired, managed and mentored teams of up to twelve Product Designers with varying levels of experience, balancing their personal goals and needs with those of the business for over five years.
+I've hired, managed and mentored teams of up to twelve Product Designers with varying levels of experience—balancing their personal goals and needs with those of the business—for over five years.
 
 > What really sets Daniël apart is how much he cares about the people he works with. He creates a positive, supportive environment where everyone can thrive. If you're looking for someone who will bring expertise, dedication, and a genuine care for his colleagues, Daniël is your person.
 

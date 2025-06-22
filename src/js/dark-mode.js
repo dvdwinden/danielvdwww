@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         themeColorMeta.content = '#e8e6e0'; // Stone background
       } else if (backgroundClasses.includes('bg-blue')) {
         themeColorMeta.content = '#f5f7fa'; // Blue background
+      } else if (backgroundClasses.includes('bg-green')) {
+        themeColorMeta.content = '#e8f0e8'; // Green background
       } else {
         // Default fallback
         themeColorMeta.content = '#f5f7fa';
