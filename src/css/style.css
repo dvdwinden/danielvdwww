@@ -748,6 +748,10 @@ ul.newsletter h2 {
     pointer-events: none;
 }
 
+.dark .hero-image {
+    background-color: hsl(204, 17%, 89%);
+}
+
 .hero-image.daniel {
     background-image: url('/assets/work/daniel-square.png');
     @apply mr-auto my-8 sm:my-24;
