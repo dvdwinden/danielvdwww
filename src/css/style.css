@@ -515,6 +515,7 @@ nav ul li a span.no-underline:hover {
 .site-footer ul li {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .site-footer ul li a {
@@ -857,6 +858,16 @@ ul.newsletter h2 {
     .callout {
         font-size: 1.25rem;
     }
+
+    .site-footer {
+        position: relative;
+        margin: 4rem 0 2rem 0;
+    }
+
+    .site-footer ul {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -898,5 +909,17 @@ ul.newsletter h2 {
     figcaption,
     .prose figcaption {
         padding-left: 0 !important;
+    }
+
+    .site-footer {
+        margin: 3rem 0 1.5rem 0;
+    }
+
+    .site-footer ul {
+        gap: 0.5rem;
+    }
+
+    .site-footer ul li a {
+        font-size: 1rem;
     }
 }
