@@ -228,12 +228,12 @@ figcaption,
     margin-top: 0.5rem;
     font-family: theme('fontFamily.sans');
     color: theme('colors.black');
-    opacity: 0.5;
+    opacity: 0.65;
     letter-spacing: 0.025em;
 }
 
 .dark figcaption,
 .dark .prose figcaption {
     color: theme('colors.white');
-    opacity: 0.4;
+    opacity: 0.8;
 }

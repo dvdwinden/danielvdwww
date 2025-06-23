@@ -51,7 +51,7 @@ bodyClass: bg-blue
 
   <ul class="pl-0 ml-0 list-none space-y-10">
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/30 text-md font-sans mb-2 md:mb-0">2023–2025</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
       <div class="text-md font-bold font-sans">
           <h3>Senior Designer at <a href="http://ghost.org?ref=daniel.pizza" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
@@ -62,7 +62,7 @@ bodyClass: bg-blue
       </div>
     </li>
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
       <div class="md:w-3/4">
       <div class="text-md font-bold font-sans">
           <h3>CDO, Partner at <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
@@ -73,7 +73,7 @@ bodyClass: bg-blue
       </div>
     </li>
       <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2015–2019</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2015–2019</span>
       <div class="md:w-3/4">
       <div class="text-md font-bold font-sans">
           <h3>Designer, Head of <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
@@ -84,7 +84,7 @@ bodyClass: bg-blue
       </div>
     </li>
       <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-        <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2014–2015</span>
+        <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2014–2015</span>
         <div class="md:w-3/4">
           <div class="text-md font-bold font-sans">
             <h3>Designer at <a href="http://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a></h3>
@@ -92,7 +92,7 @@ bodyClass: bg-blue
         </div>
     </li>
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
       <div class="md:w-3/4">
         <div class="text-md font-bold font-serif">
           <h3>Internships at <a href="http://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a> and <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>

@@ -2,6 +2,7 @@
 
 /* Hero image responsive styling */
 @media (max-width: 1400px) {
+
     /* For 1400px and below, show images side-by-side above content */
     .hero-images {
         position: relative;
@@ -135,6 +136,10 @@
     figcaption,
     .prose figcaption {
         padding-left: 0 !important;
+    }
+
+    span.testimonial {
+        font-size: 0.875rem;
     }
 
     .site-footer {
