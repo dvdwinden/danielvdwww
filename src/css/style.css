@@ -485,7 +485,8 @@ nav ul li a span.no-underline:hover {
 
 /* Resume */
 .resume {
-    @apply mb-32;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
 }
 
 .resume ul {
@@ -604,6 +605,20 @@ ul.links li a:hover h2 {
 
 span.testimonial a {
     font-weight: 500;
+}
+
+span.testimonial picture {
+    display: inline;
+    margin-top: 0;
+    margin-right: 0.25rem;
+}
+
+span.testimonial picture img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline;
 }
 
 .dark ul.links li a:hover h2 {

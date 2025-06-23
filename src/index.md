@@ -150,7 +150,7 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
 
 > Whether leading his own projects or working as part of a team, Daniël's work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
 
-<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— <a href="https://sodo.is/?ref=daniel.pizza" title="Sodbileg's website" rel="external" target="_blank">Sodbileg Gansukh</a>, Product Designer at Ghost</span>
+<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/sodo.jpg" alt="Sodo" /> <a href="https://sodo.is/?ref=daniel.pizza" title="Sodbileg's website" rel="external" target="_blank">Sodbileg Gansukh</a>, Product Designer at Ghost </span>
 
 ---
 
@@ -228,7 +228,7 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
 
 > Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
 
-<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— <a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip</span>
+<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/svenn-petter.jpg" alt="Sven-Petter" /><a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip</span>
 
 ---
 
@@ -237,7 +237,7 @@ I've hired, managed and mentored teams of up to twelve Product Designers with va
 
 > What really sets Daniël apart is how much he cares about the people he works with. He creates a positive, supportive environment where everyone can thrive. If you're looking for someone who will bring expertise, dedication, and a genuine care for his colleagues, Daniël is your person.
 
-<span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial">— <a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek's website" rel="external" target="_blank">Marek Minor</a>, Product Designer</span>
+<span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/marek.webp" alt="Marek" /><a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek's website" rel="external" target="_blank">Marek Minor</a>, Product Designer</span>
 
 ---
 
