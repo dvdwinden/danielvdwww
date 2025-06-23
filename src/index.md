@@ -146,7 +146,10 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
 </div>
 
 <figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
-  {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+  <video autoplay loop muted playsinline class="w-full" preload="auto">
+        <source src="/assets/work/ghost-visual-explorations.mp4" type="video/mp4">
+        Brand & design language explorations
+    </video>
 </figure>
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
