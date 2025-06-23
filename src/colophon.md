@@ -7,7 +7,7 @@ bodyClass: bg-blue
 
 # Colophon
 
-This website was built by me. My first commit was on [June 13th, 2025](https://github.com/dvdwinden/danielvdwww/commit/7d33b6dfcf658d2d01295b3c95ea86492b3dbce0 "My first commit to this website"), and I launched it nine days later. 
+This website was built by me. My first commit was made on [June 13th, 2025](https://github.com/dvdwinden/danielvdwww/commit/7d33b6dfcf658d2d01295b3c95ea86492b3dbce0 "My first commit to this website"), and I launched it nine days later. 
 
 My code editor of choice is [Cursor](cursor.com "Cursor, code editor"). I use [Warp](http://warp.dev/ "Warp terminal") for any terminal shenanigans. To get things up and running I've used a simple static site generator called [Eleventy](https://www.11ty.dev/ "Eleventy"), using the [Nunjucks](https://mozilla.github.io/nunjucks/ "Nunjucks") template engine. All of this is publicly available, along with a readme, via my [repository](https://github.com/dvdwinden/danielvdwww "This site's Github repository") on Github.
 
