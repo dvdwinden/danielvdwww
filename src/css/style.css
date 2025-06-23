@@ -775,7 +775,7 @@ ul.newsletter h2 {
     }
 
     @apply mr-auto my-8 sm:my-24;
-    margin-top: -200px;
+    margin-top: -160px;
     margin-left: 100px;
 }
 
@@ -842,7 +842,7 @@ ul.newsletter h2 {
 
     .hero-image.daniel {
         margin-left: -120px;
-        margin-top: 60px;
+        margin-top: 100px;
     }
 
     div.prose {

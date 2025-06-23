@@ -5,6 +5,10 @@ bodyClass: bg-stone
 date: 2023-03-13
 tags: [design, architecture, interior]
 description: Our house was built in 1907, and we will slowly bring (parts of) it up to modern standards. This page highlights our thinking as we designed an aspirational version of the ground floor.
+image:
+  src: /assets/journal/drawing-house.webp
+  alt: "Our house was built in 1907, and we will slowly bring (parts of) it up to modern standards. This page highlights our thinking as we designed an aspirational version of the ground floor."
+  title: "Designing the ground floor of our home"
 ---
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
