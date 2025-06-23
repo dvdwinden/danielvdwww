@@ -266,20 +266,17 @@ Most recently I've acted as the copywriter and editor on the [NoGood art book](h
 </figure>
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
-
-<h2 class="work-title">Speaking</h2>
-<div class="flex flex-col">
-  <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
-    <p class="my-4">Adyen Studio Day, Amsterdam</p>
-    <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JUL 2025</span>
+  <h2 class="work-title">Speaking</h2>
+  <div class="flex flex-col">
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4">Adyen Studio Day, Amsterdam</p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JUL 2025</span>
+    </div>
+    <div class="flex items-baseline justify-between">
+      <p class="my-4">
+        <a href="https://www.seanchoiche.com/?ref=daniel.pizza" title="Seanchoíche" rel="external" target="_blank">Seanchoíce</a>, Amsterdam</p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JAN 2025</span>
+    </div>
   </div>
-  <div class="flex items-baseline justify-between">
-    <p class="my-4">
-      <a href="https://www.seanchoiche.com/?ref=daniel.pizza" title="Seanchoíche" rel="external" target="_blank">Seanchoíce</a>, Amsterdam</p>
-    <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JAN 2025</span>
-  </div>
-</div>
-
-{% include "footer.njk" %}
-
+  {% include "footer.njk" %}
 </div>
