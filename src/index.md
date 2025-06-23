@@ -137,7 +137,7 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
-    {% retinaImage "src/assets/placeholder-small.png", "Ghost" %}
+    {% retinaImage "src/assets/work/custom-fonts.png", "Ghost" %}
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Custom fonts in Ghost</figcaption>
   </figure>
 </div>
