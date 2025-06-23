@@ -760,7 +760,7 @@ ul.newsletter h2 {
     @apply relative;
     position: absolute;
     top: 25vh;
-    left: 24rem;
+    left: 20%;
     right: 0;
     z-index: 1;
     pointer-events: none;

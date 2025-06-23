@@ -5,7 +5,7 @@ date: 2024-04-26
 tags: [fiction]
 external_url: https://www.trema.website/paul-lynch-prophet-song/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/paul-lynch-prophet-song.png
   alt: "Paul Lynch – Prophet Song (2023)"
   title: "Paul Lynch – Prophet Song (2023)"
 ---
