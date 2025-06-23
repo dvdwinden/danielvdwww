@@ -7,7 +7,7 @@ bodyClass: bg-blue
 
 # Colophon
 
-This website was hand-built by me. My code editor of choice is [Cursor](cursor.com "Cursor, code editor"). I use [Warp](http://warp.dev/ "Warp terminal") for any terminal shenanigans. To get things up and running I've used a simple static site generator called [Eleventy](https://www.11ty.dev/ "Eleventy"), using the [Nunjucks](https://mozilla.github.io/nunjucks/ "Nunjucks") template engine. All of this is publicly available, along with a readme, via my [repository](https://github.com/dvdwinden/danielvdwww "This site's Github repository") on Github.
+This website was built by me. My code editor of choice is [Cursor](cursor.com "Cursor, code editor"). I use [Warp](http://warp.dev/ "Warp terminal") for any terminal shenanigans. To get things up and running I've used a simple static site generator called [Eleventy](https://www.11ty.dev/ "Eleventy"), using the [Nunjucks](https://mozilla.github.io/nunjucks/ "Nunjucks") template engine. All of this is publicly available, along with a readme, via my [repository](https://github.com/dvdwinden/danielvdwww "This site's Github repository") on Github.
 
 Headings are set in [_Degular_](https://ohnotype.co/fonts/degular "Degular by Oh No Type Co") by Oh No Type Co. Foster Type's [_Blanco_](https://www.fostertype.com/retail-type/blanco "Blanco by Foster Type") is used for body copy.
 
@@ -16,9 +16,9 @@ I use some basic analytics, which can be found on [Umami](https://eu.umami.is/we
 ## Lighthouse scores
 - Performance: 74/100
 - Accessibility: 95/100
-- Best Practices: 96/100
+- Best Practices: 100/100
 - SEO: 100/100
 
-The photo of me on my homepage was taken by [Remy van der Winden](http://remyvdw.nl "Remy van der Winden"). The framed work in the photo of my studio space is by [Nazif Lopulissa](https://www.naziflopulissa.com/ "Nazif Lopulissa") and [Grilli Type](https://www.grillitype.com/ "Grilli Type").
+The photo of me on my homepage was taken by [Remy van der Winden](http://remyvdw.nl "Remy van der Winden"). The framed artwork in the photo of my studio space is by [Nazif Lopulissa](https://www.naziflopulissa.com/ "Nazif Lopulissa") (left) and [Grilli Type](https://www.grillitype.com/ "Grilli Type") (right).
 
 {% include "footer.njk" %}
