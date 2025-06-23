@@ -527,6 +527,7 @@ nav ul li a span.no-underline:hover {
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: 8rem 0 0 0;
     padding: 0 0 1.5rem 0;
 }
@@ -538,6 +539,7 @@ nav ul li a span.no-underline:hover {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    width: auto;
 }
 
 .site-footer ul li {
