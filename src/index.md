@@ -116,7 +116,7 @@ My contribution as a designer is holistic: I deliver thorough flows, polished us
 
 I have a strong interest in typography and a love for storytelling, and I'm as comfortable designing complex flows as I am putting together a marketing website. 
 
-I've worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake"), and [Expo](http://expo.dev?ref=daniel.pizza "Expo"), among others.
+I've worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake") and [Expo](http://expo.dev?ref=daniel.pizza "Expo"), among others.
 
 ---
 
@@ -137,8 +137,8 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
-    {% retinaImage "src/assets/work/custom-fonts.png", "Ghost" %}
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Custom fonts in Ghost</figcaption>
+    {% retinaImage "src/assets/work/custom-fonts-ghost.png", "Ghost" %}
+    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Taking personalisation one step further with custom fonts in Ghost</figcaption>
   </figure>
 </div>
 
