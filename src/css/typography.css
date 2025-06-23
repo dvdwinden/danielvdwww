@@ -230,6 +230,7 @@ figcaption,
     color: theme('colors.black');
     opacity: 0.65;
     letter-spacing: 0.025em;
+    line-height: 1.25;
 }
 
 .dark figcaption,
