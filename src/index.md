@@ -20,8 +20,9 @@ bodyClass: bg-blue
   - Most recently I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
   - Before that I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
 
-  I'm open to new opportunities, contract or permanent. \
-  If you are in need of someone with my profile, please reach out—I'm especially excited about working with consumer-facing companies in the space of publishing, sustainability, culture, music, film, media, or design tooling.
+  I'm open to new opportunities, contract or permanent. If you are in need of someone with my profile, please reach out.
+  
+  I'm especially excited about working with (consumer-facing) companies in the space of publishing, sustainability, culture, music, film, or design tooling. If you run a research or innovation lab, I'm all ears, too.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
