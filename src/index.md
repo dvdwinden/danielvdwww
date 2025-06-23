@@ -10,7 +10,7 @@ bodyClass: bg-blue
   <figure class="hero-image daniel"></figure>
 </div>
 
-<div class="relative w-full max-w-xl ml-auto prose prose-lg font-serif pt-[6vh] sm:pt-[25vh] dark:prose-invert main-content">
+<div class="relative w-full max-w-xl ml-auto prose prose-lg font-serif pt-[6vh] lg:pt-[25vh] dark:prose-invert main-content">
 
 <h2 class="home-subtitle mt-0 text-black dark:text-white">Software & web designer; writer.</h2>
 

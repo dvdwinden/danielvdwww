@@ -70,9 +70,9 @@
         margin-left: -140px;
     }
 
-    /* Mobile typography adjustments */
     .prose {
         font-size: 1.125rem;
+        padding-top: 0;
     }
 
     .prose h1 {
