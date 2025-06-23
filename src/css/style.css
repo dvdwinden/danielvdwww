@@ -1,13 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Main CSS file that imports all modules */
 
+/* Import base styles first (includes Tailwind directives) */
+@import 'base.css';
 
-/* Define animation variables */
-:root {
-    --view-transition-duration: 1s;
-    --view-transition-easing: linear;
-}
+/* Import typography */
+@import 'typography.css';
+
+/* Import components */
+@import 'components.css';
+
+/* Import layout */
+@import 'layout.css';
+
+/* Import animations */
+@import 'animations.css';
+
+/* Import dark mode styles */
+@import 'dark-mode.css';
+
+/* Import media queries */
+@import 'media.css';
+
+/* Import page-specific styles */
+@import 'pages.css';
 
 @view-transition {
     navigation: auto;

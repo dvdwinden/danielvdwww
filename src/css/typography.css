@@ -1,0 +1,239 @@
+/* Font declarations for Blanco */
+@font-face {
+    font-family: 'Blanco';
+    src: url('../assets/fonts/Blanco-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Blanco';
+    src: url('../assets/fonts/Blanco-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Blanco';
+    src: url('../assets/fonts/Blanco-Italic.woff2') format('woff2'),
+        url('../assets/fonts/Blanco-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Blanco';
+    src: url('../assets/fonts/Blanco-MediumItalic.woff2') format('woff2'),
+        url('../assets/fonts/Blanco-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Font declarations for Degular */
+@font-face {
+    font-family: 'Degular';
+    src: url('../assets/fonts/Degular-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Degular-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular';
+    src: url('../assets/fonts/Degular-Italic.woff2') format('woff2'),
+        url('../assets/fonts/Degular-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular';
+    src: url('../assets/fonts/Degular-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Degular-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Degular';
+    src: url('../assets/fonts/Degular-MediumItalic.woff2') format('woff2'),
+        url('../assets/fonts/Degular-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Typography */
+.prose {
+    --prose-width: 36rem;
+    font-family: theme('fontFamily.serif');
+    font-weight: 400;
+    font-size: theme('fontSize.lg');
+    line-height: theme('lineHeight.normal');
+    hanging-punctuation: first;
+}
+
+.prose-invert {
+    color: #f9f9f9;
+}
+
+.prose hr {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark .prose hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+    font-family: theme('fontFamily.sans');
+}
+
+.prose h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.prose h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+}
+
+.prose h3 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.prose h3 a {
+    font-weight: 500;
+}
+
+.prose p {
+    text-wrap: pretty;
+}
+
+.prose p em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.prose blockquote {
+    font-style: italic;
+    font-weight: 400;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
+}
+
+.dark .prose blockquote {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    color: theme('colors.white');
+}
+
+.prose picture {
+    margin-bottom: 0;
+}
+
+/* Lists */
+.prose ul {
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 1em;
+}
+
+.prose ul li {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.prose ul li::marker {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.dark .prose ul li::marker {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Links */
+.prose a {
+    text-decoration: underline;
+    text-decoration-color: #999;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    font-weight: 400;
+}
+
+.prose a:hover {
+    background: theme('colors.highlight');
+    color: theme('colors.black');
+    transition: background 0.2s, color 0.2s;
+}
+
+.prose a:focus {
+    background: none;
+}
+
+.dark .prose a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #999;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.dark .prose a:hover {
+    background: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.dark .prose p a:hover {
+    color: theme('colors.black');
+    background: theme('colors.highlight');
+    text-decoration: none;
+}
+
+/* Callout */
+.callout {
+    font-size: 1.6rem;
+    color: theme('colors.black');
+}
+
+.dark .callout {
+    color: theme('colors.white');
+}
+
+/* Images and captions */
+figcaption,
+.prose figcaption {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-family: theme('fontFamily.sans');
+    color: theme('colors.black');
+    opacity: 0.5;
+    letter-spacing: 0.025em;
+}
+
+.dark figcaption,
+.dark .prose figcaption {
+    color: theme('colors.white');
+    opacity: 0.4;
+}

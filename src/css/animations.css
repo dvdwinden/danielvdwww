@@ -1,0 +1,84 @@
+/* Define animation variables */
+:root {
+    --view-transition-duration: 1s;
+    --view-transition-easing: linear;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+/* Reset transforms during capture */
+::view-transition-old(content) {
+    transform: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+}
+
+/* Hide old content immediately */
+::view-transition-old(content) {
+    animation: none;
+    opacity: 0;
+}
+
+/* Show new content immediately */
+::view-transition-new(content) {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0) !important;
+    top: 0 !important;
+}
+
+/* Smooth background color morph */
+::view-transition-group(bg) {
+    animation-duration: var(--view-transition-duration);
+    animation-timing-function: var(--view-transition-easing);
+}
+
+/* Make sure the rest of the element's don't animate or scroll */
+::view-transition-group(*) {
+    animation: none;
+}
+
+/* Dark mode toggle animation */
+#dark-mode-toggle {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+#dark-icon,
+#light-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+#dark-icon {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#light-icon {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.dark #dark-icon {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.dark #light-icon {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Add a delay to the dark mode transition */
+.dark {
+    transition: background-color 0s 0.25s, color 0s 0.25s;
+}
