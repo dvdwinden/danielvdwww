@@ -137,7 +137,10 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
   </figure>
 
   <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
-    {% retinaImage "src/assets/work/custom-fonts-ghost.png", "Ghost" %}
+    <video autoplay loop muted playsinline class="w-full" preload="auto">
+        <source src="/assets/work/custom-fonts-animation.mp4" type="video/mp4">
+        Taking personalisation one step further with custom fonts in Ghost
+    </video>
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Taking personalisation one step further with custom fonts in Ghost</figcaption>
   </figure>
 </div>
