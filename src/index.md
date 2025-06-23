@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: Daniël van der Winden | Software designer, writer
-description: Amsterdam-based software designer and writer specialising in digital products. Former CDO at Bakken & Bæck and Senior Designer at Ghost, with expertise in UI/UX and design leadership.
+title: Daniël van der Winden | SSoftware & web designer; writer
+description: Amsterdam-based software & web designer and writer specialising in digital products. Former CDO at Bakken & Bæck and Senior Designer at Ghost, with expertise in UI/UX and design leadership.
 bodyClass: bg-blue
 ---
 
