@@ -764,6 +764,9 @@ ul.newsletter h2 {
     right: 0;
     z-index: 1;
     pointer-events: none;
+    content-visibility: auto;
+    contain: layout style paint;
+    will-change: transform;
 }
 
 .hero-image {
@@ -776,6 +779,10 @@ ul.newsletter h2 {
     max-width: 360px;
     height: 360px;
     pointer-events: none;
+    will-change: transform;
+    transform: translateZ(0);
+    contain: layout paint style;
+    contain-intrinsic-size: 360px;
 }
 
 .dark .hero-image {
@@ -783,10 +790,11 @@ ul.newsletter h2 {
 }
 
 .hero-image.daniel {
-    background-image: url('/assets/work/daniel-square.webp');
+    background-image: image-set(url('/assets/work/daniel-square.webp') 1x,
+            url('/assets/work/daniel-square@2x.webp') 2x);
     background-size: cover;
 
-    @supports not (background-image: url('/assets/work/daniel-square.webp')) {
+    @supports not (background-image: image-set(url('/assets/work/daniel-square.webp') 1x)) {
         background-image: url('/assets/work/daniel-square-optimized.png');
     }
 
@@ -795,39 +803,16 @@ ul.newsletter h2 {
     margin-left: 100px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-    .hero-image.daniel {
-        background-image: url('/assets/work/daniel-square@2x.webp');
-        background-size: cover;
-
-        @supports not (background-image: url('/assets/work/daniel-square@2x.webp')) {
-            background-image: url('/assets/work/daniel-square@2x.png');
-        }
-    }
-}
-
 .hero-image.studio {
-    background-image: url('/assets/work/studio-square.webp');
+    background-image: image-set(url('/assets/work/studio-square.webp') 1x,
+            url('/assets/work/studio-square@2x.webp') 2x);
     background-size: cover;
 
-    @supports not (background-image: url('/assets/work/studio-square.webp')) {
+    @supports not (background-image: image-set(url('/assets/work/studio-square.webp') 1x)) {
         background-image: url('/assets/work/studio-square-optimized.png');
     }
 
     @apply mr-auto my-8 sm:my-24;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-    .hero-image.studio {
-        background-image: url('/assets/work/studio-square@2x.webp');
-        background-size: cover;
-
-        @supports not (background-image: url('/assets/work/studio-square@2x.webp')) {
-            background-image: url('/assets/work/studio-square@2x.png');
-        }
-    }
 }
 
 @media (max-width: 1400px) {
@@ -846,12 +831,14 @@ ul.newsletter h2 {
         align-items: center;
         margin-top: 4rem;
         margin-bottom: 4rem;
+        transform: translateZ(0);
     }
 
     .hero-image {
         pointer-events: auto;
         max-width: 360px;
         height: 360px;
+        contain-intrinsic-size: 360px;
     }
 
     .hero-image.studio,
@@ -870,14 +857,14 @@ ul.newsletter h2 {
     }
 }
 
+/* Keep existing responsive breakpoints but add contain-intrinsic-size */
 @media (max-width: 1024px) {
-    .hero-images {
-        height: 320px;
-    }
+
 
     .hero-image {
         max-width: 320px;
         height: 320px;
+        contain-intrinsic-size: 320px;
     }
 
     .hero-image.daniel {
@@ -893,6 +880,7 @@ ul.newsletter h2 {
     .hero-image {
         max-width: 280px;
         height: 280px;
+        contain-intrinsic-size: 280px;
     }
 
     .hero-image.daniel {
@@ -932,13 +920,11 @@ ul.newsletter h2 {
 }
 
 @media (max-width: 480px) {
-    .hero-images {
-        height: 240px;
-    }
 
     .hero-image {
         max-width: 240px;
         height: 240px;
+        contain-intrinsic-size: 240px;
     }
 
     .hero-image.daniel {
