@@ -774,7 +774,6 @@ ul.newsletter h2 {
 
 /* Hero images */
 .hero-images {
-    @apply relative;
     position: absolute;
     top: 25vh;
     left: 20%;
@@ -986,5 +985,12 @@ ul.newsletter h2 {
 
     .site-footer ul li a {
         font-size: 1rem;
+    }
+}
+
+@media (min-width: 1401px) {
+    .main-content {
+        margin-left: 38vw;
+        /* Make sure hero images don't clash with main content */
     }
 }
