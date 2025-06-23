@@ -11,7 +11,7 @@ This website was built by me. My code editor of choice is [Cursor](cursor.com "C
 
 Headings are set in [_Degular_](https://ohnotype.co/fonts/degular "Degular by Oh No Type Co") by Oh No Type Co. Foster Type's [_Blanco_](https://www.fostertype.com/retail-type/blanco "Blanco by Foster Type") is used for body copy.
 
-I use some basic analytics, which can be found on [Umami](https://eu.umami.is/websites/5a0a578b-bf79-4578-96ef-373454590774 "View my analytics on Umami"). The average load time of this website is ~1.3ms, and its average page weight is ~30KB. 
+I use some basic analytics, which can be found on [Umami](https://cloud.umami.is/share/wM1ixCuqaLkACDo9/daniel.pizza "View my analytics on Umami"). The average load time of this website is ~1.3ms, and its average page weight is ~30KB. 
 
 ## Lighthouse scores
 - Performance: 74/100
