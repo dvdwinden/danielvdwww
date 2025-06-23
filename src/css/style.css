@@ -784,6 +784,7 @@ ul.newsletter h2 {
 
 .hero-image.daniel {
     background-image: url('/assets/work/daniel-square.webp');
+    background-size: cover;
 
     @supports not (background-image: url('/assets/work/daniel-square.webp')) {
         background-image: url('/assets/work/daniel-square-optimized.png');
@@ -798,6 +799,7 @@ ul.newsletter h2 {
 (min-resolution: 192dpi) {
     .hero-image.daniel {
         background-image: url('/assets/work/daniel-square@2x.webp');
+        background-size: cover;
 
         @supports not (background-image: url('/assets/work/daniel-square@2x.webp')) {
             background-image: url('/assets/work/daniel-square@2x.png');
@@ -807,6 +809,7 @@ ul.newsletter h2 {
 
 .hero-image.studio {
     background-image: url('/assets/work/studio-square.webp');
+    background-size: cover;
 
     @supports not (background-image: url('/assets/work/studio-square.webp')) {
         background-image: url('/assets/work/studio-square-optimized.png');
@@ -819,6 +822,7 @@ ul.newsletter h2 {
 (min-resolution: 192dpi) {
     .hero-image.studio {
         background-image: url('/assets/work/studio-square@2x.webp');
+        background-size: cover;
 
         @supports not (background-image: url('/assets/work/studio-square@2x.webp')) {
             background-image: url('/assets/work/studio-square@2x.png');
