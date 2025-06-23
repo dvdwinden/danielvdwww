@@ -98,17 +98,6 @@ bodyClass: bg-blue
         </div>
       </div>
     </li>
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/30 font-sans mb-2 md:mb-0 text-md">2010–2012</span>
-      <div class="md:w-3/4">
-        <div class="text-md font-bold font-serif">
-          <h3>Internship at Faster Forward Interactive</h3>
-        </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          Followed by a stint as a part-time Front-End Developer.
-        </div>
-      </div>
-    </li>
   </ul>
 </section>
 
