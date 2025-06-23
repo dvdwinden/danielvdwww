@@ -245,7 +245,9 @@ I've hired, managed and mentored teams of up to twelve Product Designers with va
 
 My knack for writing is beneficial when designing digital products or marketing websites. I have a keen eye for storytelling, and I work well with other writers.
 
-Most recently I've curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. And, I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer. 
+Together with [Iris](http://iriscuppen.com "Iris Cuppen") I've curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. Each issue is printed in a limited run, and we've hosted a launch evening for every one of them, building up a small and caring community.
+
+Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer. 
 </div>
 
 <div class="mt-32">
