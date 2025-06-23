@@ -23,7 +23,7 @@ bodyClass: bg-blue
   I'm open to new opportunities, contract or permanent. \
   If you are in need of someone with my profile, please reach out—I'm especially excited about working with consumer-facing companies in the space of publishing, sustainability, culture, music, film, media, or design tooling.
 
-  <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 px-3">
+  <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
       <a href="mailto:d.vanderwinden@gmail.com" title="Send me an email" rel="nofollow" target="_blank" class="cta-button font-degular dark:bg-white dark:text-black">Email me</a>
       <div class="flex">
