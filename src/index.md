@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Daniël van der Winden | SSoftware & web designer; writer
+title: Daniël van der Winden | Software & web designer; writer
 description: Amsterdam-based software & web designer and writer specialising in digital products. Former CDO at Bakken & Bæck and Senior Designer at Ghost, with expertise in UI/UX and design leadership.
 bodyClass: bg-blue
 ---
@@ -22,7 +22,7 @@ bodyClass: bg-blue
 
   I'm open to new opportunities, contract or permanent. If you are in need of someone with my profile, please reach out.
   
-  I'm especially excited about working with (consumer-facing) companies in the space of publishing, sustainability, culture, music, film, or design tooling. If you run a research or innovation lab, I'm all ears, too.
+  I'm especially excited about working with (consumer-facing) companies in the space of publishing, sustainability, culture, music, film, or design tooling. Run a research or innovation lab? I'm all ears, too.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -57,7 +57,7 @@ bodyClass: bg-blue
           <h3>Senior Designer at <a href="http://ghost.org?ref=daniel.pizza" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
         </div>
         <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          Involved in designing new features and explorative brand work, and coded numerous improvements throughout the product and its marketing site.
+          Involved in designing new features and exploratory brand & product work. Coded numerous improvements throughout the product and its marketing site.
         </div>
       </div>
     </li>
@@ -151,9 +151,9 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
 ---
 
 <h2 class="work-title">Circle</h2>
-<h3 class="text-black/60 dark:text-white/40 work-desc">Designing IKEA's circular rental platform for office furniture</h3>
+<h3 class="text-black/60 dark:text-white/40 work-desc">Conceptualising and designing IKEA's circular rental platform for office furniture</h3>
 
-At Bakken & Bæck I led the product design for [Circle](https://bakkenbaeck.com/case/circle?ref=daniel.pizza "Bakken & Bæck's Circle case study"), IKEA's circular rental solution for office furniture. 
+At Bakken & Bæck I led the digital product design for [Circle](https://bakkenbaeck.com/case/circle?ref=daniel.pizza "Bakken & Bæck's Circle case study"), IKEA's circular rental solution for office furniture. 
 
 We conceptualised, designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Working with a team from [_SPACE10_](https://space10.com/ "SPACE10"), we took the product from zero to one through rapid iteration. 
 </div>
@@ -190,9 +190,9 @@ Over the course of one summer we laid the groundwork for what would grow into [N
 ---
 
 <h2 class="work-title">Pexip</h2> 
-<h3 class="text-black/60 dark:text-white/40 work-desc">Designing a suite of videoconferencing software</h3>
+<h3 class="text-black/60 dark:text-white/40 work-desc">Streamlining a suite of videoconferencing software</h3>
 
-In collaboration with Pexip's team I led design on their web, iOS and Android apps, modernising their videoconferencing offering and designing  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand Pexip's tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
+In collaboration with Pexip's team I led design on the (re)design of their web, iOS and Android apps, modernising their videoconferencing offering and creating  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand the company's tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
 
 </div>
 
@@ -210,7 +210,7 @@ In collaboration with Pexip's team I led design on their web, iOS and Android ap
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip UI on web</figcaption>
 </figure>
 
-I crafted UI based on Pexip's existing brand guidelines, oversaw the product direction together with one other Product Designer and Pexip's Product Design Lead, and managed the client relationship. Beyond the interface, I defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
+I crafted UI based on Pexip's existing brand guidelines, oversaw the product direction together with Pexip's Product Design Lead, and managed the client relationship. Together, we defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
 
 </div>
 
@@ -242,9 +242,9 @@ I've hired, managed and mentored teams of up to twelve Product Designers with va
 <h2 class="work-title"><em>TRANSCRIPT</em> Magazine</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Curating and crafting a printed, seasonal literary magazine</h3>
 
-Together with [Iris Cuppen](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I've curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. It features literary essays, short stories, poetry, and everything in-between. Each issue is printed in a limited run. Its design is understated and elegant, leaving ample space for the stories and artworks it contains to take the spotlight.
+Together with [Iris Cuppen](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I've curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. It features literary essays, short stories, poetry, and visual works by renowned artists. Each issue is printed in a limited run. Its design is meant to be understated and elegant, leaving ample space for the stories and artworks it contains to take the spotlight.
 
-For the launch of every issue we've hosted an [event](https://www.instagram.com/p/DKrGC4fo7eC/?img_index=1 "See an impression on our Instagram account") where our some of contributors read their pieces to what has grown into a small and caring community.
+For the launch of every issue we've hosted an [event](https://www.instagram.com/p/DKrGC4fo7eC/?img_index=1 "See an impression on our Instagram account") where some of our contributors read their pieces to what has grown into a small and caring community.
 </div>
 
 <div class="mt-32">
@@ -263,7 +263,8 @@ For the launch of every issue we've hosted an [event](https://www.instagram.com/
 </div>
 
 <figure class="w-full sm:w-[576px] ml-auto my-24">
-  {% retinaImage "src/assets/work/transcript-article.png", "TRANSCRIPT Magazine" %}
+  {% retinaImage "src/assets/work/transcript-in-store.png", "TRANSCRIPT Magazine in store in Amsterdam" %}
+  <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine in store in Amsterdam</figcaption>
 </figure>
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
@@ -272,9 +273,9 @@ For the launch of every issue we've hosted an [event](https://www.instagram.com/
 
 <h2 class="work-title">Writing & Storytelling</h2>
 
-My knack for writing is beneficial when designing digital products or marketing websites. I have a keen eye for storytelling, and I work very well on teams with other writers.
+I've always had an interest in writing, and [write regularly](/newsletter "Latest entries from my monthly newsletter"). I work well on teams with other writers and have a keen eye for storytelling, which has proven beneficial when designing digital products or marketing websites.
 
-Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer, helping to turn Thomas' thoughts about his process and work into a single cohesive whole. 
+Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer, helping turn Thomas' thoughts about his illustration process and work into a cohesive whole. 
 
 ---
 
