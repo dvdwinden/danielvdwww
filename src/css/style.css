@@ -812,6 +812,7 @@ ul.newsletter h2 {
     background-image: image-set(url('/assets/work/daniel-square.webp') 1x,
             url('/assets/work/daniel-square@2x.webp') 2x);
     background-size: cover;
+    background-position: center;
 
     @supports not (background-image: image-set(url('/assets/work/daniel-square.webp') 1x)) {
         background-image: url('/assets/work/daniel-square-optimized.png');
@@ -993,8 +994,6 @@ ul.newsletter h2 {
 
 @media (min-width: 1401px) {
     .hero-image {
-        max-width: 280px;
-        height: 280px;
-        contain-intrinsic-size: 280px;
+        max-width: 24%;
     }
 }
