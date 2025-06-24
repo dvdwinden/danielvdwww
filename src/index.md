@@ -240,11 +240,11 @@ I've hired, managed and mentored teams of up to twelve Product Designers with va
 ---
 
 <h2 class="work-title"><em>TRANSCRIPT</em> Magazine</h2> 
-<h3 class="text-black/60 dark:text-white/40 work-desc">Creating a printed, seasonal literary magazine</h3>
+<h3 class="text-black/60 dark:text-white/40 work-desc">Curating and crafting a printed, seasonal literary magazine</h3>
 
-Together with [Iris Cuppen](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I've curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. It features literary essays, short stories, poetry, and everything in-between. Each issue is printed in a limited run. Its design is understated and elegant, leaving ample space for the stories and artworks it contains.
+Together with [Iris Cuppen](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I've curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. It features literary essays, short stories, poetry, and everything in-between. Each issue is printed in a limited run. Its design is understated and elegant, leaving ample space for the stories and artworks it contains to take the spotlight.
 
-For the launch of every issue we've hosted an [event](https://www.instagram.com/p/DKrGC4fo7eC/?img_index=1 "See an impression on our Instagram account") where our some of contributors read their pieces to what is now a small and caring community.
+For the launch of every issue we've hosted an [event](https://www.instagram.com/p/DKrGC4fo7eC/?img_index=1 "See an impression on our Instagram account") where our some of contributors read their pieces to what has grown into a small and caring community.
 </div>
 
 <div class="mt-32">
@@ -266,7 +266,18 @@ For the launch of every issue we've hosted an [event](https://www.instagram.com/
   {% retinaImage "src/assets/work/transcript-article.png", "TRANSCRIPT Magazine" %}
 </figure>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
+<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
+
+---
+
+<h2 class="work-title">Writing & Storytelling</h2>
+
+My knack for writing is beneficial when designing digital products or marketing websites. I have a keen eye for storytelling, and I work very well on teams with other writers.
+
+Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer, helping to turn Thomas' thoughts about his process and work into a single cohesive whole. 
+
+---
+
   <h2 class="work-title">Speaking</h2>
   <div class="flex flex-col">
     <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
@@ -279,18 +290,6 @@ For the launch of every issue we've hosted an [event](https://www.instagram.com/
       <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JAN 2025</span>
     </div>
   </div>
-
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
-
----
-
-<h2 class="work-title">Writing & Storytelling</h2>
-
-My knack for writing is beneficial when designing digital products or marketing websites. I have a keen eye for storytelling, and I work very well on teams with other writers.
-
-Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer, helping to turn Thomas' thoughts about his process and work into a single cohesive whole. 
-</div>
-
 
   {% include "footer.njk" %}
 </div>
