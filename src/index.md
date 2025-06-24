@@ -194,8 +194,6 @@ Over the course of one summer we laid the groundwork for what would grow into [N
 
 In collaboration with Pexip's team I led design on their web, iOS and Android apps, modernising their videoconferencing offering and designing  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand Pexip's tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
 
-I crafted UI based on Pexip's existing brand guidelines, oversaw the product direction together with one other Product Designer and Pexip's Product Design Lead, and managed the client relationship. Beyond the interface, I defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
-
 </div>
 
 <div class="mt-32">
@@ -208,8 +206,11 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
 <figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
-  {% retinaImage "src/assets/work/pexip-ui.png", "Pexip UI" %}
+  {% retinaImage "src/assets/work/pexip-ui.png", "Pexip UI on web" %}
+  <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip UI on web</figcaption>
 </figure>
+
+I crafted UI based on Pexip's existing brand guidelines, oversaw the product direction together with one other Product Designer and Pexip's Product Design Lead, and managed the client relationship. Beyond the interface, I defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
 
 </div>
 
@@ -218,11 +219,12 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
     {% retinaImage "src/assets/work/pexip-icons.png", "Pexip icons" %}
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip icons, designed by Hemmo de Jonge</figcaption>
   </figure>
+
 </div>
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
-> Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
+  > Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
 
 <span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/svenn-petter.jpg" alt="Sven-Petter" /><a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip</span>
 
