@@ -10,7 +10,7 @@ bodyClass: bg-blue
   <figure class="hero-image daniel"></figure>
 </div>
 
-<div class="relative w-full max-w-xl ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert main-content">
+<div class="relative w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert main-content">
 
 <h2 class="home-subtitle mt-0 text-black dark:text-white">Software & web designer; writer</h2>
 
@@ -126,7 +126,7 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Improved publishing flow in Ghost</figcaption>
   </figure>
 
-  <figure class="w-full sm:w-[576px] mr-auto my-8 sm:my-24">
+  <figure class="w-full sm:max-w-lg mr-auto my-8 sm:my-24">
     <video autoplay loop muted playsinline class="w-full" preload="auto">
         <source src="/assets/work/custom-fonts-animation.mp4" type="video/mp4">
         Taking personalisation one step further with custom fonts in Ghost
@@ -135,14 +135,14 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
   </figure>
 </div>
 
-<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
+<figure class="w-full sm:max-w-lg ml-auto my-8 sm:my-24">
   <video autoplay loop muted playsinline class="w-full" preload="auto">
         <source src="/assets/work/ghost-visual-explorations.mp4" type="video/mp4">
         Brand & design language explorations
     </video>
 </figure>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
 
 > Whether leading his own projects or working as part of a team, Daniël's work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
 
@@ -167,13 +167,13 @@ We conceptualised, designed and built a digital solution that enabled small busi
     <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez</figcaption>
   </figure>
 
-  <figure class="w-full sm:w-[576px] mr-auto my-12">
+  <figure class="w-full sm:max-w-lg mr-auto my-12">
     {% retinaImage "src/assets/work/circle-01.jpg", "IKEA" %}
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Photo by Osma Harvilahti</figcaption>
   </figure>
 </div>
 
-<figure class="ml-auto max-w-xl">
+<figure class="ml-auto max-w-lg">
     <video autoplay loop muted playsinline class="w-full" preload="auto">
         <source src="/assets/work/circle-video-chair.mp4" type="video/mp4">
         UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström
@@ -181,7 +181,7 @@ We conceptualised, designed and built a digital solution that enabled small busi
     <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström</figcaption>
 </figure>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
 I oversaw the design direction for the digital product, crafted UI with another Product Designer, bridged the gap between product and brand, and managed client communication. 
 
@@ -197,15 +197,15 @@ In collaboration with Pexip's team I led design on the (re)design of their web, 
 </div>
 
 <div class="mt-32">
- <figure class="w-full sm:w-[576px] mr-auto my-12">
+ <figure class="w-full sm:max-w-lg mr-auto my-12">
     {% retinaImage "src/assets/work/pexip-room-tv.png", "Pexip Room" %}
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip Room</figcaption>
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
-<figure class="w-full sm:w-[576px] ml-auto my-8 sm:my-24">
+<figure class="w-full sm:max-w-lg ml-auto my-8 sm:my-24">
   {% retinaImage "src/assets/work/pexip-ui.png", "Pexip UI on web" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip UI on web</figcaption>
 </figure>
@@ -215,14 +215,14 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
 </div>
 
 <div class="mt-32">
- <figure class="w-full sm:w-[576px] mr-auto my-12">
+ <figure class="w-full sm:max-w-lg mr-auto my-12">
     {% retinaImage "src/assets/work/pexip-icons.png", "Pexip icons" %}
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip icons, designed by Hemmo de Jonge</figcaption>
   </figure>
 
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
   > Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
 
@@ -256,18 +256,18 @@ For the launch of every issue we've hosted an [event](https://www.instagram.com/
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine (issue one)</figcaption>
   </figure>
 
-  <figure class="w-full sm:w-[576px] mr-auto my-12">
+  <figure class="w-full sm:max-w-lg mr-auto my-12">
     {% retinaImage "src/assets/work/transcript-visual.png", "TRANSCRIPT Magazine (issue one, with work by Thomas & Jurgen)" %}
     <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine, featuring work by Thomas & Jurgen</figcaption>
   </figure>
 </div>
 
-<figure class="w-full sm:w-[576px] ml-auto my-24">
+<figure class="w-full sm:max-w-lg ml-auto my-24">
   {% retinaImage "src/assets/work/transcript-in-store.png", "TRANSCRIPT Magazine in store in Amsterdam" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine in store in Amsterdam</figcaption>
 </figure>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
 ---
 
