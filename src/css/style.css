@@ -778,7 +778,7 @@ ul.newsletter h2 {
 .hero-images {
     position: absolute;
     top: 25vh;
-    left: 20%;
+    left: 18%;
     right: 0;
     z-index: 1;
     pointer-events: none;
@@ -991,8 +991,9 @@ ul.newsletter h2 {
 }
 
 @media (min-width: 1401px) {
-    .main-content {
-        margin-left: 38vw;
-        /* Make sure hero images don't clash with main content */
+    .hero-image {
+        max-width: 280px;
+        height: 280px;
+        contain-intrinsic-size: 280px;
     }
 }
