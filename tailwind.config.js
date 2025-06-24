@@ -24,7 +24,8 @@ module.exports = {
         'degular': ['Degular', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       fontSize: {
-        sm: '1.25rem', // 20px
+        xs: '0.875rem', // 14px
+        sm: '1rem', // 16px
         base: '1.25rem', // 20px
         lg: '1.375rem', // 22px
         xl: '1.5rem', // 24px
