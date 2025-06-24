@@ -86,9 +86,11 @@ I time-boxed my efforts to roughly a week, and while building I discovered [Peop
 
 I discovered Tailwind's [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography "Tailwind's typography plugin") which makes setting type with Tailwind a lot easier. I got a dark mode implementation going pretty quickly, and learned about content collections, pagination, and automatic image optimisation. I got into the [Nunjucks templating engine](https://mozilla.github.io/nunjucks/ "Nunjucks templating engine"), which is quite easy to work with, too. I still have a lot to improve (Lighthouse performance scores could be better, RSS is missing, and I need to get into [webrings](https://indieweb.org/webring?ref=daniel.pizza "Webrings")), but I'm excited to do so. 
 
-I left a page or two behind to save time. You can no longer find `/watching` or `/reading` here (both previously housed three years worth of top 10s for films and books). They were personal pages, yes, but I think my [newsletter](/newsletter "Newsletter entries") collection is better suited for sharing my reading. I may bring `/watching` back later (along with `/listening`?)—for now, give me a follow on [Letterboxd](http://letterboxd.com/dvdwinden "Follow me on Letterboxd").
+I left a page or two behind to save time. You can no longer find _/watching_ or _/reading_ here (both previously housed three years worth of top 10s for films and books). They were personal pages, yes, but I think my [newsletter](/newsletter "Newsletter entries") collection is better suited for sharing my reading. I may bring _/watching_ back later (along with _/listening_?)—for now, give me a follow on [Letterboxd](http://letterboxd.com/dvdwinden "Follow me on Letterboxd").
 
-Right now, this site feels like a great base. I don't feel intimidated anymore. I have a nail, and I have my hammer, and I am wielding it.
+Right now, this site feels like a great base. I don't feel intimidated anymore. 
+
+I have a nail, and I have my hammer, and I am wielding it.
 
 {% include "footer.njk" %}
 
