@@ -190,7 +190,7 @@ Over the course of one summer we laid the groundwork for what would grow into [N
 ---
 
 <h2 class="work-title">Pexip</h2> 
-<h3 class="text-black/60 dark:text-white/40 work-desc">Streamlining a suite of videoconferencing software</h3>
+<h3 class="text-black/60 dark:text-white/40 work-desc">Streamlining a suite of video-conferencing software</h3>
 
 In collaboration with Pexip's team I led design on the (re)design of their web, iOS and Android apps, modernising their videoconferencing offering and creating  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand the company's tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
 
