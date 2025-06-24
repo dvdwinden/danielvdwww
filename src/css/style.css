@@ -819,8 +819,8 @@ ul.newsletter h2 {
     }
 
     @apply mr-auto my-8 sm:my-24;
-    margin-top: -160px;
-    margin-left: 100px;
+    margin-top: -180px;
+    margin-left: 70px;
 }
 
 .hero-image.studio {
