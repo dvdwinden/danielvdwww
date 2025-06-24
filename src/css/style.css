@@ -488,6 +488,7 @@ nav ul li a span.no-underline:hover {
 .introduction {
     margin-bottom: 4rem;
     margin-top: 1rem;
+    text-wrap: pretty;
 }
 
 /* Callout */
