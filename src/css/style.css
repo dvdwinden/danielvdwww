@@ -1,81 +1,13 @@
-/* Main CSS file that imports all modules */
+/* ==========================================================================
+   TAILWIND DIRECTIVES
+   ========================================================================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Import base styles first (includes Tailwind directives) */
-@import 'base.css';
-
-/* Import typography */
-@import 'typography.css';
-
-/* Import components */
-@import 'components.css';
-
-/* Import layout */
-@import 'layout.css';
-
-/* Import animations */
-@import 'animations.css';
-
-/* Import dark mode styles */
-@import 'dark-mode.css';
-
-/* Import media queries */
-@import 'media.css';
-
-/* Import page-specific styles */
-@import 'pages.css';
-
-@view-transition {
-    navigation: auto;
-}
-
-#page-background {
-    view-transition-name: bg;
-    transform: translateZ(0);
-}
-
-html.dark #page-background {
-    view-transition-name: none;
-    background-color: #222 !important;
-}
-
-#page-content {
-    view-transition-name: content;
-    position: relative;
-    min-height: 100vh;
-    @apply text-gray-900 dark:text-gray-100;
-}
-
-/* Reset transforms during capture */
-::view-transition-old(content) {
-    transform: none !important;
-    position: fixed !important;
-    inset: 0 !important;
-}
-
-/* Hide old content immediately */
-::view-transition-old(content) {
-    animation: none;
-    opacity: 0;
-}
-
-/* Show new content immediately */
-::view-transition-new(content) {
-    animation: none;
-    opacity: 1;
-    transform: translateY(0) !important;
-    top: 0 !important;
-}
-
-/* Smooth background color morph */
-::view-transition-group(bg) {
-    animation-duration: var(--view-transition-duration);
-    animation-timing-function: var(--view-transition-easing);
-}
-
-/* Make sure the rest of the element's don't animate or scroll */
-::view-transition-group(*) {
-    animation: none;
-}
+/* ==========================================================================
+   FONT DECLARATIONS
+   ========================================================================== */
 
 /* Font declarations for Blanco */
 @font-face {
@@ -149,42 +81,13 @@ html.dark #page-background {
     font-display: swap;
 }
 
+/* ==========================================================================
+   BASE STYLES & RESETS
+   ========================================================================== */
+
+/* Basic element styling */
 html {
     overflow-y: scroll;
-}
-
-/* Custom styles for specific elements */
-.posts-list {
-    @apply list-none p-0;
-}
-
-.posts-list li {
-    @apply mb-8 pb-4 border-b border-gray-200;
-}
-
-.posts-list h2 {
-    @apply mt-0 mb-2;
-}
-
-.posts-list time {
-    @apply text-gray-600 text-sm;
-}
-
-.tag {
-    @apply bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs mr-2;
-}
-
-/* Article styling */
-article header {
-    @apply bg-transparent border-0 p-0 mb-8;
-}
-
-article h1 {
-    @apply mb-2;
-}
-
-article time {
-    @apply text-gray-600 text-sm block mb-2;
 }
 
 img,
@@ -196,15 +99,137 @@ iframe {
     width: 100%;
 }
 
-/* Typography */
+::selection {
+    background: theme('colors.highlight');
+    color: theme('colors.black');
+}
+
+/* Scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* ==========================================================================
+   VIEW TRANSITIONS & ANIMATIONS
+   ========================================================================== */
+
+/* Define animation variables */
+:root {
+    --view-transition-duration: 1s;
+    --view-transition-easing: linear;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+#page-background {
+    view-transition-name: bg;
+    transform: translateZ(0);
+}
+
+html.dark #page-background {
+    view-transition-name: none;
+    background-color: #222 !important;
+}
+
+#page-content {
+    view-transition-name: content;
+    position: relative;
+    min-height: 100vh;
+    @apply text-gray-900 dark:text-gray-100;
+}
+
+/* Reset transforms during capture */
+::view-transition-old(content) {
+    transform: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+}
+
+/* Hide old content immediately */
+::view-transition-old(content) {
+    animation: none;
+    opacity: 0;
+}
+
+/* Show new content immediately */
+::view-transition-new(content) {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0) !important;
+    top: 0 !important;
+}
+
+/* Smooth background color morph */
+::view-transition-group(bg) {
+    animation-duration: var(--view-transition-duration);
+    animation-timing-function: var(--view-transition-easing);
+}
+
+/* Make sure the rest of the element's don't animate or scroll */
+::view-transition-group(*) {
+    animation: none;
+}
+
+/* Dark mode toggle animation */
+#dark-mode-toggle {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+#dark-icon,
+#light-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+#dark-icon {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#light-icon {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.dark #dark-icon {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.dark #light-icon {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Add a delay to the dark mode transition */
+.dark {
+    transition: background-color 0s 0.25s, color 0s 0.25s;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
 .prose {
-    --prose-width: 36rem;
     font-family: theme('fontFamily.serif');
     font-weight: 400;
-    font-size: theme('fontSize.lg');
+    font-size: theme('fontSize.base');
     line-height: theme('lineHeight.normal');
-    hanging-punctuation: first;
-    ;
+    text-wrap: pretty;
 }
 
 .prose-invert {
@@ -213,10 +238,6 @@ iframe {
 
 .prose hr {
     border-color: rgba(0, 0, 0, 0.1);
-}
-
-.dark .prose hr {
-    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .prose h1,
@@ -269,16 +290,11 @@ iframe {
     margin-bottom: 0;
 }
 
-.dark .prose blockquote {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    color: theme('colors.white');
-}
-
 .prose picture {
     margin-bottom: 0;
 }
 
-/* Lists, buttons and links */
+/* Lists */
 .prose ul {
     list-style: disc;
     list-style-position: outside;
@@ -294,13 +310,13 @@ iframe {
     color: rgba(0, 0, 0, 0.2);
 }
 
-.dark .prose ul li::marker {
-    color: rgba(255, 255, 255, 0.2);
-}
-
-::selection {
-    background: theme('colors.highlight');
-    color: theme('colors.black');
+/* Links */
+.prose a {
+    text-decoration: underline;
+    text-decoration-color: #999;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    font-weight: 400;
 }
 
 .prose a:hover {
@@ -313,130 +329,10 @@ iframe {
     background: none;
 }
 
-.prose a {
-    text-decoration: underline;
-    text-decoration-color: #999;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-    font-weight: 400;
-}
-
-.dark .prose a {
-    color: #fff;
-    text-decoration: underline;
-    text-decoration-color: #999;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-}
-
-.dark .prose a:hover {
-    background: none;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-}
-
-.prose .cta-button {
-    text-decoration: none;
-    background: #222;
-    color: theme('colors.white');
-    padding: 0.5rem .75rem;
-    border-radius: 4px;
-    font-size: 1.125rem;
-    font-weight: 500;
-    display: inline-block;
-}
-
-.prose .cta-button:hover {
-    background: #555;
-    color: theme('colors.white');
-    transition: background 0.2s, color 0.2s;
-    display: inline-block;
-}
-
-.dark .prose .cta-button {
-    background: #fff;
-    color: #000;
-    text-decoration: none;
-}
-
-.dark .prose .cta-button:hover {
-    background: theme('colors.gray.100');
-    color: theme('colors.gray.600');
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-}
-
-.prose .cta-link {
-    text-decoration: none;
+/* Callout */
+.callout {
+    font-size: 1.6rem;
     color: theme('colors.black');
-    font-family: theme('fontFamily.sans');
-    display: inline-flex;
-    align-items: center;
-}
-
-.prose .cta-link svg {
-    vertical-align: middle;
-}
-
-.prose .cta-link:hover {
-    color: theme('colors.gray.600');
-    text-decoration: none;
-    transition: color 0.2s;
-    background: none;
-}
-
-.dark .prose .cta-link {
-    color: theme('colors.white');
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-}
-
-.dark .prose .cta-link svg {
-    vertical-align: middle;
-}
-
-.dark .prose .cta-link:hover {
-    color: theme('colors.gray.300');
-    text-decoration: none;
-    transition: color 0.2s;
-    background: none;
-}
-
-.dark .prose p a:hover {
-    color: theme('colors.black');
-    background: theme('colors.highlight');
-    text-decoration: none;
-}
-
-/* Work */
-.prose h2.work-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.prose h2.home-subtitle {
-    font-size: 2rem;
-    margin-bottom: 0;
-}
-
-.prose h3.work-desc {
-    font-size: 1.75rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    margin-top: -1.5rem;
-}
-
-/* Header */
-header a picture {
-    margin-right: 0.5rem;
-}
-
-header a:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
 }
 
 /* Images and captions */
@@ -447,15 +343,27 @@ figcaption,
     font-family: theme('fontFamily.sans');
     color: theme('colors.black');
     opacity: 0.85;
-    /* Increased from 0.65 */
     letter-spacing: 0.025em;
+    line-height: 1.25;
 }
 
-.dark figcaption,
-.dark .prose figcaption {
-    color: theme('colors.white');
-    opacity: 0.95;
-    /* Increased from 0.8 */
+span.testimonial {
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   LAYOUT COMPONENTS
+   ========================================================================== */
+
+/* Header */
+header a picture {
+    margin-right: 0.5rem;
+}
+
+header a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 /* Navigation */
@@ -484,40 +392,9 @@ nav ul li a span.no-underline:hover {
     text-decoration: none !important;
 }
 
-/* Introduction */
-.introduction {
-    margin-bottom: 4rem;
-    margin-top: 1rem;
-    text-wrap: pretty;
-}
-
-/* Callout */
-.callout {
-    font-size: 1.6rem;
-    color: theme('colors.black');
-}
-
-.dark .callout {
-    color: theme('colors.white');
-}
-
-/* Resume */
-.resume {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
-}
-
-.resume ul {
-    padding-left: 0;
-}
-
-.resume ul li span {
-    font-weight: 400;
-    font-family: theme('fontFamily.sans');
-}
-
-.resume ul li:last-child {
-    border-bottom: none;
+/* Pagination */
+nav.pagination a:hover {
+    background: none;
 }
 
 /* Footer */
@@ -565,15 +442,6 @@ nav ul li a span.no-underline:hover {
     background: none;
 }
 
-.dark .site-footer ul li a {
-    color: theme('colors.gray.400');
-    text-decoration: none;
-}
-
-.dark .site-footer ul li a:hover {
-    color: theme('colors.gray.100');
-}
-
 .site-footer a.underline-custom {
     text-decoration: underline;
     text-decoration-color: theme('colors.gray.400');
@@ -582,198 +450,22 @@ nav ul li a span.no-underline:hover {
     color: theme('colors.gray.900');
 }
 
-.dark .site-footer a.underline-custom {
-    text-decoration: underline;
-    text-decoration-color: theme('colors.gray.400');
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-    color: theme('colors.gray.100');
+/* Article styling */
+article header {
+    @apply bg-transparent border-0 p-0 mb-8;
 }
 
-/* Scrollbar */
-.hide-scrollbar::-webkit-scrollbar {
-    display: none;
+article h1 {
+    @apply mb-2;
 }
 
-.hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+article time {
+    @apply text-gray-600 text-sm block mb-2;
 }
 
-
-
-/* Links */
-ul.links {
-    list-style-type: none;
-    padding-left: 0;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-ul.links li h2 {
-    margin-bottom: 0;
-    font-family: theme('fontFamily.serif');
-    font-weight: 500;
-}
-
-ul.links li a:hover h2 {
-    color: theme('colors.hover');
-    text-decoration-color: theme('colors.hover');
-    background: none !important;
-}
-
-span.testimonial a {
-    font-weight: 500;
-}
-
-span.testimonial picture {
-    display: inline;
-    margin-top: 0;
-    margin-right: 0.25rem;
-}
-
-span.testimonial picture img {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    vertical-align: middle;
-    display: inline;
-}
-
-.dark ul.links li a:hover h2 {
-    color: theme('colors.hover-dark') !important;
-    background: none !important;
-    text-decoration: underline !important;
-    text-decoration-color: theme('colors.hover-dark') !important;
-    text-decoration-thickness: 1px !important;
-    text-underline-offset: 3px !important;
-}
-
-ul.links li a:hover {
-    background: none !important;
-}
-
-ul.links li p a {
-    text-decoration: underline;
-    text-decoration-color: theme('colors.hover');
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-    font-family: theme('fontFamily.serif');
-    font-weight: 400;
-}
-
-ul.links li p a:hover {
-    cursor: pointer;
-    color: theme('colors.black');
-    text-decoration: underline;
-    text-decoration-color: #7c5e00;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-    background: theme('colors.highlight') !important;
-}
-
-ul.links li p span a {
-    font-family: theme('fontFamily.sans');
-    ;
-}
-
-.dark ul.links li p a:hover {
-    color: theme('colors.black');
-    text-decoration: none;
-}
-
-/* Icons */
-.icon-sunrise {
-    color: #fff;
-}
-
-.icon-sunset {
-    color: #222;
-}
-
-a .no-underline {
-    text-decoration: none !important;
-}
-
-a.no-underline:hover span {
-    text-decoration: none !important;
-}
-
-/* Pagination */
-nav.pagination a:hover {
-    background: none;
-}
-
-/* Dark mode toggle animation */
-#dark-mode-toggle {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-}
-
-#dark-icon,
-#light-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
-}
-
-#dark-icon {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-#light-icon {
-    transform: translateY(100%);
-    opacity: 0;
-}
-
-.dark #dark-icon {
-    transform: translateY(-100%);
-    opacity: 0;
-}
-
-.dark #light-icon {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-/* Add a delay to the dark mode transition */
-.dark {
-    transition: background-color 0s 0.25s, color 0s 0.25s;
-}
-
-/* Newsletter */
-ul.newsletter picture {
-    margin-bottom: 1rem;
-}
-
-ul.newsletter h2 {
-    margin-top: 0;
-}
-
-.only-light {
-    display: block;
-}
-
-.only-dark {
-    display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    .only-light {
-        display: none;
-    }
-
-    .only-dark {
-        display: block;
-    }
-}
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
 
 /* Hero images */
 .hero-images {
@@ -804,10 +496,6 @@ ul.newsletter h2 {
     contain-intrinsic-size: 360px;
 }
 
-.dark .hero-image {
-    background-color: hsl(204, 17%, 89%);
-}
-
 .hero-image.daniel {
     background-image: image-set(url('/assets/work/daniel-square.webp') 1x,
             url('/assets/work/daniel-square@2x.webp') 2x);
@@ -835,6 +523,339 @@ ul.newsletter h2 {
     @apply mr-auto my-8 sm:my-24;
 }
 
+/* Buttons and CTAs */
+.prose .cta-button {
+    text-decoration: none;
+    background: #222;
+    color: theme('colors.white');
+    padding: 0.5rem .75rem;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.prose .cta-button:hover {
+    background: #555;
+    color: theme('colors.white');
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+.prose .cta-link {
+    text-decoration: none;
+    color: theme('colors.black');
+    font-family: theme('fontFamily.sans');
+    display: inline-flex;
+    align-items: center;
+}
+
+.prose .cta-link svg {
+    vertical-align: middle;
+}
+
+.prose .cta-link:hover {
+    color: theme('colors.gray.600');
+    text-decoration: none;
+    transition: color 0.2s;
+    background: none;
+}
+
+/* Posts list */
+.posts-list {
+    @apply list-none p-0;
+}
+
+.posts-list li {
+    @apply mb-8 pb-4 border-b border-gray-200;
+}
+
+.posts-list h2 {
+    @apply mt-0 mb-2;
+}
+
+.posts-list time {
+    @apply text-gray-600 text-sm;
+}
+
+.tag {
+    @apply bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs mr-2;
+}
+
+/* Links list */
+ul.links {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.links li h2 {
+    margin-bottom: 0;
+    font-family: theme('fontFamily.serif');
+    font-weight: 500;
+}
+
+ul.links li a:hover h2 {
+    color: theme('colors.hover');
+    text-decoration-color: theme('colors.hover');
+    background: none !important;
+}
+
+ul.links li a:hover {
+    background: none !important;
+}
+
+ul.links li p a {
+    text-decoration: underline;
+    text-decoration-color: theme('colors.hover');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    font-family: theme('fontFamily.serif');
+    font-weight: 400;
+}
+
+ul.links li p a:hover {
+    cursor: pointer;
+    color: theme('colors.black');
+    text-decoration: underline;
+    text-decoration-color: #7c5e00;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    background: theme('colors.highlight') !important;
+}
+
+ul.links li p span a {
+    font-family: theme('fontFamily.sans');
+}
+
+span.testimonial a {
+    font-weight: 500;
+}
+
+span.testimonial picture {
+    display: inline;
+    margin-top: 0;
+    margin-right: 0.25rem;
+}
+
+span.testimonial picture img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline;
+}
+
+/* Newsletter list */
+ul.newsletter picture {
+    margin-bottom: 1rem;
+}
+
+ul.newsletter h2 {
+    margin-top: 0;
+}
+
+/* Icons */
+.icon-sunrise {
+    color: #fff;
+}
+
+.icon-sunset {
+    color: #222;
+}
+
+a .no-underline {
+    text-decoration: none !important;
+}
+
+a.no-underline:hover span {
+    text-decoration: none !important;
+}
+
+/* ==========================================================================
+   PAGE-SPECIFIC STYLES
+   ========================================================================== */
+
+/* Work section */
+.prose h2.work-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.prose h2.home-subtitle {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.prose h3.work-desc {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    margin-top: -1.5rem;
+}
+
+/* Introduction */
+.introduction {
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    text-wrap: pretty;
+}
+
+/* Resume */
+.resume {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+.resume ul {
+    padding-left: 0;
+}
+
+.resume ul li span {
+    font-weight: 400;
+    font-family: theme('fontFamily.sans');
+}
+
+.resume ul li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================================================
+   DARK MODE STYLES
+   ========================================================================== */
+
+.dark .prose hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .prose blockquote {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    color: theme('colors.white');
+}
+
+.dark .prose ul li::marker {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .prose a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #999;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.dark .prose a:hover {
+    background: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.dark .prose p a:hover {
+    color: theme('colors.black');
+    background: theme('colors.highlight');
+    text-decoration: none;
+}
+
+.dark .prose .cta-button {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+.dark .prose .cta-button:hover {
+    background: theme('colors.gray.100');
+    color: theme('colors.gray.600');
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dark .prose .cta-link {
+    color: theme('colors.white');
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dark .prose .cta-link:hover {
+    color: theme('colors.gray.300');
+    text-decoration: none;
+    transition: color 0.2s;
+    background: none;
+}
+
+.dark figcaption,
+.dark .prose figcaption {
+    color: theme('colors.white');
+    opacity: 0.95;
+}
+
+.dark .callout {
+    color: theme('colors.white');
+}
+
+.dark .site-footer ul li a {
+    color: theme('colors.gray.400');
+    text-decoration: none;
+}
+
+.dark .site-footer ul li a:hover {
+    color: theme('colors.gray.100');
+}
+
+.dark .site-footer a.underline-custom {
+    text-decoration: underline;
+    text-decoration-color: theme('colors.gray.400');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    color: theme('colors.gray.100');
+}
+
+.dark ul.links li a:hover h2 {
+    color: theme('colors.hover-dark') !important;
+    background: none !important;
+    text-decoration: underline !important;
+    text-decoration-color: theme('colors.hover-dark') !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 3px !important;
+}
+
+.dark ul.links li p a:hover {
+    color: theme('colors.black');
+    text-decoration: none;
+}
+
+.dark .hero-image {
+    background-color: hsl(204, 17%, 89%);
+}
+
+/* Dark mode detection */
+.only-light {
+    display: block;
+}
+
+.only-dark {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .only-light {
+        display: none;
+    }
+
+    .only-dark {
+        display: block;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Hero image responsive styling */
 @media (max-width: 1400px) {
 
     /* For 1400px and below, show images side-by-side above content */
@@ -877,10 +898,7 @@ ul.newsletter h2 {
     }
 }
 
-/* Keep existing responsive breakpoints but add contain-intrinsic-size */
 @media (max-width: 1024px) {
-
-
     .hero-image {
         max-width: 320px;
         height: 320px;
@@ -909,20 +927,12 @@ ul.newsletter h2 {
     }
 
     /* Mobile typography adjustments */
-    .prose {
-        font-size: 1.125rem;
-    }
-
     .prose h1 {
         font-size: 2rem;
     }
 
     .prose h2 {
         font-size: 1.25rem;
-    }
-
-    .prose h3 {
-        font-size: 1.125rem;
     }
 
     .callout {
@@ -941,6 +951,13 @@ ul.newsletter h2 {
 }
 
 @media (max-width: 480px) {
+    .prose h2.work-title {
+        font-size: 1.75rem;
+    }
+
+    .prose h3.work-desc {
+        font-size: 1.5rem;
+    }
 
     .hero-image {
         max-width: 240px;
@@ -952,22 +969,12 @@ ul.newsletter h2 {
         margin-left: -120px;
     }
 
-    .prose {
-        font-size: 1.125rem;
-
-    }
-
     .prose h1 {
         font-size: 2rem;
     }
 
     .prose h2 {
         font-size: 1.25rem;
-    }
-
-    .prose h3 {
-        font-size: 1.125rem;
-
     }
 
     .callout {

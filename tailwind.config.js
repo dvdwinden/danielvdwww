@@ -7,15 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      },
-      keyframes: {
-        'pulse-slow': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.5' },
-        },
-      },
       fontFamily: {
         sans: [
           'Degular',
@@ -33,9 +24,10 @@ module.exports = {
         'degular': ['Degular', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       fontSize: {
-        sm: '1rem', // 16px
+        sm: '1.25rem', // 20px
         base: '1.25rem', // 20px
         lg: '1.375rem', // 22px
+        xl: '1.5rem', // 24px
       },
       lineHeight: {
         normal: '1.5', // 150%

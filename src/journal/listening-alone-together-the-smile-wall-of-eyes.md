@@ -17,7 +17,10 @@ And, when was the last time you did so with 300 strangers?
 
 It is Tuesday January 23rd, and I am among a group of 300 people to pour into Cinema 1 at [Eye Film Museum](https://eyefilm.nl/) in Amsterdam for [Wall of Eyes: On Film](https://www.thesmiletheband.com/onfilmevents), an evening orchestrated by The Smile (the band consisting of Radiohead members Thom Yorke and Jonny Greenwood, and Tom Skinner) and director [Paul Thomas Anderson](https://letterboxd.com/director/paul-thomas-anderson/) (_Phantom Thread_, _There Will Be Blood_).
 
-![A photo I took on the evening, of the cinema screen, displaying "Wall of Eyes: On Film"](/assets/journal/wall-of-eyes.avif "A photo I took on the evening, of the cinema screen, displaying Wall of Eyes: On Film")
+<figure class="w-full">
+    {% retinaImage "src/assets/journal/wall-of-eyes.avif", "A photo I took on the evening" %}
+    <figcaption class="pl-8 sm:pl-0">A photo I took on the evening</figcaption>
+  </figure>
 
 The primary attraction this evening: a first listen to [_Wall of Eyes_](https://thesmile.bandcamp.com/album/wall-of-eyes), the new album by The Smile, accompanied by animated visuals. After that, a flurry of music videos Paul Thomas Anderson previously directed for The Smile, Thom Yorke and Radiohead.
 

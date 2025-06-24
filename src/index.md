@@ -12,7 +12,7 @@ bodyClass: bg-blue
 
 <div class="relative w-full max-w-xl ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert main-content">
 
-<h2 class="home-subtitle mt-0 text-black dark:text-white">Software & web designer; writer.</h2>
+<h2 class="home-subtitle mt-0 text-black dark:text-white">Software & web designer; writer</h2>
 
 <section class="introduction">
   <span class="callout">I have over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.</span>
@@ -192,7 +192,7 @@ Over the course of one summer we laid the groundwork for what would grow into [N
 <h2 class="work-title">Pexip</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Streamlining a suite of video-conferencing software</h3>
 
-In collaboration with Pexip's team I led design on the (re)design of their web, iOS and Android apps, modernising their videoconferencing offering and creating  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand the company's tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
+In collaboration with Pexip's team I led design on the (re)design of their web, iOS and Android apps, modernising their video-conferencing offering and creating  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand the company's tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
 
 </div>
 
