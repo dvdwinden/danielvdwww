@@ -6,7 +6,7 @@ bodyClass: bg-stone
 tags: [music]
 description: When was the last time you sat down and listened to a music album previously unknown to you, front-to-back, without interruptions or distractions? And, when was the last time you did so with 300 strangers?
 ---
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] pb-32 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] pb-32 dark:prose-invert">
 
 <h1>Listening alone, together: The Smile's “Wall of Eyes”</h1>
 <span class="font-sans text-sm">January 27, 2024</span>

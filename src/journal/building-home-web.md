@@ -11,7 +11,7 @@ image:
   title: "On building a home on the web (I)"
 ---
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 
 <h1>On building a home on the web (I)</h1>
 <span class="font-sans text-sm">February 25, 2022</span>
@@ -30,7 +30,7 @@ I remember following people like [Jason Santa Maria](https://jasonsantamaria.com
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 Websites like these consisted, usually, of a combination of people's work and interests, with the latter taking centre stage. They housed a few projects, a collection of blog posts—long or very short—and otherwise revolved around things you’d stumble upon in one’s physical living room: movies, music, books, or other things of particular significance. 
 
@@ -76,7 +76,7 @@ I've seen websites as reading lists ([Thijs](https://thijs.niks.nu/ "Thijs Niks"
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 The tools we have access to as designers have matured, and evolved to a point where they make creating and maintaining an online personality—not a business card—easier than ever. By not having to obsess over the nuts and bolts of a website as much, the bar for experimentation and expression has been lowered significantly. For someone who only codes occasionally (like me), building a website no longer has to be daunting, and there are many tools to choose from: link together a few pages in a [Figma](http://figma.com/prototyping "Figma") prototype and point a domain to it; drag and drop components using your phone, on [Universe](https://onuniverse.com/ "Universe"); design a website on the canvas and click one button to publish it, with [Framer](http://framer.com "Framer"); or, use what feels like the web's Photoshop to build a fully functioning online platform, using [Webflow](https://webflow.com "Webflow")— this should allow everyone to more easily use our websites as a medium again, instead of leaving them to be a dead end because we dread the process or don't have the full technical knowhow.
 

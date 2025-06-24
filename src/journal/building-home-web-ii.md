@@ -11,7 +11,7 @@ image:
   title: "On building a home on the web (II)"
 ---
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 
 <h1>On building a home on the web (II)</h1>
 <span class="font-sans text-sm">June 25, 2025</span>
@@ -39,7 +39,7 @@ It was around this time that [Framer](http://framer.com?rel=daniel.pizza "Framer
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 I jumped at the opportunity and created myself a truly personal website. It housed the books I read, the films I watched, and the [links I collected](/links "My collected links"). I later added links to my [newsletter](/newsletter "My newsletter on books") and a [now](/now "What I'm up to now") page. My familiarity with the canvas lowered the barrier significantly. I believe I launched it within two weeks. I kept it up regularly after that, and [others referenced it now and again](https://thu-le.com/blogroll?ref=daniel.pizza "Thư Le's mention of my website").
 
@@ -63,7 +63,7 @@ The no-code tool that initially lowered the barrier for me to create had started
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 ## Back to basics with a static site
 After leaving my role at Ghost I was going to need a new website—one that left a little more room for myself as a professional (as my friend [Timon](https://www.linkedin.com/in/timonvanreek "Timon van Reek on LinkedIn") once rightfully pointed out, “you literally have a website about your hobbies”). I decided to build it myself. 
@@ -80,7 +80,7 @@ I made one quick sketch in Figma (below) and started building immediately after 
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 I time-boxed my efforts to roughly a week, and while building I discovered [People and Blogs](https://peopleandblogs.com/ "People and Blogs"), curated and maintained by [Manuel Moreale](https://manuelmoreale.com/ "Manuel Moreale"). The websites featured there inspired me to keep things simple. To ship a first version quickly, to keep learning, and to improve things over time. In the end, I deployed the first version nine days after I started.
 

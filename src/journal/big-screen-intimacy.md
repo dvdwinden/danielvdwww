@@ -10,7 +10,7 @@ image:
   alt: "Still from Memoria (2022)"
   title: "On the big screen, intimacy is what you'll find"
 ---
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 
 <h1>On the big screen, intimacy is what you'll find</h1>
 <span class="font-sans text-sm">May 10, 2022</span>
@@ -24,7 +24,7 @@ On a Sunday morning at twelve, I settled into a chair at a local movie theatre f
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 From the first minute, _Memoria_ is wonderfully sensory: running for two and a half hours it consists largely of near silence or ambient noise. The scenes are long and dialogue is used sparingly, which makes every sentence that's spoken—in Spanish or English—feel more important, carry more weight. The sounds of pouring rain, babbling brooks, and cheerful bird song play an important role. The [_sound design_](https://soundsandcolours.com/articles/colombia/memoria-sound-as-a-cinematic-experience-64518/ "On Memoria's sound design") of the film was specifically focused on the theatrical experience; Jessica as a walking microphone, very sensitive to the noises surrounding her, anxiously awaiting that loud bang keeping her from falling asleep. As a viewer, you have no choice but to sway along with her, at times glued to your seat and often enthralled by minute-long shots that endlessly captivate.
 
@@ -43,7 +43,7 @@ Twelve hours before the sensory experience of _Memoria_, I left another darkened
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 Visually, _The Batman_ is beautiful: where most superhero-movies feel distant, Reeves knows how to pull the viewer in with exquisite camerawork. Shots are often close-ups of faces, shot over one's shoulder or from behind a window wet with rain, making it feel like you're observing each character from nearby, almost smelling the rain on the tarmac. What little light there is shrouds the city in a glow of red, blue and amber, and _The Batman_ makes [_Drive_](https://letterboxd.com/film/drive-2011/ "Drive on Letterboxd") (Nicolas Winding Refn's 2011 film known for its "neo-noir" sensibilities) look like a carnival.
 
@@ -71,7 +71,7 @@ Evan Puschak ([_The Nerdwriter_](https://www.youtube.com/channel/UCJkMlOu7faDgqh
   </figure>
 </div>
 
-<div class="w-full max-w-xl ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 It is often said that watching films in one's living room, with all its comforts—curled up on the couch, under a blanket, with a glass of wine in hand—makes for the most intimate film experience. In a cinema you're sat next to strangers gobbling up popcorn or M&Ms, after all. But, in saying so, it's easy to forget about the way in which we consume a film at home. 
 
 You sit down, and pause the film after three minutes; you forgot to put on your comfy socks. Fifteen minutes later, a toilet break, and on the way back to the couch, a new drink. Halfway through the film your partner decides to walk the dog—the last lap of the day—and, after pausing the film, you quickly load the dishwasher. Your phone vibrates when the film reaches its final plot twist, and two minutes later you rewind it to see what just happened. Ten minutes before the end you doze off and subsequently stumble to bed—you'll catch up on the ending tomorrow. 
