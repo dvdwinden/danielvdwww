@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "On building a home on the web"
+title: "On building a home on the web (I)"
 bodyClass: bg-stone
 date: 2022-02-25
 tags: [internet, development]
@@ -8,12 +8,12 @@ description: About the decline & revival of the personal website, and on the pro
 image:
   src: /assets/journal/fun-personal-websites.avif
   alt: "The websites of Jeffrey Zeldman (2004), Jason Santa Maria (2008), and Jessica Hische (2012)."
-  title: "On building a home on the web"
+  title: "On building a home on the web (I)"
 ---
 
 <div class="w-full max-w-xl ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 
-<h1>On building a home on the web</h1>
+<h1>On building a home on the web (I)</h1>
 <span class="font-sans text-sm">February 25, 2022</span>
 
 It’s been five years since I’ve created myself an actual, personal website.

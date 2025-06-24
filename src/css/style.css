@@ -332,6 +332,7 @@ html.dark #page-background {
 /* Callout */
 .callout {
     font-size: 1.6rem;
+    line-height: 1.4;
     color: theme('colors.black');
 }
 
