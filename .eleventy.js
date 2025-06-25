@@ -540,6 +540,7 @@ module.exports = function (eleventyConfig) {
   // Don't passthrough asset directories since they're handled by the image optimization
   // Only passthrough files that should not be optimized
   eleventyConfig.addPassthroughCopy("src/assets/**/*.mp4");
+  eleventyConfig.addPassthroughCopy("src/assets/**/*.pdf");
 
   // Copy fonts directory for custom fonts
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
