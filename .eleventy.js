@@ -12,6 +12,11 @@ const IMAGE_CACHE = new Map();
 const FILE_PATH_CACHE = new Map();
 
 module.exports = function (eleventyConfig) {
+  // Add environment variables to global data
+  eleventyConfig.addGlobalData("env", {
+    NODE_ENV: process.env.NODE_ENV || "development"
+  });
+
   // Add regexMatch filter
   eleventyConfig.addFilter("regexMatch", function (str, pattern) {
     const regex = new RegExp(pattern);
