@@ -13,13 +13,11 @@ My code editor of choice is [Cursor](cursor.com?ref=daniel.pizza "Cursor, code e
 
 Headings are set in [_Degular_](https://ohnotype.co/fonts/degular?ref=daniel.pizza "Degular by Oh No Type Co") by Oh No Type Co. Foster Type's [_Blanco_](https://www.fostertype.com/retail-type/blanco?ref=daniel.pizza "Blanco by Foster Type") is used for body copy.
 
-I use some basic analytics, which can be found on [Umami](https://cloud.umami.is/share/wM1ixCuqaLkACDo9/daniel.pizza "View my analytics on Umami"). The average load time of this website is ~1.3ms, and its average page weight is ~30KB. 
+I use some basic analytics, which can be found on [Umami](https://cloud.umami.is/share/wM1ixCuqaLkACDo9/daniel.pizza "View my analytics on Umami"). The average load time of this website is ~88ms, and its average page weight is ~71KB. 
 
 ## Lighthouse scores
-Performance score will be improved shortly. 
-
-- **Performance:** 74/100
-- **Accessibility:** 95/100
+- **Performance:** 94/100
+- **Accessibility:** 96/100
 - **Best Practices:** 100/100
 - **SEO:** 100/100
 
