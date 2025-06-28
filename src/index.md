@@ -65,7 +65,7 @@ bodyClass: bg-blue
       <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
       <div class="md:w-3/4">
       <div class="text-md font-bold font-sans">
-          <h3>CDO, Partner at <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
+          <h3>Partner, CDO at <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
         <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
           As Partner, I was involved in setting the company's strategy. As CDO, I focused on our Product Design work and team—from securing projects to hiring new team members, and from elevating our reputation externally to enabling Product Designers to do their best work.
