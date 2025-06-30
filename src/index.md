@@ -113,7 +113,7 @@ I've worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel
 <h2 class="work-title">Ghost</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Designing and building tools for writers, journalists and publishers</h3>
 
-While at Ghost I designed an upgraded publishing workflow, turning a dead end into an opportunity for publishers to share their work with their audience. I also contributed to the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza "Custom fonts in Ghost"), was involved in Ghost's exploratory brand work, and designed and built [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") throughout the product.
+While at Ghost I designed an upgraded publishing workflow, turning a dead end into an opportunity for publishers to share their work with their audience. I contributed design and code to the new onboarding, and worked on the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza "Custom fonts in Ghost"). I was involved in exploratory brand work, and designed and built [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") throughout the product.
 
 </div>
 
