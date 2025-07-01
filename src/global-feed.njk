@@ -1,0 +1,28 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>{{ metadata.title }} - Global Feed</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <link href="{{ metadata.url }}/feed.xml" rel="self"/>
+  <link href="{{ metadata.url }}/"/>
+  <updated>{% set allPosts = collections.journal.concat(collections.links) %}{{ allPosts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}/</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- set allPosts = collections.journal.concat(collections.links) | sort(false, false, 'date') | reverse %}
+  {%- for post in allPosts.slice(0, 20) %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+  <entry>
+    <title>{{ post.data.title | safe }}</title>
+    <link href="{{ post.data.external_url | safe or absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
