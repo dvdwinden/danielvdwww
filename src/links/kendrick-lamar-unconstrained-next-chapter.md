@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Kendrick Lamar's Unconstrained Next Chapter"
 date: 2022-04-15
 tags: [music]

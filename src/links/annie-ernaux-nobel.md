@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Annie Ernaux's Justly Deserved Nobel"
 date: 2023-10-20
 tags: [publishing, literature, profile]

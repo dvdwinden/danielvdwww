@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "The Case for Software Criticism"
 date: 2022-03-10
 tags: [software, design]

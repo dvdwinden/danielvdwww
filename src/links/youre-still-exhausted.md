@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "You're Still Exhausted"
 date: 2023-07-02
 tags: [culture]

@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Life At The Cabin"
 date: 2022-04-18
 tags: [youtube, nature, homesteading]

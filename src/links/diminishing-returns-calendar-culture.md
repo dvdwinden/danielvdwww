@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "The Diminishing Returns Of Calendar Culture"
 date: 2023-07-01
 tags: [productivity, culture]

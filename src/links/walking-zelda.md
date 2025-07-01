@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Walking Zelda"
 date: 2023-06-18
 tags: [games]

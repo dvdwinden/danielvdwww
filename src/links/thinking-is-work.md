@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Thinking Is Work"
 date: 2023-06-03
 tags: [design, software]

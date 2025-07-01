@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Looking elsewhere"
 date: 2025-06-18
 tags: [software, culture, development]

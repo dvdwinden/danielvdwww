@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Computers and Creativity"
 date: 2022-04-10
 tags: [computers, internet]

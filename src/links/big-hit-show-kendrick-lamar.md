@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "The Big Hit Show on Kendrick Lamar's “To Pimp A Butterfly”"
 date: 2023-05-19
 tags: [music, podcast]

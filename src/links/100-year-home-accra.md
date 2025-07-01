@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Designing A 100-Year Home In Accra"
 date: 2023-06-01
 tags: [architecture]

@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Disambiguation"
 date: 2022-05-14
 tags: [essay]

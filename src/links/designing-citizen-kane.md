@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Designing Citizen Kane, Down to the Letter"
 date: 2022-04-16
 tags: [cinema]

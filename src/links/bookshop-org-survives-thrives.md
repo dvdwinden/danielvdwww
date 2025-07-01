@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "How Bookshop.org Survives—and Thrives—in Amazon's World"
 date: 2023-04-11
 tags: [books]

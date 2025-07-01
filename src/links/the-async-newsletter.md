@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: The Async Newsletter
 date: 2022-02-25
 tags: [work, communication]

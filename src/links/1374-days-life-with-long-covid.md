@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "1,374 Days: My Life with Long Covid"
 date: 2025-06-30
 tags: [essay, data visualisation]

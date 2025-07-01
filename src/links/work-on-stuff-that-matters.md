@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Work on Stuff that Matters: First Principles"
 date: 2022-03-02
 tags: [work]

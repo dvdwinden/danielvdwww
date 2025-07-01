@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Elsewhere, walking in the peatlands"
 date: 2025-06-22
 tags: [music, poetry]

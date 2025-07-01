@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Casey Neistat's first review of Apple's Vision Pro"
 date: 2024-02-03
 tags: [youtube, gadgets, technology]

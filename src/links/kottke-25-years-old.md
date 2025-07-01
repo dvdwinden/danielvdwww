@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Kottke.org Is 25 Years Old Today"
 date: 2023-03-14
 tags: [internet, blogging]

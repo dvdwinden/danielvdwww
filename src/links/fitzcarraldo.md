@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "How a Tiny British Publisher Became the Home of Nobel Laureates"
 date: 2023-10-18
 tags: [publishing, literature, profile]

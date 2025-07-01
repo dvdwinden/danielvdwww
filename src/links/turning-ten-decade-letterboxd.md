@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Turning Ten: A Decade On Letterboxd"
 date: 2022-07-22
 tags: [cinema, social media]

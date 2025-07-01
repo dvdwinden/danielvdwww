@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Into The Personal Website Verse"
 date: 2025-06-27
 tags: [internet, personal web]

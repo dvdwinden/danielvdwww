@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Typography is the foundation of any design system"
 date: 2025-06-20
 tags: [design, youtube]

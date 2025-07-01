@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Penguin Series Design"
 date: 2024-02-10
 tags: [books, publishing, design]

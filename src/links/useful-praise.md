@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Useful Praise"
 date: 2022-07-20
 tags: [essay]

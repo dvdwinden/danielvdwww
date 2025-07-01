@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Do I Have Time for This?"
 date: 2023-08-03
 tags: [essay, time]

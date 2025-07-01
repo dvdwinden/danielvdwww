@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "FLOWER BOY: a conversation"
 date: 2023-03-01
 tags: [youtube, music]

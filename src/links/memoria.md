@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Seeing The World Through Film And 'Memoria'"
 date: 2023-02-01
 tags: [cinema]

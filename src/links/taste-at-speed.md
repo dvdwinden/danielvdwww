@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Taste at speed"
 date: 2025-07-01
 tags: [essay, design, AI]

@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: Joan Didion And The Opposite Of Magical Thinking
 date: 2022-02-23
 tags: [profile, literature]

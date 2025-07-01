@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "The Psychological Benefits of Commuting to Work"
 date: 2023-05-13
 tags: [work, transportation]

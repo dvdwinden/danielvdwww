@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Talking Robots Into Heaven: A conversation between James Blake and Brian Eno"
 date: 2023-11-28
 tags: [youtube, music]

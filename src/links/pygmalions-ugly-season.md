@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "“Pygmalion's Ugly Season”"
 date: 2022-04-02
 tags: [music]

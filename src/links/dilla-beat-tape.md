@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "The Obscure J Dilla Beat Tape That Changed Music Forever"
 date: 2023-06-14
 tags: [music]

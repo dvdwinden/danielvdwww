@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "On “Succession”, Jeremy Strong Doesn't Get The Joke"
 date: 2022-04-17
 tags: [television, profile]

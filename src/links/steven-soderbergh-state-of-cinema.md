@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Steven Soderbergh: The State of Cinema"
 date: 2022-03-11
 tags: [cinema]

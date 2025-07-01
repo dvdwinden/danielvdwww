@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Building a modern home"
 date: 2023-05-12
 tags: [architecture]

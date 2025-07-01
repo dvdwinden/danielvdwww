@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "What makes collaboration click?"
 date: 2023-05-22
 tags: [design, software]

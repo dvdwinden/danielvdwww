@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Losing Alice"
 date: 2023-10-25
 tags: [publishing, software, internet]

@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Shelf Space"
 date: 2024-08-22
 tags: [interior]

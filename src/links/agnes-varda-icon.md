@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "How Agnès Varda Became an Icon of Cinema"
 date: 2024-08-15
 tags: [profile, cinema]

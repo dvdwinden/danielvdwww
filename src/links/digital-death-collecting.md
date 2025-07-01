@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "The Digital Death of Collecting"
 date: 2022-08-01
 tags: [essay]

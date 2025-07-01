@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Against The Dark Forest"
 date: 2024-11-22
 tags: [essay, internet]

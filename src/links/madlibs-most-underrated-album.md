@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Madlib's Most Underrated Album"
 date: 2022-04-06
 tags: [music]

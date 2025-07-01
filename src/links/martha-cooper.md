@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Martha Cooper: A Picture Story"
 date: 2022-04-01
 tags: [cinema, trailer]

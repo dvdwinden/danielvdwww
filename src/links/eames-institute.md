@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Eames Institute"
 date: 2023-03-29
 tags: [design, furniture, architecture]

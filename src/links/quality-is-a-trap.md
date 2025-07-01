@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Quality is a trap"
 date: 2025-06-26
 tags: [design]

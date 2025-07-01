@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Honor The Material"
 date: 2023-07-03
 tags: [design]

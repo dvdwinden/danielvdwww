@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Ocean Vuong Is Still Learning"
 date: 2023-05-15
 tags: [profile, literature, poetry]

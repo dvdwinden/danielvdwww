@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Yes, People Do Buy Books"
 date: 2024-02-10
 tags: [essay, publishing]

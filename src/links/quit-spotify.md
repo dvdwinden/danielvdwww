@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Why I Finally Quit Spotify"
 date: 2024-07-31
 tags: [software, music]

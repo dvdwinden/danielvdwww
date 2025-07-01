@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Creating the Fontstand Cooperative"
 date: 2025-06-29
 tags: [design, typography]

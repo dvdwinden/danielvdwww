@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Stone Skipping Is a Lost Art. Kurt Steiner Wants the World to Find It."
 date: 2024-09-13
 tags: [essay, nature]

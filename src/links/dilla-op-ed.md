@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "“Mozart. Coltrane. Ellington. And J Dilla? Why the underrecognized beatmaker belongs among the legends”"
 date: 2023-06-13
 tags: [music]

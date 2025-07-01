@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Dropbox Brand Guidelines"
 date: 2025-06-27
 tags: [design, branding]

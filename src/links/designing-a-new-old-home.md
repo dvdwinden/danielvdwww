@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: narrow.njk
 title: "Designing A New Old Home"
 date: 2022-03-05
 tags: [architecture]
