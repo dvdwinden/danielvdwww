@@ -18,11 +18,11 @@ eleventyExcludeFromCollections: true
   {%- for post in allPosts.slice(0, 20) %}
   {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
   <entry>
-    <title>{{ post.data.title | safe }}</title>
+    <title>{{ post.data.title }}</title>
     <link href="{{ post.data.external_url | escape or absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | safe }}</content>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {%- endfor %}
 </feed>
