@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Dropbox Brand Guidelines"
-date: 2025-27-06
+date: 2025-06-27
 tags: [design, branding]
 external_url: https://brand.dropbox.com/?ref=daniel.pizza
 

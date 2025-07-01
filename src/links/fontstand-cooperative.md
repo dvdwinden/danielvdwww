@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Creating the Fontstand Cooperative"
-date: 2025-29-06
+date: 2025-06-29
 tags: [design, typography]
 external_url: https://fontstand.com/news/design-news/creating-the-fontstand-cooperative/?ref=daniel.pizza
 

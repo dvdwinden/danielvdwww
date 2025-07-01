@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Taste at speed"
-date: 2025-01-07
+date: 2025-07-01
 tags: [essay, design, AI]
 external_url: https://carly.substack.com/p/taste-at-speed
 

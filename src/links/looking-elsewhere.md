@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Looking elsewhere"
-date: 2025-18-06
+date: 2025-06-18
 tags: [software, culture, development]
 external_url: https://robbowen.digital/wrote-about/looking-elsewhere/?ref=daniel.pizza
 ---

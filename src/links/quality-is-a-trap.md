@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Quality is a trap"
-date: 2025-26-06
+date: 2025-06-26
 tags: [design]
 external_url: https://ericwbailey.website/published/quality-is-a-trap/?ref=daniel.pizza
 

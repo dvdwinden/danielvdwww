@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Typography is the foundation of any design system"
-date: 2025-20-06
+date: 2025-06-20
 tags: [design, youtube]
 external_url: https://youtu.be/n0iAYEpU0Fk?si=-DBpi2PULMSEKIQ0&ref=daniel.pizza
 ---
