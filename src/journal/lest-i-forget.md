@@ -6,4 +6,8 @@ date: 2024-08-01
 tags: [essay, grief]
 description: A personal essay; a meditation on loss and the poetry of mistranslations, all based on one earth-shattering conversation at the oncologist's.
 external_url: http://transcriptmag.store/issue-one?ref=daniel.pizza
----
+image:
+  src: /assets/journal/lest-i-forget.jpg
+  alt: "Photo of my story in issue one of TRANSCRIPT"
+  title: "Lest I Forget"
+--- 
