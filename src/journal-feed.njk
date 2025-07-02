@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
     <link href="{% if post.data.external_url %}{{ post.data.external_url | escape }}{% else %}{{ absolutePostUrl }}{% endif %}"/>
     <updated>{{ post.inputPath | gitDate | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}&lt;p&gt;&lt;a href="{{ post.data.external_url | escape }}"&gt;Continue reading →&lt;/a&gt;&lt;/p&gt;</content>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}{% if post.data.external_url %}&lt;p&gt;&lt;a href="{{ post.data.external_url | escape }}"&gt;Continue reading →&lt;/a&gt;&lt;/p&gt;{% endif %}</content>
   </entry>
   {%- endfor %}
 </feed>
