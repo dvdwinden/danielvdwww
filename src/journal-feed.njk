@@ -18,7 +18,7 @@ eleventyExcludeFromCollections: true
   {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
   <entry>
     <title>{{ post.data.title }}</title>
-    <link href="{{ absolutePostUrl }}"/>
+    <link href="{% if post.data.external_url %}{{ post.data.external_url | escape }}{% else %}{{ absolutePostUrl }}{% endif %}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
