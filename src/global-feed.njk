@@ -22,7 +22,9 @@ eleventyExcludeFromCollections: true
     <link href="{% if post.data.external_url %}{{ post.data.external_url | escape }}{% else %}{{ absolutePostUrl }}{% endif %}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content type="html"><![CDATA[{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}]]>
+      {% if post.data.external_url %}<p><a href="{{ post.data.external_url }}">Continue reading →</a></p>{% endif %}
+    </content>
   </entry>
   {%- endfor %}
 </feed>
