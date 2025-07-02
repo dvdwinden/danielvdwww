@@ -21,9 +21,9 @@ eleventyExcludeFromCollections: true
     <link href="{{ post.data.external_url | escape }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+    <content type="html"><![CDATA[{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
 
-<p><a href="{{ post.data.external_url | escape }}">Continue reading →</a></p></content>
+<p><a href="{{ post.data.external_url }}">Continue reading →</a></p>]]></content>
   </entry>
   {%- endfor %}
 </feed>
