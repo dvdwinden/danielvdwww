@@ -282,7 +282,8 @@ Most recently I've acted as the copywriter and editor on the [NoGood art book](h
   <h2 class="work-title">Speaking</h2>
   <div class="flex flex-col">
     <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
-      <p class="my-4">Adyen Studio Day, Amsterdam</p>
+      <p class="my-4">
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7345825584481988610/" title="Adyen Studio Day" rel="external" target="_blank">Adyen Studio Day</a>, Amsterdam</p>
       <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JUL 2025</span>
     </div>
     <div class="flex items-baseline justify-between">
