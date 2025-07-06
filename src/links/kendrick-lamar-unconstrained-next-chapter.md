@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Kendrick Lamar's Unconstrained Next Chapter"
-date: 2022-04-15
+date: 2025-07-06T19:15:20+0000
 tags: [music]
 external_url: https://www.nytimes.com/2022/12/27/magazine/kendrick-lamar-dave-free.html?ref=daniel.pizza
 ---
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
+
 {% retinaImage "src/assets/links/kendrick-lamar.webp", "Kendrick Lamar, by Greg Noire" %}
 
 A profile of Kendrick Lamar and the moves he's made since leaving T.D.E., the label he was with since 2007. 

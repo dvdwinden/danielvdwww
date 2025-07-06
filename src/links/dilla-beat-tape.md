@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "The Obscure J Dilla Beat Tape That Changed Music Forever"
-date: 2023-06-14
+date: 2025-07-06T19:15:20+0000
 tags: [music]
 external_url: https://pitchfork.com/features/article/the-obscure-j-dilla-beat-tape-that-changed-music-forever/?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/dilla-beat-tape.avif", "The author's own copy of the tape. Graphic by Marina Kozak" %}
 

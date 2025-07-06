@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Why The Batman Is So Beautiful"
-date: 2022-04-03
+date: 2025-07-06T19:15:20+0000
 tags: [cinema]
 external_url: https://www.youtube.com/watch?v=STynLl-2FqU&ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe

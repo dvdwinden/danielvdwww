@@ -1,11 +1,13 @@
 ---
 layout: narrow.njk
 title: "The Economist redesigned its app"
-date: 2025-07-03T19:25:48+0000
+date: 2025-07-06T19:15:20+0000
 tags: [design, publishing]
 external_url: https://www.niemanlab.org/2025/06/the-economist-redesigns-its-app-to-promote-short-stories-on-weekdays-and-longer-reads-on-weekends/?ref=daniel.pizza
 
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/the-economist.jpg", "The Economist's redesign" %}
 

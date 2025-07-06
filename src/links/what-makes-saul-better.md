@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "What Makes Saul Better"
-date: 2022-03-03
+date: 2025-07-06T19:15:20+0000
 tags: [television]
 external_url: https://youtu.be/obIWs9p0boE?list=TLGGh1jiwBV3SI8xNDAxMjAyMw&ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe

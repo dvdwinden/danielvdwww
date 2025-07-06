@@ -29,7 +29,7 @@ A regularly updated collection of things I find worth reading, watching, or list
         </span>
       </div>
       <div class="prose prose-sm mt-4 dark:text-gray-300">
-        {{ post.templateContent | safe }}
+        {{ post.templateContent | removeH1 | safe }}
       </div>
     </div>
   </li>

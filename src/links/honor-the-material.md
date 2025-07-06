@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Honor The Material"
-date: 2023-07-03
+date: 2025-07-06T19:15:20+0000
 tags: [design]
 external_url: https://www.andy.works/words/honor-the-material?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/honor-material.jpg", "Graphic by Andy Allen" %}
 

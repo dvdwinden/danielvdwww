@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Typography is the foundation of any design system"
-date: 2025-06-20
+date: 2025-07-06T19:15:20+0000
 tags: [design, youtube]
 external_url: https://youtu.be/n0iAYEpU0Fk?si=-DBpi2PULMSEKIQ0&ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe

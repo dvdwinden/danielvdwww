@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Annie Ernaux's Justly Deserved Nobel"
-date: 2023-10-20
+date: 2025-07-06T19:15:20+0000
 tags: [publishing, literature, profile]
 external_url: https://www.newyorker.com/culture/cultural-comment/annie-ernauxs-justly-deserved-nobel?bxid=5d7fe4bf24c17c026ec5b353&cndid=58984045&hasha=d46e79c9642b29051ab149b892513f37&hashb=7dad86959a437ca0d289e9c750783965ba57f5b4&hashc=2d983f789b74505b0b80b504176c565827f6b4551581b188d6e16c1944e9eeef&esrc=subscribe-page&mbid=mbid%3DCRMNYR012019&ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/annie-ernaux.avif", "Photograph by Ulf Andersen" %}
 

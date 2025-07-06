@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "How Jonny Greenwood Wrote The Year's Best Film Score"
-date: 2023-09-22
+date: 2025-07-06T19:15:20+0000
 tags: [music, profile]
 external_url: https://www.newyorker.com/culture/the-new-yorker-interview/how-jonny-greenwood-wrote-the-years-best-film-score?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/jonny-greenwood.webp", "Jonny Greenwood illustration by Uli Knörzer" %}
 

@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: The Metaverse Is Not A Place
-date: 2022-03-01
+date: 2025-07-06T19:15:20+0000
 tags: [metaverse]
 external_url: https://www.oreilly.com/radar/the-metaverse-is-not-a-place/?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 _“What if, instead of thinking of the metaverse as a set of interconnected virtual places, we think of it as a communications medium?”_
 

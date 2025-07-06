@@ -1,11 +1,13 @@
 ---
 layout: narrow.njk
 title: "The Big Hit Show on Kendrick Lamar's “To Pimp A Butterfly”"
-date: 2023-05-19
+date: 2025-07-06T19:15:20+0000
 tags: [music, podcast]
 external_url: https://open.spotify.com/episode/5QX81LIqjZhNXpeYFv8Sct?go=1&sp_cid=0173d8558c87a3a2bad9dee307089d15&utm_source=embed_player_p&utm_medium=desktop&ref=daniel.pizza
 
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 <iframe class="mt-7" style="border-radius:0px!important" src="https://open.spotify.com/embed/episode/5QX81LIqjZhNXpeYFv8Sct?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 

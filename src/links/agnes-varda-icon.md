@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "How Agnès Varda Became an Icon of Cinema"
-date: 2024-08-15
+date: 2025-07-06T19:15:20+0000
 tags: [profile, cinema]
 external_url: https://www.newyorker.com/culture/the-front-row/how-agnes-varda-became-an-icon-of-cinema?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/agnes-varda.avif", "Photograph by Bob Berg" %}
 

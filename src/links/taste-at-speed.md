@@ -1,11 +1,13 @@
 ---
 layout: narrow.njk
 title: "Taste at speed"
-date: 2025-07-01
+date: 2025-07-06T19:15:20+0000
 tags: [essay, design, AI]
 external_url: https://carly.substack.com/p/taste-at-speed
 
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 As I was finishing up writing a talk for <a href="http://adyen.com?ref=daniel.pizza" title="Adyen" rel="external" target="_blank">Adyen's</a> Studio Day (on designing and writing with attention and intention, on quality and craft, on taste, and on AI tooling), an email arrived in my inbox. In it was the latest post by <a href="https://carly.substack.com/?ref=daniel.pizza" title="Carly Ayres" rel="external" target="_blank">Carly Ayres</a>, writer, and previous co-founder of <a href="https://www.instagram.com/hawraf/?ref=daniel.pizza" rel="external" title="HAWRAF" target="_blank">HAWRAF</a>, and it reinforced the line of thinking I'd been on.
 

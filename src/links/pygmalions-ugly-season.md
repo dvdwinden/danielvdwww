@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "“Pygmalion's Ugly Season”"
-date: 2022-04-02
+date: 2025-07-06T19:15:20+0000
 tags: [music]
 external_url: https://youtu.be/JQ5kdR_N3Vo?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe

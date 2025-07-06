@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Kottke.org Is 25 Years Old Today"
-date: 2023-03-14
+date: 2025-07-06T19:15:20+0000
 tags: [internet, blogging]
 external_url: https://kottke.org/23/03/kottke-is-25-years-old-today?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 While everyone's scampering back to build and publish personal websites, let's not forget about those who never went away (although, admittedly, Jason did take a brief hiatus, which feels even briefer considering the timespan of Kottke.org).  
 

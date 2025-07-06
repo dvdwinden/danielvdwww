@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Walking Zelda"
-date: 2023-06-18
+date: 2025-07-06T19:15:20+0000
 tags: [games]
 external_url: https://craigmod.com/ridgeline/157/?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/craig-mod-zelda.avif", "Still from Zelda: Breath of the Wild" %}
 

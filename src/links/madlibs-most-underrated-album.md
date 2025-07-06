@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Madlib's Most Underrated Album"
-date: 2022-04-06
+date: 2025-07-06T19:15:20+0000
 tags: [music]
 external_url: https://youtu.be/51FxrgujZYQ?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe

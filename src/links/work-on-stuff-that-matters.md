@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Work on Stuff that Matters: First Principles"
-date: 2022-03-02
+date: 2025-07-06T19:15:20+0000
 tags: [work]
 external_url: http://radar.oreilly.com/2009/01/work-on-stuff-that-matters-fir.html?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 A blogpost by Tim O'Reilly from 2009, but timely as ever. On working on things that matter, on creating value, and on taking the long view.
 

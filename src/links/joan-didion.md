@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: Joan Didion And The Opposite Of Magical Thinking
-date: 2022-02-23
+date: 2025-07-06T19:15:20+0000
 tags: [profile, literature]
 external_url: https://www.newyorker.com/culture/postscript/joan-didion-and-the-opposite-of-magical-thinking?ref=daniel.pizza
 ---
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
+
 {% retinaImage "src/assets/links/joan-didion.webp", "Joan Didion, photograph by Duane Michals (2001)" %}
 
 _“You didn't have to agree with her, but you had to submit to her sentences.”_ 

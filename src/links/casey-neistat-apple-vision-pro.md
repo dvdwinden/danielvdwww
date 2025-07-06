@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Casey Neistat's first review of Apple's Vision Pro"
-date: 2024-02-03
+date: 2025-07-06T19:15:20+0000
 tags: [youtube, gadgets, technology]
 external_url: https://www.youtube.com/watch?v=UvkgmyfMPks&ab_channel=CaseyNeistat&ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 <div class="relative w-full pb-[56.25%] mt-7 overflow-hidden">
   <iframe

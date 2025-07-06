@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "Into The Personal Website Verse"
-date: 2025-06-27
+date: 2025-07-06T19:15:20+0000
 tags: [internet, personal web]
 external_url: https://matthiasott.com/articles/into-the-personal-website-verse?ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/into-the-personal-website-verse.jpg", "Illustration based on photographs of the Apple Lisa by Victor R. Ruiz and the Apple Lisa mouse by Marcin Wichary, both released under a Creative Commons license (Attribution 2.0 Generic, CC BY 2.0)." %}
 

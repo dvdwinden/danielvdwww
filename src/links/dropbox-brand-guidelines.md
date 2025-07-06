@@ -1,11 +1,13 @@
 ---
 layout: narrow.njk
 title: "Dropbox Brand Guidelines"
-date: 2025-06-27
+date: 2025-07-06T19:15:20+0000
 tags: [design, branding]
 external_url: https://brand.dropbox.com/?ref=daniel.pizza
 
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/dropbox-brand-guidelines.png", "Dropbox Brand Guidelines" %}
 

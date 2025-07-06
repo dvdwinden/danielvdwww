@@ -1,10 +1,12 @@
 ---
 layout: narrow.njk
 title: "FLOWER BOY: a conversation"
-date: 2023-03-01
+date: 2025-07-06T19:15:20+0000
 tags: [youtube, music]
 external_url: http://youtube.com/watch?v=WrcwcMIYpQg&ref=daniel.pizza
 ---
+
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 <div class="mt-7 relative w-full pb-[56.25%] overflow-hidden">
   <iframe

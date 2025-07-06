@@ -24,6 +24,16 @@ module.exports = function (eleventyConfig) {
     return match ? match : null;
   });
 
+  // Add filter to remove h1 tags from template content
+  eleventyConfig.addFilter("removeH1", function (content) {
+    if (!content) return content;
+    // Remove h1 tags with links to external_url and title variables
+    // Handle both raw and HTML-encoded versions
+    return content
+      .replace(/<h1><a href="{{ external_url }}">{{ title }}<\/a><\/h1>\s*/g, '')
+      .replace(/<h1><a href="[^"]*">.*?<\/a><\/h1>\s*/g, '');
+  });
+
   // Image optimization function
   // Utility function to try finding a file
   const tryFile = async (filePath) => {
