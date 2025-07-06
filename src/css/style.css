@@ -249,7 +249,8 @@ html.dark #page-background {
     font-family: theme('fontFamily.sans');
 }
 
-.prose h1 {
+.prose h1,
+.prose h1 a {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -929,6 +930,10 @@ a.no-underline:hover span {
 
     /* Mobile typography adjustments */
     .prose h1 {
+        font-size: 2rem;
+    }
+
+    .prose h1 a {
         font-size: 2rem;
     }
 
