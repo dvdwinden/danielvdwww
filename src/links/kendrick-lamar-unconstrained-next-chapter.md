@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Kendrick Lamar's Unconstrained Next Chapter"
-date: 2025-07-07T09:20:36+0000
+date: 2025-07-07T09:23:56+0000
 tags: [music]
 external_url: https://www.nytimes.com/2022/12/27/magazine/kendrick-lamar-dave-free.html?ref=daniel.pizza
 bodyClass: bg-green

@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Disambiguation"
-date: 2025-07-07T09:20:36+0000
+date: 2025-07-07T09:23:56+0000
 tags: [essay]
 external_url: https://aworkinglibrary.com/writing/disambiguation?ref=daniel.pizza
 bodyClass: bg-green

@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: The Metaverse Is Not A Place
-date: 2025-07-07T09:20:36+0000
+date: 2025-07-07T09:23:56+0000
 tags: [metaverse]
 external_url: https://www.oreilly.com/radar/the-metaverse-is-not-a-place/?ref=daniel.pizza
 bodyClass: bg-green

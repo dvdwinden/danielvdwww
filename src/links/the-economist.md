@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "The Economist redesigned its app"
-date: 2025-07-07T09:20:36+0000
+date: 2025-07-07T09:23:56+0000
 tags: [design, publishing]
 external_url: https://www.niemanlab.org/2025/06/the-economist-redesigns-its-app-to-promote-short-stories-on-weekdays-and-longer-reads-on-weekends/?ref=daniel.pizza
 

@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Seeing The World Through Film And 'Memoria'"
-date: 2025-07-07T09:20:36+0000
+date: 2025-07-07T09:23:56+0000
 tags: [cinema]
 external_url: https://www.kodak.com/en/motion/blog-post/memoria?ref=daniel.pizza
 bodyClass: bg-green

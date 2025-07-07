@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "What makes collaboration click?"
-date: 2025-07-07T09:20:36+0000
+date: 2025-07-07T09:23:56+0000
 tags: [design, software]
 external_url: https://fictivekin.com/websystems/systems-not-sites?ref=daniel.pizza
 

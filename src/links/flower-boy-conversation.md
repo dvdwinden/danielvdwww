@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "FLOWER BOY: a conversation"
-date: 2025-07-07T09:20:36+0000
+date: 2025-07-07T09:23:56+0000
 tags: [youtube, music]
 external_url: http://youtube.com/watch?v=WrcwcMIYpQg&ref=daniel.pizza
 bodyClass: bg-green
