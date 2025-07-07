@@ -1,10 +1,11 @@
 ---
 layout: narrow.njk
 title: "Do You Speak Typography?"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:20:36+0000
 tags: [design, typography]
 external_url: https://fontstand.com/news/essays/do-you-speak-typography/?ref=daniel.pizza
 
+bodyClass: bg-green
 ---
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

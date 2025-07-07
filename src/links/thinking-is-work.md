@@ -1,10 +1,11 @@
 ---
 layout: narrow.njk
 title: "Thinking Is Work"
-date: 2025-07-07T09:18:44+0000
+date: 2025-07-07T09:20:36+0000
 tags: [design, software]
 external_url: https://daneden.me/blog/2021/thinking-is-work?ref=daniel.pizza
 
+bodyClass: bg-green
 ---
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

@@ -1,9 +1,10 @@
 ---
 layout: narrow.njk
 title: "Talking Robots Into Heaven: A conversation between James Blake and Brian Eno"
-date: 2025-07-07T09:18:44+0000
+date: 2025-07-07T09:20:36+0000
 tags: [youtube, music]
 external_url: https://youtu.be/iWN-kW-qpfc?si=O-Jq7WmpX-_mHl7x&ref=daniel.pizza
+bodyClass: bg-green
 ---
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

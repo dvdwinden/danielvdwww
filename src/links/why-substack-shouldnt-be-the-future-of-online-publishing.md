@@ -1,10 +1,11 @@
 ---
 layout: narrow.njk
 title: "Why Substack shouldn't be the future of online publishing"
-date: 2025-07-07T08:52:37+0000
+date: 2025-07-07T09:20:36+0000
 tags: [publishing]
 external_url: https://torment-nexus.mathewingram.com/why-substack-shouldnt-be-the-future-of-online-publishing/?ref=daniel.pizza
 
+bodyClass: bg-green
 ---
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

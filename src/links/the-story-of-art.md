@@ -1,10 +1,11 @@
 ---
 layout: narrow.njk
 title: "The Story of Art (luxury edition)"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:20:36+0000
 tags: [design, books, publishing]
 external_url: https://edjiboutique.com/products/the-story-of-art-luxury-edition/?ref=daniel.pizza
 
+bodyClass: bg-green
 ---
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

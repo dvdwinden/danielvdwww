@@ -1,10 +1,11 @@
 ---
 layout: narrow.njk
 title: "“Mozart. Coltrane. Ellington. And J Dilla? Why the underrecognized beatmaker belongs among the legends”"
-date: 2025-07-07T09:18:44+0000
+date: 2025-07-07T09:20:36+0000
 tags: [music]
 external_url: https://www.latimes.com/opinion/story/2022-02-18/op-ed-hip-hop-beatmaker-j-dilla-ellington-mozart-coltrane?ref=daniel.pizza
 
+bodyClass: bg-green
 ---
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

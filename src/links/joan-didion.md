@@ -1,9 +1,10 @@
 ---
 layout: narrow.njk
 title: Joan Didion And The Opposite Of Magical Thinking
-date: 2025-07-07T09:18:44+0000
+date: 2025-07-07T09:20:36+0000
 tags: [profile, literature]
 external_url: https://www.newyorker.com/culture/postscript/joan-didion-and-the-opposite-of-magical-thinking?ref=daniel.pizza
+bodyClass: bg-green
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 

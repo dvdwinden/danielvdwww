@@ -1,9 +1,10 @@
 ---
 layout: narrow.njk
 title: "Steven Soderbergh: The State of Cinema"
-date: 2025-07-07T09:18:44+0000
+date: 2025-07-07T09:20:36+0000
 tags: [cinema]
 external_url: https://www.youtube.com/watch?v=ZQrFSUwFwUM&ref=daniel.pizza
+bodyClass: bg-green
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
