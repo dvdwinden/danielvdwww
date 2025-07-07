@@ -25,7 +25,7 @@ In parallel, [Iris](http://iriscuppen.com "Iris Cuppen") and I have started work
 </figure>
 
 ## Greenhouse
-On the home-front, [Megan](https://x.com/megantronic "My partner, Megan") and I have rented a 16 m² plot in a shared greenhouse where we can grow vegetables. We're currently building raised beds, before putting in irrigation and planting crops. The greenhouse is already proving a calming respite from day-to-day life.
+On the home-front, Megan and I have rented a 16 m² plot in a shared greenhouse where we can grow vegetables. We're currently building raised beds, before putting in irrigation and planting crops. The greenhouse is already proving a calming respite from day-to-day life.
 
 <span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: June 2025</span>
 
