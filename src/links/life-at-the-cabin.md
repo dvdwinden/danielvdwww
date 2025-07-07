@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Life At The Cabin"
-date: 2025-07-07T09:23:56+0000
+date: 2025-07-07T09:27:13+0000
 tags: [youtube, nature, homesteading]
 external_url: https://www.youtube.com/watch?list=TLGGfcmVFkg66IEwMjAxMjAyMw&v=eo8_5d9yGq4&ref=daniel.pizza
 bodyClass: bg-green

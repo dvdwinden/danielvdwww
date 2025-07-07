@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Losing Alice"
-date: 2025-07-07T09:23:56+0000
+date: 2025-07-07T09:27:13+0000
 tags: [publishing, software, internet]
 external_url: https://pioneerworks.org/broadcast/claire-evans-sheila-heti-ai?ref=daniel.pizza
 bodyClass: bg-green

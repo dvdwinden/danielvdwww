@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Useful Praise"
-date: 2025-07-07T09:23:56+0000
+date: 2025-07-07T09:27:13+0000
 tags: [essay]
 external_url: https://aworkinglibrary.com/writing/useful-praise?ref=daniel.pizza
 bodyClass: bg-green

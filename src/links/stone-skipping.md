@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Stone Skipping Is a Lost Art. Kurt Steiner Wants the World to Find It."
-date: 2025-07-07T09:23:56+0000
+date: 2025-07-07T09:27:13+0000
 tags: [essay, nature]
 external_url: https://magazine.frontier.is/shelf-space/?ref=daniel.pizza
 bodyClass: bg-green

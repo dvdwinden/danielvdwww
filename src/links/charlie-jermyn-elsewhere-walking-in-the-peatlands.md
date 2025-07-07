@@ -1,10 +1,9 @@
 ---
 layout: narrow.njk
 title: "Elsewhere, walking in the peatlands"
-date: 2025-07-07T09:23:56+0000
+date: 2025-07-07T09:27:13+0000
 tags: [music, poetry]
 external_url: https://soundcloud.com/charlie-jermyn/more-poetry-is-needed-elsewhere-walking-in-the-peatlands?in=charlie-jermyn/sets/more-poetry-is-needed
-
 bodyClass: bg-green
 ---
 
