@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Kottke.org Is 25 Years Old Today"
-date: 2025-07-07T09:27:13+0000
+date: 2023-03-14
 tags: [internet, blogging]
 external_url: https://kottke.org/23/03/kottke-is-25-years-old-today?ref=daniel.pizza
 bodyClass: bg-green

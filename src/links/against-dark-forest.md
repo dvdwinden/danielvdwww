@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Against The Dark Forest"
-date: 2025-07-07T09:27:13+0000
+date: 2024-11-22
 tags: [essay, internet]
 external_url: https://www.wrecka.ge/against-the-dark-forest/?ref=daniel.pizza
 bodyClass: bg-green

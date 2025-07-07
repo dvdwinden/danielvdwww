@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Work on Stuff that Matters: First Principles"
-date: 2025-07-07T09:27:13+0000
+date: 2022-02-25
 tags: [work]
 external_url: http://radar.oreilly.com/2009/01/work-on-stuff-that-matters-fir.html?ref=daniel.pizza
 bodyClass: bg-green

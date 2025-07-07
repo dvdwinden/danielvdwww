@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "How Bookshop.org Survives—and Thrives—in Amazon's World"
-date: 2025-07-07T09:27:13+0000
+date: 2023-04-11
 tags: [books]
 external_url: https://www.wired.com/story/books-bookshop-org-thrives-amazon-world/?ref=daniel.pizza
 bodyClass: bg-green

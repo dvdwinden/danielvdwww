@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Computers and Creativity"
-date: 2025-07-07T09:27:13+0000
+date: 2022-04-10
 tags: [computers, internet]
 external_url: https://www.mollymielke.com/cc?ref=daniel.pizza
 bodyClass: bg-green

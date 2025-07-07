@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Designing Citizen Kane, Down to the Letter"
-date: 2025-07-07T09:27:13+0000
+date: 2022-04-16
 tags: [cinema]
 external_url: https://www.criterion.com/current/posts/7660-designing-citizen-kane-down-to-the-letter?ref=daniel.pizza
 bodyClass: bg-green

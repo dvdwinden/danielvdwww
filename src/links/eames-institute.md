@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Eames Institute"
-date: 2025-07-07T09:27:13+0000
+date: 2023-03-29
 tags: [design, furniture, architecture]
 external_url: https://www.instrument.com/work/eames-institute/?ref=daniel.pizza
 bodyClass: bg-green

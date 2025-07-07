@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Honor The Material"
-date: 2025-07-07T09:27:13+0000
+date: 2023-07-03
 tags: [design]
 external_url: https://www.andy.works/words/honor-the-material?ref=daniel.pizza
 bodyClass: bg-green

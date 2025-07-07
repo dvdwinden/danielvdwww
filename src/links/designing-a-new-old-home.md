@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Designing A New Old Home"
-date: 2025-07-07T09:27:13+0000
+date: 2022-03-05
 tags: [architecture]
 external_url: https://simonsarris.substack.com/p/designing-a-new-old-home-beginnings?ref=daniel.pizza
 bodyClass: bg-green

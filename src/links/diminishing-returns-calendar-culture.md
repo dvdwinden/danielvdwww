@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "The Diminishing Returns Of Calendar Culture"
-date: 2025-07-07T09:27:13+0000
+date: 2023-07-01
 tags: [productivity, culture]
 external_url: https://annehelen.substack.com/p/the-diminishing-returns-of-calendar?ref=daniel.pizza
 bodyClass: bg-green

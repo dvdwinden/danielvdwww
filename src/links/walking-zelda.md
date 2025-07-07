@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Walking Zelda"
-date: 2025-07-07T09:27:13+0000
+date: 2023-06-18
 tags: [games]
 external_url: https://craigmod.com/ridgeline/157/?ref=daniel.pizza
 bodyClass: bg-green

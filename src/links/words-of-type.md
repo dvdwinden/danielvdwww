@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Do You Speak Typography?"
-date: 2025-07-07T09:23:56+0000
+date: 2025-07-02
 tags: [design, typography]
 external_url: https://fontstand.com/news/essays/do-you-speak-typography/?ref=daniel.pizza
 

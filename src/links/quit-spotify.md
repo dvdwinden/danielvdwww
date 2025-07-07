@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Why I Finally Quit Spotify"
-date: 2025-07-07T09:27:13+0000
+date: 2024-07-31
 tags: [software, music]
 external_url: https://www.newyorker.com/culture/infinite-scroll/why-i-finally-quit-spotify?ref=daniel.pizza
 bodyClass: bg-green

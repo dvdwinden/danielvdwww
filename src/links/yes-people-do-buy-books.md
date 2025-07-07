@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Yes, People Do Buy Books"
-date: 2025-07-07T09:27:13+0000
+date: 2024-02-10
 tags: [essay, publishing]
 external_url: https://countercraft.substack.com/p/yes-people-do-buy-books?ref=daniel.pizza
 bodyClass: bg-green

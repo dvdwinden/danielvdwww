@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Stephen Fry reads Nick Cave's stirring letter about ChatGPT and human creativity"
-date: 2025-07-07T09:27:13+0000
+date: 2023-11-23
 tags: [youtube, ai, art]
 external_url: https://youtu.be/iGJcF4bLKd4?si=h3bejLzEzdxIXypb&ref=daniel.pizza
 bodyClass: bg-green

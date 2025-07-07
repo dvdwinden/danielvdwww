@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "The Digital Death of Collecting"
-date: 2025-07-07T09:27:13+0000
+date: 2022-08-01
 tags: [essay]
 external_url: https://kylechayka.substack.com/p/essay-the-digital-death-of-collecting?ref=daniel.pizza
 bodyClass: bg-green

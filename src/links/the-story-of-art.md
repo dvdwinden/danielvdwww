@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "The Story of Art (luxury edition)"
-date: 2025-07-07T09:23:56+0000
+date: 2025-07-06T17:17:43+0000
 tags: [design, books, publishing]
 external_url: https://edjiboutique.com/products/the-story-of-art-luxury-edition/?ref=daniel.pizza
 

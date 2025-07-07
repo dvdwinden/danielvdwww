@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Shelf Space"
-date: 2025-07-07T09:27:13+0000
+date: 2024-08-22
 tags: [interior]
 external_url: https://magazine.frontier.is/shelf-space/?ref=daniel.pizza
 bodyClass: bg-green

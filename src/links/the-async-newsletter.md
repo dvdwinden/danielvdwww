@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: The Async Newsletter
-date: 2025-07-07T09:27:13+0000
+date: 2022-02-25
 tags: [work, communication]
 external_url: https://async.twist.com?ref=daniel.pizza
 bodyClass: bg-green

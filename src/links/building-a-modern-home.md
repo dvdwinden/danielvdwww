@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Building a modern home"
-date: 2025-07-07T09:27:13+0000
+date: 2023-05-12
 tags: [architecture]
 external_url: https://www.johnnyrodgers.is/building-a-modern-home/?ref=daniel.pizza
 bodyClass: bg-green

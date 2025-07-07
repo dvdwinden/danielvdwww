@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Penguin Series Design"
-date: 2025-07-07T09:27:13+0000
+date: 2024-02-10
 tags: [books, publishing, design]
 external_url: https://penguinseriesdesign.com/?ref=daniel.pizza
 bodyClass: bg-green
