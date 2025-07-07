@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "1,374 Days: My Life with Long Covid"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [essay, data visualisation]
 external_url: https://www.nytimes.com/interactive/2023/12/14/opinion/my-life-with-long-covid.html?unlocked_article_code=1.PU4.7vz7.HgZueWO6F5Y2
 

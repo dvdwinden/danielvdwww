@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "The Case for Software Criticism"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [software, design]
 external_url: https://www.wired.com/story/software-criticism/?ref=daniel.pizza
 ---

@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "What Makes Saul Better"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [television]
 external_url: https://youtu.be/obIWs9p0boE?list=TLGGh1jiwBV3SI8xNDAxMjAyMw&ref=daniel.pizza
 ---

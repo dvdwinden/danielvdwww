@@ -1,12 +1,11 @@
 ---
 layout: narrow.njk
 title: "Building a modern home"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [architecture]
 external_url: https://www.johnnyrodgers.is/building-a-modern-home/?ref=daniel.pizza
 
 ---
-
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/building-modern-home.jpg", "Johnny Rodgers' house" %}

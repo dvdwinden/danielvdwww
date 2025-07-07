@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Turning Ten: A Decade On Letterboxd"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [cinema, social media]
 external_url: https://letterboxd.com/journal/turning-ten-a-decade-on-letterboxd/?ref=daniel.pizza
 ---

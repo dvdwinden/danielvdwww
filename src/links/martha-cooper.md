@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Martha Cooper: A Picture Story"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [cinema, trailer]
 external_url: https://youtu.be/zgAjdQBF7JI?ref=daniel.pizza
 ---

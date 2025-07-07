@@ -1,11 +1,10 @@
 ---
 layout: narrow.njk
 title: "How Bookshop.org Survives—and Thrives—in Amazon's World"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [books]
 external_url: https://www.wired.com/story/books-bookshop-org-thrives-amazon-world/?ref=daniel.pizza
 ---
-
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/bookshop.webp", "Bookshop" %}

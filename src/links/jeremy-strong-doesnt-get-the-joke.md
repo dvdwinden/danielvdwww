@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "On “Succession”, Jeremy Strong Doesn't Get The Joke"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [television, profile]
 external_url: https://www.newyorker.com/magazine/2021/12/13/on-succession-jeremy-strong-doesnt-get-the-joke?ref=daniel.pizza
 ---

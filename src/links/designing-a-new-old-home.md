@@ -1,11 +1,10 @@
 ---
 layout: narrow.njk
 title: "Designing A New Old Home"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [architecture]
 external_url: https://simonsarris.substack.com/p/designing-a-new-old-home-beginnings?ref=daniel.pizza
 ---
-
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/designing-a-new-old-home.webp", "Simon Sarris' house, by Simon Sarris" %}

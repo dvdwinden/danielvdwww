@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "The Obscure J Dilla Beat Tape That Changed Music Forever"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [music]
 external_url: https://pitchfork.com/features/article/the-obscure-j-dilla-beat-tape-that-changed-music-forever/?ref=daniel.pizza
 ---

@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Ocean Vuong Is Still Learning"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [profile, literature, poetry]
 external_url: https://www.newyorker.com/culture/the-new-yorker-interview/ocean-vuong-is-still-learning?ref=daniel.pizza
 

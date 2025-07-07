@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "How Agnès Varda Became an Icon of Cinema"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [profile, cinema]
 external_url: https://www.newyorker.com/culture/the-front-row/how-agnes-varda-became-an-icon-of-cinema?ref=daniel.pizza
 ---

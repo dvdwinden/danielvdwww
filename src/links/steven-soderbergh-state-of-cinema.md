@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Steven Soderbergh: The State of Cinema"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [cinema]
 external_url: https://www.youtube.com/watch?v=ZQrFSUwFwUM&ref=daniel.pizza
 ---

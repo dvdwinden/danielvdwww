@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "The Psychological Benefits of Commuting to Work"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [work, transportation]
 external_url: https://www.theatlantic.com/magazine/archive/2021/07/admit-it-you-miss-your-commute/619007/?ref=daniel.pizza
 

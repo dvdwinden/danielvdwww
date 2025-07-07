@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Designing A 100-Year Home In Accra"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [architecture]
 external_url: https://www.quartey.com/writing/designing-family-home?ref=daniel.pizza
 

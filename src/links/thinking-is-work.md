@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Thinking Is Work"
-date: 2025-07-06T19:15:20+0000
+date: 2025-07-07T09:18:44+0000
 tags: [design, software]
 external_url: https://daneden.me/blog/2021/thinking-is-work?ref=daniel.pizza
 
