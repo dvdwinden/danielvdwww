@@ -1,0 +1,2 @@
+# Redirect old writing URLs to new journal URLs
+/writing/*  /journal/:splat  301!
