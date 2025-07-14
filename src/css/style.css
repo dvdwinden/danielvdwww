@@ -685,6 +685,11 @@ ul.newsletter h2 {
     margin-top: 0;
 }
 
+/* Journal list */
+ul.journal picture {
+    margin-top: 1em;
+}
+
 /* Icons */
 .icon-sunrise {
     color: #fff;
