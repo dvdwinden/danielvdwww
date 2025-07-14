@@ -359,6 +359,31 @@ span.testimonial {
    ========================================================================== */
 
 /* Header */
+header {
+    position: fixed;
+    top: 0;
+}
+
+/* Header scroll behavior - mobile only */
+@media (max-width: 768px) {
+    header {
+        transition: transform 0.35s ease-in-out;
+        z-index: 1000;
+    }
+
+    header.header-hidden {
+        transform: translateY(-100%);
+    }
+
+    header.header-visible {
+        transform: translateY(0);
+    }
+
+    header.scrolling {
+        transition: top 0.35s ease-in-out, transform 0.35s ease-in-out;
+    }
+}
+
 header a picture {
     margin-right: 0.5rem;
 }
