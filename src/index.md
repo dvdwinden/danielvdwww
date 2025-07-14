@@ -50,6 +50,17 @@ bodyClass: bg-blue
   <h2 class="work-title">Resumé</h2>
 
   <ul class="pl-0 ml-0 list-none space-y-10">
+   <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–Now</span>
+      <div class="md:w-3/4">
+      <div class="text-md font-bold font-sans">
+          <h3>Co-Founder of <a href="http://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" rel="nofollow" target="_blank"><em>TRANSCRIPT</em> Magazine</a></h3>
+        </div>
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+          Curating, editing, designing and publishing a seasonal literary magazine.
+        </div>
+      </div>
+    </li>
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
