@@ -629,19 +629,6 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });
 
-  // Add filter to get Git commit date for a file
-  eleventyConfig.addFilter("gitDate", function(filePath) {
-    try {
-      const { execSync } = require('child_process');
-      // Get the commit date for the file
-      const gitCommand = `git log -1 --format="%ai" "${filePath}"`;
-      const gitDate = execSync(gitCommand, { encoding: 'utf8' }).trim();
-      return gitDate ? new Date(gitDate) : new Date();
-    } catch (error) {
-      console.warn(`Could not get git date for ${filePath}:`, error.message);
-      return new Date();
-    }
-  });
 
   // Set up redirects from /writing/* to /journal/* both for local dev and production
   eleventyConfig.setServerOptions({
