@@ -2,7 +2,7 @@
 layout: base.njk
 title: "On building a home on the web (II)"
 bodyClass: bg-stone
-date: 2025-06-25
+date: 2025-07-16T19:16:17+0000
 tags: [internet, development]
 description: On moving away from no-code tools to build my own website.
 image:
@@ -41,7 +41,7 @@ It was around this time that [Framer](http://framer.com?rel=daniel.pizza "Framer
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
-I jumped at the opportunity and created myself a truly personal website. It housed the books I read, the films I watched, and the [links I collected](/links "My collected links"). I later added links to my [newsletter](/newsletter "My newsletter on books") and a [now](/now "What I'm up to now") page. My familiarity with the canvas lowered the barrier significantly. I believe I launched it within two weeks. I kept it up regularly after that, and [others referenced it now and again](https://thu-le.com/blogroll?ref=daniel.pizza "Thư Le's mention of my website").
+I jumped at the opportunity and created myself a truly personal website. It housed the books I read, the films I watched, and the [links I collected](/links "My collected links"). I later added links to my [newsletter](/newsletter "My newsletter on books") and a [now](/now "What I'm up to now") page. My familiarity with the canvas lowered the barrier significantly. I believe I launched it within two weeks. I kept it up regularly after that, and others referenced it now and again ([1](https://projects.kwon.nyc/internet-is-fun/ "Rachel Kwon's mention of my website"), [2](https://thu-le.com/blogroll?ref=daniel.pizza "Thư Le's mention of my website")).
 
 Shortly after that (or in parallel, or... both—and certainly not by my doing), it felt like the personal web took off again. I started seeing nicely crafted personal websites pop up everywhere (perhaps because I was looking more closely), and I tumbled down a rabbit hole, from blogroll to blogroll.
 
