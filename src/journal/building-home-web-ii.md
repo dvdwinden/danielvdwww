@@ -2,7 +2,7 @@
 layout: base.njk
 title: "On building a home on the web (II)"
 bodyClass: bg-stone
-date: 2025-07-16T20:57:05+0000
+date: 2025-06-25
 tags: [internet, development]
 description: On moving away from no-code tools to build my own website.
 image:
