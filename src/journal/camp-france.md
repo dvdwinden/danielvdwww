@@ -2,7 +2,7 @@
 layout: base.njk
 title: "A residency in the Pyrenees"
 bodyClass: bg-stone
-date: 2025-07-16T17:05:59+0000
+date: 2025-07-16T17:07:20+0000
 tags: [writing, camp residency]
 description: I'm traveling to the French Pyrenees in November for a week-long writing residency.
 image:
@@ -25,7 +25,7 @@ Recently I ran into [Simon Collison's journal](https://colly.com/journal/tag:cam
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">One of Simon's photos from his residency at CAMP</figcaption>
 </figure>
 
-I've thought about doing some kind of residency for quite some time; I like the idea of holing up somewhere with other creatives, sharing some work-in-progress throughout, and spending tim to create in a calm, supportive environment, away from the regular day-to-day. This one in particular is focused on music and writing, so I gather a few musicians show up there for residencies. I don't play an instrument, but I can imagine packing some recording equipment and going out into the mountains.
+I've thought about doing some kind of residency for quite some time; I like the idea of holing up somewhere with other creatives, sharing some work-in-progress throughout, and spending time creating in a calm, supportive environment, away from the regular day-to-day. This one in particular is focused on music and writing, so I gather a few musicians show up there for residencies. I don't play an instrument, but I can imagine packing some recording equipment and going out into the mountains.
 
 Either way, I've signed up to spend a week with them in November, and I'll focus on my writing. I have a few ideas bubbling, let's see what's left by the time winter rolls around. 
 
@@ -40,6 +40,7 @@ Having the mountains to myself for a week doesn't sound bad at all.
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Photo by CAMP</figcaption>
 </figure>
 
+I'll try to follow Simon's example and post a few brief updates here when the time comes.
 
 {% include "footer.njk" %}
 
