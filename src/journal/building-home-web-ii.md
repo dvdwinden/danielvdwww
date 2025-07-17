@@ -92,6 +92,4 @@ Right now, this site feels like a great base. I don't feel intimidated anymore.
 
 I have a nail, and I have my hammer, and I am wielding it.
 
-{% include "footer.njk" %}
-
 </div>

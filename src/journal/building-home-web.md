@@ -90,6 +90,4 @@ So, welcome to my reimagined home, to my corner of the Internet. Please do leave
 Thank you for reading, \
 Daniël.
 
-{% include "footer.njk" %}
-
 </div>

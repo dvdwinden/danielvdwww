@@ -183,8 +183,6 @@ Our plan is to live in this home for the next ten years. Revisiting these sketch
 
 <p class="article-footer">Thank you to Hallstein and Zoe, for dreaming up a home with us.</p>
 
-{% include "footer.njk" %}
-
 </div> 
 
 

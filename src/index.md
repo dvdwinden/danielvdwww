@@ -303,6 +303,4 @@ Most recently I've acted as the copywriter and editor on the [NoGood art book](h
       <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JAN 2025</span>
     </div>
   </div>
-
-  {% include "footer.njk" %}
 </div>

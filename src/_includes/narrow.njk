@@ -86,6 +86,9 @@
             <div class="w-full max-w-[1400px]">
                 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] pb-32 dark:prose-invert">
                     {{ content | safe }}
+                    <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
+                        {% include "footer.njk" %}
+                    </div>
                 </div>
             </div>
         </main>

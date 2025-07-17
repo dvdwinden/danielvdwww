@@ -42,6 +42,4 @@ Having the mountains to myself for a week doesn't sound bad at all.
 
 I'll try to follow Simon's example and post a few brief updates here when the time comes.
 
-{% include "footer.njk" %}
-
 </div>
