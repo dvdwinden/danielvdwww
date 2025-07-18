@@ -626,7 +626,9 @@ module.exports = function (eleventyConfig) {
 
   // Create collection for newsletter
   eleventyConfig.addCollection("newsletter", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/newsletter/*.md").sort((a, b) => b.date - a.date);
+    return collectionApi.getFilteredByGlob("src/newsletter/*.md")
+      .filter(item => !item.data.draft)
+      .sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
