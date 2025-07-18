@@ -612,12 +612,16 @@ module.exports = function (eleventyConfig) {
 
   // Create collection for links
   eleventyConfig.addCollection("links", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/links/*.md").sort((a, b) => b.date - a.date);
+    return collectionApi.getFilteredByGlob("src/links/*.md")
+      .filter(item => !item.data.draft)
+      .sort((a, b) => b.date - a.date);
   });
 
   // Create collection for journal
   eleventyConfig.addCollection("journal", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/journal/*.md").sort((a, b) => b.date - a.date);
+    return collectionApi.getFilteredByGlob("src/journal/*.md")
+      .filter(item => !item.data.draft)
+      .sort((a, b) => b.date - a.date);
   });
 
   // Create collection for newsletter
