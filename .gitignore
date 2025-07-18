@@ -32,3 +32,8 @@ Thumbs.db
 
 keys
 keys.pub
+
+# Draft folders (optional - for complete draft isolation)
+src/drafts/
+src/links/drafts/
+src/journal/drafts/
