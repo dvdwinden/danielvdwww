@@ -572,6 +572,9 @@ module.exports = function (eleventyConfig) {
   // Copy _redirects file for Netlify redirects
   eleventyConfig.addPassthroughCopy("src/_redirects");
 
+  // Copy robots.txt for SEO
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
+
   // Copy favicon.ico to root directory for default browser behavior
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
 

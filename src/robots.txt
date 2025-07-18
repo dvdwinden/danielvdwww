@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Prevent indexing of draft pages and directories
+# (Note: This is supplementary to the meta robots tags)
+Disallow: /drafts/
+Disallow: /_drafts/
+
+# Allow common crawlers to access feeds
+Allow: /journal/feed.xml
+Allow: /links/feed.xml
+Allow: /sitemap.xml
+
+# Sitemap location
+Sitemap: https://danielvanderwinden.com/sitemap.xml

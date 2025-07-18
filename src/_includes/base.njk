@@ -25,6 +25,9 @@
         Daniël van der Winden • Software designer & writer
     {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
+    {% if draft %}
+    <meta name="robots" content="noindex, nofollow">
+    {% endif %}
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Pre-load font files -->
