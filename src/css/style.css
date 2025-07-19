@@ -28,6 +28,33 @@
     border: 0;
 }
 
+/* Focus styles - only show for keyboard navigation, not mouse clicks */
+a:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+a:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure keyboard focus is still visible for navigation */
+nav a:focus-visible {
+    outline: 1px solid theme('colors.gray.400') !important;
+    outline-offset: 1px !important;
+    box-shadow: none !important;
+}
+
+/* Override any Tailwind focus ring styles for navigation */
+nav a:focus {
+    box-shadow: none !important;
+}
+
+nav a:focus-visible {
+    box-shadow: 0 0 0 2px theme('colors.gray.400') !important;
+}
+
 /* ==========================================================================
    TAILWIND DIRECTIVES
    ========================================================================== */
