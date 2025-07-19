@@ -1,18 +1,26 @@
 <footer class="site-footer" role="contentinfo" aria-label="Site footer">
     <ul>
         <li>
-            <a href="/colophon" title="Colophon" class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100 {% if page.url == '/colophon/' %} underline underline-custom text-black dark:text-white {% endif %}">
+            <a href="/colophon" title="Colophon" 
+               class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded-sm {% if page.url == '/colophon/' %} underline underline-custom text-black dark:text-white {% endif %}"
+               {% if page.url == '/colophon/' %}aria-current="page"{% endif %}>
                 Colophon
             </a>
         </li>
         <li>
-            <a href="mailto:d.vanderwinden@gmail.com" title="Email me" class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100">Email</a>
+            <a href="mailto:d.vanderwinden@gmail.com" title="Email me" 
+               class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded-sm"
+               aria-label="Send email to d.vanderwinden@gmail.com">Email</a>
         </li>
         <li>
-            <a href="/now" title="Now" class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100 {% if page.url == '/now/' %} underline underline-custom text-black dark:text-white {% endif %}">Now</a>
+            <a href="/now" title="Now" 
+               class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded-sm {% if page.url == '/now/' %} underline underline-custom text-black dark:text-white {% endif %}"
+               {% if page.url == '/now/' %}aria-current="page"{% endif %}>Now</a>
         </li>
         <li>
-            <a href="/feed.xml" title="RSS Feed" class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100">RSS</a>
+            <a href="/feed.xml" title="RSS Feed" 
+               class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded-sm"
+               aria-label="Subscribe to RSS feed">RSS</a>
         </li>
     </ul>
     <ul>
