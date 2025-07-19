@@ -22,5 +22,3 @@ I use some basic analytics, which can be found on [Umami](https://cloud.umami.is
 - **SEO:** 100/100
 
 Thank you to [Remy van der Winden](http://remyvdw.nl?ref=daniel.pizza "Remy van der Winden") for taking and letting me use my photo on the homepage. The framed artwork in the photo of my studio space is by [Nazif Lopulissa](https://www.naziflopulissa.com/?ref=daniel.pizza "Nazif Lopulissa") (left) and [Grilli Type](https://www.grillitype.com/?ref=daniel.pizza "Grilli Type") (right). Thanks, also, to my friend [Kristian Hjelle](https://www.linkedin.com/in/kristianhjelle/?ref=daniel.pizza "Kristian on LinkedIn"), for helping me sort out my [page transitions](https://github.com/dvdwinden/danielvdwww/pull/1 "Kristian's contribution to my website").
-
-{% include "footer.njk" %}
