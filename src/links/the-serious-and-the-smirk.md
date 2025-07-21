@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "The Serious and the Smirk"
-date: 2025-07-21
+date: 2025-07-21T16:10:00+02:00
 tags: [art, painting]
 external_url: https://nicholasjeeves.com/The-Serious-and-the-Smirk?ref=daniel.pizza
 bodyClass: bg-green
