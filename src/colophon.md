@@ -9,7 +9,7 @@ bodyClass: bg-blue
 
 This website was built by me. My first commit was made on [June 13th, 2025](https://github.com/dvdwinden/danielvdwww/commit/7d33b6dfcf658d2d01295b3c95ea86492b3dbce0 "My first commit to this website"), and I launched it nine days later. 
 
-My code editor of choice is [Cursor](cursor.com?ref=daniel.pizza "Cursor, code editor"). I use [Warp](http://warp.dev/?ref=daniel.pizza "Warp terminal") for any terminal shenanigans. To get things up and running I've used a simple static site generator called [Eleventy](https://www.11ty.dev/?ref=daniel.pizza "Eleventy"), using the [Nunjucks](https://mozilla.github.io/nunjucks/ "Nunjucks") template engine. All of this is publicly available, along with a readme, via my [repository](https://github.com/dvdwinden/danielvdwww "This site's Github repository") on Github.
+My code editor of choice is [Cursor](https://cursor.com?ref=daniel.pizza "Cursor, code editor"). I use [Warp](http://warp.dev/?ref=daniel.pizza "Warp terminal") for any terminal shenanigans. To get things up and running I've used a simple static site generator called [Eleventy](https://www.11ty.dev/?ref=daniel.pizza "Eleventy"), using the [Nunjucks](https://mozilla.github.io/nunjucks/ "Nunjucks") template engine. All of this is publicly available, along with a readme, via my [repository](https://github.com/dvdwinden/danielvdwww "This site's Github repository") on Github.
 
 Headings are set in [_Degular_](https://ohnotype.co/fonts/degular?ref=daniel.pizza "Degular by Oh No Type Co") by Oh No Type Co. Foster Type's [_Blanco_](https://www.fostertype.com/retail-type/blanco?ref=daniel.pizza "Blanco by Foster Type") is used for body copy.
 
