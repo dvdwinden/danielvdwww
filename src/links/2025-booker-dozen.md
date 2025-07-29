@@ -2,7 +2,6 @@
 layout: narrow.njk
 title: "The 2025 “Booker Dozen”"
 date: 2025-07-30
-draft: true
 tags: [books]
 external_url: https://thebookerprizes.com/the-booker-library/prize-years/2025?ref=daniel.pizza
 bodyClass: bg-green
