@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "AI Has Flipped Software Development"
-date: 2025-07-30
+date: 2025-07-31
 draft: true
 tags: [ai, development, design]
 external_url: https://www.lukew.com/ff/entry.asp?2112?ref=daniel.pizza
