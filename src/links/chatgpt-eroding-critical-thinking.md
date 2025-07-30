@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "ChatGPT May Be Eroding Critical Thinking Skills, According to a New MIT Study"
-date: 2025-07-29
+date: 2025-07-29T17:02:01+02:00
 tags: [ai]
 external_url: https://time.com/7295195/ai-chatgpt-google-learning-school?ref=daniel.pizza
 bodyClass: bg-green
