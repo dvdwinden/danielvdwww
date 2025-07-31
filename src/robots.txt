@@ -12,4 +12,4 @@ Allow: /links/feed.xml
 Allow: /sitemap.xml
 
 # Sitemap location
-Sitemap: https://danielvanderwinden.com/sitemap.xml
+Sitemap: http://www.daniel.pizza/sitemap.xml
