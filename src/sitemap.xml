@@ -16,13 +16,13 @@ eleventyExcludeFromCollections: true
     {% elif page.url == "/now/" %}
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    {% elif page.url.includes("/journal/") and page.url != "/journal/" %}
+    {% elif "/journal/" in page.url and page.url != "/journal/" %}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    {% elif page.url.includes("/links/") and page.url != "/links/" %}
+    {% elif "/links/" in page.url and page.url != "/links/" %}
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    {% elif page.url.includes("/newsletter/") and page.url != "/newsletter/" %}
+    {% elif "/newsletter/" in page.url and page.url != "/newsletter/" %}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     {% elif page.url == "/journal/" or page.url == "/links/" or page.url == "/newsletter/" %}
