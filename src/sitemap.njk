@@ -6,30 +6,38 @@ templateEngineOverride: njk
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-\n  {% set homePage = {
-    "url": "/",
-    "date": "2025-07-31",
-    "changefreq": "daily",
-    "priority": 1.0
-  } %}
-  {% set nowPage = {
-    "url": "/now/",
-    "date": "2025-07-31",
-    "changefreq": "weekly",
-    "priority": 0.8
-  } %}
-  {% set sections = ["journal", "links", "newsletter"] %}
-  {% for section in sections %}
-  {% set sectionPage = {
-    "url": "/" + section + "/",
-    "date": "2025-07-31",
-    "changefreq": "weekly",
-    "priority": 0.7
-  } %}
-  {% include "_includes/sitemap-entry.njk" with homePage %}
-  {% include "_includes/sitemap-entry.njk" with nowPage %}
-  {% include "_includes/sitemap-entry.njk" with sectionPage %}
-  {% endfor %}
+  <!-- Homepage -->
+  <url>
+    <loc>{{ metadata.url }}/</loc>
+    <lastmod>{{ "now" | date("yyyy-MM-dd") }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Main sections -->
+  <url>
+    <loc>{{ metadata.url }}/now/</loc>
+    <lastmod>{{ "now" | date("yyyy-MM-dd") }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ metadata.url }}/journal/</loc>
+    <lastmod>{{ "now" | date("yyyy-MM-dd") }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ metadata.url }}/links/</loc>
+    <lastmod>{{ "now" | date("yyyy-MM-dd") }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ metadata.url }}/newsletter/</loc>
+    <lastmod>{{ "now" | date("yyyy-MM-dd") }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 {% for page in collections.all %}
   {% if not page.data.draft and page.url %}
