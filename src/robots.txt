@@ -12,4 +12,4 @@ Allow: /links/feed.xml
 Allow: /sitemap.xml
 
 # Sitemap location
-Sitemap: http://www.daniel.pizza/sitemap.xml
+Sitemap: https://daniel.pizza/sitemap.xml
