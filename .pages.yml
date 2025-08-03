@@ -1,0 +1,160 @@
+# Pages CMS Configuration
+
+site:
+  title: "Daniël van der Winden"
+  url: "https://daniel.pizza"
+  language: "en"
+  description: "Personal website of Daniël van der Winden"
+  author:
+    name: "Daniël van der Winden"
+    email: "d.vanderwinden@gmail.com"
+
+# Collection configurations
+collections:
+  # Journal posts (long-form writing)
+  - name: "Journal"
+    label: "Journal"
+    folder: "src/journal"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Date", name: "date", widget: "datetime", required: true }
+      - { label: "Tags", name: "tags", widget: "list", required: false, default: [] }
+      - { label: "Description", name: "description", widget: "text", required: true }
+      - { label: "Body Class", name: "bodyClass", widget: "select", required: false, options: ["bg-stone", "bg-blue", "bg-green"], default: "bg-stone" }
+      - label: "Featured Image"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Source", name: "src", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Links (short posts with external URLs)
+  - name: "Links"
+    label: "Links"
+    folder: "src/links"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "narrow.njk" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Date", name: "date", widget: "datetime", required: true }
+      - { label: "Tags", name: "tags", widget: "list", required: false, default: [] }
+      - { label: "External URL", name: "external_url", widget: "string", required: true, hint: "The URL of the article/resource you're linking to" }
+      - { label: "Body Class", name: "bodyClass", widget: "select", required: false, options: ["bg-stone", "bg-blue", "bg-green"], default: "bg-green" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Newsletter (book recommendations)
+  - name: "Newsletter"
+    label: "Newsletter"
+    folder: "src/newsletter"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "narrow.njk" }
+      - { label: "Title", name: "title", widget: "string", required: true, hint: "Format: Author – Book Title (Year)" }
+      - { label: "Date", name: "date", widget: "datetime", required: true }
+      - { label: "Tags", name: "tags", widget: "list", required: false, default: ["fiction"] }
+      - { label: "External URL", name: "external_url", widget: "string", required: true, hint: "Link to the full review on trema.website" }
+      - label: "Book Cover"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Source", name: "src", widget: "image" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Brief excerpt with link to full review" }
+
+# Single page configurations
+files:
+  - label: "Homepage"
+    name: "homepage"
+    file: "src/index.md"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "base.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body Class", name: "bodyClass", widget: "select", options: ["bg-stone", "bg-blue", "bg-green"], default: "bg-stone" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - label: "Now Page"
+    name: "now"
+    file: "src/now.md"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "narrow.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body Class", name: "bodyClass", widget: "select", options: ["bg-stone", "bg-blue", "bg-green"], default: "bg-blue" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - label: "Colophon"
+    name: "colophon"
+    file: "src/colophon.md"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "narrow.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body Class", name: "bodyClass", widget: "select", options: ["bg-stone", "bg-blue", "bg-green"], default: "bg-blue" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - label: "404 Page"
+    name: "404"
+    file: "src/404.md"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "narrow.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+# Media configuration
+media_folder: "src/assets"
+public_folder: "/assets"
+
+# Editor configuration
+editor:
+  preview: true
+
+# Search configuration
+search: true
+
+# Theme configuration
+theme:
+  primary_color: "#000000"
+  accent_color: "#059669"
+
+# Authentication
+backend:
+  name: github
+  repo: dvdwinden/danielvdwww
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: oauth
+
+# Local development
+local_backend: true
+
+# Display configuration
+display_url: "https://daniel.pizza"
+logo_url: "/assets/favicon.png"
+
+# Slug configuration
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+# Show preview links
+show_preview_links: true
+
+# Site configuration for live preview
+site_url: "https://daniel.pizza"
