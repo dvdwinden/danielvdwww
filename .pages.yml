@@ -1,18 +1,22 @@
 # Pages CMS Configuration 
 
-site:
-  title: "Daniël van der Winden"
-  url: "https://daniel.pizza"
-  language: "en"
-  description: "Personal website of Daniël van der Winden"
-  author:
-    name: "Daniël van der Winden"
-    email: "d.vanderwinden@gmail.com"
+# Backend configuration
+backend:
+  name: github
+  repo: dvdwinden/danielvdwww
+  branch: main
+
+# Local development
+local_backend: true
+
+# Media configuration
+media_folder: "src/assets"
+public_folder: "/assets"
 
 # Collection configurations
 collections:
   # Journal posts (long-form writing)
-  - name: "Journal"
+  - name: "journal"
     label: "Journal"
     folder: "src/journal"
     create: true
@@ -37,7 +41,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   # Links (short posts with external URLs)
-  - name: "Links"
+  - name: "links"
     label: "Links"
     folder: "src/links"
     create: true
@@ -54,7 +58,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   # Newsletter (book recommendations)
-  - name: "Newsletter"
+  - name: "newsletter"
     label: "Newsletter"
     folder: "src/newsletter"
     create: true
@@ -116,45 +120,3 @@ files:
       - { label: "Layout", name: "layout", widget: "hidden", default: "narrow.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-
-# Media configuration
-media_folder: "src/assets"
-public_folder: "/assets"
-
-# Editor configuration
-editor:
-  preview: true
-
-# Search configuration
-search: true
-
-# Theme configuration
-theme:
-  primary_color: "#000000"
-  accent_color: "#059669"
-
-# Authentication
-backend:
-  name: github
-  repo: dvdwinden/danielvdwww
-  branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: oauth
-
-# Local development
-local_backend: true
-
-# Display configuration
-display_url: "https://daniel.pizza"
-logo_url: "/assets/favicon.png"
-
-# Slug configuration
-slug:
-  encoding: "ascii"
-  clean_accents: true
-
-# Show preview links
-show_preview_links: true
-
-# Site configuration for live preview
-site_url: "https://daniel.pizza"
