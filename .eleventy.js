@@ -575,6 +575,10 @@ module.exports = function (eleventyConfig) {
   // Copy robots.txt for SEO
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
+  // Copy Pages CMS configuration files
+  eleventyConfig.addPassthroughCopy(".pages.yml");
+  eleventyConfig.addPassthroughCopy("pages.yml");
+
   // Copy favicon.ico to root directory for default browser behavior
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
 
