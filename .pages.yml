@@ -1,26 +1,25 @@
-collections:
-  - name: "links"
-    label: "Links"
-    folder: "src/links"
-    create: true
-    slug: "{{slug}}"
-    extension: "md"
-    format: "frontmatter"
+media:
+  input: src/assets
+  output: /assets
+
+content:
+  - name: links
+    label: Links
+    type: collection
+    path: src/links
     fields:
-      - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Date", name: "date", widget: "datetime", required: true }
-      - { label: "External URL", name: "external_url", widget: "string", required: true }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-backend:
-  name: github
-  repo: dvdwinden/danielvdwww
-  branch: main
-
-media_folder: "src/assets"
-public_folder: "/assets"
-
-# Site info
-site:
-  title: "Daniël van der Winden"
-  url: "https://daniel.pizza"
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: external_url
+        label: External URL
+        type: string
+        required: true
+      - name: body
+        label: Body
+        type: rich-text
