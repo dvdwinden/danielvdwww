@@ -5,7 +5,7 @@ date: 2025-08-03
 tags: writing
 external_url: https://www.newyorker.com/magazine/takes/jane-mayer-on-john-herseys-hiroshima?ref=daniel.pizza
 ---
-# \[{{ title }}\]({{ external\_url }})
+<h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
 {% retinaImage "src/assets/links/hiroshima.png", "John Hersey's Hiroshima in The New Yorker" %}
 
