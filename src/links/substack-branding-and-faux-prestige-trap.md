@@ -1,9 +1,11 @@
 ---
+layout: narrow.njk
 title: The Substack Branding and Faux Prestige Trap
 date: 2025-08-04
+tags: publishing
 external_url: https://daringfireball.net/2025/08/the_substack_branding_and_faux_prestige_trap?ref=daniel.pizza
 ---
-# [{{ title }}]({{ external_url }})
+# \[{{ title }}\]({{ external\_url }})
 
 I've been banging this drum for a while, and will continue doing so, even after leaving my role at [Ghost](http://ghost.org?ref=daniel.pizza "Ghost, the publishing platform"): Substack is not a place for independent writers.
 
