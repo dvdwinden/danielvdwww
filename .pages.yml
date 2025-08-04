@@ -8,6 +8,10 @@ content:
     type: collection
     path: src/links
     fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: narrow.njk
       - name: title
         label: Title
         type: string
@@ -16,10 +20,22 @@ content:
         label: Date
         type: date
         required: true
+      - name: tags
+        label: Tags
+        type: string
+        multiple: true
       - name: external_url
         label: External URL
         type: string
         required: true
+      - name: bodyClass
+        label: Body Class
+        type: select
+        options:
+          - bg-stone
+          - bg-blue
+          - bg-green
+        default: bg-green
       - name: body
         label: Body
         type: rich-text
