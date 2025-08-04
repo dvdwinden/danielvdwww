@@ -19,3 +19,8 @@ backend:
 
 media_folder: "src/assets"
 public_folder: "/assets"
+
+# Site info (may be required for navigation)
+site:
+  title: "Daniel's Website"
+  url: "https://daniel.pizza"
