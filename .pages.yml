@@ -17,9 +17,10 @@ content:
         type: string
         required: true
       - name: date
-        label: Date
+        label: Date & Time
         type: date
         required: true
+        format: datetime-local
       - name: tags
         label: Tags
         type: string
