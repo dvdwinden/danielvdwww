@@ -29,17 +29,6 @@ content:
         label: External URL
         type: string
         required: true
-      - name: bodyClass
-        label: Body Class
-        type: select
-        options:
-          - value: bg-stone
-            label: Stone
-          - value: bg-blue
-            label: Blue
-          - value: bg-green
-            label: Green
-        default: bg-green
       - name: body
         label: Body
         type: rich-text
