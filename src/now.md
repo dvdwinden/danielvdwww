@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: Now
-description: A snapshot of current projects, interests, and life updates.
+description: A snapshot of what I'm currently working on and interested in (based on an idea by Derek Sivers).
 bodyClass: bg-blue
 ---
 
