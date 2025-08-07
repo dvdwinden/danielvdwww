@@ -14,7 +14,7 @@ image:
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 
-<h1>Writing the NoGood art book</h1>
+<h1>Writing and editing the NoGood art book</h1>
 <span class="font-sans text-sm">Date</span>
 
 Text...
