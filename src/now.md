@@ -30,7 +30,7 @@ I'm already talking about engagements from October onwards, but have some time l
 </div>
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
-I'm also still chipping away at this website, and am regularly adding [Links](links "Links"). I have a few [Journal](/journal "Journal") posts in mind, too. Did you know you can subscribe via RSS? There's separate feeds for Links and Journal, and a global feed for everything; find it in the footer.
+I'm also still chipping away at this website, and am regularly adding [Links](/links "Links"). I have a few [Journal](/journal "Journal") posts in mind, too. Did you know you can subscribe via RSS? There's separate feeds for Links and Journal, and a global feed for everything; find it in the footer.
 
 ## _TRANSCRIPT_ Magazine
 In parallel, [Iris](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") and I are trying to get the fourth and final issue of [_TRANSCRIPT_ Magazine](http://transcriptmag.com?ref=daniel.pizza "TRANSCRIPT Magazine") to print soon. It will come out in the fall, and in September we'll head to Milan for [Mag to Mag](https://magtomag.com/en "Mag to Mag festival"), _festival dei magazine indipendenti_. (There are a few copies left of our [third issue](http://transcriptmag.store/issue-three?ref=daniel.pizza "TRANSCRIPT Magazine: issue three")!)
