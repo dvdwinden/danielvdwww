@@ -108,6 +108,40 @@ module.exports = function (eleventyConfig) {
     }
   }
 
+  // Check if an image needs processing based on modification times
+  function needsProcessing(srcPath) {
+    try {
+      const srcStats = fs.statSync(srcPath);
+      const relativePath = srcPath.replace(/^src\//, '');
+      const parsedPath = path.parse(relativePath);
+      const outputDir = path.join("./_site", path.dirname(relativePath));
+      const originalName = path.basename(parsedPath.name);
+      
+      // Check if any of the output files exist and are newer than source
+      const formats = ["avif", "webp", "jpeg"];
+      const widths = [300, 600, 900, 1200, 1800, 2400];
+      
+      for (const format of formats) {
+        for (const width of widths) {
+          const outputFile = path.join(outputDir, `${originalName}-${width}.${format}`);
+          if (fs.existsSync(outputFile)) {
+            const outputStats = fs.statSync(outputFile);
+            // If output is newer than source, no need to process
+            if (outputStats.mtime > srcStats.mtime) {
+              return false;
+            }
+          }
+        }
+      }
+      
+      // If we get here, either no output files exist or source is newer
+      return true;
+    } catch (err) {
+      // If there's any error checking, assume we need to process
+      return true;
+    }
+  }
+
   // Process all images in a directory
   async function processAllImages() {
     // Ensure output directories exist
@@ -148,13 +182,25 @@ module.exports = function (eleventyConfig) {
       return !fileName.includes('favicon') && !fileName.includes('apple-touch-icon');
     });
 
-    console.log(`Found ${imageFiles.length} images to process`);
-    console.log(`Excluding ${faviconFiles.length} favicon files from processing`);
-    console.log(`Processing ${filesToProcess.length} images`);
+    // Filter to only process images that have changed or don't have output
+    const filesToActuallyProcess = filesToProcess.filter(file => {
+      const needsWork = needsProcessing(file);
+      if (!needsWork) {
+        console.log(`⚡ Skipping ${file} (already processed and up to date)`);
+      }
+      return needsWork;
+    });
 
-    // Process each image and build a mapping of original references to processed images
-    for (const file of filesToProcess) {
+    console.log(`Found ${imageFiles.length} total images`);
+    console.log(`Excluding ${faviconFiles.length} favicon files from processing`);
+    console.log(`${filesToProcess.length} images eligible for processing`);
+    console.log(`🚀 Processing ${filesToActuallyProcess.length} changed/new images`);
+    console.log(`⚡ Skipping ${filesToProcess.length - filesToActuallyProcess.length} unchanged images`);
+
+    // Process each image that needs processing
+    for (const file of filesToActuallyProcess) {
       try {
+        console.log(`🔄 Processing: ${file}`);
         // Get the relative path that would be used in markdown/html
         const relativePath = file.replace(/^src\//, '');
 
@@ -165,7 +211,29 @@ module.exports = function (eleventyConfig) {
       }
     }
 
-    console.log("Finished processing all images");
+    // Still need to populate FILE_PATH_CACHE for skipped files
+    for (const file of filesToProcess.filter(f => !filesToActuallyProcess.includes(f))) {
+      const relativePath = file.replace(/^src\//, '');
+      const parsedPath = path.parse(relativePath);
+      const outputDir = path.join("./_site", path.dirname(relativePath));
+      const urlPath = path.dirname(relativePath);
+      const originalName = path.basename(parsedPath.name);
+      const originalExt = path.extname(file).toLowerCase();
+      
+      FILE_PATH_CACHE.set(relativePath, {
+        originalName: originalName,
+        originalExt: originalExt,
+        outputDir: outputDir,
+        urlPath: urlPath,
+        sourcePath: file
+      });
+    }
+
+    if (filesToActuallyProcess.length === 0) {
+      console.log("✨ All images are up to date!");
+    } else {
+      console.log(`✅ Finished processing ${filesToActuallyProcess.length} images`);
+    }
   }
 
   // Run before build starts
