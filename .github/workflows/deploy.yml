@@ -29,11 +29,72 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      # Cache Eleventy build artifacts and processed images
+      - name: Cache Eleventy build
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache
+            _site
+            node_modules/.cache
+          key: ${{ runner.os }}-eleventy-${{ hashFiles('**/*.md', '**/*.njk', '**/*.js', '**/*.json', 'src/**/*', '.eleventy.js', 'tailwind.config.*') }}
+          restore-keys: |
+            ${{ runner.os }}-eleventy-
+
+      # Separate cache for processed images 
+      - name: Cache processed images
+        uses: actions/cache@v4
+        with:
+          path: |
+            _site/assets
+          key: ${{ runner.os }}-images-${{ hashFiles('src/assets/**/*.{jpg,jpeg,png,webp,avif,JPG,PNG}') }}
+          restore-keys: |
+            ${{ runner.os }}-images-
+
       - name: Install dependencies
         run: npm ci
 
+      # Check what files have changed to optimize build process
+      - name: Check for changes
+        id: changes
+        run: |
+          # Check if images have changed
+          if git diff --name-only HEAD~1 HEAD | grep -q "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "images-changed=true" >> $GITHUB_OUTPUT
+            echo "🖼️ Image assets have changed"
+          else
+            echo "images-changed=false" >> $GITHUB_OUTPUT
+            echo "📷 No image changes detected"
+          fi
+          
+          # Check if CSS/Tailwind files have changed
+          if git diff --name-only HEAD~1 HEAD | grep -q "src/css/\|tailwind.config" 2>/dev/null || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "css-changed=true" >> $GITHUB_OUTPUT
+            echo "🎨 CSS/Tailwind files have changed"
+          else
+            echo "css-changed=false" >> $GITHUB_OUTPUT
+            echo "🎨 No CSS changes detected"
+          fi
+
+      # Build site with incremental builds when possible
       - name: Build site
-        run: npm run build
+        run: |
+          # Use incremental build for faster processing
+          if [ "${{ steps.changes.outputs.images-changed }}" = "false" ] && [ -d "_site" ]; then
+            echo "🚀 Using incremental build (images cached)"
+            NODE_ENV=production node --max-old-space-size=4096 ./node_modules/.bin/eleventy --incremental
+          else
+            echo "🔄 Full build (images changed or first build)"
+            NODE_ENV=production node --max-old-space-size=4096 ./node_modules/.bin/eleventy
+          fi
+          
+          # Only rebuild CSS if needed
+          if [ "${{ steps.changes.outputs.css-changed }}" = "true" ] || [ ! -f "_site/css/style.css" ]; then
+            echo "🎨 Building CSS"
+            npx tailwindcss -i ./src/css/style.css -o ./_site/css/style.css --minify
+          else
+            echo "🎨 CSS unchanged, skipping build"
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
