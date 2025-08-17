@@ -58,13 +58,22 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
+          # Get list of changed image files
+          CHANGED_IMAGES=$(git diff --name-only HEAD~1 HEAD | grep "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null | tr '\n' ',' || echo "")
+          
           # Check if images have changed
-          if git diff --name-only HEAD~1 HEAD | grep -q "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ -n "$CHANGED_IMAGES" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "images-changed=true" >> $GITHUB_OUTPUT
-            echo "🖼️ Image assets have changed"
+            echo "🖼️ Image assets have changed:"
+            echo "$CHANGED_IMAGES" | tr ',' '\n' | while read -r file; do
+              [ -n "$file" ] && echo "  - $file"
+            done
+            # Export for Eleventy to use
+            echo "CHANGED_IMAGES=$CHANGED_IMAGES" >> $GITHUB_ENV
           else
             echo "images-changed=false" >> $GITHUB_OUTPUT
             echo "📷 No image changes detected"
+            echo "CHANGED_IMAGES=" >> $GITHUB_ENV
           fi
           
           # Check if CSS/Tailwind files have changed
