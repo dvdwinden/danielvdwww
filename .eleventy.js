@@ -111,6 +111,25 @@ module.exports = function (eleventyConfig) {
   // Check if an image needs processing based on modification times
   function needsProcessing(srcPath) {
     try {
+      // In CI environments, check if we're in GitHub Actions
+      const isCI = process.env.CI === 'true';
+      const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+      
+      if (isGitHubActions) {
+        // In GitHub Actions, rely on Git to tell us what changed
+        // since _site directory is always fresh
+        const changedFiles = process.env.CHANGED_IMAGES;
+        if (changedFiles) {
+          const relativePath = srcPath.replace(/^src\//, '');
+          const relativeWithSrc = `src/${relativePath}`;
+          return changedFiles.includes(relativeWithSrc);
+        }
+        // Fallback: if no environment variable, assume we need to process
+        // (this will happen on first run or manual dispatch)
+        return true;
+      }
+      
+      // Local development: use file modification times
       const srcStats = fs.statSync(srcPath);
       const relativePath = srcPath.replace(/^src\//, '');
       const parsedPath = path.parse(relativePath);
