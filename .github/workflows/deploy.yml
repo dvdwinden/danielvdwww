@@ -97,12 +97,20 @@ jobs:
             NODE_ENV=production node --max-old-space-size=4096 ./node_modules/.bin/eleventy
           fi
           
-          # Only rebuild CSS if needed
+          # Only rebuild CSS if needed or if it doesn't exist
           if [ "${{ steps.changes.outputs.css-changed }}" = "true" ] || [ ! -f "_site/css/style.css" ]; then
-            echo "🎨 Building CSS"
+            echo "🎨 Building CSS (changed or missing)"
             npx tailwindcss -i ./src/css/style.css -o ./_site/css/style.css --minify
           else
-            echo "🎨 CSS unchanged, skipping build"
+            echo "🎨 CSS unchanged and exists, skipping build"
+          fi
+          
+          # Verify CSS was built successfully
+          if [ ! -f "_site/css/style.css" ] || [ ! -s "_site/css/style.css" ]; then
+            echo "❌ CSS build failed or file is empty, rebuilding..."
+            npx tailwindcss -i ./src/css/style.css -o ./_site/css/style.css --minify
+          else
+            echo "✅ CSS file verified ($(wc -c < _site/css/style.css) bytes)"
           fi
 
       - name: Setup Pages
