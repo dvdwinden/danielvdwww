@@ -5,6 +5,8 @@ const Parser = require('rss-parser');
 const fs = require('fs-extra');
 const path = require('path');
 const { convert } = require('html-to-text');
+const https = require('https');
+const http = require('http');
 
 const BLUESKY_MAX_CHARS = 300;
 const SITE_URL = process.env.SITE_URL || 'https://daniel.pizza';
@@ -114,6 +116,87 @@ function formatForBluesky(post, postType) {
 }
 
 /**
+ * Download image from URL
+ */
+async function downloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith('https:') ? https : http;
+    
+    client.get(url, (response) => {
+      if (response.statusCode !== 200) {
+        reject(new Error(`Failed to download image: ${response.statusCode}`));
+        return;
+      }
+      
+      const chunks = [];
+      response.on('data', (chunk) => chunks.push(chunk));
+      response.on('end', () => {
+        const buffer = Buffer.concat(chunks);
+        const contentType = response.headers['content-type'];
+        resolve({ buffer, contentType });
+      });
+    }).on('error', reject);
+  });
+}
+
+/**
+ * Extract first image URL from post content
+ */
+function extractFirstImageUrl(htmlContent) {
+  if (!htmlContent) return null;
+  
+  // Look for img tags in the content
+  const imgRegex = /<img[^>]+src=["']([^"']+)["'][^>]*>/i;
+  const match = htmlContent.match(imgRegex);
+  
+  if (match && match[1]) {
+    let imageUrl = match[1];
+    
+    // Convert relative URLs to absolute
+    if (imageUrl.startsWith('/')) {
+      imageUrl = `${SITE_URL}${imageUrl}`;
+    } else if (imageUrl.startsWith('assets/')) {
+      imageUrl = `${SITE_URL}/${imageUrl}`;
+    }
+    
+    return imageUrl;
+  }
+  
+  return null;
+}
+
+/**
+ * Upload image to Bluesky
+ */
+async function uploadImageToBluesky(agent, imageUrl) {
+  try {
+    console.log(`📸 Downloading image: ${imageUrl}`);
+    const { buffer, contentType } = await downloadImage(imageUrl);
+    
+    // Check file size (Bluesky has limits)
+    const maxSize = 1000000; // 1MB limit
+    if (buffer.length > maxSize) {
+      console.log(`⚠️ Image too large (${buffer.length} bytes), skipping`);
+      return null;
+    }
+    
+    console.log(`📤 Uploading image to Bluesky (${buffer.length} bytes, ${contentType})`);
+    const response = await agent.uploadBlob(buffer, { encoding: contentType });
+    
+    return {
+      image: {
+        alt: '', // We could extract alt text from the img tag if needed
+        image: response.data.blob
+      }
+    };
+    
+  } catch (error) {
+    console.error(`❌ Failed to upload image: ${error.message}`);
+    return null;
+  }
+}
+
+/**
  * Parse RSS feed and find posts matching changed files
  */
 async function findPostsFromChangedFiles(changedFiles) {
@@ -163,9 +246,9 @@ async function findPostsFromChangedFiles(changedFiles) {
 }
 
 /**
- * Post to Bluesky
+ * Post to Bluesky with optional image
  */
-async function postToBluesky(text) {
+async function postToBluesky(text, post = null) {
   const agent = new BskyAgent({
     service: 'https://bsky.social'
   });
@@ -176,10 +259,25 @@ async function postToBluesky(text) {
       password: process.env.BLUESKY_PASSWORD
     });
     
-    const result = await agent.post({
+    // Prepare post data
+    const postData = {
       text: text,
       createdAt: new Date().toISOString()
-    });
+    };
+    
+    // Try to add image if post content contains one
+    if (post && post.content) {
+      const imageUrl = extractFirstImageUrl(post.content);
+      if (imageUrl) {
+        const embed = await uploadImageToBluesky(agent, imageUrl);
+        if (embed) {
+          postData.embed = embed;
+          console.log(`📷 Image attached to post`);
+        }
+      }
+    }
+    
+    const result = await agent.post(postData);
     
     console.log(`✅ Posted to Bluesky: ${text}`);
     console.log(`🔗 Post URL: https://bsky.app/profile/${process.env.BLUESKY_HANDLE}/post/${result.uri.split('/').pop()}`);
@@ -239,7 +337,7 @@ async function main() {
         continue;
       }
       
-      await postToBluesky(blueskyText);
+      await postToBluesky(blueskyText, post);
       
       // Add delay between posts to be respectful
       if (posts.length > 1) {
