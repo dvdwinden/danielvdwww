@@ -1,0 +1,61 @@
+name: POSSE to Bluesky
+
+on:
+  push:
+    branches: [ main ]
+    paths: 
+      - 'src/links/*.md'
+      - 'src/journal/*.md'
+  workflow_dispatch:
+
+jobs:
+  posse-bluesky:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'dvdwinden'
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2  # Need previous commit to detect changes
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        cd .github/workflows
+        npm install
+        
+    - name: Build site to generate RSS feeds
+      run: |
+        npm install
+        npm run build
+        
+    - name: Detect new/updated posts
+      id: detect-posts
+      run: |
+        # Get list of changed markdown files in the last commit
+        CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD -- 'src/links/*.md' 'src/journal/*.md' || true)
+        
+        if [ -n "$CHANGED_FILES" ]; then
+          echo "changed-files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "has-changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "has-changes=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Syndicate to Bluesky
+      if: steps.detect-posts.outputs.has-changes == 'true'
+      env:
+        BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+        BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+        SITE_URL: 'https://daniel.pizza'
+      run: |
+        cd .github/workflows
+        node syndicate-bluesky.js "${{ steps.detect-posts.outputs.changed-files }}"
