@@ -37,3 +37,6 @@ keys.pub
 src/drafts/
 src/links/drafts/
 src/journal/drafts/
+
+# Documentation files with sensitive info
+POSSE_SETUP.md
