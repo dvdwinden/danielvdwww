@@ -1,0 +1,19 @@
+{
+  "name": "posse-bluesky-workflow",
+  "version": "1.0.0",
+  "description": "POSSE syndication to Bluesky for GitHub Actions",
+  "main": "syndicate-bluesky.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.12.29",
+    "rss-parser": "^3.13.0",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7",
+    "html-to-text": "^9.0.5"
+  },
+  "keywords": ["posse", "bluesky", "syndication"],
+  "author": "",
+  "license": "ISC"
+}
