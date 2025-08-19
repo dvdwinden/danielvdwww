@@ -10,7 +10,7 @@ external_url: https://youtu.be/nG86T2f1T-Q?si=1TkhwyeV79_7GZD_?ref=daniel.pizza
 <figure>
   {% retinaImage "src/assets/links/sunflower-sound-system.webp", "Sunflower Sound System, photo by Angelina Nikolayeva" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Sam Shepherd's Sunflower Sound System. Photo by <a href="https://angelinanikolayeva.com/?ref=daniel.pizza" title="Angelina Nikolayeva" target="_blank" rel="external">Angelina Nikolayeva</a>
+    Sunflower Sound System by Sam Shepherd (Floating Points). Photo by <a href="https://angelinanikolayeva.com/?ref=daniel.pizza" title="Angelina Nikolayeva" target="_blank" rel="external">Angelina Nikolayeva</a>
   </figcaption>
 </figure>
 
