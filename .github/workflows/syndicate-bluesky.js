@@ -43,8 +43,11 @@ function extractExcerpt(htmlContent, maxLength = 200) {
   const text = convert(htmlContent, {
     wordwrap: false,
     preserveNewlines: false,
-    ignoreHref: true,
-    ignoreImage: true
+    selectors: [
+      { selector: 'a', options: { ignoreHref: true, hideLinkHrefIfSameAsText: true } },
+      { selector: 'p', options: { leadingLineBreaks: 0, trailingLineBreaks: 1 } },
+      { selector: 'img', options: { ignoreHref: true, ignoreImage: true } }
+    ]
   });
   
   // Get first paragraph or sentence
