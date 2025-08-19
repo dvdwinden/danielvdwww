@@ -65,57 +65,33 @@ function formatForBluesky(post, postType) {
   const postUrl = post.link;
   const urlLength = postUrl.length + 1; // +1 for space
   
-  // Check for custom Bluesky text in the original markdown file
-  // This would need to be parsed from frontmatter, but for now we'll use RSS data
+  // Get the full excerpt first
+  const fullExcerpt = extractExcerpt(post.content, 1000); // Get a long excerpt initially
   
-  if (postType === 'links') {
-    // Links posts: "[Title]" - [Brief excerpt] [URL]
-    const title = `"${post.title}"`;
-    const prefix = `${title} - `;
-    const available = maxLength - prefix.length - urlLength - 3; // 3 for "..."
-    
-    if (available <= 0) {
-      // Title + URL is too long, just use title + URL
-      return `${title} ${postUrl}`;
-    }
-    
-    const excerpt = extractExcerpt(post.content, available);
-    if (excerpt.length === 0) {
-      return `${title} ${postUrl}`;
-    }
-    
-    const formatted = `${prefix}${excerpt}`;
-    if (formatted.length + urlLength + 3 <= maxLength) {
-      return `${formatted}... ${postUrl}`;
-    }
-    
-    return `${title} ${postUrl}`;
-    
-  } else {
-    // Journal posts: New post: "[Title]" [URL] or with description
-    const title = `"${post.title}"`;
-    const prefix = 'New post: ';
-    const titleWithPrefix = `${prefix}${title}`;
-    
-    const basicLength = titleWithPrefix.length + urlLength + 1;
-    if (basicLength <= maxLength) {
-      const available = maxLength - basicLength - 3; // 3 for " - "
-      
-      if (available > 10) {
-        const excerpt = extractExcerpt(post.content, available - 3); // 3 for "..."
-        if (excerpt.length > 0) {
-          return `${titleWithPrefix} - ${excerpt}... ${postUrl}`;
-        }
-      }
-      
-      return `${titleWithPrefix} ${postUrl}`;
-    } else {
-      // Title too long, truncate it
-      const availableForTitle = maxLength - prefix.length - urlLength - 4; // 4 for quotes and space
-      const truncatedTitle = truncateAtWord(post.title, availableForTitle);
-      return `${prefix}"${truncatedTitle}..." ${postUrl}`;
-    }
+  if (!fullExcerpt) {
+    // No excerpt available, just use URL
+    return postUrl;
   }
+  
+  // Check if full excerpt + URL fits within character limit
+  const fullFormat = `${fullExcerpt} ${postUrl}`;
+  
+  if (fullFormat.length <= maxLength) {
+    // Full excerpt fits, use it as-is
+    return fullFormat;
+  }
+  
+  // Need to truncate - calculate available space for excerpt
+  const availableForExcerpt = maxLength - urlLength - 3; // 3 for "..."
+  
+  if (availableForExcerpt <= 10) {
+    // Not enough space for meaningful excerpt, just use URL
+    return postUrl;
+  }
+  
+  // Truncate excerpt and add ellipsis
+  const truncatedExcerpt = truncateAtWord(fullExcerpt, availableForExcerpt);
+  return `${truncatedExcerpt}... ${postUrl}`;
 }
 
 /**
