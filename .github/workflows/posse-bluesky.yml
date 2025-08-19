@@ -55,7 +55,7 @@ jobs:
       env:
         BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
         BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
-        SITE_URL: 'https://daniel.pizza'
+        SITE_URL: 'https://www.daniel.pizza'
       run: |
         cd .github/workflows
         node syndicate-bluesky.js "${{ steps.detect-posts.outputs.changed-files }}"

@@ -10,7 +10,6 @@
     "@atproto/api": "^0.12.29",
     "rss-parser": "^3.13.0",
     "fs-extra": "^11.2.0",
-    "path": "^0.12.7",
     "html-to-text": "^9.0.5"
   },
   "keywords": ["posse", "bluesky", "syndication"],

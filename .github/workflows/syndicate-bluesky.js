@@ -9,7 +9,7 @@ const https = require('https');
 const http = require('http');
 
 const BLUESKY_MAX_CHARS = 300;
-const SITE_URL = process.env.SITE_URL || 'https://daniel.pizza';
+const SITE_URL = process.env.SITE_URL || 'https://www.daniel.pizza';
 
 // Initialize RSS parser
 const parser = new Parser({
@@ -224,7 +224,7 @@ async function findPostsFromChangedFiles(changedFiles) {
         // Find matching post in RSS feeds by URL pattern
         const expectedUrlPattern = isLinks ? `/links/${fileName}/` : `/journal/${fileName}/`;
         const matchingPost = allPosts.find(post => 
-          post.link.includes(expectedUrlPattern)
+          post.id && post.id.includes(expectedUrlPattern)
         );
         
         if (matchingPost) {
