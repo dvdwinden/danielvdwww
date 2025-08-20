@@ -45,6 +45,10 @@ function extractExcerpt(htmlContent, maxLength = 200) {
   const linkHeaderRegex = /<p><small><strong>Link:<\/strong>.*?<\/small><\/p><hr>/i;
   cleanedContent = cleanedContent.replace(linkHeaderRegex, '');
   
+  // Remove figures and figcaptions from HTML before processing
+  cleanedContent = cleanedContent.replace(/<figure[^>]*>.*?<\/figure>/gis, '');
+  cleanedContent = cleanedContent.replace(/<figcaption[^>]*>.*?<\/figcaption>/gis, '');
+  
   const text = convert(cleanedContent, {
     wordwrap: false,
     preserveNewlines: false,
@@ -55,11 +59,48 @@ function extractExcerpt(htmlContent, maxLength = 200) {
     ]
   });
   
-  // Get first paragraph or sentence
+  // Get meaningful content - skip very short paragraphs, dates, and image captions
   const paragraphs = text.split('\n\n').filter(p => p.trim().length > 0);
-  const firstParagraph = paragraphs[0] || '';
   
-  return truncateAtWord(firstParagraph.trim(), maxLength);
+  // Find the first substantial paragraph that's not just metadata
+  let meaningfulParagraph = '';
+  for (const paragraph of paragraphs) {
+    const cleaned = paragraph.trim();
+    
+    // Skip very short paragraphs (dates, etc.)
+    if (cleaned.length <= 50) continue;
+    
+    // Skip paragraphs that look like image captions or credits
+    const lowerCleaned = cleaned.toLowerCase();
+    if (lowerCleaned.includes('photo by') || 
+        lowerCleaned.includes('image by') ||
+        lowerCleaned.includes('credit:') ||
+        lowerCleaned.match(/^\[.*\]/) ||  // Skip bracketed content like [https://...]
+        lowerCleaned.match(/^\w+\s+\d{1,2},\s+\d{4}$/)) {  // Skip dates like "July 16, 2025"
+      continue;
+    }
+    
+    meaningfulParagraph = cleaned;
+    break;
+  }
+  
+  // Fallback to first substantial paragraph if no good one found
+  if (!meaningfulParagraph) {
+    for (const paragraph of paragraphs) {
+      const cleaned = paragraph.trim();
+      if (cleaned.length > 50) {
+        meaningfulParagraph = cleaned;
+        break;
+      }
+    }
+  }
+  
+  // Final fallback to first paragraph if nothing else works
+  if (!meaningfulParagraph && paragraphs.length > 0) {
+    meaningfulParagraph = paragraphs[0].trim();
+  }
+  
+  return truncateAtWord(meaningfulParagraph, maxLength);
 }
 
 /**
