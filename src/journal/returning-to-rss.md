@@ -33,6 +33,6 @@ In my search for a decent RSS reader, my friend [Ico](https://mastodon.social/@i
 
 Returning to RSS has brought me a much calmer experience for consuming writing on the web; a calm I'd forgotten exists outside of the walled gardens I've gotten accustomed to. I still scroll Bluesky and read things through there, but it feels nice (and mindful) to be building up a curated feed of voices again. 
 
-If you have any recommendations for feeds I can't miss, [do let me know](https://bsky.app/profile/daniel.pizza "message me on Bluesky").
+If you have any recommendations for feeds I can't miss, [do let me know](https://bsky.app/profile/daniel.pizza "Message me on Bluesky").
 
 </div>
