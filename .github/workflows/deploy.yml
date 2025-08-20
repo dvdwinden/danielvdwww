@@ -59,7 +59,13 @@ jobs:
         id: changes
         run: |
           # Get list of changed image files
-          CHANGED_IMAGES=$(git diff --name-only HEAD~1 HEAD | grep "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null | tr '\n' ',' || echo "")
+          # Handle case where HEAD~1 might not exist (first commit, etc.)
+          if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+            CHANGED_IMAGES=$(git diff --name-only HEAD~1 HEAD | grep "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null | tr '\n' ',' || echo "")
+          else
+            echo "⚠️ Cannot diff against HEAD~1, treating as full build"
+            CHANGED_IMAGES="full_build"
+          fi
           
           # Check if images have changed
           if [ -n "$CHANGED_IMAGES" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -77,7 +83,7 @@ jobs:
           fi
           
           # Check if CSS/Tailwind files have changed
-          if git diff --name-only HEAD~1 HEAD | grep -q "src/css/\|tailwind.config" 2>/dev/null || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if git rev-parse --verify HEAD~1 >/dev/null 2>&1 && git diff --name-only HEAD~1 HEAD | grep -q "src/css/\|tailwind.config" 2>/dev/null || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "css-changed=true" >> $GITHUB_OUTPUT
             echo "🎨 CSS/Tailwind files have changed"
           else
