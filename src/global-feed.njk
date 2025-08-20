@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
     <link href="{% if post.data.external_url %}{{ post.data.external_url | escape }}{% else %}{{ absolutePostUrl }}{% endif %}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{% set contentWithoutTitle = post.templateContent | replace("<h1><a href=\"" + post.data.external_url + "\">" + post.data.title + "</a></h1>", "") | replace("<h1>" + post.data.title + "</h1>", "") %}{{ contentWithoutTitle | htmlToAbsoluteUrls(absolutePostUrl) }}{% if post.data.external_url %}&lt;p&gt;&lt;a href="{{ post.data.external_url | escape }}"&gt;Continue reading →&lt;/a&gt;&lt;/p&gt;{% endif %}</content>
+    <content type="html">{% if post.data.external_url %}&lt;p&gt;&lt;small&gt;&lt;strong&gt;Link:&lt;/strong&gt; &lt;a href="{{ post.data.external_url | escape }}"&gt;{{ post.data.external_url | escape }}&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;&lt;hr&gt;{% endif %}{{ post.templateContent | removeH1 | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {%- endfor %}
 </feed>
