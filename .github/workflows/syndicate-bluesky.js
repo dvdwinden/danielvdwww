@@ -62,7 +62,7 @@ function extractExcerpt(htmlContent, maxLength = 200) {
  */
 function formatForBluesky(post, postType) {
   const maxLength = BLUESKY_MAX_CHARS;
-  const postUrl = post.link;
+  const postUrl = post.id; // Use internal URL instead of external link
   const urlLength = postUrl.length + 1; // +1 for space
   
   // Get the full excerpt first
