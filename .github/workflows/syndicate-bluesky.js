@@ -40,7 +40,12 @@ function truncateAtWord(text, maxLength) {
 function extractExcerpt(htmlContent, maxLength = 200) {
   if (!htmlContent) return '';
   
-  const text = convert(htmlContent, {
+  // First, remove the RSS link header that starts with "Link:" if present
+  let cleanedContent = htmlContent;
+  const linkHeaderRegex = /<p><small><strong>Link:<\/strong>.*?<\/small><\/p><hr>/i;
+  cleanedContent = cleanedContent.replace(linkHeaderRegex, '');
+  
+  const text = convert(cleanedContent, {
     wordwrap: false,
     preserveNewlines: false,
     selectors: [
