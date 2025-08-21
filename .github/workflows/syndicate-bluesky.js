@@ -271,7 +271,37 @@ async function findPostsFromChangedFiles(changedFiles) {
 }
 
 /**
- * Post to Bluesky with optional image
+ * Detect URLs in text and create facets for Bluesky rich text
+ */
+function detectUrls(text) {
+  // URL regex pattern that matches http/https URLs
+  const urlRegex = /https?:\/\/[^\s]+/g;
+  const facets = [];
+  let match;
+  
+  while ((match = urlRegex.exec(text)) !== null) {
+    const url = match[0];
+    const startIndex = match.index;
+    const endIndex = startIndex + url.length;
+    
+    // Create a facet for this URL
+    facets.push({
+      index: {
+        byteStart: Buffer.from(text.substring(0, startIndex), 'utf8').length,
+        byteEnd: Buffer.from(text.substring(0, endIndex), 'utf8').length
+      },
+      features: [{
+        $type: 'app.bsky.richtext.facet#link',
+        uri: url
+      }]
+    });
+  }
+  
+  return facets;
+}
+
+/**
+ * Post to Bluesky with optional image and clickable links
  */
 async function postToBluesky(text, post = null) {
   const agent = new BskyAgent({
@@ -284,11 +314,20 @@ async function postToBluesky(text, post = null) {
       password: process.env.BLUESKY_PASSWORD
     });
     
+    // Detect URLs in text and create facets for clickable links
+    const facets = detectUrls(text);
+    
     // Prepare post data
     const postData = {
       text: text,
       createdAt: new Date().toISOString()
     };
+    
+    // Add facets if we found any URLs
+    if (facets.length > 0) {
+      postData.facets = facets;
+      console.log(`🔗 Found ${facets.length} URL(s) to make clickable`);
+    }
     
     // Try to add image if post content contains one
     if (post && post.content) {
