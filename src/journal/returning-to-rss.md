@@ -23,7 +23,7 @@ But here we are, now. Twitter's changed beyond recognition, my account since del
 <div class="sm:mt-32 mt-16 mb-16">
 <figure class="w-full">
   {% retinaImage "src/assets/journal/netnewswire.png", "NetNewsWire" %}
-  <figcaption class="pl-8 sm:pl-0">My current RSS reader of choice, <em>NetNewsWire</em>.</figcaption>
+  <figcaption class="pl-8 sm:pl-0">My current RSS reader of choice, <em>NetNewsWire.</em></figcaption>
 </figure>
 </div>
 
