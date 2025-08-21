@@ -24,14 +24,17 @@ module.exports = function (eleventyConfig) {
     return match ? match : null;
   });
 
-  // Add filter to remove h1 tags from template content
+  // Add filter to remove h1 tags and date spans from template content
   eleventyConfig.addFilter("removeH1", function (content) {
     if (!content) return content;
-    // Remove h1 tags with links to external_url and title variables
-    // Handle both raw and HTML-encoded versions
+    // Remove h1 tags - both plain h1 tags and h1 tags with links
+    // Handle links posts (h1 with external link) and journal posts (plain h1)
+    // Also remove date spans that follow h1 tags
     return content
-      .replace(/<h1><a href="{{ external_url }}">{{ title }}<\/a><\/h1>\s*/g, '')
-      .replace(/<h1><a href="[^"]*">.*?<\/a><\/h1>\s*/g, '');
+      .replace(/<h1><a href="{{ external_url }}">{{ title }}<\/a><\/h1>\s*/g, '') // Template variables
+      .replace(/<h1><a href="[^"]*">.*?<\/a><\/h1>\s*/g, '') // Rendered links
+      .replace(/<h1[^>]*>.*?<\/h1>\s*/g, '') // Any remaining h1 tags (journal posts)
+      .replace(/<span[^>]*class="[^"]*font-sans[^"]*"[^>]*>.*?<\/span>\s*/g, ''); // Date spans
   });
 
   // Image optimization function
