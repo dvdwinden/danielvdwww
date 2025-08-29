@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: A Presentation App That Works On Your Phone
-date: 2025-08-28T22:59:00+02:00
+date: 2025-08-29T09:28:00+02:00
 tags: typography, design, software
 external_url: https://ia.net/topics/a-presentation-app-that-works-on-your-phone?ref=daniel.pizza
 ---
@@ -14,7 +14,7 @@ external_url: https://ia.net/topics/a-presentation-app-that-works-on-your-phone?
   </figcaption>
 </figure>
 
-[iA Writer](https://ia.net/writer?ref=daniel.pizza "iA Writer") has been my go-to writing app on Mac and iOS for over a decade, but I've never properly gotten stuck into [iA Presenter](https://ia.net/presenter?ref=daniel.pizza "iA Presenter"). Its release coincided with my role shifting, and having to create fewer presentations as a result. 
+[iA Writer](https://ia.net/writer?ref=daniel.pizza "iA Writer") has been my go-to writing app on Mac and iOS for over a decade, but I've never properly gotten stuck into [iA Presenter](https://ia.net/presenter?ref=daniel.pizza "iA Presenter"). Its release coincided with my role shifting, and having to create fewer presentations as a result.
 
 They've now released [version 1.5](https://ia.net/topics/a-presentation-app-that-works-on-your-phone?ref=daniel.pizza "The release note for version 1.5 of iA Presenter") of their app, which has seen them strip away even more of its features to benefit the primary workflow, and I can really get behind their reasoning.
 
