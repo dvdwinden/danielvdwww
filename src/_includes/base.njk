@@ -17,12 +17,12 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <title>{% if title %}
         {% if page.url == '/' %}
-            Daniël van der Winden • Software designer & writer
+            Daniël van der Winden · Software designer & writer
         {% else %}
-            {{ title }} • Daniël van der Winden
+            {{ title }} · Daniël van der Winden
         {% endif %}
     {% else %}
-        Daniël van der Winden • Software designer & writer
+        Daniël van der Winden · Software designer & writer
     {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
     {% if draft %}
@@ -60,8 +60,8 @@
 
     <!-- RSS Feeds -->
     <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden" href="/feed.xml">
-    <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden • Journal" href="/journal/feed.xml">
-    <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden • Links" href="/links/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden · Journal" href="/journal/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden · Links" href="/links/feed.xml">
     {% if env.NODE_ENV == 'production' %}
     <script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>
     {% endif %}
