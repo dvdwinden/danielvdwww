@@ -16,7 +16,7 @@ image:
 <h1>A fresh coat of paint for Trema, my publication about the books I loved reading</h1>
 <span class="font-sans text-sm">September 8, 2025</span>
 
-{% retinaImage "src/assets/journal/trema-featured-img.png", "Trema" %}
+{% retinaImage "src/assets/journal/trema-featured-img.png", "Trema", 1200 %}
 
 In December of 2023 I started [Trema](http://trema.website?refdaniel.pizza "Trema"), a website and monthly newsletter where I could write, briefly, about the books I loved reading. Primarily, it was a way for me to practice such writing. Secondarily, I think my friends appreciated me leaving them to it, channeling my ramblings about books they must read into a centralised location they could choose to ignore. 
 
@@ -30,10 +30,10 @@ Most of my readers read Trema in their email inbox. Only a fraction click throug
 Building my personal website (this one, right here), a month or two ago, sped up some decision-making. I’d bought two typefaces for it, [_Degular_](https://ohnotype.co/fonts/degular?ref=daniel.pizza "Degular by Oh No Type Co") and [_Blanco_](https://www.fostertype.com/retail-type/blanco?ref=daniel.pizza "Blanco by Foster Type"), and immediately knew I’d be using them for Trema, too. _Degular_ works great for headlines, and has quite a bit of character when you blow it up to larger sizes; _Blanco_ is very well suited for longer texts, and reads comfortably. Using the same typefaces once more, I'd be able to create a bit of unity between both of my sites.
 
 <figure class="w-full">
-  {% retinaImage "src/assets/journal/degular-specimen.png", "A look at the Degular type specimen" %}
+  {% retinaImage "src/assets/journal/degular-specimen.png", "A look at the Degular type specimen", 1200 %}
 </figure>
 <figure class="w-full mt-4">
-  {% retinaImage "src/assets/journal/blanco-specimen.png", "A look at the Blanco type specimen" %}
+  {% retinaImage "src/assets/journal/blanco-specimen.png", "A look at the Blanco type specimen", 1200 %}
   <figcaption class="pl-8 sm:pl-0">Examples taken from the <em>Degular</em> and <em>Blanco</em> type specimens, by Oh No Type Co. and Foster Type.</figcaption>
 </figure>
 
