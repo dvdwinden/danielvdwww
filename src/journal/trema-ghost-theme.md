@@ -41,7 +41,7 @@ While building this site, I had decided to include a page, [_/newsletter_](/news
 
 A few of the books that I'd read on my Kindle, I bought on paper. I photographed nearly every book myself, with one or two exceptions for the ones I still need to purchase, and added them to the page. And, immediately, the combination of the typography and photography clicked for me, informing how I wanted the heart of the publication—a book recommendation—to look. 
 
-I’d saved screenshots of different sites over the course of a few months, building up a small reference library, but this little exploration was the final push for where I wanted to take things: big photographs of the book’s actual, beautiful _paper_ cover, flanked by large typography and a refined and legible body text. 
+I’d saved screenshots of different sites over the course of a few months, building up a small reference library, but this little exploration was the final push for where I wanted to take things: big photographs of the book’s actual, beautiful _paper_ cover, flanked by large typography and a refined and legible body text.
 
 I mocked up a little sketch in Figma and decided to start building it straight away. If I could build the heart of the publication to my liking, the rest would follow. 
 
@@ -62,7 +62,6 @@ I mocked up a little sketch in Figma and decided to start building it straight a
 Most of my time went into getting that page right. Creating a pleasing grid, breaking out of it with purpose, and making it a joy to read on a phone, too. I had a lot of fun with that (and, fortunately, roughly 30 posts to test my idea on). 
 
 Using Ghost’s built-in tags a little creatively I could accommodate the design. Without getting overly technical: I tag every post, and its first tag is the name of the book’s author, which is then pulled out below the book’s title; the rest of the tags simply appear below the excerpt. 
-
 </div>
 
 <div class="sm:mt-32 mt-16 mb-16">
