@@ -516,7 +516,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Retina-optimized image shortcode
-  async function retinaImageShortcode(src, alt, maxWidth = 1200) {
+  async function retinaImageShortcode(src, alt, maxWidth = 800) {
     // Skip favicon files - they should not be processed by the image optimization system
     const fileName = path.basename(src).toLowerCase();
     if (fileName.includes('favicon') || fileName.includes('apple-touch-icon')) {
