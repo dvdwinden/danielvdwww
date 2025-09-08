@@ -72,8 +72,10 @@ jobs:
             echo "images-changed=true" >> $GITHUB_OUTPUT
             echo "🖼️ Image assets have changed:"
             echo "$CHANGED_IMAGES" | tr ',' '\n' | while read -r file; do
-              [ -n "$file" ] && echo "  - $file"
-            done
+              if [ -n "$file" ]; then
+                echo "  - $file"
+              fi
+            done || true
             # Export for Eleventy to use
             echo "CHANGED_IMAGES=$CHANGED_IMAGES" >> $GITHUB_ENV
           else
