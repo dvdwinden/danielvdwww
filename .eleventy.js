@@ -372,12 +372,24 @@ module.exports = function (eleventyConfig) {
 
       while ((match = imgRegex.exec(content)) !== null) {
         const imgTag = match[0];
+        const matchStart = match.index;
 
         // Skip if we've already processed this exact tag
         if (processed.has(imgTag)) {
           continue;
         }
         processed.add(imgTag);
+
+        // Skip if this img tag is inside a picture element (already processed by shortcode)
+        const beforeImg = content.substring(0, matchStart);
+        const afterImg = content.substring(matchStart + imgTag.length);
+        const lastPictureOpen = beforeImg.lastIndexOf('<picture');
+        const lastPictureClose = beforeImg.lastIndexOf('</picture>');
+        
+        // If there's an unclosed picture tag before this img, skip it
+        if (lastPictureOpen > lastPictureClose && lastPictureOpen !== -1) {
+          continue;
+        }
 
         const src = match[1];
         const altMatch = imgTag.match(/alt=["']([^"']*)["']/);
