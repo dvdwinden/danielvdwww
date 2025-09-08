@@ -604,13 +604,28 @@ module.exports = function (eleventyConfig) {
     // Check if image has already been processed
     let metadata;
     if (IMAGE_CACHE.has(actualFilePath)) {
-      metadata = IMAGE_CACHE.get(actualFilePath);
+      let cachedMetadata = IMAGE_CACHE.get(actualFilePath);
 
       // Filter to only include retina sizes if needed
-      const formats = Object.keys(metadata);
+      const formats = Object.keys(cachedMetadata);
+      const filteredMetadata = {};
+      let hasRequiredSizes = false;
+
       for (const format of formats) {
-        metadata[format] = metadata[format].filter(item =>
+        filteredMetadata[format] = cachedMetadata[format].filter(item =>
           item.width === maxWidth || item.width === maxWidth * 2);
+        
+        if (filteredMetadata[format].length > 0) {
+          hasRequiredSizes = true;
+        }
+      }
+
+      // If we have the required sizes in cache, use the filtered metadata
+      if (hasRequiredSizes) {
+        metadata = filteredMetadata;
+      } else {
+        // Cache doesn't have the sizes we need, reprocess
+        metadata = await processImage(actualFilePath, [maxWidth, maxWidth * 2]);
       }
     } else {
       // Process the image with retina sizes
