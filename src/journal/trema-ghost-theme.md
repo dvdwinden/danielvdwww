@@ -66,7 +66,7 @@ Using Ghost’s built-in tags a little creatively I could accommodate the design
 
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full mt-4">
-    {% retinaImage "src/assets/journal/trema-book-template-updated.png", "The page for a book recommendation; the heart of my publication.", 1200 %}
+    {% retinaImage "src/assets/journal/trema-heart-of-publication.png", "The page for a book recommendation; the heart of my publication.", 1200 %}
     <figcaption class="pl-8 sm:pl-0">The template for a book recommendation; the heart of my publication.</figcaption>
   </figure>
 </div>
