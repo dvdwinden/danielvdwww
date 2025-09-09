@@ -516,7 +516,21 @@ module.exports = function (eleventyConfig) {
   });
 
   // Retina-optimized image shortcode
-  async function retinaImageShortcode(src, alt, maxWidth = 800) {
+  async function retinaImageShortcode(src, altOrWidth, maxWidth) {
+    // Handle different parameter combinations:
+    // retinaImageShortcode(src, alt, maxWidth) - traditional 3 params
+    // retinaImageShortcode(src, maxWidth) - 2 params where second is width
+    let alt, finalMaxWidth;
+    
+    if (typeof altOrWidth === 'number' && maxWidth === undefined) {
+      // Called with (src, maxWidth)
+      alt = '';
+      finalMaxWidth = altOrWidth;
+    } else {
+      // Called with (src, alt, maxWidth) or (src, alt)
+      alt = altOrWidth || '';
+      finalMaxWidth = maxWidth || 800;
+    }
     // Skip favicon files - they should not be processed by the image optimization system
     const fileName = path.basename(src).toLowerCase();
     if (fileName.includes('favicon') || fileName.includes('apple-touch-icon')) {
@@ -545,12 +559,12 @@ module.exports = function (eleventyConfig) {
 
         for (const format of formats) {
           filteredMetadata[format] = cachedMetadata[format].filter(item =>
-            item.width === maxWidth || item.width === maxWidth * 2);
+            item.width === finalMaxWidth || item.width === finalMaxWidth * 2);
         }
 
         return Image.generateHTML(filteredMetadata, {
           alt,
-          sizes: `${maxWidth}px`,
+          sizes: `${finalMaxWidth}px`,
           loading: "lazy",
           decoding: "async",
         });
@@ -613,7 +627,7 @@ module.exports = function (eleventyConfig) {
 
       for (const format of formats) {
         filteredMetadata[format] = cachedMetadata[format].filter(item =>
-          item.width === maxWidth || item.width === maxWidth * 2);
+          item.width === finalMaxWidth || item.width === finalMaxWidth * 2);
         
         if (filteredMetadata[format].length > 0) {
           hasRequiredSizes = true;
@@ -625,11 +639,11 @@ module.exports = function (eleventyConfig) {
         metadata = filteredMetadata;
       } else {
         // Cache doesn't have the sizes we need, reprocess
-        metadata = await processImage(actualFilePath, [maxWidth, maxWidth * 2]);
+        metadata = await processImage(actualFilePath, [finalMaxWidth, finalMaxWidth * 2]);
       }
     } else {
       // Process the image with retina sizes
-      metadata = await processImage(actualFilePath, [maxWidth, maxWidth * 2]);
+      metadata = await processImage(actualFilePath, [finalMaxWidth, finalMaxWidth * 2]);
     }
 
     if (!metadata) {
@@ -639,7 +653,7 @@ module.exports = function (eleventyConfig) {
 
     let imageAttributes = {
       alt,
-      sizes: `${maxWidth}px`,
+      sizes: `${finalMaxWidth}px`,
       loading: "lazy",
       decoding: "async",
     };

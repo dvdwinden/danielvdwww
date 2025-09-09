@@ -45,7 +45,7 @@ I’d saved screenshots of different sites over the course of a few months, buil
 
 I mocked up a little sketch in Figma and decided to start building it straight away. If I could build the heart of the publication to my liking, the rest would follow. 
 
-</div>
+</div> 
 
 <div class="sm:mt-32 mt-16 mb-16">
 <figure class="w-full">
@@ -66,7 +66,7 @@ Using Ghost’s built-in tags a little creatively I could accommodate the design
 
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full mt-4">
-    {% retinaImage "src/assets/journal/trema-heart-of-publication.png", "The page for a book recommendation; the heart of my publication.", 1200 %}
+    {% retinaImage "src/assets/journal/trema-book-page.png", "The page for a book recommendation; the heart of my publication.", 1200 %}
     <figcaption class="pl-8 sm:pl-0">The template for a book recommendation; the heart of my publication.</figcaption>
   </figure>
 </div>
