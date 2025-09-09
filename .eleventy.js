@@ -562,12 +562,21 @@ module.exports = function (eleventyConfig) {
             item.width === finalMaxWidth || item.width === finalMaxWidth * 2);
         }
 
-        return Image.generateHTML(filteredMetadata, {
-          alt,
-          sizes: `${finalMaxWidth}px`,
-          loading: "lazy",
-          decoding: "async",
-        });
+        // Check if we have valid filtered metadata
+        const hasValidFilteredImages = Object.keys(filteredMetadata).some(format => 
+          filteredMetadata[format] && filteredMetadata[format].length > 0
+        );
+        
+        if (!hasValidFilteredImages) {
+          // Fall through to reprocessing if filtered cache is empty
+        } else {
+          return Image.generateHTML(filteredMetadata, {
+            alt,
+            sizes: `${finalMaxWidth}px`,
+            loading: "lazy",
+            decoding: "async",
+          });
+        }
       }
     }
 
@@ -648,6 +657,16 @@ module.exports = function (eleventyConfig) {
 
     if (!metadata) {
       console.error(`Failed to process retina image: ${actualFilePath}`);
+      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+    }
+
+    // Check if metadata has valid formats and images
+    const hasValidImages = Object.keys(metadata).some(format => 
+      metadata[format] && metadata[format].length > 0
+    );
+    
+    if (!hasValidImages) {
+      console.error(`No valid images in metadata for: ${actualFilePath}`);
       return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
     }
 
