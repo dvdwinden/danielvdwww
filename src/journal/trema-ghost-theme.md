@@ -4,7 +4,7 @@ title: "A fresh coat of paint for Trema, my publication about the books I loved 
 bodyClass: bg-stone
 date: 2025-09-08T23:06:00+02:00
 tags: [design, books, internet, ghost, publishing]
-description: After nearly two years of writing a book recommendation per month, it was time to design a new and improved reading experience.
+description: After over two years of writing a book recommendation per month, it was time to design a new and improved reading experience.
 image:
   src: /assets/journal/trema-featured-img.png
   alt: "Trema"
@@ -22,7 +22,7 @@ In December of 2022 I started [Trema](http://trema.website?refdaniel.pizza "Trem
 
 For a designer starting a publication, the immediate urge is to design the thing first. Make a little logo, pick a few colours, set the typography. I purposely decided against doing any of that, to begin with. My goal was to write and publish one post every month, which meant reading at least two books in four weeks; if I’d read just _one_ and couldn’t recommend it, I’d have nothing to write about (thankfully, at the time I was reading three to four books per month, so this wasn’t so daunting). 
 
-It seemed wise to trial this for a while, to see if the habit stuck. Using [Ghost](http://ghost.org/?ref=daniel.pizza "Ghost"), I picked their standard theme, a background colour, and a common, built-in typeface, and I was off to the races. Last December, one year in, I decided the habit stuck long enough for me to start thinking about properly personalising the online publication I was building. 
+It seemed wise to trial this for a while, to see if the habit stuck. Using [Ghost](http://ghost.org/?ref=daniel.pizza "Ghost"), I picked their standard theme, a background colour, and a common, built-in typeface, and I was off to the races. Last December, nearly two years in, I decided the habit stuck long enough for me to start thinking about properly personalising the online publication I was building. 
 
 ## A calm, warmer reading experience
 Most of my readers read Trema in their email inbox. Only a fraction click through to the post on the web, and that’s fine. And yet, for those who do, I was itching to create a calm, outstanding reading experience of my own, and to learn how to build a custom [Ghost theme](https://ghost.org/themes/?ref=daniel.pizza "Ghost's themes") in the process.
