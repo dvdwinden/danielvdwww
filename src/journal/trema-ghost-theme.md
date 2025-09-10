@@ -18,7 +18,7 @@ image:
 
 {% retinaImage "src/assets/journal/trema-featured-img.png", "Trema", 1200 %}
 
-In December of 2023 I started [Trema](http://trema.website?refdaniel.pizza "Trema"), a website and monthly newsletter where I could write, briefly, about the books I loved reading. Primarily, it was a way for me to practice such writing. Secondarily, I think my friends appreciated me leaving them to it, channeling my ramblings about books they must read into a centralised location they could choose to ignore. 
+In December of 2022 I started [Trema](http://trema.website?refdaniel.pizza "Trema"), a website and monthly newsletter where I could write, briefly, about the books I loved reading. Primarily, it was a way for me to practice such writing. Secondarily, I think my friends appreciated me leaving them to it, channeling my ramblings about books they must read into a centralised location they could choose to ignore. 
 
 For a designer starting a publication, the immediate urge is to design the thing first. Make a little logo, pick a few colours, set the typography. I purposely decided against doing any of that, to begin with. My goal was to write and publish one post every month, which meant reading at least two books in four weeks; if I’d read just _one_ and couldn’t recommend it, I’d have nothing to write about (thankfully, at the time I was reading three to four books per month, so this wasn’t so daunting). 
 
