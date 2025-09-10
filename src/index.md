@@ -50,6 +50,17 @@ bodyClass: bg-blue
   <h2 class="work-title">Resumé</h2>
 
   <ul class="pl-0 ml-0 list-none space-y-10">
+    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">Current</span>
+      <div class="md:w-3/4">
+      <div class="text-md font-bold font-sans">
+          <h3>Senior Product Designer (Freelance)</h3>
+        </div>
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+          Working with NYC-based design studio <a href="https://fictivekin.com/?ref=daniel.pizza" title="Fictive Kin" target="_blank" rel="external">Fictive Kin</a>.
+        </div>
+      </div>
+   </li>
    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–Now</span>
       <div class="md:w-3/4">
@@ -65,7 +76,7 @@ bodyClass: bg-blue
       <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
       <div class="text-md font-bold font-sans">
-          <h3>Senior Designer at <a href="http://ghost.org?ref=daniel.pizza" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
+          <h3>Senior Product Designer at <a href="http://ghost.org?ref=daniel.pizza" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
         </div>
         <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
           Involved in designing new features and exploratory brand & product work. Coded numerous improvements throughout the product and its marketing site.
