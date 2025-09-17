@@ -38,7 +38,7 @@ jobs:
             .cache
             _site
             node_modules/.cache
-          key: ${{ runner.os }}-eleventy-${{ hashFiles('**/*.md', '**/*.njk', '**/*.js', '**/*.json', 'src/**/*', '.eleventy.js', 'tailwind.config.*') }}
+          key: ${{ runner.os }}-eleventy-${{ hashFiles('**/*.md', '**/*.njk', 'src/**/*.js', '**/*.json', 'src/**/*', 'tailwind.config.*') }}-${{ hashFiles('.eleventy.js') }}
           restore-keys: |
             ${{ runner.os }}-eleventy-
 

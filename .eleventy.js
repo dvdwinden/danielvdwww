@@ -246,7 +246,8 @@ module.exports = function (eleventyConfig) {
       }
     }
 
-    // Still need to populate FILE_PATH_CACHE for skipped files
+    // For skipped files, need to populate both FILE_PATH_CACHE and IMAGE_CACHE
+    // so that shortcodes can use existing processed images without reprocessing
     for (const file of filesToProcess.filter(f => !filesToActuallyProcess.includes(f))) {
       const relativePath = file.replace(/^src\//, '');
       const parsedPath = path.parse(relativePath);
@@ -262,6 +263,46 @@ module.exports = function (eleventyConfig) {
         urlPath: urlPath,
         sourcePath: file
       });
+      
+      // Load existing processed images into IMAGE_CACHE
+      try {
+        const formats = ["avif", "webp", "jpeg"];
+        const widths = [300, 600, 900, 1200, 1800, 2400];
+        const metadata = {};
+        
+        for (const format of formats) {
+          metadata[format] = [];
+          for (const width of widths) {
+            const outputFile = path.join(outputDir, `${originalName}-${width}.${format}`);
+            if (fs.existsSync(outputFile)) {
+              const stats = fs.statSync(outputFile);
+              metadata[format].push({
+                format: format,
+                width: width,
+                height: Math.round(width * 0.75), // Approximate aspect ratio
+                filename: `${originalName}-${width}.${format}`,
+                outputPath: outputFile,
+                url: `/${urlPath}/${originalName}-${width}.${format}`,
+                sourceType: `image/${format === 'jpeg' ? 'jpeg' : format}`,
+                srcset: `/${urlPath}/${originalName}-${width}.${format} ${width}w`,
+                size: stats.size
+              });
+            }
+          }
+        }
+        
+        // Only add to cache if we found actual processed images
+        const hasValidImages = Object.keys(metadata).some(format => 
+          metadata[format] && metadata[format].length > 0
+        );
+        
+        if (hasValidImages) {
+          IMAGE_CACHE.set(file, metadata);
+          console.log(`💾 Loaded cached metadata for ${file}`);
+        }
+      } catch (err) {
+        console.warn(`Could not load cached metadata for ${file}:`, err.message);
+      }
     }
 
     if (filesToActuallyProcess.length === 0) {
