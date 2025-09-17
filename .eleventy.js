@@ -122,13 +122,26 @@ module.exports = function (eleventyConfig) {
         // In GitHub Actions, rely on Git to tell us what changed
         // since _site directory is always fresh
         const changedFiles = process.env.CHANGED_IMAGES;
-        if (changedFiles) {
+        
+        if (changedFiles === '') {
+          // Empty string means no image changes detected
+          console.log(`⚡ Skipping ${srcPath} (no image changes in this commit)`);
+          return false;
+        }
+        
+        if (changedFiles && changedFiles !== 'full_build') {
           const relativePath = srcPath.replace(/^src\//, '');
           const relativeWithSrc = `src/${relativePath}`;
-          return changedFiles.includes(relativeWithSrc);
+          const needsWork = changedFiles.includes(relativeWithSrc);
+          if (!needsWork) {
+            console.log(`⚡ Skipping ${srcPath} (not in changed files list)`);
+          }
+          return needsWork;
         }
-        // Fallback: if no environment variable, assume we need to process
+        
+        // Fallback: if no environment variable or 'full_build', assume we need to process
         // (this will happen on first run or manual dispatch)
+        console.log(`🔄 Processing ${srcPath} (full build or manual dispatch)`);
         return true;
       }
       

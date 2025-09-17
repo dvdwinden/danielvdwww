@@ -31,6 +31,7 @@ jobs:
 
       # Cache Eleventy build artifacts and processed images
       - name: Cache Eleventy build
+        id: cache-eleventy
         uses: actions/cache@v4
         with:
           path: |
@@ -58,10 +59,15 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          # Get list of changed image files
-          # Handle case where HEAD~1 might not exist (first commit, etc.)
+          echo "🔍 Analyzing changes from previous commit..."
+          
+          # Get list of all changed files
           if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
-            CHANGED_IMAGES=$(git diff --name-only HEAD~1 HEAD | grep "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null | tr '\n' ',' || echo "")
+            ALL_CHANGED=$(git diff --name-only HEAD~1 HEAD)
+            echo "📋 All changed files:"
+            echo "$ALL_CHANGED" | sed 's/^/  - /'
+            
+            CHANGED_IMAGES=$(echo "$ALL_CHANGED" | grep "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null | tr '\n' ',' || echo "")
           else
             echo "⚠️ Cannot diff against HEAD~1, treating as full build"
             CHANGED_IMAGES="full_build"
@@ -70,17 +76,21 @@ jobs:
           # Check if images have changed
           if [ -n "$CHANGED_IMAGES" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "images-changed=true" >> $GITHUB_OUTPUT
-            echo "🖼️ Image assets have changed:"
-            echo "$CHANGED_IMAGES" | tr ',' '\n' | while read -r file; do
-              if [ -n "$file" ]; then
-                echo "  - $file"
-              fi
-            done || true
+            if [ "$CHANGED_IMAGES" = "full_build" ]; then
+              echo "🖼️ Full image build (no previous commit or manual trigger)"
+            else
+              echo "🖼️ Image assets have changed:"
+              echo "$CHANGED_IMAGES" | tr ',' '\n' | while read -r file; do
+                if [ -n "$file" ]; then
+                  echo "  - $file"
+                fi
+              done || true
+            fi
             # Export for Eleventy to use
             echo "CHANGED_IMAGES=$CHANGED_IMAGES" >> $GITHUB_ENV
           else
             echo "images-changed=false" >> $GITHUB_OUTPUT
-            echo "📷 No image changes detected"
+            echo "📷 No image changes detected - images will be skipped"
             echo "CHANGED_IMAGES=" >> $GITHUB_ENV
           fi
           
@@ -97,11 +107,11 @@ jobs:
       - name: Build site
         run: |
           # Use incremental build for faster processing
-          if [ "${{ steps.changes.outputs.images-changed }}" = "false" ] && [ -d "_site" ]; then
-            echo "🚀 Using incremental build (images cached)"
+          if [ "${{ steps.changes.outputs.images-changed }}" = "false" ] && [ "${{ steps.cache-eleventy.outputs.cache-hit }}" = "true" ]; then
+            echo "🚀 Using incremental build (no image changes, cache hit)"
             NODE_ENV=production node --max-old-space-size=4096 ./node_modules/.bin/eleventy --incremental
           else
-            echo "🔄 Full build (images changed or first build)"
+            echo "🔄 Full build (images changed: ${{ steps.changes.outputs.images-changed }}, cache hit: ${{ steps.cache-eleventy.outputs.cache-hit }})"
             NODE_ENV=production node --max-old-space-size=4096 ./node_modules/.bin/eleventy
           fi
           
