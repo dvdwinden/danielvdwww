@@ -99,6 +99,11 @@
         </main>
     </div>
 
+    <script>
+        // Set Last.fm configuration from environment variables
+        window.LASTFM_API_KEY = '{{ env.LASTFM_API_KEY }}';
+        window.LASTFM_USERNAME = '{{ env.LASTFM_USERNAME }}';
+    </script>
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
     <script src="/js/lastfm-live.js"></script>

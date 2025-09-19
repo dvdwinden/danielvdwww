@@ -114,10 +114,10 @@ class LastFMLive {
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   console.log('LastFM: DOM loaded, initializing...');
-  // Only initialize if we have the API key and username
-  // These would need to be set as global variables or data attributes
-  const apiKey = 'd5f74219006f0df5fe3f403ffb7fdc28';
-  const username = 'dvdwinden';
+  // Get API key and username from environment or data attributes
+  // For static sites, we'll embed them during build time
+  const apiKey = window.LASTFM_API_KEY || null;
+  const username = window.LASTFM_USERNAME || 'dvdwinden';
 
   console.log('LastFM: API key and username:', apiKey ? 'present' : 'missing', username);
 
