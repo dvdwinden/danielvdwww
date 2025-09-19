@@ -541,7 +541,7 @@ nav.pagination a:hover {
     width: 100%;
     flex-basis: 100%;
     order: 3;
-    font-size: 0.875rem;
+    font-size: 0.875rem !important;
 }
 
 .site-footer div.lastfm a {
