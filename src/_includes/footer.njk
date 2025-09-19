@@ -50,9 +50,5 @@
             </a>
         </li>
     </ul>
-    {% if lastfm.nowPlaying %}
-    <div class="text-xs text-black/50 dark:text-white/60 mt-4 lastfm">
-        Now playing: <a href="{{ lastfm.nowPlaying.url }}" target="_blank" rel="noopener" class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100">{{ lastfm.nowPlaying.artist }} — {{ lastfm.nowPlaying.title }}</a>
-    </div>
-    {% endif %}
+    <div id="lastfm-now-playing" style="display: none;"></div>
 </footer>
