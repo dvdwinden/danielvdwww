@@ -513,7 +513,7 @@ nav.pagination a:hover {
     margin: 0;
 }
 
-.site-footer ul li a {
+.site-footer a {
     text-decoration: none;
     font-family: theme('fontFamily.serif');
     font-size: 0.875rem;
@@ -541,7 +541,7 @@ nav.pagination a:hover {
     width: 100%;
     flex-basis: 100%;
     order: 3;
-    margin-top: 0.1rem;
+    font-size: 0.875rem;
 }
 
 .site-footer div.lastfm a {
