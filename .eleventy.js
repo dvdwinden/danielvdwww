@@ -16,7 +16,9 @@ const FILE_PATH_CACHE = new Map();
 module.exports = function (eleventyConfig) {
   // Add environment variables to global data
   eleventyConfig.addGlobalData("env", {
-    NODE_ENV: process.env.NODE_ENV || "development"
+    NODE_ENV: process.env.NODE_ENV || "development",
+    LASTFM_API_KEY: process.env.LASTFM_API_KEY || "",
+    LASTFM_USERNAME: process.env.LASTFM_USERNAME || "dvdwinden"
   });
 
   // Add regexMatch filter
