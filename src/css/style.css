@@ -492,6 +492,7 @@ nav.pagination a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 8rem 0 0 0;
     padding: 0 0 1.5rem 0;
 }
@@ -535,6 +536,26 @@ nav.pagination a:hover {
     text-underline-offset: 3px;
     color: theme('colors.gray.900');
 }
+
+.site-footer div.lastfm {
+    width: 100%;
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 0.1rem;
+}
+
+.site-footer div.lastfm a {
+    text-decoration: none;
+}
+
+.site-footer div.lastfm a:hover {
+    transition: color 0.2s;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    background: none;
+}
+
 
 /* Article styling */
 article header {

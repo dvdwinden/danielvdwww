@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
 const fs = require("fs");
