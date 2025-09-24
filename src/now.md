@@ -7,32 +7,22 @@ bodyClass: bg-blue
 
 # Now
 
-## Rolling into freelance life
-After wrapping up my time at Ghost I took a few weeks to speak to different companies. I spoke to many, met great people (and still am!), and have taken on a contract role with [Fictive Kin](https://fictivekin.com/?ref=daniel.pizza "Fictive Kin"), a prolific digital agency. I'm collaborating with [Gemma O'Connor](https://gemma.buzz/?ref=daniel.pizza "Gemma O'Connor's website") on an exciting project, and am really enjoying the collaboration.
+## Contracting as a Senior Product Designer
+I'm currently working on a contract basis with [Fictive Kin](https://fictivekin.com/?ref=daniel.pizza "Fictive Kin"), a prolific digital agency. I've really enjoyed our collaboration. It runs until the end of September, and from October onwards I'll be contracting for [Enode](https://enode.com/?ref=daniel.pizza "Enode"), helping them build digital infrastructure that enables a zero carbon energy system. 
 
-I'm already talking about engagements from October onwards, but have some time left to fill in September.
+If you have a project I might be a fit for in 2026, don't hesitate to reach out.
 
 <img src="https://ghchart.rshah.org/dvdwinden" class="block dark:hidden" alt="My Github contribution chart (light)" />
 <img src="https://ghchart.rshah.org/64748b/dvdwinden" class="hidden dark:block" alt="My Github contribution chart (dark)" />
 
-## Building a Ghost theme
-[Trema](http://trema.website?ref=daniel.pizza "Trema"), my monthly bookish [newsletter](/newsletter), runs on [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"). I've never updated its design beyond the standard theme, and—while in-between jobs—thought it was time to learn how to build one myself. You can see a glimpse of my progress below, relying on the same two typefaces I've used for this website. I'm hoping to ship it this month or next.
-</div>
+## Trema's own Ghost theme
+[Trema](http://trema.website?ref=daniel.pizza "Trema"), my monthly bookish [newsletter](/newsletter), runs on [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"). Recently I've designed, built and shipped my own theme, which I [wrote about here](/journal/trema-ghost-theme "A post on my journal about how I built my own Ghost theme"). I'm currently talking to a friend about getting a few illustrations made, too, to further improve its visual language. I'm writing a few posts as well; the coming months will offer plenty of interesting book recommendations. If you're not subscribed, [give it a look](https://www.trema.website/?ref=daniel.pizza "Trema").
 
-<div class="mt-8">
-<figure>
-    <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/now/wip-trema.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-    </video>
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Work in progress on my theme for Trema</figcaption>
-  </figure>
-</div>
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
-
-I'm also still chipping away at this website, and am regularly adding [Links](/links "Links"). I have a few [Journal](/journal "Journal") posts in mind, too. Did you know you can subscribe via RSS? There's separate feeds for Links and Journal, and a global feed for everything; find it in the footer.
+A few people have asked if the theme will be for sale, and the short answer is 'no'. But, I might make another typography-focused Ghost theme available in the future.
 
 ## _TRANSCRIPT_ Magazine
-In parallel, [Iris](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") and I are trying to get the fourth and final issue of [_TRANSCRIPT_ Magazine](http://transcriptmag.com?ref=daniel.pizza "TRANSCRIPT Magazine") to print soon. It will come out in the fall, and in September we'll head to Milan for [Mag to Mag](https://magtomag.com/en "Mag to Mag festival"), _festival dei magazine indipendenti_. (There are a few copies left of our [third issue](http://transcriptmag.store/issue-three?ref=daniel.pizza "TRANSCRIPT Magazine: issue three")!)
+[Iris](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") and I just returned from [_Mag to Mag_](https://magtomag.com/ "Mag to Mag"), the festival for independent magazines in Milan, and had a great time. We also sent the fourth and final issue of [_TRANSCRIPT_ Magazine](http://transcriptmag.com?ref=daniel.pizza "TRANSCRIPT Magazine") to print, which you can [pre-order](http://transcriptmag.store/issue-four "TRANSCRIPT ISSUE FOUR") now. 
 
-<span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: August 2025</span>
+On October 10th we'll be hosting a [launch party in Amsterdam](https://luma.com/cpeqs1fd "TRANSCRIPT ISSUE FOUR LAUNCH"). If you're around, feel free to RSVP.
+
+<span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: September 2025</span>
