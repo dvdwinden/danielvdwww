@@ -47,7 +47,7 @@
     <link rel="preload" href="/assets/fonts/Degular-MediumItalic.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/Degular-MediumItalic.woff" as="font" type="font/woff" crossorigin>
 
-    <!-- Pre-load critical hero images -->
+    <!-- Pre-load hero images -->
     <link rel="preload" href="/assets/work/studio-square.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preload" href="/assets/work/daniel-square.webp" as="image" type="image/webp" fetchpriority="high">
 
@@ -58,10 +58,8 @@
 
     <meta name="view-transition" content="same-origin">
 
-    <!-- RSS Feeds -->
+    <!-- RSS Feed -->
     <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden" href="/feed.xml">
-    <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden · Journal" href="/journal/feed.xml">
-    <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden · Links" href="/links/feed.xml">
     {% if env.NODE_ENV == 'production' %}
     <script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>
     {% endif %}
