@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: Colophon
-description: Technical details and credits for daniel.pizza - built with Eleventy and Nunjucks, featuring custom typography and open-source analytics.
+description: A few notes on how I designed and built this site.
 bodyClass: bg-blue
 ---
 
