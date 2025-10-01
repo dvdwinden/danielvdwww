@@ -64,10 +64,38 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>
     {% endif %}
 
-    <meta property="og:image" content="/assets/share-image-1200.webp">
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Software designer & writer{% endif %}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
+    <meta property="og:site_name" content="Daniël van der Winden">
+    
+    {% if image and image.src %}
+    <!-- Use post-specific image if available -->
+    {% set imageBasePath = image.src | replace(".avif", "") | replace(".webp", "") | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") | replace(".JPG", "") | replace(".PNG", "") %}
+    {% set ogImageUrl = imageBasePath + "-1200.jpeg" %}
+    <meta property="og:image" content="{{ ogImageUrl }}">
+    <meta property="og:image:alt" content="{{ image.alt or title }}">
+    {% else %}
+    <!-- Use default share image -->
+    <meta property="og:image" content="/assets/share-image-1200.jpeg">
+    <meta property="og:image:alt" content="Daniël van der Winden">
+    {% endif %}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Daniël van der Winden">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Software designer & writer{% endif %}">
+    <meta name="twitter:description" content="{{ description or metadata.description }}">
+    {% if image and image.src %}
+    <meta name="twitter:image" content="{{ ogImageUrl }}">
+    <meta name="twitter:image:alt" content="{{ image.alt or title }}">
+    {% else %}
+    <meta name="twitter:image" content="/assets/share-image-1200.jpeg">
+    <meta name="twitter:image:alt" content="Daniël van der Winden">
+    {% endif %}
 </head>
 <body class="min-h-screen font-sans overflow-x-hidden">
     <!-- Background layer -->
