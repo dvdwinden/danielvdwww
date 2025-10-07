@@ -54,10 +54,10 @@ bodyClass: bg-blue
       <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">Current</span>
       <div class="md:w-3/4">
       <div class="text-md font-bold font-sans">
-          <h3>Senior Product Designer (Freelance)</h3>
+          <h3>Senior Product Designer · Contract</h3>
         </div>
         <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          Working with NYC-based design studio <a href="https://fictivekin.com/?ref=daniel.pizza" title="Fictive Kin" target="_blank" rel="external">Fictive Kin</a>.
+          Building digital infrastructure that enables a zero carbon energy system, at <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a>. <br /><br />Before that, at <a href="http://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="nofollow" target="_blank">Fictive Kin</a>, I designed an Android app for a Mexican retailer, and helped lay the foundation for <a href="https://ladderbenefits.com/?ref=daniel.pizza" title="Ladder" rel="external" target="_blank">Ladder</a>, enabling NYC-based Americans who don't have the means to get by apply for benefits.
         </div>
       </div>
    </li>
