@@ -20,6 +20,6 @@ Here's a place I'd like to visit: [Argosy Book Store](https://www.nytimes.com/20
 
 On retiring, Ms. Cohen (84) says: 
 
-> “I’d like to, too, but working here is really interesting,” she said. “Every day, you don’t know who is going to walk in the door or what books are going to come in.”
+> I’d like to, too, but working here is really interesting,” she said. “Every day, you don’t know who is going to walk in the door or what books are going to come in.
 
 Book stores are fantastic places. Every day presents a chance to make someone's day, and I dream of having one of my own, sometime. 
