@@ -304,14 +304,31 @@ Most recently I've acted as the copywriter and editor on the [NoGood art book](h
   <h2 class="work-title">Speaking</h2>
   <div class="flex flex-col">
     <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue four</p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">OCT 2025</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
       <p class="my-4">
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7345825584481988610/" title="Adyen Studio Day" rel="external" target="_blank">Adyen Studio Day</a>, Amsterdam</p>
+        <em>On Attention & Intention</em>, <a href="https://www.linkedin.com/feed/update/urn:li:activity:7345825584481988610/" title="Adyen Studio Day" rel="external" target="_blank">Adyen Studio Day</a></p>
       <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JUL 2025</span>
     </div>
-    <div class="flex items-baseline justify-between">
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue three</p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JUN 2025</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
       <p class="my-4">
-        <a href="https://www.seanchoiche.com/?ref=daniel.pizza" title="Seanchoíche" rel="external" target="_blank">Seanchoíce</a>, Amsterdam</p>
+        <em>The Waffle King of Norway</em>, <a href="https://www.seanchoiche.com/?ref=daniel.pizza" title="Seanchoíche" rel="external" target="_blank">Seanchoíce</a>
+       </p>
       <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JAN 2025</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue two</p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JAN 2025</span>
+    </div>
+    <div class="flex items-baseline justify-between">
+      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue one</p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">SEP 2024</span>
     </div>
   </div>
 </div>
