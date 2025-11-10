@@ -16,6 +16,7 @@ class StravaLive {
     await this.updateActivities();
     this.renderCalendar();
     this.startPolling();
+    this.setupResizeHandler();
   }
 
   async fetchActivities() {
@@ -93,11 +94,16 @@ class StravaLive {
     }
 
     const activityCountByDate = this.getActivityCountByDate();
+    // Get today's date at midnight in local timezone to ensure consistency
     const today = new Date();
+    today.setHours(0, 0, 0, 0);
     
-    // Calculate how many weeks we can fit (each week is ~16px wide with gap)
-    // Max-w-lg is 512px, so we can fit approximately 52 weeks (1 year)
-    const weeksToShow = 52;
+    // Calculate how many weeks we can fit based on container width
+    // Each week is approximately 16px (12px width + 4px gap)
+    const containerWidth = container.offsetWidth || container.clientWidth || 512;
+    const weekWidth = 16; // 12px for week + 4px gap
+    const maxWeeks = Math.floor(containerWidth / weekWidth);
+    const weeksToShow = Math.min(maxWeeks, 52); // Cap at 1 year maximum
     const daysToShow = weeksToShow * 7;
 
     // Generate days going back from today
@@ -165,6 +171,16 @@ class StravaLive {
         this.renderCalendar();
       }
     }, this.updateInterval);
+  }
+
+  setupResizeHandler() {
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        this.renderCalendar();
+      }, 250); // Debounce resize events
+    });
   }
 
   stop() {
