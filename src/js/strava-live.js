@@ -203,20 +203,14 @@ class StravaLive {
 document.addEventListener('DOMContentLoaded', function () {
   console.log('Strava: DOM loaded, initializing...');
   
-  const clientId = window.STRAVA_CLIENT_ID || null;
-  const clientSecret = window.STRAVA_CLIENT_SECRET || null;
-  const refreshToken = window.STRAVA_REFRESH_TOKEN || null;
+  const accessToken = window.STRAVA_ACCESS_TOKEN || null;
 
-  console.log('Strava: Config present:', {
-    clientId: !!clientId,
-    clientSecret: !!clientSecret,
-    refreshToken: !!refreshToken
-  });
+  console.log('Strava: Access token present:', !!accessToken);
 
-  if (clientId && clientSecret && refreshToken) {
+  if (accessToken) {
     console.log('Strava: Creating StravaLive instance');
-    window.stravaLive = new StravaLive(clientId, clientSecret, refreshToken);
+    window.stravaLive = new StravaLive(accessToken);
   } else {
-    console.warn('Strava: Missing configuration');
+    console.warn('Strava: Missing access token');
   }
 });

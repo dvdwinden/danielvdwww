@@ -132,10 +132,8 @@
         window.LASTFM_API_KEY = '{{ env.LASTFM_API_KEY | trim }}';
         window.LASTFM_USERNAME = '{{ env.LASTFM_USERNAME | trim }}';
         
-        // Set Strava configuration from environment variables
-        window.STRAVA_CLIENT_ID = '{{ env.STRAVA_CLIENT_ID | trim }}';
-        window.STRAVA_CLIENT_SECRET = '{{ env.STRAVA_CLIENT_SECRET | trim }}';
-        window.STRAVA_REFRESH_TOKEN = '{{ env.STRAVA_REFRESH_TOKEN | trim }}';
+        // Set Strava access token (fetched at build time)
+        window.STRAVA_ACCESS_TOKEN = '{{ stravaToken.accessToken }}';
     </script>
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
