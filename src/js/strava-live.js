@@ -158,8 +158,12 @@ class StravaLive {
 
   startPolling() {
     this.intervalId = setInterval(async () => {
-      await this.updateActivities();
-      this.renderCalendar();
+      // Only fetch if we should (after 21:00 once per day)
+      if (this.shouldFetchNewData()) {
+        console.log('Strava: Time to refresh data');
+        await this.updateActivities();
+        this.renderCalendar();
+      }
     }, this.updateInterval);
   }
 
