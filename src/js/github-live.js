@@ -12,32 +12,32 @@ class GitHubLive {
   async init() {
     // Render immediately with cached data
     this.renderCalendar();
-    
+
     // Check if we need to fetch new data
     if (this.shouldFetchNewData()) {
       await this.updateContributions();
       this.renderCalendar();
     }
-    
+
     this.startPolling();
     this.setupResizeHandler();
   }
 
   shouldFetchNewData() {
     if (!this.lastUpdated) return true;
-    
+
     const now = new Date();
     const currentHour = now.getHours();
     const timeSinceUpdate = now - this.lastUpdated;
     const hoursSinceUpdate = timeSinceUpdate / (1000 * 60 * 60);
-    
+
     // Only fetch if it's after 21:00 and we haven't fetched today yet
     if (currentHour >= 21 && hoursSinceUpdate >= 1) {
       const lastUpdateDate = this.lastUpdated.toDateString();
       const currentDate = now.toDateString();
       return lastUpdateDate !== currentDate;
     }
-    
+
     return false;
   }
 
@@ -50,18 +50,18 @@ class GitHubLive {
     try {
       // Fetch the SVG chart from ghchart.rshah.org
       const response = await fetch(`https://ghchart.rshah.org/${this.username}`);
-      
+
       if (!response.ok) {
         throw new Error(`Failed to fetch contributions: ${response.status}`);
       }
 
       const svgText = await response.text();
-      
+
       // Parse the SVG to extract contribution data
       const parser = new DOMParser();
       const doc = parser.parseFromString(svgText, 'image/svg+xml');
       const rects = doc.querySelectorAll('rect');
-      
+
       const contributions = {};
       rects.forEach(rect => {
         const date = rect.getAttribute('data-date');
@@ -71,7 +71,7 @@ class GitHubLive {
           contributions[date] = count;
         }
       });
-      
+
       console.log(`GitHub: Parsed ${Object.keys(contributions).length} contribution dates`);
       return contributions;
     } catch (error) {
@@ -82,7 +82,7 @@ class GitHubLive {
 
   async updateContributions() {
     const contributions = await this.fetchContributions();
-    
+
     if (Object.keys(contributions).length > 0) {
       this.contributionsByDate = contributions;
       this.lastUpdated = new Date();
@@ -100,18 +100,18 @@ class GitHubLive {
 
   renderCalendar() {
     const container = document.getElementById('github-calendar');
-    
+
     if (!container) {
       console.warn('GitHub: Container element not found!');
       return;
     }
 
     const contributionsByDate = this.contributionsByDate;
-    
+
     // Get today's date at midnight in local timezone
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    
+
     // Calculate how many weeks we can fit based on container width
     const containerWidth = container.offsetWidth || container.clientWidth || 512;
     const weekWidth = 14; // 11px for week + 3px gap
@@ -174,7 +174,7 @@ class GitHubLive {
       }
       const color = this.getContributionColor(day.count);
       const text = day.count > 0
-        ? `${day.count} ${day.count === 1 ? 'contribution' : 'contributions'}`
+        ? `${day.count} ${day.count === 1 ? 'GitHub contribution' : 'GitHub contributions'}`
         : 'No contributions';
       return `<div class="w-2.5 h-2.5 rounded-sm ${color} border border-black/5 dark:border-white/10 transition-colors cursor-pointer" data-date="${day.date}" data-count="${day.count}" data-text="${text}"></div>`;
     }).join('')}
@@ -186,19 +186,19 @@ class GitHubLive {
 
     container.innerHTML = calendarHTML;
     container.style.display = 'block';
-    
+
     // Add tooltip event listeners
     this.setupTooltip('github-tooltip');
-    
+
     console.log('GitHub: Calendar rendered');
   }
 
   setupTooltip(tooltipId) {
     const tooltip = document.getElementById(tooltipId);
     if (!tooltip) return;
-    
+
     const squares = document.querySelectorAll('.github-calendar [data-date]');
-    
+
     squares.forEach(square => {
       square.addEventListener('mouseenter', (e) => {
         const text = square.getAttribute('data-text');
@@ -206,21 +206,21 @@ class GitHubLive {
         const formattedDate = this.formatDate(date);
         tooltip.textContent = `${text} on ${formattedDate}`;
         tooltip.classList.remove('hidden');
-        
+
         // Position tooltip above the square
         const rect = square.getBoundingClientRect();
         const container = square.closest('.github-calendar');
         const containerRect = container.getBoundingClientRect();
-        
+
         // Position relative to container
         const left = rect.left - containerRect.left + rect.width / 2;
         const top = rect.top - containerRect.top;
-        
+
         tooltip.style.left = `${left}px`;
         tooltip.style.top = `${top}px`;
         tooltip.style.transform = 'translate(-50%, calc(-100% - 8px))';
       });
-      
+
       square.addEventListener('mouseleave', () => {
         tooltip.classList.add('hidden');
       });
@@ -257,8 +257,8 @@ class GitHubLive {
 
   formatDate(dateStr) {
     const date = new Date(dateStr + 'T00:00:00');
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                    'July', 'August', 'September', 'October', 'November', 'December'];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'];
     const day = date.getDate();
     const suffix = this.getOrdinalSuffix(day);
     return `${months[date.getMonth()]} ${day}${suffix}`;
