@@ -171,8 +171,9 @@ class StravaLive {
     }
 
     const calendarHTML = `
-      <div class="strava-calendar w-full overflow-hidden">
-        <div class="flex gap-1 pb-2">
+      <div class="strava-calendar w-full relative">
+        <div id="strava-tooltip" class="absolute hidden bg-gray-900 dark:bg-gray-700 text-white text-xs font-sans px-2 py-1 rounded shadow-lg pointer-events-none z-50 whitespace-nowrap"></div>
+        <div class="flex gap-1 pb-2 overflow-hidden">
           ${weeks.map(week => `
             <div class="flex flex-col gap-1 flex-shrink-0">
               ${week.map(day => {
@@ -180,10 +181,10 @@ class StravaLive {
         return '<div class="w-2.5 h-2.5"></div>';
       }
       const color = this.getActivityColor(day.count);
-      const title = day.count > 0
-        ? `${day.date}: ${day.count} ${day.count === 1 ? 'activity' : 'activities'}`
-        : `${day.date}: No activities`;
-      return `<div class="w-2.5 h-2.5 rounded-sm ${color} border border-black/5 dark:border-white/10 transition-colors" title="${title}"></div>`;
+      const text = day.count > 0
+        ? `${day.count} ${day.count === 1 ? 'activity' : 'activities'}`
+        : 'No activities';
+      return `<div class="w-2.5 h-2.5 rounded-sm ${color} border border-black/5 dark:border-white/10 transition-colors cursor-pointer" data-date="${day.date}" data-count="${day.count}" data-text="${text}"></div>`;
     }).join('')}
             </div>
           `).join('')}
@@ -193,7 +194,45 @@ class StravaLive {
 
     container.innerHTML = calendarHTML;
     container.style.display = 'block';
+    
+    // Add tooltip event listeners
+    this.setupTooltip('strava-tooltip');
+    
     console.log('Strava: Calendar rendered');
+  }
+
+  setupTooltip(tooltipId) {
+    const tooltip = document.getElementById(tooltipId);
+    if (!tooltip) return;
+    
+    const squares = document.querySelectorAll('.strava-calendar [data-date]');
+    
+    squares.forEach(square => {
+      square.addEventListener('mouseenter', (e) => {
+        const text = square.getAttribute('data-text');
+        const date = square.getAttribute('data-date');
+        const formattedDate = this.formatDate(date);
+        tooltip.textContent = `${text} on ${formattedDate}`;
+        tooltip.classList.remove('hidden');
+        
+        // Position tooltip above the square
+        const rect = square.getBoundingClientRect();
+        const container = square.closest('.strava-calendar');
+        const containerRect = container.getBoundingClientRect();
+        
+        // Position relative to container
+        const left = rect.left - containerRect.left + rect.width / 2;
+        const top = rect.top - containerRect.top;
+        
+        tooltip.style.left = `${left}px`;
+        tooltip.style.top = `${top}px`;
+        tooltip.style.transform = 'translate(-50%, calc(-100% - 8px))';
+      });
+      
+      square.addEventListener('mouseleave', () => {
+        tooltip.classList.add('hidden');
+      });
+    });
   }
 
   startPolling() {
@@ -221,6 +260,25 @@ class StravaLive {
     if (this.intervalId) {
       clearInterval(this.intervalId);
       this.intervalId = null;
+    }
+  }
+
+  formatDate(dateStr) {
+    const date = new Date(dateStr + 'T00:00:00');
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+    const day = date.getDate();
+    const suffix = this.getOrdinalSuffix(day);
+    return `${months[date.getMonth()]} ${day}${suffix}`;
+  }
+
+  getOrdinalSuffix(day) {
+    if (day > 3 && day < 21) return 'th';
+    switch (day % 10) {
+      case 1: return 'st';
+      case 2: return 'nd';
+      case 3: return 'rd';
+      default: return 'th';
     }
   }
 }
