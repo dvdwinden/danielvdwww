@@ -7,8 +7,7 @@ bodyClass: bg-blue
 
 # Now
 
-<!-- <img src="https://ghchart.rshah.org/dvdwinden" class="block dark:hidden" alt="My Github contribution chart (light)" />
-<img src="https://ghchart.rshah.org/64748b/dvdwinden" class="hidden dark:block" alt="My Github contribution chart (dark)" /> -->
+<div id="github-calendar" style="display: none;" class="mt-8"></div>
 
 ## Contracting with Enode
 I'm currently working on a contract basis with [Enode](https://enode.io/?ref=daniel.pizza "Enode"), helping them build digital infrastructure that enables a zero carbon energy system. There are quite a few ex-colleagues here, and the team's been very welcoming. I've touched more than a few parts of the product already, but the majority of my time has gone to designing new features for Enode's [Sandbox environment](https://developers.enode.com/docs/sandbox?ref=daniel.pizza "Enode Sandbox documentation").

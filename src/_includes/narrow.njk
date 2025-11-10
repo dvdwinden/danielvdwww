@@ -136,9 +136,15 @@
         window.STRAVA_ACCESS_TOKEN = '{{ stravaToken.accessToken }}';
         window.STRAVA_ACTIVITIES = {{ stravaActivities.activityCountByDate | dump | safe }};
         window.STRAVA_LAST_UPDATED = '{{ stravaActivities.lastUpdated }}';
+        
+        // Set GitHub data
+        window.GITHUB_USERNAME = 'dvdwinden';
+        window.GITHUB_CONTRIBUTIONS = {{ githubContributions.contributionsByDate | dump | safe }};
+        window.GITHUB_LAST_UPDATED = '{{ githubContributions.lastUpdated }}';
     </script>
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
     <script src="/js/lastfm-live.js"></script>
     <script src="/js/strava-live.js"></script>
+    <script src="/js/github-live.js"></script>
 </html>

@@ -121,9 +121,9 @@ class StravaLive {
     today.setHours(0, 0, 0, 0);
     
     // Calculate how many weeks we can fit based on container width
-    // Each week is approximately 14px (10px width + 4px gap)
+    // Each week is approximately 14px (11px width + 3px gap)
     const containerWidth = container.offsetWidth || container.clientWidth || 512;
-    const weekWidth = 14; // 10px for week + 4px gap
+    const weekWidth = 14; // 11px for week + 3px gap
     const maxWeeks = Math.floor(containerWidth / weekWidth);
     const weeksToShow = Math.min(maxWeeks, 52); // Cap at 1 year maximum
     const daysToShow = weeksToShow * 7;
@@ -152,11 +152,23 @@ class StravaLive {
 
       currentWeek.push(day);
 
-      if (adjustedDay === 6 || index === days.length - 1) {
+      if (adjustedDay === 6) {
+        weeks.push([...currentWeek]);
+        currentWeek = [];
+      } else if (index === days.length - 1) {
+        // Fill the rest of the week with empty cells
+        while (currentWeek.length < 7) {
+          currentWeek.push(null);
+        }
         weeks.push([...currentWeek]);
         currentWeek = [];
       }
     });
+
+    // Trim weeks from the left if we have more than we can show
+    if (weeks.length > weeksToShow) {
+      weeks.splice(0, weeks.length - weeksToShow);
+    }
 
     const calendarHTML = `
       <div class="strava-calendar w-full overflow-hidden">
@@ -171,7 +183,7 @@ class StravaLive {
       const title = day.count > 0
         ? `${day.date}: ${day.count} ${day.count === 1 ? 'activity' : 'activities'}`
         : `${day.date}: No activities`;
-      return `<div class="w-2.5 h-2.5 rounded-sm ${color} transition-colors" title="${title}"></div>`;
+      return `<div class="w-2.5 h-2.5 rounded-sm ${color} border border-black/5 dark:border-white/10 transition-colors" title="${title}"></div>`;
     }).join('')}
             </div>
           `).join('')}

@@ -65,7 +65,8 @@ class GitHubLive {
       const contributions = {};
       rects.forEach(rect => {
         const date = rect.getAttribute('data-date');
-        const count = parseInt(rect.getAttribute('data-count') || '0', 10);
+        const score = rect.getAttribute('data-score');
+        const count = parseInt(score || '0', 10);
         if (date) {
           contributions[date] = count;
         }
@@ -89,12 +90,12 @@ class GitHubLive {
   }
 
   getContributionColor(count) {
-    // GitHub-style color scheme
+    // GitHub-style green color scheme using emerald (darker tones)
     if (count === 0) return 'bg-black/5 dark:bg-white/10';
-    if (count <= 3) return 'bg-green-200 dark:bg-green-900';
-    if (count <= 6) return 'bg-green-400 dark:bg-green-700';
-    if (count <= 9) return 'bg-green-600 dark:bg-green-500';
-    return 'bg-green-800 dark:bg-green-400';
+    if (count === 1) return 'bg-emerald-300 dark:bg-emerald-900';
+    if (count === 2) return 'bg-emerald-500 dark:bg-emerald-700';
+    if (count === 3) return 'bg-emerald-600 dark:bg-emerald-600';
+    return 'bg-emerald-700 dark:bg-emerald-500';
   }
 
   renderCalendar() {
@@ -113,7 +114,7 @@ class GitHubLive {
     
     // Calculate how many weeks we can fit based on container width
     const containerWidth = container.offsetWidth || container.clientWidth || 512;
-    const weekWidth = 14; // 10px for week + 4px gap
+    const weekWidth = 14; // 11px for week + 3px gap
     const maxWeeks = Math.floor(containerWidth / weekWidth);
     const weeksToShow = Math.min(maxWeeks, 52); // Cap at 1 year maximum
     const daysToShow = weeksToShow * 7;
@@ -143,11 +144,23 @@ class GitHubLive {
 
       currentWeek.push(day);
 
-      if (adjustedDay === 6 || index === days.length - 1) {
+      if (adjustedDay === 6) {
+        weeks.push([...currentWeek]);
+        currentWeek = [];
+      } else if (index === days.length - 1) {
+        // Fill the rest of the week with empty cells
+        while (currentWeek.length < 7) {
+          currentWeek.push(null);
+        }
         weeks.push([...currentWeek]);
         currentWeek = [];
       }
     });
+
+    // Trim weeks from the left if we have more than we can show
+    if (weeks.length > weeksToShow) {
+      weeks.splice(0, weeks.length - weeksToShow);
+    }
 
     const calendarHTML = `
       <div class="github-calendar w-full overflow-hidden">
@@ -162,7 +175,7 @@ class GitHubLive {
       const title = day.count > 0
         ? `${day.date}: ${day.count} ${day.count === 1 ? 'contribution' : 'contributions'}`
         : `${day.date}: No contributions`;
-      return `<div class="w-2.5 h-2.5 rounded-sm ${color} transition-colors" title="${title}"></div>`;
+      return `<div class="w-2.5 h-2.5 rounded-sm ${color} border border-black/5 dark:border-white/10 transition-colors" title="${title}"></div>`;
     }).join('')}
             </div>
           `).join('')}
