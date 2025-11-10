@@ -7,10 +7,8 @@ bodyClass: bg-blue
 
 # Now
 
-<img src="https://ghchart.rshah.org/dvdwinden" class="block dark:hidden" alt="My Github contribution chart (light)" />
-<img src="https://ghchart.rshah.org/64748b/dvdwinden" class="hidden dark:block" alt="My Github contribution chart (dark)" />
-
-<div id="strava-calendar" style="display: none;" class="mt-8"></div>
+<!-- <img src="https://ghchart.rshah.org/dvdwinden" class="block dark:hidden" alt="My Github contribution chart (light)" />
+<img src="https://ghchart.rshah.org/64748b/dvdwinden" class="hidden dark:block" alt="My Github contribution chart (dark)" /> -->
 
 ## Contracting with Enode
 I'm currently working on a contract basis with [Enode](https://enode.io/?ref=daniel.pizza "Enode"), helping them build digital infrastructure that enables a zero carbon energy system. There are quite a few ex-colleagues here, and the team's been very welcoming. I've touched more than a few parts of the product already, but the majority of my time has gone to designing new features for Enode's [Sandbox environment](https://developers.enode.com/docs/sandbox?ref=daniel.pizza "Enode Sandbox documentation").
@@ -22,5 +20,7 @@ The fourth and final issue of [_TRANSCRIPT_ Magazine](http://transcriptmag.com?r
 
 ## Writing
 Next week, I travel to Aulus-les-Bains for a weeklong [residency](/journal/camp-france/), focused on my writing. I'm really looking forward.
+
+<div id="strava-calendar" style="display: none;" class="mt-8"></div>
 
 <span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: November 2025</span>

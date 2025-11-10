@@ -25,10 +25,11 @@ class StravaLive {
     }
 
     try {
-      const ninetyDaysAgo = Math.floor(Date.now() / 1000) - (90 * 24 * 60 * 60);
-      
+      // Fetch activities from the last year to have enough data
+      const oneYearAgo = Math.floor(Date.now() / 1000) - (365 * 24 * 60 * 60);
+
       const response = await fetch(
-        `https://www.strava.com/api/v3/athlete/activities?after=${ninetyDaysAgo}&per_page=200`,
+        `https://www.strava.com/api/v3/athlete/activities?after=${oneYearAgo}&per_page=200`,
         {
           headers: {
             'Authorization': `Bearer ${this.accessToken}`
@@ -55,7 +56,7 @@ class StravaLive {
 
   getActivityCountByDate() {
     const countByDate = {};
-    
+
     this.activities.forEach(activity => {
       const date = activity.start_date_local.split('T')[0];
       countByDate[date] = (countByDate[date] || 0) + 1;
@@ -65,7 +66,7 @@ class StravaLive {
   }
 
   getActivityColor(count) {
-    if (count === 0) return 'bg-gray-100 dark:bg-gray-800';
+    if (count === 0) return 'bg-black/5 dark:bg-white/10';
     if (count === 1) return 'bg-orange-200 dark:bg-orange-900';
     if (count === 2) return 'bg-orange-400 dark:bg-orange-700';
     return 'bg-orange-600 dark:bg-orange-500';
@@ -93,8 +94,13 @@ class StravaLive {
 
     const activityCountByDate = this.getActivityCountByDate();
     const today = new Date();
-    const daysToShow = 90;
+    
+    // Calculate how many weeks we can fit (each week is ~16px wide with gap)
+    // Max-w-lg is 512px, so we can fit approximately 52 weeks (1 year)
+    const weeksToShow = 52;
+    const daysToShow = weeksToShow * 7;
 
+    // Generate days going back from today
     const days = [];
     for (let i = daysToShow - 1; i >= 0; i--) {
       const date = new Date(today);
@@ -103,22 +109,21 @@ class StravaLive {
       const count = activityCountByDate[dateStr] || 0;
       days.push({ date: dateStr, count, dateObj: date });
     }
-
     const weeks = [];
     let currentWeek = [];
-    
+
     days.forEach((day, index) => {
       const dayOfWeek = day.dateObj.getDay();
       const adjustedDay = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
-      
+
       if (index === 0 && adjustedDay > 0) {
         for (let i = 0; i < adjustedDay; i++) {
           currentWeek.push(null);
         }
       }
-      
+
       currentWeek.push(day);
-      
+
       if (adjustedDay === 6 || index === days.length - 1) {
         weeks.push([...currentWeek]);
         currentWeek = [];
@@ -126,30 +131,22 @@ class StravaLive {
     });
 
     const calendarHTML = `
-      <div class="strava-calendar">
-        <div class="flex gap-1 overflow-x-auto pb-2">
+      <div class="strava-calendar w-full overflow-hidden">
+        <div class="flex gap-1 pb-2">
           ${weeks.map(week => `
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-col gap-1 flex-shrink-0">
               ${week.map(day => {
-                if (!day) {
-                  return '<div class="w-3 h-3"></div>';
-                }
-                const color = this.getActivityColor(day.count);
-                const title = day.count > 0 
-                  ? `${day.date}: ${day.count} ${day.count === 1 ? 'activity' : 'activities'}`
-                  : `${day.date}: No activities`;
-                return `<div class="w-3 h-3 rounded-sm ${color} transition-colors" title="${title}"></div>`;
-              }).join('')}
+      if (!day) {
+        return '<div class="w-3 h-3"></div>';
+      }
+      const color = this.getActivityColor(day.count);
+      const title = day.count > 0
+        ? `${day.date}: ${day.count} ${day.count === 1 ? 'activity' : 'activities'}`
+        : `${day.date}: No activities`;
+      return `<div class="w-3 h-3 rounded-sm ${color} transition-colors" title="${title}"></div>`;
+    }).join('')}
             </div>
           `).join('')}
-        </div>
-        <div class="mt-2 flex items-center gap-2 text-xs text-black/50 dark:text-white/50">
-          <span>Less</span>
-          <div class="w-3 h-3 rounded-sm bg-gray-100 dark:bg-gray-800"></div>
-          <div class="w-3 h-3 rounded-sm bg-orange-200 dark:bg-orange-900"></div>
-          <div class="w-3 h-3 rounded-sm bg-orange-400 dark:bg-orange-700"></div>
-          <div class="w-3 h-3 rounded-sm bg-orange-600 dark:bg-orange-500"></div>
-          <span>More</span>
         </div>
       </div>
     `;
@@ -176,7 +173,7 @@ class StravaLive {
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('Strava: DOM loaded, initializing...');
-  
+
   const accessToken = window.STRAVA_ACCESS_TOKEN || null;
 
   console.log('Strava: Access token present:', !!accessToken);
