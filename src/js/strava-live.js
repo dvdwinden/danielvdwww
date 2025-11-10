@@ -1,9 +1,6 @@
 class StravaLive {
-  constructor(clientId, clientSecret, refreshToken) {
-    this.clientId = clientId;
-    this.clientSecret = clientSecret;
-    this.refreshToken = refreshToken;
-    this.accessToken = null;
+  constructor(accessToken) {
+    this.accessToken = accessToken;
     this.updateInterval = 300000; // 5 minutes
     this.intervalId = null;
     this.activities = [];
@@ -12,46 +9,22 @@ class StravaLive {
   }
 
   async init() {
-    await this.refreshAccessToken();
+    if (!this.accessToken) {
+      console.warn('Strava: No access token available');
+      return;
+    }
     await this.updateActivities();
     this.renderCalendar();
     this.startPolling();
   }
 
-  async refreshAccessToken() {
-    try {
-      const response = await fetch('https://www.strava.com/oauth/token', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          client_id: this.clientId,
-          client_secret: this.clientSecret,
-          refresh_token: this.refreshToken,
-          grant_type: 'refresh_token'
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to refresh token');
-      }
-
-      const data = await response.json();
-      this.accessToken = data.access_token;
-      console.log('Strava: Access token refreshed');
-    } catch (error) {
-      console.error('Strava: Failed to refresh access token:', error);
-    }
-  }
-
   async fetchActivities() {
     if (!this.accessToken) {
-      await this.refreshAccessToken();
+      console.warn('Strava: No access token available');
+      return [];
     }
 
     try {
-      // Fetch activities from the last 90 days
       const ninetyDaysAgo = Math.floor(Date.now() / 1000) - (90 * 24 * 60 * 60);
       
       const response = await fetch(
@@ -64,12 +37,7 @@ class StravaLive {
       );
 
       if (!response.ok) {
-        if (response.status === 401) {
-          // Token expired, refresh and retry
-          await this.refreshAccessToken();
-          return this.fetchActivities();
-        }
-        throw new Error('Failed to fetch activities');
+        throw new Error(`Failed to fetch activities: ${response.status}`);
       }
 
       const activities = await response.json();
@@ -89,7 +57,7 @@ class StravaLive {
     const countByDate = {};
     
     this.activities.forEach(activity => {
-      const date = activity.start_date_local.split('T')[0]; // Get YYYY-MM-DD
+      const date = activity.start_date_local.split('T')[0];
       countByDate[date] = (countByDate[date] || 0) + 1;
     });
 
@@ -101,6 +69,18 @@ class StravaLive {
     if (count === 1) return 'bg-orange-200 dark:bg-orange-900';
     if (count === 2) return 'bg-orange-400 dark:bg-orange-700';
     return 'bg-orange-600 dark:bg-orange-500';
+  }
+
+  showRateLimitMessage() {
+    const container = document.getElementById('strava-calendar');
+    if (container) {
+      container.innerHTML = `
+        <div class="text-sm text-black/50 dark:text-white/50">
+          Strava rate limit reached. Calendar will update automatically when available.
+        </div>
+      `;
+      container.style.display = 'block';
+    }
   }
 
   renderCalendar() {
@@ -115,7 +95,6 @@ class StravaLive {
     const today = new Date();
     const daysToShow = 90;
 
-    // Generate last 90 days
     const days = [];
     for (let i = daysToShow - 1; i >= 0; i--) {
       const date = new Date(today);
@@ -125,15 +104,13 @@ class StravaLive {
       days.push({ date: dateStr, count, dateObj: date });
     }
 
-    // Group by weeks (starting on Monday)
     const weeks = [];
     let currentWeek = [];
     
     days.forEach((day, index) => {
       const dayOfWeek = day.dateObj.getDay();
-      const adjustedDay = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Monday = 0, Sunday = 6
+      const adjustedDay = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
       
-      // Fill empty days at the start of the first week
       if (index === 0 && adjustedDay > 0) {
         for (let i = 0; i < adjustedDay; i++) {
           currentWeek.push(null);
@@ -142,14 +119,12 @@ class StravaLive {
       
       currentWeek.push(day);
       
-      // Sunday (adjusted to 6) ends the week
       if (adjustedDay === 6 || index === days.length - 1) {
         weeks.push([...currentWeek]);
         currentWeek = [];
       }
     });
 
-    // Create the calendar HTML
     const calendarHTML = `
       <div class="strava-calendar">
         <div class="flex gap-1 overflow-x-auto pb-2">
@@ -199,7 +174,6 @@ class StravaLive {
   }
 }
 
-// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   console.log('Strava: DOM loaded, initializing...');
   
