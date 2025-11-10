@@ -18,7 +18,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("env", {
     NODE_ENV: process.env.NODE_ENV || "development",
     LASTFM_API_KEY: process.env.LASTFM_API_KEY || "",
-    LASTFM_USERNAME: process.env.LASTFM_USERNAME || "dvdwinden"
+    LASTFM_USERNAME: process.env.LASTFM_USERNAME || "dvdwinden",
+    STRAVA_CLIENT_ID: process.env.STRAVA_CLIENT_ID || "",
+    STRAVA_CLIENT_SECRET: process.env.STRAVA_CLIENT_SECRET || "",
+    STRAVA_REFRESH_TOKEN: process.env.STRAVA_REFRESH_TOKEN || ""
   });
 
   // Add regexMatch filter
