@@ -174,14 +174,14 @@ class GitHubLive {
       }
       const color = this.getContributionColor(day.count);
       const text = day.count > 0
-        ? `${day.count} ${day.count === 1 ? 'GitHub contribution' : 'GitHub contributions'}`
+        ? `${day.count} ${day.count === 1 ? 'contribution' : 'contributions'}`
         : 'No contributions';
       return `<div class="w-2.5 h-2.5 rounded-sm ${color} border border-black/5 dark:border-white/10 transition-colors cursor-pointer" data-date="${day.date}" data-count="${day.count}" data-text="${text}"></div>`;
     }).join('')}
             </div>
           `).join('')}
         </div>
-        <figcaption class="mt-2">My GitHub contributions over the last year</figcaption>
+        <figcaption class="mt-2">My recent GitHub contributions</figcaption>
       </div>
     `;
 

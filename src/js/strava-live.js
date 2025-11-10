@@ -182,14 +182,14 @@ class StravaLive {
       }
       const color = this.getActivityColor(day.count);
       const text = day.count > 0
-        ? `${day.count} ${day.count === 1 ? 'Strava activity' : 'Strava activities'}`
+        ? `${day.count} ${day.count === 1 ? 'activity' : 'activities'}`
         : 'No activities';
       return `<div class="w-2.5 h-2.5 rounded-sm ${color} border border-black/5 dark:border-white/10 transition-colors cursor-pointer" data-date="${day.date}" data-count="${day.count}" data-text="${text}"></div>`;
     }).join('')}
             </div>
           `).join('')}
         </div>
-        <figcaption class="mt-2">My Strava activities over the last year</figcaption>
+        <figcaption class="mt-2">My recent Strava activities—tennis, walking, and running</figcaption>
       </div>
     `;
 
