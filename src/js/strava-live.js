@@ -1,22 +1,44 @@
 class StravaLive {
-  constructor(accessToken) {
+  constructor(accessToken, cachedActivities, lastUpdated) {
     this.accessToken = accessToken;
     this.updateInterval = 300000; // 5 minutes
     this.intervalId = null;
-    this.activities = [];
+    this.activityCountByDate = cachedActivities || {};
+    this.lastUpdated = lastUpdated ? new Date(lastUpdated) : null;
 
     this.init();
   }
 
   async init() {
-    if (!this.accessToken) {
-      console.warn('Strava: No access token available');
-      return;
-    }
-    await this.updateActivities();
+    // Render immediately with cached data
     this.renderCalendar();
+    
+    // Check if we need to fetch new data
+    if (this.shouldFetchNewData()) {
+      await this.updateActivities();
+      this.renderCalendar();
+    }
+    
     this.startPolling();
     this.setupResizeHandler();
+  }
+
+  shouldFetchNewData() {
+    if (!this.lastUpdated) return true;
+    
+    const now = new Date();
+    const currentHour = now.getHours();
+    const timeSinceUpdate = now - this.lastUpdated;
+    const hoursSinceUpdate = timeSinceUpdate / (1000 * 60 * 60);
+    
+    // Only fetch if it's after 21:00 and we haven't fetched today yet
+    if (currentHour >= 21 && hoursSinceUpdate >= 1) {
+      const lastUpdateDate = this.lastUpdated.toDateString();
+      const currentDate = now.toDateString();
+      return lastUpdateDate !== currentDate;
+    }
+    
+    return false;
   }
 
   async fetchActivities() {
@@ -52,19 +74,19 @@ class StravaLive {
   }
 
   async updateActivities() {
-    this.activities = await this.fetchActivities();
-  }
-
-  getActivityCountByDate() {
-    const countByDate = {};
-
-    this.activities.forEach(activity => {
+    const activities = await this.fetchActivities();
+    
+    // Process activities into count by date
+    const activityCountByDate = {};
+    activities.forEach(activity => {
       const date = activity.start_date_local.split('T')[0];
-      countByDate[date] = (countByDate[date] || 0) + 1;
+      activityCountByDate[date] = (activityCountByDate[date] || 0) + 1;
     });
-
-    return countByDate;
+    
+    this.activityCountByDate = activityCountByDate;
+    this.lastUpdated = new Date();
   }
+
 
   getActivityColor(count) {
     if (count === 0) return 'bg-black/5 dark:bg-white/10';
@@ -93,7 +115,7 @@ class StravaLive {
       return;
     }
 
-    const activityCountByDate = this.getActivityCountByDate();
+    const activityCountByDate = this.activityCountByDate;
     // Get today's date at midnight in local timezone to ensure consistency
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -195,13 +217,12 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log('Strava: DOM loaded, initializing...');
 
   const accessToken = window.STRAVA_ACCESS_TOKEN || null;
+  const cachedActivities = window.STRAVA_ACTIVITIES || {};
+  const lastUpdated = window.STRAVA_LAST_UPDATED || null;
 
   console.log('Strava: Access token present:', !!accessToken);
+  console.log('Strava: Cached activities:', Object.keys(cachedActivities).length, 'dates');
+  console.log('Strava: Last updated:', lastUpdated);
 
-  if (accessToken) {
-    console.log('Strava: Creating StravaLive instance');
-    window.stravaLive = new StravaLive(accessToken);
-  } else {
-    console.warn('Strava: Missing access token');
-  }
+  window.stravaLive = new StravaLive(accessToken, cachedActivities, lastUpdated);
 });

@@ -130,8 +130,10 @@
         window.LASTFM_API_KEY = '{{ env.LASTFM_API_KEY | trim }}';
         window.LASTFM_USERNAME = '{{ env.LASTFM_USERNAME | trim }}';
         
-        // Set Strava access token (fetched at build time)
+        // Set Strava data (fetched at build time)
         window.STRAVA_ACCESS_TOKEN = '{{ stravaToken.accessToken }}';
+        window.STRAVA_ACTIVITIES = {{ stravaActivities.activityCountByDate | dump | safe }};
+        window.STRAVA_LAST_UPDATED = '{{ stravaActivities.lastUpdated }}';
     </script>
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
