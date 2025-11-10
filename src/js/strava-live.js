@@ -121,9 +121,9 @@ class StravaLive {
     today.setHours(0, 0, 0, 0);
     
     // Calculate how many weeks we can fit based on container width
-    // Each week is approximately 16px (12px width + 4px gap)
+    // Each week is approximately 14px (10px width + 4px gap)
     const containerWidth = container.offsetWidth || container.clientWidth || 512;
-    const weekWidth = 16; // 12px for week + 4px gap
+    const weekWidth = 14; // 10px for week + 4px gap
     const maxWeeks = Math.floor(containerWidth / weekWidth);
     const weeksToShow = Math.min(maxWeeks, 52); // Cap at 1 year maximum
     const daysToShow = weeksToShow * 7;
@@ -165,13 +165,13 @@ class StravaLive {
             <div class="flex flex-col gap-1 flex-shrink-0">
               ${week.map(day => {
       if (!day) {
-        return '<div class="w-3 h-3"></div>';
+        return '<div class="w-2.5 h-2.5"></div>';
       }
       const color = this.getActivityColor(day.count);
       const title = day.count > 0
         ? `${day.date}: ${day.count} ${day.count === 1 ? 'activity' : 'activities'}`
         : `${day.date}: No activities`;
-      return `<div class="w-3 h-3 rounded-sm ${color} transition-colors" title="${title}"></div>`;
+      return `<div class="w-2.5 h-2.5 rounded-sm ${color} transition-colors" title="${title}"></div>`;
     }).join('')}
             </div>
           `).join('')}
