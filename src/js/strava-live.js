@@ -173,7 +173,7 @@ class StravaLive {
     const calendarHTML = `
       <div class="strava-calendar w-full relative">
         <div id="strava-tooltip" class="absolute hidden bg-gray-900 dark:bg-gray-700 text-white text-xs font-sans px-2 py-1 rounded shadow-lg pointer-events-none z-50 whitespace-nowrap"></div>
-        <div class="flex gap-1 pb-2 overflow-hidden">
+        <div class="flex gap-1 overflow-hidden">
           ${weeks.map(week => `
             <div class="flex flex-col gap-1 flex-shrink-0">
               ${week.map(day => {
@@ -189,6 +189,7 @@ class StravaLive {
             </div>
           `).join('')}
         </div>
+        <figcaption class="mt-2">My Strava activities over the last year</figcaption>
       </div>
     `;
 
