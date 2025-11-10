@@ -189,7 +189,7 @@ class StravaLive {
             </div>
           `).join('')}
         </div>
-        <figcaption class="mt-2">My recent Strava activities—tennis, walking, and running</figcaption>
+        <figcaption class="mt-2">My recent Strava activities—tennis, workouts, walking, and running</figcaption>
       </div>
     `;
 
