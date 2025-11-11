@@ -15,7 +15,7 @@ I'm currently working on a contract basis with [Enode](https://enode.io/?ref=dan
 If you have a project I might be a fit for in 2026, don't hesitate to reach out.
 
 ## The final issue of _TRANSCRIPT_ Magazine, and other pastimes
-The fourth and final issue of [_TRANSCRIPT_ Magazine](http://transcriptmag.com?ref=daniel.pizza "TRANSCRIPT Magazine") is out, and you can [order it](http://transcriptmag.store/issue-four "TRANSCRIPT ISSUE FOUR") now. It is our last, which we [celebrated in October](https://www.instagram.com/p/DQHYp-FiAEO/?img_index=1 "Recap on Instagram"). Whatever comes next, you will know about early in 2026.
+The fourth and final issue of [_TRANSCRIPT_ Magazine](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") is out, and you can [order it](http://transcriptmag.store/issue-four "TRANSCRIPT ISSUE FOUR") now. It is our last, which we [celebrated in October](https://www.instagram.com/p/DQHYp-FiAEO/?img_index=1 "Recap on Instagram"). Whatever comes next, you will know about early in 2026.
 
 I also keep chipping away at projects on the side—this website, the [NoGood book](https://nogood.studio/posts/products/nogood-book-collectors/?ref=daniel.pizza "NoGood book"), and my [monthly newsletter](http://trema.website?ref=daniel.pizza "Trema, my monthly newsletter on books worth reading") about books worth reading.
 
