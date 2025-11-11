@@ -32,3 +32,6 @@ I'm really looking forward. I have a few ideas for essays circling in my head, a
 I've recently picked up running to supplement my tennis in the winter months. With the rain, courts are often not playable, so I needed something to keep myself going. I'm keeping it casual, but enjoying it so far.
 
 <div id="strava-calendar" style="display: none;" class="mt-8"></div>
+
+
+_The /now page is based on an idea by [Derek Sivers](https://nownownow.com/about)._
