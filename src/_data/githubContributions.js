@@ -2,37 +2,70 @@ const axios = require('axios');
 
 module.exports = async function() {
   const username = 'dvdwinden';
+  const token = process.env.GITHUB_TOKEN;
+  
+  if (!token) {
+    console.warn('⚠️  GitHub token not found in environment variables');
+    return { contributionsByDate: {}, lastUpdated: new Date().toISOString() };
+  }
   
   try {
-    console.log('Fetching GitHub contributions chart...');
+    console.log('Fetching GitHub contributions via GraphQL API...');
     
-    // Fetch the SVG chart from ghchart.rshah.org
-    const response = await axios.get(`https://ghchart.rshah.org/${username}`);
+    // Calculate date range (last year)
+    const toDate = new Date();
+    const fromDate = new Date();
+    fromDate.setFullYear(fromDate.getFullYear() - 1);
     
-    if (!response.data) {
-      throw new Error('No data received from ghchart.rshah.org');
-    }
-    
-    console.log('✅ GitHub contributions chart fetched');
-    
-    // Parse the SVG to extract contribution data
-    const svgText = response.data;
-    const contributionsByDate = {};
-    
-    // Extract data-date and data-score attributes from rect elements
-    const rectRegex = /<rect[^>]*data-score="([^"]*)"[^>]*data-date="([^"]*)"[^>]*>/g;
-    let match;
-    
-    while ((match = rectRegex.exec(svgText)) !== null) {
-      const score = match[1];
-      const date = match[2];
-      const count = parseInt(score || '0', 10);
-      if (date) {
-        contributionsByDate[date] = count;
+    const query = `
+      query($username: String!, $from: DateTime!, $to: DateTime!) {
+        user(login: $username) {
+          contributionsCollection(from: $from, to: $to) {
+            contributionCalendar {
+              weeks {
+                contributionDays {
+                  date
+                  contributionCount
+                }
+              }
+            }
+          }
+        }
       }
+    `;
+    
+    const response = await axios.post(
+      'https://api.github.com/graphql',
+      {
+        query,
+        variables: {
+          username,
+          from: fromDate.toISOString(),
+          to: toDate.toISOString()
+        }
+      },
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+    
+    if (response.data.errors) {
+      throw new Error(`GraphQL errors: ${JSON.stringify(response.data.errors)}`);
     }
     
-    console.log(`✅ Parsed ${Object.keys(contributionsByDate).length} contribution dates`);
+    const contributionsByDate = {};
+    const weeks = response.data.data.user.contributionsCollection.contributionCalendar.weeks;
+    
+    weeks.forEach(week => {
+      week.contributionDays.forEach(day => {
+        contributionsByDate[day.date] = day.contributionCount;
+      });
+    });
+    
+    console.log(`✅ Fetched ${Object.keys(contributionsByDate).length} contribution dates from GitHub API`);
     
     return { 
       contributionsByDate,
