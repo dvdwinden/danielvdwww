@@ -24,7 +24,7 @@ I'm writing this journal entry at night, on the first day of a weeklong residenc
 
 <figure class="w-full">
   <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/journal/aulus-les-bains.mov" type="video/mp4">
+        <source src="/assets/journal/aulus-les-bains.mp4" type="video/mp4">
         As seen from my window, in Aulus-les-Bains.
     </video>
     <figcaption class="pl-8 sm:pl-0">As seen from my window, in Aulus-les-Bains.</figcaption>
