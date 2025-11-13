@@ -36,7 +36,7 @@ This morning I sat down at my desk and started writing. I had a half-formed idea
 
 <figure class="w-full">
     {% retinaImage "src/assets/journal/lenticularis.JPG", "A Lenticularis cloud" %}
-    <figcaption class="pl-8 sm:pl-0">A Lenticularis cloud (my thanks to <a href="https://www.instagram.com/joost.boelhouwer/?hl=en" title="Joost Boelhouwer on Instagram">Joost</a>, for very rapidly clarifying every cloud I send him)</figcaption>
+    <figcaption class="pl-8 sm:pl-0">A Lenticularis cloud hanging over the mountains (my thanks to <a href="https://www.instagram.com/joost.boelhouwer/?hl=en" title="Joost Boelhouwer on Instagram">Joost</a>, for very rapidly clarifying every cloud I send him)</figcaption>
   </figure>
 
 Outside is warmer than inside, but the temperatures will drop dramatically later in the week. A warm wind blew through the village when Thom took us on a little tour today, explaining Aulus-les-Bains' history of thermal spas, showing us its grotto, and sharing with us the part the village played in WWII. 

@@ -24,7 +24,7 @@ Our [first issue](http://transcriptmag.store/issue-one?ref=daniel.pizza "TRANSCR
 
 <figure class="w-full">
   <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/journal/transcript-issue-four.mov" type="video/mp4">
+        <source src="/assets/journal/transcript-issue-four.mp4" type="video/mp4">
         A quick flickthrough of the fourth issue of <em>TRANSCRIPT</em>.
     </video>
     <figcaption class="pl-8 sm:pl-0">A quick flickthrough of the fourth issue of <em>TRANSCRIPT</em>.</figcaption>
