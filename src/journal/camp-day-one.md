@@ -8,7 +8,7 @@ description: The first day of my weeklong writing residency at Camp, in Aulus-le
 image:
   src: /assets/journal/aulus-les-bains01.JPG
   alt: "Aulus-les-Bains"
-  title: "The fourth and final issue of our magazine just came back from the printer's, and we're hosting an evening to celebrate one last time."
+  title: "The first day of my weeklong writing residency at Camp, in Aulus-les-Bains."
 ---
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
