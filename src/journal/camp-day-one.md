@@ -2,7 +2,7 @@
 layout: base.njk
 title: "Aulus-les-Bains (I)"
 bodyClass: bg-stone
-date: 2025-11-13T00:29:04+02:00
+date: 2025-11-13T23:29:00+02:00
 tags: [residency]
 description: The first day of my weeklong writing residency at Camp, in Aulus-les-Bains.
 image:
