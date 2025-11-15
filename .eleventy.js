@@ -44,6 +44,17 @@ module.exports = function (eleventyConfig) {
       .replace(/<span[^>]*class="[^"]*font-sans[^"]*"[^>]*>.*?<\/span>\s*/g, ''); // Date spans
   });
 
+  // Add filter to make content RSS-safe by removing scripts and replacing embeds with links
+  eleventyConfig.addFilter("rssSafe", function (content) {
+    if (!content) return content;
+    // Remove Strava embeds and scripts, replace with plain link
+    return content
+      .replace(/<div class="strava-embed-placeholder"[^>]*data-embed-id="([^"]+)"[^>]*><\/div>\s*<script[^>]*><\/script>/g, 
+        '<p><a href="https://www.strava.com/activities/$1">View activity on Strava</a></p>')
+      // Remove any other script tags as a safety measure
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  });
+
   // Image optimization function
   // Utility function to try finding a file
   const tryFile = async (filePath) => {

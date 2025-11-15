@@ -22,11 +22,7 @@ When I woke up this morning and rolled up the window shutter, I was greeted by a
 
 [Danny](https://www.afoundsound.co.uk/?ref=daniel.pizza) joined me. He took his recording equipment along, trying to record the rumble of the waterfall, the steel drum sound of a bridge, the tremors of rocks, and the swooping winds. It was nice to see him fiddle with that, and to hear a bit of what that sounds like. 
 
-{% if not isRssFeed %}
 <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="16465842944" data-style="standard" data-from-embed="false"></div><script src="https://strava-embeds.com/embed.js"></script>
-{% else %}
-<p><a href="https://www.strava.com/activities/16465842944">View the climb as an activity on Strava</a></p>
-{% endif %}
 
 The climb was quite steep at times, but well manageable. The most treacherous bits were when we were up to our knees in fallen leaves, somewhat clueless as to where to plant our feet. We did a little over 10 kilometers, in just under three hours moving time—five hours altogether, including (recording) breaks.
 
