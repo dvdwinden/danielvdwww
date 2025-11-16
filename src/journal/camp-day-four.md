@@ -38,7 +38,7 @@ These workshops are always incredibly energising—the writing exercises usually
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
-Last night, I had dug quite a bit deeper on what I felt my essay was missing. It read as if I was (still) keeping the reader at an arm's length, so I attempted to improve that today, trying to get somewhere that feels a little more raw. It now consists of five sections, making up close to 3,000 words, and I feel like it improved quite a bit from where I left it yesterday. I don't need more words, just better words.
+Last night, I had dug quite a bit deeper on what I felt my essay was missing. It read as if I was (still) keeping the reader at an arm's length, so I attempted to improve that today, trying to get somewhere that feels a little more raw. It now consists of five sections, making up close to 3.000 words, and I feel like it improved quite a bit from where I left it yesterday. I don't need more words, just better words.
 
 Still, I think I need to let it rest for a moment. I closed my computer around 17:00, went for a 5 kilometre run ([surprised by the lack of oxygen up here](https://www.strava.com/activities/16477533525)), and won't touch it again until tomorrow. In fact, I may use tomorrow to set up the bones of another essay, shift my focus a bit, and hopefully finish the one I've been working on before I leave here on Wednesday. Let's see how I feel about this when I wake up.
 

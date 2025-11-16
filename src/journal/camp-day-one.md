@@ -32,7 +32,7 @@ I'm writing this journal entry at night, on the first day of a weeklong residenc
 
 There's a group of nine, maybe ten of us here—I haven't counted—and most are musicians. _Camp_ comes with plenty of instruments and recording equipment, and they often host music-related workshops, so it seems to be a popular destination for the musically inclined. Arriving here yesterday evening, after a beautiful two-hour drive from Toulouse, I enjoyed sharing a nice meal with likeminded people, all here to make things over the course of one or two weeks. 
 
-This morning I sat down at my desk and started writing. I had a half-formed idea in my head for an essay about time (or my anxieties surrounding it), which kept bubbling up over the last few weeks, and I just got stuck in. I wrote 1,400 words in the morning, then a few more in the afternoon, and edited 1,600 or so to a state that I felt satisfied with. My goal was to write 800 _good words_ a day, so I'm off to a decent start. Let's see how it reads tomorrow.
+This morning I sat down at my desk and started writing. I had a half-formed idea in my head for an essay about time (or my anxieties surrounding it), which kept bubbling up over the last few weeks, and I just got stuck in. I wrote 1.400 words in the morning, then a few more in the afternoon, and edited 1.600 or so to a state that I felt satisfied with. My goal was to write 800 _good words_ a day, so I'm off to a decent start. Let's see how it reads tomorrow.
 
 <figure class="w-full">
     {% retinaImage "src/assets/journal/lenticularis.JPG", "A Lenticularis cloud" %}

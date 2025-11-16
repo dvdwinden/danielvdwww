@@ -7,6 +7,6 @@ external_url: https://blog.jim-nielsen.com/2025/why-make-a-website-in-2025/?ref=
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
-> The same reason you would bake a batch of cookies: because you enjoy it — the process itself, but also the result.
+> The same reason you would bake a batch of cookies: because you enjoy it—the process itself, but also the result.
 
 Make websites [because you like to](https://blog.jim-nielsen.com/2025/why-make-a-website-in-2025/).
