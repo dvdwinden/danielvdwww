@@ -35,7 +35,7 @@ I started excavating a childhood memory I hadn't thought about in forever, and f
   <figcaption class="pl-8 sm:pl-0">A passage from <em>Bird by Bird</em>, by Anne Lamott.</figcaption>
 </figure>
 
-And this has been really fascinating, these past few days: learning more about how my writing process plays out when given a good chunk of dedicated time. Switching between writing on my computer, analysing my own writing by filling pages in my notebook, and reading other people's writing, I feel I've better learned how to use the tools at my disposal, if you will. 
+And this has been really fascinating, these past few days: learning more about how my writing process plays out when given a good chunk of dedicated time. Switching between writing on my computer, analysing my own writing by filling pages in my notebook, and reading other people's writing. Using every day to improve the writing I have, focusing on one or two sections of a piece, rather than scrapping everything and starting over or directing my attention to something new entirely: I feel I've learned how to better use the tools at my disposal, if you will. 
 
 I still don't know if this piece I'm writing will be finished (or adequate) by tomorrow night, but I'm hopeful I can take this experience and apply it when I'm back home, back to carving out little pockets of time to write outside of my day job, and in my daily life.
 
