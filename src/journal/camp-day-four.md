@@ -44,6 +44,6 @@ Still, I think I need to let it rest for a moment. I closed my computer around 1
 
 We may watch [_Nosferatu_](https://letterboxd.com/film/nosferatu-2024/) tonight. If not, it's reading or coding. I'm not wasting much time, up here!
 
-_This was part IV in a series of posts on my time at the Camp residency in Aulus-les-Bains. Continue reading previous posts: [III](/journal/camp-day-three), [II](/journal/camp-day-two), [I](/journal/camp-day-one)._
+_This was part IV in a series of posts on my time at the Camp residency in Aulus-les-Bains. Continue reading the next ([V](/journal/camp-day-five)) or catch up on previous posts: [III](/journal/camp-day-three), [II](/journal/camp-day-two), [I](/journal/camp-day-one)._
 
 </div>

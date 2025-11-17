@@ -48,6 +48,6 @@ Last night, I built a significant chunk of the new [_TRANSCRIPT_](http://transcr
 
 Onwards.
 
-_This was part III in a series of posts on my time at the Camp residency in Aulus-les-Bains. Continue reading the next ([IV](/journal/camp-day-four)) or catch up on previous posts: [II](/journal/camp-day-two), [I](/journal/camp-day-one)._
+_This was part III in a series of posts on my time at the Camp residency in Aulus-les-Bains. Continue reading the next ([IV](/journal/camp-day-four), [V](/journal/camp-day-five)) or catch up on previous posts: [II](/journal/camp-day-two), [I](/journal/camp-day-one)._
 
 </div>
