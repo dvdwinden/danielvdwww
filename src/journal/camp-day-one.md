@@ -52,4 +52,6 @@ Plenty to choose from.
 
 Tomorrow I'll hike, weather permitting. 
 
+_This was part I in a series of posts on my time at the Camp residency in Aulus-les-Bains. Continue reading the next posts: [II](/journal/camp-day-two), [III](/journal/camp-day-three), [IV](/journal/camp-day-four)._
+
 </div>
