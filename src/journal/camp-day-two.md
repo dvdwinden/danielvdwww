@@ -27,6 +27,6 @@ I stopped writing around 16:00, read a bit, then fell asleep. It feels great to 
 
 Today was not suitable for hiking, due to heavy winds and rain. Tomorrow I'll either join part of the group to visit a local market, or take the hike to the waterfall ([_Cascade d'Ars_](https://maps.app.goo.gl/5L7ghX1VqcpU3ywm7)). Tonight, I might code a little—I'm working on a new, (even) simpler website for [_TRANSCRIPT_](http://transcriptmag.store), and it might be a good way to distract my brain. 
 
-_This was part II in a series of posts on my time at the Camp residency in Aulus-les-Bains. Catch up on the previous post ([I](/journal/camp-day-one)), or continue reading the others: [III](/journal/camp-day-three), [IV](/journal/camp-day-four), [V](/journal/camp-day-five)._
+_This was part II in a series of posts on my time at the Camp residency in Aulus-les-Bains. Continue reading the next ([III](/journal/camp-day-three)) or catch up on the previous post ([I](/journal/camp-day-one))._
 
 </div>

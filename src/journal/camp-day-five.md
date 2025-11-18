@@ -41,6 +41,6 @@ I still don't know if this piece I'm writing will be finished (or adequate) by t
 
 P.S.: [_Nosferatu_](https://letterboxd.com/film/nosferatu-2024/) was fantastic. I _loved_ it.
 
-_This was part V in a series of posts on my time at the Camp residency in Aulus-les-Bains. Catch up on previous posts: [IV](/journal/camp-day-four), [III](/journal/camp-day-three), [II](/journal/camp-day-two), [I](/journal/camp-day-one)._
+_This was part V in a series of posts on my time at the Camp residency in Aulus-les-Bains. Continue reading the next ([VI](/journal/camp-day-six)), or catch up on previous posts: [IV](/journal/camp-day-four), [III](/journal/camp-day-three), [II](/journal/camp-day-two), [I](/journal/camp-day-one)._
 
 </div>
