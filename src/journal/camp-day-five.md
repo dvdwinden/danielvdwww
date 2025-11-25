@@ -9,6 +9,7 @@ image:
   src: /assets/journal/aulus-les-bains07.jpg
   alt: "Aulus-les-Bains"
   title: "The fifth day. Simmering, languishing, then finding my feet again."
+  objectPosition: bottom
 ---
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
