@@ -17,12 +17,11 @@ bodyClass: bg-blue
 <section class="introduction">
   <span class="callout">I have over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.</span>
 
-  - Most recently I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), designing and [building](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers.
-  - Before that I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
-
-  I'm open to new opportunities, contract or permanent. If you are in need of someone with my profile, please reach out.
+  - Currently I work on a contract basis for [Enode](http://enode.io?ref=daniel.pizza "Enode"), designing and building digital infrastructure that enables a zero carbon energy system.
+  - I recently spent a few months contracting for [Fictive Kin](http://fictivekin.com?ref=daniel.pizza "Fictive Kin"), where I designed an Android app for a Mexican retailer and helped lay the foundation for [Ladder](https://ladderbenefits.com/?ref=daniel.pizza "Ladder"), enabling NYC-based Americans who don't have the means to get by apply for benefits.
+  - Before that I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), where I designed and [built](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers. Until 2023, over a period of nine years, I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
   
-  I'm especially excited about working with (consumer-facing) companies in the space of publishing, sustainability, culture, music, film, or design tooling. Run a research or innovation lab? I'm all ears, too.
+  I'm especially excited about working with (consumer-facing) companies in the space of publishing, sustainability, culture, music, film, or design tooling. Run a research or innovation lab? I'm all ears, too. If you are in need of someone with my profile, please reach out.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -57,7 +56,7 @@ bodyClass: bg-blue
           <h3>Senior Product Designer · Contract</h3>
         </div>
         <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          Building digital infrastructure that enables a zero carbon energy system, at <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a>. <br /><br />Before that, at <a href="http://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="nofollow" target="_blank">Fictive Kin</a>, I designed an Android app for a Mexican retailer, and helped lay the foundation for <a href="https://ladderbenefits.com/?ref=daniel.pizza" title="Ladder" rel="external" target="_blank">Ladder</a>, enabling NYC-based Americans who don't have the means to get by apply for benefits.
+          Building digital infrastructure that enables a zero carbon energy system, at <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a>. 
         </div>
       </div>
    </li>
