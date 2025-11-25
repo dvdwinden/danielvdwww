@@ -772,6 +772,7 @@ ul.journal picture {
 /* Journal featured images with aspect ratio control */
 .journal-featured-image {
     position: relative;
+    border-radius: 0.1875rem;
 }
 
 .journal-featured-image picture,
