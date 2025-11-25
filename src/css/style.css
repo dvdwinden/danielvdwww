@@ -769,6 +769,40 @@ ul.journal picture {
     margin-top: 1em;
 }
 
+/* Journal featured images with aspect ratio control */
+.journal-featured-image {
+    position: relative;
+}
+
+.journal-featured-image picture,
+.journal-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Support for custom object-position via data attribute */
+.journal-featured-image[data-object-position="top"] picture img,
+.journal-featured-image[data-object-position="top"] img {
+    object-position: top;
+}
+
+.journal-featured-image[data-object-position="bottom"] picture img,
+.journal-featured-image[data-object-position="bottom"] img {
+    object-position: bottom;
+}
+
+.journal-featured-image[data-object-position="left"] picture img,
+.journal-featured-image[data-object-position="left"] img {
+    object-position: left;
+}
+
+.journal-featured-image[data-object-position="right"] picture img,
+.journal-featured-image[data-object-position="right"] img {
+    object-position: right;
+}
+
 /* Icons */
 .icon-sunrise {
     color: #fff;
