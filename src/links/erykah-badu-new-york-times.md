@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: "Erykah Badu performing at The New York Times’ office"
-date: 2025-12-05T22:09:45+00:00
+date: 2025-12-05T22:09:45+02:00
 tags: [youtube]
 external_url: https://www.youtube.com/watch?v=dQqdN6tjGl4&list=RDdQqdN6tjGl4&start_radio=1&ref=daniel.pizza
 bodyClass: bg-green
