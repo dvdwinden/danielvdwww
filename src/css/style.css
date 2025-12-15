@@ -834,6 +834,47 @@ a.no-underline:hover span {
    PAGE-SPECIFIC STYLES
    ========================================================================== */
 
+/* Reading page - book cover hover */
+.book-item {
+    position: relative;
+}
+
+.book-item:hover .book-cover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.book-cover {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    margin-right: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.book-cover img {
+    width: 120px;
+    height: auto;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .book-cover {
+        display: none;
+    }
+}
+
+.book-star {
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+}
+
 /* Work section */
 .prose h2.work-title {
     font-size: 2rem;
