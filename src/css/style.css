@@ -833,8 +833,10 @@ a.no-underline:hover span {
 /* ==========================================================================
    PAGE-SPECIFIC STYLES
    ========================================================================== */
+ul.list-none {
+    padding: 0;
+}
 
-/* Reading page - book cover hover */
 .book-item {
     position: relative;
 }
