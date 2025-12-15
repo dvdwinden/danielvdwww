@@ -961,6 +961,13 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });
 
+  // Capitalize first letter of a string (used for tag display)
+  eleventyConfig.addFilter("capitalize", function(value) {
+    if (!value) return value;
+    const str = String(value);
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  });
+
 
   // Set up redirects from /writing/* to /journal/* both for local dev and production
   eleventyConfig.setServerOptions({

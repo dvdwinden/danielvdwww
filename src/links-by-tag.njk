@@ -7,11 +7,11 @@ permalink: "links/{{ tagPage.slug }}/{% if tagPage.pageNumber > 0 %}page/{{ tagP
 layout: narrow.njk
 bodyClass: bg-green
 eleventyComputed:
-  title: "Links tagged '{{ tagPage.name }}'"
-  description: "All links tagged with {{ tagPage.name }}"
+  title: "Links / {{ tagPage.name | capitalize }}"
+  description: "All links tagged with {{ tagPage.name | capitalize }}"
 ---
 
-<h1>Links tagged '{{ tagPage.name }}'</h1>
+<h1 class="links-title">Links<span class="links-title__divider"> / </span><span class="links-title__tag">{{ tagPage.name | capitalize }}</span></h1>
 
 {% set start = tagPage.pageNumber * 10 + 1 %}
 {% set end = start + tagPage.posts.length - 1 %}

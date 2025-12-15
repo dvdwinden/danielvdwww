@@ -738,6 +738,14 @@ ul.links li p span a {
     font-family: theme('fontFamily.sans');
 }
 
+.links-title__divider {
+    opacity: 0.5;
+}
+
+.links-title__tag {
+    opacity: 0.5;
+}
+
 span.testimonial a {
     font-weight: 500;
 }
