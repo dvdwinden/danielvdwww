@@ -847,7 +847,7 @@ a.no-underline:hover span {
 .book-cover {
     position: absolute;
     left: 0;
-    top: -0.25rem;
+    top: -0.2rem;
     transform: translateX(calc(-100% - 1rem));
     opacity: 0;
     visibility: hidden;
