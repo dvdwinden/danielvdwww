@@ -908,6 +908,55 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // Derived collection with pre-paginated tag pages (10 posts per page)
+  eleventyConfig.addCollection("linkTagPages", function (collectionApi) {
+    const tags = eleventyConfig.collections?.linkTags
+      ? eleventyConfig.collections.linkTags(collectionApi)
+      : null;
+
+    // If we can't call the collection, recompute the tag list locally
+    const baseTags = tags || (function(){
+      const links = collectionApi.getFilteredByGlob("src/links/*.md").filter(i => !i.data.draft);
+      const tagMap = {};
+      links.forEach(item => {
+        const tagArray = Array.isArray(item.data.tags) ? item.data.tags : (item.data.tags ? [item.data.tags] : []);
+        tagArray.forEach(t => {
+          const name = t.trim();
+          const slug = slugify(name);
+          if (!tagMap[slug]) tagMap[slug] = { name, slug, posts: [] };
+          tagMap[slug].posts.push(item);
+        });
+      });
+      Object.values(tagMap).forEach(t => t.posts.sort((a,b) => b.date - a.date));
+      return Object.values(tagMap).sort((a,b) => a.name.localeCompare(b.name, undefined, {sensitivity:'base'}));
+    })();
+
+    const pageSize = 10;
+    const pages = [];
+
+    baseTags.forEach(tag => {
+      const totalPages = Math.max(1, Math.ceil(tag.posts.length / pageSize));
+      for (let pageNumber = 0; pageNumber < totalPages; pageNumber++) {
+        const start = pageNumber * pageSize;
+        const end = start + pageSize;
+        const slice = tag.posts.slice(start, end);
+        pages.push({
+          name: tag.name,
+          slug: tag.slug,
+          posts: slice,
+          pageNumber,
+          totalPages,
+          totalPosts: tag.posts.length,
+          href: `/links/${tag.slug}/${pageNumber > 0 ? `page/${pageNumber + 1}/` : ''}`,
+          previousHref: pageNumber > 0 ? `/links/${tag.slug}/${pageNumber === 1 ? '' : `page/${pageNumber}/`}` : null,
+          nextHref: pageNumber < totalPages - 1 ? `/links/${tag.slug}/page/${pageNumber + 2}/` : null
+        });
+      }
+    });
+
+    return pages;
+  });
+
   eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });

@@ -1,28 +1,30 @@
 ---
 pagination:
-  data: collections.linkTags
+  data: collections.linkTagPages
   size: 1
-  alias: tag
-permalink: "links/{{ tag.slug }}/index.html"
+  alias: tagPage
+permalink: "links/{{ tagPage.slug }}/{% if tagPage.pageNumber > 0 %}page/{{ tagPage.pageNumber + 1 }}/{% endif %}index.html"
 layout: narrow.njk
 bodyClass: bg-green
 eleventyComputed:
-  title: "Links tagged '{{ tag.name }}'"
-  description: "All links tagged with {{ tag.name }}"
+  title: "Links tagged '{{ tagPage.name }}'"
+  description: "All links tagged with {{ tagPage.name }}"
 ---
 
-<h1>Links tagged '{{ tag.name }}'</h1>
+<h1>Links tagged '{{ tagPage.name }}'</h1>
 
 <p class="mb-6">
   <a href="/links/" class="text-sm font-medium hover:underline dark:text-gray-300 dark:hover:text-white">← Back to all links</a>
 </p>
 
+{% set start = tagPage.pageNumber * 10 + 1 %}
+{% set end = start + tagPage.posts.length - 1 %}
 <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">
-  {{ tag.posts.length }} {% if tag.posts.length == 1 %}post{% else %}posts{% endif %} with this tag
+  Showing {{ start }}–{{ end }} of {{ tagPage.totalPosts }}
 </p>
 
 <ul class="divide-y divide-gray-950/10 dark:divide-white/5 links">
-  {% for post in tag.posts %}
+  {% for post in tagPage.posts %}
   <li class="py-3 pl-0">
     <div class="flex flex-col">
       <div class="flex items-baseline justify-between">
@@ -41,3 +43,27 @@ eleventyComputed:
   </li>
   {% endfor %}
 </ul>
+
+{% if tagPage.previousHref or tagPage.nextHref %}
+<nav class="pagination flex items-center justify-between mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
+  {% if tagPage.previousHref %}
+    <a href="{{ tagPage.previousHref }}" class="text-sm font-medium text-gray-700 hover:text-hover dark:hover:text-gray-300" aria-label="Previous page" alt="Previous page">
+      <span>{% include "icons/arrow-left-round.svg" %}</span>
+    </a>
+  {% else %}
+    <span class="text-gray-300 dark:text-gray-500">{% include "icons/arrow-left-round.svg" %}</span>
+  {% endif %}
+
+  <span class="text-sm font-sans text-gray-500">
+    Page {{ tagPage.pageNumber + 1 }} of {{ tagPage.totalPages }}
+  </span>
+
+  {% if tagPage.nextHref %}
+    <a href="{{ tagPage.nextHref }}" class="text-gray-700 hover:text-hover dark:hover:text-gray-300" aria-label="Next page" alt="Next page">
+      <span>{% include "icons/arrow-right-round.svg" %}</span>
+    </a>
+  {% else %}
+    <span class="text-gray-300 dark:text-gray-500">{% include "icons/arrow-right-round.svg" %}</span>
+  {% endif %}
+</nav>
+{% endif %}
