@@ -788,7 +788,8 @@ module.exports = function (eleventyConfig) {
     "src/assets/journal": "assets/journal",
     "src/assets/newsletter": "assets/newsletter",
     "src/assets/work": "assets/work",
-    "src/assets/now": "assets/now"
+    "src/assets/now": "assets/now",
+    "src/assets/reading": "assets/reading"
   });
 
   // Copy _redirects file for Netlify redirects
