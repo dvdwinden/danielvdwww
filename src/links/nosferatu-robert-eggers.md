@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: On the cinematography of Nosferatu
 date: 2025-11-20T16:16:00+02:00
-tags: film, cinematography
+tags: [film, cinematography]
 external_url: https://www.cined.com/behind-the-masterful-cinematography-of-nosferatu-dark-and-mesmerizing/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

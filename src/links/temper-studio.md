@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Temper Studio
 date: 2025-08-08T10:47:00+02:00
-tags: brands, photography, clothing
+tags: [brands, photography, clothing]
 external_url: https://temper.studio/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

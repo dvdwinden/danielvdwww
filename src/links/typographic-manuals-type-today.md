@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Typographic Manuals by type.today
 date: 2025-08-12T19:13:00+02:00
-tags: typography
+tags: [typography]
 external_url: https://type.today/en/journal/dots?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: How to Fix a Typewriter and Your Life
 date: 2025-12-05T23:27:00+02:00
-tags: technology, restoration
+tags: [technology, restoration]
 external_url: https://www.nytimes.com/interactive/2025/11/20/us/typewriter-repair-seattle-bremerton.html?unlocked_article_code=1.6E8.MSt7.5tfts44Yebbf&smid=url-share
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

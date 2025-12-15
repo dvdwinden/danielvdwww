@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: The Art of the Impersonal Essay
 date: 2025-10-26T00:08:00+02:00
-tags: writing, essay
+tags: [writing, essay]
 external_url: https://www.newyorker.com/magazine/2025/09/29/the-art-of-the-impersonal-essay?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

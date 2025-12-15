@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: The Power We Use and The Power We Give
 date: 2025-08-30T14:41:00+02:00
-tags: publishing
+tags: [publishing]
 external_url: https://www.pbump.net/o/the-power-we-use-and-the-power-we-give/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

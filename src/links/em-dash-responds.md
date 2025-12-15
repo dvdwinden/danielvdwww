@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: The Em Dash Responds to the AI Allegations
 date: 2025-08-20T00:12:00+02:00
-tags: satire
+tags: [satire]
 external_url: https://www.mcsweeneys.net/articles/the-em-dash-responds-to-the-ai-allegations?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

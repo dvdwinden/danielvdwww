@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: A Presentation App That Works On Your Phone
 date: 2025-08-29T09:28:00+02:00
-tags: typography, design, software
+tags: [typography, design, software]
 external_url: https://ia.net/topics/a-presentation-app-that-works-on-your-phone?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

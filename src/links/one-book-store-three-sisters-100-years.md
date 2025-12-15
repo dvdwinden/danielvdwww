@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: One Bookstore, 3 Sisters and 100 Years
 date: 2025-11-02T11:30:00+02:00
-tags: books, book stores
+tags: [books, book stores]
 external_url: https://www.nytimes.com/2025/11/01/nyregion/three-sisters-argosy-books.html?unlocked_article_code=1.yE8.nykp.6_6w6qRIDu7E&smid=url-share?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

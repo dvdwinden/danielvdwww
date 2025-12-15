@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Selling Lemons
 date: 2025-10-02T23:05:00+02:00
-tags: web
+tags: [web]
 external_url: https://frankchimero.com/blog/2025/selling-lemons/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

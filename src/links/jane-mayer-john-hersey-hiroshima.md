@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Revisiting John Hersey’s “Hiroshima”
 date: 2025-08-03T18:34:00+02:00
-tags: writing
+tags: [writing]
 external_url: https://www.newyorker.com/magazine/takes/jane-mayer-on-john-herseys-hiroshima?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Sunflower Sound System
 date: 2025-08-17T12:18:00+02:00
-tags: music
+tags: [music]
 external_url: https://youtu.be/nG86T2f1T-Q?si=1TkhwyeV79_7GZD_?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

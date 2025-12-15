@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Loren Stephens
 date: 2025-08-19T23:36:00+02:00
-tags: web, blogging
+tags: [web, blogging]
 external_url: https://manuelmoreale.com/pb-loren-stephens?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

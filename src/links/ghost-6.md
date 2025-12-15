@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Ghost 6.0
 date: 2025-08-05T10:50:00+02:00
-tags: publishing, software
+tags: [publishing, software]
 external_url: https://ghost.org/changelog/6/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

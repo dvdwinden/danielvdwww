@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: NPR’s “Books We Love”
 date: 2025-11-24T14:16:00+02:00
-tags: books
+tags: [books]
 external_url: https://apps.npr.org/best-books/#view=covers&year=2025/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

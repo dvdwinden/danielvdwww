@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Your site, your home, your web
 date: 2025-08-19T13:22:00+02:00
-tags: web, writing
+tags: [web, writing]
 external_url: https://www.coryd.dev/posts/2024/your-site-your-home-your-web/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

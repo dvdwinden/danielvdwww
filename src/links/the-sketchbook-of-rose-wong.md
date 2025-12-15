@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: The sketchbook of Rose Wong
 date: 2025-10-14T15:24:00+02:00
-tags: web
+tags: [web]
 external_url: https://www.rosewongart.com/sketchbook/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

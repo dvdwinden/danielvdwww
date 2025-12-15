@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Merging my RSS feeds
 date: 2025-10-01T09:50:00+02:00
-tags: rss
+tags: [rss]
 external_url: https://www.daniel.pizza/journal/merging-my-rss-feeds/
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

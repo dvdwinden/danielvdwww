@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: The Typography Maestro Getting Calls From Greta Gerwig and Robert Eggers
 date: 2025-08-26T22:35:00+02:00
-tags: typography, design, profile
+tags: [typography, design, profile]
 external_url: https://www.nytimes.com/2024/12/23/style/teddy-blanks-typeface-design-wicked-barbie-nosferatu.html?smid=nytcore-ios-share&referringSource=articleShare?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

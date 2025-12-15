@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: How the head of Obsidian went from superfan to CEO
 date: 2025-08-20T22:35:00+02:00
-tags: software, interview, podcast
+tags: [software, interview, podcast]
 external_url: https://www.theverge.com/decoder-podcast-with-nilay-patel/760522/obsidian-ceo-steph-ango-kepano-productivity-software-notes-app?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

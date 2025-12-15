@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: The Substack Branding and Faux Prestige Trap
 date: 2025-08-04T09:53:00+02:00
-tags: publishing
+tags: [publishing]
 external_url: https://daringfireball.net/2025/08/the_substack_branding_and_faux_prestige_trap?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

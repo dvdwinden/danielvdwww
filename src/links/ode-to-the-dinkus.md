@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Ode to the Dinkus
 date: 2025-09-25T14:20:00+02:00
-tags: writing, typography
+tags: [writing, typography]
 external_url: https://www.theparisreview.org/blog/2018/06/08/ode-to-the-dinkus/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

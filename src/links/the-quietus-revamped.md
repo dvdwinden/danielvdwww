@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: The Quietus, revamped
 date: 2025-11-17T11:30:00+02:00
-tags: design, music, branding
+tags: [design, music, branding]
 external_url: https://11-11.studio/work/the-quietus/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

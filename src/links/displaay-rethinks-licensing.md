@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Displaay rethinks licensing with its new website and Serrif typeface
 date: 2025-10-24T12:22:00+02:00
-tags: typography, web
+tags: [typography, web]
 external_url: https://the-brandidentity.com/typeface/displaay-rethinks-licensing-with-its-new-website-and-serrif-typeface?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

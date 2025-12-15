@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "Cardiography: After open-heart surgery"
 date: 2025-10-25T23:54:00+02:00
-tags: writing, essay
+tags: [writing, essay]
 external_url: https://www.nybooks.com/articles/2025/11/06/cardiography-ben-lerner/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

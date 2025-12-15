@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Hail to the Thief (Live Recordings 2003–2009)
 date: 2025-08-13T23:30:00+02:00
-tags: music
+tags: [music]
 external_url: https://radiohead.bandcamp.com/album/hail-to-the-thief-live-recordings-2003-2009?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

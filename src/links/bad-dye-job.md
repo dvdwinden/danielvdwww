@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Bad Dye Job
 date: 2025-12-06T09:23:00+02:00
-tags: apple, ios
+tags: [apple, ios]
 external_url: https://daringfireball.net/2025/12/bad_dye_job?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

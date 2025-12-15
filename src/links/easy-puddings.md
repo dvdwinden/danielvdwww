@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Easy Puddings
 date: 2025-11-07T11:30:00+02:00
-tags: writing, newsletters
+tags: [writing, newsletters]
 external_url: https://buttondown.com/EasyPuddings/archive/on-puddings-suns-and-other-circles/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

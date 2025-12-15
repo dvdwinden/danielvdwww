@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: Sticking With It
 date: 2025-08-10T12:30:00+02:00
-tags: brands, software
+tags: [brands, software]
 external_url: https://manuelmoreale.com/sticking-with-it/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
