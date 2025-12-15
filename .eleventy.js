@@ -856,6 +856,58 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
+  // Helper function to create URL-friendly slug from tag name
+  function slugify(str) {
+    return str
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')     // Replace spaces with -
+      .replace(/&/g, '-and-')   // Replace & with 'and'
+      .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+      .replace(/\-\-+/g, '-');  // Replace multiple - with single -
+  }
+
+  // Create collection for link tags
+  eleventyConfig.addCollection("linkTags", function (collectionApi) {
+    const links = collectionApi.getFilteredByGlob("src/links/*.md")
+      .filter(item => !item.data.draft);
+    
+    const tagMap = {};
+    
+    links.forEach(item => {
+      const tags = item.data.tags;
+      if (!tags) return;
+      
+      // Normalize tags to array if it's a string or already an array
+      const tagArray = Array.isArray(tags) ? tags : [tags];
+      
+      tagArray.forEach(tag => {
+        const trimmedTag = tag.trim();
+        const slug = slugify(trimmedTag);
+        
+        if (!tagMap[slug]) {
+          tagMap[slug] = {
+            name: trimmedTag,
+            slug: slug,
+            posts: []
+          };
+        }
+        tagMap[slug].posts.push(item);
+      });
+    });
+    
+    // Sort posts within each tag by date (newest first)
+    Object.keys(tagMap).forEach(slug => {
+      tagMap[slug].posts.sort((a, b) => b.date - a.date);
+    });
+    
+    // Convert to array and sort by tag name
+    return Object.values(tagMap).sort((a, b) => 
+      a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+    );
+  });
+
   eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });
