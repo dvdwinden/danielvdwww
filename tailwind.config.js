@@ -61,6 +61,7 @@ module.exports = {
         'brown': '#7c5e00',
         'green': '#e8f0e8',
         'stone': '#e8e6e0',
+        'cream': '#faf6e8',
         'blue': '#f5f7fa',
         'red': '#fae8e8',
         'black': '#2a2a28',
