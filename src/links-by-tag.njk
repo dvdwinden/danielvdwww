@@ -1,0 +1,42 @@
+---
+pagination:
+  data: collections.linkTags
+  size: 1
+  alias: tag
+permalink: "links/{{ tag.slug }}/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+layout: narrow.njk
+bodyClass: bg-green
+eleventyComputed:
+  title: "Links tagged '{{ tag.name }}'"
+  description: "All links tagged with {{ tag.name }}"
+---
+
+<h1>Links tagged '{{ tag.name }}'</h1>
+
+<p class="mb-6">
+  <a href="/links/" class="text-sm font-medium hover:underline dark:text-gray-300 dark:hover:text-white">← Back to all links</a>
+</p>
+
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">
+  {{ tag.posts.length }} {% if tag.posts.length == 1 %}post{% else %}posts{% endif %} with this tag
+</p>
+
+<ul class="divide-y divide-gray-950/10 dark:divide-white/5 links">
+  {% for post in tag.posts %}
+  <li class="py-3 pl-0">
+    <div class="flex flex-col">
+      <div class="flex items-baseline justify-between">
+        <a href="{{ post.data.external_url }}" class="text-2xl font-serif font-semibold hover:underline" target="_blank" rel="external">
+         <h2 class="no-underline">{{ post.data.title }}</h2>
+        </a>
+        <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+          № {{ collections.links.length - loop.index0 }}
+        </span>
+      </div>
+      <div class="prose prose-sm mt-4 dark:text-gray-300">
+        {{ post.templateContent | removeH1 | safe }}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
