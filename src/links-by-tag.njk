@@ -3,7 +3,7 @@ pagination:
   data: collections.linkTags
   size: 1
   alias: tag
-permalink: "links/{{ tag.slug }}/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: "links/{{ tag.slug }}/index.html"
 layout: narrow.njk
 bodyClass: bg-green
 eleventyComputed:
@@ -30,7 +30,8 @@ eleventyComputed:
          <h2 class="no-underline">{{ post.data.title }}</h2>
         </a>
         <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
-          № {{ collections.links.length - loop.index0 }}
+          {% set postIndex = collections.links.indexOf(post) %}
+          № {{ collections.links.length - postIndex }}
         </span>
       </div>
       <div class="prose prose-sm mt-4 dark:text-gray-300">
