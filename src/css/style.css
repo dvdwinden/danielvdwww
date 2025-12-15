@@ -380,9 +380,13 @@ html.dark #page-background {
 }
 
 .prose a:hover {
-    background: theme('colors.highlight');
-    color: theme('colors.black');
+    background: none;
+    text-decoration: underline;
+    text-decoration-color: theme('colors.hover');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
     transition: background 0.2s, color 0.2s;
+    cursor: pointer;
 }
 
 .prose a:focus {
@@ -955,9 +959,11 @@ ul.list-none {
 }
 
 .dark .prose p a:hover {
+    background: none;
     color: theme('colors.black');
-    background: theme('colors.highlight');
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 .dark .prose .cta-button {
