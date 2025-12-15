@@ -13,15 +13,8 @@ eleventyComputed:
 
 <h1>Links tagged '{{ tagPage.name }}'</h1>
 
-<p class="mb-6">
-  <a href="/links/" class="text-sm font-medium hover:underline dark:text-gray-300 dark:hover:text-white">← Back to all links</a>
-</p>
-
 {% set start = tagPage.pageNumber * 10 + 1 %}
 {% set end = start + tagPage.posts.length - 1 %}
-<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">
-  Showing {{ start }}–{{ end }} of {{ tagPage.totalPosts }}
-</p>
 
 <ul class="divide-y divide-gray-950/10 dark:divide-white/5 links">
   {% for post in tagPage.posts %}
