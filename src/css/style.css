@@ -866,7 +866,7 @@ ul.list-none {
     position: absolute;
     left: 0;
     top: 0;
-    transform: translateX(calc(-100% - 1.5rem));
+    transform: translateX(calc(-100% - 2rem));
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
@@ -876,7 +876,7 @@ ul.list-none {
 
 .book-cover img,
 .book-cover picture img {
-    width: 164px;
+    width: 186px;
     height: auto;
     box-shadow: 0 1px 2px rgb(0 0 0 / 0.1), 0 2px 8px rgb(0 0 0 / 0.15);
     border: 1px solid rgb(0 0 0 / 0.1);
