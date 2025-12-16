@@ -1,3 +1,12 @@
+// Count book items and update the count dynamically
+document.addEventListener('DOMContentLoaded', function() {
+  const bookItems = document.querySelectorAll('.book-item');
+  const countElement = document.getElementById('book-count');
+  if (countElement && bookItems.length > 0) {
+    countElement.textContent = bookItems.length;
+  }
+});
+
 // Show book covers on touch devices as you scroll past them
 (function () {
   // Only run on touch devices
