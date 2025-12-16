@@ -888,12 +888,14 @@ ul.list-none {
         position: fixed;
         left: auto;
         right: 1rem;
-        bottom: calc(4rem + 1rem); /* navigation height + spacing */
+        bottom: calc(4rem + 1rem);
+        /* navigation height + spacing */
         top: auto;
         transform: none;
-        z-index: 999; /* below navigation */
+        z-index: 999;
+        /* below navigation */
     }
-    
+
     .book-cover.visible {
         opacity: 1;
         visibility: visible;
@@ -906,6 +908,7 @@ ul.list-none {
     top: -2px;
     margin-left: 0.25rem;
     display: inline;
+    color: theme('colors.hover');
 }
 
 .book-item a {
@@ -1082,6 +1085,17 @@ ul.list-none {
 
 .dark .hero-image {
     background-color: hsl(204, 17%, 89%);
+}
+
+.dark .book-item a {
+    color: theme('colors.white');
+    text-decoration: none;
+}
+
+.dark .book-item a:hover {
+    text-decoration-color: theme('colors.hover-dark');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 /* Dark mode detection */
