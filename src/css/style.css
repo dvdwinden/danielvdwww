@@ -882,9 +882,21 @@ ul.list-none {
     border-radius: 2px;
 }
 
-@media (max-width: 768px) {
+/* Touch devices: fixed position in bottom right, above navigation */
+@media (hover: none) and (pointer: coarse) {
     .book-cover {
-        display: none;
+        position: fixed;
+        left: auto;
+        right: 1rem;
+        bottom: calc(4rem + 1rem); /* navigation height + spacing */
+        top: auto;
+        transform: none;
+        z-index: 999; /* below navigation */
+    }
+    
+    .book-cover.visible {
+        opacity: 1;
+        visibility: visible;
     }
 }
 
