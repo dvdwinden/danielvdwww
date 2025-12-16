@@ -865,8 +865,8 @@ ul.list-none {
 .book-cover {
     position: absolute;
     left: 0;
-    top: -0.2rem;
-    transform: translateX(calc(-100% - 1rem));
+    top: 0;
+    transform: translateX(calc(-100% - 1.5rem));
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
