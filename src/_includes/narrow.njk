@@ -131,7 +131,7 @@
         // Set Last.fm configuration from environment variables
         window.LASTFM_API_KEY = '{{ env.LASTFM_API_KEY | trim }}';
         window.LASTFM_USERNAME = '{{ env.LASTFM_USERNAME | trim }}';
-        
+        {% if page.url == '/now/' %}
         // Set Strava data (fetched at build time)
         window.STRAVA_ACCESS_TOKEN = '{{ stravaToken.accessToken }}';
         window.STRAVA_ACTIVITIES = {{ stravaActivities.activityCountByDate | dump | safe }};
@@ -141,10 +141,13 @@
         window.GITHUB_USERNAME = 'dvdwinden';
         window.GITHUB_CONTRIBUTIONS = {{ githubContributions.contributionsByDate | dump | safe }};
         window.GITHUB_LAST_UPDATED = '{{ githubContributions.lastUpdated }}';
+        {% endif %}
     </script>
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
     <script src="/js/lastfm-live.js"></script>
+    {% if page.url == '/now/' %}
     <script src="/js/strava-live.js"></script>
     <script src="/js/github-live.js"></script>
+    {% endif %}
 </html>
