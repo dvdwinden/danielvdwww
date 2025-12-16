@@ -7,7 +7,7 @@ bodyClass: bg-amber
 
 <h1>Reading</h1>
 
-A list of the <span id="book-count">234</span> books I've read in the last five years or so. Each entry links to <em>The Storygraph</em> or, where possible, to my own recommendation on <a href="https://www.trema.website/?ref=daniel.pizza" target="_blank" rel="external">Trema</a>.
+A list of the <span id="book-count">241</span> books I've read in the last few years. Each entry links to <em>The Storygraph</em> or, where possible, to my own recommendation on <a href="https://www.trema.website/?ref=daniel.pizza" target="_blank" rel="external">Trema</a>.
 
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2025</h2>
 
@@ -3286,37 +3286,4 @@ A list of the <span id="book-count">234</span> books I've read in the last five 
   </li>
 </ul>
 
-<script>
-// Show book covers on touch devices as you scroll past them
-(function() {
-  // Only run on touch devices
-  const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-  if (!isTouchDevice) return;
-
-  const bookItems = document.querySelectorAll('.book-item');
-  let currentVisibleCover = null;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const bookCover = entry.target.querySelector('.book-cover');
-      
-      if (entry.isIntersecting) {
-        // Hide previously visible cover
-        if (currentVisibleCover && currentVisibleCover !== bookCover) {
-          currentVisibleCover.classList.remove('visible');
-        }
-        
-        // Show this book's cover
-        bookCover.classList.add('visible');
-        currentVisibleCover = bookCover;
-      }
-    });
-  }, {
-    // Trigger when item crosses the middle of the viewport
-    threshold: 0,
-    rootMargin: '-50% 0px'
-  });
-
-  bookItems.forEach(item => observer.observe(item));
-})();
-</script>
+<script src="/js/reading.js"></script>
