@@ -880,6 +880,28 @@ ul.list-none {
     font-size: 12px;
     position: relative;
     top: -2px;
+    margin-left: 0.25rem;
+    display: inline;
+}
+
+.book-item a {
+    text-decoration: none;
+    color: inherit;
+    display: inline;
+    font-family: theme('fontFamily.serif');
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.book-item a:hover {
+    text-decoration: underline;
+    text-decoration-color: theme('colors.hover');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.book-item .flex.items-baseline.gap-2 {
+    display: block;
 }
 
 /* Work section */
