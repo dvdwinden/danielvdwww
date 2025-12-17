@@ -1,9 +1,33 @@
 // Count book items and update the count dynamically
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const bookItems = document.querySelectorAll('.book-item');
   const countElement = document.getElementById('book-count');
   if (countElement && bookItems.length > 0) {
     countElement.textContent = bookItems.length;
+  }
+
+  // Count authors and show top 3
+  const topAuthorsElement = document.getElementById('top-authors');
+  if (topAuthorsElement && bookItems.length > 0) {
+    const authorCounts = {};
+
+    bookItems.forEach(item => {
+      // Author is in the italic span inside .flex-col
+      const authorSpan = item.querySelector('.flex-col > span.italic');
+      if (authorSpan) {
+        const author = authorSpan.textContent.trim();
+        authorCounts[author] = (authorCounts[author] || 0) + 1;
+      }
+    });
+
+    // Sort by count (descending) and get top 3
+    const topAuthors = Object.entries(authorCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3);
+
+    if (topAuthors.length === 3) {
+      topAuthorsElement.textContent = `The three authors I've read most are ${topAuthors[0][0]} (${topAuthors[0][1]}), ${topAuthors[1][0]} (${topAuthors[1][1]}) and ${topAuthors[2][0]} (${topAuthors[2][1]}).`;
+    }
   }
 });
 
