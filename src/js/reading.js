@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (topAuthors.length >= 5) {
       const formatted = topAuthors.map(([name, count]) => `${name} (${count})`);
-      topAuthorsElement.textContent = `The five authors I've read most are ${formatted.slice(0, 4).join(', ')} and ${formatted[4]}.`;
+      topAuthorsElement.textContent = `Since I started keeping this list, fhe five authors I've read most are ${formatted.slice(0, 4).join(', ')} and ${formatted[4]}.`;
     }
   }
 });
@@ -40,20 +40,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const bookItems = document.querySelectorAll('.book-item');
   let currentVisibleCover = null;
+  let currentActiveItem = null;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const bookCover = entry.target.querySelector('.book-cover');
+      const bookItem = entry.target;
 
       if (entry.isIntersecting) {
-        // Hide previously visible cover
+        // Hide previously visible cover and remove active state
         if (currentVisibleCover && currentVisibleCover !== bookCover) {
           currentVisibleCover.classList.remove('visible');
         }
+        if (currentActiveItem && currentActiveItem !== bookItem) {
+          currentActiveItem.classList.remove('active');
+        }
 
-        // Show this book's cover
+        // Show this book's cover and mark item as active
         bookCover.classList.add('visible');
+        bookItem.classList.add('active');
         currentVisibleCover = bookCover;
+        currentActiveItem = bookItem;
       }
     });
   }, {

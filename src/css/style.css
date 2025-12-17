@@ -901,6 +901,12 @@ ul.list-none {
         opacity: 1;
         visibility: visible;
     }
+
+    /* Highlight active book title */
+    .book-item.active a {
+        color: theme('colors.hover');
+        font-weight: 600;
+    }
 }
 
 .book-star {
