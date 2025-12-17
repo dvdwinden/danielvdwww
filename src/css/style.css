@@ -1010,7 +1010,6 @@ ul.list-none {
 
 .dark .prose p a:hover {
     background: none;
-    color: theme('colors.black');
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
