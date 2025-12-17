@@ -49,7 +49,7 @@ module.exports = function (eleventyConfig) {
     if (!content) return content;
     // Remove Strava embeds and scripts, replace with plain link
     return content
-      .replace(/<div class="strava-embed-placeholder"[^>]*data-embed-id="([^"]+)"[^>]*><\/div>\s*<script[^>]*><\/script>/g, 
+      .replace(/<div class="strava-embed-placeholder"[^>]*data-embed-id="([^"]+)"[^>]*><\/div>\s*<script[^>]*><\/script>/g,
         '<p><a href="https://www.strava.com/activities/$1">View activity on Strava</a></p>')
       // Remove any other script tags as a safety measure
       .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
@@ -135,18 +135,18 @@ module.exports = function (eleventyConfig) {
       // In CI environments, check if we're in GitHub Actions
       const isCI = process.env.CI === 'true';
       const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
-      
+
       if (isGitHubActions) {
         // In GitHub Actions, rely on Git to tell us what changed
         // since _site directory is always fresh
         const changedFiles = process.env.CHANGED_IMAGES;
-        
+
         if (changedFiles === '') {
           // Empty string means no image changes detected
           console.log(`⚡ Skipping ${srcPath} (no image changes in this commit)`);
           return false;
         }
-        
+
         if (changedFiles && changedFiles !== 'full_build') {
           const relativePath = srcPath.replace(/^src\//, '');
           const relativeWithSrc = `src/${relativePath}`;
@@ -156,24 +156,24 @@ module.exports = function (eleventyConfig) {
           }
           return needsWork;
         }
-        
+
         // Fallback: if no environment variable or 'full_build', assume we need to process
         // (this will happen on first run or manual dispatch)
         console.log(`🔄 Processing ${srcPath} (full build or manual dispatch)`);
         return true;
       }
-      
+
       // Local development: use file modification times
       const srcStats = fs.statSync(srcPath);
       const relativePath = srcPath.replace(/^src\//, '');
       const parsedPath = path.parse(relativePath);
       const outputDir = path.join("./_site", path.dirname(relativePath));
       const originalName = path.basename(parsedPath.name);
-      
+
       // Check if any of the output files exist and are newer than source
       const formats = ["avif", "webp", "jpeg"];
       const widths = [300, 600, 900, 1200, 1800, 2400];
-      
+
       for (const format of formats) {
         for (const width of widths) {
           const outputFile = path.join(outputDir, `${originalName}-${width}.${format}`);
@@ -186,7 +186,7 @@ module.exports = function (eleventyConfig) {
           }
         }
       }
-      
+
       // If we get here, either no output files exist or source is newer
       return true;
     } catch (err) {
@@ -273,7 +273,7 @@ module.exports = function (eleventyConfig) {
       const urlPath = path.dirname(relativePath);
       const originalName = path.basename(parsedPath.name);
       const originalExt = path.extname(file).toLowerCase();
-      
+
       FILE_PATH_CACHE.set(relativePath, {
         originalName: originalName,
         originalExt: originalExt,
@@ -281,13 +281,13 @@ module.exports = function (eleventyConfig) {
         urlPath: urlPath,
         sourcePath: file
       });
-      
+
       // Load existing processed images into IMAGE_CACHE
       try {
         const formats = ["avif", "webp", "jpeg"];
         const widths = [300, 600, 900, 1200, 1800, 2400];
         const metadata = {};
-        
+
         for (const format of formats) {
           metadata[format] = [];
           for (const width of widths) {
@@ -308,12 +308,12 @@ module.exports = function (eleventyConfig) {
             }
           }
         }
-        
+
         // Only add to cache if we found actual processed images
-        const hasValidImages = Object.keys(metadata).some(format => 
+        const hasValidImages = Object.keys(metadata).some(format =>
           metadata[format] && metadata[format].length > 0
         );
-        
+
         if (hasValidImages) {
           IMAGE_CACHE.set(file, metadata);
           console.log(`💾 Loaded cached metadata for ${file}`);
@@ -457,7 +457,7 @@ module.exports = function (eleventyConfig) {
         const afterImg = content.substring(matchStart + imgTag.length);
         const lastPictureOpen = beforeImg.lastIndexOf('<picture');
         const lastPictureClose = beforeImg.lastIndexOf('</picture>');
-        
+
         // If there's an unclosed picture tag before this img, skip it
         if (lastPictureOpen > lastPictureClose && lastPictureOpen !== -1) {
           continue;
@@ -593,7 +593,7 @@ module.exports = function (eleventyConfig) {
     // retinaImageShortcode(src, alt, maxWidth) - traditional 3 params
     // retinaImageShortcode(src, maxWidth) - 2 params where second is width
     let alt, finalMaxWidth;
-    
+
     if (typeof altOrWidth === 'number' && maxWidth === undefined) {
       // Called with (src, maxWidth)
       alt = '';
@@ -635,10 +635,10 @@ module.exports = function (eleventyConfig) {
         }
 
         // Check if we have valid filtered metadata
-        const hasValidFilteredImages = Object.keys(filteredMetadata).some(format => 
+        const hasValidFilteredImages = Object.keys(filteredMetadata).some(format =>
           filteredMetadata[format] && filteredMetadata[format].length > 0
         );
-        
+
         if (!hasValidFilteredImages) {
           // Fall through to reprocessing if filtered cache is empty
         } else {
@@ -709,7 +709,7 @@ module.exports = function (eleventyConfig) {
       for (const format of formats) {
         filteredMetadata[format] = cachedMetadata[format].filter(item =>
           item.width === finalMaxWidth || item.width === finalMaxWidth * 2);
-        
+
         if (filteredMetadata[format].length > 0) {
           hasRequiredSizes = true;
         }
@@ -733,10 +733,10 @@ module.exports = function (eleventyConfig) {
     }
 
     // Check if metadata has valid formats and images
-    const hasValidImages = Object.keys(metadata).some(format => 
+    const hasValidImages = Object.keys(metadata).some(format =>
       metadata[format] && metadata[format].length > 0
     );
-    
+
     if (!hasValidImages) {
       console.error(`No valid images in metadata for: ${actualFilePath}`);
       return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
@@ -873,20 +873,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("linkTags", function (collectionApi) {
     const links = collectionApi.getFilteredByGlob("src/links/*.md")
       .filter(item => !item.data.draft);
-    
+
     const tagMap = {};
-    
+
     links.forEach(item => {
       const tags = item.data.tags;
       if (!tags) return;
-      
+
       // Normalize tags to array if it's a string or already an array
       const tagArray = Array.isArray(tags) ? tags : [tags];
-      
+
       tagArray.forEach(tag => {
         const trimmedTag = tag.trim();
         const slug = slugify(trimmedTag);
-        
+
         if (!tagMap[slug]) {
           tagMap[slug] = {
             name: trimmedTag,
@@ -897,14 +897,14 @@ module.exports = function (eleventyConfig) {
         tagMap[slug].posts.push(item);
       });
     });
-    
+
     // Sort posts within each tag by date (newest first)
     Object.keys(tagMap).forEach(slug => {
       tagMap[slug].posts.sort((a, b) => b.date - a.date);
     });
-    
+
     // Convert to array and sort by tag name
-    return Object.values(tagMap).sort((a, b) => 
+    return Object.values(tagMap).sort((a, b) =>
       a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
     );
   });
@@ -916,7 +916,7 @@ module.exports = function (eleventyConfig) {
       : null;
 
     // If we can't call the collection, recompute the tag list locally
-    const baseTags = tags || (function(){
+    const baseTags = tags || (function () {
       const links = collectionApi.getFilteredByGlob("src/links/*.md").filter(i => !i.data.draft);
       const tagMap = {};
       links.forEach(item => {
@@ -928,8 +928,8 @@ module.exports = function (eleventyConfig) {
           tagMap[slug].posts.push(item);
         });
       });
-      Object.values(tagMap).forEach(t => t.posts.sort((a,b) => b.date - a.date));
-      return Object.values(tagMap).sort((a,b) => a.name.localeCompare(b.name, undefined, {sensitivity:'base'}));
+      Object.values(tagMap).forEach(t => t.posts.sort((a, b) => b.date - a.date));
+      return Object.values(tagMap).sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
     })();
 
     const pageSize = 10;
@@ -962,8 +962,20 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });
 
+  // Get file's last modified date from filesystem
+  eleventyConfig.addFilter("lastModified", (inputPath, format = "MMMM d, yyyy") => {
+    try {
+      const filePath = inputPath.startsWith("src/") ? inputPath : path.join("src", inputPath);
+      const stats = fs.statSync(filePath);
+      return DateTime.fromJSDate(stats.mtime).toFormat(format);
+    } catch (e) {
+      console.warn(`Could not get last modified date for ${inputPath}:`, e.message);
+      return "Unknown";
+    }
+  });
+
   // Capitalize first letter of a string (used for tag display)
-  eleventyConfig.addFilter("capitalize", function(value) {
+  eleventyConfig.addFilter("capitalize", function (value) {
     if (!value) return value;
     const str = String(value);
     return str.charAt(0).toUpperCase() + str.slice(1);

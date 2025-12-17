@@ -2,7 +2,6 @@
 layout: narrow.njk
 title: Reading
 description: A list of books I've read over the years.
-date: 2025-12-17
 bodyClass: bg-amber
 ---
 
@@ -3301,6 +3300,6 @@ A list of the <span id="book-count">241</span> books I've read in the last few y
   </li>
 </ul>
 
-<p><em>If you made it this far, well—I hope you found what you were looking for. This page was last updated on {{ page.date | date("MMMM d, yyyy") }}.</em></p>
+<p><em>If you made it this far, well—I hope you found what you were looking for. This page was last updated on {{ page.inputPath | lastModified }}.</em></p>
 
 <script src="/js/reading.js"></script>
