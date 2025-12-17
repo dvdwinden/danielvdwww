@@ -20,13 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // Sort by count (descending) and get top 3
+    // Sort by count (descending) and get top 5
     const topAuthors = Object.entries(authorCounts)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 3);
+      .slice(0, 5);
 
-    if (topAuthors.length === 3) {
-      topAuthorsElement.textContent = `The three authors I've read most are ${topAuthors[0][0]} (${topAuthors[0][1]}), ${topAuthors[1][0]} (${topAuthors[1][1]}) and ${topAuthors[2][0]} (${topAuthors[2][1]}).`;
+    if (topAuthors.length >= 5) {
+      const formatted = topAuthors.map(([name, count]) => `${name} (${count})`);
+      topAuthorsElement.textContent = `The five authors I've read most are ${formatted.slice(0, 4).join(', ')} and ${formatted[4]}.`;
     }
   }
 });
