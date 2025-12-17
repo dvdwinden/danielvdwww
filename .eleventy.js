@@ -965,7 +965,17 @@ module.exports = function (eleventyConfig) {
   // Get file's last modified date from filesystem
   eleventyConfig.addFilter("lastModified", (inputPath, format = "MMMM d, yyyy") => {
     try {
-      const filePath = inputPath.startsWith("src/") ? inputPath : path.join("src", inputPath);
+      // Handle various input path formats:
+      // - ./src/reading.njk (Eleventy's page.inputPath)
+      // - src/reading.njk
+      // - reading.njk
+      let filePath = inputPath;
+      if (filePath.startsWith("./")) {
+        filePath = filePath.substring(2); // Remove leading ./
+      }
+      if (!filePath.startsWith("src/")) {
+        filePath = path.join("src", filePath);
+      }
       const stats = fs.statSync(filePath);
       return DateTime.fromJSDate(stats.mtime).toFormat(format);
     } catch (e) {
