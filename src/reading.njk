@@ -337,6 +337,20 @@ A list of the <span id="book-count">241</span> books I've read in the last few y
   </li>
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
+      {% image "src/assets/reading/mary-norris-between-you-and-me.jpeg", "Between You and Me: Confessions of a Comma Queen cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/d9aaa5ea-24f6-412b-8b76-d9b36d0b7f84" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external">Between You and Me: Confessions of a Comma Queen</a>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Mary Norris</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      APR
+    </span>
+  </li>
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
       {% image "src/assets/reading/peter-buurman-kern-van-waarheid.jpeg", "Een Kern van Waarheid cover", "120px" %}
     </div>
     <div class="flex flex-col">
@@ -385,7 +399,7 @@ A list of the <span id="book-count">241</span> books I've read in the last few y
     </div>
     <div class="flex flex-col">
       <div class="flex items-baseline gap-2">
-        <a href="https://app.thestorygraph.com/books/d9aaa5ea-24f6-412b-8b76-d9b36d0b7f84" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external">Ik Kom Hier Nog Op Terug</a>
+        <a href="https://app.thestorygraph.com/books/d9aaa5ea-24f6-412b-8b76-d9b36d0b7f84" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external">Ik kom hier nog op terug</a>
       </div>
       <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Rob van Essen</span>
     </div>
@@ -2131,7 +2145,7 @@ A list of the <span id="book-count">241</span> books I've read in the last few y
     </div>
     <div class="flex flex-col">
       <div class="flex items-baseline gap-2">
-        <a href="#" class="font-serif text-lg font-medium">Besieged</a>
+        <a href="#" class="font-serif text-lg font-medium">Besieged: Life Under Fire on a Sarajevo Street</a>
         <span class="text-black dark:text-white book-star">★</span>
       </div>
       <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Barbara Demick</span>
@@ -2410,7 +2424,7 @@ A list of the <span id="book-count">241</span> books I've read in the last few y
     </div>
     <div class="flex flex-col">
       <a href="#" class="font-serif text-lg font-medium">Wat wij zagen</a>
-      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Hanna Marleen Bervoets</span>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Hanna Bervoets</span>
     </div>
     <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
       JUN
@@ -2421,7 +2435,7 @@ A list of the <span id="book-count">241</span> books I've read in the last few y
       <img src="https://via.placeholder.com/120x180/f5f5f5/999999?text=Book" alt="Book cover" />
     </div>
     <div class="flex flex-col">
-      <a href="#" class="font-serif text-lg font-medium">De groef. Een wandeling</a>
+      <a href="#" class="font-serif text-lg font-medium">De groef: een wandeling</a>
       <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Maartje Wortel</span>
     </div>
     <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
@@ -3285,5 +3299,7 @@ A list of the <span id="book-count">241</span> books I've read in the last few y
     </span>
   </li>
 </ul>
+
+<p><em>If you made it this far, well—I hope you found what you were looking for. This page was last updated on {{ page.date | date("MMMM d, yyyy") }}.</em></p>
 
 <script src="/js/reading.js"></script>
