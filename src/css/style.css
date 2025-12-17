@@ -897,6 +897,11 @@ ul.list-none {
         /* below navigation */
     }
 
+    .book-cover img,
+    .book-cover picture img {
+        width: 120px;
+    }
+
     .book-cover.visible {
         opacity: 1;
         visibility: visible;
@@ -904,8 +909,10 @@ ul.list-none {
 
     /* Highlight active book title */
     .book-item.active a {
-        color: theme('colors.hover');
-        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: theme('colors.hover');
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
     }
 }
 

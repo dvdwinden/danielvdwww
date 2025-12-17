@@ -33,18 +33,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Show book covers on touch devices as you scroll past them
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
   // Only run on touch devices
   const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
   if (!isTouchDevice) return;
 
   const bookItems = document.querySelectorAll('.book-item');
+  if (bookItems.length === 0) return;
+
   let currentVisibleCover = null;
   let currentActiveItem = null;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const bookCover = entry.target.querySelector('.book-cover');
+      if (!bookCover) return;
+      
       const bookItem = entry.target;
 
       if (entry.isIntersecting) {
@@ -64,10 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }, {
-    // Trigger when item crosses the first quarter of the viewport
-    threshold: 0,
-    rootMargin: '-75% 0px'
+    // Trigger when item is in the center 50% of viewport
+    threshold: [0, 0.5, 1],
+    rootMargin: '-25% 0px -25% 0px'
   });
 
   bookItems.forEach(item => observer.observe(item));
-})();
+});
