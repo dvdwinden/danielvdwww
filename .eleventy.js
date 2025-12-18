@@ -67,7 +67,7 @@ module.exports = function (eleventyConfig) {
   };
 
   // Process an image and return metadata
-  async function processImage(srcPath, widths = [300, 600, 900, 1200, 1800, 2400]) {
+  async function processImage(srcPath, widths = [400, 800, 1200, 1800]) {
     // Already processed?
     if (IMAGE_CACHE.has(srcPath)) {
       return IMAGE_CACHE.get(srcPath);
@@ -100,7 +100,7 @@ module.exports = function (eleventyConfig) {
     try {
       const metadata = await Image(srcPath, {
         widths: widths,
-        formats: ["avif", "webp", "jpeg"],
+        formats: ["avif", "webp"],
         outputDir: outputDir,
         urlPath: `/${urlPath}/`,
         filenameFormat: function (id, src, width, format, options) {
@@ -108,15 +108,11 @@ module.exports = function (eleventyConfig) {
           return `${originalName}-${width}.${format}`;
         },
         sharpAvifOptions: {
-          quality: 80,
+          quality: 75,
           effort: 4
         },
         sharpWebpOptions: {
-          quality: 80
-        },
-        sharpJpegOptions: {
-          quality: 80,
-          progressive: true
+          quality: 75
         }
       });
 
