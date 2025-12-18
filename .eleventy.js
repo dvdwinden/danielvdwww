@@ -998,6 +998,7 @@ module.exports = function (eleventyConfig) {
     port: 8080,
     redirects: {
       "/writing/*": "/journal/:splat",
+      "/reading": "/library",
     }
   });
 
