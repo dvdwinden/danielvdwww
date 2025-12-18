@@ -167,8 +167,8 @@ module.exports = function (eleventyConfig) {
       const originalName = path.basename(parsedPath.name);
 
       // Check if any of the output files exist and are newer than source
-      const formats = ["avif", "webp", "jpeg"];
-      const widths = [300, 600, 900, 1200, 1800, 2400];
+      const formats = ["avif", "webp"];
+      const widths = [400, 800, 1200, 1800];
 
       for (const format of formats) {
         for (const width of widths) {
