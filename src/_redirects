@@ -2,4 +2,5 @@
 /writing/*  /journal/:splat  301!
 
 # Redirect old reading URL to new library URL
+/reading/*  /library/:splat  301!
 /reading  /library  301!
