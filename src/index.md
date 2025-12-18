@@ -12,7 +12,7 @@ bodyClass: bg-blue
 
 <div class="relative w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert main-content">
 
-<h2 class="home-subtitle mt-0 text-black dark:text-white">Software & web designer; writer</h2>
+<h2 class="home-subtitle mt-0 text-black dark:text-white">Software designer; writer</h2>
 
 <section class="introduction">
   <span class="callout">I have over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.</span>
