@@ -31,6 +31,26 @@ permalink: "links/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
       <div class="prose prose-sm mt-4 dark:text-gray-300">
         {{ post.templateContent | removeH1 | safe }}
       </div>
+      {% if post.data.tags %}
+      <ul class="mt-3 font-sans text-sm tracking-wide text-gray-500 dark:text-gray-600 flex flex-wrap items-center gap-x-2" style="list-style: none; padding: 0;">
+        {% for tag in post.data.tags %}
+        {% set displayTag = tag %}
+        {% if tag == "iOS" %}
+          {% set displayTag = "iOS" %}
+        {% elif tag | lower == "youtube" %}
+          {% set displayTag = "YouTube" %}
+        {% elif tag | lower == "rss" %}
+          {% set displayTag = "RSS" %}
+        {% else %}
+          {% set displayTag = tag | capitalize %}
+        {% endif %}
+        <li class="flex items-center gap-x-2">
+          <a href="/links/{{ tag | slugify }}/" class="text-gray-500 dark:text-gray-600 hover:text-gray-700 dark:hover:text-gray-500" style="text-decoration: none;">{{ displayTag }}</a>
+          {% if not loop.last %}<span aria-hidden="true">·</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
   </li>
   {% endfor %}
