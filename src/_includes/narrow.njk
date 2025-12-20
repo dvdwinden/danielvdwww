@@ -121,12 +121,14 @@
                     {{ content | safe }}
                     {% if tags %}
                     <ul class="mt-6 font-sans text-sm tracking-wide text-gray-500 dark:text-gray-600 flex flex-wrap items-center gap-x-2 not-prose" style="list-style: none; padding: 0;">
-                      {% for tag in tags %}
+                      {% for tag in tags | sort %}
                       {% set displayTag = tag %}
                       {% if tag == "iOS" %}
                         {% set displayTag = "iOS" %}
                       {% elif tag | lower == "youtube" %}
                         {% set displayTag = "YouTube" %}
+                      {% elif tag | lower == "rss" %}
+                        {% set displayTag = "RSS" %}
                       {% else %}
                         {% set displayTag = tag | capitalize %}
                       {% endif %}
