@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "LISTERS: A Glimpse Into Extreme Birdwatching"
 date: 2025-10-01T00:30:00+02:00
-tags: [youtube]
+tags: [documentary, youtube]
 external_url: https://youtu.be/zl-wAqplQAo?si=dSAiisXTxeZ3wBH9
 bodyClass: bg-green
 ---
