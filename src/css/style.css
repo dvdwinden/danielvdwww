@@ -1287,3 +1287,12 @@ ul.list-none {
         max-width: 28%;
     }
 }
+
+/* ==========================================================================
+   LIBRARY PAGE FLASH PREVENTION
+   ========================================================================== */
+
+#top-authors:empty,
+#book-count:not(.js-loaded) {
+    visibility: hidden;
+}

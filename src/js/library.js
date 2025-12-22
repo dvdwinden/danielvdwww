@@ -4,24 +4,35 @@ document.addEventListener('DOMContentLoaded', function () {
   const countElement = document.getElementById('book-count');
   if (countElement && bookItems.length > 0) {
     countElement.textContent = bookItems.length;
+    countElement.classList.add('js-loaded');
   }
 
   // Count authors and show top 3
   const topAuthorsElement = document.getElementById('top-authors');
   if (topAuthorsElement && bookItems.length > 0) {
-    const authorCounts = {};
+    const authorBooks = {};
 
     bookItems.forEach(item => {
       // Author is in the italic span inside .flex-col
       const authorSpan = item.querySelector('.flex-col > span.italic');
-      if (authorSpan) {
+      const bookLink = item.querySelector('.flex-col a');
+      if (authorSpan && bookLink) {
         const author = authorSpan.textContent.trim();
-        authorCounts[author] = (authorCounts[author] || 0) + 1;
+        const bookTitle = bookLink.textContent.trim();
+
+        // Initialize author's book set if needed
+        if (!authorBooks[author]) {
+          authorBooks[author] = new Set();
+        }
+
+        // Add book title to author's set (automatically handles duplicates)
+        authorBooks[author].add(bookTitle);
       }
     });
 
-    // Sort by count (descending) and get top 5
-    const topAuthors = Object.entries(authorCounts)
+    // Convert Sets to counts and sort
+    const authorCounts = Object.entries(authorBooks).map(([author, books]) => [author, books.size]);
+    const topAuthors = authorCounts
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5);
 
