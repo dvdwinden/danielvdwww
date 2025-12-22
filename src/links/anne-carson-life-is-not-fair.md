@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "Anne Carson: Life is Not Fair"
 date: 2025-12-15T11:05:35+02:00
-tags: [youtube]
+tags: [youtube, writing]
 external_url: https://www.youtube.com/watch?v=ksH3FIs0eJs
 bodyClass: bg-green
 ---
