@@ -17,6 +17,20 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
+      {% image "src/assets/library/teju-cole-tremor.jpg", "Tremor cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/6bdf5547-521c-42cd-b0e1-32f0b77f37ca?ref=daniel.pizza" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Tremor by Teju Cole">Tremor</a>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Teju Cole</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      DEC
+    </span>
+  </li>
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
       {% image "src/assets/library/hannah-arendt-eichmann-in-jerusalem.jpg", "Eichmann in Jerusalem cover", "120px" %}
     </div>
     <div class="flex flex-col">
@@ -3279,6 +3293,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">240</span> books on the list. 136 books are fiction, 104 are non-fiction. 120 were written by women, and 120 were written by men.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">240</span> books on the list. 137 books are fiction, 104 are non-fiction. 120 were written by women, and 121 were written by men.</em></p>
 
 <script src="/js/library.js"></script>
