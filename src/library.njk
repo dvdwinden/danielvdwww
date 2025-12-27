@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: Library
-description: A list of books I've read over the years.
+description: A list of the books I've read over the last five years or so.
 bodyClass: bg-amber
 ---
 
@@ -15,6 +15,20 @@ bodyClass: bg-amber
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2025</h2>
 
 <ul class="list-none p-0 m-0">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
+      {% image "src/assets/library/gretchen-bakke-the-grid.jpg", "Any Person Is the Only Self cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/b69a65d8-fb29-42d2-bd53-971508935cdf?ref=daniel.pizza" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="The Grid: The Fraying Wires Between Americans and Our Energy Future by Gretchen Bakke">The Grid: The Fraying Wires Between Americans and Our Energy Future</a>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Gretchen Bakke</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      DEC
+    </span>
+  </li>
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
       {% image "src/assets/library/elisa-gabbert-any-person-is-the-only-self.jpg", "Any Person Is the Only Self cover", "120px" %}
@@ -3308,6 +3322,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">240</span> books on the list. 137 books are fiction, 105 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">243</span> books on the list. 137 books are fiction, 106 are non-fiction.</em></p>
 
 <script src="/js/library.js"></script>
