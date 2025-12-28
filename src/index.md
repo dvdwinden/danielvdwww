@@ -17,11 +17,8 @@ bodyClass: bg-blue
 <section class="introduction">
   <span class="callout">I have over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.</span>
 
-  - Currently I work on a contract basis for [Enode](http://enode.io?ref=daniel.pizza "Enode"), designing and building digital infrastructure that enables a zero carbon energy system.
-  - I recently spent a few months contracting for [Fictive Kin](http://fictivekin.com?ref=daniel.pizza "Fictive Kin"), where I designed an Android app for a Mexican retailer and helped lay the foundation for [Ladder](https://ladderbenefits.com/?ref=daniel.pizza "Ladder"), enabling NYC-based Americans who don't have the means to get by apply for benefits.
-  - Before that I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), where I designed and [built](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers. Until 2023, over a period of nine years, I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
-  
-  I'm especially excited about working with (consumer-facing) companies in the space of publishing, sustainability, culture, music, film, or design tooling. Run a research or innovation lab? I'm all ears, too. If you are in need of someone with my profile, please reach out.
+ As of 2026 I work for [Enode](http://enode.io?ref=daniel.pizza "Enode"), designing and building digital infrastructure that enables a zero carbon energy system. Before I arrived here, I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), where I designed and [built](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers. <br />
+ Until 2023, over a period of nine years, I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -50,18 +47,18 @@ bodyClass: bg-blue
 
   <ul class="pl-0 ml-0 list-none space-y-10">
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">Current</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">Now</span>
       <div class="md:w-3/4">
       <div class="text-md font-bold font-sans">
-          <h3>Senior Product Designer · Contract</h3>
+          <h3>Senior Product Designer at <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a></h3>
         </div>
         <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          Building digital infrastructure that enables a zero carbon energy system, at <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a>. 
+          Designing and building digital infrastructure that enables a zero carbon energy system. 
         </div>
       </div>
-   </li>
+    </li>
    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–Now</span>
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–2026</span>
       <div class="md:w-3/4">
       <div class="text-md font-bold font-sans">
           <h3>Co-Founder of <a href="http://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" rel="nofollow" target="_blank"><em>TRANSCRIPT</em> Magazine</a></h3>
@@ -71,6 +68,19 @@ bodyClass: bg-blue
         </div>
       </div>
     </li>
+    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
+      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2025–2026</span>
+      <div class="md:w-3/4">
+      <div class="text-md font-bold font-sans">
+          <h3>Senior Product Designer · Contract</h3>
+        </div>
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+          From the summer of 2025 I worked as a freelancer, collaborating with <a href="http://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="external" target="_blank">Fictive Kin</a>, where I designed an Android app for a Mexican retailer and helped lay the foundation for <a href="https://ladderbenefits.com/?ref=daniel.pizza" title="Ladder" rel="external" target="_blank">Ladder</a>, enabling NYC-based Americans who don't have the means to get by apply for benefits.<br />
+          <br />
+          After Fictive Kin, I moved on to support <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a>.
+        </div>
+      </div>
+   </li>
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–2025</span>
       <div class="md:w-3/4">
