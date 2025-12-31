@@ -17,6 +17,21 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
+      {% image "src/assets/library/anne-lamott-bird-by-bird.jpg", "Bird by Bird cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://www.trema.website/anne-lamott-bird-by-bird/?ref=daniel.pizza" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Bird by Bird by Anne Lamott">Bird by Bird</a>
+        <span class="text-black dark:text-white book-star">★</span>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Anne Lamott</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      DEC
+    </span>
+  </li>
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
       {% image "src/assets/library/gretchen-bakke-the-grid.jpg", "Any Person Is the Only Self cover", "120px" %}
     </div>
     <div class="flex flex-col">
@@ -3322,6 +3337,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">243</span> books on the list. 137 books are fiction, 106 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">244</span> books on the list. 137 books are fiction, 107 are non-fiction.</em></p>
 
 <script src="/js/library.js"></script>
