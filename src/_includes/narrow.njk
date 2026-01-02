@@ -74,7 +74,7 @@
     {% if image and image.src %}
     <!-- Use post-specific image if available -->
     {% set imageBasePath = image.src | replace(".avif", "") | replace(".webp", "") | replace(".jpg", "") | replace(".jpeg", "") | replace(".png", "") | replace(".JPG", "") | replace(".PNG", "") %}
-    {% set ogImageUrl = metadata.url + imageBasePath + "-1200.jpeg" %}
+    {% set ogImageUrl = metadata.url + imageBasePath + "-1200.webp" %}
     <meta property="og:image" content="{{ ogImageUrl }}">
     <meta property="og:image:alt" content="{{ image.alt or title }}">
     {% else %}
