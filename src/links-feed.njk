@@ -19,7 +19,7 @@ eleventyExcludeFromCollections: true
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ post.data.external_url | escape }}"/>
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <updated>{{ post.data.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">&lt;p&gt;&lt;small&gt;&lt;strong&gt;Link:&lt;/strong&gt; &lt;a href="{{ post.data.external_url | escape }}"&gt;{{ post.data.external_url | escape }}&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;&lt;hr&gt;{{ post.templateContent | removeH1 | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
