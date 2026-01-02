@@ -23,4 +23,4 @@ Earlier this year I noticed [_The Quietus_](https://thequietus.com/?ref=daniel.p
   </figcaption>
 </figure>
 
-I appreciate the tactile nature of the work; the combination of the typography and illustrations makes the site feel 'reader-first', if that makes sense—as opposed to most similar sites, where the writing is buried beneath a pile of ads, waiting to be excavated.
+I appreciate the tactile nature of the work; the combination of the typography and illustrations makes the site feel ‘reader-first’, if that makes sense—as opposed to most similar sites, where the writing is buried beneath a pile of ads, waiting to be excavated.
