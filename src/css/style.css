@@ -504,7 +504,7 @@ nav.pagination a:hover {
 .site-footer ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 .6rem 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -546,6 +546,7 @@ nav.pagination a:hover {
     flex-basis: 100%;
     order: 3;
     font-size: 0.875rem !important;
+    display: block;
 }
 
 .site-footer div.lastfm a {
