@@ -9,4 +9,4 @@ bodyClass: bg-green
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
-Letterboxd reflects on their first decade on the platform by interviewing some early members. Having joined the platform in 2013, it's nice to read how other people have used it and what it's brought them. 
+Letterboxd reflects on their first decade on the platform by interviewing some early members. Having joined the platform in 2013, it’s nice to read how other people have used it and what it’s brought them. 

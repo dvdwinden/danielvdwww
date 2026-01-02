@@ -21,7 +21,7 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-I don't know why this happened at the office of _The New York Times_, but here we are. [Erykah Badu](https://www.youtube.com/watch?v=dQqdN6tjGl4&list=RDdQqdN6tjGl4&start_radio=1) hasn't released an album in forever, and it doesn't matter. Look at her aura as she floats into the room; you wouldn't dare ask her why. The performance is just about flawless.
+I don’t know why this happened at the office of _The New York Times_, but here we are. [Erykah Badu](https://www.youtube.com/watch?v=dQqdN6tjGl4&list=RDdQqdN6tjGl4&start_radio=1) hasn’t released an album in forever, and it doesn’t matter. Look at her aura as she floats into the room; you wouldn’t dare ask her why. The performance is just about flawless.
 
-Currently, she's celebrating the 25th anniversary of her landmark album [_Mama's Gun_](https://erykahbadu.com). Perhaps someday soon, that album she made with _The Alchemist_ will see the light of day.
+Currently, she’s celebrating the 25th anniversary of her landmark album [_Mama’s Gun_](https://erykahbadu.com). Perhaps someday soon, that album she made with _The Alchemist_ will see the light of day.
 

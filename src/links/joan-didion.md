@@ -10,7 +10,7 @@ bodyClass: bg-green
 
 {% retinaImage "src/assets/links/joan-didion.webp", "Joan Didion, photograph by Duane Michals (2001)" %}
 
-_“You didn't have to agree with her, but you had to submit to her sentences.”_ 
+_“You didn’t have to agree with her, but you had to submit to her sentences.”_ 
 
 In remembrance of Joan Didion, who passed away late in 2021.
 

@@ -5,7 +5,7 @@ bodyClass: bg-stone
 draft: true
 date: 2025-07-16
 tags: [writing, work, books]
-description: The NoGood art book, for which I've acted as the copywriter and editor, has gone to print.
+description: The NoGood art book, for which I’ve acted as the copywriter and editor, has gone to print.
 image:
   src: /assets/journal/nogood-art-book.jpg
   alt: "The NoGood art book"

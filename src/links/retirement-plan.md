@@ -23,5 +23,5 @@ bodyClass: bg-green
 
 A beautiful [animated short film](https://www.youtube.com/watch?v=2Mqa4zfJdx4) by [John Kelly](https://www.instagram.com/johnkelly_jnr/ "John Kelly on Instagram"). I watched it earlier this week (thank you [Simon](https://scheiber.space/?ref=daniel.pizza "Simon Scheiber")!), and it just popped up in my head again, as I tried to read a few articles in an attempt to close a few tabs. 
 
-“When I retire, I'll read the 35 years of saved articles on my reading list.”
+“When I retire, I’ll read the 35 years of saved articles on my reading list.”
 

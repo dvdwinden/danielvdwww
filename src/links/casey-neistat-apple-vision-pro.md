@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Casey Neistat's first review of Apple's Vision Pro"
+title: "Casey Neistat’s first review of Apple’s Vision Pro"
 date: 2024-02-03
 tags: [youtube, gadgets, technology]
 external_url: https://www.youtube.com/watch?v=UvkgmyfMPks&ab_channel=CaseyNeistat&ref=daniel.pizza
@@ -21,4 +21,4 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-I've not watched any other videos about the Vision Pro because I will not buy the goggles and I've been somewhat sceptical of this product direction, but Casey Neistat's video does an excellent job of showing what it's like to use this thing in real life, and gets across well the hints it provide at a future with spatial computing. It's… kind of exciting?
+I’ve not watched any other videos about the Vision Pro because I will not buy the goggles and I’ve been somewhat sceptical of this product direction, but Casey Neistat’s video does an excellent job of showing what it’s like to use this thing in real life, and gets across well the hints it provide at a future with spatial computing. It’s… kind of exciting?

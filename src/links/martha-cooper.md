@@ -21,6 +21,6 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-I recently watched this documentary about Martha Cooper, who photographed much of—if not all of—New York's graffiti in the 1970s and 1980s. The documentary is an inspiring piece of work, and Martha comes across as a delightful individual, with a fantastic legacy of documenting people rising above their environments.
+I recently watched this documentary about Martha Cooper, who photographed much of—if not all of—New York’s graffiti in the 1970s and 1980s. The documentary is an inspiring piece of work, and Martha comes across as a delightful individual, with a fantastic legacy of documenting people rising above their environments.
 
 Seek it out, if you can!

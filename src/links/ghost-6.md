@@ -13,8 +13,8 @@ My ex-colleagues at [Ghost](http://ghost.org?ref=daniel.pizza "Ghost, the publis
 
 And, 
 
-> We're introducing a native analytics suite for Ghost, giving you detailed insights into how your content performs across web traffic, newsletters, and member subscriptions - all in real-time, all from the same place you publish everyday.
+> We’re introducing a native analytics suite for Ghost, giving you detailed insights into how your content performs across web traffic, newsletters, and member subscriptions - all in real-time, all from the same place you publish everyday.
 
-Alongside many other improvements, these changes mark a significant milestone for Ghost, and I'm especially keen to see how their integration with the open web evolves. 
+Alongside many other improvements, these changes mark a significant milestone for Ghost, and I’m especially keen to see how their integration with the open web evolves. 
 
 Give it a whirl with a [free trial](http://ghost.org?ref=daniel.pizza "Start your free Ghost trial").

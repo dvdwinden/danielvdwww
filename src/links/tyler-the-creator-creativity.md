@@ -21,8 +21,8 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-[Tyler, The Creator](https://www.instagram.com/feliciathegoat "Tyler on Instagram") sat down with a group of creatives to have a candid conversation about creativity, taking chances, and believing in the things you make. I must've watched this two weeks ago and—despite the sponsored element to this—found it very inspiring (as I do all of his output in recent years; Tyler is one of the artists I admire the most).
+[Tyler, The Creator](https://www.instagram.com/feliciathegoat "Tyler on Instagram") sat down with a group of creatives to have a candid conversation about creativity, taking chances, and believing in the things you make. I must’ve watched this two weeks ago and—despite the sponsored element to this—found it very inspiring (as I do all of his output in recent years; Tyler is one of the artists I admire the most).
 
 I loved how he mentioned the shift he noticed in how people perceived him, once he put _“all songs written, produced and arranged by Tyler Okonma”_ on his album covers. It feels like his creative output has been unmatched since then. 
 
-How he created, marketed and released his latest album [_Don't Tap The Glass_](https://www.donttaptheglass.com/?ref=daniel.pizza "Don't Tap The Glass")—while on a worldwide tour of over 100 shows—is a testament to that.
+How he created, marketed and released his latest album [_Don’t Tap The Glass_](https://www.donttaptheglass.com/?ref=daniel.pizza "Don’t Tap The Glass")—while on a worldwide tour of over 100 shows—is a testament to that.

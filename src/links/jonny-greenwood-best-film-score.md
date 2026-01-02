@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "How Jonny Greenwood Wrote The Year's Best Film Score"
+title: "How Jonny Greenwood Wrote The Year’s Best Film Score"
 date: 2023-09-22
 tags: [music, profile]
 external_url: https://www.newyorker.com/culture/the-new-yorker-interview/how-jonny-greenwood-wrote-the-years-best-film-score?ref=daniel.pizza

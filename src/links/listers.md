@@ -21,6 +21,6 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-Did you know birdwatching is a _competitive_ sport? I didn't. I've downloaded [Merlin Bird ID](https://merlin.allaboutbirds.org/ "Merlin Bird ID"), but that's about it. 
+Did you know birdwatching is a _competitive_ sport? I didn’t. I’ve downloaded [Merlin Bird ID](https://merlin.allaboutbirds.org/ "Merlin Bird ID"), but that’s about it. 
 
-This funny, somewhat obnoxious, and very well made two-hour documentary does a great job diving into the subculture. When I started watching it I thought "I'll probably finish this over a day or two", but I couldn't stop watching it.
+This funny, somewhat obnoxious, and very well made two-hour documentary does a great job diving into the subculture. When I started watching it I thought "I’ll probably finish this over a day or two", but I couldn’t stop watching it.

@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Madlib's Most Underrated Album"
+title: "Madlib’s Most Underrated Album"
 date: 2022-04-03
 tags: [music]
 external_url: https://youtu.be/51FxrgujZYQ?ref=daniel.pizza
@@ -21,4 +21,4 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-A lovely deep dive into Madlib's "Sound Ancestors", a highly underrated album, in which the creator identifies a parallel between the combination of Madlib/Four Tet and Miles Davis/Teo Macero.
+A lovely deep dive into Madlib’s "Sound Ancestors", a highly underrated album, in which the creator identifies a parallel between the combination of Madlib/Four Tet and Miles Davis/Teo Macero.

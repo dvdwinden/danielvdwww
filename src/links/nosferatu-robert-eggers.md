@@ -14,9 +14,9 @@ external_url: https://www.cined.com/behind-the-masterful-cinematography-of-nosfe
   </figcaption>
 </figure>
 
-[Last week](https://www.daniel.pizza/journal/camp-day-four/ "One of my blogposts from last week's Camp"), I watched Robert Eggers' [_Nosferatu_](https://letterboxd.com/film/nosferatu-2024/ "Nosferatu (2024) on Letterboxd") for the first time. I loved his work on [_The Witch_](https://letterboxd.com/film/the-witch-2015/ "The Witch (2015) on Letterboxd") and adored the madness of [_The Lighthouse_](https://letterboxd.com/film/the-lighthouse-2019/ "The Lighthouse (2019) on Letterboxd"), so was keen to see his take on this classic. And, it was breathtaking. 
+[Last week](https://www.daniel.pizza/journal/camp-day-four/ "One of my blogposts from last week’s Camp"), I watched Robert Eggers' [_Nosferatu_](https://letterboxd.com/film/nosferatu-2024/ "Nosferatu (2024) on Letterboxd") for the first time. I loved his work on [_The Witch_](https://letterboxd.com/film/the-witch-2015/ "The Witch (2015) on Letterboxd") and adored the madness of [_The Lighthouse_](https://letterboxd.com/film/the-lighthouse-2019/ "The Lighthouse (2019) on Letterboxd"), so was keen to see his take on this classic. And, it was breathtaking. 
 
-I watched it projected on a wall, sound blasting through a great installation, and the cinematography completely blew me away. The atmosphere they were able to create for this film is nothing short of astonishing. During a few scenes, I noticed I literally sat there with my mouth open. Visuals, audio, acting; everything's spot-on.
+I watched it projected on a wall, sound blasting through a great installation, and the cinematography completely blew me away. The atmosphere they were able to create for this film is nothing short of astonishing. During a few scenes, I noticed I literally sat there with my mouth open. Visuals, audio, acting; everything’s spot-on.
 
 <figure>
   {% retinaImage "src/assets/links/nosferatu02.jpg", "A still from Nosferatu (2024)" %}

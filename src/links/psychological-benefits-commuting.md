@@ -9,4 +9,4 @@ bodyClass: bg-green
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
-[Jerry Useem](https://www.theatlantic.com/author/jerry-useem/?ref=daniel.pizza "Jerry Useem's profile on The Atlantic") with some interesting nuggets with regards to what we're missing out on when we don't commute.
+[Jerry Useem](https://www.theatlantic.com/author/jerry-useem/?ref=daniel.pizza "Jerry Useem’s profile on The Atlantic") with some interesting nuggets with regards to what we’re missing out on when we don’t commute.

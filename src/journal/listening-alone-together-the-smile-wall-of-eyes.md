@@ -8,7 +8,7 @@ description: When was the last time you sat down and listened to a music album p
 ---
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] pb-32 dark:prose-invert">
 
-<h1>Listening alone, together: The Smile's “Wall of Eyes”</h1>
+<h1>Listening alone, together: The Smile’s “Wall of Eyes”</h1>
 <span class="font-sans text-sm">January 27, 2024</span>
 
 When was the last time you sat down and listened to a music album previously unknown to you, front-to-back, without interruptions or distractions? 
@@ -48,20 +48,20 @@ I find myself wanting to hum along wherever I can. I find myself wanting to play
 
 I find myself wanting to get a read on what everyone else in the room finds themselves wanting. 
 
-And then, all of a sudden, I don't.
+And then, all of a sudden, I don’t.
 
 <div style="text-align: center">*</div>
 
-My initial apprehension transforms into pure appreciation of the artistry on display and of the immersion provided by the music and its visual accompaniment. My wants disappear, and I want nothing to do with anyone in the room—I want them all to disappear as I listen to the music and transform the listening into an experience of my own, and as we pass the album's halfway mark and peek over its crest I feel elated, lunging forward, tumbling down the home stretch. This band, already, is one of my favourite bands, and I want to tell everyone about this evening, and this music, and how this experience made me feel as an individual.
+My initial apprehension transforms into pure appreciation of the artistry on display and of the immersion provided by the music and its visual accompaniment. My wants disappear, and I want nothing to do with anyone in the room—I want them all to disappear as I listen to the music and transform the listening into an experience of my own, and as we pass the album’s halfway mark and peek over its crest I feel elated, lunging forward, tumbling down the home stretch. This band, already, is one of my favourite bands, and I want to tell everyone about this evening, and this music, and how this experience made me feel as an individual.
 
 Here I am, part of an audience absorbing music in absolute, uninterrupted solitude. I tap along with my foot, eyes closed, smiling. Smiling because I appreciate the music—the intricate constructions of the songs, the richly layered string arrangements, and the obscurity of the lyrics—but I smile, too, because I appreciate the moment—the uniqueness of a first listen in the company of strangers and the shared, silent appreciation for music and art, without any distractions.
 
-Finally, once the evening ends, I applaud. We all applaud, somewhat reluctantly, because still we don't quite know who, or what, aside from the screen and the audio installation, we are applauding, and for a moment I wish the band members walked in through the main doors so I could applaud them, but instead I applaud the evening as a whole, organised by perhaps the only band that could actually make this experience, this foreign experience, work so well. 
+Finally, once the evening ends, I applaud. We all applaud, somewhat reluctantly, because still we don’t quite know who, or what, aside from the screen and the audio installation, we are applauding, and for a moment I wish the band members walked in through the main doors so I could applaud them, but instead I applaud the evening as a whole, organised by perhaps the only band that could actually make this experience, this foreign experience, work so well. 
 
 I applaud them for that. I applaud my individual experience of the music. And, I applaud the fact that each and every one of the 300 people in this room just experienced these eight songs in 300 different ways, together.
 
 <p class="article-footer">
-Continue down the rabbit hole: read <a href="https://iriscuppen.com/On-The-Smile">On The Smile</a> by Iris Cuppen. The full album is now available on <a href="https://www.youtube.com/playlist?list=PLf_OT-1c3m3B2hsZkUrKYO5QVnRnfBfSw">The Smile's YouTube channel</a>. On there, you'll find the music videos Paul Thomas Anderson directed for <em>Wall of Eyes</em> and <em>Friend Of A Friend</em>, as well as the animations we were shown on the big screen for the remaining six songs.
+Continue down the rabbit hole: read <a href="https://iriscuppen.com/On-The-Smile">On The Smile</a> by Iris Cuppen. The full album is now available on <a href="https://www.youtube.com/playlist?list=PLf_OT-1c3m3B2hsZkUrKYO5QVnRnfBfSw">The Smile’s YouTube channel</a>. On there, you’ll find the music videos Paul Thomas Anderson directed for <em>Wall of Eyes</em> and <em>Friend Of A Friend</em>, as well as the animations we were shown on the big screen for the remaining six songs.
 </p>
 
 <div class="relative w-full pb-[56.25%] mt-7 overflow-hidden">

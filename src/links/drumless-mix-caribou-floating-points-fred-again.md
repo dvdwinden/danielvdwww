@@ -21,4 +21,4 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-I very much enjoyed this [two-hour mix](https://youtu.be/TEp-Uk3Dfx4?si=BK2k0v1oPGQkDZSn&ref=daniel.pizza) by Caribou, Floating Points and their intern, Fred Again.., who had me at the drumless version of Earl Sweatshirt's “Chum”.
+I very much enjoyed this [two-hour mix](https://youtu.be/TEp-Uk3Dfx4?si=BK2k0v1oPGQkDZSn&ref=daniel.pizza) by Caribou, Floating Points and their intern, Fred Again.., who had me at the drumless version of Earl Sweatshirt’s “Chum”.

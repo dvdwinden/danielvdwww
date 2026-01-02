@@ -18,7 +18,7 @@ Over on [The Brand Identity](https://the-brandidentity.com/typeface/displaay-ret
 
 > The new licensing model strips away the usual complexity. Instead of tracking device counts, managing web traffic metrics, or navigating tiered user structures, it comes down to one question: how many people work at the company? That’s it.
 
-On top of that, they offer individual styles and custom variable packages. They even allow you to take out characters you don't think you'll use, and you can test everything for free on their website. 
+On top of that, they offer individual styles and custom variable packages. They even allow you to take out characters you don’t think you’ll use, and you can test everything for free on their website. 
 
 This kind of flexibility is very non-standard in the world of type foundries, but may gain traction from here on out.
 

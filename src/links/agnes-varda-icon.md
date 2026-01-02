@@ -11,4 +11,4 @@ bodyClass: bg-green
 
 {% retinaImage "src/assets/links/agnes-varda.avif", "Photograph by Bob Berg" %}
 
-Richard Brody on the life and work of French filmmaker Agnès Varda. I'm looking forward to reading the upcoming biography, and I've quite a few of her films to catch up on.
+Richard Brody on the life and work of French filmmaker Agnès Varda. I’m looking forward to reading the upcoming biography, and I’ve quite a few of her films to catch up on.

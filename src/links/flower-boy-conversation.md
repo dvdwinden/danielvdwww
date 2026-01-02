@@ -21,4 +21,4 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-As I watched Jerrod Carmichael's latest special _[Rothaniel](https://www.hbo.com/movies/jerrod-carmichael-rothaniel?ref=daniel.pizza "Rothaniel on HBO")_ – which is really, really special – I was reminded of this conversation he had with Tyler, The Creator back in 2018. An interview unlike any other, and I've thought about it often since I first saw it.
+As I watched Jerrod Carmichael’s latest special _[Rothaniel](https://www.hbo.com/movies/jerrod-carmichael-rothaniel?ref=daniel.pizza "Rothaniel on HBO")_ – which is really, really special – I was reminded of this conversation he had with Tyler, The Creator back in 2018. An interview unlike any other, and I’ve thought about it often since I first saw it.

@@ -21,4 +21,4 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-[I've written about it before](/journal/big-screen-intimacy "My essay on movie-going"): the cinematography of The Batman is fantastic. It's a dark, immersive world, portrayed with shots wet with rain and dirty with grime. Patrick Tomasso published a video essay last year that details the work that director Matt Reeves and cinematographer Greig Fraser did to achieve it.
+[I’ve written about it before](/journal/big-screen-intimacy "My essay on movie-going"): the cinematography of The Batman is fantastic. It’s a dark, immersive world, portrayed with shots wet with rain and dirty with grime. Patrick Tomasso published a video essay last year that details the work that director Matt Reeves and cinematographer Greig Fraser did to achieve it.

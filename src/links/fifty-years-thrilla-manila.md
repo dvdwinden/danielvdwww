@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Fifty Years After History's Most Brutal Boxing Match"
+title: "Fifty Years After History’s Most Brutal Boxing Match"
 date: 2025-12-15T14:28:00+02:00
 tags: [writing, sports]
 external_url: https://www.theatlantic.com/magazine/archive/2025/10/ali-frazier-thrilla-in-manila-history/683972/ref=daniel.pizza

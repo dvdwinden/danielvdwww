@@ -18,6 +18,6 @@ Zadie Smith, [on essay writing](https://www.newyorker.com/magazine/2025/09/29/th
 
 > (I still write the opening and last lines of an essay first.)
 
-Fascinating. The meandering form of an essay is difficult enough to master, let alone knowing where you'll end it before you commence.
+Fascinating. The meandering form of an essay is difficult enough to master, let alone knowing where you’ll end it before you commence.
 
-“Bob's your uncle".
+“Bob’s your uncle".

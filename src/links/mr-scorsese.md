@@ -21,6 +21,6 @@ bodyClass: bg-green
   </iframe>
 </div>
 
-I've been rewatching Scorsese films these past two weeks ([_Killers of the Flower Moon_](https://letterboxd.com/film/killers-of-the-flower-moon/), [_The Wolf of Wall Street_](https://letterboxd.com/film/the-wolf-of-wall-street/), [_The Departed_](https://letterboxd.com/film/the-departed/), [_Casino_](https://letterboxd.com/film/casino/)), so I was excited to learn about the new limited documentary series Rebecca Miller made on the director, called [_Mr. Scorsese_](https://letterboxd.com/film/mr-scorsese/). 
+I’ve been rewatching Scorsese films these past two weeks ([_Killers of the Flower Moon_](https://letterboxd.com/film/killers-of-the-flower-moon/), [_The Wolf of Wall Street_](https://letterboxd.com/film/the-wolf-of-wall-street/), [_The Departed_](https://letterboxd.com/film/the-departed/), [_Casino_](https://letterboxd.com/film/casino/)), so I was excited to learn about the new limited documentary series Rebecca Miller made on the director, called [_Mr. Scorsese_](https://letterboxd.com/film/mr-scorsese/). 
 
-I appreciated the documentary, learning more about Scorsese's older, brilliant work, and getting an inside look at films like _Goodfellas_, _Taxi Driver_ and _Gangs of New York_. The man's a great storyteller, and at five episodes, I think it could've been a little longer still!
+I appreciated the documentary, learning more about Scorsese’s older, brilliant work, and getting an inside look at films like _Goodfellas_, _Taxi Driver_ and _Gangs of New York_. The man’s a great storyteller, and at five episodes, I think it could’ve been a little longer still!

@@ -7,7 +7,7 @@ external_url: https://www.mcsweeneys.net/articles/the-em-dash-responds-to-the-ai
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
-They hardly ever miss at McSweeney's. 
+They hardly ever miss at McSweeney’s. 
 
 > I would like to address the recent slander circulating on social media, in editorial Slack channels, and in the margins of otherwise decent Substack newsletters. Specifically, the baseless, libelous accusation that my usage is a telltale sign of artificial intelligence.
 > 

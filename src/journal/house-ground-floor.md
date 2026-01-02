@@ -60,14 +60,14 @@ As you can see in the drawing above, the living room is wide open. The house use
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
-The first floor layout is a bit more boxy, and doesn't extend quite as far as the ground floor does. The bedroom opens to a spacious roof terrace which basks in sunshine until the sun sets behind the trees across the canal.
+The first floor layout is a bit more boxy, and doesn’t extend quite as far as the ground floor does. The bedroom opens to a spacious roof terrace which basks in sunshine until the sun sets behind the trees across the canal.
 
 ## Drawing up a plan for the future
 We knew we wanted to replace the bathroom shortly after moving in. It was constructed poorly, and the furniture & fixtures are outdated. Considering this, we wanted to make sure we weighed our options right from the start, and potentially take on multiple projects in one go.
 
 We asked a friend of my partners' for help. Hallstein Guthu is the founder of a [Norwegian architecture studio](https://hallstein.no/ "Hallstein"), and they helped us workshop and draw up a plan we could work towards. 
 
-I'll run through the sketches below. Drawn by Hallstein and his colleague Zoe, taking you through our thinking along the way.
+I’ll run through the sketches below. Drawn by Hallstein and his colleague Zoe, taking you through our thinking along the way.
 
 </div>
 
@@ -105,9 +105,9 @@ An odd characteristic of Dutch houses is the placement of the toilet on the grou
 </figure>
 
 ## Kitchen → TV/guest room
-The kitchen is currently located in the east-facing, darkest part of the ground floor. We love to cook and spend a lot of time in the kitchen, so in an ideal scenario we would move it to the other side of the house. Our thinking is that we instead can create a room here that can serve as a TV room or a guest room, since you don't need lots of daylight for either, with the possibility of closing it off with a sliding door. 
+The kitchen is currently located in the east-facing, darkest part of the ground floor. We love to cook and spend a lot of time in the kitchen, so in an ideal scenario we would move it to the other side of the house. Our thinking is that we instead can create a room here that can serve as a TV room or a guest room, since you don’t need lots of daylight for either, with the possibility of closing it off with a sliding door. 
 
-We've reserved some space for storage next to the window, as well as against the left wall, and made space for a small desk or writing table to sit and work at, if necessary.
+We’ve reserved some space for storage next to the window, as well as against the left wall, and made space for a small desk or writing table to sit and work at, if necessary.
 
 <figure class="w-full">
   {% retinaImage "src/assets/journal/current-kitchen.webp", "Current kitchen" %}
@@ -177,7 +177,7 @@ Which brings us to the final version of the ground floor, seen below, along with
 <span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— Freely translated from Andrea Prins' “Wonen” (2021)</span>
 
 ## A North Star
-The plan outlined above is, of course, a costly endeavour. Given the current price of labour and materials, taking up the project in one go is something we can not afford to do. Since creating these sketches together with HALLSTEIN, however, we've worked on smaller projects on the first floor of our house, as well as a larger project I may write about later.
+The plan outlined above is, of course, a costly endeavour. Given the current price of labour and materials, taking up the project in one go is something we can not afford to do. Since creating these sketches together with HALLSTEIN, however, we’ve worked on smaller projects on the first floor of our house, as well as a larger project I may write about later.
 
 Our plan is to live in this home for the next ten years. Revisiting these sketches for this write-up, I realise how nice a home these changes would make. It utilises the space in a much better way (creating nooks for reading, an open space for entertaining, and a secluded space for cozying up by the TV, or for hosting a guest), and we may work towards it in smaller iterations, chipping away at what—one day—may become the perfect ground floor of our home.
 

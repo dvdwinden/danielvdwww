@@ -11,5 +11,5 @@ bodyClass: bg-green
 
 _“What if, instead of thinking of the metaverse as a set of interconnected virtual places, we think of it as a communications medium?”_
 
-[Tim O'Reilly](https://www.oreilly.com/people/tim-oreilly/?ref=daniel.pizza "Tim O'Reilly") published an incredibly thoughtful post on the Metaverse, what it is, and what he thinks it isn't. It's refreshing to see him break down the walled garden that has been under construction ever since the term was coined.
+[Tim O’Reilly](https://www.oreilly.com/people/tim-oreilly/?ref=daniel.pizza "Tim O’Reilly") published an incredibly thoughtful post on the Metaverse, what it is, and what he thinks it isn’t. It’s refreshing to see him break down the walled garden that has been under construction ever since the term was coined.
 

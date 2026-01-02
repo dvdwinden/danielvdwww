@@ -10,4 +10,4 @@ image:
   title: "Stefan Hertmans – War and Turpentine (2013)"
 ---
 
-Spanning multiple war-ridden decades of the 20th century, Hertmans’ lovingly layered reconstruction of his grandfather's life is an ambitious undertaking, flawlessly executed. <a href="{{ external_url }}" title="Read my recommendation for War and Turpentine, by Stefan Hertmans" rel="external" target="_blank">Continue reading</a> →
+Spanning multiple war-ridden decades of the 20th century, Hertmans’ lovingly layered reconstruction of his grandfather’s life is an ambitious undertaking, flawlessly executed. <a href="{{ external_url }}" title="Read my recommendation for War and Turpentine, by Stefan Hertmans" rel="external" target="_blank">Continue reading</a> →

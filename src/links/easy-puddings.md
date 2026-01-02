@@ -14,7 +14,7 @@ external_url: https://buttondown.com/EasyPuddings/archive/on-puddings-suns-and-o
   </figcaption>
 </figure>
 
-My friend [Iris](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen"), with whom I make [_TRANSCRIPT_ Magazine](http://transcriptmag.store?ref=daniel.pizza), has started a newsletter. It's called _Easy Puddings_, and its first issue—[_On puddings, suns and other circles_](https://buttondown.com/EasyPuddings/archive/on-puddings-suns-and-other-circles/?ref=daniel.pizza)—is out now.
+My friend [Iris](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen"), with whom I make [_TRANSCRIPT_ Magazine](http://transcriptmag.store?ref=daniel.pizza), has started a newsletter. It’s called _Easy Puddings_, and its first issue—[_On puddings, suns and other circles_](https://buttondown.com/EasyPuddings/archive/on-puddings-suns-and-other-circles/?ref=daniel.pizza)—is out now.
 
 > Easy Puddings is about what goes into making things, borrowing things, mixing things; about reading, writing, and other desk movements. 
 > 

@@ -11,7 +11,7 @@ external_url: https://11-11.studio/work/the-quietus/?ref=daniel.pizza
   {% retinaImage "src/assets/links/the-quietus01.avif", "The revamped The Quietus, on mobile" %}
 </figure>
 
-Earlier this year I noticed [_The Quietus_](https://thequietus.com/?ref=daniel.pizza "The Quietus: Culture Countered") got revamped, and I've been reading their work much more since then. The glow-up was done by [11:11](https://11-11.studio?ref=daniel.pizza "11:11, design studio"), who took on the branding, design and development work. 
+Earlier this year I noticed [_The Quietus_](https://thequietus.com/?ref=daniel.pizza "The Quietus: Culture Countered") got revamped, and I’ve been reading their work much more since then. The glow-up was done by [11:11](https://11-11.studio?ref=daniel.pizza "11:11, design studio"), who took on the branding, design and development work. 
 
 <figure>
   {% retinaImage "src/assets/links/the-quietus03.avif", "The revamped The Quietus" %}

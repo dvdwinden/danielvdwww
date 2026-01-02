@@ -10,4 +10,4 @@ bodyClass: bg-green
 
 {% retinaImage "src/assets/links/citizen-kane.avif", "Citizen Kane by Mike McQuade" %}
 
-Over on Criterion's [Current](https://www.criterion.com/current?ref=daniel.pizza "The Current")—a blog that quickly morphed into a full-blown magazine on film—[Mike McQuade](https://mikemcquade.com/?ref=daniel.pizza "Mike McQuade") dives into his design process for the Criterion Collection edition of Citizen Kane. Iconic, yet divisive.
+Over on Criterion’s [Current](https://www.criterion.com/current?ref=daniel.pizza "The Current")—a blog that quickly morphed into a full-blown magazine on film—[Mike McQuade](https://mikemcquade.com/?ref=daniel.pizza "Mike McQuade") dives into his design process for the Criterion Collection edition of Citizen Kane. Iconic, yet divisive.

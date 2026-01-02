@@ -15,9 +15,9 @@ bodyClass: bg-blue
 <h2 class="home-subtitle mt-0 text-black dark:text-white">Software designer; writer</h2>
 
 <section class="introduction">
-  <span class="callout">I have over a decade of experience designing digital products, leading teams, and setting direction. I've worked with clients of all sizes, on projects of all shapes.</span>
+  <span class="callout">I have over a decade of experience designing digital products, leading teams, and setting direction. I’ve worked with clients of all sizes, on projects of all shapes.</span>
 
- As of 2026 I work for [Enode](http://enode.io?ref=daniel.pizza "Enode"), designing and building digital infrastructure that enables a zero carbon energy system. Before I arrived here, I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), where I designed and [built](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") tools for writers, journalists and publishers. <br />
+ As of 2026 I work for [Enode](http://enode.io?ref=daniel.pizza "Enode"), designing and building digital infrastructure that enables a zero carbon energy system. Before I arrived here, I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), where I designed and [built](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost’s Github repository") tools for writers, journalists and publishers. <br />
  Until 2023, over a period of nine years, I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
@@ -75,7 +75,7 @@ bodyClass: bg-blue
           <h3>Senior Product Designer · Contract</h3>
         </div>
         <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          From the summer of 2025 I worked as a freelancer, collaborating with <a href="http://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="external" target="_blank">Fictive Kin</a>, where I designed an Android app for a Mexican retailer and helped lay the foundation for <a href="https://ladderbenefits.com/?ref=daniel.pizza" title="Ladder" rel="external" target="_blank">Ladder</a>, enabling NYC-based Americans who don't have the means to get by apply for benefits.<br />
+          From the summer of 2025 I worked as a freelancer, collaborating with <a href="http://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="external" target="_blank">Fictive Kin</a>, where I designed an Android app for a Mexican retailer and helped lay the foundation for <a href="https://ladderbenefits.com/?ref=daniel.pizza" title="Ladder" rel="external" target="_blank">Ladder</a>, enabling NYC-based Americans who don’t have the means to get by apply for benefits.<br />
           <br />
           After Fictive Kin, I moved on to support <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a>.
         </div>
@@ -99,7 +99,7 @@ bodyClass: bg-blue
           <h3>Partner, CDO at <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
         <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
-          As Partner, I was involved in setting the company's strategy. As CDO, I focused on our Product Design work and team—from securing projects to hiring new team members, and from elevating our reputation externally to enabling Product Designers to do their best work.
+          As Partner, I was involved in setting the company’s strategy. As CDO, I focused on our Product Design work and team—from securing projects to hiring new team members, and from elevating our reputation externally to enabling Product Designers to do their best work.
         </div>
       </div>
     </li>
@@ -135,16 +135,16 @@ bodyClass: bg-blue
 
 My contribution as a designer is holistic: I deliver thorough flows, polished user interfaces, and quality prototypes. I sweat the details, but make sure everyone understands the bigger picture. 
 
-I have a strong interest in typography and a love for storytelling, and I'm as comfortable designing complex flows as I am putting together a marketing website. 
+I have a strong interest in typography and a love for storytelling, and I’m as comfortable designing complex flows as I am putting together a marketing website. 
 
-I've worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake") and [Expo](http://expo.dev?ref=daniel.pizza "Expo"), among others.
+I’ve worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake") and [Expo](http://expo.dev?ref=daniel.pizza "Expo"), among others.
 
 ---
 
 <h2 class="work-title">Ghost</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Designing and building tools for writers, journalists and publishers</h3>
 
-While at Ghost I designed an upgraded publishing workflow, turning a dead end into an opportunity for publishers to share their work with their audience. I contributed design and code to the new onboarding, and worked on the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza "Custom fonts in Ghost"). I was involved in exploratory brand work, and designed and built [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost's Github repository") throughout the product.
+While at Ghost I designed an upgraded publishing workflow, turning a dead end into an opportunity for publishers to share their work with their audience. I contributed design and code to the new onboarding, and worked on the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza "Custom fonts in Ghost"). I was involved in exploratory brand work, and designed and built [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost’s Github repository") throughout the product.
 
 </div>
 
@@ -175,16 +175,16 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
 
-> Whether leading his own projects or working as part of a team, Daniël's work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
+> Whether leading his own projects or working as part of a team, Daniël’s work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
 
-<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/sodo.jpg" alt="Sodo" /> <a href="https://sodo.is/?ref=daniel.pizza" title="Sodbileg's website" rel="external" target="_blank">Sodbileg Gansukh</a>, Product Designer at Ghost </span>
+<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/sodo.jpg" alt="Sodo" /> <a href="https://sodo.is/?ref=daniel.pizza" title="Sodbileg’s website" rel="external" target="_blank">Sodbileg Gansukh</a>, Product Designer at Ghost </span>
 
 ---
 
 <h2 class="work-title">Circle</h2>
-<h3 class="text-black/60 dark:text-white/40 work-desc">Conceptualising and designing IKEA's circular rental platform for office furniture</h3>
+<h3 class="text-black/60 dark:text-white/40 work-desc">Conceptualising and designing IKEA’s circular rental platform for office furniture</h3>
 
-At Bakken & Bæck I led the digital product design for [Circle](https://bakkenbaeck.com/case/circle?ref=daniel.pizza "Bakken & Bæck's Circle case study"), IKEA's circular rental solution for office furniture. 
+At Bakken & Bæck I led the digital product design for [Circle](https://bakkenbaeck.com/case/circle?ref=daniel.pizza "Bakken & Bæck’s Circle case study"), IKEA’s circular rental solution for office furniture. 
 
 We conceptualised, designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Working with a team from [_SPACE10_](https://space10.com/ "SPACE10"), we took the product from zero to one through rapid iteration. 
 </div>
@@ -193,9 +193,9 @@ We conceptualised, designed and built a digital solution that enabled small busi
   <figure>
     <video autoplay loop muted playsinline class="w-full" preload="auto">
         <source src="/assets/work/circle-video-interior.mp4" type="video/mp4">
-        IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez
+        IKEA’s circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez
     </video>
-    <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">IKEA's circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez</figcaption>
+    <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">IKEA’s circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez</figcaption>
   </figure>
 
   <figure class="w-full sm:max-w-lg mr-auto my-12">
@@ -207,9 +207,9 @@ We conceptualised, designed and built a digital solution that enabled small busi
 <figure class="ml-auto max-w-lg">
     <video autoplay loop muted playsinline class="w-full" preload="auto">
         <source src="/assets/work/circle-video-chair.mp4" type="video/mp4">
-        UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström
+        UI for IKEA’s circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström
     </video>
-    <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">UI for IKEA's circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström</figcaption>
+    <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">UI for IKEA’s circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström</figcaption>
 </figure>
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
@@ -223,7 +223,7 @@ Over the course of one summer we laid the groundwork for what would grow into [N
 <h2 class="work-title">Pexip</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Streamlining a suite of video-conferencing software</h3>
 
-In collaboration with Pexip's team I led design on the (re)design of their web, iOS and Android apps, modernising their video-conferencing offering and creating  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand the company's tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
+In collaboration with Pexip’s team I led design on the (re)design of their web, iOS and Android apps, modernising their video-conferencing offering and creating  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand the company’s tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
 
 </div>
 
@@ -241,7 +241,7 @@ In collaboration with Pexip's team I led design on the (re)design of their web, 
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip UI on web</figcaption>
 </figure>
 
-I crafted UI based on Pexip's existing brand guidelines, oversaw the product direction together with Pexip's Product Design Lead, and managed the client relationship. Together, we defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
+I crafted UI based on Pexip’s existing brand guidelines, oversaw the product direction together with Pexip’s Product Design Lead, and managed the client relationship. Together, we defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
 
 </div>
 
@@ -255,27 +255,27 @@ I crafted UI based on Pexip's existing brand guidelines, oversaw the product dir
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
 
-  > Daniël is the best designer I've worked with so far in my career. Impeccable attention to detail and a great problem-solver. He's also very friendly, easy to work with and delivers on time despite tight turnaround times. 
+  > Daniël is the best designer I’ve worked with so far in my career. Impeccable attention to detail and a great problem-solver. He’s also very friendly, easy to work with and delivers on time despite tight turnaround times. 
 
 <span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/svenn-petter.jpg" alt="Sven-Petter" /><a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip</span>
 
 ---
 
 <h2 class="work-title">Design Leadership</h2>
-I've hired, managed and mentored teams of up to twelve Product Designers with varying levels of experience—balancing their personal goals and needs with those of the business—for over five years.
+I’ve hired, managed and mentored teams of up to twelve Product Designers with varying levels of experience—balancing their personal goals and needs with those of the business—for over five years.
 
-> What really sets Daniël apart is how much he cares about the people he works with. He creates a positive, supportive environment where everyone can thrive. If you're looking for someone who will bring expertise, dedication, and a genuine care for his colleagues, Daniël is your person.
+> What really sets Daniël apart is how much he cares about the people he works with. He creates a positive, supportive environment where everyone can thrive. If you’re looking for someone who will bring expertise, dedication, and a genuine care for his colleagues, Daniël is your person.
 
-<span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/marek.webp" alt="Marek" /><a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek's website" rel="external" target="_blank">Marek Minor</a>, Product Designer</span>
+<span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial"><img src="/assets/work/marek.webp" alt="Marek" /><a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek’s website" rel="external" target="_blank">Marek Minor</a>, Product Designer</span>
 
 ---
 
 <h2 class="work-title"><em>TRANSCRIPT</em> Magazine</h2> 
 <h3 class="text-black/60 dark:text-white/40 work-desc">Curating and crafting a printed, seasonal literary magazine</h3>
 
-Together with [Iris Cuppen](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I've curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. It features literary essays, short stories, poetry, and visual works by renowned artists. Each issue is printed in a limited run. Its design is meant to be understated and elegant, leaving ample space for the stories and artworks it contains to take the spotlight.
+Together with [Iris Cuppen](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I’ve curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. It features literary essays, short stories, poetry, and visual works by renowned artists. Each issue is printed in a limited run. Its design is meant to be understated and elegant, leaving ample space for the stories and artworks it contains to take the spotlight.
 
-For the launch of every issue we've hosted an [event](https://www.instagram.com/p/DKrGC4fo7eC/?img_index=1 "See an impression on our Instagram account") where some of our contributors read their pieces to what has grown into a small and caring community.
+For the launch of every issue we’ve hosted an [event](https://www.instagram.com/p/DKrGC4fo7eC/?img_index=1 "See an impression on our Instagram account") where some of our contributors read their pieces to what has grown into a small and caring community.
 </div>
 
 <div class="mt-32">
@@ -304,9 +304,9 @@ For the launch of every issue we've hosted an [event](https://www.instagram.com/
 
 <h2 class="work-title">Writing & Storytelling</h2>
 
-I've always had an interest in writing, and [write regularly](/newsletter "Latest entries from my monthly newsletter"). I work well on teams with other writers and have a keen eye for storytelling, which has proven beneficial when designing digital products or marketing websites.
+I’ve always had an interest in writing, and [write regularly](/newsletter "Latest entries from my monthly newsletter"). I work well on teams with other writers and have a keen eye for storytelling, which has proven beneficial when designing digital products or marketing websites.
 
-Most recently I've acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer, helping turn Thomas' thoughts about his illustration process and work into a cohesive whole. 
+Most recently I’ve acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer, helping turn Thomas' thoughts about his illustration process and work into a cohesive whole. 
 
 ---
 

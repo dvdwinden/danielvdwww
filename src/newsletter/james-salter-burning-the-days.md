@@ -10,4 +10,4 @@ image:
   title: "James Salter – Burning The Days (1997)"
 ---
 
-Recounting his years as a fighter pilot and writer, Salter's nostalgic and melancholic memoir drips with a Don Draper-esque masculinity. <a href="{{ external_url }}" title="Read my recommendation for Burning The Days by James Salter" rel="external" target="_blank">Continue reading</a> →
+Recounting his years as a fighter pilot and writer, Salter’s nostalgic and melancholic memoir drips with a Don Draper-esque masculinity. <a href="{{ external_url }}" title="Read my recommendation for Burning The Days by James Salter" rel="external" target="_blank">Continue reading</a> →

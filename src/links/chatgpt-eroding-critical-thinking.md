@@ -9,7 +9,7 @@ bodyClass: bg-green
 
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
 
-Researchers at MIT's Media Lab published a [study](https://arxiv.org/pdf/2506.08872v1 "The study by MIT Media Lab") titled _Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task_, and the results are somewhat concerning. 54 subjects were divided into three essay-writing groups (one using ChatGPT, one using Google, and one using nothing at all).
+Researchers at MIT’s Media Lab published a [study](https://arxiv.org/pdf/2506.08872v1 "The study by MIT Media Lab") titled _Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task_, and the results are somewhat concerning. 54 subjects were divided into three essay-writing groups (one using ChatGPT, one using Google, and one using nothing at all).
 
 > Researchers used an EEG to record the writers’ brain activity across 32 regions, and found that of the three groups, ChatGPT users had the lowest brain engagement and “consistently underperformed at neural, linguistic, and behavioral levels.”
 
