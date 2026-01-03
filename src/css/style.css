@@ -145,6 +145,17 @@ nav a:focus-visible {
 /* Basic element styling */
 html {
     overflow-y: scroll;
+    /* Background color will be set dynamically by JavaScript to match page background */
+    /* Default fallback for initial render before JS loads */
+    background-color: #f5f7fa;
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+    /* iOS Safari fix */
+}
+
+html.dark {
+    /* Dark mode background - will be overridden by JS if needed */
+    background-color: #222;
 }
 
 body {
