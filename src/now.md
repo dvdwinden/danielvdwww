@@ -7,29 +7,18 @@ bodyClass: bg-blue
 
 # Now
 
-<span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: November 2025</span>
+<span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: January 2026</span>
 
-## Contracting with Enode
-I’m currently working on a contract basis with [Enode](https://enode.io/?ref=daniel.pizza "Enode"), helping them build digital infrastructure that enables a zero carbon energy system. There are quite a few ex-colleagues here, and the team’s been very welcoming. I’ve touched more than a few parts of the product already, but the majority of my time has gone into designing new features for Enode’s [Sandbox environment](https://developers.enode.com/docs/sandbox?ref=daniel.pizza "Enode Sandbox documentation").
+## The next chapter of my career, at Enode
+After a transitional year, I’ve now [joined Enode full-time](/journal/next-chapter-at-enode "My Journal post on why I've joined Enode"). While contracting with them for a few months, I enjoyed the collaboration a lot, and their mission—to build digital infrastructure that enables a zero carbon energy system—is one I greatly appreciate. They have a great team, which has been appreciative of my work and made me feel very welcome. After a few conversations, joining them felt like a no-brainer. 
 
-If you have a project I might be a fit for in 2026, don’t hesitate to reach out.
-
-## The final issue of _TRANSCRIPT_ Magazine, and other pastimes
-The fourth and final issue of [_TRANSCRIPT_ Magazine](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") is out, and you can [order it](http://transcriptmag.store/issue-four "TRANSCRIPT ISSUE FOUR") now. It is our last, which we [celebrated in October](https://www.instagram.com/p/DQHYp-FiAEO/?img_index=1 "Recap on Instagram"). Whatever comes next, you will know about early in 2026.
-
-I also keep chipping away at projects on the side—this website, the [NoGood book](https://nogood.studio/posts/products/nogood-book-collectors/?ref=daniel.pizza "NoGood book"), and my [monthly newsletter](http://trema.website?ref=daniel.pizza "Trema, my monthly newsletter on books worth reading") about books worth reading.
+On the side, I keep chipping away at a variety of personal projects. We still have copies of [_TRANSCRIPT_ Magazine](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") to sell, and may attend another magazine fair later this year; the [NoGood book](https://nogood.studio/posts/products/nogood-book-collectors/?ref=daniel.pizza "NoGood book") is almost out; my [monthly newsletter](http://trema.website?ref=daniel.pizza "Trema, my monthly newsletter on books worth reading") on books worth reading is still running; and, I’m designing a new website for two illustrators, [Joren Joshua](https://www.instagram.com/jorenjoshua/ "Joren Joshua on Instagram") and [Ilse Weisfelt](https://www.instagram.com/ilseweisfelt/).
 
 <div id="github-calendar" style="display: none;" class="mt-8"></div>
 
-## Writing; at home, and in the Pyrenees
-This week I travel to Aulus-les-Bains for a weeklong [residency](/journal/camp-france/), focused on my writing. As per the communication I received ahead of my stay:
+I haven’t written as much as I’d like over the holiday break, but I’m aiming to try and get a piece of mine published somewhere, sometime this year. I have one or two essays in the works, and of course, am available to write [book reviews](http://trema.website?ref=daniel.pizza "Read my book recommendations on Trema"), too, should your publication need them.
 
-> It’s the last village before the frontier chain, extremely remote and with very little public transport. It’s important to realise this, and plan your travel accordingly.
-
-I’m really looking forward. I have a few ideas for essays circling in my head, and look forward to exploring them. In Dutch, for a change.
-
-## Moving; on and off the tennis court
-I’ve recently picked up running to supplement my tennis in the winter months. With the rain, courts are often not playable, so I needed something to keep myself going. I’m keeping it casual, but enjoying it so far.
+The opportunity to play tennis has pretty much washed away these past two months, with rain and frost making courts unplayable. I’ve been running more consistently because of this, slowly building up towards a 10K, and enjoying the process.
 
 <div id="strava-calendar" style="display: none;" class="mt-8"></div>
 
