@@ -1,10 +1,10 @@
 ---
 layout: base.njk
-title: "Dedicating the next chapter in my career to the energy transition, at Enode"
+title: "Dedicating the next chapter of my career to advancing the sustainable energy transition at Enode"
 bodyClass: bg-stone
 date: 2026-01-05T09:20:02+02:00
 tags: [career, design]
-draft: true
+draft: false
 description: The albums I kept gravitating towards over the past twelve months.
 image:
   src: /assets/journal/2025-in-music.JPG
@@ -15,7 +15,7 @@ image:
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
 
-<h1>Dedicating the next chapter in my career to the energy transition, at Enode</h1>
+<h1>Dedicating the next chapter of my career to advancing the sustainable energy transition at Enode</h1>
 <span class="font-sans text-sm">January 1, 2026</span>
 
 {% retinaImage "src/assets/journal/2025-in-music.JPG", "2025 in music", 1200 %}
@@ -30,8 +30,11 @@ My place was on the _Experience_ team, designing tools for the developers who us
 
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full mt-4">
-    {% retinaImage "src/assets/journal/radiohead-london-alex-lake.jpg", "Radiohead performing in London (photo by Alex Lake)" %}
-    <figcaption class="pl-8 sm:pl-0">Radiohead performing in London in 2025 (photos by Alex Lake).</figcaption>
+    {% retinaImage "src/assets/journal/enode-ui01.avif", "Example of Enode UI" %}
+  </figure>
+  <figure class="w-full mt-4">
+    {% retinaImage "src/assets/journal/enode-ui02.avif", "Example of Enode UI" %}
+    <figcaption class="pl-8 sm:pl-0">Examples of the kinds of user interfaces I work on at Enode.</figcaption>
   </figure>
 </div>
 
