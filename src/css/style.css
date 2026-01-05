@@ -185,6 +185,7 @@ iframe {
 .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overscroll-behavior-y: none;
 }
 
 /* ==========================================================================
@@ -450,20 +451,18 @@ header {
 /* Header scroll behavior - mobile only */
 @media (max-width: 768px) {
     header {
-        transition: transform 0.35s ease-in-out;
-        z-index: 1000;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
     }
 
     header.header-hidden {
         transform: translateY(-100%);
+        pointer-events: none;
     }
 
     header.header-visible {
         transform: translateY(0);
-    }
-
-    header.scrolling {
-        transition: top 0.35s ease-in-out, transform 0.35s ease-in-out;
+        pointer-events: auto;
     }
 }
 

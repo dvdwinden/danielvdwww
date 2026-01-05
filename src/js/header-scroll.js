@@ -1,10 +1,11 @@
 // Header scroll behavior script
 document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('header');
+  if (!header) return;
+
   let lastScrollTop = 0;
-  let scrollThreshold = 10; // Minimum scroll distance to trigger hide/show
-  let isScrolling = false;
-  let scrollTimeout;
+  let scrollThreshold = 5; // Reduced threshold for more responsive hiding
+  let ticking = false;
 
   // Only apply on mobile devices
   function isMobile() {
@@ -13,27 +14,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Handle scroll events
   function handleScroll() {
-    if (!isMobile() || !header) return;
+    if (!isMobile()) return;
 
     const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Prevent negative values on iOS overscroll
+    if (currentScrollTop < 0) return;
+
     const scrollDifference = Math.abs(currentScrollTop - lastScrollTop);
 
     // Only trigger if scroll difference is significant
     if (scrollDifference < scrollThreshold) return;
 
-    // Clear existing timeout
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
-    }
-
-    // Add scrolling class for immediate visual feedback
-    if (!isScrolling) {
-      isScrolling = true;
-      header.classList.add('scrolling');
-    }
-
     // Determine scroll direction
-    if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
+    if (currentScrollTop > lastScrollTop && currentScrollTop > 80) {
       // Scrolling down - hide header
       header.classList.add('header-hidden');
       header.classList.remove('header-visible');
@@ -43,17 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
       header.classList.add('header-visible');
     }
 
-    lastScrollTop = currentScrollTop;
+    // Show header at very top of page
+    if (currentScrollTop <= 0) {
+      header.classList.remove('header-hidden');
+      header.classList.add('header-visible');
+    }
 
-    // Set timeout to remove scrolling class after scroll stops
-    scrollTimeout = setTimeout(() => {
-      isScrolling = false;
-      header.classList.remove('scrolling');
-    }, 150);
+    lastScrollTop = currentScrollTop;
   }
 
   // Throttle scroll events for better performance
-  let ticking = false;
   function requestTick() {
     if (!ticking) {
       requestAnimationFrame(() => {
@@ -68,15 +61,25 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', requestTick, { passive: true });
 
   // Handle resize events to reset header state
+  let resizeTimeout;
   window.addEventListener('resize', () => {
-    if (!isMobile()) {
-      // Reset header state on desktop
-      header.classList.remove('header-hidden', 'header-visible', 'scrolling');
-    }
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (!isMobile()) {
+        // Reset header state on desktop
+        header.classList.remove('header-hidden', 'header-visible');
+        lastScrollTop = 0;
+      } else {
+        // Reinitialize on mobile
+        header.classList.remove('header-hidden');
+        header.classList.add('header-visible');
+        lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      }
+    }, 150);
   });
 
   // Initialize header state
   if (isMobile()) {
     header.classList.add('header-visible');
   }
-}); 
+});
