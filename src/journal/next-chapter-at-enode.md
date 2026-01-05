@@ -36,10 +36,10 @@ My place was on the _Experience_ team, designing software for the people who use
 
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full mt-4">
-    {% retinaImage "src/assets/journal/enode-ui-01.png", "Example of Enode UI" %}
+    {% retinaImage "src/assets/journal/enode-ui-01.png", "Example of Enode UI", 1400 %}
   </figure>
   <figure class="w-full mt-4">
-    {% retinaImage "src/assets/journal/enode-ui-02.png", "Example of Enode UI" %}
+    {% retinaImage "src/assets/journal/enode-ui-02.png", "Example of Enode UI", 1400 %}
     <figcaption class="pl-8 sm:pl-0">Examples of the software I work on at Enode.</figcaption>
   </figure>
 </div>
