@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Claire-Louise Bennett – Pond (2015)"
+title: "Claire-Louise Bennett: Pond (2015)"
 date: 2024-10-18
 tags: [fiction]
 external_url: https://www.trema.website/claire-louise-bennett-pond?ref=daniel.pizza

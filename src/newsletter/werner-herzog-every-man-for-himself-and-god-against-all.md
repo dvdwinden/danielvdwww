@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Werner Herzog – Every Man for Himself and God Against All (2023)"
+title: "Werner Herzog: Every Man for Himself and God Against All (2023)"
 date: 2024-08-10
 tags: [non-fiction]
 external_url: https://www.trema.website/werner-herzog-every-man-for-himself-and-god-against-all?ref=daniel.pizza

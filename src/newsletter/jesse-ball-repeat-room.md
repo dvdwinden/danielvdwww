@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Jesse Ball – The Repeat Room (2024)"
+title: "Jesse Ball: The Repeat Room (2024)"
 date: 2025-02-28
 tags: [fiction]
 external_url: https://www.trema.website/jesse-ball-the-repeat-room?ref=daniel.pizza

@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Elisa Gabbert – Any Person Is the Only Self (2024)"
+title: "Elisa Gabbert: Any Person Is the Only Self (2024)"
 date: 2025-12-02
 tags: [non-fiction]
 external_url: https://www.trema.website/elisa-gabbert-any-person-is-the-only-self//?ref=daniel.pizza

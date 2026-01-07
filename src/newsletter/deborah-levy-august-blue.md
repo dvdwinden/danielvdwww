@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Deborah Levy – August Blue (2023)"
+title: "Deborah Levy: August Blue (2023)"
 date: 2024-01-06
 tags: [fiction]
 external_url: https://www.trema.website/deborah-levy-august-blue/?ref=daniel.pizza

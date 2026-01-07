@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Joan Didion – The Year of Magical Thinking (2005)"
+title: "Joan Didion: The Year of Magical Thinking (2005)"
 date: 2023-12-07
 tags: [non-fiction]
 external_url: https://www.trema.website/joan-didion-the-year-of-magical-thinking/?ref=daniel.pizza

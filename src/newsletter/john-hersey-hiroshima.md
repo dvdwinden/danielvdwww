@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "John Hersey – Hiroshima (1946)"
+title: "John Hersey: Hiroshima (1946)"
 date: 2023-08-31
 tags: [non-fiction]
 external_url: https://www.trema.website/john-hersey-hiroshima/?ref=daniel.pizza

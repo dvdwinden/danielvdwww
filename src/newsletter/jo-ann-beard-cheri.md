@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Jo Ann Beard – Cheri (2023)"
+title: "Jo Ann Beard: Cheri (2023)"
 date: 2024-02-14
 tags: [fiction]
 external_url: https://www.trema.website/jo-ann-beard-cheri-2023?ref=daniel.pizza

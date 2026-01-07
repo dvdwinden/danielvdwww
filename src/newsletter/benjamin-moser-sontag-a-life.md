@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Benjamin Moser – Sontag: Her Life (2019)"
+title: "Benjamin Moser: Sontag: Her Life (2019)"
 date: 2022-12-19
 tags: [non-fiction]
 external_url: https://www.trema.website/benjamin-moser-sontag-her-life/?ref=daniel.pizza

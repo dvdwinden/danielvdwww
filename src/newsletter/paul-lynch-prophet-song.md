@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Paul Lynch – Prophet Song (2023)"
+title: "Paul Lynch: Prophet Song (2023)"
 date: 2024-04-26
 tags: [fiction]
 external_url: https://www.trema.website/paul-lynch-prophet-song/?ref=daniel.pizza

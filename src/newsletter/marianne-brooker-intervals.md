@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Marianne Brooker – Intervals (2024)"
+title: "Marianne Brooker: Intervals (2024)"
 date: 2025-01-25
 tags: [non-fiction]
 external_url: https://www.trema.website/marianne-brooker-intervals/?ref=daniel.pizza

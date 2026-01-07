@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Ed Yong – An Immense World (2022)"
+title: "Ed Yong: An Immense World (2022)"
 date: 2023-03-30
 tags: [non-fiction]
 external_url: https://www.trema.website/ed-yong-an-immense-world/?ref=daniel.pizza

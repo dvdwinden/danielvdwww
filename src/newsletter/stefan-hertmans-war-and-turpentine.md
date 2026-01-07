@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Stefan Hertmans – War and Turpentine (2013)"
+title: "Stefan Hertmans: War and Turpentine (2013)"
 date: 2025-12-02
 tags: [fiction]
 external_url: https://www.trema.website/stefan-hertmans-war-and-turpentine/?ref=daniel.pizza

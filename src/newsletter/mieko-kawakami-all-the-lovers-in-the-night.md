@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Mieko Kawakami – All The Lovers In The Night (2022)"
+title: "Mieko Kawakami: All The Lovers In The Night (2022)"
 date: 2023-04-30
 tags: [fiction]
 external_url: https://www.trema.website/mieko-kawakami-all-the-lovers/?ref=daniel.pizza

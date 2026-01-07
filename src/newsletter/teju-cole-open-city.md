@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Teju Cole – Open City (2011)"
+title: "Teju Cole: Open City (2011)"
 date: 2025-11-01
 tags: [fiction]
 external_url: https://www.trema.website/teju-cole-open-city/?ref=daniel.pizza

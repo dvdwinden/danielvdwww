@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Caoilinn Hughes – The Alternatives (2024)"
+title: "Caoilinn Hughes: The Alternatives (2024)"
 date: 2025-04-30
 tags: [fiction]
 external_url: https://www.trema.website/caoilinn-hughes-the-alternatives?ref=daniel.pizza

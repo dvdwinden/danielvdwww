@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Andrey Kurkov – Grey Bees (2020)"
+title: "Andrey Kurkov: Grey Bees (2020)"
 date: 2023-01-12
 tags: [fiction]
 external_url: https://www.trema.website/andrey-kurkov-grey-bees/?ref=daniel.pizza

@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Samantha Harvey – Orbital (2023)"
+title: "Samantha Harvey: Orbital (2023)"
 date: 2024-11-25
 tags: [fiction]
 external_url: https://www.trema.website/samantha-harvey-orbital-2023/?ref=daniel.pizza

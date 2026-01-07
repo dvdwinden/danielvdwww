@@ -1,6 +1,6 @@
 ---
 layout: narrow.njk
-title: "Miranda July – The First Bad Man (2015)"
+title: "Miranda July: The First Bad Man (2015)"
 date: 2024-06-04
 tags: [fiction]
 external_url: https://www.trema.website/miranda-july-the-first-bad-man?ref=daniel.pizza
