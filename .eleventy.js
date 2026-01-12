@@ -67,7 +67,7 @@ module.exports = function (eleventyConfig) {
   };
 
   // Process an image and return metadata
-  async function processImage(srcPath, widths = [400, 800, 1200, 1800]) {
+  async function processImage(srcPath, widths = [800, 1200, 1800]) {
     // Already processed?
     if (IMAGE_CACHE.has(srcPath)) {
       return IMAGE_CACHE.get(srcPath);
@@ -100,19 +100,15 @@ module.exports = function (eleventyConfig) {
     try {
       const metadata = await Image(srcPath, {
         widths: widths,
-        formats: ["avif", "webp"],
+        formats: ["webp"],
         outputDir: outputDir,
         urlPath: `/${urlPath}/`,
         filenameFormat: function (id, src, width, format, options) {
           // Use original filename with width and format - keep format extension
           return `${originalName}-${width}.${format}`;
         },
-        sharpAvifOptions: {
-          quality: 75,
-          effort: 4
-        },
         sharpWebpOptions: {
-          quality: 75
+          quality: 70
         }
       });
 
@@ -167,8 +163,8 @@ module.exports = function (eleventyConfig) {
       const originalName = path.basename(parsedPath.name);
 
       // Check if any of the output files exist and are newer than source
-      const formats = ["avif", "webp"];
-      const widths = [400, 800, 1200, 1800];
+      const formats = ["webp"];
+      const widths = [800, 1200, 1800];
 
       for (const format of formats) {
         for (const width of widths) {
