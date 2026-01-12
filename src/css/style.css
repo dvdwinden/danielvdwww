@@ -747,12 +747,12 @@ ul.links li p span a {
 
 span.testimonial a {
     font-weight: 500;
+    margin-left: 0.35rem;
 }
 
 span.testimonial picture {
     display: inline;
     margin-top: 0;
-    margin-right: 0.25rem;
 }
 
 span.testimonial picture img {
