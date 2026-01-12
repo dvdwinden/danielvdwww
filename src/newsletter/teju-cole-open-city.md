@@ -5,7 +5,7 @@ date: 2025-11-01
 tags: [fiction]
 external_url: https://www.trema.website/teju-cole-open-city/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/teju-cole-open-city.png
+  src: /assets/newsletter/teju-cole-open-city.webp
   alt: "Teju Cole – Open City (2011)"
   title: "Teju Cole – Open City (2011)"
 ---

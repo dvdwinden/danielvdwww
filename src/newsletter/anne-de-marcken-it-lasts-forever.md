@@ -5,7 +5,7 @@ date: 2025-06-30
 tags: [fiction]
 external_url: https://www.trema.website/anne-de-marcken-it-lasts-forever-and-then-its-over-2024/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/anne-de-marcken-it-lasts-forever.png
+  src: /assets/newsletter/anne-de-marcken-it-lasts-forever.webp
   alt: "Anne de Marcken – It Lasts Forever and Then It’s Over (2024)"
   title: "Anne de Marcken – It Lasts Forever and Then It’s Over (2024)"
 ---

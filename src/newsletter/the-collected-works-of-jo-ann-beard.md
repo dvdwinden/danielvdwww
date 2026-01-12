@@ -5,7 +5,7 @@ date: 2025-05-30
 tags: [non-fiction]
 external_url: https://www.trema.website/the-collected-works-of-jo-ann-beard-2023?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-collected-works.png
+  src: /assets/newsletter/jo-ann-beard-collected-works.webp
   alt: "The Collected Works of Jo-Ann Beard"
   title: "The Collected Works of Jo-Ann Beard"
 ---

@@ -5,7 +5,7 @@ date: 2025-09-08
 tags: [non-fiction]
 external_url: https://www.trema.website/james-salter-burning-the-days/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/james-salter-burning-the-days.png
+  src: /assets/newsletter/james-salter-burning-the-days.webp
   alt: "James Salter – Burning The Days (1997)"
   title: "James Salter – Burning The Days (1997)"
 ---

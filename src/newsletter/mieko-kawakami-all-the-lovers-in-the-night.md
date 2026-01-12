@@ -5,7 +5,7 @@ date: 2023-04-30
 tags: [fiction]
 external_url: https://www.trema.website/mieko-kawakami-all-the-lovers/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/mieko-kawakami-all-the-lovers-in-the-night.png
+  src: /assets/newsletter/mieko-kawakami-all-the-lovers-in-the-night.webp
   alt: "Mieko Kawakami – All The Lovers In The Night (2022)"
   title: "Mieko Kawakami – All The Lovers In The Night (2022)"
 ---

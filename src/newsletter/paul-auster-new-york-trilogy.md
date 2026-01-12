@@ -5,7 +5,7 @@ date: 2024-07-15
 tags: [fiction]
 external_url: https://www.trema.website/paul-auster-the-new-york-trilogy-1987?ref=daniel.pizza
 image:
-  src: /assets/newsletter/paul-auster-new-york-trilogy.png
+  src: /assets/newsletter/paul-auster-new-york-trilogy.webp
   alt: "Paul Auster – The New York Trilogy (1987)"
   title: "Paul Auster – The New York Trilogy (1987)"
 ---

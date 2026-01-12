@@ -5,7 +5,7 @@ date: 2024-02-14
 tags: [fiction]
 external_url: https://www.trema.website/jo-ann-beard-cheri-2023?ref=daniel.pizza
 image:
-  src: /assets/newsletter/jo-ann-beard-cheri-open.png
+  src: /assets/newsletter/jo-ann-beard-cheri-open.webp
   alt: "Jo Ann Beard – Cheri (2023)"
   title: "Jo Ann Beard – Cheri (2023)"
 ---

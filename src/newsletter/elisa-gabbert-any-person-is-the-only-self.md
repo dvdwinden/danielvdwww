@@ -5,7 +5,7 @@ date: 2025-12-02
 tags: [non-fiction]
 external_url: https://www.trema.website/elisa-gabbert-any-person-is-the-only-self//?ref=daniel.pizza
 image:
-  src: /assets/newsletter/elisa-gabbert-any-person-is-the-only-self.png
+  src: /assets/newsletter/elisa-gabbert-any-person-is-the-only-self.webp
   alt: "Elisa Gabbert – Any Person Is the Only Self (2024)"
   title: "Elisa Gabbert – Any Person Is the Only Self (2024)"
 ---

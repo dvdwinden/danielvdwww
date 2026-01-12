@@ -5,7 +5,7 @@ date: 2024-03-22
 tags: [non-fiction]
 external_url: https://www.trema.website/nan-shepherd-the-living-mountain?ref=daniel.pizza
 image:
-  src: /assets/newsletter/nan-shepherd-living-mountain.png
+  src: /assets/newsletter/nan-shepherd-living-mountain.webp
   alt: "Nan Shepherd – The Living Mountain (1977)"
   title: "Nan Shepherd – The Living Mountain (1977)"
 ---

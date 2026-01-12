@@ -5,7 +5,7 @@ date: 2025-12-02
 tags: [fiction]
 external_url: https://www.trema.website/stefan-hertmans-war-and-turpentine/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/stefan-hertmans-war-and-turpentine.png
+  src: /assets/newsletter/stefan-hertmans-war-and-turpentine.webp
   alt: "Stefan Hertmans – War and Turpentine (2013)"
   title: "Stefan Hertmans – War and Turpentine (2013)"
 ---

@@ -5,7 +5,7 @@ date: 2024-01-06
 tags: [fiction]
 external_url: https://www.trema.website/deborah-levy-august-blue/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/deborah-levy-august-blue.png
+  src: /assets/newsletter/deborah-levy-august-blue.webp
   alt: "Deborah Levy – August Blue (2023)"
   title: "Deborah Levy – August Blue (2023)"
 ---

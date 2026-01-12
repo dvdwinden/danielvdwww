@@ -5,7 +5,7 @@ date: 2023-02-28
 tags: [non-fiction]
 external_url: https://www.trema.website/claire-wilcox-patch-work/?ref=daniel.pizza
 image:
-  src: /assets/newsletter/claire-wilcox-patch-work.png
+  src: /assets/newsletter/claire-wilcox-patch-work.webp
   alt: "Claire Wilcox – Patch Work: A Life Amongst Clothes (2020)"
   title: "Claire Wilcox – Patch Work: A Life Amongst Clothes (2020)"
 ---

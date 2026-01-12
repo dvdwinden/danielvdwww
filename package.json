@@ -9,6 +9,7 @@
     "start": "npm run dev",
     "dev": "concurrently \"node --max-old-space-size=4096 ./node_modules/.bin/eleventy --serve --ignore-initial\" \"npx tailwindcss -i ./src/css/style.css -o ./_site/css/style.css --watch\"",
     "dev:build-first": "npm run build:css && concurrently \"node --max-old-space-size=4096 ./node_modules/.bin/eleventy --serve --ignore-initial\" \"npx tailwindcss -i ./src/css/style.css -o ./_site/css/style.css --watch\"",
+    "check:assets": "find src/assets -type f \\( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.mp4' -o -name '*.mov' \\) -size +5M -exec ls -lh {} \\; | awk '{print $9, $5}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
