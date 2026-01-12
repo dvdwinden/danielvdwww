@@ -5,11 +5,11 @@
           {{ "Daniël van der Winden" }}
       </a>
   </div>
-  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center">
-      <span id="dark-icon">
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:scale-95 transition-all">
+      <span id="dark-icon" aria-hidden="true">
           {% include "icons/sunset.svg" %}
       </span>
-      <span id="light-icon">
+      <span id="light-icon" aria-hidden="true">
           {% include "icons/sunrise.svg" %}
       </span>
   </button>
@@ -23,11 +23,11 @@
           <h1>{{ "Daniël van der Winden" }}</h1>
       </a>
   </div>
-  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center">
-      <span id="dark-icon">
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-3 active:scale-95 transition-all">
+      <span id="dark-icon" aria-hidden="true">
           {% include "icons/sunset.svg" %}
       </span>
-      <span id="light-icon">
+      <span id="light-icon" aria-hidden="true">
           {% include "icons/sunrise.svg" %}
       </span>
   </button>
