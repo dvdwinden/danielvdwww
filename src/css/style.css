@@ -101,40 +101,14 @@ nav a:focus-visible {
     font-display: swap;
 }
 
-/* Font declarations for Degular */
+/* Font declaration for Degular Variable */
 @font-face {
     font-family: 'Degular';
-    src: url('../assets/fonts/Degular-Regular.woff2') format('woff2'),
-        url('../assets/fonts/Degular-Regular.woff') format('woff');
-    font-weight: 400;
+    src: url('../assets/fonts/DegularVariable.woff2') format('woff2-variations'),
+        url('../assets/fonts/DegularVariable.woff2') format('woff2'),
+        url('../assets/fonts/DegularVariable.ttf') format('truetype');
+    font-weight: 100 900;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Degular';
-    src: url('../assets/fonts/Degular-Italic.woff2') format('woff2'),
-        url('../assets/fonts/Degular-Italic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Degular';
-    src: url('../assets/fonts/Degular-Medium.woff2') format('woff2'),
-        url('../assets/fonts/Degular-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Degular';
-    src: url('../assets/fonts/Degular-MediumItalic.woff2') format('woff2'),
-        url('../assets/fonts/Degular-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
     font-display: swap;
 }
 
