@@ -766,6 +766,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon.png");
 
+  // Copy hero images referenced in CSS
+  eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square.webp");
+  eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square@2x.webp");
+  eleventyConfig.addPassthroughCopy("src/assets/work/studio-square.webp");
+  eleventyConfig.addPassthroughCopy("src/assets/work/studio-square@2x.webp");
+
   // Don't passthrough asset directories since they're handled by the image optimization
   // Only passthrough files that should not be optimized
   eleventyConfig.addPassthroughCopy("src/assets/**/*.mp4");
