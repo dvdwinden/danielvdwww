@@ -179,7 +179,7 @@ While at Ghost I designed an upgraded publishing workflow, turning a dead end in
 
 <span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">
 <picture>
-  <img src="/assets/work/sodo.jpg" alt="Sodo" /> <a href="https://sodo.is/?ref=daniel.pizza" title="Sodbileg’s website" rel="external" target="_blank">Sodbileg Gansukh</a>, Product Designer at Ghost 
+  {% retinaImage "src/assets/work/sodo.jpg", "Sodo", 400 %} <a href="https://sodo.is/?ref=daniel.pizza" title="Sodbileg's website" rel="external" target="_blank">Sodbileg Gansukh</a>, Product Designer at Ghost
 </picture>
 </span>
 
@@ -263,7 +263,7 @@ I crafted UI based on Pexip’s existing brand guidelines, oversaw the product d
 
 <span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">
   <picture>
-    <img src="/assets/work/svenn-petter-332.webp" alt="Sven-Petter" />
+    {% retinaImage "src/assets/work/svenn-petter.webp", "Sven-Petter", 400 %}
     <a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip
   </picture>
 </span>
@@ -277,8 +277,8 @@ I’ve hired, managed and mentored teams of up to twelve Product Designers with 
 
 <span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial">
   <picture>
-    <img src="/assets/work/marek.webp" alt="Marek" />
-    <a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek’s website" rel="external" target="_blank">Marek Minor</a>, Product Designer
+    {% retinaImage "src/assets/work/marek.webp", "Marek", 400 %}
+    <a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek's website" rel="external" target="_blank">Marek Minor</a>, Product Designer
   </picture>
 </span>
 
