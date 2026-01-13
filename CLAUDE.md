@@ -37,6 +37,8 @@ Development server runs on `http://localhost:8080` with live reload. The `dev` c
 The codebase features a sophisticated image optimization system in `.eleventy.js`:
 
 - **Automatic Processing**: All images in `src/assets/` are automatically processed during build
+- **WebP Conversion**: Converts all images to WebP format at widths [800, 1200, 1800]
+- **Original Files**: Original images remain in `src/` but are NOT copied to `_site/` - only optimized WebP versions are deployed
 - **Caching**: Two-level cache system (IMAGE_CACHE and FILE_PATH_CACHE) prevents reprocessing
 - **Incremental Builds**: In CI/CD, only changed images are processed (determined via Git diff)
 - **Multiple Shortcodes**:
@@ -45,7 +47,7 @@ The codebase features a sophisticated image optimization system in `.eleventy.js
 - **Transform Hook**: `optimizeImages` transform automatically processes `<img>` tags in HTML
 - **Favicon Exclusion**: Files containing "favicon" or "apple-touch-icon" bypass optimization
 
-The system converts images to WebP format at multiple widths and generates `<picture>` elements with proper srcsets.
+The system converts images to WebP format at multiple widths and generates `<picture>` elements with proper srcsets. This optimization reduces deployment size from ~341MB to ~128MB (62% reduction).
 
 ### Content Structure
 
