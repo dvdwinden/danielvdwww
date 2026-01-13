@@ -774,16 +774,6 @@ module.exports = function (eleventyConfig) {
   // Copy fonts directory for custom fonts
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
 
-  // Make sure original images are also available
-  eleventyConfig.addPassthroughCopy({
-    "src/assets/links": "assets/links",
-    "src/assets/journal": "assets/journal",
-    "src/assets/newsletter": "assets/newsletter",
-    "src/assets/work": "assets/work",
-    "src/assets/now": "assets/now",
-    "src/assets/library": "assets/library"
-  });
-
   // Copy _redirects file for Netlify redirects
   eleventyConfig.addPassthroughCopy("src/_redirects");
 
