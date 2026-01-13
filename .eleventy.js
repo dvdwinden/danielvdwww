@@ -276,8 +276,8 @@ module.exports = function (eleventyConfig) {
 
       // Load existing processed images into IMAGE_CACHE
       try {
-        const formats = ["avif", "webp", "jpeg"];
-        const widths = [300, 600, 900, 1200, 1800, 2400];
+        const formats = ["webp"];
+        const widths = [800, 1200, 1800];
         const metadata = {};
 
         for (const format of formats) {
