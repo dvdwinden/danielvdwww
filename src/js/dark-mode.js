@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('dark-mode-toggle');
   const html = document.documentElement;
+  const systemDarkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
   // Function to update theme color meta tag and html background color
   function updateThemeColor() {
@@ -50,20 +51,54 @@ document.addEventListener('DOMContentLoaded', function () {
     html.style.backgroundColor = backgroundColor;
   }
 
-  // On load, set mode based on current preference
-  if (localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    html.classList.add('dark');
-  } else {
-    html.classList.remove('dark');
+  // Apply the appropriate theme
+  function applyTheme() {
+    const storedTheme = localStorage.getItem('theme');
+
+    if (storedTheme === 'dark') {
+      html.classList.add('dark');
+    } else if (storedTheme === 'light') {
+      html.classList.remove('dark');
+    } else {
+      // No stored preference - follow system
+      if (systemDarkQuery.matches) {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+    }
+    updateThemeColor();
   }
 
-  // Update theme color on load
-  updateThemeColor();
+  // Apply theme on load
+  applyTheme();
 
+  // Listen for system preference changes (only applies when no manual override)
+  systemDarkQuery.addEventListener('change', () => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme();
+    }
+  });
+
+  // Toggle cycles: system -> light -> dark -> system
   toggle.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
-    updateThemeColor();
+    const storedTheme = localStorage.getItem('theme');
+    const isDark = html.classList.contains('dark');
+
+    if (!storedTheme) {
+      // Currently following system, switch to opposite of current state
+      if (isDark) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+    } else if (storedTheme === 'light') {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      // Was dark, go back to system
+      localStorage.removeItem('theme');
+    }
+
+    applyTheme();
   });
 });
