@@ -1,8 +1,7 @@
-{% if page.url != "/" %}
 <header class="fixed top-0 left-0 z-50 p-6 flex justify-between items-center w-full">
   <div class="flex items-center space-x-4">
       <a href="/" class="text-lg font-sans font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors flex items-center">
-          {{ "Daniël van der Winden" }}
+          {% if page.url == "/" %}<h1>{% endif %}Daniël van der Winden{% if page.url == "/" %}</h1>{% endif %}
       </a>
   </div>
   <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:scale-95 transition-all">
@@ -14,22 +13,3 @@
       </span>
   </button>
 </header>
-{% endif %}
-
-{% if page.url == "/" %}
-<header class="fixed top-0 left-0 z-50 p-6 flex justify-between items-center w-full">
-  <div class="flex items-center space-x-4">
-      <a href="/" class="text-lg font-sans font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors flex items-center">
-          <h1>{{ "Daniël van der Winden" }}</h1>
-      </a>
-  </div>
-  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 focus-visible:ring-offset-3 active:scale-95 transition-all">
-      <span id="dark-icon" aria-hidden="true">
-          {% include "icons/sunset.svg" %}
-      </span>
-      <span id="light-icon" aria-hidden="true">
-          {% include "icons/sunrise.svg" %}
-      </span>
-  </button>
-</header>
-{% endif %}
