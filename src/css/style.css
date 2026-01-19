@@ -112,6 +112,14 @@ nav a:focus-visible {
     font-display: swap;
 }
 
+/* Degular italic via font-variation-settings */
+.font-sans i,
+.font-sans em,
+.font-sans .italic {
+    font-style: normal;
+    font-variation-settings: "ital" 1;
+}
+
 /* ==========================================================================
    BASE STYLES & RESETS
    ========================================================================== */
