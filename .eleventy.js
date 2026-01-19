@@ -7,11 +7,73 @@ const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { glob } = require("glob");
 
+// ============================================================================
+// SHARED CONSTANTS
+// ============================================================================
+
+const SUPPORTED_IMAGE_EXTENSIONS = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
+const OUTPUT_FORMAT = 'webp';
+const DEFAULT_WIDTHS = [800, 1200, 1800];
+
+// ============================================================================
+// CACHES
+// ============================================================================
+
 // Cache of processed images
 const IMAGE_CACHE = new Map();
 
 // Cache to map between source paths and actual file paths with correct extensions
 const FILE_PATH_CACHE = new Map();
+
+// ============================================================================
+// HELPER FUNCTIONS
+// ============================================================================
+
+// Check if a file is a favicon (should skip image optimization)
+function isFaviconFile(filePath) {
+  const fileName = path.basename(filePath).toLowerCase();
+  return fileName.includes('favicon') || fileName.includes('apple-touch-icon');
+}
+
+// Return a simple img tag for files that shouldn't be optimized
+function getFallbackImageTag(src, alt) {
+  return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+}
+
+// Try to find a file, returns the path if it exists or null
+async function tryFile(filePath) {
+  try {
+    await fs.promises.access(filePath);
+    return filePath;
+  } catch (e) {
+    return null;
+  }
+}
+
+// Find the actual file path by trying different extensions
+async function findFileWithExtension(basePath) {
+  // First try the path as-is
+  if (await tryFile(basePath)) {
+    return basePath;
+  }
+  // Try replacing extension with each supported extension
+  const pathWithoutExt = basePath.replace(/\.\w+$/, '');
+  for (const ext of SUPPORTED_IMAGE_EXTENSIONS) {
+    const candidatePath = pathWithoutExt + ext;
+    if (await tryFile(candidatePath)) {
+      return candidatePath;
+    }
+  }
+  return null;
+}
+
+// Clean and normalize a source path for processing
+function normalizeSrcPath(src) {
+  const cleanSrc = src.startsWith('/') ? src.substring(1) : src;
+  const srcPath = cleanSrc.startsWith('src/') ? cleanSrc : path.join('src', cleanSrc);
+  const relativePath = srcPath.replace(/^src\//, '');
+  return { cleanSrc, srcPath, relativePath };
+}
 
 module.exports = function (eleventyConfig) {
   // Add environment variables to global data
@@ -55,19 +117,8 @@ module.exports = function (eleventyConfig) {
       .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
   });
 
-  // Image optimization function
-  // Utility function to try finding a file
-  const tryFile = async (filePath) => {
-    try {
-      await fs.promises.access(filePath);
-      return filePath;
-    } catch (e) {
-      return null;
-    }
-  };
-
   // Process an image and return metadata
-  async function processImage(srcPath, widths = [800, 1200, 1800]) {
+  async function processImage(srcPath, widths = DEFAULT_WIDTHS) {
     // Already processed?
     if (IMAGE_CACHE.has(srcPath)) {
       return IMAGE_CACHE.get(srcPath);
@@ -163,18 +214,13 @@ module.exports = function (eleventyConfig) {
       const originalName = path.basename(parsedPath.name);
 
       // Check if any of the output files exist and are newer than source
-      const formats = ["webp"];
-      const widths = [800, 1200, 1800];
-
-      for (const format of formats) {
-        for (const width of widths) {
-          const outputFile = path.join(outputDir, `${originalName}-${width}.${format}`);
-          if (fs.existsSync(outputFile)) {
-            const outputStats = fs.statSync(outputFile);
-            // If output is newer than source, no need to process
-            if (outputStats.mtime > srcStats.mtime) {
-              return false;
-            }
+      for (const width of DEFAULT_WIDTHS) {
+        const outputFile = path.join(outputDir, `${originalName}-${width}.${OUTPUT_FORMAT}`);
+        if (fs.existsSync(outputFile)) {
+          const outputStats = fs.statSync(outputFile);
+          // If output is newer than source, no need to process
+          if (outputStats.mtime > srcStats.mtime) {
+            return false;
           }
         }
       }
@@ -207,8 +253,7 @@ module.exports = function (eleventyConfig) {
     }
 
     // Find all image files
-    const imageExtensions = [".avif", ".webp", ".jpg", ".jpeg", ".png", ".JPG", ".PNG"];
-    const imagePatterns = imageExtensions.map(ext => `src/assets/**/*${ext}`);
+    const imagePatterns = SUPPORTED_IMAGE_EXTENSIONS.map(ext => `src/assets/**/*${ext}`);
     const imageFiles = [];
 
     for (const pattern of imagePatterns) {
@@ -217,15 +262,8 @@ module.exports = function (eleventyConfig) {
     }
 
     // Filter out favicon files - they should not be processed by the image optimization system
-    const faviconFiles = imageFiles.filter(file => {
-      const fileName = path.basename(file).toLowerCase();
-      return fileName.includes('favicon') || fileName.includes('apple-touch-icon');
-    });
-
-    const filesToProcess = imageFiles.filter(file => {
-      const fileName = path.basename(file).toLowerCase();
-      return !fileName.includes('favicon') && !fileName.includes('apple-touch-icon');
-    });
+    const faviconFiles = imageFiles.filter(isFaviconFile);
+    const filesToProcess = imageFiles.filter(file => !isFaviconFile(file));
 
     // Filter to only process images that have changed or don't have output
     const filesToActuallyProcess = filesToProcess.filter(file => {
@@ -276,28 +314,23 @@ module.exports = function (eleventyConfig) {
 
       // Load existing processed images into IMAGE_CACHE
       try {
-        const formats = ["webp"];
-        const widths = [800, 1200, 1800];
-        const metadata = {};
+        const metadata = { [OUTPUT_FORMAT]: [] };
 
-        for (const format of formats) {
-          metadata[format] = [];
-          for (const width of widths) {
-            const outputFile = path.join(outputDir, `${originalName}-${width}.${format}`);
-            if (fs.existsSync(outputFile)) {
-              const stats = fs.statSync(outputFile);
-              metadata[format].push({
-                format: format,
-                width: width,
-                height: Math.round(width * 0.75), // Approximate aspect ratio
-                filename: `${originalName}-${width}.${format}`,
-                outputPath: outputFile,
-                url: `/${urlPath}/${originalName}-${width}.${format}`,
-                sourceType: `image/${format === 'jpeg' ? 'jpeg' : format}`,
-                srcset: `/${urlPath}/${originalName}-${width}.${format} ${width}w`,
-                size: stats.size
-              });
-            }
+        for (const width of DEFAULT_WIDTHS) {
+          const outputFile = path.join(outputDir, `${originalName}-${width}.${OUTPUT_FORMAT}`);
+          if (fs.existsSync(outputFile)) {
+            const stats = fs.statSync(outputFile);
+            metadata[OUTPUT_FORMAT].push({
+              format: OUTPUT_FORMAT,
+              width: width,
+              height: Math.round(width * 0.75), // Approximate aspect ratio
+              filename: `${originalName}-${width}.${OUTPUT_FORMAT}`,
+              outputPath: outputFile,
+              url: `/${urlPath}/${originalName}-${width}.${OUTPUT_FORMAT}`,
+              sourceType: `image/${OUTPUT_FORMAT}`,
+              srcset: `/${urlPath}/${originalName}-${width}.${OUTPUT_FORMAT} ${width}w`,
+              size: stats.size
+            });
           }
         }
 
@@ -329,25 +362,17 @@ module.exports = function (eleventyConfig) {
   });
 
   async function imageShortcode(src, alt, sizes = "(min-width: 1024px) 100vw, 50vw") {
-    // Skip favicon files - they should not be processed by the image optimization system
-    const fileName = path.basename(src).toLowerCase();
-    if (fileName.includes('favicon') || fileName.includes('apple-touch-icon')) {
-      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+    // Skip favicon files
+    if (isFaviconFile(src)) {
+      return getFallbackImageTag(src, alt);
     }
 
-    // Extract the directory structure from the source path to maintain it in output
-    // Remove leading slash if present
-    const cleanSrc = src.startsWith('/') ? src.substring(1) : src;
-    // Create proper path with src prefix if needed
-    const srcPath = cleanSrc.startsWith('src/') ? cleanSrc : path.join('src', cleanSrc);
-    // Get relative path for cache lookup
-    const relativePath = srcPath.replace(/^src\//, '');
+    // Normalize path
+    let { srcPath, relativePath } = normalizeSrcPath(src);
 
     // Check if we already have this path in the cache
     if (FILE_PATH_CACHE.has(relativePath)) {
       const pathInfo = FILE_PATH_CACHE.get(relativePath);
-
-      // If the source path is cached and already processed, use it directly
       if (pathInfo.sourcePath && IMAGE_CACHE.has(pathInfo.sourcePath)) {
         return Image.generateHTML(IMAGE_CACHE.get(pathInfo.sourcePath), {
           alt,
@@ -358,226 +383,143 @@ module.exports = function (eleventyConfig) {
       }
     }
 
-    // Handle the case where src includes size and format suffixes
+    // Handle the case where src includes size and format suffixes (e.g., image-800.webp)
     const sizeFormatRegex = /-(\d+)\.(jpeg|jpg|png|webp|avif)$/i;
     const sizeFormatMatch = src.match(sizeFormatRegex);
-
     if (sizeFormatMatch) {
-      // This is a reference to a sized/formatted version, extract the base path
       const basePath = src.replace(sizeFormatRegex, '');
       const baseRelativePath = basePath.startsWith('/') ? basePath.substring(1) : basePath;
-
-      // Try to find the original file with various extensions
-      const potentialExtensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
-      for (const ext of potentialExtensions) {
-        const potentialPath = path.join('src', baseRelativePath + ext);
-        if (await tryFile(potentialPath)) {
-          // Process with this path instead
-          srcPath = potentialPath;
-          break;
-        }
+      const foundPath = await findFileWithExtension(path.join('src', baseRelativePath));
+      if (foundPath) {
+        srcPath = foundPath;
       }
     }
-
-    // List of possible extensions to try
-    const extensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
 
     // Try to find the actual file with correct extension
-    let actualFilePath = srcPath;
-    if (!await tryFile(actualFilePath)) {
-      // Try replacing extension
-      const basePath = srcPath.replace(/\.\w+$/, '');
-      for (const ext of extensions) {
-        const newPath = basePath + ext;
-        if (await tryFile(newPath)) {
-          actualFilePath = newPath;
-          break;
-        }
-      }
-    }
-
-    // If still can't find the file, log an error and return placeholder
-    if (!await tryFile(actualFilePath)) {
+    const actualFilePath = await findFileWithExtension(srcPath);
+    if (!actualFilePath) {
       console.error(`Could not find image file: ${srcPath} (tried multiple extensions)`);
-      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+      return getFallbackImageTag(src, alt);
     }
 
     // Check if image has already been processed
-    let metadata;
-    if (IMAGE_CACHE.has(actualFilePath)) {
-      metadata = IMAGE_CACHE.get(actualFilePath);
-    } else {
-      // Process the image
-      metadata = await processImage(actualFilePath);
-    }
+    const metadata = IMAGE_CACHE.has(actualFilePath)
+      ? IMAGE_CACHE.get(actualFilePath)
+      : await processImage(actualFilePath);
+
     if (!metadata) {
       console.error(`Failed to process image: ${actualFilePath}`);
-      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+      return getFallbackImageTag(src, alt);
     }
 
-    let imageAttributes = {
+    return Image.generateHTML(metadata, {
       alt,
       sizes,
       loading: "lazy",
       decoding: "async",
-    };
-
-    return Image.generateHTML(metadata, imageAttributes);
+    });
   }
 
   // Transform to automatically optimize images in content
   eleventyConfig.addTransform("optimizeImages", async function (content, outputPath) {
-    if (outputPath && outputPath.endsWith(".html")) {
-      // Find all img tags with src pointing to assets
-      // This regex matches both /assets/ and src/assets/ patterns, with any file extension
-      const imgRegex = /<img\s+[^>]*src=["'](?:\/|src\/)?([^"']*\/assets\/[^"']*)["'][^>]*>/gi;
-      let match;
-      const processed = new Set(); // Keep track of already processed tags to avoid duplicates
+    if (!outputPath || !outputPath.endsWith(".html")) {
+      return content;
+    }
 
-      while ((match = imgRegex.exec(content)) !== null) {
-        const imgTag = match[0];
-        const matchStart = match.index;
+    // Find all img tags with src pointing to assets
+    const imgRegex = /<img\s+[^>]*src=["'](?:\/|src\/)?([^"']*\/assets\/[^"']*)["'][^>]*>/gi;
+    let match;
+    const processed = new Set();
 
-        // Skip if we've already processed this exact tag
-        if (processed.has(imgTag)) {
-          continue;
-        }
-        processed.add(imgTag);
+    while ((match = imgRegex.exec(content)) !== null) {
+      const imgTag = match[0];
+      const matchStart = match.index;
 
-        // Skip if this img tag is inside a picture element (already processed by shortcode)
-        const beforeImg = content.substring(0, matchStart);
-        const afterImg = content.substring(matchStart + imgTag.length);
-        const lastPictureOpen = beforeImg.lastIndexOf('<picture');
-        const lastPictureClose = beforeImg.lastIndexOf('</picture>');
+      // Skip if we've already processed this exact tag
+      if (processed.has(imgTag)) continue;
+      processed.add(imgTag);
 
-        // If there's an unclosed picture tag before this img, skip it
-        if (lastPictureOpen > lastPictureClose && lastPictureOpen !== -1) {
-          continue;
-        }
+      // Skip if inside a picture element (already processed by shortcode)
+      const beforeImg = content.substring(0, matchStart);
+      const lastPictureOpen = beforeImg.lastIndexOf('<picture');
+      const lastPictureClose = beforeImg.lastIndexOf('</picture>');
+      if (lastPictureOpen > lastPictureClose && lastPictureOpen !== -1) continue;
 
-        const src = match[1];
-        const altMatch = imgTag.match(/alt=["']([^"']*)["']/);
-        const alt = altMatch ? altMatch[1] : "";
-        const titleMatch = imgTag.match(/title=["']([^"']*)["']/);
-        const title = titleMatch ? titleMatch[1] : "";
+      const src = match[1];
+      const altMatch = imgTag.match(/alt=["']([^"']*)["']/);
+      const alt = altMatch ? altMatch[1] : "";
 
-        // Skip favicon files - they should not be processed by the image optimization system
-        const fileName = path.basename(src).toLowerCase();
-        if (fileName.includes('favicon') || fileName.includes('apple-touch-icon')) {
-          continue;
-        }
+      // Skip favicon files
+      if (isFaviconFile(src)) continue;
 
-        try {
-          // Clean source path and create relative path for cache lookup
-          const cleanSrc = src.startsWith('/') ? src.substring(1) : src;
-          const srcPath = cleanSrc.startsWith('src/') ? cleanSrc : path.join('src', cleanSrc);
-          const relativePath = srcPath.replace(/^src\//, '');
+      try {
+        const { srcPath, relativePath } = normalizeSrcPath(src);
 
-          // First check if we have this path in our file path cache
-          if (FILE_PATH_CACHE.has(relativePath)) {
-            const pathInfo = FILE_PATH_CACHE.get(relativePath);
-
-            // Check if the source path is in the image cache
-            if (pathInfo.sourcePath && IMAGE_CACHE.has(pathInfo.sourcePath)) {
-              const metadata = IMAGE_CACHE.get(pathInfo.sourcePath);
-              const imageAttributes = {
-                alt,
-                sizes: "(min-width: 1024px) 100vw, 50vw",
-                loading: "lazy",
-                decoding: "async",
-              };
-              const optimizedImg = Image.generateHTML(metadata, imageAttributes);
-
-              // Replace all occurrences of this exact img tag
-              const escapedImgTag = imgTag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-              const replaceRegex = new RegExp(escapedImgTag, 'g');
-              content = content.replace(replaceRegex, optimizedImg);
-              continue;
-            }
-          }
-
-          // Handle the case where the src directly includes size and format suffixes
-          const sizeFormatRegex = /-(\d+)\.(jpeg|jpg|png|webp|avif)$/i;
-          const sizeFormatMatch = src.match(sizeFormatRegex);
-
-          if (sizeFormatMatch) {
-            // This is a reference to a sized/formatted version, extract the base path
-            const size = sizeFormatMatch[1];
-            const format = sizeFormatMatch[2];
-            const basePath = src.replace(sizeFormatRegex, '');
-
-            // Try to find the base file in various formats
-            const baseRelativePath = basePath.startsWith('/') ? basePath.substring(1) : basePath;
-            const potentialPaths = [
-              path.join('src', baseRelativePath + '.avif'),
-              path.join('src', baseRelativePath + '.webp'),
-              path.join('src', baseRelativePath + '.jpg'),
-              path.join('src', baseRelativePath + '.jpeg'),
-              path.join('src', baseRelativePath + '.png'),
-              path.join('src', baseRelativePath + '.JPG'),
-              path.join('src', baseRelativePath + '.PNG')
-            ];
-
-            let foundPath = null;
-            for (const p of potentialPaths) {
-              if (await tryFile(p)) {
-                foundPath = p;
-                break;
-              }
-            }
-
-            if (foundPath) {
-              // Process and use this image
-              const optimizedImg = await imageShortcode(foundPath, alt);
-
-              // Replace all occurrences of this exact img tag
-              const escapedImgTag = imgTag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-              const replaceRegex = new RegExp(escapedImgTag, 'g');
-              content = content.replace(replaceRegex, optimizedImg);
-              continue;
-            }
-          }
-
-          // If direct cache lookup failed, try to find the file by trying different extensions
-          let actualFilePath = srcPath;
-
-          // Try to find file with correct extension if needed
-          if (!await tryFile(actualFilePath)) {
-            const extensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
-            const basePath = srcPath.replace(/\.\w+$/, '');
-            for (const ext of extensions) {
-              const newPath = basePath + ext;
-              if (await tryFile(newPath)) {
-                actualFilePath = newPath;
-                break;
-              }
-            }
-          }
-
-          // If we found the actual file path, process it
-          if (actualFilePath && await tryFile(actualFilePath)) {
-            // Process the image using the imageShortcode which will cache it
-            const optimizedImg = await imageShortcode(actualFilePath, alt);
-
-            // Replace all occurrences of this exact img tag
-            const escapedImgTag = imgTag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const replaceRegex = new RegExp(escapedImgTag, 'g');
-            content = content.replace(replaceRegex, optimizedImg);
-          } else {
-            // If we still can't find the file, log a warning and use the original tag
-            console.warn(`Could not find image file for transform: ${src}`);
-
-            // Just keep the original tag
+        // Check file path cache first
+        if (FILE_PATH_CACHE.has(relativePath)) {
+          const pathInfo = FILE_PATH_CACHE.get(relativePath);
+          if (pathInfo.sourcePath && IMAGE_CACHE.has(pathInfo.sourcePath)) {
+            const optimizedImg = Image.generateHTML(IMAGE_CACHE.get(pathInfo.sourcePath), {
+              alt,
+              sizes: "(min-width: 1024px) 100vw, 50vw",
+              loading: "lazy",
+              decoding: "async",
+            });
+            content = replaceImgTag(content, imgTag, optimizedImg);
             continue;
           }
-        } catch (err) {
-          console.warn(`Failed to optimize image: ${src}`, err.message);
-          console.error(err);
         }
+
+        // Handle size/format suffixed paths (e.g., image-800.webp)
+        const sizeFormatRegex = /-(\d+)\.(jpeg|jpg|png|webp|avif)$/i;
+        const sizeFormatMatch = src.match(sizeFormatRegex);
+        if (sizeFormatMatch) {
+          const basePath = src.replace(sizeFormatRegex, '');
+          const baseRelativePath = basePath.startsWith('/') ? basePath.substring(1) : basePath;
+          const foundPath = await findFileWithExtension(path.join('src', baseRelativePath));
+          if (foundPath) {
+            const optimizedImg = await imageShortcode(foundPath, alt);
+            content = replaceImgTag(content, imgTag, optimizedImg);
+            continue;
+          }
+        }
+
+        // Try to find the file with correct extension
+        const actualFilePath = await findFileWithExtension(srcPath);
+        if (actualFilePath) {
+          const optimizedImg = await imageShortcode(actualFilePath, alt);
+          content = replaceImgTag(content, imgTag, optimizedImg);
+        } else {
+          console.warn(`Could not find image file for transform: ${src}`);
+        }
+      } catch (err) {
+        console.warn(`Failed to optimize image: ${src}`, err.message);
       }
     }
     return content;
   });
+
+  // Helper to replace an img tag in content
+  function replaceImgTag(content, imgTag, replacement) {
+    const escapedImgTag = imgTag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return content.replace(new RegExp(escapedImgTag, 'g'), replacement);
+  }
+
+  // Filter metadata to only include specific widths (for retina images)
+  function filterMetadataByWidths(metadata, widths) {
+    const filtered = {};
+    for (const format of Object.keys(metadata)) {
+      filtered[format] = metadata[format].filter(item => widths.includes(item.width));
+    }
+    return filtered;
+  }
+
+  // Check if metadata has any valid images
+  function hasValidMetadata(metadata) {
+    return Object.keys(metadata).some(format =>
+      metadata[format] && metadata[format].length > 0
+    );
+  }
 
   // Retina-optimized image shortcode
   async function retinaImageShortcode(src, altOrWidth, maxWidth) {
@@ -585,56 +527,31 @@ module.exports = function (eleventyConfig) {
     // retinaImageShortcode(src, alt, maxWidth) - traditional 3 params
     // retinaImageShortcode(src, maxWidth) - 2 params where second is width
     let alt, finalMaxWidth;
-
     if (typeof altOrWidth === 'number' && maxWidth === undefined) {
-      // Called with (src, maxWidth)
       alt = '';
       finalMaxWidth = altOrWidth;
     } else {
-      // Called with (src, alt, maxWidth) or (src, alt)
       alt = altOrWidth || '';
       finalMaxWidth = maxWidth || 800;
     }
-    // Skip favicon files - they should not be processed by the image optimization system
-    const fileName = path.basename(src).toLowerCase();
-    if (fileName.includes('favicon') || fileName.includes('apple-touch-icon')) {
-      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+
+    const retinaWidths = [finalMaxWidth, finalMaxWidth * 2];
+
+    // Skip favicon files
+    if (isFaviconFile(src)) {
+      return getFallbackImageTag(src, alt);
     }
 
-    // Extract the directory structure from the source path to maintain it in output
-    // Remove leading slash if present
-    const cleanSrc = src.startsWith('/') ? src.substring(1) : src;
-    // Create proper path with src prefix if needed
-    const srcPath = cleanSrc.startsWith('src/') ? cleanSrc : path.join('src', cleanSrc);
-    // Get relative path for cache lookup
-    const relativePath = srcPath.replace(/^src\//, '');
+    // Normalize path
+    let { srcPath, relativePath } = normalizeSrcPath(src);
 
-    // Check if we already have this path in the cache
+    // Check file path cache first
     if (FILE_PATH_CACHE.has(relativePath)) {
       const pathInfo = FILE_PATH_CACHE.get(relativePath);
-
-      // If the source path is cached and already processed, use it directly
       if (pathInfo.sourcePath && IMAGE_CACHE.has(pathInfo.sourcePath)) {
-        let cachedMetadata = IMAGE_CACHE.get(pathInfo.sourcePath);
-
-        // Filter to only include retina sizes
-        const formats = Object.keys(cachedMetadata);
-        const filteredMetadata = {};
-
-        for (const format of formats) {
-          filteredMetadata[format] = cachedMetadata[format].filter(item =>
-            item.width === finalMaxWidth || item.width === finalMaxWidth * 2);
-        }
-
-        // Check if we have valid filtered metadata
-        const hasValidFilteredImages = Object.keys(filteredMetadata).some(format =>
-          filteredMetadata[format] && filteredMetadata[format].length > 0
-        );
-
-        if (!hasValidFilteredImages) {
-          // Fall through to reprocessing if filtered cache is empty
-        } else {
-          return Image.generateHTML(filteredMetadata, {
+        const filtered = filterMetadataByWidths(IMAGE_CACHE.get(pathInfo.sourcePath), retinaWidths);
+        if (hasValidMetadata(filtered)) {
+          return Image.generateHTML(filtered, {
             alt,
             sizes: `${finalMaxWidth}px`,
             loading: "lazy",
@@ -644,116 +561,59 @@ module.exports = function (eleventyConfig) {
       }
     }
 
-    // Handle the case where src includes size and format suffixes
+    // Handle size/format suffixed paths (e.g., image-800.webp)
     const sizeFormatRegex = /-(\d+)\.(jpeg|jpg|png|webp|avif)$/i;
-    const sizeFormatMatch = src.match(sizeFormatRegex);
-
-    if (sizeFormatMatch) {
-      // This is a reference to a sized/formatted version, extract the base path
+    if (sizeFormatRegex.test(src)) {
       const basePath = src.replace(sizeFormatRegex, '');
       const baseRelativePath = basePath.startsWith('/') ? basePath.substring(1) : basePath;
-
-      // Try to find the original file with various extensions
-      const potentialExtensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
-      for (const ext of potentialExtensions) {
-        const potentialPath = path.join('src', baseRelativePath + ext);
-        if (await tryFile(potentialPath)) {
-          // Process with this path instead
-          srcPath = potentialPath;
-          break;
-        }
+      const foundPath = await findFileWithExtension(path.join('src', baseRelativePath));
+      if (foundPath) {
+        srcPath = foundPath;
       }
     }
 
-    // List of possible extensions to try
-    const extensions = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
-
-    // Try to find the actual file with correct extension
-    let actualFilePath = srcPath;
-    if (!await tryFile(actualFilePath)) {
-      // Try replacing extension
-      const basePath = srcPath.replace(/\.\w+$/, '');
-      for (const ext of extensions) {
-        const newPath = basePath + ext;
-        if (await tryFile(newPath)) {
-          actualFilePath = newPath;
-          break;
-        }
-      }
+    // Find actual file with correct extension
+    const actualFilePath = await findFileWithExtension(srcPath);
+    if (!actualFilePath) {
+      console.error(`Could not find image file for retina: ${srcPath}`);
+      return getFallbackImageTag(src, alt);
     }
 
-    // If still can't find the file, log an error and return placeholder
-    if (!await tryFile(actualFilePath)) {
-      console.error(`Could not find image file for retina: ${srcPath} (tried multiple extensions)`);
-      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
-    }
-
-    // Check if image has already been processed
+    // Get or process metadata
     let metadata;
     if (IMAGE_CACHE.has(actualFilePath)) {
-      let cachedMetadata = IMAGE_CACHE.get(actualFilePath);
-
-      // Filter to only include retina sizes if needed
-      const formats = Object.keys(cachedMetadata);
-      const filteredMetadata = {};
-      let hasRequiredSizes = false;
-
-      for (const format of formats) {
-        filteredMetadata[format] = cachedMetadata[format].filter(item =>
-          item.width === finalMaxWidth || item.width === finalMaxWidth * 2);
-
-        if (filteredMetadata[format].length > 0) {
-          hasRequiredSizes = true;
-        }
-      }
-
-      // If we have the required sizes in cache, use the filtered metadata
-      if (hasRequiredSizes) {
-        metadata = filteredMetadata;
-      } else {
-        // Cache doesn't have the sizes we need, reprocess
-        metadata = await processImage(actualFilePath, [finalMaxWidth, finalMaxWidth * 2]);
-      }
+      const filtered = filterMetadataByWidths(IMAGE_CACHE.get(actualFilePath), retinaWidths);
+      metadata = hasValidMetadata(filtered)
+        ? filtered
+        : await processImage(actualFilePath, retinaWidths);
     } else {
-      // Process the image with retina sizes
-      metadata = await processImage(actualFilePath, [finalMaxWidth, finalMaxWidth * 2]);
+      metadata = await processImage(actualFilePath, retinaWidths);
     }
 
-    if (!metadata) {
+    if (!metadata || !hasValidMetadata(metadata)) {
       console.error(`Failed to process retina image: ${actualFilePath}`);
-      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
+      return getFallbackImageTag(src, alt);
     }
 
-    // Check if metadata has valid formats and images
-    const hasValidImages = Object.keys(metadata).some(format =>
-      metadata[format] && metadata[format].length > 0
-    );
-
-    if (!hasValidImages) {
-      console.error(`No valid images in metadata for: ${actualFilePath}`);
-      return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
-    }
-
-    let imageAttributes = {
+    return Image.generateHTML(metadata, {
       alt,
       sizes: `${finalMaxWidth}px`,
       loading: "lazy",
       decoding: "async",
-    };
-
-    return Image.generateHTML(metadata, imageAttributes);
+    });
   }
 
   // Add RSS plugin
   eleventyConfig.addPlugin(pluginRss);
 
-  // Add the shortcodes
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addNunjucksAsyncShortcode("retinaImage", retinaImageShortcode);
-  eleventyConfig.addLiquidShortcode("image", imageShortcode);
-  eleventyConfig.addLiquidShortcode("retinaImage", retinaImageShortcode);
-  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
-  eleventyConfig.addJavaScriptFunction("retinaImage", retinaImageShortcode);
+  // Register shortcodes for all template engines
+  function registerAsyncShortcode(name, fn) {
+    eleventyConfig.addNunjucksAsyncShortcode(name, fn);
+    eleventyConfig.addLiquidShortcode(name, fn);
+    eleventyConfig.addJavaScriptFunction(name, fn);
+  }
+  registerAsyncShortcode("image", imageShortcode);
+  registerAsyncShortcode("retinaImage", retinaImageShortcode);
 
   // Copy static files
   eleventyConfig.addPassthroughCopy("src/css");
