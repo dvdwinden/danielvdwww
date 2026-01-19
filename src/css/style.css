@@ -1114,25 +1114,6 @@ ul.list-none {
     text-underline-offset: 3px;
 }
 
-/* Dark mode detection */
-.only-light {
-    display: block;
-}
-
-.only-dark {
-    display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    .only-light {
-        display: none;
-    }
-
-    .only-dark {
-        display: block;
-    }
-}
-
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */
