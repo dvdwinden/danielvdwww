@@ -10,22 +10,22 @@
 	</script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <title>{% if title %}
         {% if page.url == '/' %}
-            Daniël van der Winden • Software designer & writer
+            Daniël van der Winden · Software designer & writer
         {% else %}
-            {{ title }} • Daniël van der Winden
+            {{ title }} · Daniël van der Winden
         {% endif %}
     {% else %}
-        Daniël van der Winden • Software designer & writer
+        Daniël van der Winden · Software designer & writer
     {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
-    {% if page.draft %}
+    {% if draft %}
     <meta name="robots" content="noindex, nofollow">
     {% endif %}
     <link rel="stylesheet" href="/css/style.css">
@@ -34,7 +34,7 @@
     <link rel="preload" href="/assets/fonts/Blanco-Regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/assets/fonts/DegularVariable.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Pre-load critical hero images -->
+    <!-- Pre-load hero images -->
     <link rel="preload" href="/assets/work/studio-square.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preload" href="/assets/work/daniel-square.webp" as="image" type="image/webp" fetchpriority="high">
 
@@ -45,7 +45,7 @@
 
     <meta name="view-transition" content="same-origin">
     
-    <!-- RSS Feeds -->
+    <!-- RSS Feed -->
     <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden" href="/feed.xml">
     {% if env.NODE_ENV == 'production' %}
     <script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>
@@ -95,14 +95,14 @@
     <div id="page-content">
     {% include "header.njk" %}
 
-        <nav class="fixed z-50 bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-auto">
+        <nav class="fixed z-50 bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-auto" role="navigation" aria-label="Main navigation">
             <div class="relative px-4 py-3 overflow-hidden bg-white border border-gray-200 rounded-lg dark:bg-black dark:border-gray-700 sm:bg-transparent sm:dark:bg-transparent sm:border-0 sm:p-0">
                 <div class="absolute inset-y-0 right-0 w-12 pointer-events-none bg-gradient-to-l from-white dark:from-black to-transparent sm:hidden"></div>
                 {% include "navigation.njk" %}
             </div>
         </nav>
 
-        <main class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]">
+        <main id="main-content" class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]" role="main">
             <div class="w-full max-w-[1400px]">
                 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] pb-32 dark:prose-invert">
                     {{ content | safe }}
