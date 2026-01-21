@@ -9,6 +9,8 @@ bodyClass: bg-green
 eleventyComputed:
   title: "Links / {{ tagPage.name | capitalize }}"
   description: "All links tagged with {{ tagPage.name | capitalize }}"
+  robots: "{% if tagPage.pageNumber > 0 %}noindex, follow{% endif %}"
+  canonicalUrl: "/links/{{ tagPage.slug }}/"
 ---
 
 <h1 class="links-title">Links<span class="links-title__divider"> / </span><span class="links-title__tag">{{ tagPage.name | capitalize }}</span></h1>
