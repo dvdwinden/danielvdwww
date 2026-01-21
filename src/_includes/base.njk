@@ -25,8 +25,11 @@
         Daniël van der Winden · Software designer & writer
     {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
+    <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
     {% if draft %}
     <meta name="robots" content="noindex, nofollow">
+    {% elif robots %}
+    <meta name="robots" content="{{ robots }}">
     {% endif %}
     <link rel="stylesheet" href="/css/style.css">
 
