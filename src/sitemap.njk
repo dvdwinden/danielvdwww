@@ -39,7 +39,7 @@ templateEngineOverride: njk
   </url>
 
 {% for page in collections.all %}
-  {% if not page.data.draft and page.url %}
+  {% if not page.data.draft and page.url and "/page/" not in page.url %}
   <url>
     <loc>{{ metadata.url }}{{ page.url }}</loc>
     <lastmod>{{ page.date | date("yyyy-MM-dd") }}</lastmod>
