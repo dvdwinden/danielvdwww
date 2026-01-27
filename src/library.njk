@@ -11,15 +11,28 @@ bodyClass: bg-amber
 <p id="top-authors"></p>
 
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2026</h2>
-
 <ul class="list-none p-0 m-0">
+   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
+      {% image "src/assets/library/rachel-cusk-parade.webp", "Parade cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/0082bae7-0c71-401a-92aa-6f9118feaa4f" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Parade by Rachel Cusk">Parade</a>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Rachel Cusk</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      JAN
+    </span>
+  </li>
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
       {% image "src/assets/library/dan-wang-breakneck.webp", "Breakneck cover", "120px" %}
     </div>
     <div class="flex flex-col">
       <div class="flex items-baseline gap-2">
-        <a href="https://app.thestorygraph.com/books/57862235-025c-40ad-9fd2-342a2f4a67b8" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Breakneck by Dan Wang">Breakneck: China’s Quest to Engineer the Future</a>
+        <a href="https://app.thestorygraph.com/books/a135612c-4530-48af-96a7-80877cccc3d3" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Breakneck by Dan Wang">Breakneck: China’s Quest to Engineer the Future</a>
       </div>
       <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Dan Wang</span>
     </div>
@@ -3368,6 +3381,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">246</span> books on the list. 138 books are fiction, 108 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">247</span> books on the list. 139 books are fiction, 108 are non-fiction.</em></p>
 
 <script src="/js/library.js"></script>
