@@ -12,7 +12,21 @@ bodyClass: bg-amber
 
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2026</h2>
 <ul class="list-none p-0 m-0">
-   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
+      {% image "src/assets/library/clarice-lispector-near-to-the-wild-heart.webp", "Near to the Wild Heart cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/ebafcbca-1f72-42d6-8aa8-5d7f8ac6d522f" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Near to the Wild Heart by Clarice Lispector">Near to the Wild Heart</a>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Clarice Lispector</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      JAN
+    </span>
+  </li>
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
       {% image "src/assets/library/rachel-cusk-parade.webp", "Parade cover", "120px" %}
     </div>
@@ -3381,6 +3395,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">247</span> books on the list. 139 books are fiction, 108 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">248</span> books on the list. 140 books are fiction, 108 are non-fiction.</em></p>
 
 <script src="/js/library.js"></script>
