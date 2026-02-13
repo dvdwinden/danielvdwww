@@ -14,6 +14,21 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
+      {% image "src/assets/library/claire-louise-bennett-big-kiss-bye-bye.webp", "Big Kiss, Bye-Bye cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/cd783821-1363-41a7-a2ad-1364c91e424b" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Big Kiss, Bye-Bye by Claire-Louise Bennett">Big Kiss, Bye-Bye</a>
+        <span class="text-black dark:text-white book-star">★</span>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Claire-Louise Bennett</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      FEB
+    </span>
+  </li>
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
       {% image "src/assets/library/peter-fox-penner-power-after-carbon.webp", "Power After Carbon cover", "120px" %}
     </div>
     <div class="flex flex-col">
@@ -3410,6 +3425,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">249</span> books on the list. 140 books are fiction, 109 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">250</span> books on the list. 141 books are fiction, 109 are non-fiction.</em></p>
 
 <script src="/js/library.js"></script>
