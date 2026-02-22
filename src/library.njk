@@ -14,6 +14,22 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
+      {% image "src/assets/library/joke-j-hermsen-stil-de-tijd.webp", "Stil de Tijd cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/20abb408-5612-450c-9b7d-d6fbcbd3fb5e" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Stil de Tijd by Joke J. Hermsen">Stil de Tijd</a>
+        <span class="text-black dark:text-white book-star">★</span>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Joke J. Hermsen</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      FEB
+    </span>
+  </li>
+
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
       {% image "src/assets/library/claire-louise-bennett-big-kiss-bye-bye.webp", "Big Kiss, Bye-Bye cover", "120px" %}
     </div>
     <div class="flex flex-col">
@@ -49,6 +65,7 @@ bodyClass: bg-amber
     <div class="flex flex-col">
       <div class="flex items-baseline gap-2">
         <a href="https://app.thestorygraph.com/books/ebafcbca-1f72-42d6-8aa8-5d7f8ac6d522" class="font-serif text-lg font-medium hover:underline" target="_blank" rel="external" title="Near to the Wild Heart by Clarice Lispector">Near to the Wild Heart</a>
+        <span class="text-black dark:text-white book-star">★</span>
       </div>
       <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Clarice Lispector</span>
     </div>
@@ -3425,6 +3442,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">250</span> books on the list. 141 books are fiction, 109 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">251</span> books on the list. 141 books are fiction, 110 are non-fiction.</em></p>
 
 <script src="/js/library.js"></script>
