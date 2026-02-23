@@ -668,6 +668,7 @@ ul.links li h2 {
     margin-top: 1.125rem;
     font-family: theme('fontFamily.serif');
     font-weight: 500;
+    text-wrap: balance;
 }
 
 ul.links li a:hover h2 {
