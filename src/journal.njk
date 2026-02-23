@@ -2,72 +2,27 @@
 layout: narrow.njk
 title: Journal
 description: Personal writing and essays. RSS feed available.
-deleteme: true
 bodyClass: bg-stone
-pagination:
-  data: collections.journal
-  size: 10
-  alias: journal
-  reverse: false
-permalink: "journal/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: journal/index.html
 ---
-
 
 <h1>Journal</h1>
 
 <p>My own writing, long and short. <a href="/feed.xml" class="font-medium hover:underline dark:text-gray-300 dark:hover:text-white" title="Subscribe via RSS">Subscribe via RSS</a>.</p>
 
-<ul class="divide-y divide-gray-950/10 dark:divide-white/5 links journal">
-  {% for post in journal %}
-  <li class="py-3 pl-0">
-    <div class="flex flex-col">
-      {% if post.data.image %}
-        <div class="w-full aspect-[3/2] overflow-hidden rounded-sm journal-featured-image" data-object-position="{{ post.data.image.objectPosition or 'center' }}">
-          {% image "src" + post.data.image.src, post.data.image.alt, "(min-width: 768px) 50vw, 100vw" %}
-        </div>
-      {% endif %}
-      <div class="flex items-baseline justify-between">
-        <a href="{{ post.data.external_url or post.url }}" class="text-2xl font-serif font-semibold hover:underline" {% if post.data.external_url %}target="_blank" rel="external"{% endif %}>
-         <h2 class="no-underline">{{ post.data.title }}</h2>
-        </a>
-        <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-semibold font-sans">
-          {{ post.date | date('MMM yyyy') }}
-        </span>
-      </div>
-      <div class="prose prose-sm mt-4 dark:text-gray-300">
-        {{ post.data.description }}
-      </div>
-    </div>
-  </li>
-  {% endfor %}
-</ul>
-
-{% if pagination.href.previous or pagination.href.next %}
-<nav class="pagination flex items-center justify-between mt-8 pt-4 border-t border-gray-200 dark:border-gray-700" role="navigation" aria-label="Pagination navigation">
-  {% if pagination.href.previous %}
-  <a href="{{ pagination.href.previous }}" 
-     class="text-sm font-medium text-gray-700 hover:brown dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded-sm p-1" 
-     aria-label="Go to previous page">
-    <span aria-hidden="true">{% include "icons/arrow-left-round.svg" %}</span>
-    <span class="sr-only">Previous</span>
-  </a>
-  {% else %}
-  <span class="text-gray-300" aria-hidden="true">{% include "icons/arrow-left-round.svg" %}</span>
+{% for post in collections.journal %}
+  {% set postYear = post.date | date('yyyy') %}
+  {% if loop.first or postYear != (collections.journal[loop.index0 - 1].date | date('yyyy')) %}
+  <div class="flex items-baseline justify-between {% if not loop.first %}mt-16{% else %}mt-12{% endif %} mb-8">
+    <h2 class="text-2xl font-sans font-semibold m-0">{{ postYear }}</h2>
+    <span class="text-xs uppercase tracking-widest text-gray-500 font-semibold font-sans">{{ collections.journal | countByYear(postYear) }} {{ "post" if (collections.journal | countByYear(postYear)) == 1 else "posts" }}</span>
+  </div>
   {% endif %}
 
-  <span class="text-sm font-sans text-gray-500" aria-live="polite">
-    Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}
-  </span>
-
-  {% if pagination.href.next %}
-  <a href="{{ pagination.href.next }}" 
-     class="text-gray-700 hover:brown dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded-sm p-1" 
-     aria-label="Go to next page">
-    <span aria-hidden="true">{% include "icons/arrow-right-round.svg" %}</span>
-    <span class="sr-only">Next</span>
+  <a href="{{ post.data.external_url or post.url }}" class="journal-entry block border-b border-gray-950/10 dark:border-white/5 pb-5 mb-5" {% if post.data.external_url %}target="_blank" rel="external"{% endif %}>
+    <span class="journal-entry-title font-serif text-2xl font-medium">{{ post.data.title }}</span>
+    {% if post.data.description %}
+    <p class="font-serif text-black/70 dark:text-white/60 mt-1 m-0">{{ post.data.description }}</p>
+    {% endif %}
   </a>
-  {% else %}
-    <span class="text-gray-300 dark:text-gray-500" aria-hidden="true">{% include "icons/arrow-right-round.svg" %}</span>
-  {% endif %}
-</nav>
-{% endif %}
+{% endfor %}

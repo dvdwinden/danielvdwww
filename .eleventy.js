@@ -839,6 +839,11 @@ module.exports = function (eleventyConfig) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   });
 
+  // Count posts in a collection by year
+  eleventyConfig.addFilter("countByYear", function (collection, year) {
+    return collection.filter(item => item.date.getFullYear() === parseInt(year)).length;
+  });
+
 
   // Set up redirects from /writing/* to /journal/* both for local dev and production
   eleventyConfig.setServerOptions({
