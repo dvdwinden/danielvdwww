@@ -8,7 +8,7 @@
     z-index: 100;
     transition: top 0.3s;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .skip-link:focus {
@@ -115,7 +115,10 @@ nav a:focus-visible {
 /* Degular italic via font-variation-settings */
 .font-sans i,
 .font-sans em,
-.font-sans .italic {
+.font-sans .italic,
+.prose .article-footer i,
+.prose .article-footer em,
+.prose .article-footer .italic {
     font-style: normal;
     font-variation-settings: "ital" 1;
 }
@@ -399,7 +402,7 @@ html.dark #page-background {
 
 /* Callout */
 .callout {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
     line-height: 1.4;
     color: theme('colors.black');
 }
@@ -1218,14 +1221,6 @@ ul.list-none {
 
     .prose h1 {
         font-size: 2rem;
-    }
-
-    .prose h2 {
-        font-size: 1.5rem;
-    }
-
-    .callout {
-        font-size: 1.25rem;
     }
 
     figcaption,

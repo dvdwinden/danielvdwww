@@ -52,7 +52,7 @@ bodyClass: bg-blue
       <div class="text-md font-bold font-sans">
           <h3>Senior Product Designer at <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a></h3>
         </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
           Designing and building digital infrastructure that enables a zero carbon energy system. 
         </div>
       </div>
@@ -63,7 +63,7 @@ bodyClass: bg-blue
       <div class="text-md font-bold font-sans">
           <h3>Co-Founder of <a href="http://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" rel="nofollow" target="_blank"><em>TRANSCRIPT</em> Magazine</a></h3>
         </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
           Curating, editing, designing and publishing a seasonal literary magazine.
         </div>
       </div>
@@ -74,7 +74,7 @@ bodyClass: bg-blue
       <div class="text-md font-bold font-sans">
           <h3>Senior Product Designer · Contract</h3>
         </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
           From the summer of 2025 I worked as a freelancer, collaborating with <a href="http://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="external" target="_blank">Fictive Kin</a>, where I designed an Android app for a Mexican retailer and helped lay the foundation for <a href="https://ladderbenefits.com/?ref=daniel.pizza" title="Ladder" rel="external" target="_blank">Ladder</a>, enabling NYC-based Americans who don’t have the means to get by apply for benefits.<br />
           <br />
           After Fictive Kin, I moved on to support <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a>.
@@ -87,7 +87,7 @@ bodyClass: bg-blue
       <div class="text-md font-bold font-sans">
           <h3>Senior Product Designer at <a href="http://ghost.org?ref=daniel.pizza" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
         </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
           Involved in designing new features and exploratory brand & product work. Coded numerous improvements throughout the product and its marketing site.
         </div>
       </div>
@@ -98,7 +98,7 @@ bodyClass: bg-blue
       <div class="text-md font-bold font-sans">
           <h3>Partner, CDO at <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
           As Partner, I was involved in setting the company’s strategy. As CDO, I focused on our Product Design work and team—from securing projects to hiring new team members, and from elevating our reputation externally to enabling Product Designers to do their best work.
         </div>
       </div>
@@ -109,7 +109,7 @@ bodyClass: bg-blue
       <div class="text-md font-bold font-sans">
           <h3>Designer, Head of <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
         </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-[18px] leading-[27px]">
+        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
           Set up shop in the Netherlands and built a local, multi-disciplinary team of up to 20 people to help the company take root. Mentored Product Designers and other team members. Designed digital products and websites.
         </div>
       </div>
@@ -125,7 +125,7 @@ bodyClass: bg-blue
     <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
       <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
       <div class="md:w-3/4">
-        <div class="text-md font-bold font-serif">
+        <div class="text-md font-bold font-sans">
           <h3>Internships at <a href="http://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a> and <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
         </div>
       </div>

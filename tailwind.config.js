@@ -26,6 +26,7 @@ module.exports = {
       fontSize: {
         xs: '0.875rem', // 14px
         sm: '1rem', // 16px
+        md: '1.125rem', // 18px
         base: '1.25rem', // 20px
         lg: '1.375rem', // 22px
         xl: '1.5rem', // 24px
@@ -42,7 +43,7 @@ module.exports = {
             '.article-footer': {
               'font-size': '1rem',
               'line-height': '1.5',
-              'font-family': 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+              'font-family': 'Degular, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif',
               'margin-top': '2rem',
               'color': 'rgba(0, 0, 0, 0.5)',
             },
