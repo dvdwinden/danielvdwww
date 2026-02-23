@@ -1,5 +1,5 @@
 // Count book items and update the count dynamically
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
   const bookItems = document.querySelectorAll('.book-item');
   const countElement = document.getElementById('book-count');
   if (countElement && bookItems.length > 0) {
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     countElement.classList.add('js-loaded');
   }
 
-  // Count authors and show top 3
+  // Count authors and show top 5
   const topAuthorsElement = document.getElementById('top-authors');
   if (topAuthorsElement && bookItems.length > 0) {
     const authorBooks = {};
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (topAuthors.length >= 5) {
       const formatted = topAuthors.map(([name, count]) => `${name} (${count})`);
-      topAuthorsElement.textContent = `Since I started keeping this list, the five authors I’ve read most are ${formatted.slice(0, 4).join(', ')} and ${formatted[4]}.`;
+      topAuthorsElement.textContent = `Since I started keeping this list, the five authors I've read most are ${formatted.slice(0, 4).join(', ')} and ${formatted[4]}.`;
     }
   }
-});
+})();
 
 // Show book covers on touch devices as you scroll past them
 document.addEventListener('DOMContentLoaded', function () {

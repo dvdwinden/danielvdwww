@@ -7,6 +7,8 @@
 	    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 	    document.documentElement.classList.add('dark');
 	  }
+	  // Hide content until fonts are ready to prevent FOUT
+	  document.documentElement.classList.add('fonts-loading');
 	</script>
 
     <meta charset="UTF-8">
@@ -31,11 +33,55 @@
     {% elif robots %}
     <meta name="robots" content="{{ robots }}">
     {% endif %}
-    <link rel="stylesheet" href="/css/style.css">
-
     <!-- Pre-load font files -->
     <link rel="preload" href="/assets/fonts/Blanco-Regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/assets/fonts/DegularVariable.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Inline @font-face so browser discovers fonts before external CSS loads -->
+    <style>
+    .fonts-loading #page-content { opacity: 0; }
+    @font-face {
+        font-family: 'Blanco';
+        src: url('/assets/fonts/Blanco-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Blanco';
+        src: url('/assets/fonts/Blanco-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Blanco';
+        src: url('/assets/fonts/Blanco-Italic.woff2') format('woff2'),
+            url('/assets/fonts/Blanco-Italic.woff') format('woff');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Blanco';
+        src: url('/assets/fonts/Blanco-MediumItalic.woff2') format('woff2'),
+            url('/assets/fonts/Blanco-MediumItalic.woff') format('woff');
+        font-weight: 500;
+        font-style: italic;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Degular';
+        src: url('/assets/fonts/DegularVariable.woff2') format('woff2-variations'),
+            url('/assets/fonts/DegularVariable.woff2') format('woff2'),
+            url('/assets/fonts/DegularVariable.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+    }
+    </style>
+
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- Pre-load hero images -->
     <link rel="preload" href="/assets/work/studio-square.webp" as="image" type="image/webp" fetchpriority="high">
@@ -86,6 +132,12 @@
     <meta name="twitter:image" content="https://www.daniel.pizza/assets/share-image-1200.jpeg">
     <meta name="twitter:image:alt" content="Daniël van der Winden">
     {% endif %}
+    <script>
+      // Reveal content once fonts are ready (background stays visible during load)
+      var reveal = function() { document.documentElement.classList.remove('fonts-loading'); };
+      document.fonts.ready.then(reveal);
+      setTimeout(reveal, 1000);
+    </script>
 </head>
 <body class="min-h-screen font-sans overflow-x-hidden">
     <!-- Background layer -->
