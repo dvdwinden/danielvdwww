@@ -742,6 +742,10 @@ ul.newsletter h2 {
 }
 
 /* Journal index list */
+.journal-entry-title {
+    line-height: 1.2;
+}
+
 .journal-entry,
 .journal-entry *,
 .prose .journal-entry,
