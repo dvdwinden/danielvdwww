@@ -154,14 +154,14 @@ iframe {
 
 html.dark #page-background {
     view-transition-name: none;
-    background-color: #222 !important;
+    background-color: #23211e !important;
 }
 
 #page-content {
     view-transition-name: content;
     position: relative;
     min-height: 100vh;
-    @apply text-gray-900 dark:text-gray-100;
+    @apply text-gray-900 dark:text-gray-300;
 }
 
 /* Reset transforms during capture */
@@ -342,12 +342,13 @@ html.dark #page-background {
 }
 
 .prose a:hover {
+    color: theme('colors.hover');
     background: none;
     text-decoration: underline;
     text-decoration-color: theme('colors.hover');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    transition: background 0.2s, color 0.2s;
+    transition: color 0.2s;
     cursor: pointer;
 }
 
@@ -608,8 +609,9 @@ article time {
 }
 
 .prose .cta-button:hover {
-    background: #555;
+    background: theme('colors.hover');
     color: theme('colors.white');
+    text-decoration: none;
     transition: background 0.2s, color 0.2s;
     display: inline-block;
 }
@@ -671,19 +673,18 @@ ul.links li h2 {
     text-wrap: balance;
 }
 
-ul.links li a:hover h2 {
-    color: theme('colors.hover');
-    text-decoration-color: theme('colors.hover');
+ul.links li a.no-underline {
+    text-decoration: none !important;
     background: none !important;
 }
 
-ul.links li a:hover {
-    background: none !important;
+ul.links li a.no-underline:hover h2 {
+    color: theme('colors.hover');
 }
 
 ul.links li p a {
     text-decoration: underline;
-    text-decoration-color: theme('colors.hover');
+    text-decoration-color: #999;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     font-family: theme('fontFamily.serif');
@@ -692,12 +693,11 @@ ul.links li p a {
 
 ul.links li p a:hover {
     cursor: pointer;
-    color: theme('colors.black');
+    color: theme('colors.hover');
     text-decoration: underline;
-    text-decoration-color: #7c5e00;
+    text-decoration-color: theme('colors.hover');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    background: theme('colors.highlight') !important;
 }
 
 ul.links li p span a {
@@ -741,22 +741,24 @@ ul.newsletter h2 {
 
 /* Journal index list */
 .journal-entry,
+.journal-entry *,
 .prose .journal-entry,
-.prose .journal-entry:hover {
-    text-decoration: none;
+.prose .journal-entry:hover,
+.dark .prose .journal-entry,
+.dark .prose .journal-entry:hover {
+    text-decoration: none !important;
     color: inherit;
     background: none;
 }
 
 .journal-entry:hover .journal-entry-title {
-    text-decoration: underline;
-    text-decoration-color: theme('colors.hover');
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    text-decoration: none;
+    color: theme('colors.hover');
 }
 
 .dark .journal-entry:hover .journal-entry-title {
-    text-decoration-color: theme('colors.hover-dark');
+    text-decoration: none;
+    color: theme('colors.hover-dark');
 }
 
 /* Icons */
@@ -807,7 +809,7 @@ ul.list-none {
 .book-cover {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -1.75rem;
     transform: translateX(calc(-100% - 2rem));
     opacity: 0;
     visibility: hidden;
@@ -867,6 +869,10 @@ ul.list-none {
     color: theme('colors.hover');
 }
 
+.dark .book-star {
+    color: theme('colors.hover-dark');
+}
+
 .book-item a {
     text-decoration: none;
     color: inherit;
@@ -876,11 +882,17 @@ ul.list-none {
     line-height: 1.2;
 }
 
+.book-item {
+    align-items: first baseline;
+}
+
+.book-item .flex.items-baseline.gap-2 {
+    text-wrap: balance;
+}
+
 .book-item a:hover {
-    text-decoration: underline;
-    text-decoration-color: theme('colors.hover');
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    text-decoration: none;
+    color: theme('colors.hover');
 }
 
 .book-item .flex.items-baseline.gap-2 {
@@ -949,7 +961,7 @@ ul.list-none {
 }
 
 .dark .prose a {
-    color: #fff;
+    color: #d4d4d4;
     text-decoration: underline;
     text-decoration-color: #999;
     text-decoration-thickness: 1px;
@@ -957,15 +969,19 @@ ul.list-none {
 }
 
 .dark .prose a:hover {
+    color: theme('colors.hover-dark');
     background: none;
     text-decoration: underline;
+    text-decoration-color: theme('colors.hover-dark');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
 
 .dark .prose p a:hover {
+    color: theme('colors.hover-dark');
     background: none;
     text-decoration: underline;
+    text-decoration-color: theme('colors.hover-dark');
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
@@ -1027,15 +1043,15 @@ ul.list-none {
 .dark ul.links li a:hover h2 {
     color: theme('colors.hover-dark') !important;
     background: none !important;
-    text-decoration: underline !important;
-    text-decoration-color: theme('colors.hover-dark') !important;
-    text-decoration-thickness: 1px !important;
-    text-underline-offset: 3px !important;
+    text-decoration: none !important;
 }
 
 .dark ul.links li p a:hover {
-    color: theme('colors.black');
-    text-decoration: none;
+    color: theme('colors.hover-dark');
+    text-decoration: underline;
+    text-decoration-color: theme('colors.hover-dark');
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 .dark .hero-image {
@@ -1048,9 +1064,8 @@ ul.list-none {
 }
 
 .dark .book-item a:hover {
-    text-decoration-color: theme('colors.hover-dark');
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    text-decoration: none;
+    color: theme('colors.hover-dark');
 }
 
 /* ==========================================================================
