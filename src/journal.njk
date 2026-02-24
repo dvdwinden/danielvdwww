@@ -20,7 +20,7 @@ permalink: journal/index.html
   {% endif %}
 
   <a href="{{ post.data.external_url or post.url }}" class="journal-entry block border-b border-gray-950/10 dark:border-white/5 pb-5 mb-5" {% if post.data.external_url %}target="_blank" rel="external"{% endif %}>
-    <span class="journal-entry-title font-serif text-3xl font-medium">{{ post.data.title }}</span>
+    <span class="journal-entry-title font-serif text-xl font-medium">{{ post.data.title }}</span>
     {% if post.data.description %}
     <p class="font-serif text-black/70 dark:text-white/60 mt-1 m-0">{{ post.data.description }}</p>
     {% endif %}

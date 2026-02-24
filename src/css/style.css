@@ -670,6 +670,8 @@ ul.links li h2 {
     margin-top: 1.125rem;
     font-family: theme('fontFamily.serif');
     font-weight: 500;
+    font-size: 1.5rem !important;
+    line-height: 1.2;
     text-wrap: balance;
 }
 
@@ -740,6 +742,10 @@ ul.newsletter h2 {
 }
 
 /* Journal index list */
+.journal-entry-title {
+    line-height: 1.2;
+}
+
 .journal-entry,
 .journal-entry *,
 .prose .journal-entry,
