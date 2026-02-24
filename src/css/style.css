@@ -670,6 +670,8 @@ ul.links li h2 {
     margin-top: 1.125rem;
     font-family: theme('fontFamily.serif');
     font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.2;
     text-wrap: balance;
 }
 
