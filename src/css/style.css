@@ -675,6 +675,10 @@ ul.links li h2 {
     text-wrap: balance;
 }
 
+ul.links.newsletter li h2 {
+    font-size: 1.5rem;
+}
+
 ul.links li a.no-underline {
     text-decoration: none !important;
     background: none !important;
