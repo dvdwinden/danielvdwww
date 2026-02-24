@@ -25,7 +25,7 @@ permalink: "newsletter/{% if pagination.pageNumber > 0 %}page/{{ pagination.page
         {% image "src" + post.data.image.src, post.data.image.alt, "(min-width: 768px) 50vw, 100vw", "w-full" %}
       {% endif %}
       <div class="flex items-baseline justify-between">
-        <a href="{{ post.data.external_url }}" class="text-3xl font-serif font-semibold no-underline" target="_blank" rel="external">
+        <a href="{{ post.data.external_url }}" class="text-xl font-serif font-semibold no-underline" target="_blank" rel="external">
          <h2 class="no-underline">{{ post.data.title }}</h2>
         </a>
         <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
