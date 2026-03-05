@@ -38,7 +38,7 @@
 
     if (topAuthors.length >= 5) {
       const formatted = topAuthors.map(([name, count]) => `${name} (${count})`);
-      topAuthorsElement.textContent = `Since I started keeping this list, the five authors I've read most are ${formatted.slice(0, 4).join(', ')} and ${formatted[4]}.`;
+      topAuthorsElement.textContent = `Since I started keeping this list, the five authors I’ve read most are ${formatted.slice(0, 4).join(', ')} and ${formatted[4]}.`;
     }
   }
 })();
