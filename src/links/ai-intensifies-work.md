@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "AI Doesn’t Reduce Work—It Intensifies It"
 date: 2026-02-12T21:25:00+02:00
-tags: [artifical intelligence]
+tags: [artificial intelligence]
 external_url: https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>
