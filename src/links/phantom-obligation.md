@@ -3,7 +3,7 @@ layout: narrow.njk
 title: "Phantom Obligation"
 date: 2026-02-04T15:44:00+02:00
 tags: [rss, design, software]
-external_url: https://www.terrygodier.com/phantom-obligationref=daniel.pizza
+external_url: https://www.terrygodier.com/phantom-obligation/?ref=daniel.pizza
 bodyClass: bg-green
 ---
 
