@@ -12,6 +12,20 @@ bodyClass: bg-amber
 
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2026</h2>
 <ul class="list-none p-0 m-0">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
+      {% image "src/assets/library/john-mcphee-levels-of-the-game.webp", "Levels of the Game cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/7ef42fa2-fbc2-410b-acd3-40eba1be14d1" class="font-serif text-lg font-medium" target="_blank" rel="external" title="Levels of the Game by John McPhee">Levels of the Game</a>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">John McPhee</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      MAR
+    </span>
+  </li>
  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
       {% image "src/assets/library/doortje-smithuijsen-ik-zou-uw-dochter-kunnen-zijn.webp", "Ik zou uw dochter kunnen zijn cover", "120px" %}
@@ -3503,6 +3517,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">255</span> books on the list. 142 books are fiction, 113 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">256</span> books on the list. 142 books are fiction, 114 are non-fiction.</em></p>
 
 <script src="/js/library.js"></script>
