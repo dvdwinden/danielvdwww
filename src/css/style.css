@@ -273,18 +273,19 @@ html.dark #page-background {
 .prose h1 a {
     font-size: 2.5rem;
     font-weight: 500;
+    line-height: 1.15;
     margin-bottom: 1rem;
 }
 
 .prose h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 500;
     line-height: 1.25;
     margin-bottom: 0.5rem;
 }
 
 .prose h3 {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.25;
     margin-top: 0;
@@ -1159,11 +1160,11 @@ ul.list-none {
     }
 
     .prose h2 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     .callout {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     .site-footer {

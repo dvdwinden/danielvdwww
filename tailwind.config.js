@@ -45,14 +45,14 @@ module.exports = {
               'line-height': '1.5',
               'font-family': 'Degular, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif',
               'margin-top': '2rem',
-              'color': 'rgba(0, 0, 0, 0.5)',
+              'color': 'rgba(0, 0, 0, 0.6)',
             },
           },
         },
         invert: {
           css: {
             '.article-footer': {
-              'color': 'rgba(255, 255, 255, 0.4)',
+              'color': 'rgba(255, 255, 255, 0.55)',
             },
           },
         },
