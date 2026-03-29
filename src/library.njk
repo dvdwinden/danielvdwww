@@ -14,6 +14,21 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
     <div class="book-cover">
+      {% image "src/assets/library/mirjam-van-hengel-ganzentijd.jpg", "Ganzentijd cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/b2e4157c-5fc8-4524-b26d-dc4f31e081a7" class="font-serif text-lg font-medium" target="_blank" rel="external" title="Ganzentijd by Mirjam van Hengel">Ganzentijd</a>
+        <span class="book-star">★</span>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Mirjam van Hengel</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      MAR
+    </span>
+  </li>
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+    <div class="book-cover">
       {% image "src/assets/library/yoko-ogawa-the-memory-police.webp", "The Memory Police cover", "120px" %}
     </div>
     <div class="flex flex-col">
@@ -3532,6 +3547,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">257</span> books on the list. 143 books are fiction, 114 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">258</span> books on the list. 143 books are fiction, 115 are non-fiction.</em></p>
 
 <script src="/js/library.js"></script>
