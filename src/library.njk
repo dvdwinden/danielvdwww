@@ -7,12 +7,20 @@ bodyClass: bg-amber
 
 <h1>Library</h1>
 
+<div class="flex items-center gap-2 not-prose mt-1 mb-8 text-xs leading-none" id="genre-filter">
+  <button data-filter="fiction" class="genre-filter-btn font-sans text-xs uppercase tracking-widest font-semibold">Fiction</button>
+  <span class="text-gray-400 dark:text-gray-600 select-none relative -top-[2px]" aria-hidden="true">·</span>
+  <button data-filter="non-fiction" class="genre-filter-btn font-sans text-xs uppercase tracking-widest font-semibold">Non-fiction</button>
+  <span class="text-gray-400 dark:text-gray-600 select-none relative -top-[2px]" aria-hidden="true">·</span>
+  <button data-filter="poetry" class="genre-filter-btn font-sans text-xs uppercase tracking-widest font-semibold">Poetry</button>
+</div>
+
 <p>A list of the books I’ve read over the last five years or so. Each entry links to <em>The Storygraph</em> or, where possible, to my own recommendation on <a href="/newsletter" class="hover:underline">Trema</a>.</p>
 <p id="top-authors"></p>
 
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2026</h2>
 <ul class="list-none p-0 m-0">
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/mirjam-van-hengel-ganzentijd.jpg", "Ganzentijd cover", "120px" %}
     </div>
@@ -27,7 +35,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/yoko-ogawa-the-memory-police.webp", "The Memory Police cover", "120px" %}
     </div>
@@ -42,7 +50,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/john-mcphee-levels-of-the-game.webp", "Levels of the Game cover", "120px" %}
     </div>
@@ -56,7 +64,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
- <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+ <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/doortje-smithuijsen-ik-zou-uw-dochter-kunnen-zijn.webp", "Ik zou uw dochter kunnen zijn cover", "120px" %}
     </div>
@@ -71,7 +79,7 @@ bodyClass: bg-amber
     </span>
   </li>
 
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/stephen-king-on-writing.webp", "On Writing: A Memoir of the Craft cover", "120px" %}
     </div>
@@ -86,7 +94,7 @@ bodyClass: bg-amber
     </span>
   </li>
 
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/one-day-everyone-will-have-always-been-against-this.webp", "One day, everyone will have always been against this cover", "120px" %}
     </div>
@@ -102,7 +110,7 @@ bodyClass: bg-amber
     </span>
   </li>
 
-<li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+<li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/oroppa.webp", "Oroppa cover", "120px" %}
     </div>
@@ -118,7 +126,7 @@ bodyClass: bg-amber
     </span>
   </li>
 
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/joke-j-hermsen-stil-de-tijd.webp", "Stil de Tijd cover", "120px" %}
     </div>
@@ -134,7 +142,7 @@ bodyClass: bg-amber
     </span>
   </li>
 
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/claire-louise-bennett-big-kiss-bye-bye.webp", "Big Kiss, Bye-Bye cover", "120px" %}
     </div>
@@ -149,7 +157,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/peter-fox-penner-power-after-carbon.webp", "Power After Carbon cover", "120px" %}
     </div>
@@ -163,7 +171,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/clarice-lispector-near-to-the-wild-heart.webp", "Near to the Wild Heart cover", "120px" %}
     </div>
@@ -178,7 +186,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/rachel-cusk-parade.webp", "Parade cover", "120px" %}
     </div>
@@ -192,7 +200,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/dan-wang-breakneck.webp", "Breakneck cover", "120px" %}
     </div>
@@ -206,7 +214,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/annika-norlin-the-colony.jpg", "Colony cover", "120px" %}
     </div>
@@ -225,7 +233,7 @@ bodyClass: bg-amber
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2025</h2>
 
 <ul class="list-none p-0 m-0">
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/anne-lamott-bird-by-bird.jpg", "Bird by Bird cover", "120px" %}
     </div>
@@ -240,7 +248,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/gretchen-bakke-the-grid.jpg", "Any Person Is the Only Self cover", "120px" %}
     </div>
@@ -254,7 +262,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/elisa-gabbert-any-person-is-the-only-self.jpg", "Any Person Is the Only Self cover", "120px" %}
     </div>
@@ -269,7 +277,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/teju-cole-tremor.jpg", "Tremor cover", "120px" %}
     </div>
@@ -283,7 +291,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/hannah-arendt-eichmann-in-jerusalem.jpg", "Eichmann in Jerusalem cover", "120px" %}
     </div>
@@ -298,7 +306,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/war-and-turpentine-stefan-hertmans.jpg", "War and Turpentine cover", "120px" %}
     </div>
@@ -313,7 +321,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/vivian-gornick-situation-story.jpg", "The Situation and the Story cover", "120px" %}
     </div>
@@ -328,7 +336,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/joost-de-vries-hogere-machten.jpg", "Hogere Machten cover", "120px" %}
     </div>
@@ -342,7 +350,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/hang-kang-human-acts.jpg", "Human Acts cover", "120px" %}
     </div>
@@ -357,7 +365,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/vincenzo-latronico-perfection.jpg", "Perfection cover", "120px" %}
     </div>
@@ -371,7 +379,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/roddy-doyle-paddy-clarke-ha-ha-ha.jpg", "Paddy Clarke Ha Ha Ha cover", "120px" %}
     </div>
@@ -386,7 +394,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/rebecca-solnit-no-straight-road.jpg", "No Straight Road Takes You There cover", "120px" %}
     </div>
@@ -401,7 +409,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/lauren-elkin-scaffolding.jpg", "Scaffolding cover", "120px" %}
     </div>
@@ -416,7 +424,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/james-salter-burning-the-days.jpg", "Burning the Days cover", "120px" %}
     </div>
@@ -431,7 +439,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/marieke-de-mare-ik-ga-naar-de-schapen.jpg", "Ik Ga Naar de Schapen cover", "120px" %}
     </div>
@@ -446,7 +454,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/anjet-daanje-lied-van-ooievaar.jpg", "Het Lied van Ooievaar en Dromedaris cover", "120px" %}
     </div>
@@ -460,7 +468,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/eh-gombrich-story-of-art.jpg", "The Story of Art cover", "120px" %}
     </div>
@@ -475,7 +483,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/teju-cole-open-city.jpg", "Open City cover", "120px" %}
     </div>
@@ -490,7 +498,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/robin-kramer-achtertuinen.jpg", "Achtertuinen cover", "120px" %}
     </div>
@@ -504,7 +512,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/judith-hermann-kiezels.jpg", "Kiezels cover", "120px" %}
     </div>
@@ -518,7 +526,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/rita-bullwinkel-headshot.jpg", "Headshot cover", "120px" %}
     </div>
@@ -532,7 +540,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/anne-de-marcken-it-lasts-forever.jpg", "It Lasts Forever and then It's Over cover", "120px" %}
     </div>
@@ -547,7 +555,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/jo-ann-beard-collected-works.jpg", "Collected Works cover", "120px" %}
     </div>
@@ -562,7 +570,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/caoilinn-hughes-the-alternatives.jpg", "The Alternatives cover", "120px" %}
     </div>
@@ -577,7 +585,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/lieke-marsman-andere-planeet.jpg", "Op een andere planeet kunnen ze me redden cover", "120px" %}
     </div>
@@ -592,7 +600,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/abundance-ezra-klein.jpg", "Abundance cover", "120px" %}
     </div>
@@ -606,7 +614,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/mary-norris-between-you-and-me.jpeg", "Between You and Me: Confessions of a Comma Queen cover", "120px" %}
     </div>
@@ -620,7 +628,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/peter-buurman-kern-van-waarheid.jpeg", "Een Kern van Waarheid cover", "120px" %}
     </div>
@@ -634,7 +642,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/yael-van-der-wouden-safekeep.jpg", "The Safekeep cover", "120px" %}
     </div>
@@ -649,7 +657,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/annie-jacobsen-nuclear-war.jpg", "Nuclear War cover", "120px" %}
     </div>
@@ -664,7 +672,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/rob-van-essen-ik-kom-hier-nog-op-terug.jpg", "Ik Kom Hier Nog Op Terug cover", "120px" %}
     </div>
@@ -678,7 +686,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/becca-rothfeld-all-things-are-too-small.jpg", "All Things Are Too Small cover", "120px" %}
     </div>
@@ -692,7 +700,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/thomas-heerma-van-voss-het-archief.jpg", "Het Archief cover", "120px" %}
     </div>
@@ -707,7 +715,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/mark-hijink-focus.jpg", "Focus cover", "120px" %}
     </div>
@@ -719,7 +727,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/jesse-ball-the-repeat-room.jpg", "The Repeat Room cover", "120px" %}
     </div>
@@ -734,7 +742,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/kaveh-akbar-martyr.jpg", "Martyr! cover", "120px" %}
     </div>
@@ -746,7 +754,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/geert-mak-kleine-geschiedenis-van-amsterdam.jpg", "Een kleine geschiedenis van Amsterdam cover", "120px" %}
     </div>
@@ -763,7 +771,7 @@ bodyClass: bg-amber
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2024</h2>
 
 <ul class="list-none p-0 m-0">
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/marianne-brooker-intervals.jpg", "Intervals cover", "120px" %}
     </div>
@@ -778,7 +786,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/james-worthy-eerste-100-dagen-arne-slot.jpg", "De eerste 100 dagen van Arne Slot cover", "120px" %}
     </div>
@@ -790,7 +798,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/chronicles-of-doom.jpg", "The Chronicles of DOOM cover", "120px" %}
     </div>
@@ -805,7 +813,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/rachel-kushner-creation-lake.jpg", "Creation Lake cover", "120px" %}
     </div>
@@ -820,7 +828,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/alma-mathijsen-bloedsinaasappel.jpg", "Bloedsinaasappel cover", "120px" %}
     </div>
@@ -832,7 +840,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/lisa-weeda-aleksandra.webp", "Aleksandra cover", "120px" %}
     </div>
@@ -844,7 +852,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="poetry">
     <div class="book-cover">
       {% image "src/assets/library/thomas-clark-that-which-appears.jpg", "That Which Appears cover", "120px" %}
     </div>
@@ -856,7 +864,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/samantha-harvey-orbital.jpg", "Orbital cover", "120px" %}
     </div>
@@ -871,7 +879,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/perec-species-of-spaces.jpg", "Species of Spaces and Other Pieces cover", "120px" %}
     </div>
@@ -883,7 +891,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/claire-louise-bennett-pond.jpg", "Pond cover", "120px" %}
     </div>
@@ -898,7 +906,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/fleur-pierets-beton.jpg", "Beton cover", "120px" %}
     </div>
@@ -910,7 +918,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/miranda-july-all-fours.jpg", "All Fours cover", "120px" %}
     </div>
@@ -925,7 +933,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/sheila-heti-pure-colour.jpg", "Pure Colour cover", "120px" %}
     </div>
@@ -937,7 +945,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/jonas-eika-na-de-zon.jpg", "Na de zon cover", "120px" %}
     </div>
@@ -949,7 +957,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/every-man-for-himself.jpg", "Every Man for Himself and God Against All cover", "120px" %}
     </div>
@@ -964,7 +972,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/jamaica-kincaid-mr-potter.jpg", "Mr. Potter cover", "120px" %}
     </div>
@@ -976,7 +984,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/teresa-torres-continuous-discovery-habits.jpg", "Continuous Discovery Habits cover", "120px" %}
     </div>
@@ -988,7 +996,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/david-van-reybrouck-tegen-verkiezingen.jpg", "Tegen verkiezingen cover", "120px" %}
     </div>
@@ -1000,7 +1008,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/annie-dillard-teaching-a-stone-to-talk.jpg", "Teaching a Stone to Talk cover", "120px" %}
     </div>
@@ -1012,7 +1020,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="poetry">
     <div class="book-cover">
       {% image "src/assets/library/gerrit-kouwenaar-totaal-witte-kamer.jpg", "Totaal witte kamer cover", "120px" %}
     </div>
@@ -1024,7 +1032,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/miranda-july-first-bad-man.jpg", "The First Bad Man cover", "120px" %}
     </div>
@@ -1039,7 +1047,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/paul-auster-new-york-trilogy.jpg", "The New York Trilogy cover", "120px" %}
     </div>
@@ -1051,7 +1059,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/jason-hickel-degrowth.jpg", "Less is More cover", "120px" %}
     </div>
@@ -1063,7 +1071,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/cixin-liu-three-body-problem.jpg", "The Three-Body Problem cover", "120px" %}
     </div>
@@ -1075,7 +1083,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/paul-auster-baumgartner.jpg", "Baumgartner cover", "120px" %}
     </div>
@@ -1090,7 +1098,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/maeve-brennan-long-winded-lady.webp", "The Long-Winded Lady cover", "120px" %}
     </div>
@@ -1102,7 +1110,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/chantal-akerman-my-mother-laughs.jpg", "My Mother Laughs cover", "120px" %}
     </div>
@@ -1117,7 +1125,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/kati-marton-chancellor.jpg", "The Chancellor cover", "120px" %}
     </div>
@@ -1129,7 +1137,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/basje-boer-pose.jpg", "Pose cover", "120px" %}
     </div>
@@ -1141,7 +1149,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/james-salter-sport-and-a-pastime.jpg", "A Sport and a Pastime cover", "120px" %}
     </div>
@@ -1156,7 +1164,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/nan-shepherd-living-mountain.jpg", "The Living Mountain cover", "120px" %}
     </div>
@@ -1171,7 +1179,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/nick-cave-sick-bag-song.jpg", "The Sick Bag Song cover", "120px" %}
     </div>
@@ -1183,7 +1191,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/annie-ernaux-exteriors.jpg", "Exteriors cover", "120px" %}
     </div>
@@ -1198,7 +1206,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/jenny-grettve-abody-abode.jpg", "Abody, Abode cover", "120px" %}
     </div>
@@ -1210,7 +1218,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="poetry">
     <div class="book-cover">
       {% image "src/assets/library/louise-gluck-faithful-and-virtuous-night.jpg", "Faithful and Virtuous Night cover", "120px" %}
     </div>
@@ -1222,7 +1230,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/sacha-bronwasser-luister.jpg", "Luister cover", "120px" %}
     </div>
@@ -1237,7 +1245,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/jo-ann-beard-cheri.jpg", "Cheri cover", "120px" %}
     </div>
@@ -1252,7 +1260,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/willem-elsschot-dwaallicht.webp", "Het Dwaallicht cover", "120px" %}
     </div>
@@ -1269,7 +1277,7 @@ bodyClass: bg-amber
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2023</h2>
 
 <ul class="list-none p-0 m-0">
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/deborah-levy-august-blue.jpg", "August Blue cover", "120px" %}
     </div>
@@ -1284,7 +1292,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/paul-lynch-prophet-song.jpg", "Prophet Song cover", "120px" %}
     </div>
@@ -1299,7 +1307,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/reinier-de-graaf-architect-verb.jpg", "architect, verb. cover", "120px" %}
     </div>
@@ -1311,7 +1319,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/bregje-hofstede-oersoep.webp", "Oersoep cover", "120px" %}
     </div>
@@ -1323,7 +1331,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/thankam-mathews-all-this-could-be-different.jpg", "All This Could Be Different cover", "120px" %}
     </div>
@@ -1335,7 +1343,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/annie-dillard-the-writing-life.jpg", "The Writing Life cover", "120px" %}
     </div>
@@ -1350,7 +1358,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/joan-didion-year-of-magical-thinking.jpg", "The Year of Magical Thinking cover", "120px" %}
     </div>
@@ -1365,7 +1373,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/sylvia-plath-bell-jar.jpeg", "The Bell Jar cover", "120px" %}
     </div>
@@ -1380,7 +1388,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/frank-herbert-dune-messiah.jpg", "Dune Messiah cover", "120px" %}
     </div>
@@ -1392,7 +1400,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/anthony-bourdain-kitchen-confidential.jpg", "Kitchen Confidential cover", "120px" %}
     </div>
@@ -1404,7 +1412,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/anne-lamott-bird-by-bird.jpg", "Bird by Bird cover", "120px" %}
     </div>
@@ -1419,7 +1427,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/keith-phipps-age-of-cage.jpg", "Age of Cage cover", "120px" %}
     </div>
@@ -1431,7 +1439,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/olga-tokarczuk-plow.jpg", "Drive Your Plow Over the Bones of the Dead cover", "120px" %}
     </div>
@@ -1446,7 +1454,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/peter-mendelsund-what-we-see-when-we-read.jpg", "What We See When We Read cover", "120px" %}
     </div>
@@ -1458,7 +1466,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/oliver-burkeman-4000-weeks.jpg", "Four Thousand Weeks cover", "120px" %}
     </div>
@@ -1470,7 +1478,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/tim-urban-whats-our-problem.jpg", "What's Our Problem? cover", "120px" %}
     </div>
@@ -1482,7 +1490,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/brad-gilbert-winning-ugly.jpg", "Winning Ugly cover", "120px" %}
     </div>
@@ -1494,7 +1502,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/john-hersey-hiroshima.jpg", "Hiroshima cover", "120px" %}
     </div>
@@ -1509,7 +1517,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/esther-perel-mating-in-captivity.jpg", "Mating in Captivity cover", "120px" %}
     </div>
@@ -1521,7 +1529,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/blake-bailey-roth.jpeg", "Philip Roth cover", "120px" %}
     </div>
@@ -1536,7 +1544,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/how-much-house.jpg", "How Much House? cover", "120px" %}
     </div>
@@ -1548,7 +1556,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/nick-cave-faith-hope-carnage.jpg", "Faith, Hope and Carnage cover", "120px" %}
     </div>
@@ -1563,7 +1571,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/work-less-do-more.jpg", "Work Less, Do More cover", "120px" %}
     </div>
@@ -1578,7 +1586,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/philip-roth-human-stain.jpg", "The Human Stain cover", "120px" %}
     </div>
@@ -1590,7 +1598,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/natalia-ginzburg-dry-heart.jpg", "The Dry Heart cover", "120px" %}
     </div>
@@ -1605,7 +1613,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/bill-gates-climate-disaster.jpg", "How to Avoid a Climate Disaster cover", "120px" %}
     </div>
@@ -1617,7 +1625,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/mieko-kawakami-all-the-lovers.jpg", "All the Lovers in the Night cover", "120px" %}
     </div>
@@ -1632,7 +1640,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/banana-yoshimoto-kitchen.jpg", "Kitchen cover", "120px" %}
     </div>
@@ -1644,7 +1652,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/lize-spit-de-eerlijke-vinder.jpeg", "De eerlijke vinder cover", "120px" %}
     </div>
@@ -1656,7 +1664,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/ed-yong-immense-world.jpg", "An Immense World cover", "120px" %}
     </div>
@@ -1671,7 +1679,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/eduardo-halfon-deuntje.jpg", "Deuntje cover", "120px" %}
     </div>
@@ -1683,7 +1691,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/lize-spit-ik-ben-er-niet.jpg", "Ik ben er niet cover", "120px" %}
     </div>
@@ -1698,7 +1706,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/gallwey-inner-game-of-tennis.jpg", "The Inner Game of Tennis cover", "120px" %}
     </div>
@@ -1710,7 +1718,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/quentin-tarantino-cinema-speculation.jpg", "Cinema Speculation cover", "120px" %}
     </div>
@@ -1722,7 +1730,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/rick-rubin-creative-act.jpg", "The Creative Act cover", "120px" %}
     </div>
@@ -1734,7 +1742,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/richard-seymour-twittering-machine.jpeg", "The Twittering Machine cover", "120px" %}
     </div>
@@ -1746,7 +1754,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/annie-ernaux-getting-lost.jpg", "Getting Lost cover", "120px" %}
     </div>
@@ -1761,7 +1769,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/robert-macfarlane-landmarks.jpg", "Landmarks cover", "120px" %}
     </div>
@@ -1781,7 +1789,7 @@ bodyClass: bg-amber
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2022</h2>
 
 <ul class="list-none p-0 m-0">
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/kurkov-grey-bees.webp", "Grey Bees cover", "120px" %}
     </div>
@@ -1796,7 +1804,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/moser-sontag.jpg", "Sontag cover", "120px" %}
     </div>
@@ -1811,7 +1819,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/pastoor-grip.jpg", "Grip cover", "120px" %}
     </div>
@@ -1823,7 +1831,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/dignan-brave-new-work.jpg", "Brave New Work cover", "120px" %}
     </div>
@@ -1835,7 +1843,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/david-foster-wallace-on-tennis.webp", "On Tennis cover", "120px" %}
     </div>
@@ -1850,7 +1858,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/norman-mccartney.jpg", "Paul McCartney cover", "120px" %}
     </div>
@@ -1862,7 +1870,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/mcphee-draft-no-4.avif", "Draft No. 4 cover", "120px" %}
     </div>
@@ -1877,7 +1885,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/wilcox-patch-work.jpg", "Patch Work cover", "120px" %}
     </div>
@@ -1892,7 +1900,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/teju-cole-black-paper.jpg", "Black Paper cover", "120px" %}
     </div>
@@ -1907,7 +1915,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="poetry">
     <div class="book-cover">
       {% image "src/assets/library/nelson-bluets.jpg", "Bluets cover", "120px" %}
     </div>
@@ -1922,7 +1930,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/abdurraqib-little-devil.jpeg", "A Little Devil in America cover", "120px" %}
     </div>
@@ -1937,7 +1945,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/malcolm-silent-woman.jpg", "The Silent Woman cover", "120px" %}
     </div>
@@ -1949,7 +1957,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/ali-smith-free-love-and-other-stories.jpg", "Free Love And Other Stories cover", "120px" %}
     </div>
@@ -1961,7 +1969,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/albert-alberts-de-bomen.jpg", "De Bomen cover", "120px" %}
     </div>
@@ -1973,7 +1981,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/morrison-recitatif.jpg", "Recitatif cover", "120px" %}
     </div>
@@ -1985,7 +1993,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/hirst-shortest-history-of-europe.jpg", "The Shortest History of Europe cover", "120px" %}
     </div>
@@ -1997,7 +2005,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/andrea-prins-wonen.jpg", "Wonen cover", "120px" %}
     </div>
@@ -2009,7 +2017,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/dillon-suppose-a-sentence.jpg", "Suppose a Sentence cover", "120px" %}
     </div>
@@ -2024,7 +2032,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="poetry">
     <div class="book-cover">
       {% image "src/assets/library/vuong-time-is-a-mother.jpg", "Time is a Mother cover", "120px" %}
     </div>
@@ -2039,7 +2047,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/ditlevsen-dependency.jpg", "Dependency cover", "120px" %}
     </div>
@@ -2054,7 +2062,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/brouwers-client-busken.jpg", "Cliënt E. Busken cover", "120px" %}
     </div>
@@ -2066,7 +2074,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/kawakami-heaven.jpg", "Heaven cover", "120px" %}
     </div>
@@ -2078,7 +2086,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/marsman-in-mijn-mand.jpg", "In mijn mand cover", "120px" %}
     </div>
@@ -2093,7 +2101,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/dillon-essayism.jpg", "Essayism cover", "120px" %}
     </div>
@@ -2108,7 +2116,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/hamid-exit-west.jpg", "Exit West cover", "120px" %}
     </div>
@@ -2123,7 +2131,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/platt-on-dwelling.jpeg", "Architects on Dwelling cover", "120px" %}
     </div>
@@ -2135,7 +2143,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/chris-power-lonely-man.jpg", "A Lonely Man cover", "120px" %}
     </div>
@@ -2147,7 +2155,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/pfeijffer-monterosso.jpeg", "Monterosso mon amour cover", "120px" %}
     </div>
@@ -2159,7 +2167,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/marieke-lucas-rijneveld-warmtefort.jpg", "Het warmtefort cover", "120px" %}
     </div>
@@ -2171,7 +2179,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/james-worthy-liverpool.jpg", "Liverpool cover", "120px" %}
     </div>
@@ -2183,7 +2191,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/lieke-marsman-tegenovergestelde-van-een-mens.jpg", "Het tegenovergestelde van een mens cover", "120px" %}
     </div>
@@ -2195,7 +2203,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/sang-young-park-liefde.jpg", "Liefde in de grote stad cover", "120px" %}
     </div>
@@ -2207,7 +2215,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/charnas-dilla-time.jpg", "Dilla Time cover", "120px" %}
     </div>
@@ -2222,7 +2230,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/hochstenbach-uitgewoond.jpg", "Uitgewoond cover", "120px" %}
     </div>
@@ -2234,7 +2242,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/coelhoalchemist.jpg", "The Alchemist cover", "120px" %}
     </div>
@@ -2246,7 +2254,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/jaeggy-tucht.jpg", "De gelukzalige jaren van tucht cover", "120px" %}
     </div>
@@ -2258,7 +2266,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/mordue-boy-on-fire.jpg", "Boy on Fire cover", "120px" %}
     </div>
@@ -2273,7 +2281,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/diop-atnight-all-blood-is-black.jpeg", "At Night All Blood Is Black cover", "120px" %}
     </div>
@@ -2285,7 +2293,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/vigdis-hjorth-posthorn.jpg", "Long Live the Post Horn! cover", "120px" %}
     </div>
@@ -2300,7 +2308,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/levy-hot-milk.jpg", "Hot Milk cover", "120px" %}
     </div>
@@ -2312,7 +2320,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="poetry">
     <div class="book-cover">
       {% image "src/assets/library/vuong-on-earth-were-briefly-gorgeous.jpg", "On Earth We're Briefly Gorgeous cover", "120px" %}
     </div>
@@ -2327,7 +2335,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/kawakami-breasts-egs.jpg", "Breasts and Eggs cover", "120px" %}
     </div>
@@ -2347,7 +2355,7 @@ bodyClass: bg-amber
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2021</h2>
 
 <ul class="list-none p-0 m-0">
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/laing-everybody.jpg", "Everybody cover", "120px" %}
     </div>
@@ -2359,7 +2367,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/epictetus-manual.jpg", "The Manual cover", "120px" %}
     </div>
@@ -2371,7 +2379,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/warzel-petersen-out-of-office.jpg", "Out of Office cover", "120px" %}
     </div>
@@ -2383,7 +2391,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/tosches-liston.jpg", "The Devil and Sonny Liston cover", "120px" %}
     </div>
@@ -2398,7 +2406,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/demick-besieged.jpg", "Besieged cover", "120px" %}
     </div>
@@ -2413,7 +2421,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/gurnah-afterlives.webp", "Afterlives cover", "120px" %}
     </div>
@@ -2428,7 +2436,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/malcolm-forty-one-false-starts.jpg", "Forty-one False Starts cover", "120px" %}
     </div>
@@ -2440,7 +2448,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/hitz-lost-in-thought.jpg", "Lost in Thought cover", "120px" %}
     </div>
@@ -2452,7 +2460,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/reybrouck-revolusi.jpg", "Revolusi cover", "120px" %}
     </div>
@@ -2467,7 +2475,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/cusk-second-place.jpg", "Second Place cover", "120px" %}
     </div>
@@ -2479,7 +2487,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/kolbert-under-a-white-sky.jpg", "Under a White Sky cover", "120px" %}
     </div>
@@ -2491,7 +2499,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/lispector-hour-of-the-star.jpg", "The Hour of the Star cover", "120px" %}
     </div>
@@ -2506,7 +2514,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/deborah-levy-real-estate.jpg", "Real Estate cover", "120px" %}
     </div>
@@ -2521,7 +2529,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/dries-muus-de-afwijking.jpg", "De afwijking cover", "120px" %}
     </div>
@@ -2533,7 +2541,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/zetter-countdown-to-zero-day.jpg", "Countdown to Zero Day cover", "120px" %}
     </div>
@@ -2545,7 +2553,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/sam-johnson-schlee-living-rooms.jpg", "Living Rooms cover", "120px" %}
     </div>
@@ -2557,7 +2565,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/stolzoff-good-enough-job.jpg", "The Good Enough Job cover", "120px" %}
     </div>
@@ -2569,7 +2577,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/sebald-austerlitz.jpg", "Austerlitz cover", "120px" %}
     </div>
@@ -2584,7 +2592,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/perez-invisible-women.jpg", "Invisible Women cover", "120px" %}
     </div>
@@ -2596,7 +2604,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/durga-chew-bose-too-much.jpg", "Too Much and Not the Mood cover", "120px" %}
     </div>
@@ -2611,7 +2619,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/gerda-blees-wij-zijn-licht.jpg", "Wij zijn licht cover", "120px" %}
     </div>
@@ -2623,7 +2631,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/george-saunders-lincoln-in-the-bardo.jpg", "Lincoln in the Bardo cover", "120px" %}
     </div>
@@ -2635,7 +2643,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/tobi-lakmaker-geschiedenis.jpg", "De geschiedenis van mijn seksualiteit cover", "120px" %}
     </div>
@@ -2647,7 +2655,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/ditlevsen-youth.jpg", "Youth cover", "120px" %}
     </div>
@@ -2662,7 +2670,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/annejet-van-der-zijl-anna.jpg", "Anna cover", "120px" %}
     </div>
@@ -2677,7 +2685,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/bervoets-wat-wij-zagen.jpg", "Wat wij zagen cover", "120px" %}
     </div>
@@ -2689,7 +2697,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/maartje-wortel-groef.jpg", "De groef: een wandeling cover", "120px" %}
     </div>
@@ -2701,7 +2709,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/tomoka-lenteuin.jpg", "Lentetuin cover", "120px" %}
     </div>
@@ -2713,7 +2721,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/ditlevsen-childhood.jpg", "Childhood cover", "120px" %}
     </div>
@@ -2728,7 +2736,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/leilani-luster.jpg", "Luster cover", "120px" %}
     </div>
@@ -2743,7 +2751,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/kazuo-ishiguro-klara-and-the-sun.jpg", "Klara and the Sun cover", "120px" %}
     </div>
@@ -2755,7 +2763,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/patricia-lockwood-no-one-is-talking-about-this.jpg", "No One Is Talking About This cover", "120px" %}
     </div>
@@ -2767,7 +2775,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/yaa-gyasi-homegoing.jpg", "Homegoing cover", "120px" %}
     </div>
@@ -2779,7 +2787,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/george-saunders-swim-in-a-pond.jpg", "A Swim in a Pond in the Rain cover", "120px" %}
     </div>
@@ -2794,7 +2802,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/marieke-lucas-rijneveld-avond-is-ongemak.jpg", "De avond is ongemak cover", "120px" %}
     </div>
@@ -2806,7 +2814,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/jenny-offill-weather.jpg", "Weather cover", "120px" %}
     </div>
@@ -2818,7 +2826,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/otegha-uwagba-whites.jpg", "Whites cover", "120px" %}
     </div>
@@ -2830,7 +2838,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/ernaux-the-years.jpg", "The Years cover", "120px" %}
     </div>
@@ -2845,7 +2853,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/hermans-god-denkbaar.jpg", "De God denkbaar cover", "120px" %}
     </div>
@@ -2857,7 +2865,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/andrea-wulf-invention-of-nature.jpg", "The Invention of Nature cover", "120px" %}
     </div>
@@ -2872,7 +2880,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/curtis-sittenfeld-think-it-say-it.png", "You Think It, I'll Say It cover", "120px" %}
     </div>
@@ -2884,7 +2892,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/asimov-foundation.jpg", "Foundation cover", "120px" %}
     </div>
@@ -2896,7 +2904,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/isaak-babel-alle-verhalen.jpg", "Alle verhalen cover", "120px" %}
     </div>
@@ -2908,7 +2916,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/bryson-short-history.jpg", "A Short History of Nearly Everything cover", "120px" %}
     </div>
@@ -2920,7 +2928,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/svetlana-alexievich-chernobyl-prayer.jpg", "Chernobyl Prayer cover", "120px" %}
     </div>
@@ -2935,7 +2943,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/natalia-ginzburg-little-virtues.jpg", "The Little Virtues cover", "120px" %}
     </div>
@@ -2947,7 +2955,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/ogawa-memory-police.jpg", "The Memory Police cover", "120px" %}
     </div>
@@ -2962,7 +2970,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/roth-plot-against-america.jpg", "The Plot Against America cover", "120px" %}
     </div>
@@ -2974,7 +2982,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/anne-carson-autobiography-of-red.jpg", "Autobiography of Red cover", "120px" %}
     </div>
@@ -2989,7 +2997,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/obama-promised-land.jpg", "A Promised Land cover", "120px" %}
     </div>
@@ -3009,7 +3017,7 @@ bodyClass: bg-amber
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2020</h2>
 
 <ul class="list-none p-0 m-0">
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/kushner-mars-room.jpg", "The Mars Room cover", "120px" %}
     </div>
@@ -3024,7 +3032,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/hesse-siddhartha.jpg", "Siddhartha cover", "120px" %}
     </div>
@@ -3036,7 +3044,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/correspondent-in-amerika.jpg", "De Correspondent in Amerika cover", "120px" %}
     </div>
@@ -3048,7 +3056,7 @@ bodyClass: bg-amber
       DEC
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/kaufman-antkind.jpg", "Antkind cover", "120px" %}
     </div>
@@ -3063,7 +3071,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/patti-smith-year-of-the-monkey.jpg", "Year of the Monkey cover", "120px" %}
     </div>
@@ -3078,7 +3086,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/vivian-gornick-situation-story.jpg", "The Situation and the Story cover", "120px" %}
     </div>
@@ -3093,7 +3101,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/frank-herbert-dune.jpg", "Dune cover", "120px" %}
     </div>
@@ -3108,7 +3116,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/zadie-smith-intimations.jpg", "Intimations cover", "120px" %}
     </div>
@@ -3123,7 +3131,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/attached-heller.jpg", "Attached cover", "120px" %}
     </div>
@@ -3135,7 +3143,7 @@ bodyClass: bg-amber
       SEP
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/cusk-coventry.jpg", "Coventry cover", "120px" %}
     </div>
@@ -3147,7 +3155,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/gottlieb-talk-to-someone.jpg", "Maybe You Should Talk to Someone cover", "120px" %}
     </div>
@@ -3159,7 +3167,7 @@ bodyClass: bg-amber
       AUG
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/kendi-antiracist.jpg", "How to Be an Antiracist cover", "120px" %}
     </div>
@@ -3171,7 +3179,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/morrison-beloved.jpg", "Beloved cover", "120px" %}
     </div>
@@ -3183,7 +3191,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/tartt-secret-history.jpg", "The Secret History cover", "120px" %}
     </div>
@@ -3198,7 +3206,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/hallo-witte-mensen.jpg", "Hallo witte mensen cover", "120px" %}
     </div>
@@ -3210,7 +3218,7 @@ bodyClass: bg-amber
       JUL
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/wiener-uncanny-valley.jpg", "Uncanny Valley cover", "120px" %}
     </div>
@@ -3222,7 +3230,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/mullen-baldwin.jpg", "James Baldwin cover", "120px" %}
     </div>
@@ -3234,7 +3242,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/senece-shortness-of-life.jpg", "On the Shortness of Life cover", "120px" %}
     </div>
@@ -3246,7 +3254,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/tartt-goldfinch.webp", "The Goldfinch cover", "120px" %}
     </div>
@@ -3261,7 +3269,7 @@ bodyClass: bg-amber
       JUN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/macfarlane-gifts-of-reading.jpg", "The Gifts of Reading cover", "120px" %}
     </div>
@@ -3273,7 +3281,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/gretchen-mcculloch-because-internet.jpg", "Because Internet cover", "120px" %}
     </div>
@@ -3285,7 +3293,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/snow-leopard-mathiesen.jpg", "The Snow Leopard cover", "120px" %}
     </div>
@@ -3300,7 +3308,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/cusk-kudos.jpg", "Kudos cover", "120px" %}
     </div>
@@ -3315,7 +3323,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/cusk-transit.jpg", "Transit cover", "120px" %}
     </div>
@@ -3330,7 +3338,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/cusk-outline.jpg", "Outline cover", "120px" %}
     </div>
@@ -3345,7 +3353,7 @@ bodyClass: bg-amber
       MAY
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/havrilesky-what-if-this-were-enough.jpg", "What If This Were Enough? cover", "120px" %}
     </div>
@@ -3357,7 +3365,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/robert-macfarlane-underland.jpg", "Underland cover", "120px" %}
     </div>
@@ -3372,7 +3380,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/zadie-smith-changing-my-mind.jpg", "Changing My Mind cover", "120px" %}
     </div>
@@ -3387,7 +3395,7 @@ bodyClass: bg-amber
       APR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/morrison-jazz.jpg", "Jazz cover", "120px" %}
     </div>
@@ -3399,7 +3407,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/deborah-levy-cost-of-living.jpg", "The Cost of Living cover", "120px" %}
     </div>
@@ -3414,7 +3422,7 @@ bodyClass: bg-amber
       MAR
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/pfeijffer-grand-hotel-europa.jpg", "Grand Hotel Europa cover", "120px" %}
     </div>
@@ -3429,7 +3437,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/yu-miri-tokyo-ueno-station.jpg", "Tokyo Ueno Station cover", "120px" %}
     </div>
@@ -3441,7 +3449,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/james-baldwin-another-country.jpg", "Another Country cover", "120px" %}
     </div>
@@ -3453,7 +3461,7 @@ bodyClass: bg-amber
       FEB
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/colson-whitehead-nickel-boys.jpg", "The Nickel Boys cover", "120px" %}
     </div>
@@ -3468,7 +3476,7 @@ bodyClass: bg-amber
       JAN
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/tolentino-trick-mirror.jpg", "Trick Mirror cover", "120px" %}
     </div>
@@ -3485,7 +3493,7 @@ bodyClass: bg-amber
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2019</h2>
 
 <ul class="list-none p-0 m-0">
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/coates-water-dancer.jpg", "The Water Dancer cover", "120px" %}
     </div>
@@ -3500,7 +3508,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/steve-brusatte-rise-fall-dinosaurs.jpg", "The Rise and Fall of the Dinosaurs cover", "120px" %}
     </div>
@@ -3515,7 +3523,7 @@ bodyClass: bg-amber
       NOV
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/joan-didion-play-it-as-it-lays.jpg", "Play It as It Lays cover", "120px" %}
     </div>
@@ -3530,7 +3538,7 @@ bodyClass: bg-amber
       OCT
     </span>
   </li>
-  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item">
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="non-fiction">
     <div class="book-cover">
       {% image "src/assets/library/maggie-nelson-argonauts.jpg", "The Argonauts cover", "120px" %}
     </div>
@@ -3547,6 +3555,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">258</span> books on the list. 143 books are fiction, 115 are non-fiction.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">258</span> books on the list. 121 books are fiction, 131 are non-fiction, and 6 are poetry.</em></p>
 
 <script src="/js/library.js"></script>
