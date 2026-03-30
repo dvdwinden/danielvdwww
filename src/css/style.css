@@ -867,6 +867,45 @@ ul.list-none {
     }
 }
 
+.genre-filter-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: rgb(107 114 128);
+    transition: color 0.2s;
+}
+
+.genre-filter-btn:hover {
+    color: rgb(17 24 39);
+}
+
+.dark .genre-filter-btn:hover {
+    color: rgb(255 255 255);
+}
+
+.genre-filter-btn.is-active {
+    color: rgb(17 24 39);
+}
+
+.dark .genre-filter-btn.is-active {
+    color: rgb(255 255 255);
+}
+
+.book-item .flex-col,
+.book-item > span {
+    transition: opacity 0.3s ease;
+}
+
+.book-item.faded {
+    pointer-events: none;
+}
+
+.book-item.faded .flex-col,
+.book-item.faded > span {
+    opacity: 0.3;
+}
+
 .book-star {
     font-size: 12px;
     position: relative;

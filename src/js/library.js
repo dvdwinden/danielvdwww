@@ -43,6 +43,59 @@
   }
 })();
 
+// Fiction / non-fiction filter toggle
+(function () {
+  const filterBtns = document.querySelectorAll('.genre-filter-btn');
+  if (!filterBtns.length) return;
+
+  const bookItems = document.querySelectorAll('.book-item');
+
+  function applyFilter(filter) {
+    bookItems.forEach(item => {
+      const genre = item.dataset.genre;
+      if (!genre || genre === filter) {
+        item.classList.remove('faded');
+      } else {
+        item.classList.add('faded');
+      }
+    });
+
+    // Hide year headings whose entire list is faded
+    document.querySelectorAll('h2.text-2xl').forEach(h2 => {
+      const ul = h2.nextElementSibling;
+      if (!ul || ul.tagName !== 'UL') return;
+      const visible = ul.querySelectorAll('.book-item:not(.faded)').length;
+      h2.style.display = visible ? '' : 'none';
+      ul.style.display = visible ? '' : 'none';
+    });
+  }
+
+  function clearFilter() {
+    bookItems.forEach(item => item.classList.remove('faded'));
+    document.querySelectorAll('h2.text-2xl').forEach(h2 => {
+      h2.style.display = '';
+      const ul = h2.nextElementSibling;
+      if (ul) ul.style.display = '';
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      const isActive = btn.classList.contains('is-active');
+
+      filterBtns.forEach(b => b.classList.remove('is-active'));
+
+      if (isActive) {
+        clearFilter();
+      } else {
+        btn.classList.add('is-active');
+        applyFilter(filter);
+      }
+    });
+  });
+})();
+
 // Show book covers on touch devices as you scroll past them
 document.addEventListener('DOMContentLoaded', function () {
   // Only run on touch devices
