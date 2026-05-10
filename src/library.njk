@@ -22,6 +22,35 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
+      {% image "src/assets/library/david-szalay-flesh.png", "Flesh cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/2bafdfb0-9640-440f-b117-359cfcd77ad8" class="font-serif text-lg font-medium" target="_blank" rel="external" title="Flesh by David Szalay">Flesh</a>
+        <span class="book-star">★</span>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">David Szalay</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      MAY
+    </span>
+  </li>
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
+    <div class="book-cover">
+      {% image "src/assets/library/jan-vantoortelboom-mauk.png", "Mauk cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/9cf121b1-d525-4fe2-9711-d469ab8802df" class="font-serif text-lg font-medium" target="_blank" rel="external" title="Mauk by Jan Vantoortelboom">Mauk</a>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">Jan Vantoortelboom</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      MAY
+    </span>
+  </li>
+  <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
+    <div class="book-cover">
       {% image "src/assets/library/wendell-berry-the-wild-birds.png", "The Wild Birds cover", "120px" %}
     </div>
     <div class="flex flex-col">
@@ -3615,6 +3644,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">262</span> books on the list. 123 books are fiction, 133 are non-fiction, and 6 are poetry.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">264</span> books on the list. 125 books are fiction, 133 are non-fiction, and 6 are poetry.</em></p>
 
 <script src="/js/library.js"></script>
