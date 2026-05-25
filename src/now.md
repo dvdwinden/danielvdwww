@@ -14,6 +14,8 @@ During the month of May I haven’t checked in on social media (a [Dutch initiat
 
 I keep chipping away at a variety of personal projects. We still have copies of [_TRANSCRIPT_ Magazine](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") to sell, and may attend another magazine fair in the future; the [NoGood book](https://nogood.studio/posts/products/nogood-book-collectors/?ref=daniel.pizza "NoGood book"), which I wrote, is coming out in June; my [monthly newsletter](http://trema.website?ref=daniel.pizza "Trema, my monthly newsletter on books worth reading") on books worth reading is still running; and, I am collaborating with [Ilse Weisfelt](https://www.instagram.com/ilseweisfelt/) on her new website.
 
+Oh, and the homepage of [Trema](https://www.trema.website/?ref=daniel.pizza) received a facelift.
+
 <div id="github-calendar" style="display: none;" class="mt-8"></div>
 
 I still am not writing as much as I’d like—the five-day workweek, back since I [joined Enode](/journal/next-chapter-at-enode), still is taking some getting used to. Beyond the monthly publication of my [newsletter](/newsletter) I struggle to make the time and find the energy to write extensively, whether it be early in the morning or later in the evening.
