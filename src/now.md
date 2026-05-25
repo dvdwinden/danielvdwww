@@ -14,7 +14,20 @@ During the month of May I haven’t checked in on social media (a [Dutch initiat
 
 I keep chipping away at a variety of personal projects. We still have copies of [_TRANSCRIPT_ Magazine](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") to sell, and may attend another magazine fair in the future; the [NoGood book](https://nogood.studio/posts/products/nogood-book-collectors/?ref=daniel.pizza "NoGood book"), which I wrote, is coming out in June; my [monthly newsletter](http://trema.website?ref=daniel.pizza "Trema, my monthly newsletter on books worth reading") on books worth reading is still running; and, I am collaborating with [Ilse Weisfelt](https://www.instagram.com/ilseweisfelt/) on her new website.
 
-Oh, and the homepage of [Trema](https://www.trema.website/?ref=daniel.pizza) received a facelift.
+</div>
+
+<div>
+<figure class="w-full">
+  {% retinaImage "src/assets/now/trema-homepage-facelift.png", "(A facelift for Trema’s homepage)" %}
+  <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
+    A facelift for Trema’s homepage.
+  </figcaption>
+</figure>
+</div>
+
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+
+The homepage of [Trema](https://www.trema.website/?ref=daniel.pizza) received a facelift. I’ve done away with the featured post at the top, and created more space for the nine latest books I’ve covered. Alongside these changes, I’ve applied numerous typographic improvements throughout the site, which should make it easier and more delightful to read across desktop and mobile resolutions, in light and in dark mode.
 
 <div id="github-calendar" style="display: none;" class="mt-8"></div>
 
