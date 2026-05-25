@@ -29,13 +29,13 @@ I keep chipping away at a variety of personal projects. We still have copies of 
 
 The homepage of [Trema](https://www.trema.website/?ref=daniel.pizza) received a facelift. I’ve done away with the featured post at the top, and created more space for the nine latest books I’ve covered. Alongside these changes, I’ve applied numerous typographic improvements throughout the site, which should make it easier and more delightful to read across desktop and mobile resolutions, in light and in dark mode.
 
-<div id="github-calendar" style="display: none;" class="mt-8"></div>
+<div id="github-calendar" style="display: none;" class="mt-16 mb-16"></div>
 
 I still am not writing as much as I’d like—the five-day workweek, back since I [joined Enode](/journal/next-chapter-at-enode), still is taking some getting used to. Beyond the monthly publication of my [newsletter](/newsletter) I struggle to make the time and find the energy to write extensively, whether it be early in the morning or later in the evening.
 
 From January onwards I was injured, but I am running again. Tennis has taken a backseat until the summer tournaments roll around again.
 
-<div id="strava-calendar" style="display: none;" class="mt-8"></div>
+<div id="strava-calendar" style="display: none;" class="mt-16 mb-16"></div>
 
 
 _The /now page is based on an idea by [Derek Sivers](https://nownownow.com/about)._
