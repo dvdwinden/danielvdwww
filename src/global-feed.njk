@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
     <link href="{% if post.data.external_url %}{{ post.data.external_url | escape }}{% else %}{{ absolutePostUrl }}{% endif %}"/>
     <updated>{{ post.data.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{% if post.data.external_url %}&lt;p&gt;&lt;small&gt;&lt;strong&gt;Link:&lt;/strong&gt; &lt;a href="{{ post.data.external_url | escape }}"&gt;{{ post.data.external_url | escape }}&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;&lt;hr&gt;{% endif %}{{ post.templateContent | removeH1 | rssSafe | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content type="html">{% if post.data.external_url %}&lt;p&gt;&lt;small&gt;&lt;strong&gt;Link:&lt;/strong&gt; &lt;a href="{{ post.data.external_url | escape }}"&gt;{{ post.data.external_url | escape }}&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;&lt;hr&gt;{% endif %}{{ post.templateContent | removeH1 | rssSafe | htmlToAbsoluteUrls(absolutePostUrl) }}&lt;hr&gt;&lt;p&gt;&lt;em&gt;Thank you for reading my RSS feed. If you’d like to respond, you can &lt;a href="mailto:d.vanderwinden@gmail.com"&gt;email me&lt;/a&gt; or seek me out on &lt;a href="https://bsky.app/profile/daniel.pizza"&gt;Bluesky&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
   </entry>
   {%- endfor %}
 </feed>
