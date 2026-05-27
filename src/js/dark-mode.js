@@ -22,27 +22,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Check the page background class to determine the appropriate theme color
     const pageBackground = document.getElementById('page-background');
-    let backgroundColor = '#f5f7fa'; // Default fallback
+    let backgroundColor = '#ededea'; // Default fallback (bg-blue)
 
     if (pageBackground) {
       const backgroundClasses = pageBackground.className;
 
       if (backgroundClasses.includes('bg-stone')) {
-        backgroundColor = '#e8e6e0'; // Stone background
+        backgroundColor = '#e8e6e0';
       } else if (backgroundClasses.includes('bg-blue')) {
-        backgroundColor = '#f5f7fa'; // Blue background
+        backgroundColor = '#ededea';
       } else if (backgroundClasses.includes('bg-green')) {
-        backgroundColor = '#e8f0e8'; // Green background
+        backgroundColor = '#e3e7df';
       } else if (backgroundClasses.includes('bg-amber')) {
-        backgroundColor = '#fef0e8'; // Amber background
+        backgroundColor = '#efe9e2';
       } else if (backgroundClasses.includes('bg-beige')) {
-        backgroundColor = '#fcf8e8'; // Beige background
+        backgroundColor = '#fcf8e8';
       } else if (backgroundClasses.includes('bg-cream')) {
-        backgroundColor = '#faf6e8'; // Cream background
+        backgroundColor = '#faf6e8';
       } else if (backgroundClasses.includes('bg-red')) {
-        backgroundColor = '#fae8e8'; // Red background
+        backgroundColor = '#fae8e8';
       } else if (backgroundClasses.includes('bg-purple')) {
-        backgroundColor = '#faf0f5'; // Purple background
+        backgroundColor = '#faf0f5';
       }
     }
 

@@ -87,7 +87,7 @@ html {
     overflow-y: scroll;
     /* Background color will be set dynamically by JavaScript to match page background */
     /* Default fallback for initial render before JS loads */
-    background-color: #f5f7fa;
+    background-color: #ededea;
     min-height: 100%;
     min-height: -webkit-fill-available;
     /* iOS Safari fix */
