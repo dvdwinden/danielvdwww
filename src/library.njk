@@ -20,6 +20,21 @@ bodyClass: bg-amber
 
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2026</h2>
 <ul class="list-none p-0 m-0">
+<li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
+    <div class="book-cover">
+      {% image "src/assets/library/james-wood-how-fiction-works.jpg", "How Fiction Works cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-baseline gap-2">
+        <a href="https://app.thestorygraph.com/books/a0f9bc71-17e3-4262-abb1-0164060bfaf5" class="font-serif text-lg font-medium" target="_blank" rel="external" title="All That Man Is by David Szalay">How Fiction Works</a>
+        <span class="book-star">★</span>
+      </div>
+      <span class="font-serif text-md text-black/70 dark:text-white/60 italic">James Wood</span>
+    </div>
+    <span class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">
+      MAY
+    </span>
+  </li>
   <li class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item" data-genre="fiction">
     <div class="book-cover">
       {% image "src/assets/library/david-szalay-all-that-man-is.jpg", "All That Man Is cover", "120px" %}
@@ -3673,6 +3688,6 @@ bodyClass: bg-amber
   </li>
 </ul>
 
-<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">266</span> books on the list. 127 books are fiction, 133 are non-fiction, and 6 are poetry.</em></p>
+<p><em>This page was last updated on {{ page.inputPath | lastModified }}. As of today, there are <span id="book-count">267</span> books on the list. 127 books are fiction, 134 are non-fiction, and 6 are poetry.</em></p>
 
 <script src="/js/library.js"></script>
