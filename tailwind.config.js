@@ -47,12 +47,43 @@ module.exports = {
               'margin-top': '2rem',
               'color': 'rgba(0, 0, 0, 0.6)',
             },
+            // Inline code in Degular (sans) rather than the browser monospace.
+            'code': {
+              'font-family': 'Degular, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif',
+              'font-weight': '400',
+              'font-size': '0.9em',
+              'background-color': 'rgba(0, 0, 0, 0.06)',
+              'padding': '0.08em 0.32em',
+              'border-radius': '0.25rem',
+              'color': 'inherit',
+            },
+            // Strip the default backtick pseudo-elements the plugin adds.
+            'code::before': { content: '""' },
+            'code::after': { content: '""' },
+            // Code blocks: let the <pre> own the background; reset the nested code.
+            'pre': {
+              'font-family': 'Degular, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif',
+              'background-color': 'rgba(0, 0, 0, 0.06)',
+              'color': 'inherit',
+            },
+            'pre code': {
+              'background-color': 'transparent',
+              'padding': '0',
+              'font-weight': '400',
+              'font-size': '0.95em',
+            },
           },
         },
         invert: {
           css: {
             '.article-footer': {
               'color': 'rgba(255, 255, 255, 0.55)',
+            },
+            'code': {
+              'background-color': 'rgba(0, 0, 0, 0.25)',
+            },
+            'pre': {
+              'background-color': 'rgba(0, 0, 0, 0.25)',
             },
           },
         },
