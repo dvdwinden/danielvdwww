@@ -67,15 +67,17 @@ nav a:focus-visible {
    Note: @font-face declarations are inlined in HTML <head> for faster discovery.
    ========================================================================== */
 
-/* Degular italic via font-variation-settings */
+/* Degular italic: use the high-level font-style so opsz auto-mapping is
+   preserved (a dedicated italic @font-face maps font-style: italic to the
+   ital axis). Avoid font-variation-settings here, which would short-circuit
+   font-optical-sizing: auto and drop headings to the default opsz of 6. */
 .font-sans i,
 .font-sans em,
 .font-sans .italic,
 .prose .article-footer i,
 .prose .article-footer em,
 .prose .article-footer .italic {
-    font-style: normal;
-    font-variation-settings: "ital" 1;
+    font-style: italic;
 }
 
 /* ==========================================================================
