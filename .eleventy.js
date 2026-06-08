@@ -172,6 +172,36 @@ module.exports = function (eleventyConfig) {
     }
   }
 
+  // Process an image at a specific set of widths (for per-image overrides).
+  // Unlike processImage(), this does not short-circuit on the default-widths
+  // cache, so it can generate additional widths (e.g. a retina variant) for a
+  // single image without affecting any other image.
+  async function processImageWidths(srcPath, widths) {
+    const relativePath = srcPath.replace(/^src\//, '');
+    const parsedPath = path.parse(relativePath);
+    const outputDir = path.join("./_site", path.dirname(relativePath));
+    const urlPath = path.dirname(relativePath);
+    const originalName = path.basename(parsedPath.name);
+
+    try {
+      return await Image(srcPath, {
+        widths: widths,
+        formats: ["webp"],
+        outputDir: outputDir,
+        urlPath: `/${urlPath}/`,
+        filenameFormat: function (id, src, width, format) {
+          return `${originalName}-${width}.${format}`;
+        },
+        sharpWebpOptions: {
+          quality: 70
+        }
+      });
+    } catch (err) {
+      console.error(`Error processing image ${srcPath} at custom widths:`, err);
+      return null;
+    }
+  }
+
   // Check if an image needs processing based on modification times
   function needsProcessing(srcPath) {
     try {
@@ -452,7 +482,39 @@ module.exports = function (eleventyConfig) {
       // Skip favicon files
       if (isFaviconFile(src)) continue;
 
+      // Per-image overrides: a source <img> may opt into a custom width set
+      // (data-widths="800,1400,2800") and/or an accurate sizes attribute. This
+      // is used for wide breakout images that need a higher-resolution retina
+      // variant than the global defaults provide.
+      const sizesMatch = imgTag.match(/\ssizes=["']([^"']*)["']/i);
+      const customSizes = sizesMatch ? sizesMatch[1] : null;
+      const widthsMatch = imgTag.match(/\sdata-widths=["']([^"']*)["']/i);
+      const customWidths = widthsMatch
+        ? widthsMatch[1].split(',').map(w => parseInt(w.trim(), 10)).filter(w => w > 0)
+        : null;
+
       try {
+        if (customWidths && customWidths.length) {
+          const { srcPath: oSrcPath, relativePath: oRel } = normalizeSrcPath(src);
+          let actualFilePath = (FILE_PATH_CACHE.has(oRel) && FILE_PATH_CACHE.get(oRel).sourcePath)
+            ? FILE_PATH_CACHE.get(oRel).sourcePath
+            : await findFileWithExtension(oSrcPath);
+
+          if (actualFilePath) {
+            const metadata = await processImageWidths(actualFilePath, customWidths);
+            if (metadata && hasValidMetadata(metadata)) {
+              const optimizedImg = Image.generateHTML(metadata, {
+                alt,
+                sizes: customSizes || "(min-width: 1024px) 100vw, 50vw",
+                loading: "lazy",
+                decoding: "async",
+              });
+              content = replaceImgTag(content, imgTag, optimizedImg);
+              continue;
+            }
+          }
+        }
+
         const { srcPath, relativePath } = normalizeSrcPath(src);
 
         // Check file path cache first
