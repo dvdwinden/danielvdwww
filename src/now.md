@@ -18,8 +18,7 @@ I keep chipping away at a variety of personal projects. We still have copies of 
 
 <div>
 <figure class="w-full">
-  <img src="/assets/now/trema-homepage-facelift.png" alt="(A facelift for Trema’s homepage)" data-widths="800,1200,1800,2800" sizes="(min-width: 1024px) min(1400px, calc(100vw - 544px)), calc(100vw - 48px)">
-
+  {% retinaImage "src/assets/now/trema-homepage-facelift.png", "(A facelift for Trema’s homepage)" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
     A facelift for Trema’s homepage.
   </figcaption>

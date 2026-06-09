@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const Image = require("@11ty/eleventy-img");
+const sharp = require("sharp");
 const path = require("path");
 const fs = require("fs");
 const { DateTime } = require("luxon");
@@ -14,6 +15,12 @@ const { glob } = require("glob");
 const SUPPORTED_IMAGE_EXTENSIONS = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '.JPG', '.PNG'];
 const OUTPUT_FORMAT = 'webp';
 const DEFAULT_WIDTHS = [800, 1200, 1800];
+// "Breakout" images escape the ~512px prose column and span the wide
+// max-w-[1400px] container, so on a 2x display they need up to ~2800px to stay
+// sharp. These widths/sizes are applied automatically to any image whose
+// nearest max-width ancestor is the wide container (see optimizeImages).
+const BREAKOUT_WIDTHS = [800, 1200, 1800, 2800];
+const BREAKOUT_SIZES = "(min-width: 1024px) min(1400px, calc(100vw - 544px)), calc(100vw - 48px)";
 
 // ============================================================================
 // CACHES
@@ -460,6 +467,9 @@ module.exports = function (eleventyConfig) {
     const imgRegex = /<img\s+[^>]*src=["'](?:\/|src\/)?([^"']*\/assets\/[^"']*)["'][^>]*>/gi;
     let match;
     const processed = new Set();
+    // Classify wide "breakout" images up front (from the original DOM) so they
+    // can be given a higher-resolution retina variant.
+    const breakoutTags = findBreakoutImageTags(content);
 
     while ((match = imgRegex.exec(content)) !== null) {
       const imgTag = match[0];
@@ -482,34 +492,53 @@ module.exports = function (eleventyConfig) {
       // Skip favicon files
       if (isFaviconFile(src)) continue;
 
-      // Per-image overrides: a source <img> may opt into a custom width set
-      // (data-widths="800,1400,2800") and/or an accurate sizes attribute. This
-      // is used for wide breakout images that need a higher-resolution retina
-      // variant than the global defaults provide.
-      const sizesMatch = imgTag.match(/\ssizes=["']([^"']*)["']/i);
-      const customSizes = sizesMatch ? sizesMatch[1] : null;
-      const widthsMatch = imgTag.match(/\sdata-widths=["']([^"']*)["']/i);
-      const customWidths = widthsMatch
-        ? widthsMatch[1].split(',').map(w => parseInt(w.trim(), 10)).filter(w => w > 0)
-        : null;
-
       try {
-        if (customWidths && customWidths.length) {
-          const { srcPath: oSrcPath, relativePath: oRel } = normalizeSrcPath(src);
-          let actualFilePath = (FILE_PATH_CACHE.has(oRel) && FILE_PATH_CACHE.get(oRel).sourcePath)
-            ? FILE_PATH_CACHE.get(oRel).sourcePath
-            : await findFileWithExtension(oSrcPath);
-
-          if (actualFilePath) {
-            const metadata = await processImageWidths(actualFilePath, customWidths);
+        // Wide "breakout" images escape the narrow prose column and span the
+        // max-w-[1400px] container, so they need a higher-resolution variant
+        // (up to 2800px) and an accurate sizes attribute to stay sharp on
+        // high-density displays. Everything else falls through to the standard
+        // optimization below, unchanged.
+        if (breakoutTags.has(imgTag)) {
+          const { srcPath: bSrcPath, relativePath: bRel } = normalizeSrcPath(src);
+          let bFilePath = (FILE_PATH_CACHE.has(bRel) && FILE_PATH_CACHE.get(bRel).sourcePath)
+            ? FILE_PATH_CACHE.get(bRel).sourcePath
+            : null;
+          if (!bFilePath) {
+            // The rendered src is usually a size-suffixed webp (e.g. foo-800.webp);
+            // strip the suffix to find the original source file.
+            const suffixRegex = /-(\d+)\.(jpeg|jpg|png|webp|avif)$/i;
+            if (suffixRegex.test(src)) {
+              const basePath = src.replace(suffixRegex, '').replace(/^\//, '');
+              bFilePath = await findFileWithExtension(path.join('src', basePath));
+            }
+            if (!bFilePath) bFilePath = await findFileWithExtension(bSrcPath);
+          }
+          if (bFilePath) {
+            // eleventy-img never upscales, so a width larger than the source is
+            // simply dropped. To capture every source's full usable resolution
+            // (up to the 2800px retina target) we add a clamped top width based
+            // on the actual source dimensions.
+            let widths = BREAKOUT_WIDTHS;
+            try {
+              const { width: srcW } = await sharp(bFilePath).metadata();
+              if (srcW) {
+                const topWidth = Math.min(2800, srcW);
+                widths = [...new Set([...BREAKOUT_WIDTHS, topWidth])]
+                  .filter(w => w <= srcW)
+                  .sort((a, b) => a - b);
+              }
+            } catch (e) { /* fall back to BREAKOUT_WIDTHS */ }
+            const metadata = await processImageWidths(bFilePath, widths);
             if (metadata && hasValidMetadata(metadata)) {
               const optimizedImg = Image.generateHTML(metadata, {
                 alt,
-                sizes: customSizes || "(min-width: 1024px) 100vw, 50vw",
+                sizes: BREAKOUT_SIZES,
                 loading: "lazy",
                 decoding: "async",
               });
-              content = replaceImgTag(content, imgTag, optimizedImg);
+              // Wrap in <picture> so it is treated as already-processed and not
+              // re-optimized back to the narrow-column defaults.
+              content = replaceImgTag(content, imgTag, `<picture>${optimizedImg}</picture>`);
               continue;
             }
           }
@@ -565,6 +594,46 @@ module.exports = function (eleventyConfig) {
   function replaceImgTag(content, imgTag, replacement) {
     const escapedImgTag = imgTag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     return content.replace(new RegExp(escapedImgTag, 'g'), replacement);
+  }
+
+  // Determine which <img> tags are "breakout" images: those whose nearest
+  // max-width ancestor is the wide content container rather than the narrow
+  // max-w-lg prose column. Done with a stack scan of the rendered HTML so it
+  // mirrors the DOM the browser builds (including the early-</div> pattern that
+  // lets a figure escape the prose column). Returns a Set of the exact <img …>
+  // tag strings so the transform can give them a higher-resolution variant.
+  function findBreakoutImageTags(content) {
+    const breakout = new Set();
+    const tagRegex = /<(\/?)(div|figure|main|section|article)\b([^>]*)>|<img\b[^>]*>/gi;
+    const stack = [];
+    let m;
+    while ((m = tagRegex.exec(content)) !== null) {
+      const token = m[0];
+      // An <img …> token (no capture group 2) — classify against the stack.
+      if (m[2] === undefined) {
+        if (!/\ssrc=["'][^"']*\/assets\//i.test(token)) continue;
+        // Nearest ancestor that carries an explicit max-width.
+        for (let i = stack.length - 1; i >= 0; i--) {
+          const mw = stack[i].cls.match(/max-w-(?:lg|\[[^\]]+\])/g);
+          if (mw) {
+            if (mw[mw.length - 1] !== 'max-w-lg') breakout.add(token);
+            break;
+          }
+        }
+        continue;
+      }
+      const closing = m[1] === '/';
+      const tag = m[2].toLowerCase();
+      if (closing) {
+        for (let i = stack.length - 1; i >= 0; i--) {
+          if (stack[i].tag === tag) { stack.splice(i, 1); break; }
+        }
+      } else {
+        const cls = (m[3].match(/class=["']([^"']*)["']/) || [])[1] || '';
+        stack.push({ tag, cls });
+      }
+    }
+    return breakout;
   }
 
   // Filter metadata to only include specific widths (for retina images)
