@@ -1,10 +1,10 @@
-<header class="fixed top-0 left-0 z-50 p-6 flex justify-between items-center w-full">
+<header class="fixed top-0 left-0 z-50 p-6 flex justify-between items-center w-full pointer-events-none">
   <div class="flex items-center space-x-4">
-      <a href="/" class="text-lg font-sans font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors flex items-center">
+      <a href="/" class="pointer-events-auto text-lg font-sans font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors flex items-center">
           {% if page.url == "/" %}<h1>{% endif %}Daniël van der Winden{% if page.url == "/" %}</h1>{% endif %}
       </a>
   </div>
-  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="flex items-center p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:scale-95 transition-all">
+  <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="pointer-events-auto flex items-center p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:scale-95 transition-all">
       <span id="dark-icon" aria-hidden="true">
           {% include "icons/sunset.svg" %}
       </span>
