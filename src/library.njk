@@ -55,6 +55,37 @@ bodyClass: bg-amber
         data-genre="non-fiction"
     >
         <div class="book-cover">
+            {% image
+            "src/assets/library/miriam-toews-a-truce-that-is-not-peace.jpg", "A
+            Truce That Is Not Peace cover", "120px" %}
+        </div>
+        <div class="flex flex-col">
+            <div class="flex items-baseline gap-2">
+                <a
+                    href="https://app.thestorygraph.com/books/73cd6e13-d565-46a7-9326-50a05ebee0d1"
+                    class="font-serif text-lg font-medium"
+                    target="_blank"
+                    rel="external"
+                    title="A Truce That Is Not Peace by Miriam Toews"
+                    >A Truce That Is Not Peace</a
+                >
+            </div>
+            <span
+                class="font-serif text-md text-black/70 dark:text-white/60 italic"
+                >Miriam Toews</span
+            >
+        </div>
+        <span
+            class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+        >
+            JUL
+        </span>
+    </li>
+    <li
+        class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+        data-genre="non-fiction"
+    >
+        <div class="book-cover">
             {% image "src/assets/library/carlo-masala-als-rusland-wint.jpg",
             "Als Rusland wint cover", "120px" %}
         </div>
@@ -8160,8 +8191,8 @@ bodyClass: bg-amber
 <p>
     <em
         >This page was last updated on {{ page.inputPath | lastModified }}. As
-        of today, there are <span id="book-count">271</span> books on the list.
-        128 books are fiction, 136 are non-fiction, and 7 are poetry.</em
+        of today, there are <span id="book-count">272</span> books on the list.
+        128 books are fiction, 137 are non-fiction, and 7 are poetry.</em
     >
 </p>
 
