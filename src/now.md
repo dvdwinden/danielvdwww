@@ -35,7 +35,4 @@ I still am not writing as much as I’d like—the five-day workweek, back since
 
 From January onwards I was injured, but I am running again. Tennis has taken a backseat until the summer tournaments roll around again.
 
-<div id="strava-calendar" style="display: none;" class="mt-16 mb-16"></div>
-
-
 _The /now page is based on an idea by [Derek Sivers](https://nownownow.com/about)._

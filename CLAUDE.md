@@ -97,8 +97,6 @@ Tailwind configuration in `tailwind.config.js`:
 
 `src/_data/` contains JavaScript files that fetch data at build time:
 - `githubContributions.js` - Fetches GitHub activity data
-- `stravaActivities.js` - Fetches Strava activity data
-- `stravaToken.js` - Manages Strava OAuth tokens
 - `metadata.json` - Site metadata (title, description, URL)
 
 Data is available in templates as global variables (e.g., `{{ githubContributions.contributionsByDate }}`).
