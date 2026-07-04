@@ -12,6 +12,13 @@ permissions:
   pages: write
   id-token: write
 
+# Serialize Pages deployments so concurrent runs don't race the single
+# github-pages environment (the cause of "Deployment failed, try again later").
+# Don't cancel an in-progress deploy — let it finish, then run the next.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -140,6 +147,9 @@ jobs:
         with:
           path: './_site'
 
+      # Only publish on pushes to main (and manual runs) — never on PRs,
+      # which should build/verify but not deploy to the live environment.
       - name: Deploy to GitHub Pages
         id: deployment
+        if: github.event_name != 'pull_request'
         uses: actions/deploy-pages@v4
