@@ -56,6 +56,38 @@ bodyClass: bg-amber
     >
         <div class="book-cover">
             {% image
+            "src/assets/library/anne-fadiman-frog-and-other-essays.jpg", "A
+            Frog: And Other Essays cover", "120px" %}
+        </div>
+        <div class="flex flex-col">
+            <div class="flex items-baseline gap-2">
+                <a
+                    href="https://app.thestorygraph.com/books/2c892a05-0d03-4ebe-9090-2060080f4821"
+                    class="font-serif text-lg font-medium"
+                    target="_blank"
+                    rel="external"
+                    title="Frog: And Other Essays by Anne Fadiman"
+                    >Frog: And Other Essays</a
+                >
+                <span class="book-star">★</span>
+            </div>
+            <span
+                class="font-serif text-md text-black/70 dark:text-white/60 italic"
+                >Anne Fadiman</span
+            >
+        </div>
+        <span
+            class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+        >
+            JUL
+        </span>
+    </li>
+    <li
+        class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+        data-genre="non-fiction"
+    >
+        <div class="book-cover">
+            {% image
             "src/assets/library/miriam-toews-a-truce-that-is-not-peace.jpg", "A
             Truce That Is Not Peace cover", "120px" %}
         </div>
@@ -8191,8 +8223,8 @@ bodyClass: bg-amber
 <p>
     <em
         >This page was last updated on {{ page.inputPath | lastModified }}. As
-        of today, there are <span id="book-count">272</span> books on the list.
-        128 books are fiction, 137 are non-fiction, and 7 are poetry.</em
+        of today, there are <span id="book-count">273</span> books on the list.
+        128 books are fiction, 138 are non-fiction, and 7 are poetry.</em
     >
 </p>
 
