@@ -7,6 +7,47 @@
     countElement.classList.add('js-loaded');
   }
 
+  // Compute footnote stats from data attributes: genre, language and
+  // writer gender (data-gender holds one value per comma-separated author)
+  if (bookItems.length > 0) {
+    const genres = { fiction: 0, 'non-fiction': 0, poetry: 0 };
+    const langs = { nl: 0, en: 0 };
+    const writerGender = {};
+
+    bookItems.forEach(item => {
+      if (item.dataset.genre in genres) genres[item.dataset.genre]++;
+      if (item.dataset.lang in langs) langs[item.dataset.lang]++;
+
+      const authorSpan = item.querySelector('.flex-col > span.italic');
+      if (authorSpan && item.dataset.gender) {
+        const names = authorSpan.textContent.trim().split(',').map(n => n.trim());
+        const genders = item.dataset.gender.split(',');
+        names.forEach((name, i) => {
+          if (name && genders[i]) writerGender[name] = genders[i];
+        });
+      }
+    });
+
+    const genderCounts = { female: 0, male: 0, 'non-binary': 0 };
+    Object.values(writerGender).forEach(g => {
+      if (g in genderCounts) genderCounts[g]++;
+    });
+
+    const set = (id, value) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    };
+    set('count-fiction', genres.fiction);
+    set('count-non-fiction', genres['non-fiction']);
+    set('count-poetry', genres.poetry);
+    set('count-writers', Object.keys(writerGender).length);
+    set('count-female', genderCounts.female);
+    set('count-male', genderCounts.male);
+    set('count-nonbinary', genderCounts['non-binary']);
+    set('count-nl', langs.nl);
+    set('count-en', langs.en);
+  }
+
   // Count authors and show top 5
   const topAuthorsElement = document.getElementById('top-authors');
   if (topAuthorsElement && bookItems.length > 0) {
