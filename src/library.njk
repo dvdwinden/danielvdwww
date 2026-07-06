@@ -52,12 +52,42 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
     <li
         class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+        data-genre="fiction"
+    >
+        <div class="book-cover">
+            {% image "src/assets/library/mensen-van-de-dag.jpg", "Mensen van de
+            dag cover", "120px" %}
+        </div>
+        <div class="flex flex-col">
+            <div class="flex items-baseline gap-2">
+                <a
+                    href="https://app.thestorygraph.com/books/ce3393d1-44b2-4b24-9bab-02068d8e967e"
+                    class="font-serif text-lg font-medium"
+                    target="_blank"
+                    rel="external"
+                    title="Mensen van de dag by Emma Doude van Troostwijk"
+                    >Mensen van de dag</a
+                >
+            </div>
+            <span
+                class="font-serif text-md text-black/70 dark:text-white/60 italic"
+                >Emma Doude van Troostwijk</span
+            >
+        </div>
+        <span
+            class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+        >
+            JUL
+        </span>
+    </li>
+    <li
+        class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
         data-genre="non-fiction"
     >
         <div class="book-cover">
             {% image
-            "src/assets/library/anne-fadiman-frog-and-other-essays.jpg", "A
-            Frog: And Other Essays cover", "120px" %}
+            "src/assets/library/anne-fadiman-frog-and-other-essays.jpg", "A Frog
+            and Other Essays cover", "120px" %}
         </div>
         <div class="flex flex-col">
             <div class="flex items-baseline gap-2">
@@ -67,7 +97,7 @@ bodyClass: bg-amber
                     target="_blank"
                     rel="external"
                     title="Frog: And Other Essays by Anne Fadiman"
-                    >Frog: And Other Essays</a
+                    >Frog and Other Essays</a
                 >
                 <span class="book-star">★</span>
             </div>
@@ -8223,8 +8253,8 @@ bodyClass: bg-amber
 <p>
     <em
         >This page was last updated on {{ page.inputPath | lastModified }}. As
-        of today, there are <span id="book-count">273</span> books on the list.
-        128 books are fiction, 138 are non-fiction, and 7 are poetry.</em
+        of today, there are <span id="book-count">274</span> books on the list.
+        128 books are fiction, 139 are non-fiction, and 7 are poetry.</em
     >
 </p>
 
