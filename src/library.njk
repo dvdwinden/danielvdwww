@@ -52,6 +52,39 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
     <li
         class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+        data-genre="non-fiction"
+        data-lang="nl"
+        data-gender="male"
+    >
+        <div class="book-cover">
+            {% image "src/assets/library/alles-lekt.jpg", "Alles lekt cover",
+            "120px" %}
+        </div>
+        <div class="flex flex-col">
+            <div class="flex items-baseline gap-2">
+                <a
+                    href="https://app.thestorygraph.com/books/1ee0a89b-b7ac-4357-aae9-4bebfb4707d0"
+                    class="font-serif text-lg font-medium"
+                    target="_blank"
+                    rel="external"
+                    title="Alles lekt by Luuk Vulkers"
+                    >Alles lekt</a
+                >
+                <span class="book-star">★</span>
+            </div>
+            <span
+                class="font-serif text-md text-black/70 dark:text-white/60 italic"
+                >Luuk Vulkers</span
+            >
+        </div>
+        <span
+            class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+        >
+            JUL
+        </span>
+    </li>
+    <li
+        class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
         data-genre="fiction"
         data-lang="nl"
         data-gender="female"
