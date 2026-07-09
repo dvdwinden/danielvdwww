@@ -1100,6 +1100,15 @@ ul.list-none {
     opacity: 0.95;
 }
 
+.dark figcaption a {
+    color: theme("colors.white");
+    text-decoration-color: theme("colors.gray.500");
+}
+
+.dark figcaption a:hover {
+    color: theme("colors.gray.300");
+}
+
 .dark .callout {
     color: theme("colors.white");
 }
