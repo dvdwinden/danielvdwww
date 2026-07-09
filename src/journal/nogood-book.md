@@ -31,7 +31,7 @@ Some twenty-odd years ago I’d spend hours on end in my bedroom, in the attic o
 
 The illustrations by my friend [Thomas](https://nogood.studio/?ref=daniel.pizza) are reminiscent of those days. They’re rooted in a world of rickety hardware, flickering lights, and precariously wired contraptions. They have a tactile quality, and carry the same mindset I felt back then: of independence, and a novel kind of community. A kinship with those building things out in the open.
 
-When he told me he was designing a book of his work and asked me to write it, I was immediately excited, and looked forward to putting the story behind his work to paper. The assignment seemed simple enough: _here are hundreds of pages of visual work, let's introduce them to the world_. But initially, every sentence I added got in the way of the images. Slowly, the writing became a study in what not to say.
+When he told me he was designing [a book of his work](https://nogood.studio/book/announcement/?ref=daniel.pizza) and asked me to write it, I was immediately excited, and looked forward to putting the story behind his work to paper. The assignment seemed simple enough: _here are hundreds of pages of visual work, let’s introduce them to the world_. But initially, every sentence I added got in the way of the images. Slowly, the writing became a study in what _not_ to say.
 
 </div>
 
@@ -47,9 +47,9 @@ When he told me he was designing a book of his work and asked me to write it, I 
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 Thomas is a humble fellow and doesn’t feel the need to speak to his work all that much, so working together meant first building an all-encompassing outline, then taking away as much as we possibly could. Through hours of conversation, many texts, and shared references, we inched closer to what drives him, and what he’d like to get across to his readers.
-<br /><br />
+<br />
 
-What’s left, I think, is a gentle introduction to his moniker, [NoGood](https://nogood.studio/about?ref=daniel.pizza): how it came to be, why it’s the perfect place for him to experiment and grow his practice, and where it might be headed next.
+What’s left, I think, is a gentle introduction to his moniker, [_NoGood_](https://nogood.studio/about?ref=daniel.pizza): a foreword and a few chapters covering how it came to be, why it’s the perfect place for him to experiment and grow his practice, and where it might be headed next.
 </div>
 
 <div class="sm:mt-32 mt-16 mb-16">
@@ -68,8 +68,10 @@ What’s left, I think, is a gentle introduction to his moniker, [NoGood](https:
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
-I loved doing this—the whole thing was an exercise in restraint, which turned out to be the truest way to introduce someone who lets the work speak for itself. Many thanks to Thomas for trusting me with it.
+I _loved_ doing this—the whole thing was an exercise in restraint, which turned out to be the truest way to introduce someone who lets the work speak for itself. Many thanks to Thomas for trusting me with it.
 
 You can buy the book now, over on the [NoGood website](https://nogood.studio/the-nogood-book/?ref=daniel.pizza).
+
+_If you’re sitting on a body of work that’s looking for writing to accompany it, I’d love to [hear from you](mailto:d.vanderwinden@gmail.com)._
     
 </div>
