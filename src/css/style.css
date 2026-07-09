@@ -41,7 +41,7 @@ a:active {
 
 /* Ensure keyboard focus is still visible for navigation */
 nav a:focus-visible {
-    outline: 1px solid theme('colors.gray.400') !important;
+    outline: 1px solid theme("colors.gray.400") !important;
     outline-offset: 1px !important;
     box-shadow: none !important;
 }
@@ -52,7 +52,7 @@ nav a:focus {
 }
 
 nav a:focus-visible {
-    box-shadow: 0 0 0 2px theme('colors.gray.400') !important;
+    box-shadow: 0 0 0 2px theme("colors.gray.400") !important;
 }
 
 /* ==========================================================================
@@ -102,7 +102,8 @@ html.dark {
 
 body {
     /* Extend background into safe areas on iOS */
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+        env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 img,
@@ -115,8 +116,8 @@ iframe {
 }
 
 ::selection {
-    background: theme('colors.highlight');
-    color: theme('colors.black');
+    background: theme("colors.highlight");
+    color: theme("colors.black");
 }
 
 /* Scrollbar */
@@ -213,7 +214,9 @@ html.dark #page-background {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition:
+        transform 0.25s ease-in-out,
+        opacity 0.25s ease-in-out;
 }
 
 #dark-icon {
@@ -238,7 +241,9 @@ html.dark #page-background {
 
 /* Add a delay to the dark mode transition */
 .dark {
-    transition: background-color 0s 0.25s, color 0s 0.25s;
+    transition:
+        background-color 0s 0.25s,
+        color 0s 0.25s;
 }
 
 /* ==========================================================================
@@ -246,10 +251,10 @@ html.dark #page-background {
    ========================================================================== */
 
 .prose {
-    font-family: theme('fontFamily.serif');
+    font-family: theme("fontFamily.serif");
     font-weight: 400;
-    font-size: theme('fontSize.base');
-    line-height: theme('lineHeight.normal');
+    font-size: theme("fontSize.base");
+    line-height: theme("lineHeight.normal");
     text-wrap: pretty;
     font-variant-numeric: oldstyle-nums;
 }
@@ -268,7 +273,7 @@ html.dark #page-background {
 .prose h4,
 .prose h5,
 .prose h6 {
-    font-family: theme('fontFamily.sans');
+    font-family: theme("fontFamily.sans");
 }
 
 .prose h1,
@@ -345,10 +350,10 @@ html.dark #page-background {
 }
 
 .prose a:hover {
-    color: theme('colors.hover');
+    color: theme("colors.hover");
     background: none;
     text-decoration: underline;
-    text-decoration-color: theme('colors.hover');
+    text-decoration-color: theme("colors.hover");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     transition: color 0.2s;
@@ -363,7 +368,7 @@ html.dark #page-background {
 .callout {
     font-size: 1.75rem;
     line-height: 1.4;
-    color: theme('colors.black');
+    color: theme("colors.black");
 }
 
 /* Images and captions */
@@ -371,11 +376,24 @@ figcaption,
 .prose figcaption {
     font-size: 1rem;
     margin-top: 0.5rem;
-    font-family: theme('fontFamily.sans');
-    color: theme('colors.black');
+    font-family: theme("fontFamily.sans");
+    color: theme("colors.black");
     opacity: 0.85;
     letter-spacing: 0.025em;
     line-height: 1.25;
+}
+
+figcaption a {
+    color: theme("colors.black");
+    text-decoration-color: theme("colors.gray.400");
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+figcaption a:hover {
+    color: theme("colors.hover");
 }
 
 span.testimonial {
@@ -422,10 +440,10 @@ header a:hover {
 
 /* Navigation */
 nav ul li a:hover {
-    color: theme('colors.hover');
+    color: theme("colors.hover");
     transition: color 0.2s;
     text-decoration: underline;
-    text-decoration-color: theme('colors.gray.400');
+    text-decoration-color: theme("colors.gray.400");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     cursor: pointer;
@@ -433,7 +451,7 @@ nav ul li a:hover {
 
 nav .underline-custom {
     text-decoration: underline;
-    text-decoration-color: theme('colors.gray.400');
+    text-decoration-color: theme("colors.gray.400");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
@@ -483,15 +501,15 @@ nav.pagination a:hover {
 
 .site-footer a {
     text-decoration: none;
-    font-family: theme('fontFamily.serif');
+    font-family: theme("fontFamily.serif");
     font-size: 0.875rem;
 }
 
 .site-footer ul li a:hover {
-    color: theme('colors.gray.900');
+    color: theme("colors.gray.900");
     transition: color 0.2s;
     text-decoration: underline;
-    text-decoration-color: theme('colors.gray.400');
+    text-decoration-color: theme("colors.gray.400");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     background: none;
@@ -499,10 +517,10 @@ nav.pagination a:hover {
 
 .site-footer a.underline-custom {
     text-decoration: underline;
-    text-decoration-color: theme('colors.gray.400');
+    text-decoration-color: theme("colors.gray.400");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    color: theme('colors.gray.900');
+    color: theme("colors.gray.900");
 }
 
 .site-footer div.lastfm {
@@ -524,7 +542,6 @@ nav.pagination a:hover {
     text-underline-offset: 3px;
     background: none;
 }
-
 
 /* Article styling */
 article header {
@@ -573,13 +590,17 @@ article time {
 }
 
 .hero-image.daniel {
-    background-image: image-set(url('/assets/work/daniel-square.webp') 1x,
-            url('/assets/work/daniel-square@2x.webp') 2x);
+    background-image: image-set(
+        url("/assets/work/daniel-square.webp") 1x,
+        url("/assets/work/daniel-square@2x.webp") 2x
+    );
     background-size: cover;
     background-position: center;
 
-    @supports not (background-image: image-set(url('/assets/work/daniel-square.webp') 1x)) {
-        background-image: url('/assets/work/daniel-square-optimized.png');
+    @supports not (
+        background-image: image-set(url("/assets/work/daniel-square.webp") 1x)
+    ) {
+        background-image: url("/assets/work/daniel-square-optimized.png");
     }
 
     @apply mr-auto my-8 sm:my-24;
@@ -588,12 +609,16 @@ article time {
 }
 
 .hero-image.studio {
-    background-image: image-set(url('/assets/work/studio-square.webp') 1x,
-            url('/assets/work/studio-square@2x.webp') 2x);
+    background-image: image-set(
+        url("/assets/work/studio-square.webp") 1x,
+        url("/assets/work/studio-square@2x.webp") 2x
+    );
     background-size: cover;
 
-    @supports not (background-image: image-set(url('/assets/work/studio-square.webp') 1x)) {
-        background-image: url('/assets/work/studio-square-optimized.png');
+    @supports not (
+        background-image: image-set(url("/assets/work/studio-square.webp") 1x)
+    ) {
+        background-image: url("/assets/work/studio-square-optimized.png");
     }
 
     @apply mr-auto my-8 sm:my-24;
@@ -603,8 +628,8 @@ article time {
 .prose .cta-button {
     text-decoration: none;
     background: #222;
-    color: theme('colors.white');
-    padding: 0.5rem .75rem;
+    color: theme("colors.white");
+    padding: 0.5rem 0.75rem;
     border-radius: 4px;
     font-size: 1.125rem;
     font-weight: 500;
@@ -612,17 +637,19 @@ article time {
 }
 
 .prose .cta-button:hover {
-    background: theme('colors.hover');
-    color: theme('colors.white');
+    background: theme("colors.hover");
+    color: theme("colors.white");
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+    transition:
+        background 0.2s,
+        color 0.2s;
     display: inline-block;
 }
 
 .prose .cta-link {
     text-decoration: none;
-    color: theme('colors.black');
-    font-family: theme('fontFamily.sans');
+    color: theme("colors.black");
+    font-family: theme("fontFamily.sans");
     display: inline-flex;
     align-items: center;
 }
@@ -632,7 +659,7 @@ article time {
 }
 
 .prose .cta-link:hover {
-    color: theme('colors.gray.600');
+    color: theme("colors.gray.600");
     text-decoration: none;
     transition: color 0.2s;
     background: none;
@@ -671,7 +698,7 @@ ul.links {
 ul.links li h2 {
     margin-bottom: 0;
     margin-top: 1.125rem;
-    font-family: theme('fontFamily.serif');
+    font-family: theme("fontFamily.serif");
     font-weight: 500;
     font-size: 1.5rem !important;
     line-height: 1.2;
@@ -684,7 +711,7 @@ ul.links li a.no-underline {
 }
 
 ul.links li a.no-underline:hover h2 {
-    color: theme('colors.hover');
+    color: theme("colors.hover");
 }
 
 ul.links li p a {
@@ -692,21 +719,21 @@ ul.links li p a {
     text-decoration-color: #999;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    font-family: theme('fontFamily.serif');
+    font-family: theme("fontFamily.serif");
     font-weight: 400;
 }
 
 ul.links li p a:hover {
     cursor: pointer;
-    color: theme('colors.hover');
+    color: theme("colors.hover");
     text-decoration: underline;
-    text-decoration-color: theme('colors.hover');
+    text-decoration-color: theme("colors.hover");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
 
 ul.links li p span a {
-    font-family: theme('fontFamily.sans');
+    font-family: theme("fontFamily.sans");
 }
 
 .links-title__divider {
@@ -762,12 +789,12 @@ ul.newsletter h2 {
 
 .journal-entry:hover .journal-entry-title {
     text-decoration: none;
-    color: theme('colors.hover');
+    color: theme("colors.hover");
 }
 
 .dark .journal-entry:hover .journal-entry-title {
     text-decoration: none;
-    color: theme('colors.hover-dark');
+    color: theme("colors.hover-dark");
 }
 
 /* Icons */
@@ -801,7 +828,7 @@ ul.list-none {
 
 /* Make the link cover the entire list item */
 .book-item a::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -822,7 +849,9 @@ ul.list-none {
     transform: translateX(calc(-100% - 2rem));
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    transition:
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out;
     pointer-events: none;
     z-index: 10;
 }
@@ -831,7 +860,9 @@ ul.list-none {
 .book-cover picture img {
     width: 186px;
     height: auto;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 0.1), 0 2px 8px rgb(0 0 0 / 0.15);
+    box-shadow:
+        0 1px 2px rgb(0 0 0 / 0.1),
+        0 2px 8px rgb(0 0 0 / 0.15);
     border: 1px solid rgb(0 0 0 / 0.1);
     border-radius: 4px;
 }
@@ -863,7 +894,7 @@ ul.list-none {
     /* Highlight active book title */
     .book-item.active a {
         text-decoration: underline;
-        text-decoration-color: theme('colors.hover');
+        text-decoration-color: theme("colors.hover");
         text-decoration-thickness: 1px;
         text-underline-offset: 3px;
     }
@@ -914,18 +945,18 @@ ul.list-none {
     top: -2px;
     margin-left: 0.25rem;
     display: inline;
-    color: theme('colors.hover');
+    color: theme("colors.hover");
 }
 
 .dark .book-star {
-    color: theme('colors.hover-dark');
+    color: theme("colors.hover-dark");
 }
 
 .book-item a {
     text-decoration: none;
     color: inherit;
     display: inline;
-    font-family: theme('fontFamily.serif');
+    font-family: theme("fontFamily.serif");
     font-weight: 500;
     line-height: 1.2;
 }
@@ -940,7 +971,7 @@ ul.list-none {
 
 .book-item a:hover {
     text-decoration: none;
-    color: theme('colors.hover');
+    color: theme("colors.hover");
 }
 
 .book-item .flex.items-baseline.gap-2 {
@@ -984,7 +1015,7 @@ ul.list-none {
 
 .resume ul li span {
     font-weight: 400;
-    font-family: theme('fontFamily.sans');
+    font-family: theme("fontFamily.sans");
 }
 
 .resume ul li:last-child {
@@ -1001,7 +1032,7 @@ ul.list-none {
 
 .dark .prose blockquote {
     border-left: 1px solid rgba(255, 255, 255, 0.2);
-    color: theme('colors.white');
+    color: theme("colors.white");
 }
 
 .dark .prose ul li::marker {
@@ -1017,19 +1048,19 @@ ul.list-none {
 }
 
 .dark .prose a:hover {
-    color: theme('colors.hover-dark');
+    color: theme("colors.hover-dark");
     background: none;
     text-decoration: underline;
-    text-decoration-color: theme('colors.hover-dark');
+    text-decoration-color: theme("colors.hover-dark");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
 
 .dark .prose p a:hover {
-    color: theme('colors.hover-dark');
+    color: theme("colors.hover-dark");
     background: none;
     text-decoration: underline;
-    text-decoration-color: theme('colors.hover-dark');
+    text-decoration-color: theme("colors.hover-dark");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
@@ -1041,21 +1072,23 @@ ul.list-none {
 }
 
 .dark .prose .cta-button:hover {
-    background: theme('colors.gray.100');
-    color: theme('colors.gray.600');
+    background: theme("colors.gray.100");
+    color: theme("colors.gray.600");
     text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+    transition:
+        background 0.2s,
+        color 0.2s;
 }
 
 .dark .prose .cta-link {
-    color: theme('colors.white');
+    color: theme("colors.white");
     text-decoration: none;
     display: inline-flex;
     align-items: center;
 }
 
 .dark .prose .cta-link:hover {
-    color: theme('colors.gray.300');
+    color: theme("colors.gray.300");
     text-decoration: none;
     transition: color 0.2s;
     background: none;
@@ -1063,41 +1096,41 @@ ul.list-none {
 
 .dark figcaption,
 .dark .prose figcaption {
-    color: theme('colors.white');
+    color: theme("colors.white");
     opacity: 0.95;
 }
 
 .dark .callout {
-    color: theme('colors.white');
+    color: theme("colors.white");
 }
 
 .dark .site-footer ul li a {
-    color: theme('colors.gray.400');
+    color: theme("colors.gray.400");
     text-decoration: none;
 }
 
 .dark .site-footer ul li a:hover {
-    color: theme('colors.gray.100');
+    color: theme("colors.gray.100");
 }
 
 .dark .site-footer a.underline-custom {
     text-decoration: underline;
-    text-decoration-color: theme('colors.gray.400');
+    text-decoration-color: theme("colors.gray.400");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    color: theme('colors.gray.100');
+    color: theme("colors.gray.100");
 }
 
 .dark ul.links li a:hover h2 {
-    color: theme('colors.hover-dark') !important;
+    color: theme("colors.hover-dark") !important;
     background: none !important;
     text-decoration: none !important;
 }
 
 .dark ul.links li p a:hover {
-    color: theme('colors.hover-dark');
+    color: theme("colors.hover-dark");
     text-decoration: underline;
-    text-decoration-color: theme('colors.hover-dark');
+    text-decoration-color: theme("colors.hover-dark");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
@@ -1107,13 +1140,13 @@ ul.list-none {
 }
 
 .dark .book-item a {
-    color: theme('colors.white');
+    color: theme("colors.white");
     text-decoration: none;
 }
 
 .dark .book-item a:hover {
     text-decoration: none;
-    color: theme('colors.hover-dark');
+    color: theme("colors.hover-dark");
 }
 
 /* ==========================================================================
@@ -1122,7 +1155,6 @@ ul.list-none {
 
 /* Hero image responsive styling */
 @media (max-width: 1400px) {
-
     /* For 1400px and below, show images side-by-side above content */
     .hero-images {
         position: relative;
