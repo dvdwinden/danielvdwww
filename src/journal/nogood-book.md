@@ -23,7 +23,7 @@ Some twenty-odd years ago I’d spend hours on end in my bedroom, in the attic o
 <div class="sm:mt-32 mt-16">
   <figure class="w-full mt-4">
     {% retinaImage "src/assets/journal/nogood01.jpg", "The NoGood book", 1400 %}
-    <figcaption class="pl-8 sm:pl-0">The NoGood book. All photos by <a href="https://www.lilialuganskaia.com/?ref=daniel.pizza" rel="nofollow" target="_blank" title="Lilia Luganskaia-Kuilder">Lilia Luganskaia-Kuilder</a>.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The <em>NoGood</em> book. All photography by <a href="https://www.lilialuganskaia.com/?ref=daniel.pizza" rel="nofollow" target="_blank" title="Lilia Luganskaia-Kuilder">Lilia Luganskaia-Kuilder</a>.</figcaption>
   </figure>
 </div>
 
