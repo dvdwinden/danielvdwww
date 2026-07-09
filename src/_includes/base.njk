@@ -86,6 +86,10 @@
             url('/assets/fonts/DegularVariable.ttf') format('truetype');
         font-weight: 200 800;
         font-style: italic;
+        /* Chrome doesn't map font-style: italic to the ital axis on its own;
+           this descriptor pins the axis for the italic face while leaving
+           font-optical-sizing: auto intact (unlike the element-level property). */
+        font-variation-settings: 'ital' 1;
         font-display: swap;
     }
     </style>

@@ -68,9 +68,11 @@ nav a:focus-visible {
    ========================================================================== */
 
 /* Degular italic: use the high-level font-style so opsz auto-mapping is
-   preserved (a dedicated italic @font-face maps font-style: italic to the
-   ital axis). Avoid font-variation-settings here, which would short-circuit
-   font-optical-sizing: auto and drop headings to the default opsz of 6. */
+   preserved. The italic @font-face in base.njk pins the ital axis via a
+   font-variation-settings descriptor (Chrome doesn't map font-style: italic
+   to the axis on its own). Avoid element-level font-variation-settings here,
+   which would short-circuit font-optical-sizing: auto and drop headings to
+   the default opsz of 6. */
 .font-sans i,
 .font-sans em,
 .font-sans .italic,
