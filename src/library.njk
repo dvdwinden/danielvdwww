@@ -50,6 +50,38 @@ bodyClass: bg-amber
 
 <h2 class="text-2xl font-sans font-semibold mt-12 mb-6">2026</h2>
 <ul class="list-none p-0 m-0">
+<li
+    class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+    data-genre="fiction"
+    data-lang="nl"
+    data-gender="female"
+>
+    <div class="book-cover">
+        {% image "src/assets/library/gewone-hollandse-jongens.jpg", "Gewone Hollandse jongens cover",
+        "120px" %}
+    </div>
+    <div class="flex flex-col">
+        <div class="flex items-baseline gap-2">
+            <a
+                href="https://app.thestorygraph.com/books/d07977c3-46c3-43f5-9e7b-9946c3c9d293"
+                class="font-serif text-lg font-medium"
+                target="_blank"
+                rel="external"
+                title="Gewone Hollandse jongens by Mira Feticu"
+                >Gewone Hollandse jongens</a
+            >
+        </div>
+        <span
+            class="font-serif text-md text-black/70 dark:text-white/60 italic"
+            >Mira Feticu</span
+        >
+    </div>
+    <span
+        class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+    >
+        JUL
+    </span>
+</li>
     <li
         class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
         data-genre="non-fiction"
@@ -8835,15 +8867,15 @@ bodyClass: bg-amber
     class="mt-12 font-sans text-sm leading-relaxed tracking-wide text-black/50 dark:text-white/50"
 >
     This page was last updated on {{ page.inputPath | lastModified }}. As of
-    today, there are <span id="book-count">274</span> books on the list:
-    <span id="count-fiction">129</span> fiction,
+    today, this library has <span id="book-count">276</span> books:
+    <span id="count-fiction">130</span> fiction,
     <span id="count-non-fiction">138</span> non-fiction, and
     <span id="count-poetry">7</span> poetry. They were written by
-    <span id="count-writers">224</span> different writers, of whom
-    <span id="count-female">108</span> are women,
+    <span id="count-writers">225</span> different writers.
+    <span id="count-female">109</span> are women,
     <span id="count-male">115</span> are men, and
     <span id="count-nonbinary">1</span> is non-binary. I read
-    <span id="count-nl">61</span> of these books in Dutch and
+    <span id="count-nl">62</span> of these books in Dutch and
     <span id="count-en">213</span> in English.
 </p>
 
