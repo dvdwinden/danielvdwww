@@ -44,6 +44,7 @@
     set('count-female', genderCounts.female);
     set('count-male', genderCounts.male);
     set('count-nonbinary', genderCounts['non-binary']);
+    set('nonbinary-verb', genderCounts['non-binary'] === 1 ? 'is' : 'are');
     set('count-nl', langs.nl);
     set('count-en', langs.en);
   }
