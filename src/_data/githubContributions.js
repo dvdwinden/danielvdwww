@@ -1,10 +1,17 @@
 const axios = require('axios');
 
+// `--serve`/`--watch` is local dev: a dead token shouldn't take the whole
+// site down over a decorative graph. Real builds still hard-fail.
+const isDevServer = process.argv.includes('--serve') || process.argv.includes('--watch');
+
 module.exports = async function() {
   const username = 'dvdwinden';
   const token = process.env.GITHUB_TOKEN;
   
   if (!token) {
+    if (process.env.CI) {
+      throw new Error('GITHUB_TOKEN is not set — check the GH_PAT secret in GitHub Actions.');
+    }
     console.warn('⚠️  GitHub token not found in environment variables');
     return { contributionsByDate: {}, lastUpdated: new Date().toISOString() };
   }
@@ -53,7 +60,9 @@ module.exports = async function() {
     );
     
     if (response.data.errors) {
-      throw new Error(`GraphQL errors: ${JSON.stringify(response.data.errors)}`);
+      const gqlError = new Error(`GraphQL errors: ${JSON.stringify(response.data.errors)}`);
+      gqlError.isGraphQLError = true;
+      throw gqlError;
     }
     
     const contributionsByDate = {};
@@ -73,8 +82,31 @@ module.exports = async function() {
     };
     
   } catch (error) {
+    const status = error.response?.status;
+
+    // Auth/config problems are silent killers — an expired token would otherwise
+    // ship an empty contribution graph. Fail the build instead.
+    if (status === 401 || status === 403 || error.isGraphQLError) {
+      const message =
+        `❌ GitHub API auth failed (${status || 'GraphQL error'}): ${error.message}\n` +
+        `   Regenerate GITHUB_TOKEN (scope: read:user) and update the GH_PAT secret.`;
+
+      if (!isDevServer) {
+        throw new Error(message);
+      }
+
+      console.error(message);
+      console.error('   Dev server: continuing with an empty contribution graph.');
+      console.error('   Already updated .env? Restart `npm run dev` — dotenv only reads it at startup.');
+      return {
+        contributionsByDate: {},
+        lastUpdated: new Date().toISOString()
+      };
+    }
+
+    // Transient network trouble shouldn't block a deploy.
     console.error('❌ Error fetching GitHub contributions:', error.message);
-    return { 
+    return {
       contributionsByDate: {},
       lastUpdated: new Date().toISOString()
     };
