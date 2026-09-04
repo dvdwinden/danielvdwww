@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: Daniël van der Winden | Software & web designer; writer
-description: Amsterdam-based software & web designer, and writer. Former CDO at Bakken & Bæck and Senior Designer at Ghost. Currently contracting, and available for new opportunities (contract or permanent).
+title: Daniël van der Winden | Designer, writer, reader
+description: Amsterdam-based designer, writer and reader. Designing software at Enode; previously Ghost and Bakken & Bæck. Writes Trema, a monthly newsletter about books.
 bodyClass: bg-blue
 ---
 
@@ -12,13 +12,19 @@ bodyClass: bg-blue
 
 <div class="relative w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert main-content">
 
-<h2 class="home-subtitle mt-0 text-black dark:text-white">Software designer; writer</h2>
+<h2 class="home-subtitle mt-0 text-black dark:text-white">Designer, writer, reader.</h2>
 
 <section class="introduction">
-  <span class="callout">I have over a decade of experience designing digital products, leading teams, and setting direction. I’ve worked with clients of all sizes, on projects of all shapes.</span>
 
- As of 2026 I work for [Enode](http://enode.io?ref=daniel.pizza "Enode"), designing and building digital infrastructure that enables a zero carbon energy system. Before I arrived here, I worked for [Ghost](http://ghost.org?ref=daniel.pizza "Ghost"), where I designed and [built](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost’s Github repository") tools for writers, journalists and publishers. <br />
- Until 2023, over a period of nine years, I helped mould the design studio <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> into what it is today by building teams, shaping strategy, and delivering products—from zero to one.
+At [Enode](https://enode.io?ref=daniel.pizza "Enode") I design software that enables the next energy grid. Most recently I led the company’s rebrand and shipped its new website, redefining how the company looks and sounds.
+
+<figure class="w-full sm:max-w-lg ml-auto my-8">
+  <picture>{% retinaImage "src/assets/work/enode-og.png", "Enode’s wordmark", 512 %}</picture>
+</figure>
+
+<a class="bookmark-card" href="https://enode.com?ref=daniel.pizza" title="Enode" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">Enode: Orchestrating energy for the next grid</span><span class="bookmark-description">One platform for energy retailers and the teams that trade for them. Connect every asset, coordinate every home, and shape thousands as one.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/icons/enode-favicon.svg" alt="" width="16" height="16" loading="lazy" />enode.com</span></span></a>
+
+Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, latterly as partner and CDO.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -41,6 +47,84 @@ bodyClass: bg-blue
     </div>
   </div>
 </section>
+
+---
+
+<h3 class="section-title">Trema</h3>
+
+Outside of my day job I write [Trema](/newsletter "Trema, my monthly newsletter about books"), a monthly newsletter about the books I loved reading. It’s short, and I recommend fiction and non-fiction for casual and voracious readers alike.
+
+<ul class="trema-list not-prose">
+{%- for post in collections.newsletter.slice(0, 3) %}
+  <li class="trema-item book-item"><div class="book-cover">{% image "src" + post.data.image.src, post.data.image.alt, "186px" %}</div><a href="{{ post.data.external_url }}" title="{{ post.data.title }}" target="_blank" rel="external">{{ post.data.title }}</a><span class="trema-date">{{ post.data.date | date("MMM yyyy") | upper }}</span></li>
+{%- endfor %}
+</ul>
+
+<p class="trema-more"><a href="/newsletter" title="All entries from Trema">All entries</a> · <a href="https://www.trema.website/#/portal/signup" title="Subscribe to Trema" target="_blank" rel="external">Subscribe</a></p>
+
+---
+
+<h3 class="section-title"><em>TRANSCRIPT</em> Magazine</h3>
+
+With [Iris Cuppen](https://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I curated, edited, designed and published four issues of _TRANSCRIPT_: a small literary magazine, publishing essays, short stories and poetry, with visual work by designers, illustrators, or photographers. Each issue was printed in a limited run, and accompanied by live readings.
+
+<figure class="w-full sm:max-w-lg ml-auto my-8">
+  <picture>{% retinaImage "src/assets/work/transcript-scribe.png", "TRANSCRIPT Magazine", 512 %}</picture>
+</figure>
+
+<a class="bookmark-card" href="https://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">TRANSCRIPT Magazine</span><span class="bookmark-description">A seasonal literary magazine of essays, short stories and poetry, printed in a limited run. Four issues, 2023–2026.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/icons/transcript-favicon.png" alt="" width="16" height="16" loading="lazy" />transcriptmag.store</span></span></a>
+
+---
+
+<h3 class="section-title">NoGood art book</h3>
+
+In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings about his life and work and turning them into a cohesive whole. A gentle introduction to his moniker through a foreword and a few chapters covering how it came to be, why it’s the perfect place for him to experiment and grow his practice, and where it might be headed next.
+
+<figure class="w-full sm:max-w-lg ml-auto my-8">
+  <picture>{% retinaImage "src/assets/journal/nogood01.jpg", "The NoGood art book", 512 %}</picture>
+</figure>
+
+<a class="bookmark-card" href="/journal/nogood-book/" title="Writing the NoGood book"><span class="bookmark-content"><span class="bookmark-title">Writing the NoGood book</span><span class="bookmark-description">A gentle introduction to my friend Thomas’s moniker, NoGood—an exercise in restraint, written through hours of conversation. The book is out now.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/favicon-32x32.png" alt="" width="16" height="16" loading="lazy" />daniel.pizza</span></span></a>
+
+---
+
+<h2 class="work-title">Selected work</h2>
+
+Over a decade of designing digital products, leading teams and setting direction, for clients of all sizes and projects of all shapes. Putting together thorough flows, polished interfaces, and working prototypes. I sweat the details but make sure everyone understands the bigger picture.
+
+<ul class="work-list not-prose">
+  <li class="work-item">
+    <div class="work-preview" aria-hidden="true">
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/still-ghost-publishing.jpg", "Ghost publishing flow", 360 %}</picture></div>
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/still-ghost-fonts.jpg", "Custom fonts in Ghost", 360 %}</picture></div>
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/ghost-brand-work.png", "Ghost brand work", 360 %}</picture></div>
+    </div>
+    <h4 class="work-item-title"><a href="https://ghost.org?ref=daniel.pizza" title="Ghost" target="_blank" rel="nofollow">Ghost</a></h4>
+    <p class="work-item-body">Designed an upgraded publishing workflow, turning a dead end into an opportunity for publishers to reach their audience. Contributed design and code to the new onboarding, integrated <a href="https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza" title="Custom fonts in Ghost" target="_blank" rel="external">custom fonts</a>, and shipped <a href="https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&amp;ref=daniel.pizza" title="My pull requests on Ghost’s GitHub repository" target="_blank" rel="external">numerous improvements</a> throughout the product.</p>
+  </li>
+  <li class="work-item">
+    <div class="work-preview" aria-hidden="true">
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/still-circle-chair.jpg", "Circle UI", 360 %}</picture></div>
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/circle-01.jpg", "Circle for IKEA", 360 %}</picture></div>
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/still-circle-interior.jpg", "Circle in mixed reality", 360 %}</picture></div>
+    </div>
+    <h4 class="work-item-title"><a href="https://bakkenbaeck.com/case/circle?ref=daniel.pizza" title="Bakken &amp; Bæck’s Circle case study" target="_blank" rel="external">Circle, for IKEA</a></h4>
+    <p class="work-item-body">Led product design on IKEA’s circular rental solution for office furniture, letting small businesses design and explore their space in mixed reality. Built with a team from <a href="https://space10.com/?ref=daniel.pizza" title="SPACE10" target="_blank" rel="external">SPACE10</a> over one summer; it grew into <a href="https://nornorm.com/?ref=daniel.pizza" title="Nornorm" target="_blank" rel="external">Nornorm</a>, a standalone business.</p>
+  </li>
+  <li class="work-item">
+    <div class="work-preview" aria-hidden="true">
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/pexip-room-tv.png", "Pexip Room", 360 %}</picture></div>
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/pexip-ui.png", "Pexip UI on web", 360 %}</picture></div>
+      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/pexip-icons.png", "Pexip icons", 360 %}</picture></div>
+    </div>
+    <h4 class="work-item-title">Pexip</h4>
+    <p class="work-item-body">Led the redesign of Pexip’s web, iOS and Android apps, and created <a href="https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza" title="Read more about Pexip Room" target="_blank" rel="external">Pexip Room</a> to extend the product to Logitech meeting-room hardware.</p>
+  </li>
+  <li class="work-item">
+    <h4 class="work-item-title">Design leadership</h4>
+    <p class="work-item-body">Hired, managed and mentored teams of up to twelve product designers for over five years, balancing their goals with those of the business, while building out the Dutch presence of <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" target="_blank" rel="nofollow">Bakken &amp; Bæck</a> in Amsterdam.</p>
+  </li>
+</ul>
 
 <section class="resume">
   <h2 class="work-title">Resumé</h2>
@@ -133,197 +217,6 @@ bodyClass: bg-blue
   </ul>
 </section>
 
-My contribution as a designer is holistic: I deliver thorough flows, polished user interfaces, and quality prototypes. I sweat the details, but make sure everyone understands the bigger picture. 
-
-I have a strong interest in typography and a love for storytelling, and I’m as comfortable designing complex flows as I am putting together a marketing website. 
-
-I’ve worked on end-to-end projects for [Coinbase](http://coinbase.com?ref=daniel.pizza "Coinbase"), [AutoStore](http://autostoresystem.com?ref=daniel.pizza "AutoStore"), [Wake](https://techcrunch.com/2018/04/03/invision-acquires-design-visibility-tool-wake/?ref=daniel.pizza "Wake") and [Expo](http://expo.dev?ref=daniel.pizza "Expo"), among others.
-
----
-
-<h2 class="work-title">Ghost</h2> 
-<h3 class="text-black/60 dark:text-white/40 work-desc">Designing and building tools for writers, journalists and publishers</h3>
-
-While at Ghost I designed an upgraded publishing workflow, turning a dead end into an opportunity for publishers to share their work with their audience. I contributed design and code to the new onboarding, and worked on the integration of [custom fonts](https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza "Custom fonts in Ghost"). I was involved in exploratory brand work, and designed and built [numerous improvements](https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&ref=daniel.pizza "My pull requests on Ghost’s Github repository") throughout the product.
-
-</div>
-
-<div class="mt-32">
-  <figure>
-    <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/work/ghost-publishing-flow.mp4" type="video/mp4">
-        Improved publishing flow in Ghost
-    </video>
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Improved publishing flow in Ghost</figcaption>
-  </figure>
-
-  <figure class="w-full sm:max-w-lg mr-auto my-8 sm:my-24">
-    <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/work/custom-fonts-animation.mp4" type="video/mp4">
-        Taking personalisation one step further with custom fonts in Ghost
-    </video>
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Taking personalisation one step further with custom fonts in Ghost</figcaption>
-  </figure>
-</div>
-
-<figure class="w-full sm:max-w-lg ml-auto my-8 sm:my-24">
-  <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/work/ghost-visual-explorations.mp4" type="video/mp4">
-        Brand & design language explorations
-    </video>
-</figure>
-
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
-
-> Whether leading his own projects or working as part of a team, Daniël’s work is always exceptional. The thought process behind his designs is truly outstanding, and his attention to detail ensures a high-quality result. As a collaborator, his communication skills made the process a true pleasure. 
-
-<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">
-<picture>
-  {% retinaImage "src/assets/work/sodo.jpg", "Sodo", 400 %} <a href="https://sodo.is/?ref=daniel.pizza" title="Sodbileg's website" rel="external" target="_blank">Sodbileg Gansukh</a>, Product Designer at Ghost
-</picture>
-</span>
-
----
-
-<h2 class="work-title">Circle</h2>
-<h3 class="text-black/60 dark:text-white/40 work-desc">Conceptualising and designing IKEA’s circular rental platform for office furniture</h3>
-
-At Bakken & Bæck I led the digital product design for [Circle](https://bakkenbaeck.com/case/circle?ref=daniel.pizza "Bakken & Bæck’s Circle case study"), IKEA’s circular rental solution for office furniture. 
-
-We conceptualised, designed and built a digital solution that enabled small businesses to design, experience and explore their space in mixed reality. Working with a team from [_SPACE10_](https://space10.com/ "SPACE10"), we took the product from zero to one through rapid iteration. 
-</div>
-
-<div class="mt-32">
-  <figure>
-    <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/work/circle-video-interior.mp4" type="video/mp4">
-        IKEA’s circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez
-    </video>
-    <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">IKEA’s circular rental solution. Interior design by Astin Le Clercq, CGI by Santi Zoraidez</figcaption>
-  </figure>
-
-  <figure class="w-full sm:max-w-lg mr-auto my-12">
-    {% retinaImage "src/assets/work/circle-01.jpg", "IKEA" %}
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Photo by Osma Harvilahti</figcaption>
-  </figure>
-</div>
-
-<figure class="ml-auto max-w-lg">
-    <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/work/circle-video-chair.mp4" type="video/mp4">
-        UI for IKEA’s circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström
-    </video>
-    <figcaption class="pl-8 sm:pl-0  font-sans tracking-wide">UI for IKEA’s circular rental solution. CGI by Santi Zoraidez, animation by Olle Engström</figcaption>
-</figure>
-
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
-
-I oversaw the design direction for the digital product, crafted UI with another Product Designer, bridged the gap between product and brand, and managed client communication. 
-
-Over the course of one summer we laid the groundwork for what would grow into [Nornorm](https://nornorm.com/?ref=daniel.pizza "Nornorm"), a successful stand-alone business venture.
-
----
-
-<h2 class="work-title">Pexip</h2> 
-<h3 class="text-black/60 dark:text-white/40 work-desc">Streamlining a suite of video-conferencing software</h3>
-
-In collaboration with Pexip’s team I led design on the (re)design of their web, iOS and Android apps, modernising their video-conferencing offering and creating  _[Pexip Room](https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza "Read more about Pexip Room")_ to expand the company’s tools to Logitech hardware for meeting rooms. Our deliverables covered everything from the onboarding to the in-call experience, down to the controls in the settings.
-
-</div>
-
-<div class="mt-32">
- <figure class="w-full sm:max-w-lg mr-auto my-12">
-    {% retinaImage "src/assets/work/pexip-room-tv.png", "Pexip Room" %}
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip Room</figcaption>
-  </figure>
-</div>
-
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
-
-<figure class="w-full sm:max-w-lg ml-auto my-8 sm:my-24">
-  {% retinaImage "src/assets/work/pexip-ui.png", "Pexip UI on web" %}
-  <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip UI on web</figcaption>
-</figure>
-
-I crafted UI based on Pexip’s existing brand guidelines, oversaw the product direction together with Pexip’s Product Design Lead, and managed the client relationship. Together, we defined the direction of the iconography and sound design, commissioning external collaborators to deliver us a set of icons and sounds to use in the product.
-
-</div>
-
-<div class="mt-32">
- <figure class="w-full sm:max-w-lg mr-auto my-12">
-    {% retinaImage "src/assets/work/pexip-icons.png", "Pexip icons" %}
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">Pexip icons, designed by Hemmo de Jonge</figcaption>
-  </figure>
-
-</div>
-
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
-
-  > Daniël is the best designer I’ve worked with so far in my career. Impeccable attention to detail and a great problem-solver. He’s also very friendly, easy to work with and delivers on time despite tight turnaround times. 
-
-<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">
-  <picture>
-    {% retinaImage "src/assets/work/svenn-petter.webp", "Sven-Petter", 400 %}
-    <a href="https://www.linkedin.com/in/svennpetter/?ref=daniel.pizza" title="Svenn-Petter on LinkedIn" rel="external" target="_blank">Sven-Petter Mæhle</a>, Pexip
-  </picture>
-</span>
-
----
-
-<h2 class="work-title">Design Leadership</h2>
-I’ve hired, managed and mentored teams of up to twelve Product Designers with varying levels of experience—balancing their personal goals and needs with those of the business—for over five years.
-
-> What really sets Daniël apart is how much he cares about the people he works with. He creates a positive, supportive environment where everyone can thrive. If you’re looking for someone who will bring expertise, dedication, and a genuine care for his colleagues, Daniël is your person.
-
-<span class="uppercase font-sans font-semibold tracking-wide text-sm mt-0 text-black/50 dark:text-white/30 testimonial">
-  <picture>
-    {% retinaImage "src/assets/work/marek.webp", "Marek", 400 %}
-    <a href="https://minoradventures.co/?ref=daniel.pizza" title="Marek's website" rel="external" target="_blank">Marek Minor</a>, Product Designer
-  </picture>
-</span>
-
----
-
-<h2 class="work-title"><em>TRANSCRIPT</em> Magazine</h2> 
-<h3 class="text-black/60 dark:text-white/40 work-desc">Curating and crafting a printed, seasonal literary magazine</h3>
-
-Together with [Iris Cuppen](http://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I’ve curated, edited, designed and published three issues of [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), a seasonal literary magazine. It features literary essays, short stories, poetry, and visual works by renowned artists. Each issue is printed in a limited run. Its design is meant to be understated and elegant, leaving ample space for the stories and artworks it contains to take the spotlight.
-
-For the launch of every issue we’ve hosted an [event](https://www.instagram.com/p/DKrGC4fo7eC/?img_index=1 "See an impression on our Instagram account") where some of our contributors read their pieces to what has grown into a small and caring community.
-</div>
-
-<div class="mt-32">
-  <figure>
-    <video autoplay loop muted playsinline class="w-full" preload="auto">
-        <source src="/assets/work/transcript-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-    </video>
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine (issue one)</figcaption>
-  </figure>
-
-  <figure class="w-full sm:max-w-lg mr-auto my-12">
-    {% retinaImage "src/assets/work/transcript-visual.png", "TRANSCRIPT Magazine (issue one, with work by Thomas & Jurgen)" %}
-    <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine, featuring work by Thomas & Jurgen</figcaption>
-  </figure>
-</div>
-
-<figure class="w-full sm:max-w-lg ml-auto my-24">
-  {% retinaImage "src/assets/work/transcript-in-store.png", "TRANSCRIPT Magazine in store in Amsterdam" %}
-  <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide"><em>TRANSCRIPT</em> Magazine in store in Amsterdam</figcaption>
-</figure>
-
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert mt-20">
-
----
-
-<h2 class="work-title">Writing & Storytelling</h2>
-
-I’ve always had an interest in writing, and [write regularly](/newsletter "Latest entries from my monthly newsletter"). I work well on teams with other writers and have a keen eye for storytelling, which has proven beneficial when designing digital products or marketing websites.
-
-Most recently I’ve acted as the copywriter and editor on the [NoGood art book](https://book.nogood.studio/?ref=daniel.pizza "The NoGood art book"), due for publication this summer, helping turn Thomas' thoughts about his illustration process and work into a cohesive whole. 
-
----
-
   <h2 class="work-title">Speaking</h2>
   <div class="flex flex-col">
     <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
@@ -332,7 +225,7 @@ Most recently I’ve acted as the copywriter and editor on the [NoGood art book]
     </div>
     <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
       <p class="my-4">
-        <em>On Attention & Intention</em>, <a href="https://www.linkedin.com/feed/update/urn:li:activity:7345825584481988610/" title="Adyen Studio Day" rel="external" target="_blank">Adyen Studio Day</a></p>
+        <em>On Attention &amp; Intention</em>, <a href="https://www.linkedin.com/feed/update/urn:li:activity:7345825584481988610/" title="Adyen Studio Day" rel="external" target="_blank">Adyen Studio Day</a></p>
       <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">JUL 2025</span>
     </div>
     <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">

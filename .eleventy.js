@@ -754,6 +754,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon.png");
 
+  // Third-party favicons used by bookmark cards (skipped by image optimization)
+  eleventyConfig.addPassthroughCopy("src/assets/icons");
+
   // Copy hero images referenced in CSS
   eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square.webp");
   eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square@2x.webp");

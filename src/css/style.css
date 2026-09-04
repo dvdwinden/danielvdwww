@@ -998,6 +998,315 @@ ul.list-none {
     margin-top: -1.5rem;
 }
 
+.prose h3.section-title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   BOOKMARK CARDS
+   ========================================================================== */
+
+.prose a.bookmark-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0;
+    margin: 0.5rem 0;
+    border: 1px solid theme("colors.gray.200");
+    border-radius: 0.5rem;
+    background: theme("colors.white");
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition:
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+.dark .prose a.bookmark-card {
+    border-color: theme("colors.gray.700");
+    background: rgb(17 24 39 / 0.2);
+}
+
+.prose a.bookmark-card:hover {
+    border-color: theme("colors.hover");
+    text-decoration: none;
+    color: inherit;
+}
+
+.prose a.bookmark-card span {
+    text-decoration: none;
+}
+
+.dark .prose a.bookmark-card:hover {
+    border-color: theme("colors.hover-dark");
+}
+
+.bookmark-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 1rem 1.25rem;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.bookmark-title {
+    font-family: theme("fontFamily.sans");
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: theme("colors.black");
+}
+
+.dark .bookmark-title {
+    color: theme("colors.white");
+}
+
+.bookmark-description {
+    font-family: theme("fontFamily.sans");
+    font-size: 1rem;
+    line-height: 1.35;
+    color: rgb(0 0 0 / 0.6);
+}
+
+.dark .bookmark-description {
+    color: rgb(255 255 255 / 0.55);
+}
+
+.bookmark-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.35rem;
+    font-family: theme("fontFamily.sans");
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    color: rgb(0 0 0 / 0.5);
+}
+
+.dark .bookmark-meta {
+    color: rgb(255 255 255 / 0.4);
+}
+
+.prose .bookmark-meta img.bookmark-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    border-radius: 3px;
+    flex: none;
+}
+
+/* ==========================================================================
+   TREMA LIST (latest newsletter entries)
+   ========================================================================== */
+
+.prose ul.trema-list {
+    list-style: none;
+    margin: 1.5rem 0 1rem;
+    padding: 0;
+}
+
+/* Rows match the Speaking list: title left, small-caps date right, hairline
+   rule between. Hovering a row reveals its cover via the shared .book-cover. */
+.prose ul.trema-list li.trema-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.dark .prose ul.trema-list li.trema-item {
+    border-bottom-color: rgb(255 255 255 / 0.1);
+}
+
+.prose ul.trema-list li a {
+    display: block;
+    margin: 1rem 0;
+    font-family: theme("fontFamily.serif");
+    font-size: theme("fontSize.base");
+    line-height: 1.5;
+    color: inherit;
+    text-decoration: none;
+}
+
+.prose ul.trema-list li a:hover {
+    color: theme("colors.hover");
+    text-decoration: underline;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.trema-date {
+    font-family: theme("fontFamily.sans");
+    font-size: theme("fontSize.xs");
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: rgb(107 114 128);
+}
+
+.prose p.trema-more {
+    font-family: theme("fontFamily.sans");
+    font-size: 1rem;
+    color: rgb(0 0 0 / 0.5);
+}
+
+.dark .prose p.trema-more {
+    color: rgb(255 255 255 / 0.4);
+}
+
+/* ==========================================================================
+   SELECTED WORK LIST
+   ========================================================================== */
+
+.prose ul.work-list {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+}
+
+.prose ul.work-list li.work-item {
+    position: relative;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgb(0 0 0 / 0.08);
+}
+
+.dark .work-item {
+    border-bottom-color: rgb(255 255 255 / 0.06);
+}
+
+.work-item-title {
+    font-family: theme("fontFamily.sans");
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.35rem;
+    color: theme("colors.black");
+}
+
+.dark .work-item-title {
+    color: theme("colors.white");
+}
+
+.prose .work-item-title a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+.prose .work-item-title a:hover {
+    color: theme("colors.hover");
+    text-decoration: underline;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.dark .prose .work-item-title a:hover {
+    color: theme("colors.hover-dark");
+}
+
+.work-item-body {
+    font-family: theme("fontFamily.serif");
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin: 0;
+    color: rgb(0 0 0 / 0.75);
+}
+
+.dark .work-item-body {
+    color: rgb(255 255 255 / 0.6);
+}
+
+/* Hover preview: a stack of stills that cycles while the item is hovered,
+   parked in the empty column to the left of the prose (as on /library). */
+.work-preview {
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    transform: translateX(calc(-100% - 3rem));
+    width: 340px;
+    aspect-ratio: 4 / 3;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.work-item:hover .work-preview,
+.work-item:focus-within .work-preview {
+    opacity: 1;
+    visibility: visible;
+}
+
+.work-preview-frame {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.work-preview-frame.is-active {
+    opacity: 1;
+}
+
+.prose .work-preview-frame picture,
+.prose .work-preview-frame img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    box-shadow:
+        0 1px 2px rgb(0 0 0 / 0.1),
+        0 2px 8px rgb(0 0 0 / 0.15);
+}
+
+/* Not enough room to the left of the column — park it bottom-right instead. */
+@media (max-width: 1279px) {
+    .work-preview {
+        position: fixed;
+        left: auto;
+        right: 1rem;
+        bottom: calc(4rem + 1rem);
+        top: auto;
+        transform: none;
+        width: 200px;
+        z-index: 40;
+    }
+
+    .work-preview.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .work-item.active .work-item-title {
+        color: theme("colors.hover");
+    }
+
+    .dark .work-item.active .work-item-title {
+        color: theme("colors.hover-dark");
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .work-preview-frame {
+        transition: none;
+    }
+}
+
 /* Introduction */
 .introduction {
     margin-bottom: 4rem;
@@ -1061,6 +1370,33 @@ ul.list-none {
 .dark .prose p a:hover {
     color: theme("colors.hover-dark");
     background: none;
+    text-decoration: underline;
+    text-decoration-color: theme("colors.hover-dark");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* `.dark .prose a` above matches the homepage's bookmark cards, work titles
+   and Trema entries at equal specificity but later in the file, so it would
+   otherwise re-underline them. Restate the intent with `.dark` in front. */
+.dark .prose a.bookmark-card,
+.dark .prose a.bookmark-card:hover,
+.dark .prose .work-item-title a,
+.dark .prose ul.trema-list li a {
+    text-decoration: none;
+}
+
+.dark .prose .work-item-title a {
+    color: inherit;
+}
+
+.dark .prose ul.trema-list li a {
+    color: inherit;
+}
+
+.dark .prose .work-item-title a:hover,
+.dark .prose ul.trema-list li a:hover {
+    color: theme("colors.hover-dark");
     text-decoration: underline;
     text-decoration-color: theme("colors.hover-dark");
     text-decoration-thickness: 1px;
