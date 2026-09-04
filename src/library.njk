@@ -54,6 +54,39 @@ bodyClass: bg-amber
     class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
     data-genre="fiction"
     data-lang="en"
+    data-gender="female"
+>
+    <div class="book-cover">
+        {% image "src/assets/library/valeria-luiselli-beginning-middle-end.jpg",
+        "Beginning Middle End cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+        <div class="flex items-baseline gap-2">
+            <a
+                href="https://app.thestorygraph.com/books/bd65fbd6-e870-49ee-a152-c12903be7fd4"
+                class="font-serif text-lg font-medium"
+                target="_blank"
+                rel="external"
+                title="Beginning Middle End by Valeria Luiselli"
+                >Beginning Middle End</a
+            >
+            <span class="book-star">★</span>
+        </div>
+        <span
+            class="font-serif text-md text-black/70 dark:text-white/60 italic"
+            >Valeria Luiselli</span
+        >
+    </div>
+    <span
+        class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+    >
+        SEP
+    </span>
+</li>
+<li
+    class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+    data-genre="fiction"
+    data-lang="en"
     data-gender="male"
 >
     <div class="book-cover">
@@ -9033,17 +9066,17 @@ bodyClass: bg-amber
     class="mt-12 font-sans text-sm leading-relaxed tracking-wide text-black/50 dark:text-white/50"
 >
     This page was last updated on {{ page.inputPath | lastModified }}. As of
-    today, this library holds <span id="book-count">281</span> books:
-    <span id="count-fiction">134</span> fiction,
+    today, this library holds <span id="book-count">282</span> books:
+    <span id="count-fiction">135</span> fiction,
     <span id="count-non-fiction">140</span> non-fiction, and
     <span id="count-poetry">7</span> poetry. They were written by
-    <span id="count-writers">228</span> different writers.
-    <span id="count-female">109</span> are women,
+    <span id="count-writers">229</span> different writers.
+    <span id="count-female">110</span> are women,
     <span id="count-male">118</span> are men, and
     <span id="count-nonbinary">1</span>
     <span id="nonbinary-verb">is</span> non-binary. I read
     <span id="count-nl">63</span> of these books in Dutch and
-    <span id="count-en">218</span> in English.
+    <span id="count-en">219</span> in English.
 </p>
 
 <script src="/js/library.js"></script>
