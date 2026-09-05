@@ -743,8 +743,12 @@ module.exports = function (eleventyConfig) {
   registerAsyncShortcode("image", imageShortcode);
   registerAsyncShortcode("retinaImage", retinaImageShortcode);
 
-  // Copy static files
-  eleventyConfig.addPassthroughCopy("src/css");
+  // Copy static files. src/css is deliberately NOT copied: it holds only
+  // style.css, the Tailwind *input*, and copying it lands on the exact path
+  // Tailwind compiles to (_site/css/style.css), overwriting the built CSS with
+  // raw @tailwind/@apply source. In `npm run build` Tailwind runs after
+  // Eleventy and wins; in `npm run dev` the two run concurrently, so whichever
+  // finished last decided whether the site had any styles at all.
   eleventyConfig.addPassthroughCopy("src/js");
 
   // Copy favicon files to assets directory
