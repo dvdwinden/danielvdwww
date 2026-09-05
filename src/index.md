@@ -5,26 +5,25 @@ description: Amsterdam-based designer, writer and reader. Designing software at 
 bodyClass: bg-blue
 ---
 
-<div class="hero-images">
-  <figure class="hero-image studio"></figure>
-  <figure class="hero-image daniel"></figure>
-</div>
-
 <div class="relative w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert main-content">
 
 <h2 class="home-subtitle mt-0 text-black dark:text-white">Designer, writer, reader.</h2>
 
+I’m a designer, based in Amsterdam. I make software for a living, and books and magazines for the love of it.
+
 <section class="introduction">
 
-At [Enode](https://enode.io?ref=daniel.pizza "Enode") I design software that enables the next energy grid. Most recently I led the company’s rebrand and shipped its new website, redefining how the company looks and sounds.
+At [Enode](https://enode.com?ref=daniel.pizza "Enode") I design software that enables the next energy grid. Most recently I led the company’s rebrand and shipped its new website, redefining how the company looks and sounds.
 
-<figure class="w-full sm:max-w-lg ml-auto my-8">
-  <picture>{% retinaImage "src/assets/work/enode-og.png", "Enode’s wordmark", 512 %}</picture>
+Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, latterly as partner and CDO.
+
+<figure class="figure-cycle w-full sm:max-w-lg ml-auto my-8">
+  <div class="figure-cycle-frames">
+    <div class="figure-cycle-frame"><picture>{% retinaImage "src/assets/work/enode-og.png", "Enode’s wordmark", 512 %}</picture></div>
+  </div>
 </figure>
 
 <a class="bookmark-card" href="https://enode.com?ref=daniel.pizza" title="Enode" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">Enode: Orchestrating energy for the next grid</span><span class="bookmark-description">One platform for energy retailers and the teams that trade for them. Connect every asset, coordinate every home, and shape thousands as one.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/icons/enode-favicon.svg" alt="" width="16" height="16" loading="lazy" />enode.com</span></span></a>
-
-Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, latterly as partner and CDO.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -80,9 +79,21 @@ With [Iris Cuppen](https://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I cura
 
 In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings about his life and work and turning them into a cohesive whole. A gentle introduction to his moniker through a foreword and a few chapters covering how it came to be, why it’s the perfect place for him to experiment and grow his practice, and where it might be headed next.
 
-<figure class="w-full sm:max-w-lg ml-auto my-8">
-  <picture>{% retinaImage "src/assets/journal/nogood01.jpg", "The NoGood art book", 512 %}</picture>
-</figure>
+</div>
+
+<div class="sm:mt-16 mt-8 sm:mb-16 mb-8">
+  <figure class="figure-cycle w-full">
+    <div class="figure-cycle-frames">
+      <div class="figure-cycle-frame">{% image "src/assets/journal/nogood02.jpg", "The NoGood art book" %}</div>
+      <div class="figure-cycle-frame">{% image "src/assets/journal/nogood03.jpg", "The NoGood art book" %}</div>
+      <div class="figure-cycle-frame">{% image "src/assets/journal/nogood04.jpg", "The NoGood art book" %}</div>
+      <div class="figure-cycle-frame">{% image "src/assets/journal/nogood05.jpg", "The NoGood art book" %}</div>
+      <div class="figure-cycle-frame">{% image "src/assets/journal/nogood06.jpg", "The NoGood art book" %}</div>
+    </div>
+  </figure>
+</div>
+
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
 
 <a class="bookmark-card" href="/journal/nogood-book/" title="Writing the NoGood book"><span class="bookmark-content"><span class="bookmark-title">Writing the NoGood book</span><span class="bookmark-description">A gentle introduction to my friend Thomas’s moniker, NoGood—an exercise in restraint, written through hours of conversation. The book is out now.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/favicon-32x32.png" alt="" width="16" height="16" loading="lazy" />daniel.pizza</span></span></a>
 
@@ -94,29 +105,14 @@ Over a decade of designing digital products, leading teams and setting direction
 
 <ul class="work-list not-prose">
   <li class="work-item">
-    <div class="work-preview" aria-hidden="true">
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/still-ghost-publishing.jpg", "Ghost publishing flow", 360 %}</picture></div>
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/still-ghost-fonts.jpg", "Custom fonts in Ghost", 360 %}</picture></div>
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/ghost-brand-work.png", "Ghost brand work", 360 %}</picture></div>
-    </div>
     <h4 class="work-item-title"><a href="https://ghost.org?ref=daniel.pizza" title="Ghost" target="_blank" rel="nofollow">Ghost</a></h4>
     <p class="work-item-body">Designed an upgraded publishing workflow, turning a dead end into an opportunity for publishers to reach their audience. Contributed design and code to the new onboarding, integrated <a href="https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza" title="Custom fonts in Ghost" target="_blank" rel="external">custom fonts</a>, and shipped <a href="https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&amp;ref=daniel.pizza" title="My pull requests on Ghost’s GitHub repository" target="_blank" rel="external">numerous improvements</a> throughout the product.</p>
   </li>
   <li class="work-item">
-    <div class="work-preview" aria-hidden="true">
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/still-circle-chair.jpg", "Circle UI", 360 %}</picture></div>
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/circle-01.jpg", "Circle for IKEA", 360 %}</picture></div>
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/still-circle-interior.jpg", "Circle in mixed reality", 360 %}</picture></div>
-    </div>
     <h4 class="work-item-title"><a href="https://bakkenbaeck.com/case/circle?ref=daniel.pizza" title="Bakken &amp; Bæck’s Circle case study" target="_blank" rel="external">Circle, for IKEA</a></h4>
     <p class="work-item-body">Led product design on IKEA’s circular rental solution for office furniture, letting small businesses design and explore their space in mixed reality. Built with a team from <a href="https://space10.com/?ref=daniel.pizza" title="SPACE10" target="_blank" rel="external">SPACE10</a> over one summer; it grew into <a href="https://nornorm.com/?ref=daniel.pizza" title="Nornorm" target="_blank" rel="external">Nornorm</a>, a standalone business.</p>
   </li>
   <li class="work-item">
-    <div class="work-preview" aria-hidden="true">
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/pexip-room-tv.png", "Pexip Room", 360 %}</picture></div>
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/pexip-ui.png", "Pexip UI on web", 360 %}</picture></div>
-      <div class="work-preview-frame"><picture>{% retinaImage "src/assets/work/pexip-icons.png", "Pexip icons", 360 %}</picture></div>
-    </div>
     <h4 class="work-item-title">Pexip</h4>
     <p class="work-item-body">Led the redesign of Pexip’s web, iOS and Android apps, and created <a href="https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza" title="Read more about Pexip Room" target="_blank" rel="external">Pexip Room</a> to extend the product to Logitech meeting-room hardware.</p>
   </li>
@@ -128,96 +124,46 @@ Over a decade of designing digital products, leading teams and setting direction
 
 <section class="resume">
   <h2 class="work-title">Resumé</h2>
-
-  <ul class="pl-0 ml-0 list-none space-y-10">
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">Now</span>
-      <div class="md:w-3/4">
-      <div class="text-md font-bold font-sans">
-          <h3>Senior Product Designer at <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a></h3>
-        </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
-          Designing and building digital infrastructure that enables a zero carbon energy system. 
-        </div>
-      </div>
-    </li>
-   <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–2026</span>
-      <div class="md:w-3/4">
-      <div class="text-md font-bold font-sans">
-          <h3>Co-Founder of <a href="http://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" rel="nofollow" target="_blank"><em>TRANSCRIPT</em> Magazine</a></h3>
-        </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
-          Curating, editing, designing and publishing a seasonal literary magazine.
-        </div>
-      </div>
-    </li>
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2025–2026</span>
-      <div class="md:w-3/4">
-      <div class="text-md font-bold font-sans">
-          <h3>Senior Product Designer · Contract</h3>
-        </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
-          From the summer of 2025 I worked as a freelancer, collaborating with <a href="http://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="external" target="_blank">Fictive Kin</a>, where I designed an Android app for a Mexican retailer and helped lay the foundation for <a href="https://ladderbenefits.com/?ref=daniel.pizza" title="Ladder" rel="external" target="_blank">Ladder</a>, enabling NYC-based Americans who don’t have the means to get by apply for benefits.<br />
-          <br />
-          After Fictive Kin, I moved on to support <a href="https://enode.io/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a>.
-        </div>
-      </div>
-   </li>
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 text-md font-sans mb-2 md:mb-0">2023–2025</span>
-      <div class="md:w-3/4">
-      <div class="text-md font-bold font-sans">
-          <h3>Senior Product Designer at <a href="http://ghost.org?ref=daniel.pizza" title="Ghost" rel="nofollow" target="_blank">Ghost</a></h3>
-        </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
-          Involved in designing new features and exploratory brand & product work. Coded numerous improvements throughout the product and its marketing site.
-        </div>
-      </div>
-    </li>
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2019–2023</span>
-      <div class="md:w-3/4">
-      <div class="text-md font-bold font-sans">
-          <h3>Partner, CDO at <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
-        </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
-          As Partner, I was involved in setting the company’s strategy. As CDO, I focused on our Product Design work and team—from securing projects to hiring new team members, and from elevating our reputation externally to enabling Product Designers to do their best work.
-        </div>
-      </div>
-    </li>
-      <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2015–2019</span>
-      <div class="md:w-3/4">
-      <div class="text-md font-bold font-sans">
-          <h3>Designer, Head of <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a> in Amsterdam</h3>
-        </div>
-        <div class="text-black/70 dark:text-white/50 mt-2 font-degular text-md">
-          Set up shop in the Netherlands and built a local, multi-disciplinary team of up to 20 people to help the company take root. Mentored Product Designers and other team members. Designed digital products and websites.
-        </div>
-      </div>
-    </li>
-      <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-        <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2014–2015</span>
-        <div class="md:w-3/4">
-          <div class="text-md font-bold font-sans">
-            <h3>Designer at <a href="http://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a></h3>
-          </div>
-        </div>
-    </li>
-    <li class="flex flex-col md:flex-row md:items-baseline md:space-x-8 pb-8 pl-0 ml-0 border-b border-gray-950/5 dark:border-white/5">
-      <span class="md:w-1/4 text-black/50 dark:text-white/50 font-sans mb-2 md:mb-0 text-md">2013–2014</span>
-      <div class="md:w-3/4">
-        <div class="text-md font-bold font-sans">
-          <h3>Internships at <a href="http://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a> and <a href="http://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a></h3>
-        </div>
-      </div>
-    </li>
-  </ul>
+  <div class="flex flex-col">
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4">Senior Product Designer at <a href="https://enode.com/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a></p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">NOW</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4">Co-Founder of <a href="https://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" rel="nofollow" target="_blank"><em>TRANSCRIPT</em> Magazine</a></p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">2023–2026</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4">Senior Product Designer at <a href="https://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="external" target="_blank">Fictive Kin</a> · Contract</p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">2025–2026</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4">Senior Product Designer at <a href="https://ghost.org?ref=daniel.pizza" title="Ghost" rel="nofollow" target="_blank">Ghost</a></p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">2023–2025</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4">Partner, CDO at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken &amp; Bæck</a></p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">2019–2023</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4">Designer, Head of <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken &amp; Bæck</a> in Amsterdam</p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">2015–2019</span>
+    </div>
+    <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
+      <p class="my-4">Designer at <a href="https://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a></p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">2014–2015</span>
+    </div>
+    <div class="flex items-baseline justify-between">
+      <p class="my-4">Internships at <a href="https://fabrique.nl?ref=daniel.pizza" title="Fabrique" rel="nofollow" target="_blank">Fabrique</a> and <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken &amp; Bæck</a></p>
+      <span class="text-xs uppercase tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans">2013–2014</span>
+    </div>
+  </div>
 </section>
 
   <h2 class="work-title">Speaking</h2>
+
+  <figure class="photo-tinted"><picture>{% image "src/assets/work/daniel-square@2x.webp", "Me, speaking at a launch", "(min-width: 640px) 512px, 100vw" %}</picture></figure>
+
   <div class="flex flex-col">
     <div class="flex items-baseline justify-between border-b border-black/10 dark:border-white/10">
       <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue four</p>

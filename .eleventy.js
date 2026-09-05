@@ -757,12 +757,6 @@ module.exports = function (eleventyConfig) {
   // Third-party favicons used by bookmark cards (skipped by image optimization)
   eleventyConfig.addPassthroughCopy("src/assets/icons");
 
-  // Copy hero images referenced in CSS
-  eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square@2x.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/studio-square.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/studio-square@2x.webp");
-
   // Don't passthrough asset directories since they're handled by the image optimization
   // Only passthrough files that should not be optimized
   eleventyConfig.addPassthroughCopy("src/assets/**/*.mp4");

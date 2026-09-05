@@ -563,67 +563,28 @@ article time {
    ========================================================================== */
 
 /* Hero images */
-.hero-images {
-    position: absolute;
-    top: 25vh;
-    left: 18%;
-    right: 0;
-    z-index: 1;
-    pointer-events: none;
-    content-visibility: auto;
-    contain: layout style paint;
-    will-change: transform;
-}
-
-.hero-image {
-    @apply relative;
+/* Greyscale photos laid over a light blue and multiplied — the treatment the
+   homepage hero used, kept now that these live inside the prose column. The
+   blue is fixed rather than themed, so they read the same in either mode. */
+.prose figure.photo-tinted {
+    margin: 2rem 0;
     background-color: hsl(200, 50%, 90%);
-    background-blend-mode: multiply;
-    background-size: contain;
     border-radius: 0.1875rem;
+    overflow: hidden;
+}
+
+.prose .photo-tinted picture,
+.prose .photo-tinted img {
+    display: block;
+    margin: 0;
     width: 100%;
-    max-width: 360px;
-    height: 360px;
-    pointer-events: none;
-    will-change: transform;
-    transform: translateZ(0);
-    contain: layout paint style;
-    contain-intrinsic-size: 360px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0;
 }
 
-.hero-image.daniel {
-    background-image: image-set(
-        url("/assets/work/daniel-square.webp") 1x,
-        url("/assets/work/daniel-square@2x.webp") 2x
-    );
-    background-size: cover;
-    background-position: center;
-
-    @supports not (
-        background-image: image-set(url("/assets/work/daniel-square.webp") 1x)
-    ) {
-        background-image: url("/assets/work/daniel-square-optimized.png");
-    }
-
-    @apply mr-auto my-8 sm:my-24;
-    margin-top: -180px;
-    margin-left: 70px;
-}
-
-.hero-image.studio {
-    background-image: image-set(
-        url("/assets/work/studio-square.webp") 1x,
-        url("/assets/work/studio-square@2x.webp") 2x
-    );
-    background-size: cover;
-
-    @supports not (
-        background-image: image-set(url("/assets/work/studio-square.webp") 1x)
-    ) {
-        background-image: url("/assets/work/studio-square-optimized.png");
-    }
-
-    @apply mr-auto my-8 sm:my-24;
+.prose .photo-tinted img {
+    mix-blend-mode: multiply;
 }
 
 /* Buttons and CTAs */
@@ -1225,86 +1186,134 @@ ul.list-none {
     color: rgb(255 255 255 / 0.6);
 }
 
-/* Hover preview: a stack of stills that cycles while the item is hovered,
-   parked in the empty column to the left of the prose (as on /library). */
-.work-preview {
-    position: absolute;
-    left: 0;
-    top: 1.5rem;
-    transform: translateX(calc(-100% - 3rem));
-    width: 340px;
-    aspect-ratio: 4 / 3;
-    opacity: 0;
-    visibility: hidden;
-    transition:
-        opacity 0.2s ease-in-out,
-        visibility 0.2s ease-in-out;
-    pointer-events: none;
-    z-index: 10;
+/* ==========================================================================
+   FIGURE CYCLE
+   Auto-cycling image set inside the prose column. Frames are stacked in a
+   box of a fixed ratio (override per figure with --cycle-ratio) and
+   cross-faded by home.js; with one frame it is just a plain figure.
+   ========================================================================== */
+.figure-cycle-frames {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--cycle-ratio, 3 / 2);
+    overflow: hidden;
+    border-radius: 0.1875rem;
 }
 
-.work-item:hover .work-preview,
-.work-item:focus-within .work-preview {
-    opacity: 1;
-    visibility: visible;
-}
-
-.work-preview-frame {
+.figure-cycle-frame {
     position: absolute;
     inset: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 
-.work-preview-frame.is-active {
+/* Until home.js marks the figure ready, the first frame shows on its own, so
+   the box is never empty and the set degrades to a static image without JS. */
+.figure-cycle-frame:not(:first-child) {
+    opacity: 0;
+}
+
+.figure-cycle.is-ready .figure-cycle-frame {
+    opacity: 0;
+}
+
+.figure-cycle.is-ready .figure-cycle-frame.is-active {
     opacity: 1;
 }
 
-.prose .work-preview-frame picture,
-.prose .work-preview-frame img {
+/* Unscoped from .prose: a cycle can also sit in a breakout block outside the
+   column, as the NoGood one does. */
+.figure-cycle-frame picture,
+.figure-cycle-frame img {
     display: block;
     margin: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid rgb(0 0 0 / 0.1);
-    box-shadow:
-        0 1px 2px rgb(0 0 0 / 0.1),
-        0 2px 8px rgb(0 0 0 / 0.15);
-}
-
-/* Not enough room to the left of the column — park it bottom-right instead. */
-@media (max-width: 1279px) {
-    .work-preview {
-        position: fixed;
-        left: auto;
-        right: 1rem;
-        bottom: calc(4rem + 1rem);
-        top: auto;
-        transform: none;
-        width: 200px;
-        z-index: 40;
-    }
-
-    .work-preview.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .work-item.active .work-item-title {
-        color: theme("colors.hover");
-    }
-
-    .dark .work-item.active .work-item-title {
-        color: theme("colors.hover-dark");
-    }
+    border-radius: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .work-preview-frame {
+    .figure-cycle-frame {
         transition: none;
     }
+}
+
+/* Controls, all built by home.js. Each arrow is a half-width overlay, so the
+   glyph fades in over whichever side the pointer is on and the whole half is
+   the hit area. */
+.figure-cycle-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.figure-cycle-arrow--prev {
+    left: 0;
+    justify-content: flex-start;
+}
+
+.figure-cycle-arrow--next {
+    right: 0;
+    justify-content: flex-end;
+}
+
+.figure-cycle-arrow:hover,
+.figure-cycle-arrow:focus-visible {
+    opacity: 1;
+}
+
+/* A disc behind the glyph, so it stays legible over any image. */
+.figure-cycle-arrow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    background: rgb(0 0 0 / 0.55);
+    color: #fff;
+    font-family: theme("fontFamily.sans");
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.figure-cycle-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.figure-cycle-dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: 0.25;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.figure-cycle-dot:hover,
+.figure-cycle-dot:focus-visible {
+    opacity: 0.6;
+}
+
+.figure-cycle-dot.is-active {
+    opacity: 0.9;
 }
 
 /* Introduction */
@@ -1482,10 +1491,6 @@ ul.list-none {
     text-underline-offset: 3px;
 }
 
-.dark .hero-image {
-    background-color: hsl(204, 17%, 89%);
-}
-
 .dark .book-item a {
     color: theme("colors.white");
     text-decoration: none;
@@ -1500,76 +1505,7 @@ ul.list-none {
    RESPONSIVE DESIGN
    ========================================================================== */
 
-/* Hero image responsive styling */
-@media (max-width: 1400px) {
-    /* For 1400px and below, show images side-by-side above content */
-    .hero-images {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        z-index: auto;
-        pointer-events: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-        transform: translateZ(0);
-    }
-
-    .hero-image {
-        pointer-events: auto;
-        max-width: 360px;
-        height: 360px;
-        contain-intrinsic-size: 360px;
-    }
-
-    .hero-image.studio,
-    .hero-image.daniel {
-        margin: 0;
-    }
-
-    .hero-image.daniel {
-        margin-left: -120px;
-        margin-top: 100px;
-    }
-
-    div.prose {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1024px) {
-    .hero-image {
-        max-width: 320px;
-        height: 320px;
-        contain-intrinsic-size: 320px;
-    }
-
-    .hero-image.daniel {
-        margin-left: -160px;
-    }
-}
-
 @media (max-width: 768px) {
-    .hero-images {
-        height: auto;
-        margin-top: 0;
-    }
-
-    .hero-image {
-        max-width: 280px;
-        height: 280px;
-        contain-intrinsic-size: 280px;
-    }
-
-    .hero-image.daniel {
-        margin-left: -140px;
-    }
-
     /* Mobile typography adjustments */
     .prose h1 {
         font-size: 2rem;
@@ -1607,16 +1543,6 @@ ul.list-none {
         font-size: 1.5rem;
     }
 
-    .hero-image {
-        max-width: 240px;
-        height: 240px;
-        contain-intrinsic-size: 240px;
-    }
-
-    .hero-image.daniel {
-        margin-left: -120px;
-    }
-
     .prose h1 {
         font-size: 2rem;
     }
@@ -1636,12 +1562,6 @@ ul.list-none {
 
     .site-footer ul li a {
         font-size: 1rem;
-    }
-}
-
-@media (min-width: 1401px) {
-    .hero-image {
-        max-width: 28%;
     }
 }
 
