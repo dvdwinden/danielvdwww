@@ -11,9 +11,9 @@ bodyClass: bg-blue
 
 I’m a designer, based in Amsterdam, and I make software for a living.
 
-I’ve designed digital products, websites, and web apps for over a decade. As a contributor—or while leading teams and setting direction—I’ve worked for clients of all sizes and projects of all shapes.
+I’ve designed digital products, websites and web apps for over a decade. As a contributor—or while leading teams and setting direction—I’ve worked for clients of all sizes and projects of all shapes.
 
-Putting together everything from briefings to thorough flows, and polished interfaces to working prototypes—I sweat the details but make sure everyone understands the bigger picture.
+I put together everything from briefings and thorough flows to polished interfaces and working prototypes. I sweat the details but make sure everyone understands the bigger picture.
 
 </div>
 
@@ -29,7 +29,7 @@ Putting together everything from briefings to thorough flows, and polished inter
 
 <section class="introduction">
 
-At [Enode](https://enode.com?ref=daniel.pizza "Enode"), I design software that enables the next energy grid. Most recently I led our rebrand, shipped our new website, and redefined how the company looks and sounds through its visual and written language.
+At [Enode](https://enode.com?ref=daniel.pizza "Enode"), I design software that enables the next energy grid. Most recently I led our rebrand, shipped our new website, redefining how the company looks and sounds.
 
 _Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, a large part as partner and CDO._
 

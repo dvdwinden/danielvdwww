@@ -107,11 +107,14 @@
       });
 
       if (finePointer) {
+        // Lives on the figure, not the frame box: the frame clips its images to
+        // the ratio, and the disc needs to overhang that edge rather than be
+        // cut off by it.
         const marker = document.createElement('div');
         marker.className = 'figure-cycle-cursor';
         marker.setAttribute('aria-hidden', 'true');
         marker.textContent = '\u2192';
-        frameBox.appendChild(marker);
+        figure.appendChild(marker);
         frameBox.classList.add('has-cursor');
 
         let pending = null;
@@ -121,28 +124,23 @@
           if (pending) cancelAnimationFrame(pending);
           pending = requestAnimationFrame(() => {
             pending = null;
-            const rect = frameBox.getBoundingClientRect();
+            const rect = figure.getBoundingClientRect();
             const x = event.clientX - rect.left;
             const y = event.clientY - rect.top;
-            // Keep the whole disc over the image rather than letting it get
-            // clipped against the frame's edges.
-            const r = marker.offsetWidth / 2;
-            const cx = Math.min(Math.max(x, r), rect.width - r);
-            const cy = Math.min(Math.max(y, r), rect.height - r);
             marker.style.transform =
-              'translate(' + cx + 'px, ' + cy + 'px) translate(-50%, -50%)';
+              'translate(' + x + 'px, ' + y + 'px) translate(-50%, -50%)';
             marker.textContent = x < rect.width / 2 ? '\u2190' : '\u2192';
           });
         });
 
         frameBox.addEventListener('pointerenter', event => {
-          if (event.pointerType === 'mouse') frameBox.classList.add('is-pointing');
+          if (event.pointerType === 'mouse') figure.classList.add('is-pointing');
         });
 
         frameBox.addEventListener('pointerleave', () => {
           if (pending) cancelAnimationFrame(pending);
           pending = null;
-          frameBox.classList.remove('is-pointing');
+          figure.classList.remove('is-pointing');
         });
       }
 

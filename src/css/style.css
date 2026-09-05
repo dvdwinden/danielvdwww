@@ -1170,6 +1170,12 @@ ul.list-none {
    box of a fixed ratio (override per figure with --cycle-ratio) and
    cross-faded by home.js; with one frame it is just a plain figure.
    ========================================================================== */
+/* The disc is a child of the figure rather than the frame box, so it can
+   overhang the image instead of being clipped by the frame's overflow. */
+.figure-cycle {
+    position: relative;
+}
+
 .figure-cycle-frames {
     position: relative;
     width: 100%;
@@ -1296,7 +1302,7 @@ ul.list-none {
     z-index: 3;
 }
 
-.figure-cycle-frames.is-pointing .figure-cycle-cursor {
+.figure-cycle.is-pointing .figure-cycle-cursor {
     opacity: 1;
 }
 
