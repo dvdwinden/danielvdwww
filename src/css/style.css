@@ -525,35 +525,27 @@ span.testimonial {
     right: 0;
 }
 
-/* The arrow becomes the cursor over those zones, as on the home page. */
-#photo-lightbox.has-cursor .lightbox-nav {
-    cursor: none;
+/* Arrows as real cursors, the way zoom-in and zoom-out are. A dark disc
+   behind a white chevron so they read against any tint. Hotspot centred;
+   the resize cursors are the fallback if the image is refused. */
+.lightbox-prev {
+    cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='36'%20height='36'%3E%3Ccircle%20cx='18'%20cy='18'%20r='17'%20fill='black'%20fill-opacity='.55'/%3E%3Cpath%20d='M21%2012%2015%2018%2021%2024'%20fill='none'%20stroke='white'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") 18 18, w-resize;
 }
 
-.lightbox-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 999px;
-    background: rgb(0 0 0 / 0.55);
-    color: #fff;
-    font-family: theme("fontFamily.sans");
-    font-size: 1.25rem;
-    line-height: 1;
+.lightbox-next {
+    cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='36'%20height='36'%3E%3Ccircle%20cx='18'%20cy='18'%20r='17'%20fill='black'%20fill-opacity='.55'/%3E%3Cpath%20d='M15%2012%2021%2018%2015%2024'%20fill='none'%20stroke='white'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") 18 18, e-resize;
+}
+
+/* The figure fills the dialog to centre the photo, which would otherwise
+   cover the nav zones underneath it. Only the photo and its caption take the
+   pointer; everything else falls through to the zones. */
+.lightbox-figure {
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-    will-change: transform;
 }
 
-#photo-lightbox.is-pointing .lightbox-cursor {
-    opacity: 1;
+.lightbox-image,
+.lightbox-caption {
+    pointer-events: auto;
 }
 
 .lightbox-figure {
@@ -643,37 +635,48 @@ span.testimonial {
         row-gap: 9rem;
         /* Extra room for the photos comes out of the left gutter only. That
            gutter is sized for the fixed nav, which sits at the bottom of the
-           viewport, so there is slack to borrow up top. The right edge is
-           left alone so the grid ends exactly where the prose column above
-           it ends, and the first photo lines up with the text. */
+           viewport, so there is slack to borrow up top. The right edge stays
+           put, so the grid ends where the page's content column ends. The
+           intro sits in the last column (see .photo-intro), which is what
+           makes the first photo line up with the text on both edges. */
         margin-left: -10rem;
         margin-right: 0;
     }
 
-    .photo-grid figure[data-col="1"] {
+    .photo-grid > [data-col="1"] {
         grid-column-start: 1;
     }
 
-    .photo-grid figure[data-col="2"] {
+    .photo-grid > [data-col="2"] {
         grid-column-start: 2;
     }
 
-    .photo-grid figure[data-col="3"] {
+    .photo-grid > [data-col="3"] {
         grid-column-start: 3;
     }
 
-    .photo-grid figure[data-span="1"] {
+    .photo-grid > [data-span="1"] {
         grid-column-end: span 1;
     }
 
-    .photo-grid figure[data-span="2"] {
+    .photo-grid > [data-span="2"] {
         grid-column-end: span 2;
     }
 
-    /* One photo per row, set by the photoPlacement filter. Without this,
+    /* One item per row, set by the photoPlacement filter. Without this,
        auto-placement will pair a left-column photo with a right-column one. */
-    .photo-grid figure {
+    .photo-grid > [data-col] {
         grid-row-start: var(--photo-row);
+    }
+
+    /* The lead photo matches the prose column above it: same width, same
+       edges. It sits in the last column and grows leftward out of its track,
+       which nothing shares, so the rest of the grid is untouched and no other
+       photo changes size. Only when it's a single-column photo - a landscape
+       already spans wider than the text. */
+    .photo-grid > figure:first-of-type[data-span="1"] {
+        justify-self: end;
+        width: 32rem;
     }
 }
 

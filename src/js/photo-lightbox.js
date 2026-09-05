@@ -79,6 +79,10 @@
     usedKeyboard = false;
     show(index);
     dialog.showModal();
+    // Take focus onto the dialog itself. Otherwise it lands on the close
+    // button, which then lights up the moment any key is pressed - including
+    // an arrow key that has nothing to do with closing.
+    dialog.focus();
   });
 
   dialog.addEventListener("keydown", function (event) {
@@ -115,46 +119,6 @@
     }
     dialog.close();
   });
-
-  // A disc follows the pointer over those zones with the direction it would
-  // take you, the same gesture as the figure cycler on the home page. Mouse
-  // only: there is nothing to follow on a touchscreen.
-  if (window.matchMedia && window.matchMedia("(pointer: fine)").matches) {
-    const marker = dialog.querySelector(".lightbox-cursor");
-    if (marker) {
-      dialog.classList.add("has-cursor");
-      let pending = null;
-
-      dialog.addEventListener("pointermove", function (event) {
-        if (event.pointerType !== "mouse") return;
-
-        const zone = event.target.closest(".lightbox-nav");
-        if (!zone) {
-          dialog.classList.remove("is-pointing");
-          return;
-        }
-
-        dialog.classList.add("is-pointing");
-        if (pending) cancelAnimationFrame(pending);
-        pending = requestAnimationFrame(function () {
-          pending = null;
-          marker.style.transform =
-            "translate(" + event.clientX + "px, " + event.clientY + "px) translate(-50%, -50%)";
-          marker.textContent = zone.classList.contains("lightbox-prev") ? "←" : "→";
-        });
-      });
-
-      dialog.addEventListener("pointerleave", function () {
-        if (pending) cancelAnimationFrame(pending);
-        pending = null;
-        dialog.classList.remove("is-pointing");
-      });
-
-      dialog.addEventListener("close", function () {
-        dialog.classList.remove("is-pointing");
-      });
-    }
-  }
 
   dialog.addEventListener("close", function () {
     // Drop the source so a large image isn't held in memory.
