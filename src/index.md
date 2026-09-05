@@ -132,7 +132,7 @@ In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings 
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2019–2023</span>
-      <p class="my-4">Partner and CDO at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken &amp; Bæck</a></p>
+      <p class="my-4">Partner and <span class="smallcaps">CDO</span> at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken &amp; Bæck</a></p>
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2015–2019</span>

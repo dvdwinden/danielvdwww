@@ -1391,15 +1391,12 @@ ul.list-none {
     color: rgb(107 114 128);
 }
 
-/* Inline small-caps accent, matching the treatment the dates and sub-labels
-   use. Sized in em so it stays proportional to whatever line it sits in, and
-   it inherits colour rather than the dates' grey — it is part of the sentence,
-   not metadata beside it. */
+/* Inline small-caps accent for initialisms. Inherits family, weight and colour
+   — it sits inside a serif sentence, so only the case and tracking change.
+   Sized in em to stay proportional to whatever line it is in. */
 .smallcaps {
-    font-family: theme("fontFamily.sans");
-    font-size: 0.8em;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+    font-size: 0.82em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
