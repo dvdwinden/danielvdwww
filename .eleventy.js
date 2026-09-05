@@ -22,6 +22,24 @@ const DEFAULT_WIDTHS = [800, 1200, 1800];
 const BREAKOUT_WIDTHS = [800, 1200, 1800, 2800];
 const BREAKOUT_SIZES = "(min-width: 1024px) min(1400px, calc(100vw - 544px)), calc(100vw - 48px)";
 
+// WebP quality. 70 is plenty for screenshots, book covers and other flat
+// artwork, which is nearly everything on the site. It is too low for film
+// scans: grain is high-frequency noise and it is the first thing a lossy
+// encoder throws away, so photographs come out looking smoothed rather than
+// sharp. Anything under a path listed here is encoded at the higher quality
+// instead.
+const DEFAULT_WEBP_QUALITY = 70;
+const HIGH_QUALITY_WEBP_PATHS = ['assets/photos/'];
+const HIGH_WEBP_QUALITY = 90;
+
+// Pick the WebP quality for a given source path.
+function webpQualityFor(srcPath) {
+  const normalized = String(srcPath).replace(/\\/g, '/');
+  return HIGH_QUALITY_WEBP_PATHS.some(p => normalized.includes(p))
+    ? HIGH_WEBP_QUALITY
+    : DEFAULT_WEBP_QUALITY;
+}
+
 // ============================================================================
 // CACHES
 // ============================================================================
@@ -163,7 +181,7 @@ module.exports = function (eleventyConfig) {
           return `${originalName}-${width}.${format}`;
         },
         sharpWebpOptions: {
-          quality: 70
+          quality: webpQualityFor(srcPath)
         }
       });
 
@@ -197,7 +215,7 @@ module.exports = function (eleventyConfig) {
           return `${originalName}-${width}.${format}`;
         },
         sharpWebpOptions: {
-          quality: 70
+          quality: webpQualityFor(srcPath)
         }
       });
     } catch (err) {
@@ -989,7 +1007,7 @@ module.exports = function (eleventyConfig) {
     let lean = null; // which side the previous photo sat on, if either
     let lastLandscape = null; // which side the previous landscape took
 
-    return photos.map(function (photo) {
+    return photos.map(function (photo, index) {
       const isLandscape = photo.orientation === "landscape";
       let colStart;
       let colSpan;
@@ -1010,7 +1028,16 @@ module.exports = function (eleventyConfig) {
         lean = colStart === 2 ? null : colStart === 3 ? "right" : "left";
       }
 
-      return Object.assign({}, photo, { colStart: colStart, colSpan: colSpan, isLandscape: isLandscape });
+      // Every photo gets its own row. Left to auto-placement, two of them can
+      // share one: the sparse algorithm only pushes to a new row when the
+      // cursor moves *leftward*, so a col-1 photo followed by a col-3 photo
+      // sits side by side. Pinning the row keeps the stagger vertical.
+      return Object.assign({}, photo, {
+        colStart: colStart,
+        colSpan: colSpan,
+        isLandscape: isLandscape,
+        row: index + 1,
+      });
     });
   });
 

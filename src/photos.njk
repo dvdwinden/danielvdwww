@@ -1,46 +1,53 @@
 ---
 layout: base.njk
 title: Photos
-description: Photographs, mostly taken on foot.
+description: Taken with an Olympus AF-10, and an AF-10 Super.
 bodyClass: bg-cream
 permalink: photos/index.html
 photos:
   - src: src/assets/photos/vineyard-through-the-hedge.jpg
-    caption: "A gap in the hedge, looking out over the vines."
+    caption: "Villedieu, France (2025)"
+    alt: "A gap in a hedge looking out over rows of vines, with fields and low hills beyond."
     orientation: landscape
   - src: src/assets/photos/house-and-renault.jpg
-    caption: "A Renault 4 parked up against the side of the house."
-    orientation: portrait
-  - src: src/assets/photos/goal-in-the-field.jpg
-    caption: "The far goal, and nobody on the pitch."
-    orientation: landscape
-  - src: src/assets/photos/table-between-courses.jpg
-    caption: "The table, somewhere between courses."
+    caption: "Villedieu, France (2025)"
+    alt: "A Renault 4 parked on gravel against the side of a stone and yellow-rendered house."
     orientation: portrait
   - src: src/assets/photos/wire-figure.jpg
-    caption: "A wire figure strung up over the street at dusk."
+    caption: "Oslo, Norway (2026)"
+    alt: "A wire figure suspended from a cable above a street at dusk, arms outstretched."
+    orientation: portrait
+  # TODO: no location given for this one yet.
+  - src: src/assets/photos/goal-in-the-field.jpg
+    caption: "The far goal, and nobody on the pitch."
+    alt: "An empty grass pitch under a grey sky, a single goal standing at the far end."
     orientation: landscape
+  - src: src/assets/photos/table-between-courses.jpg
+    caption: "Stavanger, Norway (2026)"
+    alt: "A wooden table mid-meal: olives, crisps, bread, a dish of ice, and half-drunk glasses."
+    orientation: portrait
   - src: src/assets/photos/books-on-a-stool.jpg
-    caption: "A stack of books standing in for a tripod."
+    caption: "Villedieu, France (2025)"
+    alt: "A webcam balanced on a stack of design books on a stool, cables trailing to the floor."
     orientation: portrait
 ---
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert">
   <h1>Photos</h1>
-  <p>Photographs, mostly taken on foot.</p>
+  <p>Taken with an Olympus AF-10, and an AF-10 Super.</p>
 </div>
 
 <div class="photo-grid mt-16 lg:mt-32 pb-16">
   {% for photo in photos | photoPlacement %}
-  <figure data-col="{{ photo.colStart }}" data-span="{{ photo.colSpan }}">
+  <figure data-col="{{ photo.colStart }}" data-span="{{ photo.colSpan }}" style="--photo-row: {{ photo.row }}">
     {% if photo.src %}
       {% if photo.isLandscape %}
-        {% image photo.src, photo.caption, "(min-width: 1024px) 60vw, 100vw" %}
+        {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 60vw, 100vw" %}
       {% else %}
-        {% image photo.src, photo.caption, "(min-width: 1024px) 30vw, 100vw" %}
+        {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 30vw, 100vw" %}
       {% endif %}
     {% else %}
-      <div class="photo-frame" data-orientation="{{ photo.orientation }}" role="img" aria-label="{{ photo.caption }}"></div>
+      <div class="photo-frame" data-orientation="{{ photo.orientation }}" role="img" aria-label="{{ photo.alt or photo.caption }}"></div>
     {% endif %}
     <figcaption class="font-sans tracking-wide">{{ photo.caption }}</figcaption>
   </figure>

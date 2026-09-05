@@ -479,6 +479,12 @@ span.testimonial {
     .photo-grid figure[data-span="2"] {
         grid-column-end: span 2;
     }
+
+    /* One photo per row, set by the photoPlacement filter. Without this,
+       auto-placement will pair a left-column photo with a right-column one. */
+    .photo-grid figure {
+        grid-row-start: var(--photo-row);
+    }
 }
 
 /* ==========================================================================
