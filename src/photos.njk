@@ -4,50 +4,67 @@ title: Photos
 description: Taken with an Olympus AF-10 and an AF-10 Super, usually on Kodak Ultramax, and never edited.
 bodyClass: bg-cream
 permalink: photos/index.html
-# Chronological, oldest first. This list order is the page order: the grid
-# placement is worked out from the sequence, so moving an entry re-flows the
-# columns on its own.
+# Newest first. The date drives the order, not the position in this list, so
+# a new photo can be added anywhere; the grid placement is then worked out
+# from the resulting sequence. Photos sharing a month hold the order below.
+# The two marked approximate have no month to hand, only a season read off
+# the photograph itself.
 photos:
-  - src: src/assets/photos/transcript-issue-two.jpg
-    caption: "Rotterdam, the Netherlands (2025)"
-    alt: "A spiral-bound copy of TRANSCRIPT Issue Two on a wooden desk, beside tulips in a glass and a bird-painted tin."
-    orientation: landscape
-  - src: src/assets/photos/libema-open.jpg
-    caption: "Den Bosch, the Netherlands (2025)"
-    alt: "An empty grass tennis court at the Libéma Open, crowd and scoreboard behind."
-    orientation: portrait
-  - src: src/assets/photos/boatyard-path.jpg
-    caption: "Amsterdam, the Netherlands (2025)"
-    alt: "A path running past a boatyard, a tall bare mast rising above moored boats and sheds."
-    orientation: portrait
-  - src: src/assets/photos/park-in-the-evening.jpg
-    caption: "Amsterdam, the Netherlands (2025)"
-    alt: "People spread out on the grass under tall trees in a park, late afternoon sun behind them."
-    orientation: portrait
-  - src: src/assets/photos/vineyard-through-the-hedge.jpg
-    caption: "Villedieu, France (2025)"
-    alt: "A gap in a hedge looking out over rows of vines, with fields and low hills beyond."
-    orientation: landscape
-  - src: src/assets/photos/house-and-renault.jpg
-    caption: "Villedieu, France (2025)"
-    alt: "A Renault 4 parked on gravel against the side of a stone and yellow-rendered house."
-    orientation: portrait
-  - src: src/assets/photos/goal-in-the-field.jpg
-    caption: "Villedieu, France (2025)"
-    alt: "An empty grass pitch under a grey sky, a single goal standing at the far end."
-    orientation: landscape
   - src: src/assets/photos/table-between-courses.jpg
+    date: "2026-06"
     caption: "Oslo, Norway (2026)"
     alt: "A wooden table mid-meal: olives, crisps, bread, a dish of ice, and half-drunk glasses."
     orientation: portrait
-  - src: src/assets/photos/wire-figure.jpg
-    caption: "Stavanger, Norway (2026)"
-    alt: "A wire figure suspended from a cable above a street at dusk, arms outstretched."
-    orientation: portrait
   - src: src/assets/photos/books-on-a-stool.jpg
+    date: "2026-05"
     caption: "Stavanger, Norway (2026)"
     alt: "A webcam balanced on a stack of design books on a stool, cables trailing to the floor."
     orientation: portrait
+  - src: src/assets/photos/wire-figure.jpg
+    date: "2026-05"
+    caption: "Stavanger, Norway (2026)"
+    alt: "A wire figure suspended from a cable above a street at dusk, arms outstretched."
+    orientation: portrait
+  - src: src/assets/photos/dunes-and-dog.png
+    date: "2026-04"
+    caption: "Noordhollands Duinreservaat, the Netherlands (2026)"
+    alt: "Black and white: someone crouching in dune grassland to hold a pale dog on a lead, low dunes and flat sky behind."
+    orientation: portrait
+  - src: src/assets/photos/goal-in-the-field.jpg
+    date: "2025-10"
+    caption: "Villedieu, France (2025)"
+    alt: "An empty grass pitch under a grey sky, a single goal standing at the far end."
+    orientation: landscape
+  - src: src/assets/photos/house-and-renault.jpg
+    date: "2025-10"
+    caption: "Villedieu, France (2025)"
+    alt: "A Renault 4 parked on gravel against the side of a stone and yellow-rendered house."
+    orientation: portrait
+  - src: src/assets/photos/vineyard-through-the-hedge.jpg
+    date: "2025-10"
+    caption: "Villedieu, France (2025)"
+    alt: "A gap in a hedge looking out over rows of vines, with fields and low hills beyond."
+    orientation: landscape
+  - src: src/assets/photos/park-in-the-evening.jpg
+    date: "2025-07" # approximate: full summer leaf
+    caption: "Amsterdam, the Netherlands (2025)"
+    alt: "People spread out on the grass under tall trees in a park, late afternoon sun behind them."
+    orientation: portrait
+  - src: src/assets/photos/boatyard-path.jpg
+    date: "2025-07" # approximate: full summer leaf
+    caption: "Amsterdam, the Netherlands (2025)"
+    alt: "A path running past a boatyard, a tall bare mast rising above moored boats and sheds."
+    orientation: portrait
+  - src: src/assets/photos/libema-open.jpg
+    date: "2025-06"
+    caption: "Den Bosch, the Netherlands (2025)"
+    alt: "An empty grass tennis court at the Libéma Open, crowd and scoreboard behind."
+    orientation: portrait
+  - src: src/assets/photos/transcript-issue-two.jpg
+    date: "2025-04"
+    caption: "Rotterdam, the Netherlands (2025)"
+    alt: "A spiral-bound copy of TRANSCRIPT Issue Two on a wooden desk, beside tulips in a glass and a bird-painted tin."
+    orientation: landscape
 ---
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert">
@@ -77,7 +94,10 @@ photos:
   {% endfor %}
 </div>
 
-<dialog id="photo-lightbox" aria-label="Enlarged photograph">
+<dialog id="photo-lightbox" aria-label="Enlarged photograph" tabindex="-1" autofocus>
+  <div class="lightbox-nav lightbox-prev" aria-hidden="true"></div>
+  <div class="lightbox-nav lightbox-next" aria-hidden="true"></div>
+  <div class="lightbox-cursor" aria-hidden="true">&rarr;</div>
   <button type="button" class="lightbox-close" aria-label="Close">
     <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false">
       <path d="M5.5 5.5 L18.5 18.5 M18.5 5.5 L5.5 18.5"

@@ -1037,6 +1037,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("photoPlacement", function (photos) {
     if (!photos) return [];
 
+    // Newest first. Dates are YYYY-MM strings, so they sort as text; photos
+    // sharing a month keep the order they were written in, and anything
+    // undated falls to the end rather than to the top.
+    const ordered = photos.slice().sort(function (a, b) {
+      const dateA = a.date || "";
+      const dateB = b.date || "";
+      if (dateA === dateB) return 0;
+      if (!dateA) return 1;
+      if (!dateB) return -1;
+      return dateA < dateB ? 1 : -1;
+    });
+
     const PORTRAIT_ORDER = [3, 2, 1]; // right, middle, left
     const other = (side) => (side === "right" ? "left" : "right");
 
@@ -1044,7 +1056,7 @@ module.exports = function (eleventyConfig) {
     let lean = null; // which side the previous photo sat on, if either
     let lastLandscape = null; // which side the previous landscape took
 
-    return photos.map(function (photo, index) {
+    return ordered.map(function (photo, index) {
       const isLandscape = photo.orientation === "landscape";
       let colStart;
       let colSpan;

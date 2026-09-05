@@ -416,6 +416,13 @@ span.testimonial {
     margin: 0;
 }
 
+/* Place names run long, so balance the lines rather than leaving "(2026)"
+   stranded on its own. */
+.photo-grid figcaption,
+.lightbox-caption {
+    text-wrap: balance;
+}
+
 .photo-grid picture {
     display: block;
 }
@@ -493,7 +500,65 @@ span.testimonial {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* The dialog takes focus itself on open, so the close button isn't sitting
+   there ringed the moment a photo appears. */
+#photo-lightbox:focus,
+#photo-lightbox:focus-visible {
+    outline: none;
+}
+
+/* Two zones either side of the photo, sitting behind it, so clicking beside
+   the photo steps through the roll while clicking the photo still closes. */
+.lightbox-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 50%;
+}
+
+.lightbox-prev {
+    left: 0;
+}
+
+.lightbox-next {
+    right: 0;
+}
+
+/* The arrow becomes the cursor over those zones, as on the home page. */
+#photo-lightbox.has-cursor .lightbox-nav {
+    cursor: none;
+}
+
+.lightbox-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    background: rgb(0 0 0 / 0.55);
+    color: #fff;
+    font-family: theme("fontFamily.sans");
+    font-size: 1.25rem;
+    line-height: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    will-change: transform;
+}
+
+#photo-lightbox.is-pointing .lightbox-cursor {
+    opacity: 1;
+}
+
 .lightbox-figure {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -576,12 +641,13 @@ span.testimonial {
     .photo-grid {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 9rem;
-        /* Give the photos more room than the prose gets: reclaim the right
-           gutter main reserves (lg:mr-32) and a slice of the left one. The
-           left gutter is sized for the fixed nav, which sits at the bottom
-           of the viewport, so there is slack to borrow at the top. */
-        margin-left: -4rem;
-        margin-right: -8rem;
+        /* Extra room for the photos comes out of the left gutter only. That
+           gutter is sized for the fixed nav, which sits at the bottom of the
+           viewport, so there is slack to borrow up top. The right edge is
+           left alone so the grid ends exactly where the prose column above
+           it ends, and the first photo lines up with the text. */
+        margin-left: -10rem;
+        margin-right: 0;
     }
 
     .photo-grid figure[data-col="1"] {
