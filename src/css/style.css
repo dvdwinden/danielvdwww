@@ -1172,8 +1172,23 @@ ul.list-none {
    ========================================================================== */
 /* The disc is a child of the figure rather than the frame box, so it can
    overhang the image instead of being clipped by the frame's overflow. */
+/* Two columns so the caption and the dots share one row under the image,
+   caption left and dots right. The frames span both; the cursor disc is
+   absolutely positioned, so grid never places it. */
 .figure-cycle {
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    column-gap: 1.5rem;
+}
+
+.figure-cycle-frames {
+    grid-column: 1 / -1;
+}
+
+.figure-cycle figcaption {
+    grid-column: 1;
 }
 
 .figure-cycle-frames {
@@ -1307,8 +1322,9 @@ ul.list-none {
 }
 
 .figure-cycle-dots {
+    grid-column: 2;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 0.5rem;
     margin-top: 0.75rem;
     opacity: 0;

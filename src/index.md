@@ -103,6 +103,7 @@ In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings 
       <div class="figure-cycle-frame">{% image "src/assets/journal/nogood05.jpg", "The NoGood art book" %}</div>
       <div class="figure-cycle-frame">{% image "src/assets/journal/nogood06.jpg", "The NoGood art book" %}</div>
     </div>
+    <figcaption>Photography by <a href="https://www.lilialuganskaia.com/?ref=daniel.pizza" title="Lilia Luganskaia-Kuilder" rel="nofollow" target="_blank">Lilia Luganskaia-Kuilder</a>.</figcaption>
   </figure>
 </div>
 
