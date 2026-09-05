@@ -446,6 +446,30 @@ span.testimonial {
     border-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Captions sit back out of the way and come up to the usual figcaption
+   weight when you're looking at the photo. Only where hovering is possible:
+   on touch there is no hover to reveal them, so they stay legible. */
+@media (hover: hover) {
+    .photo-grid figcaption {
+        opacity: 0.4;
+        transition: opacity 0.25s ease;
+    }
+
+    .photo-grid figure:hover figcaption,
+    .photo-grid figure:focus-within figcaption {
+        opacity: 0.85;
+    }
+
+    .dark .photo-grid figcaption {
+        opacity: 0.45;
+    }
+
+    .dark .photo-grid figure:hover figcaption,
+    .dark .photo-grid figure:focus-within figcaption {
+        opacity: 0.95;
+    }
+}
+
 /* Portrait photos sit full-bleed on small screens; captions stay in Degular
    via the shared figcaption rules above. */
 @media (min-width: 1024px) {
