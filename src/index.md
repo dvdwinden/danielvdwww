@@ -29,7 +29,7 @@ At [Enode](https://enode.com?ref=daniel.pizza "Enode") I design software that en
 
 Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, latterly as partner and CDO.
 
-<a class="bookmark-card" href="https://enode.com?ref=daniel.pizza" title="Enode" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">Enode: Orchestrating energy for the next grid</span><span class="bookmark-description">One platform for energy retailers and the teams that trade for them. Connect every asset, coordinate every home, and shape thousands as one.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/icons/enode-favicon.svg" alt="" width="16" height="16" loading="lazy" />enode.com</span></span></a>
+<a class="bookmark-card" href="https://enode.com?ref=daniel.pizza" title="Enode" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">Enode: Orchestrating energy for the next grid</span><span class="bookmark-description">One platform for energy retailers and the teams that trade for them. Connect every asset, coordinate every home, and shape thousands as one.</span><span class="bookmark-meta">{% include "icons/logos/enode-mark.svg" %}enode.com</span></span></a>
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -129,6 +129,15 @@ Over a decade of designing digital products, leading teams and setting direction
     <h4 class="work-item-title">Design leadership</h4>
     <p class="work-item-body">Hired, managed and mentored teams of up to twelve product designers for over five years, balancing their goals with those of the business, while building out the Dutch presence of <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" target="_blank" rel="nofollow">Bakken &amp; Bæck</a> in Amsterdam.</p>
   </li>
+</ul>
+
+{# Inline SVGs so the marks take their colour from the page. Drop a new file in
+   src/_includes/icons/logos/ and add a line here. Still needed: SPACE10,
+   Zenly, Wake. #}
+<ul class="client-logos not-prose">
+  <li><span class="sr-only">Coinbase</span>{% include "icons/logos/coinbase.svg" %}</li>
+  <li><span class="sr-only">IKEA</span>{% include "icons/logos/ikea.svg" %}</li>
+  <li><span class="sr-only">AutoStore</span>{% include "icons/logos/autostore.svg" %}</li>
 </ul>
 
 <section class="resume">

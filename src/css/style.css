@@ -1053,12 +1053,21 @@ ul.list-none {
     color: rgb(255 255 255 / 0.4);
 }
 
-.prose .bookmark-meta img.bookmark-icon {
+.prose .bookmark-meta img.bookmark-icon,
+.prose .bookmark-meta svg.bookmark-icon {
     width: 16px;
     height: 16px;
     margin: 0;
     border-radius: 3px;
     flex: none;
+}
+
+/* Enode's own favicon carries a prefers-color-scheme rule, which follows the
+   OS rather than this page's theme and turned the mark white on a light card.
+   Inlined instead, so it takes its colour from the row it sits in. */
+.prose .bookmark-meta svg.bookmark-icon {
+    border-radius: 0;
+    fill: currentColor;
 }
 
 /* ==========================================================================
@@ -1111,7 +1120,7 @@ ul.list-none {
 /* Taller than a Library cover, so it hangs low off the row it belongs to
    unless it is lifted. */
 .trema-item .book-cover {
-    top: -5rem;
+    top: -3rem;
 }
 
 .trema-item .book-cover img,
@@ -1420,6 +1429,53 @@ ul.list-none {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgb(107 114 128);
+}
+
+/* ==========================================================================
+   CLIENT LOGOS
+   Inline SVGs normalised to a common height and coloured by the page, so a
+   wordmark and a square symbol mark sit at the same optical weight.
+   ========================================================================== */
+.prose ul.client-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 2.5rem 2rem;
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    color: theme("colors.black");
+}
+
+.dark .prose ul.client-logos {
+    color: rgb(255 255 255 / 0.75);
+}
+
+.prose ul.client-logos li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Every mark gets the same box and the viewBox letterboxes inside it, so a wide
+   wordmark and a square symbol land at comparable optical weight without
+   hand-tuning each one. */
+.prose ul.client-logos svg {
+    display: block;
+    width: 100%;
+    height: 44px;
+    fill: currentColor;
+}
+
+@media (max-width: 480px) {
+    .prose ul.client-logos {
+        gap: 2rem 1.5rem;
+    }
+
+    .prose ul.client-logos svg {
+        height: 34px;
+    }
 }
 
 /* Resume */
