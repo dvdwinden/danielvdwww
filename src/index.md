@@ -131,15 +131,6 @@ Over a decade of designing digital products, leading teams and setting direction
   </li>
 </ul>
 
-{# Inline SVGs so the marks take their colour from the page. Drop a new file in
-   src/_includes/icons/logos/ and add a line here. Still needed: SPACE10,
-   Zenly, Wake. #}
-<ul class="client-logos not-prose">
-  <li><span class="sr-only">Coinbase</span>{% include "icons/logos/coinbase.svg" %}</li>
-  <li><span class="sr-only">IKEA</span>{% include "icons/logos/ikea.svg" %}</li>
-  <li><span class="sr-only">AutoStore</span>{% include "icons/logos/autostore.svg" %}</li>
-</ul>
-
 <section class="resume">
   <h2 class="work-title">Resumé</h2>
   <div class="flex flex-col">
