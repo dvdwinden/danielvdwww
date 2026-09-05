@@ -416,6 +416,34 @@ span.testimonial {
     margin: 0;
 }
 
+/* Page furniture steps back while the pointer is in the grid. Anything
+   focused stays put, so keyboard users never lose sight of where they are. */
+@media (min-width: 1024px) {
+    body.photos-viewing header,
+    body.photos-viewing nav[role="navigation"] {
+        opacity: 0.3;
+    }
+
+    body.photos-viewing header:focus-within,
+    body.photos-viewing nav[role="navigation"]:focus-within,
+    body.photos-viewing header:hover,
+    body.photos-viewing nav[role="navigation"]:hover {
+        opacity: 1;
+    }
+
+    header,
+    nav[role="navigation"] {
+        transition: opacity 0.4s ease;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header,
+    nav[role="navigation"] {
+        transition: none;
+    }
+}
+
 /* Place names run long, so balance the lines rather than leaving "(2026)"
    stranded on its own. */
 .photo-grid figcaption,
@@ -667,16 +695,6 @@ span.testimonial {
        auto-placement will pair a left-column photo with a right-column one. */
     .photo-grid > [data-col] {
         grid-row-start: var(--photo-row);
-    }
-
-    /* The lead photo matches the prose column above it: same width, same
-       edges. It sits in the last column and grows leftward out of its track,
-       which nothing shares, so the rest of the grid is untouched and no other
-       photo changes size. Only when it's a single-column photo - a landscape
-       already spans wider than the text. */
-    .photo-grid > figure:first-of-type[data-span="1"] {
-        justify-self: end;
-        width: 32rem;
     }
 }
 

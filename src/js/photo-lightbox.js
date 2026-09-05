@@ -2,6 +2,38 @@
 // that photo's own colour (computed at build time, see photoTint in
 // .eleventy.js). Arrow keys step through the roll; Escape closes, which
 // <dialog> handles for us.
+// While the pointer is on a photograph, the page furniture steps back so the
+// photograph carries the page. Leaving one is held for a moment before the
+// furniture returns, so crossing the gap to the next photo doesn't flash it
+// back on and off.
+(function () {
+  if (!window.matchMedia || !window.matchMedia("(pointer: fine)").matches) return;
+
+  const photos = document.querySelectorAll(".photo-grid .photo-open");
+  if (!photos.length) return;
+
+  let releasing = null;
+
+  photos.forEach(function (photo) {
+    photo.addEventListener("pointerenter", function (event) {
+      if (event.pointerType !== "mouse") return;
+      if (releasing) {
+        clearTimeout(releasing);
+        releasing = null;
+      }
+      document.body.classList.add("photos-viewing");
+    });
+
+    photo.addEventListener("pointerleave", function () {
+      if (releasing) clearTimeout(releasing);
+      releasing = setTimeout(function () {
+        releasing = null;
+        document.body.classList.remove("photos-viewing");
+      }, 150);
+    });
+  });
+})();
+
 (function () {
   const grid = document.querySelector(".photo-grid");
   const dialog = document.getElementById("photo-lightbox");

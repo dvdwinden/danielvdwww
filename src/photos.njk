@@ -3,6 +3,9 @@ layout: base.njk
 title: Photos
 description: Taken with an Olympus AF-10 and an AF-10 Super, usually on Kodak Ultramax, and never edited.
 bodyClass: bg-cream
+# Photographs read better against a dark ground, so this page stays dark
+# whatever the reader's theme, and drops the toggle.
+forceDark: true
 permalink: photos/index.html
 # Newest first. The date drives the order, not the position in this list, so
 # a new photo can be added anywhere; the grid placement is then worked out
@@ -10,6 +13,16 @@ permalink: photos/index.html
 # The two marked approximate have no month to hand, only a season read off
 # the photograph itself.
 photos:
+  - src: src/assets/photos/alley-and-gable.png
+    date: "2026-08"
+    caption: "Antwerp, Belgium (2026)"
+    alt: "Black and white: a narrow brick alley looking towards a tall stepped-gable facade."
+    orientation: portrait
+  - src: src/assets/photos/lights-at-night.png
+    date: "2026-08"
+    caption: "Antwerp, Belgium (2026)"
+    alt: "Black and white: figures at night under a scatter of blown-out lights, most of the frame in darkness."
+    orientation: portrait
   - src: src/assets/photos/table-between-courses.jpg
     date: "2026-06"
     caption: "Oslo, Norway (2026)"

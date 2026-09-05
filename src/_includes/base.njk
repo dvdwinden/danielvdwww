@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"{% if forceDark %} data-force-dark="true"{% endif %}>
 <head>
 	<script>
 	  // Apply dark mode immediately to prevent flash
+	  {% if forceDark %}
+	  // This page is dark whatever the reader's preference, so there is no
+	  // stored theme to consult.
+	  document.documentElement.classList.add('dark');
+	  {% else %}
 	  if (localStorage.theme === 'dark' ||
 	    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 	    document.documentElement.classList.add('dark');
 	  }
+	  {% endif %}
 	  // Hide content until fonts are ready to prevent FOUT
 	  document.documentElement.classList.add('fonts-loading');
 	</script>
