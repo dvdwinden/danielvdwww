@@ -78,7 +78,7 @@ With [Iris Cuppen](https://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I cura
   <picture>{% retinaImage "src/assets/work/transcript-scribe.png", "TRANSCRIPT Magazine", 512 %}</picture>
 </figure>
 
-<a class="bookmark-card" href="https://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">TRANSCRIPT Magazine</span><span class="bookmark-description">A seasonal literary magazine of essays, short stories and poetry, printed in a limited run. Four issues, 2023–2026.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/icons/transcript-favicon.png" alt="" width="16" height="16" loading="lazy" />transcriptmag.store</span></span></a>
+<a class="bookmark-card" href="https://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">TRANSCRIPT Magazine</span><span class="bookmark-description">A seasonal literary magazine of essays, short stories and poetry, printed in a limited run. Four issues, 2023–2025.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/icons/transcript-favicon.png" alt="" width="16" height="16" loading="lazy" />transcriptmag.store</span></span></a>
 
 ---
 
@@ -137,7 +137,7 @@ Over a decade of designing digital products, leading teams and setting direction
       <p class="my-4">Senior Product Designer at <a href="https://enode.com/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a></p>
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
-      <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2023–2026</span>
+      <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2023–2025</span>
       <p class="my-4">Co-Founder of <a href="https://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" rel="nofollow" target="_blank"><em>TRANSCRIPT</em> Magazine</a></p>
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
