@@ -72,7 +72,9 @@ Outside of my day job I write [Trema](https://www.trema.website?ref=daniel.pizza
 
 <h3 class="section-title"><em>TRANSCRIPT</em> Magazine</h3>
 
-With [Iris Cuppen](https://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I curated, edited, designed and published four issues of _TRANSCRIPT_: a small literary magazine, publishing essays, short stories and poetry, with visual work by designers, illustrators, or photographers. Each issue was printed in a limited run, and accompanied by live readings.
+With [Iris Cuppen](https://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I curated, edited, designed and published four issues of _TRANSCRIPT_, a small literary magazine. We commissioned essays, short stories and poetry, alongside visual work by designers, illustrators, or photographers.
+
+Each launch was accompanied by live readings, each issue printed in a limited run, and sold online, or in select bookstores.
 
 <figure class="w-full sm:max-w-lg ml-auto my-8">
   <picture>{% retinaImage "src/assets/work/transcript-scribe.png", "TRANSCRIPT Magazine", 512 %}</picture>
