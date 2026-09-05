@@ -479,6 +479,14 @@ span.testimonial {
     overflow: hidden;
     background-color: var(--photo-tint, #1c1c1a);
     cursor: zoom-out;
+    /* Arrowing between photos shifts the backdrop from one tint to the next. */
+    transition: background-color 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #photo-lightbox {
+        transition: none;
+    }
 }
 
 #photo-lightbox::backdrop {
@@ -519,14 +527,18 @@ span.testimonial {
     top: 1rem;
     right: 1.25rem;
     z-index: 1;
-    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
     border: 0;
     background: none;
     color: var(--photo-ink, #f5f2ea);
-    opacity: 0.6;
-    font-size: 2rem;
-    line-height: 1;
+    opacity: 0.55;
     cursor: pointer;
+    transition: opacity 0.2s ease;
 }
 
 .lightbox-close:hover,

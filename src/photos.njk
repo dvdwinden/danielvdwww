@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Photos
-description: Taken with an Olympus AF-10, and an AF-10 Super, usually shot on Kodak Ultramax, and never edited.
+description: Taken with an Olympus AF-10 and an AF-10 Super, usually on Kodak Ultramax, and never edited.
 bodyClass: bg-cream
 permalink: photos/index.html
 photos:
@@ -33,7 +33,7 @@ photos:
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert">
   <h1>Photos</h1>
-  <p>Taken with an Olympus AF-10, and an AF-10 Super, usually shot on Kodak Ultramax, and never edited.</p>
+  <p>Taken with an Olympus AF-10 and an AF-10 Super, usually on Kodak Ultramax, and never edited.</p>
 </div>
 
 <div class="photo-grid mt-16 lg:mt-32 pb-16">
@@ -59,9 +59,14 @@ photos:
 </div>
 
 <dialog id="photo-lightbox" aria-label="Enlarged photograph">
-  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <button type="button" class="lightbox-close" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false">
+      <path d="M5.5 5.5 L18.5 18.5 M18.5 5.5 L5.5 18.5"
+            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+    </svg>
+  </button>
   <figure class="lightbox-figure">
     <img class="lightbox-image" alt="">
-    <figcaption class="lightbox-caption font-sans tracking-wide"></figcaption>
+    <figcaption class="lightbox-caption font-sans tracking-wide" aria-live="polite"></figcaption>
   </figure>
 </dialog>

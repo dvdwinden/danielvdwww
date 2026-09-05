@@ -1,7 +1,7 @@
 // Click a photo on /photos/ to open it full screen, on a backdrop tinted with
-// that photo's own dominant colour (computed at build time, see photoTint in
-// .eleventy.js). Closes on click anywhere, on the close button, or on Escape,
-// which <dialog> handles for us.
+// that photo's own colour (computed at build time, see photoTint in
+// .eleventy.js). Arrow keys step through the roll; Escape closes, which
+// <dialog> handles for us.
 (function () {
   const grid = document.querySelector(".photo-grid");
   const dialog = document.getElementById("photo-lightbox");
@@ -12,6 +12,13 @@
 
   const imgEl = dialog.querySelector(".lightbox-image");
   const captionEl = dialog.querySelector(".lightbox-caption");
+  const triggers = Array.prototype.slice.call(grid.querySelectorAll(".photo-open"));
+  if (!triggers.length) return;
+
+  let current = -1;
+  // Whether this trip through the lightbox involved the keyboard, which
+  // decides if the photo behind it should be left focused on the way out.
+  let usedKeyboard = false;
 
   // eleventy-img writes srcset ascending, but pick the widest explicitly
   // rather than relying on the order.
@@ -43,10 +50,12 @@
     return luminance > 0.55 ? "#1c1c1a" : "#f5f2ea";
   }
 
-  grid.addEventListener("click", function (event) {
-    const trigger = event.target.closest(".photo-open");
-    if (!trigger) return;
+  // Wraps, so the roll is a loop in both directions.
+  function show(index) {
+    const count = triggers.length;
+    current = ((index % count) + count) % count;
 
+    const trigger = triggers[current];
     const img = trigger.querySelector("img");
     if (!img) return;
 
@@ -57,16 +66,71 @@
     imgEl.src = widestSource(img);
     imgEl.alt = img.alt || "";
     captionEl.textContent = trigger.dataset.caption || "";
+  }
 
+  grid.addEventListener("click", function (event) {
+    const trigger = event.target.closest(".photo-open");
+    if (!trigger) return;
+
+    const index = triggers.indexOf(trigger);
+    if (index === -1) return;
+
+    // A click opens it; only an arrow key later makes this a keyboard trip.
+    usedKeyboard = false;
+    show(index);
     dialog.showModal();
+  });
+
+  dialog.addEventListener("keydown", function (event) {
+    // Leave Escape to the browser, and don't swallow shortcuts.
+    if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+
+    let next = null;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      next = current + 1;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      next = current - 1;
+    } else if (event.key === "Home") {
+      next = 0;
+    } else if (event.key === "End") {
+      next = triggers.length - 1;
+    }
+
+    if (next === null) return;
+
+    // Stop the arrows scrolling the grid behind the lightbox.
+    event.preventDefault();
+    usedKeyboard = true;
+    show(next);
   });
 
   dialog.addEventListener("click", function () {
     dialog.close();
   });
 
-  // Drop the source on close so a large image isn't held in memory.
   dialog.addEventListener("close", function () {
+    // Drop the source so a large image isn't held in memory.
     imgEl.removeAttribute("src");
+
+    const landedOn = triggers[current];
+    current = -1;
+    if (!landedOn) return;
+
+    if (usedKeyboard) {
+      // Keyboard users need focus to follow them to the photo they ended on,
+      // and want to see where it went.
+      landedOn.focus();
+      return;
+    }
+
+    // <dialog> hands focus back to the button that opened it, which paints a
+    // focus ring over a photo the reader only ever clicked. Drop it once the
+    // browser has finished restoring.
+    requestAnimationFrame(function () {
+      const active = document.activeElement;
+      if (active && active.classList && active.classList.contains("photo-open")) {
+        active.blur();
+      }
+    });
   });
 })();
