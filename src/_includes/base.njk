@@ -19,12 +19,12 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <title>{% if title %}
         {% if page.url == '/' %}
-            Daniël van der Winden · Software designer & writer
+            Daniël van der Winden · Designer, writer, reader
         {% else %}
             {{ title }} · Daniël van der Winden
         {% endif %}
     {% else %}
-        Daniël van der Winden · Software designer & writer
+        Daniël van der Winden · Designer, writer, reader
     {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
     <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
@@ -110,7 +110,7 @@
     {% endif %}
 
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Software designer & writer{% endif %}">
+    <meta property="og:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Designer, writer, reader{% endif %}">
     <meta property="og:description" content="{{ description or metadata.description }}">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
     <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
@@ -132,7 +132,7 @@
     
     <!-- Twitter Card meta tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Software designer & writer{% endif %}">
+    <meta name="twitter:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Designer, writer, reader{% endif %}">
     <meta name="twitter:description" content="{{ description or metadata.description }}">
     {% if image and image.src %}
     <meta name="twitter:image" content="{{ ogImageUrl }}">

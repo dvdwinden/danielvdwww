@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: Daniël van der Winden | Designer, writer, reader
-description: Amsterdam-based designer, writer and reader. Designing software at Enode; previously Ghost and Bakken & Bæck. Writes Trema, a monthly newsletter about books.
+title: Designer, writer, reader
+description: Designer in Amsterdam. I design software at Enode, previously Ghost and Bakken & Bæck. I write Trema, a monthly newsletter about books worth reading.
 bodyClass: bg-blue
 ---
 
