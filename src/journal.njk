@@ -8,7 +8,7 @@ permalink: journal/index.html
 
 <h1>Journal</h1>
 
-<p>My own writing, long and short. <a href="/feed.xml" class="font-medium hover:underline dark:text-gray-300 dark:hover:text-white" title="Subscribe via RSS">Subscribe via RSS</a>.</p>
+<p>My own writing, long and short. <a href="/feed.xml" class="font-medium hover:underline dark:text-gray-300 dark:hover:text-white" title="Subscribe via RSS">Subscribe via <span class="smallcaps">RSS</span></a>.</p>
 
 {% for post in collections.journal %}
   {% set postYear = post.date | date('yyyy') %}

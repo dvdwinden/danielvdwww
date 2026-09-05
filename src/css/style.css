@@ -1391,11 +1391,16 @@ ul.list-none {
     color: rgb(107 114 128);
 }
 
-/* Inline small-caps accent for initialisms. Inherits family, weight and colour
-   — it sits inside a serif sentence, so only the case and tracking change.
-   Sized in em to stay proportional to whatever line it is in. */
+/* Faux small caps for initialisms. Blanco's webfont ships no smcp/c2sc, so
+   font-variant-caps has nothing to draw from and these are scaled capitals
+   instead. Scaling thins the strokes against the surrounding lowercase, so the
+   weight steps up to 500 to put the colour back — Blanco Medium and Degular's
+   variable axis both cover it. Tracking is opened up because capitals need
+   more of it than lowercase. Family and colour are inherited, so this works in
+   a serif sentence and in the sans footer alike. */
 .smallcaps {
     font-size: 0.82em;
+    font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
