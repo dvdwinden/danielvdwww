@@ -90,6 +90,20 @@ module.exports = function (eleventyConfig) {
     LASTFM_USERNAME: process.env.LASTFM_USERNAME || "dvdwinden"
   });
 
+  // Look up a Trema post's cover on its own site. The stored external_url
+  // carries a ?ref= param, and a couple have a doubled trailing slash, so both
+  // sides of the comparison get normalised. Returns null when the feed didn't
+  // load or the post isn't in it, and the caller falls back to a local image.
+  eleventyConfig.addFilter("tremaCover", function (url, covers) {
+    if (!url || !covers) return null;
+    const normalize = value => String(value).split(/[?#]/)[0].replace(/\/+$/, '');
+    const key = normalize(url);
+    for (const [link, image] of Object.entries(covers)) {
+      if (normalize(link) === key) return image;
+    }
+    return null;
+  });
+
   // Add regexMatch filter
   eleventyConfig.addFilter("regexMatch", function (str, pattern) {
     const regex = new RegExp(pattern);
