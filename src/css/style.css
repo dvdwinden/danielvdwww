@@ -1165,68 +1165,6 @@ ul.list-none {
 }
 
 /* ==========================================================================
-   SELECTED WORK LIST
-   ========================================================================== */
-
-.prose ul.work-list {
-    list-style: none;
-    margin: 2rem 0 0;
-    padding: 0;
-}
-
-.prose ul.work-list li.work-item {
-    position: relative;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgb(0 0 0 / 0.08);
-}
-
-.dark .work-item {
-    border-bottom-color: rgb(255 255 255 / 0.06);
-}
-
-.work-item-title {
-    font-family: theme("fontFamily.sans");
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0 0 0.35rem;
-    color: theme("colors.black");
-}
-
-.dark .work-item-title {
-    color: theme("colors.white");
-}
-
-.prose .work-item-title a {
-    color: inherit;
-    font-weight: inherit;
-    text-decoration: none;
-}
-
-.prose .work-item-title a:hover {
-    color: theme("colors.hover");
-    text-decoration: underline;
-    text-decoration-color: theme("colors.hover");
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-}
-
-.dark .prose .work-item-title a:hover {
-    color: theme("colors.hover-dark");
-}
-
-.work-item-body {
-    font-family: theme("fontFamily.serif");
-    font-size: 1.125rem;
-    line-height: 1.5;
-    margin: 0;
-    color: rgb(0 0 0 / 0.75);
-}
-
-.dark .work-item-body {
-    color: rgb(255 255 255 / 0.6);
-}
-
-/* ==========================================================================
    FIGURE CYCLE
    Auto-cycling image set inside the prose column. Frames are stacked in a
    box of a fixed ratio (override per figure with --cycle-ratio) and
@@ -1498,20 +1436,14 @@ ul.list-none {
    otherwise re-underline them. Restate the intent with `.dark` in front. */
 .dark .prose a.bookmark-card,
 .dark .prose a.bookmark-card:hover,
-.dark .prose .work-item-title a,
 .dark .prose ul.trema-list li a {
     text-decoration: none;
 }
 
-.dark .prose .work-item-title a {
-    color: inherit;
-}
-
 .dark .prose ul.trema-list li a {
     color: inherit;
 }
 
-.dark .prose .work-item-title a:hover,
 .dark .prose ul.trema-list li a:hover {
     color: theme("colors.hover-dark");
     text-decoration: underline;

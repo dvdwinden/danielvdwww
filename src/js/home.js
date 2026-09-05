@@ -124,8 +124,13 @@
             const rect = frameBox.getBoundingClientRect();
             const x = event.clientX - rect.left;
             const y = event.clientY - rect.top;
+            // Keep the whole disc over the image rather than letting it get
+            // clipped against the frame's edges.
+            const r = marker.offsetWidth / 2;
+            const cx = Math.min(Math.max(x, r), rect.width - r);
+            const cy = Math.min(Math.max(y, r), rect.height - r);
             marker.style.transform =
-              'translate(' + x + 'px, ' + y + 'px) translate(-50%, -50%)';
+              'translate(' + cx + 'px, ' + cy + 'px) translate(-50%, -50%)';
             marker.textContent = x < rect.width / 2 ? '\u2190' : '\u2192';
           });
         });

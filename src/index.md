@@ -9,9 +9,11 @@ bodyClass: bg-blue
 
 <h2 class="home-subtitle mt-0 text-black dark:text-white">Designer, writer, reader.</h2>
 
-I’m a designer, based in Amsterdam. I make software for a living, and books and magazines for the love of it.
+I’m a designer, based in Amsterdam, and I make software for a living.
 
-At [Enode](https://enode.com?ref=daniel.pizza "Enode") I design software that enables the next energy grid. Most recently I led the company’s rebrand and shipped its new website, redefining how the company looks and sounds.
+I’ve designed digital products, websites, and web apps for over a decade. As a contributor—or while leading teams and setting direction—I’ve worked for clients of all sizes and projects of all shapes.
+
+Putting together everything from briefings to thorough flows, and polished interfaces to working prototypes—I sweat the details but make sure everyone understands the bigger picture.
 
 </div>
 
@@ -27,7 +29,9 @@ At [Enode](https://enode.com?ref=daniel.pizza "Enode") I design software that en
 
 <section class="introduction">
 
-Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, latterly as partner and CDO.
+At [Enode](https://enode.com?ref=daniel.pizza "Enode"), I design software that enables the next energy grid. Most recently I led our rebrand, shipped our new website, and redefined how the company looks and sounds through its visual and written language.
+
+_Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, a large part as partner and CDO._
 
 <a class="bookmark-card" href="https://enode.com?ref=daniel.pizza" title="Enode" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">Enode: Orchestrating energy for the next grid</span><span class="bookmark-description">One platform for energy retailers and the teams that trade for them. Connect every asset, coordinate every home, and shape thousands as one.</span><span class="bookmark-meta">{% include "icons/logos/enode-mark.svg" %}enode.com</span></span></a>
 
@@ -105,31 +109,6 @@ In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
 
 <a class="bookmark-card" href="/journal/nogood-book/" title="Writing the NoGood book"><span class="bookmark-content"><span class="bookmark-title">Writing the NoGood book</span><span class="bookmark-description">A gentle introduction to my friend Thomas’s moniker, NoGood—an exercise in restraint, written through hours of conversation. The book is out now.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/favicon-32x32.png" alt="" width="16" height="16" loading="lazy" />daniel.pizza</span></span></a>
-
----
-
-<h2 class="work-title">Selected work</h2>
-
-Over a decade of designing digital products, leading teams and setting direction, for clients of all sizes and projects of all shapes. Putting together thorough flows, polished interfaces, and working prototypes. I sweat the details but make sure everyone understands the bigger picture.
-
-<ul class="work-list not-prose">
-  <li class="work-item">
-    <h4 class="work-item-title"><a href="https://ghost.org?ref=daniel.pizza" title="Ghost" target="_blank" rel="nofollow">Ghost</a></h4>
-    <p class="work-item-body">Designed an upgraded publishing workflow, turning a dead end into an opportunity for publishers to reach their audience. Contributed design and code to the new onboarding, integrated <a href="https://ghost.org/changelog/custom-fonts/?ref=daniel.pizza" title="Custom fonts in Ghost" target="_blank" rel="external">custom fonts</a>, and shipped <a href="https://github.com/TryGhost/Ghost/pulls?q=is%3Apr+is%3Aclosed+author%3Advdwinden&amp;ref=daniel.pizza" title="My pull requests on Ghost’s GitHub repository" target="_blank" rel="external">numerous improvements</a> throughout the product.</p>
-  </li>
-  <li class="work-item">
-    <h4 class="work-item-title"><a href="https://bakkenbaeck.com/case/circle?ref=daniel.pizza" title="Bakken &amp; Bæck’s Circle case study" target="_blank" rel="external">Circle, for IKEA</a></h4>
-    <p class="work-item-body">Led product design on IKEA’s circular rental solution for office furniture, letting small businesses design and explore their space in mixed reality. Built with a team from <a href="https://space10.com/?ref=daniel.pizza" title="SPACE10" target="_blank" rel="external">SPACE10</a> over one summer; it grew into <a href="https://nornorm.com/?ref=daniel.pizza" title="Nornorm" target="_blank" rel="external">Nornorm</a>, a standalone business.</p>
-  </li>
-  <li class="work-item">
-    <h4 class="work-item-title">Pexip</h4>
-    <p class="work-item-body">Led the redesign of Pexip’s web, iOS and Android apps, and created <a href="https://www.talk.vc/pexip-logitech-create-a-new-experience-and-it-is-fantastic/?ref=daniel.pizza" title="Read more about Pexip Room" target="_blank" rel="external">Pexip Room</a> to extend the product to Logitech meeting-room hardware.</p>
-  </li>
-  <li class="work-item">
-    <h4 class="work-item-title">Design leadership</h4>
-    <p class="work-item-body">Hired, managed and mentored teams of up to twelve product designers for over five years, balancing their goals with those of the business, while building out the Dutch presence of <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" target="_blank" rel="nofollow">Bakken &amp; Bæck</a> in Amsterdam.</p>
-  </li>
-</ul>
 
 <section class="resume">
   <h2 class="work-title">Resumé</h2>
