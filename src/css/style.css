@@ -416,31 +416,43 @@ span.testimonial {
     margin: 0;
 }
 
-/* Page furniture steps back while the pointer is in the grid. Anything
-   focused stays put, so keyboard users never lose sight of where they are. */
+/* Hovering a photograph gives it the page: the other photographs step well
+   back, the wordmark and nav only a little. Done in CSS off :has() rather
+   than a script, so there is nothing between the pointer moving and the page
+   answering - the earlier version read as laggy because a timer sat in
+   between. Dimming is quicker than coming back, which is what stops the
+   return feeling abrupt. */
 @media (min-width: 1024px) {
-    body.photos-viewing header,
-    body.photos-viewing nav[role="navigation"] {
-        opacity: 0.3;
-    }
-
-    body.photos-viewing header:focus-within,
-    body.photos-viewing nav[role="navigation"]:focus-within,
-    body.photos-viewing header:hover,
-    body.photos-viewing nav[role="navigation"]:hover {
-        opacity: 1;
-    }
-
+    .photo-grid > figure,
     header,
     nav[role="navigation"] {
-        transition: opacity 0.7s cubic-bezier(0.33, 0, 0.2, 1);
-        /* Promote to its own layer so the fade runs on the compositor rather
-           than repainting the text on every frame, which reads as steps. */
+        transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        /* Own compositor layer, so the fade doesn't repaint text every frame. */
         will-change: opacity;
+    }
+
+    .photo-grid:has(.photo-open:hover) > figure:not(:hover) {
+        opacity: 0.32;
+        transition-duration: 0.28s;
+    }
+
+    body:has(.photo-grid .photo-open:hover) header,
+    body:has(.photo-grid .photo-open:hover) nav[role="navigation"] {
+        opacity: 0.62;
+        transition-duration: 0.28s;
+    }
+
+    /* Never dim the nav out from under someone who is using it. */
+    body:has(.photo-grid .photo-open:hover) header:hover,
+    body:has(.photo-grid .photo-open:hover) header:focus-within,
+    body:has(.photo-grid .photo-open:hover) nav[role="navigation"]:hover,
+    body:has(.photo-grid .photo-open:hover) nav[role="navigation"]:focus-within {
+        opacity: 1;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .photo-grid > figure,
     header,
     nav[role="navigation"] {
         transition: none;
