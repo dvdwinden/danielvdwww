@@ -1402,6 +1402,26 @@ ul.list-none {
     text-wrap: pretty;
 }
 
+/* Rows in the resumé and speaking lists. The prose line-height of 1.5 is set
+   for running text and reads loose on a title that wraps to two lines. */
+.prose p.my-4 {
+    line-height: 1.3;
+}
+
+/* A muted sub-label under a resumé title, for the one entry that needs to say
+   how the work was done. It sits in the title's column, so the date column and
+   the grid are left alone. */
+.prose p.my-4 .resume-note {
+    display: block;
+    margin-top: 0.2rem;
+    font-family: theme("fontFamily.sans");
+    font-size: theme("fontSize.xs");
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(107 114 128);
+}
+
 /* Resume */
 .resume {
     margin-top: 8rem;

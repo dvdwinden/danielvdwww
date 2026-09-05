@@ -142,7 +142,7 @@ Over a decade of designing digital products, leading teams and setting direction
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2025</span>
-      <p class="my-4">Senior Product Designer at <a href="https://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="external" target="_blank">Fictive Kin</a></p>
+      <p class="my-4">Senior Product Designer at <a href="https://fictivekin.com?ref=daniel.pizza" title="Fictive Kin" rel="external" target="_blank">Fictive Kin</a><span class="resume-note">Contract</span></p>
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2023–2025</span>
