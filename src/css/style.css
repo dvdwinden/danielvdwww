@@ -416,6 +416,16 @@ span.testimonial {
     margin: 0;
 }
 
+.photo-grid picture {
+    display: block;
+}
+
+.photo-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .photo-frame {
     display: block;
     width: 100%;
@@ -442,6 +452,12 @@ span.testimonial {
     .photo-grid {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 9rem;
+        /* Give the photos more room than the prose gets: reclaim the right
+           gutter main reserves (lg:mr-32) and a slice of the left one. The
+           left gutter is sized for the fixed nav, which sits at the bottom
+           of the viewport, so there is slack to borrow at the top. */
+        margin-left: -4rem;
+        margin-right: -8rem;
     }
 
     .photo-grid figure[data-col="1"] {

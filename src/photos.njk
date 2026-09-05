@@ -5,23 +5,23 @@ description: Photographs, mostly taken on foot.
 bodyClass: bg-cream
 permalink: photos/index.html
 photos:
-  - caption: "Placeholder — portrait"
-    orientation: portrait
-  - caption: "Placeholder — portrait"
-    orientation: portrait
-  - caption: "Placeholder — landscape, two columns"
+  - src: src/assets/photos/vineyard-through-the-hedge.jpg
+    caption: "A gap in the hedge, looking out over the vines."
     orientation: landscape
-  - caption: "Placeholder — portrait"
+  - src: src/assets/photos/house-and-renault.jpg
+    caption: "A Renault 4 parked up against the side of the house."
     orientation: portrait
-  - caption: "Placeholder — portrait"
-    orientation: portrait
-  - caption: "Placeholder — portrait"
-    orientation: portrait
-  - caption: "Placeholder — landscape, two columns"
+  - src: src/assets/photos/goal-in-the-field.jpg
+    caption: "The far goal, and nobody on the pitch."
     orientation: landscape
-  - caption: "Placeholder — portrait"
+  - src: src/assets/photos/table-between-courses.jpg
+    caption: "The table, somewhere between courses."
     orientation: portrait
-  - caption: "Placeholder — portrait"
+  - src: src/assets/photos/wire-figure.jpg
+    caption: "A wire figure strung up over the street at dusk."
+    orientation: landscape
+  - src: src/assets/photos/books-on-a-stool.jpg
+    caption: "A stack of books standing in for a tripod."
     orientation: portrait
 ---
 
@@ -33,7 +33,15 @@ photos:
 <div class="photo-grid mt-16 lg:mt-32 pb-16">
   {% for photo in photos | photoPlacement %}
   <figure data-col="{{ photo.colStart }}" data-span="{{ photo.colSpan }}">
-    <div class="photo-frame" data-orientation="{{ photo.orientation }}" role="img" aria-label="{{ photo.caption }}"></div>
+    {% if photo.src %}
+      {% if photo.isLandscape %}
+        {% image photo.src, photo.caption, "(min-width: 1024px) 60vw, 100vw" %}
+      {% else %}
+        {% image photo.src, photo.caption, "(min-width: 1024px) 30vw, 100vw" %}
+      {% endif %}
+    {% else %}
+      <div class="photo-frame" data-orientation="{{ photo.orientation }}" role="img" aria-label="{{ photo.caption }}"></div>
+    {% endif %}
     <figcaption class="font-sans tracking-wide">{{ photo.caption }}</figcaption>
   </figure>
   {% endfor %}
