@@ -40,7 +40,7 @@
   const figures = document.querySelectorAll('.figure-cycle');
   if (!figures.length) return;
 
-  const CYCLE_MS = 3500;
+  const CYCLE_MS = 3000;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 

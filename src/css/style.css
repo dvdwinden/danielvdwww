@@ -1243,7 +1243,7 @@ ul.list-none {
 .figure-cycle-frame {
     position: absolute;
     inset: 0;
-    transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.45s ease-in-out;
 }
 
 /* Until home.js marks the figure ready, the first frame shows on its own, so
