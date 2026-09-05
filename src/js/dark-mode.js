@@ -51,6 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
     html.style.backgroundColor = backgroundColor;
   }
 
+  // Some pages are dark by design and carry no toggle. Leave the class the
+  // inline head script set and don't consult the stored preference, which
+  // would otherwise switch this page back to light on load.
+  if (html.dataset.forceDark === 'true') {
+    html.classList.add('dark');
+    updateThemeColor();
+    return;
+  }
+
   // Apply the appropriate theme
   function applyTheme() {
     const storedTheme = localStorage.getItem('theme');

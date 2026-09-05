@@ -4,6 +4,8 @@
           {% if page.url == "/" %}<h1>{% endif %}Daniël van der Winden{% if page.url == "/" %}</h1>{% endif %}
       </a>
   </div>
+  {# No theme toggle where the page is dark by design. #}
+  {% if not forceDark %}
   <button id="dark-mode-toggle" aria-label="Toggle dark mode" class="pointer-events-auto flex items-center p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 active:scale-95 transition-all">
       <span id="dark-icon" aria-hidden="true">
           {% include "icons/sunset.svg" %}
@@ -12,4 +14,5 @@
           {% include "icons/sunrise.svg" %}
       </span>
   </button>
+  {% endif %}
 </header>

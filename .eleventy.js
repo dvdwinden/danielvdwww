@@ -22,6 +22,24 @@ const DEFAULT_WIDTHS = [800, 1200, 1800];
 const BREAKOUT_WIDTHS = [800, 1200, 1800, 2800];
 const BREAKOUT_SIZES = "(min-width: 1024px) min(1400px, calc(100vw - 544px)), calc(100vw - 48px)";
 
+// WebP quality. 70 is plenty for screenshots, book covers and other flat
+// artwork, which is nearly everything on the site. It is too low for film
+// scans: grain is high-frequency noise and it is the first thing a lossy
+// encoder throws away, so photographs come out looking smoothed rather than
+// sharp. Anything under a path listed here is encoded at the higher quality
+// instead.
+const DEFAULT_WEBP_QUALITY = 70;
+const HIGH_QUALITY_WEBP_PATHS = ['assets/photos/'];
+const HIGH_WEBP_QUALITY = 90;
+
+// Pick the WebP quality for a given source path.
+function webpQualityFor(srcPath) {
+  const normalized = String(srcPath).replace(/\\/g, '/');
+  return HIGH_QUALITY_WEBP_PATHS.some(p => normalized.includes(p))
+    ? HIGH_WEBP_QUALITY
+    : DEFAULT_WEBP_QUALITY;
+}
+
 // ============================================================================
 // CACHES
 // ============================================================================
@@ -163,7 +181,7 @@ module.exports = function (eleventyConfig) {
           return `${originalName}-${width}.${format}`;
         },
         sharpWebpOptions: {
-          quality: 70
+          quality: webpQualityFor(srcPath)
         }
       });
 
@@ -197,7 +215,7 @@ module.exports = function (eleventyConfig) {
           return `${originalName}-${width}.${format}`;
         },
         sharpWebpOptions: {
-          quality: 70
+          quality: webpQualityFor(srcPath)
         }
       });
     } catch (err) {
@@ -743,8 +761,12 @@ module.exports = function (eleventyConfig) {
   registerAsyncShortcode("image", imageShortcode);
   registerAsyncShortcode("retinaImage", retinaImageShortcode);
 
-  // Copy static files
-  eleventyConfig.addPassthroughCopy("src/css");
+  // Copy static files. src/css is deliberately NOT copied: it holds only
+  // style.css, the Tailwind *input*, and copying it lands on the exact path
+  // Tailwind compiles to (_site/css/style.css), overwriting the built CSS with
+  // raw @tailwind/@apply source. In `npm run build` Tailwind runs after
+  // Eleventy and wins; in `npm run dev` the two run concurrently, so whichever
+  // finished last decided whether the site had any styles at all.
   eleventyConfig.addPassthroughCopy("src/js");
 
   // Copy favicon files to assets directory
@@ -970,6 +992,102 @@ module.exports = function (eleventyConfig) {
   // Count posts in a collection by year
   eleventyConfig.addFilter("countByYear", function (collection, year) {
     return collection.filter(item => item.date.getFullYear() === parseInt(year)).length;
+  });
+
+  // A colour drawn from the photo itself, used to tint the backdrop behind it
+  // when it is opened full screen on /photos/.
+  //
+  // Half dominant, half average. Dominant alone carries the photo's character
+  // (the oak of a table, the green of a pitch) but latches onto a blown sky
+  // often enough to give a near-white backdrop; average alone is safely
+  // mid-toned but lands on much the same muddy grey for every photo. Mixing
+  // them keeps the character and takes the glare off. Read once per file.
+  const PHOTO_TINT_CACHE = new Map();
+  eleventyConfig.addAsyncShortcode("photoTint", async function (src) {
+    const key = String(src);
+    if (PHOTO_TINT_CACHE.has(key)) return PHOTO_TINT_CACHE.get(key);
+
+    let tint = "rgb(28, 28, 26)";
+    try {
+      const filePath = await findFileWithExtension(normalizeSrcPath(src).srcPath);
+      if (filePath) {
+        const { dominant } = await sharp(filePath).stats();
+        // Shrinking to a single pixel gives the average.
+        const { data } = await sharp(filePath)
+          .resize(1, 1, { fit: "fill" })
+          .raw()
+          .toBuffer({ resolveWithObject: true });
+
+        if (dominant && data) {
+          const mix = (a, b) => Math.round((a + b) / 2);
+          tint = `rgb(${mix(dominant.r, data[0])}, ${mix(dominant.g, data[1])}, ${mix(dominant.b, data[2])})`;
+        }
+      }
+    } catch (err) {
+      console.error(`Could not read tint colour for ${src}:`, err.message);
+    }
+
+    PHOTO_TINT_CACHE.set(key, tint);
+    return tint;
+  });
+
+  // Work out where each photo sits in the three-column grid on /photos/.
+  // Portraits step through the columns right → middle → left; landscapes take
+  // two columns on whichever side the photo before them left free.
+  eleventyConfig.addFilter("photoPlacement", function (photos) {
+    if (!photos) return [];
+
+    // Newest first. Dates are YYYY-MM strings, so they sort as text; photos
+    // sharing a month keep the order they were written in, and anything
+    // undated falls to the end rather than to the top.
+    const ordered = photos.slice().sort(function (a, b) {
+      const dateA = a.date || "";
+      const dateB = b.date || "";
+      if (dateA === dateB) return 0;
+      if (!dateA) return 1;
+      if (!dateB) return -1;
+      return dateA < dateB ? 1 : -1;
+    });
+
+    const PORTRAIT_ORDER = [3, 2, 1]; // right, middle, left
+    const other = (side) => (side === "right" ? "left" : "right");
+
+    let portraitStep = 0;
+    let lean = null; // which side the previous photo sat on, if either
+    let lastLandscape = null; // which side the previous landscape took
+
+    return ordered.map(function (photo, index) {
+      const isLandscape = photo.orientation === "landscape";
+      let colStart;
+      let colSpan;
+
+      if (isLandscape) {
+        // Take the two columns the photo before this one left free. A photo in
+        // the middle column leaves neither side free, so fall back to bouncing
+        // off the previous landscape instead.
+        const side = lean ? other(lean) : lastLandscape ? other(lastLandscape) : "right";
+        colStart = side === "left" ? 1 : 2;
+        colSpan = 2;
+        lean = side;
+        lastLandscape = side;
+      } else {
+        colStart = PORTRAIT_ORDER[portraitStep % PORTRAIT_ORDER.length];
+        colSpan = 1;
+        portraitStep += 1;
+        lean = colStart === 2 ? null : colStart === 3 ? "right" : "left";
+      }
+
+      // Every photo gets its own row. Left to auto-placement, two of them can
+      // share one: the sparse algorithm only pushes to a new row when the
+      // cursor moves *leftward*, so a col-1 photo followed by a col-3 photo
+      // sits side by side. Pinning the row keeps the stagger vertical.
+      return Object.assign({}, photo, {
+        colStart: colStart,
+        colSpan: colSpan,
+        isLandscape: isLandscape,
+        row: index + 1,
+      });
+    });
   });
 
 

@@ -42,6 +42,14 @@
                 </a>
             </li>
             <li>
+                <a href="/photos/"
+                   class="block text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded-sm
+                   {% if page.url == '/photos/' %} underline underline-custom  text-black dark:text-white {% endif %}"
+                   {% if page.url == '/photos/' %}aria-current="page"{% endif %}>
+                    Photos
+                </a>
+            </li>
+            <li>
                 <a href="/"
                    class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent rounded-sm
                    {% if page.url == '/' %} underline underline-custom text-black dark:text-white{% endif %}"

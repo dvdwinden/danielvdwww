@@ -402,6 +402,317 @@ span.testimonial {
     font-size: 1rem;
 }
 
+/* Photo grid (/photos/)
+   One photo per row so the eye steps down the page. Placement comes from the
+   photoPlacement filter in .eleventy.js; these rules just honour it. */
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 5rem;
+}
+
+.photo-grid figure {
+    margin: 0;
+}
+
+/* Hovering a photograph gives it the page: the other photographs step well
+   back, the wordmark and nav only a little. Done in CSS off :has() rather
+   than a script, so there is nothing between the pointer moving and the page
+   answering - the earlier version read as laggy because a timer sat in
+   between. Dimming is quicker than coming back, which is what stops the
+   return feeling abrupt. */
+@media (min-width: 1024px) {
+    .photo-grid > figure,
+    header,
+    nav[role="navigation"] {
+        transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+        /* Own compositor layer, so the fade doesn't repaint text every frame. */
+        will-change: opacity;
+    }
+
+    .photo-grid:has(.photo-open:hover) > figure:not(:hover) {
+        opacity: 0.32;
+        transition-duration: 0.28s;
+    }
+
+    body:has(.photo-grid .photo-open:hover) header,
+    body:has(.photo-grid .photo-open:hover) nav[role="navigation"] {
+        opacity: 0.62;
+        transition-duration: 0.28s;
+    }
+
+    /* Never dim the nav out from under someone who is using it. */
+    body:has(.photo-grid .photo-open:hover) header:hover,
+    body:has(.photo-grid .photo-open:hover) header:focus-within,
+    body:has(.photo-grid .photo-open:hover) nav[role="navigation"]:hover,
+    body:has(.photo-grid .photo-open:hover) nav[role="navigation"]:focus-within {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .photo-grid > figure,
+    header,
+    nav[role="navigation"] {
+        transition: none;
+    }
+}
+
+/* Place names run long, so balance the lines rather than leaving "(2026)"
+   stranded on its own. */
+.photo-grid figcaption,
+.lightbox-caption {
+    text-wrap: balance;
+}
+
+.photo-grid picture {
+    display: block;
+}
+
+.photo-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.photo-frame {
+    display: block;
+    width: 100%;
+    background-color: rgba(42, 42, 40, 0.06);
+    border: 1px solid rgba(42, 42, 40, 0.08);
+}
+
+.photo-frame[data-orientation="portrait"] {
+    aspect-ratio: 4 / 5;
+}
+
+.photo-frame[data-orientation="landscape"] {
+    aspect-ratio: 3 / 2;
+}
+
+.dark .photo-frame {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* The photo itself is the button that opens it full screen. */
+.photo-open {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+    font: inherit;
+    color: inherit;
+}
+
+.photo-open:focus-visible {
+    outline: 2px solid theme("colors.hover");
+    outline-offset: 4px;
+}
+
+/* Enlarged state. The dialog fills the viewport and paints the photo's own
+   dominant colour behind it, so the frame sits in its own light rather than
+   on a generic black. --photo-tint and --photo-ink are set per photo by
+   photo-lightbox.js. */
+#photo-lightbox {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background-color: var(--photo-tint, #1c1c1a);
+    cursor: zoom-out;
+    /* Arrowing between photos shifts the backdrop from one tint to the next. */
+    transition: background-color 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #photo-lightbox {
+        transition: none;
+    }
+}
+
+#photo-lightbox::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* The dialog takes focus itself on open, so the close button isn't sitting
+   there ringed the moment a photo appears. */
+#photo-lightbox:focus,
+#photo-lightbox:focus-visible {
+    outline: none;
+}
+
+/* Two zones either side of the photo, sitting behind it, so clicking beside
+   the photo steps through the roll while clicking the photo still closes. */
+.lightbox-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 50%;
+}
+
+.lightbox-prev {
+    left: 0;
+}
+
+.lightbox-next {
+    right: 0;
+}
+
+/* Arrows as real cursors, the way zoom-in and zoom-out are. A dark disc
+   behind a white chevron so they read against any tint. Hotspot centred;
+   the resize cursors are the fallback if the image is refused. */
+.lightbox-prev {
+    cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='36'%20height='36'%3E%3Ccircle%20cx='18'%20cy='18'%20r='17'%20fill='black'%20fill-opacity='.55'/%3E%3Cpath%20d='M21%2012%2015%2018%2021%2024'%20fill='none'%20stroke='white'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") 18 18, w-resize;
+}
+
+.lightbox-next {
+    cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='36'%20height='36'%3E%3Ccircle%20cx='18'%20cy='18'%20r='17'%20fill='black'%20fill-opacity='.55'/%3E%3Cpath%20d='M15%2012%2021%2018%2015%2024'%20fill='none'%20stroke='white'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") 18 18, e-resize;
+}
+
+/* The figure fills the dialog to centre the photo, which would otherwise
+   cover the nav zones underneath it. Only the photo and its caption take the
+   pointer; everything else falls through to the zones. */
+.lightbox-figure {
+    pointer-events: none;
+}
+
+.lightbox-image,
+.lightbox-caption {
+    pointer-events: auto;
+}
+
+.lightbox-figure {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 5vmin;
+}
+
+.lightbox-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100% - 2.5rem);
+    object-fit: contain;
+}
+
+/* Overrides the global figcaption colour, which assumes a page background. */
+.lightbox-caption,
+.dark .lightbox-caption {
+    margin: 0;
+    color: var(--photo-ink, #f5f2ea);
+    opacity: 0.75;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--photo-ink, #f5f2ea);
+    opacity: 0.55;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+    opacity: 1;
+}
+
+/* Captions sit back out of the way and come up to the usual figcaption
+   weight when you're looking at the photo. Only where hovering is possible:
+   on touch there is no hover to reveal them, so they stay legible. */
+@media (hover: hover) {
+    .photo-grid figcaption {
+        opacity: 0.4;
+        transition: opacity 0.25s ease;
+    }
+
+    .photo-grid figure:hover figcaption,
+    .photo-grid figure:focus-within figcaption {
+        opacity: 0.85;
+    }
+
+    .dark .photo-grid figcaption {
+        opacity: 0.45;
+    }
+
+    .dark .photo-grid figure:hover figcaption,
+    .dark .photo-grid figure:focus-within figcaption {
+        opacity: 0.95;
+    }
+}
+
+/* Portrait photos sit full-bleed on small screens; captions stay in Degular
+   via the shared figcaption rules above. */
+@media (min-width: 1024px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 9rem;
+        /* Extra room for the photos comes out of the left gutter only. That
+           gutter is sized for the fixed nav, which sits at the bottom of the
+           viewport, so there is slack to borrow up top. The right edge stays
+           put, so the grid ends where the page's content column ends. The
+           intro sits in the last column (see .photo-intro), which is what
+           makes the first photo line up with the text on both edges. */
+        margin-left: -10rem;
+        margin-right: 0;
+    }
+
+    .photo-grid > [data-col="1"] {
+        grid-column-start: 1;
+    }
+
+    .photo-grid > [data-col="2"] {
+        grid-column-start: 2;
+    }
+
+    .photo-grid > [data-col="3"] {
+        grid-column-start: 3;
+    }
+
+    .photo-grid > [data-span="1"] {
+        grid-column-end: span 1;
+    }
+
+    .photo-grid > [data-span="2"] {
+        grid-column-end: span 2;
+    }
+
+    /* One item per row, set by the photoPlacement filter. Without this,
+       auto-placement will pair a left-column photo with a right-column one. */
+    .photo-grid > [data-col] {
+        grid-row-start: var(--photo-row);
+    }
+}
+
 /* ==========================================================================
    LAYOUT COMPONENTS
    ========================================================================== */
