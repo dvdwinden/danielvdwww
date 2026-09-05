@@ -1105,6 +1105,23 @@ ul.list-none {
     text-underline-offset: 3px;
 }
 
+/* Trema's covers are photographs sitting on a transparent ground, so the frame
+   the Library covers get would just draw a box around empty space. Wider than
+   186px too, since the book only fills part of the image. */
+/* Taller than a Library cover, so it hangs low off the row it belongs to
+   unless it is lifted. */
+.trema-item .book-cover {
+    top: -5rem;
+}
+
+.trema-item .book-cover img,
+.trema-item .book-cover picture img {
+    width: 240px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
 .trema-date {
     font-family: theme("fontFamily.sans");
     font-size: theme("fontSize.xs");
@@ -1114,14 +1131,28 @@ ul.list-none {
     color: rgb(107 114 128);
 }
 
+/* Sits under the right-hand date column and borrows its small-caps treatment,
+   so it reads as part of the list rather than a loose link below it. */
 .prose p.trema-more {
-    font-family: theme("fontFamily.sans");
-    font-size: 1rem;
-    color: rgb(0 0 0 / 0.5);
+    margin-top: 1rem;
+    text-align: right;
 }
 
-.dark .prose p.trema-more {
-    color: rgb(255 255 255 / 0.4);
+.prose p.trema-more a {
+    font-family: theme("fontFamily.sans");
+    font-size: theme("fontSize.xs");
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(107 114 128);
+    text-decoration: none;
+}
+
+.prose p.trema-more a:hover {
+    color: theme("colors.hover");
+    text-decoration: underline;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
 /* ==========================================================================
