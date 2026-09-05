@@ -40,11 +40,16 @@ photos:
   {% for photo in photos | photoPlacement %}
   <figure data-col="{{ photo.colStart }}" data-span="{{ photo.colSpan }}" style="--photo-row: {{ photo.row }}">
     {% if photo.src %}
-      {% if photo.isLandscape %}
-        {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 60vw, 100vw" %}
-      {% else %}
-        {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 30vw, 100vw" %}
-      {% endif %}
+      <button type="button" class="photo-open"
+              data-caption="{{ photo.caption }}"
+              data-tint="{% photoTint photo.src %}"
+              aria-label="Enlarge: {{ photo.alt or photo.caption }}">
+        {% if photo.isLandscape %}
+          {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 60vw, 100vw" %}
+        {% else %}
+          {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 30vw, 100vw" %}
+        {% endif %}
+      </button>
     {% else %}
       <div class="photo-frame" data-orientation="{{ photo.orientation }}" role="img" aria-label="{{ photo.alt or photo.caption }}"></div>
     {% endif %}
@@ -52,3 +57,11 @@ photos:
   </figure>
   {% endfor %}
 </div>
+
+<dialog id="photo-lightbox" aria-label="Enlarged photograph">
+  <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+  <figure class="lightbox-figure">
+    <img class="lightbox-image" alt="">
+    <figcaption class="lightbox-caption font-sans tracking-wide"></figcaption>
+  </figure>
+</dialog>

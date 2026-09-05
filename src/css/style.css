@@ -446,6 +446,94 @@ span.testimonial {
     border-color: rgba(255, 255, 255, 0.08);
 }
 
+/* The photo itself is the button that opens it full screen. */
+.photo-open {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+    font: inherit;
+    color: inherit;
+}
+
+.photo-open:focus-visible {
+    outline: 2px solid theme("colors.hover");
+    outline-offset: 4px;
+}
+
+/* Enlarged state. The dialog fills the viewport and paints the photo's own
+   dominant colour behind it, so the frame sits in its own light rather than
+   on a generic black. --photo-tint and --photo-ink are set per photo by
+   photo-lightbox.js. */
+#photo-lightbox {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background-color: var(--photo-tint, #1c1c1a);
+    cursor: zoom-out;
+}
+
+#photo-lightbox::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 5vmin;
+}
+
+.lightbox-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100% - 2.5rem);
+    object-fit: contain;
+}
+
+/* Overrides the global figcaption colour, which assumes a page background. */
+.lightbox-caption,
+.dark .lightbox-caption {
+    margin: 0;
+    color: var(--photo-ink, #f5f2ea);
+    opacity: 0.75;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    z-index: 1;
+    padding: 0.25rem 0.5rem;
+    border: 0;
+    background: none;
+    color: var(--photo-ink, #f5f2ea);
+    opacity: 0.6;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+    opacity: 1;
+}
+
 /* Captions sit back out of the way and come up to the usual figcaption
    weight when you're looking at the photo. Only where hovering is possible:
    on touch there is no hover to reveal them, so they stay legible. */

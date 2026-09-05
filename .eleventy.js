@@ -994,6 +994,43 @@ module.exports = function (eleventyConfig) {
     return collection.filter(item => item.date.getFullYear() === parseInt(year)).length;
   });
 
+  // A colour drawn from the photo itself, used to tint the backdrop behind it
+  // when it is opened full screen on /photos/.
+  //
+  // Half dominant, half average. Dominant alone carries the photo's character
+  // (the oak of a table, the green of a pitch) but latches onto a blown sky
+  // often enough to give a near-white backdrop; average alone is safely
+  // mid-toned but lands on much the same muddy grey for every photo. Mixing
+  // them keeps the character and takes the glare off. Read once per file.
+  const PHOTO_TINT_CACHE = new Map();
+  eleventyConfig.addAsyncShortcode("photoTint", async function (src) {
+    const key = String(src);
+    if (PHOTO_TINT_CACHE.has(key)) return PHOTO_TINT_CACHE.get(key);
+
+    let tint = "rgb(28, 28, 26)";
+    try {
+      const filePath = await findFileWithExtension(normalizeSrcPath(src).srcPath);
+      if (filePath) {
+        const { dominant } = await sharp(filePath).stats();
+        // Shrinking to a single pixel gives the average.
+        const { data } = await sharp(filePath)
+          .resize(1, 1, { fit: "fill" })
+          .raw()
+          .toBuffer({ resolveWithObject: true });
+
+        if (dominant && data) {
+          const mix = (a, b) => Math.round((a + b) / 2);
+          tint = `rgb(${mix(dominant.r, data[0])}, ${mix(dominant.g, data[1])}, ${mix(dominant.b, data[2])})`;
+        }
+      }
+    } catch (err) {
+      console.error(`Could not read tint colour for ${src}:`, err.message);
+    }
+
+    PHOTO_TINT_CACHE.set(key, tint);
+    return tint;
+  });
+
   // Work out where each photo sits in the three-column grid on /photos/.
   // Portraits step through the columns right → middle → left; landscapes take
   // two columns on whichever side the photo before them left free.
