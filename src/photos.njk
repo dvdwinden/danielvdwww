@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Photos
+description: Photographs, mostly taken on foot.
+bodyClass: bg-cream
+permalink: photos/index.html
+photos:
+  - caption: "Placeholder — portrait"
+    orientation: portrait
+  - caption: "Placeholder — portrait"
+    orientation: portrait
+  - caption: "Placeholder — landscape, two columns"
+    orientation: landscape
+  - caption: "Placeholder — portrait"
+    orientation: portrait
+  - caption: "Placeholder — portrait"
+    orientation: portrait
+  - caption: "Placeholder — portrait"
+    orientation: portrait
+  - caption: "Placeholder — landscape, two columns"
+    orientation: landscape
+  - caption: "Placeholder — portrait"
+    orientation: portrait
+  - caption: "Placeholder — portrait"
+    orientation: portrait
+---
+
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert">
+  <h1>Photos</h1>
+  <p>Photographs, mostly taken on foot.</p>
+</div>
+
+<div class="photo-grid mt-16 lg:mt-32 pb-16">
+  {% for photo in photos | photoPlacement %}
+  <figure data-col="{{ photo.colStart }}" data-span="{{ photo.colSpan }}">
+    <div class="photo-frame" data-orientation="{{ photo.orientation }}" role="img" aria-label="{{ photo.caption }}"></div>
+    <figcaption class="font-sans tracking-wide">{{ photo.caption }}</figcaption>
+  </figure>
+  {% endfor %}
+</div>

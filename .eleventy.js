@@ -972,6 +972,44 @@ module.exports = function (eleventyConfig) {
     return collection.filter(item => item.date.getFullYear() === parseInt(year)).length;
   });
 
+  // Work out where each photo sits in the three-column grid on /photos/.
+  // Portraits step through the columns right → middle → left; landscapes take
+  // two columns on whichever side the photo before them left free.
+  eleventyConfig.addFilter("photoPlacement", function (photos) {
+    if (!photos) return [];
+
+    const PORTRAIT_ORDER = [3, 2, 1]; // right, middle, left
+    const other = (side) => (side === "right" ? "left" : "right");
+
+    let portraitStep = 0;
+    let lean = null; // which side the previous photo sat on, if either
+    let lastLandscape = null; // which side the previous landscape took
+
+    return photos.map(function (photo) {
+      const isLandscape = photo.orientation === "landscape";
+      let colStart;
+      let colSpan;
+
+      if (isLandscape) {
+        // Take the two columns the photo before this one left free. A photo in
+        // the middle column leaves neither side free, so fall back to bouncing
+        // off the previous landscape instead.
+        const side = lean ? other(lean) : lastLandscape ? other(lastLandscape) : "right";
+        colStart = side === "left" ? 1 : 2;
+        colSpan = 2;
+        lean = side;
+        lastLandscape = side;
+      } else {
+        colStart = PORTRAIT_ORDER[portraitStep % PORTRAIT_ORDER.length];
+        colSpan = 1;
+        portraitStep += 1;
+        lean = colStart === 2 ? null : colStart === 3 ? "right" : "left";
+      }
+
+      return Object.assign({}, photo, { colStart: colStart, colSpan: colSpan, isLandscape: isLandscape });
+    });
+  });
+
 
   // Set up redirects from /writing/* to /journal/* both for local dev and production
   eleventyConfig.setServerOptions({

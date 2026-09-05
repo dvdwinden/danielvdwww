@@ -402,6 +402,69 @@ span.testimonial {
     font-size: 1rem;
 }
 
+/* Photo grid (/photos/)
+   One photo per row so the eye steps down the page. Placement comes from the
+   photoPlacement filter in .eleventy.js; these rules just honour it. */
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 5rem;
+}
+
+.photo-grid figure {
+    margin: 0;
+}
+
+.photo-frame {
+    display: block;
+    width: 100%;
+    background-color: rgba(42, 42, 40, 0.06);
+    border: 1px solid rgba(42, 42, 40, 0.08);
+}
+
+.photo-frame[data-orientation="portrait"] {
+    aspect-ratio: 4 / 5;
+}
+
+.photo-frame[data-orientation="landscape"] {
+    aspect-ratio: 3 / 2;
+}
+
+.dark .photo-frame {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Portrait photos sit full-bleed on small screens; captions stay in Degular
+   via the shared figcaption rules above. */
+@media (min-width: 1024px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 9rem;
+    }
+
+    .photo-grid figure[data-col="1"] {
+        grid-column-start: 1;
+    }
+
+    .photo-grid figure[data-col="2"] {
+        grid-column-start: 2;
+    }
+
+    .photo-grid figure[data-col="3"] {
+        grid-column-start: 3;
+    }
+
+    .photo-grid figure[data-span="1"] {
+        grid-column-end: span 1;
+    }
+
+    .photo-grid figure[data-span="2"] {
+        grid-column-end: span 2;
+    }
+}
+
 /* ==========================================================================
    LAYOUT COMPONENTS
    ========================================================================== */
