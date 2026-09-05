@@ -1268,7 +1268,8 @@ ul.list-none {
     justify-content: flex-end;
 }
 
-.figure-cycle-arrow:hover,
+/* The mouse gets the arrow that follows it, below; this glyph is the keyboard
+   equivalent, parked at the edge of whichever half has focus. */
 .figure-cycle-arrow:focus-visible {
     opacity: 1;
 }
@@ -1288,11 +1289,58 @@ ul.list-none {
     line-height: 1;
 }
 
+/* The arrow itself becomes the cursor over the frame, so the native one goes
+   away and a disc follows the pointer instead. */
+.figure-cycle-frames.has-cursor,
+.figure-cycle-frames.has-cursor .figure-cycle-arrow {
+    cursor: none;
+}
+
+.figure-cycle-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    background: rgb(0 0 0 / 0.55);
+    color: #fff;
+    font-family: theme("fontFamily.sans");
+    font-size: 1.25rem;
+    line-height: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    will-change: transform;
+    z-index: 3;
+}
+
+.figure-cycle-frames.is-pointing .figure-cycle-cursor {
+    opacity: 1;
+}
+
 .figure-cycle-dots {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
     margin-top: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.figure-cycle:hover .figure-cycle-dots,
+.figure-cycle:focus-within .figure-cycle-dots {
+    opacity: 1;
+}
+
+/* No hover to reveal them on touch, so leave them up. */
+@media (hover: none) {
+    .figure-cycle-dots {
+        opacity: 1;
+    }
 }
 
 .figure-cycle-dot {

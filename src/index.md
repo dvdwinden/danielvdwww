@@ -11,17 +11,23 @@ bodyClass: bg-blue
 
 I’m a designer, based in Amsterdam. I make software for a living, and books and magazines for the love of it.
 
-<section class="introduction">
-
 At [Enode](https://enode.com?ref=daniel.pizza "Enode") I design software that enables the next energy grid. Most recently I led the company’s rebrand and shipped its new website, redefining how the company looks and sounds.
 
-Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, latterly as partner and CDO.
+</div>
 
-<figure class="figure-cycle w-full sm:max-w-lg ml-auto my-8">
-  <div class="figure-cycle-frames">
-    <div class="figure-cycle-frame"><picture>{% retinaImage "src/assets/work/enode-og.png", "Enode’s wordmark", 512 %}</picture></div>
-  </div>
-</figure>
+<div class="sm:mt-16 mt-8 sm:mb-16 mb-8">
+  <figure class="figure-cycle w-full" style="--cycle-ratio: 2 / 1">
+    <div class="figure-cycle-frames">
+      <div class="figure-cycle-frame">{% image "src/assets/work/enode-og.png", "Enode’s wordmark" %}</div>
+    </div>
+  </figure>
+</div>
+
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
+
+<section class="introduction">
+
+Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, latterly as partner and CDO.
 
 <a class="bookmark-card" href="https://enode.com?ref=daniel.pizza" title="Enode" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">Enode: Orchestrating energy for the next grid</span><span class="bookmark-description">One platform for energy retailers and the teams that trade for them. Connect every asset, coordinate every home, and shape thousands as one.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/icons/enode-favicon.svg" alt="" width="16" height="16" loading="lazy" />enode.com</span></span></a>
 

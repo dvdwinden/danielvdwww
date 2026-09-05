@@ -42,6 +42,7 @@
 
   const CYCLE_MS = 3500;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   const cycles = [];
 
@@ -89,10 +90,10 @@
     figure.classList.add('is-ready');
 
     if (frames.length > 1 && frameBox) {
-      // Two half-width overlays: the arrow fades in over whichever side the
-      // pointer is on, and the whole half is the hit area.
-      [['prev', -1, '←', 'Previous image'],
-       ['next', 1, '→', 'Next image']].forEach(([name, delta, glyph, label]) => {
+      // Two half-width overlays act as the hit areas. Their own glyph only
+      // shows on keyboard focus; for a mouse the arrow follows the pointer.
+      [['prev', -1, '\u2190', 'Previous image'],
+       ['next', 1, '\u2192', 'Next image']].forEach(([name, delta, glyph, label]) => {
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'figure-cycle-arrow figure-cycle-arrow--' + name;
@@ -104,6 +105,41 @@
         button.addEventListener('click', () => goTo(index + delta));
         frameBox.appendChild(button);
       });
+
+      if (finePointer) {
+        const marker = document.createElement('div');
+        marker.className = 'figure-cycle-cursor';
+        marker.setAttribute('aria-hidden', 'true');
+        marker.textContent = '\u2192';
+        frameBox.appendChild(marker);
+        frameBox.classList.add('has-cursor');
+
+        let pending = null;
+
+        frameBox.addEventListener('pointermove', event => {
+          if (event.pointerType !== 'mouse') return;
+          if (pending) cancelAnimationFrame(pending);
+          pending = requestAnimationFrame(() => {
+            pending = null;
+            const rect = frameBox.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            marker.style.transform =
+              'translate(' + x + 'px, ' + y + 'px) translate(-50%, -50%)';
+            marker.textContent = x < rect.width / 2 ? '\u2190' : '\u2192';
+          });
+        });
+
+        frameBox.addEventListener('pointerenter', event => {
+          if (event.pointerType === 'mouse') frameBox.classList.add('is-pointing');
+        });
+
+        frameBox.addEventListener('pointerleave', () => {
+          if (pending) cancelAnimationFrame(pending);
+          pending = null;
+          frameBox.classList.remove('is-pointing');
+        });
+      }
 
       const dotList = document.createElement('div');
       dotList.className = 'figure-cycle-dots';
