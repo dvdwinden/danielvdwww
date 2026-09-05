@@ -72,9 +72,9 @@ Outside of my day job I write [Trema](https://www.trema.website?ref=daniel.pizza
 
 <h3 class="section-title"><em>TRANSCRIPT</em> Magazine</h3>
 
-With [Iris Cuppen](https://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I curated, edited, designed and published four issues of _TRANSCRIPT_, a small literary magazine. We commissioned essays, short stories and poetry, alongside visual work by designers, illustrators, or photographers.
+With [Iris Cuppen](https://iriscuppen.com?ref=daniel.pizza "Iris Cuppen") I curated, edited, designed and published four issues of _TRANSCRIPT_, a small literary magazine. We commissioned essays, short stories and poetry, alongside visual work by designers, illustrators or photographers.
 
-Each launch was accompanied by live readings, each issue printed in a limited run, and sold online, or in select bookstores.
+Each launch was accompanied by live readings, each issue printed in a limited run and sold online or in select bookstores.
 
 <figure class="w-full sm:max-w-lg ml-auto my-8">
   <picture>{% retinaImage "src/assets/work/transcript-scribe.png", "TRANSCRIPT Magazine", 512 %}</picture>
@@ -86,7 +86,7 @@ Each launch was accompanied by live readings, each issue printed in a limited ru
 
 <h3 class="section-title">NoGood art book</h3>
 
-In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings about his life and work and turning them into a cohesive whole. A gentle introduction to his moniker through a foreword and a few chapters covering how it came to be, why it’s the perfect place for him to experiment and grow his practice, and where it might be headed next.
+In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings about his life and work, and turning them into a cohesive whole. A gentle introduction to his moniker through a foreword and a few chapters covering how it came to be, why it’s the perfect place for him to experiment and grow his practice, and where it might be headed next.
 
 </div>
 
