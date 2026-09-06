@@ -165,6 +165,14 @@
         <main id="main-content" class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]" role="main">
             <div class="w-full max-w-[1400px]">
                 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] pb-32 dark:prose-invert">
+                    {% if page.filePathStem.startsWith("/newsletter/") %}
+                        {% if image and image.src %}
+                        <figure class="not-prose mb-8">
+                            {% image "src" + image.src, image.alt or title %}
+                        </figure>
+                        {% endif %}
+                        <h1>{% if external_url %}<a href="{{ external_url }}" rel="external" target="_blank">{{ title }}</a>{% else %}{{ title }}{% endif %}</h1>
+                    {% endif %}
                     {{ content | safe }}
                     {% if tags %}
                     <ul class="mt-6 font-sans text-sm tracking-wide text-gray-500 dark:text-gray-600 flex flex-wrap items-center gap-x-2 not-prose" style="list-style: none; padding: 0;">
