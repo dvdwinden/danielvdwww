@@ -31,7 +31,7 @@ I put together everything from briefings and thorough flows to polished interfac
 
 At [Enode](https://enode.com?ref=daniel.pizza "Enode"), I design software that enables the next energy grid. Most recently I led our rebrand, shipped our new website, redefining how the company looks and sounds.
 
-_Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, a large part as partner and CDO._
+_Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, a large part as partner and <span class="smallcaps">CDO</span>._
 
 <a class="bookmark-card" href="https://enode.com?ref=daniel.pizza" title="Enode" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">Enode: Orchestrating energy for the next grid</span><span class="bookmark-description">One platform for energy retailers and the teams that trade for them. Connect every asset, coordinate every home, and shape thousands as one.</span><span class="bookmark-meta">{% include "icons/logos/enode-mark.svg" %}enode.com</span></span></a>
 
