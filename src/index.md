@@ -63,8 +63,6 @@ _Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=danie
 
 Outside of my day job I write [Trema](https://www.trema.website?ref=daniel.pizza "Trema, my monthly newsletter about books"), a monthly newsletter about the books I loved reading. It’s short, and I recommend fiction and non-fiction for casual and voracious readers alike.
 
-<a class="bookmark-card" href="/journal/trema-ghost-theme/" title="A fresh coat of paint for Trema"><span class="bookmark-content"><span class="bookmark-title">A fresh coat of paint for Trema, my publication about the books I loved reading</span><span class="bookmark-description">After over two years of writing a book recommendation per month, it was time to design a new and improved reading experience.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/favicon-32x32.png" alt="" width="16" height="16" loading="lazy" />daniel.pizza</span></span></a>
-
 <ul class="trema-list not-prose">
 {%- for post in collections.newsletter.slice(0, 3) %}
   {%- set cover = post.data.external_url | tremaCover(trema.covers) %}
@@ -73,6 +71,8 @@ Outside of my day job I write [Trema](https://www.trema.website?ref=daniel.pizza
 </ul>
 
 <p class="trema-more"><a href="/newsletter" title="Every entry from Trema">Read all {{ collections.newsletter.length }}</a></p>
+
+<a class="bookmark-card" href="/journal/trema-ghost-theme/" title="A fresh coat of paint for Trema"><span class="bookmark-content"><span class="bookmark-title">A fresh coat of paint for Trema, my publication about the books I loved reading</span><span class="bookmark-description">After over two years of writing a book recommendation per month, it was time to design a new and improved reading experience.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/favicon-32x32.png" alt="" width="16" height="16" loading="lazy" />daniel.pizza</span></span></a>
 
 ---
 
