@@ -93,11 +93,19 @@ photos:
               data-caption="{{ photo.caption }}"
               data-tint="{% photoTint photo.src %}"
               aria-label="Enlarge: {{ photo.alt or photo.caption }}">
-        {% if photo.isLandscape %}
-          {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 60vw, 100vw" %}
-        {% else %}
-          {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 30vw, 100vw" %}
-        {% endif %}
+        {# Wrapped in <picture> so the optimizeImages transform treats these as
+           already processed. Without it they are classified as "breakout"
+           images - their nearest max-width ancestor is the wide container -
+           and re-emitted with BREAKOUT_SIZES, which advertises ~1400px for a
+           photo that occupies about a third of that. Every photo then fetched
+           its largest rendition. #}
+        <picture>
+          {% if photo.isLandscape %}
+            {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 56vw, 100vw" %}
+          {% else %}
+            {% image photo.src, photo.alt or photo.caption, "(min-width: 1024px) 28vw, 100vw" %}
+          {% endif %}
+        </picture>
       </button>
     {% else %}
       <div class="photo-frame" data-orientation="{{ photo.orientation }}" role="img" aria-label="{{ photo.alt or photo.caption }}"></div>

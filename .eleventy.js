@@ -32,6 +32,16 @@ const DEFAULT_WEBP_QUALITY = 70;
 const HIGH_QUALITY_WEBP_PATHS = ['assets/photos/'];
 const HIGH_WEBP_QUALITY = 90;
 
+// The same paths also get a rendition at the source's own width (null means
+// "original" to eleventy-img). The default widths stop at 1800, which on a
+// large display leaves an enlarged photograph below one image pixel per CSS
+// pixel - visibly soft, which is the whole point of the page.
+function widthsFor(srcPath, widths) {
+  const normalized = String(srcPath).replace(/\\/g, '/');
+  const wantsFull = HIGH_QUALITY_WEBP_PATHS.some(p => normalized.includes(p));
+  return wantsFull && widths.indexOf(null) === -1 ? widths.concat([null]) : widths;
+}
+
 // Pick the WebP quality for a given source path.
 function webpQualityFor(srcPath) {
   const normalized = String(srcPath).replace(/\\/g, '/');
@@ -172,7 +182,7 @@ module.exports = function (eleventyConfig) {
 
     try {
       const metadata = await Image(srcPath, {
-        widths: widths,
+        widths: widthsFor(srcPath, widths),
         formats: ["webp"],
         outputDir: outputDir,
         urlPath: `/${urlPath}/`,
@@ -207,7 +217,7 @@ module.exports = function (eleventyConfig) {
 
     try {
       return await Image(srcPath, {
-        widths: widths,
+        widths: widthsFor(srcPath, widths),
         formats: ["webp"],
         outputDir: outputDir,
         urlPath: `/${urlPath}/`,

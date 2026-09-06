@@ -55,42 +55,67 @@
   // a wide screen is limited by height, not width - asking for the full
   // viewport width would fetch far more than gets used. Density is capped at
   // 2: a third pixel of detail is not worth another megabyte on a phone.
+  // From the width/height attributes rather than naturalWidth, which is 0
+  // until the image loads - and the photos further down the page are lazy, so
+  // arrowing to one asks about a picture the browser has never fetched.
+  function aspectRatio(img) {
+    const w = Number(img.getAttribute("width")) || img.naturalWidth;
+    const h = Number(img.getAttribute("height")) || img.naturalHeight;
+    return w && h ? w / h : 1;
+  }
+
   function targetWidth(img) {
     const density = Math.min(window.devicePixelRatio || 1, 2);
     const padding = Math.min(window.innerWidth, window.innerHeight) * 0.1;
     const availableWidth = window.innerWidth - padding;
     // Leaves room for the caption under the photo.
     const availableHeight = window.innerHeight - padding - 40;
-    const ratio =
-      img.naturalWidth && img.naturalHeight ? img.naturalWidth / img.naturalHeight : 1;
 
-    return Math.ceil(Math.min(availableWidth, availableHeight * ratio) * density);
+    return Math.ceil(
+      Math.min(availableWidth, availableHeight * aspectRatio(img)) * density
+    );
   }
 
   // The smallest rendition that still covers the space, rather than the widest
   // one there is. Returns null when what the grid already loaded is big enough,
   // which on a phone is usually the case - there is then nothing to fetch.
-  function upgradeFor(img) {
+  function bestSource(img) {
     const list = candidates(img);
-    if (!list.length) return null;
+    if (!list.length) return img.currentSrc || img.src;
 
-    const showing = img.currentSrc || img.src;
     const target = targetWidth(img);
-
-    let showingWidth = 0;
-    let wanted = list[list.length - 1];
     for (let i = 0; i < list.length; i++) {
-      if (list[i].url === showing) showingWidth = list[i].width;
+      if (list[i].width >= target) return list[i].url;
     }
-    for (let i = 0; i < list.length; i++) {
-      if (list[i].width >= target) {
-        wanted = list[i];
-        break;
-      }
-    }
+    return list[list.length - 1].url;
+  }
 
-    if (showingWidth >= target || wanted.width <= showingWidth) return null;
-    return wanted.url;
+  // What this photo can put on screen right now, with no network. Photos below
+  // the fold are lazy, so most of the roll has never been fetched - and an
+  // unloaded <img> still reports a src, which is why this asks whether it
+  // actually decoded rather than trusting the attribute.
+  function loadedSource(img) {
+    return img.complete && img.naturalWidth > 0 ? img.currentSrc || img.src : null;
+  }
+
+  const warmed = {};
+
+  function prefetch(url) {
+    if (!url || warmed[url]) return;
+    warmed[url] = true;
+    const image = new Image();
+    image.src = url;
+  }
+
+  // Arrowing is nearly always onwards, so having the neighbours in cache is
+  // what makes the next step feel immediate.
+  function warmNeighbours() {
+    const count = triggers.length;
+    [current + 1, current - 1].forEach(function (index) {
+      const trigger = triggers[((index % count) + count) % count];
+      const img = trigger && trigger.querySelector("img");
+      if (img) prefetch(bestSource(img));
+    });
   }
 
   // The tint can come out light or dark depending on the photo, so pick the
@@ -112,35 +137,54 @@
     const img = trigger.querySelector("img");
     if (!img) return;
 
-    const tint = trigger.dataset.tint || "rgb(28, 28, 26)";
-    dialog.style.setProperty("--photo-tint", tint);
-    dialog.style.setProperty("--photo-ink", inkFor(tint));
-
-    imgEl.alt = img.alt || "";
-    captionEl.textContent = trigger.dataset.caption || "";
-
-    // Show the rendition the grid already has first. It is decoded and in
-    // cache, so the photo is on screen the moment you tap, instead of after a
-    // download. Then quietly upgrade if a larger one is actually needed.
     const token = ++loadToken;
-    imgEl.src = img.currentSrc || img.src;
+    const tint = trigger.dataset.tint || "rgb(28, 28, 26)";
+    const caption = trigger.dataset.caption || "";
+    const alt = img.alt || "";
 
-    const wanted = upgradeFor(img);
-    if (!wanted) return;
-
-    const upgrade = new Image();
-    const swap = function () {
-      // Don't stomp on a photo that has since been arrowed to, or closed.
-      if (token !== loadToken || !dialog.open) return;
-      imgEl.src = wanted;
+    // Photo, caption and backdrop always change together. Setting the tint on
+    // its own is what made the colour shift before the picture arrived.
+    const paint = function (src) {
+      dialog.style.setProperty("--photo-tint", tint);
+      dialog.style.setProperty("--photo-ink", inkFor(tint));
+      imgEl.src = src;
+      imgEl.alt = alt;
+      captionEl.textContent = caption;
     };
-    upgrade.src = wanted;
-    // decode() so the swap happens on a frame that can paint it, not mid-parse.
-    if (typeof upgrade.decode === "function") {
-      upgrade.decode().then(swap, swap);
-    } else {
-      upgrade.onload = swap;
+
+    const ready = loadedSource(img);
+    const wanted = bestSource(img);
+
+    if (ready) {
+      // Already decoded downstairs in the grid: on screen this frame.
+      paint(ready);
+      warmNeighbours();
+      if (wanted === ready) return;
+
+      const upgrade = new Image();
+      const swap = function () {
+        // Don't stomp on a photo that has since been arrowed to, or closed.
+        if (token !== loadToken || !dialog.open) return;
+        imgEl.src = wanted;
+      };
+      upgrade.src = wanted;
+      if (typeof upgrade.decode === "function") upgrade.decode().then(swap, swap);
+      else upgrade.onload = swap;
+      return;
     }
+
+    // Nothing to show yet. Hold the photo you are already looking at, tint and
+    // all, rather than blanking the frame or recolouring around an empty one.
+    const pending = new Image();
+    const reveal = function () {
+      if (token !== loadToken || !dialog.open) return;
+      paint(wanted);
+      warmNeighbours();
+    };
+    pending.src = wanted;
+    // decode() so the swap lands on a frame that can paint it, not mid-parse.
+    if (typeof pending.decode === "function") pending.decode().then(reveal, reveal);
+    else pending.onload = reveal;
   }
 
   grid.addEventListener("click", function (event) {
