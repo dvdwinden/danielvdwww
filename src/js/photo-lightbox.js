@@ -22,24 +22,69 @@
   // decides if the photo behind it should be left focused on the way out.
   let usedKeyboard = false;
 
-  // eleventy-img writes srcset ascending, but pick the widest explicitly
-  // rather than relying on the order.
-  function widestSource(img) {
-    const srcset = img.getAttribute("srcset");
-    const fallback = img.currentSrc || img.src;
-    if (!srcset) return fallback;
+  // Guards against a slow load landing after you've arrowed on to another
+  // photo, or closed.
+  let loadToken = 0;
 
-    let best = null;
-    let bestWidth = -1;
-    srcset.split(",").forEach(function (candidate) {
-      const parts = candidate.trim().split(/\s+/);
-      const width = parseInt(parts[1] || "0", 10);
-      if (parts[0] && width > bestWidth) {
-        bestWidth = width;
-        best = parts[0];
+  function candidates(img) {
+    const srcset = img.getAttribute("srcset");
+    if (!srcset) return [];
+
+    return srcset
+      .split(",")
+      .map(function (candidate) {
+        const parts = candidate.trim().split(/\s+/);
+        return { url: parts[0], width: parseInt(parts[1] || "0", 10) };
+      })
+      .filter(function (candidate) {
+        return candidate.url && candidate.width;
+      })
+      .sort(function (a, b) {
+        return a.width - b.width;
+      });
+  }
+
+  // How wide the photo will actually be drawn, in device pixels. The lightbox
+  // fits the photo inside the viewport with 5vmin of padding, so a portrait on
+  // a wide screen is limited by height, not width - asking for the full
+  // viewport width would fetch far more than gets used. Density is capped at
+  // 2: a third pixel of detail is not worth another megabyte on a phone.
+  function targetWidth(img) {
+    const density = Math.min(window.devicePixelRatio || 1, 2);
+    const padding = Math.min(window.innerWidth, window.innerHeight) * 0.1;
+    const availableWidth = window.innerWidth - padding;
+    // Leaves room for the caption under the photo.
+    const availableHeight = window.innerHeight - padding - 40;
+    const ratio =
+      img.naturalWidth && img.naturalHeight ? img.naturalWidth / img.naturalHeight : 1;
+
+    return Math.ceil(Math.min(availableWidth, availableHeight * ratio) * density);
+  }
+
+  // The smallest rendition that still covers the space, rather than the widest
+  // one there is. Returns null when what the grid already loaded is big enough,
+  // which on a phone is usually the case - there is then nothing to fetch.
+  function upgradeFor(img) {
+    const list = candidates(img);
+    if (!list.length) return null;
+
+    const showing = img.currentSrc || img.src;
+    const target = targetWidth(img);
+
+    let showingWidth = 0;
+    let wanted = list[list.length - 1];
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].url === showing) showingWidth = list[i].width;
+    }
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].width >= target) {
+        wanted = list[i];
+        break;
       }
-    });
-    return best || fallback;
+    }
+
+    if (showingWidth >= target || wanted.width <= showingWidth) return null;
+    return wanted.url;
   }
 
   // The tint can come out light or dark depending on the photo, so pick the
@@ -65,9 +110,31 @@
     dialog.style.setProperty("--photo-tint", tint);
     dialog.style.setProperty("--photo-ink", inkFor(tint));
 
-    imgEl.src = widestSource(img);
     imgEl.alt = img.alt || "";
     captionEl.textContent = trigger.dataset.caption || "";
+
+    // Show the rendition the grid already has first. It is decoded and in
+    // cache, so the photo is on screen the moment you tap, instead of after a
+    // download. Then quietly upgrade if a larger one is actually needed.
+    const token = ++loadToken;
+    imgEl.src = img.currentSrc || img.src;
+
+    const wanted = upgradeFor(img);
+    if (!wanted) return;
+
+    const upgrade = new Image();
+    const swap = function () {
+      // Don't stomp on a photo that has since been arrowed to, or closed.
+      if (token !== loadToken || !dialog.open) return;
+      imgEl.src = wanted;
+    };
+    upgrade.src = wanted;
+    // decode() so the swap happens on a frame that can paint it, not mid-parse.
+    if (typeof upgrade.decode === "function") {
+      upgrade.decode().then(swap, swap);
+    } else {
+      upgrade.onload = swap;
+    }
   }
 
   grid.addEventListener("click", function (event) {
