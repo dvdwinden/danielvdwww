@@ -57,6 +57,36 @@ bodyClass: bg-amber
     data-gender="female"
 >
     <div class="book-cover">
+        {% image "src/assets/library/dorothy-tse-city-like-water.jpg", "City
+        Like Water cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+        <a
+            href="https://app.thestorygraph.com/books/278addec-b6c4-4b27-aaf7-207976b8067d"
+            class="font-serif text-lg font-medium"
+            target="_blank"
+            rel="external"
+            title="City Like Water by Dorothy Tse"
+            >City Like Water</a
+        >
+        <span
+            class="font-serif text-md text-black/70 dark:text-white/60 italic"
+            >Dorothy Tse</span
+        >
+    </div>
+    <span
+        class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+    >
+        SEP
+    </span>
+</li>
+<li
+    class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+    data-genre="fiction"
+    data-lang="en"
+    data-gender="female"
+>
+    <div class="book-cover">
         {% image "src/assets/library/valeria-luiselli-beginning-middle-end.jpg",
         "Beginning Middle End cover", "120px" %}
     </div>
@@ -9066,17 +9096,17 @@ bodyClass: bg-amber
     class="mt-12 font-sans text-sm leading-relaxed tracking-wide text-black/50 dark:text-white/50"
 >
     This page was last updated on {{ page.inputPath | lastModified }}. As of
-    today, this library holds <span id="book-count">282</span> books:
-    <span id="count-fiction">135</span> fiction,
+    today, this library holds <span id="book-count">283</span> books:
+    <span id="count-fiction">136</span> fiction,
     <span id="count-non-fiction">140</span> non-fiction, and
     <span id="count-poetry">7</span> poetry. They were written by
-    <span id="count-writers">229</span> different writers.
-    <span id="count-female">110</span> are women,
+    <span id="count-writers">230</span> different writers.
+    <span id="count-female">111</span> are women,
     <span id="count-male">118</span> are men, and
     <span id="count-nonbinary">1</span>
     <span id="nonbinary-verb">is</span> non-binary. I read
     <span id="count-nl">63</span> of these books in Dutch and
-    <span id="count-en">219</span> in English.
+    <span id="count-en">220</span> in English.
 </p>
 
 <script src="/js/library.js"></script>
