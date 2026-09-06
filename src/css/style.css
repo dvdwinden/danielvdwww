@@ -646,6 +646,14 @@ span.testimonial {
     opacity: 1;
 }
 
+/* On a touchscreen the close button is the only way out - tapping the photo
+   steps forward instead - so it needs to be easier to see. */
+@media (pointer: coarse) {
+    .lightbox-close {
+        opacity: 0.85;
+    }
+}
+
 /* Captions sit back out of the way and come up to the usual figcaption
    weight when you're looking at the photo. Only where hovering is possible:
    on touch there is no hover to reveal them, so they stay legible. */

@@ -26,6 +26,12 @@
   // photo, or closed.
   let loadToken = 0;
 
+  // Checked at the moment of the tap rather than cached, so a device that can
+  // do both answers to whichever is in use.
+  function isTouch() {
+    return !!window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+  }
+
   function candidates(img) {
     const srcset = img.getAttribute("srcset");
     if (!srcset) return [];
@@ -177,15 +183,29 @@
     show(next);
   });
 
-  // Clicking beside the photo steps through the roll; clicking the photo
-  // itself, or anywhere else, closes.
+  // With a mouse: click beside the photo to step through the roll, click the
+  // photo to close. On a touchscreen the photo fills the width - the strips
+  // either side are only the padding, far too thin to aim at - so there the
+  // photo itself steps forward and the close button is the way out.
   dialog.addEventListener("click", function (event) {
+    if (event.target.closest(".lightbox-close")) {
+      dialog.close();
+      return;
+    }
+
     const zone = event.target.closest(".lightbox-nav");
     if (zone) {
       usedKeyboard = false;
       show(current + (zone.classList.contains("lightbox-prev") ? -1 : 1));
       return;
     }
+
+    if (event.target === imgEl && isTouch()) {
+      usedKeyboard = false;
+      show(current + 1);
+      return;
+    }
+
     dialog.close();
   });
 
