@@ -22,6 +22,14 @@ const DEFAULT_WIDTHS = [800, 1200, 1800];
 const BREAKOUT_WIDTHS = [800, 1200, 1800, 2800];
 const BREAKOUT_SIZES = "(min-width: 1024px) min(1400px, calc(100vw - 544px)), calc(100vw - 48px)";
 
+// Bookmark card thumbnails sit in a fixed square slot (7rem, 5rem on a narrow
+// screen — see the BOOKMARK CARDS section of style.css), so a 1x/2x pair is
+// all they can use. The standard widths start at 800px, seven times what the
+// slot can show. The widths round the slot up a little so a 2x display is
+// covered with room to spare.
+const BOOKMARK_IMAGE_WIDTHS = [128, 256];
+const BOOKMARK_IMAGE_SIZES = "112px";
+
 // WebP quality. 70 is plenty for screenshots, book covers and other flat
 // artwork, which is nearly everything on the site. It is too low for film
 // scans: grain is high-frequency noise and it is the first thing a lossy
@@ -146,7 +154,28 @@ module.exports = function (eleventyConfig) {
       .replace(/<div class="strava-embed-placeholder"[^>]*data-embed-id="([^"]+)"[^>]*><\/div>\s*<script[^>]*><\/script>/g,
         '<p><a href="https://www.strava.com/activities/$1">View activity on Strava</a></p>')
       // Remove any other script tags as a safety measure
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+      // Flatten bookmark cards. A card is a layout held together by the site's
+      // CSS: in a feed reader its spans are inline, so title, blurb and domain
+      // run into one another. The thumbnail has to go too — a feed embeds
+      // templateContent, which is the HTML before the optimizeImages transform
+      // has run, so its src still points at an original that never gets copied
+      // to _site. What survives is the part that carries the meaning: a titled
+      // link with the blurb under it.
+      // The optional <p> either side is markdown-it's, which wraps the card as
+      // a block; swallowing it keeps the replacement from nesting paragraphs.
+      .replace(/(?:<p>\s*)?<a class="bookmark-card" href="([^"]*)"[^>]*>([\s\S]*?)<\/a>(?:\s*<\/p>)?/g,
+        (card, href, inner) => {
+          const pick = name => {
+            const m = inner.match(new RegExp(`<span class="bookmark-${name}">([\\s\\S]*?)</span>`));
+            return m ? m[1] : "";
+          };
+          const title = pick("title");
+          const description = pick("description");
+          return `<p><a href="${href}">${title}</a>` +
+            (description ? `<br />${description}` : ``) +
+            `</p>`;
+        });
   });
 
   // Process an image and return metadata
@@ -523,6 +552,37 @@ module.exports = function (eleventyConfig) {
       if (/class=["'][^"']*bookmark-icon/.test(imgTag)) continue;
 
       try {
+        // Bookmark card thumbnails are sized by the card, not by the prose
+        // column, so they take their own widths rather than the defaults
+        // below. Checked before the breakout classification: a card sitting
+        // outside a max-w-lg column would otherwise be read as a wide image.
+        if (/class=["'][^"']*bookmark-image/.test(imgTag)) {
+          const { srcPath: thumbSrcPath } = normalizeSrcPath(src);
+          const thumbFilePath = await findFileWithExtension(thumbSrcPath);
+          if (thumbFilePath) {
+            // Clamped to the two widths: widthsFor() adds a full-size variant
+            // for the high-quality paths (film scans), and a 1326w candidate in
+            // a 128px slot is exactly what a high-DPR browser would pick.
+            const metadata = filterMetadataByWidths(
+              await processImageWidths(thumbFilePath, BOOKMARK_IMAGE_WIDTHS),
+              BOOKMARK_IMAGE_WIDTHS
+            );
+            if (metadata && hasValidMetadata(metadata)) {
+              const optimizedImg = Image.generateHTML(metadata, {
+                alt,
+                sizes: BOOKMARK_IMAGE_SIZES,
+                loading: "lazy",
+                decoding: "async",
+              });
+              // Wrapped in <picture> so it reads as already-processed and is
+              // not re-optimized back to the narrow-column defaults.
+              content = replaceImgTag(content, imgTag, `<picture>${optimizedImg}</picture>`);
+              continue;
+            }
+          }
+          console.warn(`Could not find bookmark card image: ${src}`);
+        }
+
         // Wide "breakout" images escape the narrow prose column and span the
         // max-w-[1400px] container, so they need a higher-resolution variant
         // (up to 2800px) and an accurate sizes attribute to stay sharp on
@@ -791,6 +851,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon.png");
 
+  // Bookmark card icons. Marks served at 16px, and the optimizeImages
+  // transform deliberately leaves them alone, so the original has to be
+  // copied across — nothing else puts a src/assets file in _site.
+  eleventyConfig.addPassthroughCopy("src/assets/bookmarks/icons");
+
   // Copy hero images referenced in CSS
   eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square.webp");
   eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square@2x.webp");
@@ -853,6 +918,13 @@ module.exports = function (eleventyConfig) {
   //   site         Optional meta label. Defaults to the URL's host, or
   //                "daniel.pizza" for a root-relative URL. Pass site=""
   //                to drop the label.
+  //   image        Optional thumbnail, as a path under /assets/ (or the
+  //                src/assets/… form the image shortcodes take). Rendered in
+  //                a fixed square slot on the trailing edge of the card, and
+  //                optimized like any other content image.
+  //   imageAlt     Optional alt text for that thumbnail. Left empty by
+  //                default, which is right when the image only illustrates a
+  //                title the card already spells out.
   //   icon         Optional. A path under /assets/ renders as an <img>; a
   //                path relative to _includes ending in .svg is inlined so
   //                it can take its colour from the row (e.g.
@@ -944,6 +1016,16 @@ module.exports = function (eleventyConfig) {
     const description = collapse(opts.description);
     const label = collapse(opts.label) || title;
 
+    // Authors write image paths either way round; the optimizeImages transform
+    // wants the served path.
+    const image = collapse(opts.image).replace(/^src\//, "/");
+    const imageMarkup = image
+      ? `<span class="bookmark-media">` +
+        `<img class="bookmark-image" src="${escapeHtml(image)}" ` +
+        `alt="${escapeHtml(collapse(opts.imageAlt))}" loading="lazy" />` +
+        `</span>`
+      : ``;
+
     return (
       `<a class="bookmark-card" href="${escapeHtml(url)}" title="${escapeHtml(label)}"` +
       (isExternal ? ` target="_blank" rel="external"` : ``) +
@@ -955,7 +1037,7 @@ module.exports = function (eleventyConfig) {
       (site || iconMarkup
         ? `<span class="bookmark-meta">${iconMarkup}${escapeHtml(site)}</span>`
         : ``) +
-      `</span></a>`
+      `</span>${imageMarkup}</a>`
     );
   });
 

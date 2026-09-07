@@ -174,11 +174,13 @@ Use the `bookmark` shortcode to render a link as a card — title, blurb, and a 
 | `title` | Required. The card's headline. |
 | `description` | Optional blurb under the title. |
 | `site` | Meta label. Defaults to the URL's host, or `daniel.pizza` for a root-relative URL. Pass `site=""` to drop it. |
+| `image` | Optional thumbnail on the trailing edge of the card, as a path under `/assets/` (or the `src/assets/…` form). Optimized to a 1x/2x pair for its fixed square slot. |
+| `imageAlt` | Alt text for that thumbnail. Empty by default. |
 | `icon` | A path under `/assets/` renders as an `<img>`; a path relative to `_includes` ending in `.svg` is inlined so it takes its colour from the row (e.g. `icons/logos/enode-mark.svg`). Defaults to the site favicon for internal links, and to no icon elsewhere. Pass `icon="none"` to drop it. |
 | `label` | The anchor's `title` attribute. Defaults to `title`. |
 | `external` | Overrides the auto-detected `target="_blank" rel="external"`. |
 
-Descriptions can be soft-wrapped across lines — whitespace is collapsed so the card stays a single HTML block and markdown-it doesn't split it into paragraphs. Text is escaped, so ampersands and quotes can be written as-is. The `optimizeImages` transform skips any `<img class="bookmark-icon">`, so icons are served at their natural size rather than swapped for a `<picture>`.
+Descriptions can be soft-wrapped across lines — whitespace is collapsed so the card stays a single HTML block and markdown-it doesn't split it into paragraphs. Text is escaped, so ampersands and quotes can be written as-is. The `optimizeImages` transform skips any `<img class="bookmark-icon">`, so icons are served at their natural size rather than swapped for a `<picture>`. Card thumbnails (`<img class="bookmark-image">`) take the opposite route: they're given their own 128/256px widths rather than the narrow-column defaults, whose smallest width is 800px.
 
 Styles live in the `BOOKMARK CARDS` section of `src/css/style.css`.
 
