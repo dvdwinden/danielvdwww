@@ -1636,3 +1636,118 @@ ul.list-none {
 #book-count:not(.js-loaded) {
     visibility: hidden;
 }
+
+/* ==========================================================================
+   BOOKMARK CARDS
+
+   A link rendered as a card: title, blurb, and a favicon-plus-domain row.
+   Written by the `bookmark` shortcode in .eleventy.js.
+   ========================================================================== */
+
+.prose a.bookmark-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0;
+    margin: 0.5rem 0;
+    border: 1px solid theme("colors.gray.200");
+    border-radius: 0.5rem;
+    background: theme("colors.white");
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition:
+        border-color 0.2s,
+        transform 0.2s;
+}
+
+.dark .prose a.bookmark-card {
+    border-color: theme("colors.gray.700");
+    background: rgb(17 24 39 / 0.2);
+}
+
+.prose a.bookmark-card:hover {
+    border-color: theme("colors.hover");
+    text-decoration: none;
+    color: inherit;
+}
+
+.prose a.bookmark-card span {
+    text-decoration: none;
+}
+
+.dark .prose a.bookmark-card:hover {
+    border-color: theme("colors.hover-dark");
+}
+
+/* `.dark .prose a` matches the card at equal specificity, so restate the
+   intent with `.dark` in front or the whole card gets underlined. */
+.dark .prose a.bookmark-card,
+.dark .prose a.bookmark-card:hover {
+    text-decoration: none;
+}
+
+.bookmark-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 1rem 1.25rem;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.bookmark-title {
+    font-family: theme("fontFamily.sans");
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: theme("colors.black");
+}
+
+.dark .bookmark-title {
+    color: theme("colors.white");
+}
+
+.bookmark-description {
+    font-family: theme("fontFamily.sans");
+    font-size: 1rem;
+    line-height: 1.35;
+    color: rgb(0 0 0 / 0.6);
+}
+
+.dark .bookmark-description {
+    color: rgb(255 255 255 / 0.55);
+}
+
+.bookmark-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.35rem;
+    font-family: theme("fontFamily.sans");
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    color: rgb(0 0 0 / 0.5);
+}
+
+.dark .bookmark-meta {
+    color: rgb(255 255 255 / 0.4);
+}
+
+.prose .bookmark-meta img.bookmark-icon,
+.prose .bookmark-meta svg.bookmark-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    border-radius: 3px;
+    flex: none;
+}
+
+/* An inlined mark takes its colour from the row it sits in, so a favicon
+   carrying its own prefers-color-scheme rule can't follow the OS instead of
+   the page's theme. */
+.prose .bookmark-meta svg.bookmark-icon {
+    border-radius: 0;
+    fill: currentColor;
+}

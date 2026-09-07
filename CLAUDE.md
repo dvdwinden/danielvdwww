@@ -155,6 +155,33 @@ Use the `retinaImage` shortcode in Nunjucks templates or Markdown:
 
 The system will automatically find the file even if the extension differs (tries .avif, .webp, .jpg, .jpeg, .png, .JPG, .PNG).
 
+### Bookmark Cards
+
+Use the `bookmark` shortcode to render a link as a card — title, blurb, and a favicon-plus-domain row — instead of an inline anchor. It works in Markdown and Nunjucks, and needs a `.prose` ancestor for its styles (both `base.njk` and `narrow.njk` provide one).
+
+```nunjucks
+{% bookmark
+  url="/journal/trema-ghost-theme/",
+  title="A fresh coat of paint for Trema",
+  description="After over two years of writing a book recommendation per month,
+    it was time to design a new and improved reading experience."
+%}
+```
+
+| Option | Notes |
+| --- | --- |
+| `url` | Required. Root-relative for this site, absolute elsewhere. |
+| `title` | Required. The card's headline. |
+| `description` | Optional blurb under the title. |
+| `site` | Meta label. Defaults to the URL's host, or `daniel.pizza` for a root-relative URL. Pass `site=""` to drop it. |
+| `icon` | A path under `/assets/` renders as an `<img>`; a path relative to `_includes` ending in `.svg` is inlined so it takes its colour from the row (e.g. `icons/logos/enode-mark.svg`). Defaults to the site favicon for internal links, and to no icon elsewhere. Pass `icon="none"` to drop it. |
+| `label` | The anchor's `title` attribute. Defaults to `title`. |
+| `external` | Overrides the auto-detected `target="_blank" rel="external"`. |
+
+Descriptions can be soft-wrapped across lines — whitespace is collapsed so the card stays a single HTML block and markdown-it doesn't split it into paragraphs. Text is escaped, so ampersands and quotes can be written as-is. The `optimizeImages` transform skips any `<img class="bookmark-icon">`, so icons are served at their natural size rather than swapped for a `<picture>`.
+
+Styles live in the `BOOKMARK CARDS` section of `src/css/style.css`.
+
 ### Tag System
 
 Tags are normalized to slugs for URLs (lowercase, hyphens, special chars removed). The `slugify()` function in `.eleventy.js` handles this. Tag pages are automatically generated at `/links/{tag-slug}/` with pagination.
