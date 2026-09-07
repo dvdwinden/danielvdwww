@@ -503,6 +503,11 @@ module.exports = function (eleventyConfig) {
       // Skip favicon files
       if (isFaviconFile(src)) continue;
 
+      // Skip bookmark card icons. They're 16px marks served at their natural
+      // size, and swapping them for a <picture> would drop them out of the
+      // card's own layout rules.
+      if (/class=["'][^"']*bookmark-icon/.test(imgTag)) continue;
+
       try {
         // Wide "breakout" images escape the narrow prose column and span the
         // max-w-[1400px] container, so they need a higher-resolution variant
@@ -802,6 +807,135 @@ module.exports = function (eleventyConfig) {
       // Return the original image tag for non-asset images
       return `<img src="${src}" alt="${alt || ''}" title="${title || ''}" />`;
     }
+  });
+
+
+  // ==========================================================================
+  // BOOKMARK CARD
+  // ==========================================================================
+  //
+  // A link presented as a card rather than an inline anchor: title, blurb and
+  // a favicon-plus-domain row. Used to point at a post, a product or a shop
+  // from inside prose.
+  //
+  //   {% bookmark
+  //     url="/journal/trema-ghost-theme/",
+  //     title="A fresh coat of paint for Trema",
+  //     description="After over two years of writing a book recommendation
+  //       per month, it was time to design a new reading experience."
+  //   %}
+  //
+  // Options:
+  //   url          Required. Root-relative for this site, absolute elsewhere.
+  //   title        Required. The card's headline.
+  //   description  Optional blurb under the title.
+  //   site         Optional meta label. Defaults to the URL's host, or
+  //                "daniel.pizza" for a root-relative URL. Pass site=""
+  //                to drop the label.
+  //   icon         Optional. A path under /assets/ renders as an <img>; a
+  //                path relative to _includes ending in .svg is inlined so
+  //                it can take its colour from the row (e.g.
+  //                "icons/logos/enode-mark.svg"). Defaults to this site's
+  //                favicon for a root-relative URL, and to no icon
+  //                elsewhere. Pass icon="none" to drop it entirely.
+  //   label        Optional title attribute on the anchor. Defaults to title.
+  //   external     Optional override for the auto-detected target/rel.
+  const SITE_HOST = "daniel.pizza";
+
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  // Collapses the soft-wrapped descriptions above into a single line, so the
+  // card stays one HTML block and markdown-it doesn't split it into <p>s.
+  function collapse(value) {
+    return String(value == null ? "" : value).replace(/\s+/g, " ").trim();
+  }
+
+  eleventyConfig.addShortcode("bookmark", function (options = {}) {
+    const opts = options || {};
+    const url = collapse(opts.url);
+    const title = collapse(opts.title);
+
+    if (!url || !title) {
+      throw new Error(
+        `The bookmark shortcode needs both a url and a title (got url="${url}", title="${title}").`
+      );
+    }
+
+    // Match on the host, not the whole string: an external URL can carry
+    // "?ref=daniel.pizza" and is still external.
+    let host = "";
+    if (!url.startsWith("/")) {
+      try {
+        host = new URL(url).host.replace(/^www\./, "");
+      } catch (e) {
+        host = "";
+      }
+    }
+    const isInternal = url.startsWith("/") || host === SITE_HOST;
+    const isExternal =
+      opts.external === undefined ? !isInternal : Boolean(opts.external);
+
+    // An explicit site="" drops the label; omitting it falls back to the host.
+    const site =
+      opts.site !== undefined
+        ? collapse(opts.site)
+        : url.startsWith("/")
+          ? SITE_HOST
+          : host;
+
+    let icon = collapse(opts.icon);
+    if (!icon && url.startsWith("/")) icon = "/assets/favicon-32x32.png";
+
+    let iconMarkup = "";
+    if (icon && icon !== "none") {
+      if (icon.endsWith(".svg") && !icon.startsWith("/")) {
+        // Inlined from _includes so `fill: currentColor` applies. Icons that
+        // carry their own prefers-color-scheme rules would otherwise follow
+        // the OS rather than the page's theme.
+        const iconPath = path.join("src", "_includes", icon);
+        try {
+          iconMarkup = collapse(fs.readFileSync(iconPath, "utf8"));
+        } catch (e) {
+          throw new Error(`The bookmark shortcode couldn't read ${iconPath}.`);
+        }
+        const classMatch = iconMarkup.match(/^<svg[^>]*\sclass="([^"]*)"/);
+        if (!classMatch) {
+          iconMarkup = iconMarkup.replace("<svg", '<svg class="bookmark-icon"');
+        } else if (!/\bbookmark-icon\b/.test(classMatch[1])) {
+          iconMarkup = iconMarkup.replace(
+            classMatch[0],
+            classMatch[0].replace(classMatch[1], `${classMatch[1]} bookmark-icon`)
+          );
+        }
+      } else {
+        iconMarkup =
+          `<img class="bookmark-icon" src="${escapeHtml(icon)}" alt="" ` +
+          `width="16" height="16" loading="lazy" />`;
+      }
+    }
+
+    const description = collapse(opts.description);
+    const label = collapse(opts.label) || title;
+
+    return (
+      `<a class="bookmark-card" href="${escapeHtml(url)}" title="${escapeHtml(label)}"` +
+      (isExternal ? ` target="_blank" rel="external"` : ``) +
+      `><span class="bookmark-content">` +
+      `<span class="bookmark-title">${escapeHtml(title)}</span>` +
+      (description
+        ? `<span class="bookmark-description">${escapeHtml(description)}</span>`
+        : ``) +
+      (site || iconMarkup
+        ? `<span class="bookmark-meta">${iconMarkup}${escapeHtml(site)}</span>`
+        : ``) +
+      `</span></a>`
+    );
   });
 
   // Add a function to help with debugging image paths
