@@ -966,111 +966,6 @@ ul.list-none {
 }
 
 /* ==========================================================================
-   BOOKMARK CARDS
-   ========================================================================== */
-
-.prose a.bookmark-card {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 0;
-    margin: 0.5rem 0;
-    border: 1px solid theme("colors.gray.200");
-    border-radius: 0.5rem;
-    background: theme("colors.white");
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition:
-        border-color 0.2s,
-        transform 0.2s;
-}
-
-.dark .prose a.bookmark-card {
-    border-color: theme("colors.gray.700");
-    background: rgb(17 24 39 / 0.2);
-}
-
-.prose a.bookmark-card:hover {
-    border-color: theme("colors.hover");
-    text-decoration: none;
-    color: inherit;
-}
-
-.prose a.bookmark-card span {
-    text-decoration: none;
-}
-
-.dark .prose a.bookmark-card:hover {
-    border-color: theme("colors.hover-dark");
-}
-
-.bookmark-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.35rem;
-    padding: 1rem 1.25rem;
-    min-width: 0;
-    flex: 1 1 auto;
-}
-
-.bookmark-title {
-    font-family: theme("fontFamily.sans");
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.25;
-    color: theme("colors.black");
-}
-
-.dark .bookmark-title {
-    color: theme("colors.white");
-}
-
-.bookmark-description {
-    font-family: theme("fontFamily.sans");
-    font-size: 1rem;
-    line-height: 1.35;
-    color: rgb(0 0 0 / 0.6);
-}
-
-.dark .bookmark-description {
-    color: rgb(255 255 255 / 0.55);
-}
-
-.bookmark-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.35rem;
-    font-family: theme("fontFamily.sans");
-    font-size: 0.875rem;
-    letter-spacing: 0.025em;
-    color: rgb(0 0 0 / 0.5);
-}
-
-.dark .bookmark-meta {
-    color: rgb(255 255 255 / 0.4);
-}
-
-.prose .bookmark-meta img.bookmark-icon,
-.prose .bookmark-meta svg.bookmark-icon {
-    width: 16px;
-    height: 16px;
-    margin: 0;
-    border-radius: 3px;
-    flex: none;
-}
-
-/* Enode's own favicon carries a prefers-color-scheme rule, which follows the
-   OS rather than this page's theme and turned the mark white on a light card.
-   Inlined instead, so it takes its colour from the row it sits in. */
-.prose .bookmark-meta svg.bookmark-icon {
-    border-radius: 0;
-    fill: currentColor;
-}
-
-/* ==========================================================================
    TREMA LIST (latest newsletter entries)
    ========================================================================== */
 
@@ -1467,16 +1362,11 @@ ul.list-none {
     text-underline-offset: 3px;
 }
 
-/* `.dark .prose a` above matches the homepage's bookmark cards, work titles
-   and Trema entries at equal specificity but later in the file, so it would
-   otherwise re-underline them. Restate the intent with `.dark` in front. */
-.dark .prose a.bookmark-card,
-.dark .prose a.bookmark-card:hover,
+/* `.dark .prose a` above matches the homepage's work titles and Trema entries
+   at equal specificity but later in the file, so it would otherwise
+   re-underline them. Restate the intent with `.dark` in front. */
 .dark .prose ul.trema-list li a {
     text-decoration: none;
-}
-
-.dark .prose ul.trema-list li a {
     color: inherit;
 }
 

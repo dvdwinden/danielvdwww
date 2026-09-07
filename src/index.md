@@ -33,7 +33,14 @@ At [Enode](https://enode.com?ref=daniel.pizza "Enode"), I design software that e
 
 _Before Enode I designed publishing tools at [Ghost](https://ghost.org?ref=daniel.pizza "Ghost"), and spent nine years at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken & Bæck</a>, a large part as partner and <span class="smallcaps">CDO</span>._
 
-<a class="bookmark-card" href="https://enode.com?ref=daniel.pizza" title="Enode" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">Enode: Orchestrating energy for the next grid</span><span class="bookmark-description">One platform for energy retailers and the teams that trade for them. Connect every asset, coordinate every home, and shape thousands as one.</span><span class="bookmark-meta">{% include "icons/logos/enode-mark.svg" %}enode.com</span></span></a>
+{% bookmark
+  url="https://enode.com?ref=daniel.pizza",
+  title="Enode: Orchestrating energy for the next grid",
+  description="One platform for energy retailers and the teams that trade for them.
+    Connect every asset, coordinate every home, and shape thousands as one.",
+  icon="icons/logos/enode-mark.svg",
+  label="Enode"
+%}
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -72,7 +79,13 @@ Outside of my day job I write [Trema](https://www.trema.website?ref=daniel.pizza
 
 <p class="trema-more"><a href="/newsletter" title="Every entry from Trema">Read all {{ collections.newsletter.length }}</a></p>
 
-<a class="bookmark-card" href="/journal/trema-ghost-theme/" title="A fresh coat of paint for Trema"><span class="bookmark-content"><span class="bookmark-title">A fresh coat of paint for Trema, my publication about the books I loved reading</span><span class="bookmark-description">After over two years of writing a book recommendation per month, it was time to design a new and improved reading experience.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/favicon-32x32.png" alt="" width="16" height="16" loading="lazy" />daniel.pizza</span></span></a>
+{% bookmark
+  url="/journal/trema-ghost-theme/",
+  title="A fresh coat of paint for Trema, my publication about the books I loved reading",
+  description="After over two years of writing a book recommendation per month,
+    it was time to design a new and improved reading experience.",
+  label="A fresh coat of paint for Trema"
+%}
 
 ---
 
@@ -86,7 +99,13 @@ Each launch was accompanied by live readings, each issue printed in a limited ru
   <picture>{% retinaImage "src/assets/work/transcript-scribe.png", "TRANSCRIPT Magazine", 512 %}</picture>
 </figure>
 
-<a class="bookmark-card" href="https://transcriptmag.store?ref=daniel.pizza" title="TRANSCRIPT Magazine" target="_blank" rel="external"><span class="bookmark-content"><span class="bookmark-title">TRANSCRIPT Magazine</span><span class="bookmark-description">A seasonal literary magazine of essays, short stories and poetry, printed in a limited run. Four issues, 2023–2025.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/icons/transcript-favicon.png" alt="" width="16" height="16" loading="lazy" />transcriptmag.store</span></span></a>
+{% bookmark
+  url="https://transcriptmag.store?ref=daniel.pizza",
+  title="TRANSCRIPT Magazine",
+  description="A seasonal literary magazine of essays, short stories and poetry,
+    printed in a limited run. Four issues, 2023–2025.",
+  icon="/assets/icons/transcript-favicon.png"
+%}
 
 ---
 
@@ -111,7 +130,12 @@ In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings 
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
 
-<a class="bookmark-card" href="/journal/nogood-book/" title="Writing the NoGood book"><span class="bookmark-content"><span class="bookmark-title">Writing the NoGood book</span><span class="bookmark-description">A gentle introduction to my friend Thomas’s moniker, NoGood—an exercise in restraint, written through hours of conversation. The book is out now.</span><span class="bookmark-meta"><img class="bookmark-icon" src="/assets/favicon-32x32.png" alt="" width="16" height="16" loading="lazy" />daniel.pizza</span></span></a>
+{% bookmark
+  url="/journal/nogood-book/",
+  title="Writing the NoGood book",
+  description="A gentle introduction to my friend Thomas’s moniker, NoGood—an exercise
+    in restraint, written through hours of conversation. The book is out now."
+%}
 
 <section class="resume">
   <h2 class="work-title">Resumé</h2>
