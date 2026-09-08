@@ -1816,11 +1816,17 @@ ul.list-none {
 .webmentions {
     margin-top: 4rem;
     padding-top: 2rem;
-    border-top: 1px solid theme("colors.gray.200");
+    /* Ink at low alpha, not a fixed grey. This rule sits directly on the page
+       ground, which is a different colour on every post (bodyClass: bg-stone,
+       bg-green, bg-cream…) and is warm and light in all six cases — close
+       enough to gray.200 that a fixed grey is invisible on the lot of them.
+       Alpha darkens whatever it happens to be over. The bookmark cards can use
+       a fixed grey because they paint themselves white first; this can't. */
+    border-top: 1px solid rgb(0 0 0 / 0.14);
 }
 
 .dark .webmentions {
-    border-top-color: theme("colors.gray.700");
+    border-top-color: rgb(255 255 255 / 0.16);
 }
 
 /* A label rather than a headline. The post's own h1 should stay the loudest
@@ -1885,7 +1891,9 @@ ul.list-none {
     border-radius: 9999px;
     flex: none;
     object-fit: cover;
-    background: theme("colors.gray.100");
+    /* gray.100 (#f3f4f6) is nearer the grounds still, so the disc behind an
+       author's initial barely read at all. */
+    background: rgb(0 0 0 / 0.07);
 }
 
 .dark .webmention-avatar {
@@ -1973,7 +1981,7 @@ ul.list-none {
 .webmention-content {
     margin: 0;
     padding: 0 0 0 1rem;
-    border-left: 2px solid theme("colors.gray.200");
+    border-left: 2px solid rgb(0 0 0 / 0.22);
     font-family: theme("fontFamily.serif");
     font-size: 1.0625rem;
     font-style: normal;
@@ -1985,7 +1993,7 @@ ul.list-none {
 }
 
 .dark .webmention-content {
-    border-left-color: theme("colors.gray.700");
+    border-left-color: rgb(255 255 255 / 0.22);
     color: rgb(255 255 255 / 0.7);
 }
 
