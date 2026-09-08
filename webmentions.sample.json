@@ -1,0 +1,147 @@
+{
+  "_comment": [
+    "A sample of what webmention.io returns, in the exact shape src/_data/webmentions.js",
+    "caches. Copy it over the cache to preview the display without setting up an account:",
+    "",
+    "    mkdir -p .cache && cp webmentions.sample.json .cache/webmentions.json && npm run dev",
+    "",
+    "Leave WEBMENTION_IO_TOKEN unset while doing this, or the real fetch will merge over it.",
+    "The `wm-target` values point at posts that exist on the site; change them to preview",
+    "the display somewhere else. Delete .cache/webmentions.json when you are done.",
+    "",
+    "The last two entries are deliberately hostile — a javascript: author URL and an HTML",
+    "payload in the content — so the sanitising in webmentions.js can be seen working.",
+    "Neither should produce a link or a tag in the built HTML."
+  ],
+  "lastFetched": null,
+  "mentions": [
+    {
+      "wm-id": 1000001,
+      "wm-property": "in-reply-to",
+      "wm-source": "https://example.com/notes/re-building-a-home-on-the-web",
+      "wm-target": "https://www.daniel.pizza/journal/building-home-web/",
+      "wm-received": "2026-03-02T09:14:00+01:00",
+      "published": "2026-03-02T09:12:00+01:00",
+      "url": "https://example.com/notes/re-building-a-home-on-the-web",
+      "author": {
+        "type": "card",
+        "name": "Marijke de Vries",
+        "url": "https://example.com",
+        "photo": "https://webmention.io/avatar/example.com/0000000000000000000000000000000000000000.jpg"
+      },
+      "content": {
+        "text": "This is the part that stuck with me: the site is never finished, and that is the point. I have been treating mine like a product launch for two years and it has meant publishing almost nothing.",
+        "html": "<p>This is the part that stuck with me.</p>"
+      }
+    },
+    {
+      "wm-id": 1000002,
+      "wm-property": "mention-of",
+      "wm-source": "https://another.example/blog/small-web-roundup",
+      "wm-target": "https://www.daniel.pizza/journal/building-home-web/",
+      "wm-received": "2026-03-04T18:40:00+01:00",
+      "published": "2026-03-04T18:00:00+01:00",
+      "url": "https://another.example/blog/small-web-roundup",
+      "name": "Five people quietly rebuilding their corner of the web",
+      "author": {
+        "type": "card",
+        "name": "Tomasz Lewandowski",
+        "url": "https://another.example",
+        "photo": null
+      },
+      "content": {
+        "text": "A roundup of personal sites worth following, including a lovely piece on treating a website as a workshop rather than a portfolio."
+      }
+    },
+    {
+      "wm-id": 1000003,
+      "wm-property": "like-of",
+      "wm-source": "https://bsky.app/profile/someone.bsky.social/post/abc123",
+      "wm-target": "https://www.daniel.pizza/journal/building-home-web/",
+      "wm-received": "2026-03-02T10:02:00+01:00",
+      "url": "https://bsky.app/profile/someone.bsky.social/post/abc123",
+      "author": {
+        "type": "card",
+        "name": "Anna Kowalski",
+        "url": "https://bsky.app/profile/someone.bsky.social",
+        "photo": "https://webmention.io/avatar/bsky.app/1111111111111111111111111111111111111111.jpg"
+      }
+    },
+    {
+      "wm-id": 1000004,
+      "wm-property": "like-of",
+      "wm-source": "https://bsky.app/profile/other.bsky.social/post/def456",
+      "wm-target": "https://www.daniel.pizza/journal/building-home-web/",
+      "wm-received": "2026-03-02T11:20:00+01:00",
+      "url": "https://bsky.app/profile/other.bsky.social/post/def456",
+      "author": {
+        "type": "card",
+        "name": "Sven Bakker",
+        "url": "https://bsky.app/profile/other.bsky.social",
+        "photo": "https://webmention.io/avatar/bsky.app/2222222222222222222222222222222222222222.jpg"
+      }
+    },
+    {
+      "wm-id": 1000005,
+      "wm-property": "repost-of",
+      "wm-source": "https://bsky.app/profile/third.bsky.social/post/ghi789",
+      "wm-target": "https://www.daniel.pizza/journal/building-home-web/",
+      "wm-received": "2026-03-03T08:05:00+01:00",
+      "url": "https://bsky.app/profile/third.bsky.social/post/ghi789",
+      "author": {
+        "type": "card",
+        "name": "Priya Raman",
+        "url": "https://bsky.app/profile/third.bsky.social",
+        "photo": null
+      }
+    },
+    {
+      "wm-id": 1000006,
+      "wm-property": "in-reply-to",
+      "wm-source": "https://hostile.example/post/1",
+      "wm-target": "https://www.daniel.pizza/journal/building-home-web/",
+      "wm-received": "2026-03-05T12:00:00+01:00",
+      "url": "https://hostile.example/post/1",
+      "author": {
+        "type": "card",
+        "name": "Nobody",
+        "url": "javascript:alert(document.domain)",
+        "photo": "http://insecure.example/photo.jpg"
+      },
+      "content": {
+        "text": "Plain enough text, but the author URL is a javascript: URI and the photo is served over http. Neither should survive into the page."
+      }
+    },
+    {
+      "wm-id": 1000007,
+      "wm-property": "in-reply-to",
+      "wm-source": "https://hostile.example/post/2",
+      "wm-target": "https://www.daniel.pizza/journal/building-home-web/",
+      "wm-received": "2026-03-05T12:30:00+01:00",
+      "url": "https://hostile.example/post/2",
+      "author": {
+        "type": "card",
+        "name": "<img src=x onerror=alert(1)>",
+        "url": "https://hostile.example"
+      },
+      "content": {
+        "html": "<p>Markup in the payload: <script>alert('xss')</script> and an &lt;img src=x onerror=alert(1)&gt; for good measure.</p>",
+        "text": "Markup in the payload: <script>alert('xss')</script> and an <img src=x onerror=alert(1)> for good measure."
+      }
+    },
+    {
+      "wm-id": 1000008,
+      "wm-property": "like-of",
+      "wm-source": "https://private.example/note/1",
+      "wm-target": "https://www.daniel.pizza/journal/building-home-web/",
+      "wm-received": "2026-03-05T13:00:00+01:00",
+      "wm-private": true,
+      "url": "https://private.example/note/1",
+      "author": {
+        "type": "card",
+        "name": "Private Sender",
+        "url": "https://private.example"
+      }
+    }
+  ]
+}

@@ -7,6 +7,8 @@
     "name": "Daniël van der Winden",
     "email": "d.vanderwinden@gmail.com",
     "url": "https://www.daniel.pizza"
+  },
+  "webmention": {
+    "domain": "www.daniel.pizza"
   }
 }
-

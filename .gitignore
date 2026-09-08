@@ -40,3 +40,6 @@ src/journal/drafts/
 
 # Documentation files with sensitive info
 POSSE_SETUP.md
+
+# Eleventy data cache (webmention history, see WEBMENTIONS.md)
+.cache/

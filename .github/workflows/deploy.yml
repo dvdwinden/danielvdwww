@@ -116,6 +116,13 @@ jobs:
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          # Read-only token from https://webmention.io/settings. Absent, the
+          # build still succeeds and simply omits the mentions — see
+          # WEBMENTIONS.md. The mention history itself rides along in the
+          # `.cache` directory restored by the "Cache Eleventy build" step
+          # above, so a build that can't reach webmention.io still renders
+          # everything received up to the previous one.
+          WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
         run: |
           # Use incremental build for faster processing
           if [ "${{ steps.changes.outputs.images-changed }}" = "false" ] && [ "${{ steps.cache-eleventy.outputs.cache-hit }}" = "true" ]; then

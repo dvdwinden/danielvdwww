@@ -115,6 +115,8 @@
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden" href="/feed.xml">
+
+    {% include "webmention-head.njk" %}
     {% if env.NODE_ENV == 'production' %}
     <script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>
     {% endif %}
@@ -179,6 +181,12 @@
         <main id="main-content" class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]" role="main">
             <div class="w-full max-w-[1400px]">
                 {{ content | safe }}
+                {# Journal posts open their own prose column inside the
+                   markdown, so this one is aligned to the same measure rather
+                   than inherited. Renders nothing on pages without mentions. #}
+                <div class="w-full max-w-lg ml-auto">
+                    {% include "webmentions.njk" %}
+                </div>
                 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
                     {% include "footer.njk" %}
                 </div>

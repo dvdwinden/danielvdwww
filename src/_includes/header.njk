@@ -1,7 +1,20 @@
 <header class="fixed top-0 left-0 z-50 p-6 flex justify-between items-center w-full pointer-events-none">
   <div class="flex items-center space-x-4">
-      <a href="/" class="pointer-events-auto text-lg font-sans font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors flex items-center">
-          {% if page.url == "/" %}<h1>{% endif %}Daniël van der Winden{% if page.url == "/" %}</h1>{% endif %}
+      {#
+          On the homepage this link doubles as the site's representative h-card:
+          the microformats way of saying "this page is about this person, and
+          this is their name and canonical URL". Other people's sites read it
+          when I link to them, so a webmention from here shows up as my name
+          rather than a bare URL — the same job the author block does for
+          mentions arriving here. It's classes only, so nothing about the
+          header's appearance changes.
+
+          Only on the homepage: a *representative* h-card is one whose u-url
+          matches the page it sits on, which is true of "/" and no other page.
+      #}
+      {% set isHome = page.url == "/" %}
+      <a href="/" class="{% if isHome %}h-card u-url {% endif %}pointer-events-auto text-lg font-sans font-medium text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors flex items-center">
+          {% if isHome %}<h1 class="p-name">{% endif %}Daniël van der Winden{% if isHome %}</h1>{% endif %}
       </a>
   </div>
   {# No theme toggle where the page is dark by design. #}

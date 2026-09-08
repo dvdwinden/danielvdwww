@@ -101,6 +101,8 @@
     
     <!-- RSS Feed -->
     <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden" href="/feed.xml">
+
+    {% include "webmention-head.njk" %}
     {% if env.NODE_ENV == 'production' %}
     <script defer src="https://cloud.umami.is/script.js" data-website-id="5a0a578b-bf79-4578-96ef-373454590774"></script>
     {% endif %}
@@ -194,6 +196,7 @@
                       {% endfor %}
                     </ul>
                     {% endif %}
+                    {% include "webmentions.njk" %}
                     <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
                         {% include "footer.njk" %}
                     </div>

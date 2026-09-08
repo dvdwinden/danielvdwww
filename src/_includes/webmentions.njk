@@ -1,0 +1,127 @@
+{#
+    Webmentions for the current page.
+
+    Renders nothing at all unless this page has actually been mentioned, which
+    is what lets it be dropped into both layouts without gating on page type.
+    Set `showWebmentions: false` in a page's frontmatter to suppress it anyway.
+    (Not `webmentions: false` — that name would shadow the global data below.)
+
+    Nothing here is piped through `| safe`. All of it was written by strangers;
+    src/_data/webmentions.js reduces it to plain text and validated URLs, and
+    Nunjucks' autoescaping is the second half of that. Styles live in the
+    WEBMENTIONS section of src/css/style.css.
+#}
+{% set wm = webmentions.byUrl[page.url] %}
+{% if wm and wm.total and showWebmentions != false %}
+{% set conversation = wm.replies.concat(wm.mentions) %}
+{% set facepile = wm.likes.concat(wm.reposts) %}
+
+<section class="webmentions not-prose" aria-labelledby="webmentions-heading">
+    <h2 id="webmentions-heading" class="webmentions-heading">
+        Elsewhere on the web
+    </h2>
+
+    {% if conversation.length %}
+    <ol class="webmentions-list">
+        {% for mention in conversation %}
+        <li class="webmention">
+            <div class="webmention-byline">
+                {% if mention.author.photo %}
+                <img
+                    class="webmention-avatar"
+                    src="{{ mention.author.photo }}"
+                    alt=""
+                    width="32"
+                    height="32"
+                    loading="lazy"
+                    decoding="async">
+                {% else %}
+                {# A consistent placeholder keeps the byline's baseline steady
+                   whether or not an author has a photo. #}
+                <span class="webmention-avatar webmention-avatar-empty" aria-hidden="true">
+                    {{ mention.author.name | first }}
+                </span>
+                {% endif %}
+
+                <span class="webmention-byline-text">
+                    <span class="webmention-author">
+                        {% if mention.author.url %}
+                        <a href="{{ mention.author.url }}" rel="external nofollow noopener" target="_blank">{{ mention.author.name }}</a>
+                        {% else %}
+                        {{ mention.author.name }}
+                        {% endif %}
+                    </span>
+                    <span class="webmention-meta">
+                        {% if mention.property == 'in-reply-to' %}replied{% else %}mentioned this{% endif %}
+                        {% if mention.published %}
+                        ·
+                        <time datetime="{{ mention.published }}">{{ mention.publishedDisplay }}</time>
+                        {% endif %}
+                    </span>
+                </span>
+            </div>
+
+            {% if mention.title and mention.property != 'in-reply-to' %}
+            <p class="webmention-title">
+                <a href="{{ mention.source }}" rel="external nofollow noopener" target="_blank">{{ mention.title }}</a>
+            </p>
+            {% endif %}
+
+            {% if mention.content %}
+            <blockquote class="webmention-content" cite="{{ mention.source }}">
+                {{ mention.content }}
+            </blockquote>
+            {% endif %}
+
+            {# The source link is the whole point of a webmention: it's the
+               evidence, and it sends the reader to where the reply actually
+               lives rather than keeping a copy of it here. #}
+            <a class="webmention-source" href="{{ mention.source }}" rel="external nofollow noopener" target="_blank">
+                Read in full
+                <span aria-hidden="true">→</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ol>
+    {% endif %}
+
+    {% if facepile.length %}
+    <div class="webmention-facepile">
+        <h3 class="webmention-facepile-label">
+            {{ wm.likes.length }} like{% if wm.likes.length != 1 %}s{% endif %}{% if wm.reposts.length %}
+            · {{ wm.reposts.length }} repost{% if wm.reposts.length != 1 %}s{% endif %}{% endif %}
+        </h3>
+        <ul class="webmention-faces">
+            {% for mention in facepile %}
+            <li>
+                {# The link is labelled rather than relying on the image, whose
+                   alt is empty: a screen reader announcing forty filenames is
+                   worse than announcing forty names. #}
+                <a
+                    href="{{ mention.author.url or mention.source }}"
+                    rel="external nofollow noopener"
+                    target="_blank"
+                    aria-label="{{ mention.author.name }}{% if mention.property == 'like-of' %} liked{% else %} reposted{% endif %} this"
+                    title="{{ mention.author.name }}">
+                    {% if mention.author.photo %}
+                    <img
+                        class="webmention-avatar"
+                        src="{{ mention.author.photo }}"
+                        alt=""
+                        width="32"
+                        height="32"
+                        loading="lazy"
+                        decoding="async">
+                    {% else %}
+                    <span class="webmention-avatar webmention-avatar-empty" aria-hidden="true">
+                        {{ mention.author.name | first }}
+                    </span>
+                    {% endif %}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</section>
+{% endif %}

@@ -97,9 +97,35 @@ Tailwind configuration in `tailwind.config.js`:
 
 `src/_data/` contains JavaScript files that fetch data at build time:
 - `githubContributions.js` - Fetches GitHub activity data
-- `metadata.json` - Site metadata (title, description, URL)
+- `webmentions.js` - Fetches webmentions from webmention.io (see below)
+- `metadata.json` - Site metadata (title, description, URL, webmention domain)
 
 Data is available in templates as global variables (e.g., `{{ githubContributions.contributionsByDate }}`).
+
+### Webmentions
+
+Replies, likes and reposts from other people's sites, shown under a post.
+Full setup and rationale in `WEBMENTIONS.md`; the short version:
+
+- **Receiving**: `webmention-head.njk` advertises a webmention.io endpoint built
+  from `metadata.webmention.domain`. `_data/webmentions.js` fetches from the
+  JF2 API, merges into `.cache/webmentions.json` keyed on `wm-id`, and returns
+  `{ byUrl, total, lastFetched }` grouped by normalised page path.
+- **Displaying**: `webmentions.njk` is included by both layouts and renders
+  nothing unless the current page has mentions, so it needs no per-page gating.
+  `showWebmentions: false` in frontmatter suppresses it.
+- **Sending**: `npm run webmentions:send -- --latest 5` (or a path). Speaks the
+  protocol directly against the local `_site` build; run it after a deploy.
+- **Identity**: `rel="me"` on the footer profile links, plus a representative
+  `h-card` on the homepage via `header.njk`.
+
+Two things to keep in mind when touching this:
+
+- **Mention content is untrusted.** `webmentions.js` reduces it to plain text,
+  rejects any non-`http(s)` URL, and requires `https` author photos. Never add
+  `| safe` to anything in `webmentions.njk`.
+- Requires `WEBMENTION_IO_TOKEN`. Without it the build succeeds and renders no
+  mentions — deliberately not a hard failure, unlike `GITHUB_TOKEN`.
 
 ### CI/CD Optimization
 
@@ -120,6 +146,7 @@ Required for API integrations (set in `.env` locally, GitHub Secrets in CI):
 - `STRAVA_CLIENT_SECRET` - Strava API secret
 - `STRAVA_REFRESH_TOKEN` - Strava OAuth refresh token
 - `GITHUB_TOKEN` - GitHub API access (GH_PAT in CI)
+- `WEBMENTION_IO_TOKEN` - webmention.io API key (optional; omitting it renders no mentions)
 
 ### Content Frontmatter
 
