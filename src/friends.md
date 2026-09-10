@@ -25,6 +25,7 @@ Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, o
 <li><a href="https://jankeesvw.com/?ref=daniel.pizza" target="_blank" rel="external" title="Jankees van Woezik">Jankees van Woezik</a></li>
 <li><a href="https://johanbakken.com/?ref=daniel.pizza" target="_blank" rel="external" title="Johan Bakken">Johan Bakken</a></li>
 <li><a href="https://jordivanderoord.com/?ref=daniel.pizza" target="_blank" rel="external" title="Jordi van der Oord">Jordi van der Oord</a></li>
+<li><a href="https://www.jorenjoshua.work/?ref=daniel.pizza" target="_blank" rel="external" title="Joren Joshua">Joren Joshua</a></li>
 <li><a href="https://www.stijlfigurant.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Kasper Kuipers">Kasper Kuipers</a></li>
 <li><a href="https://www.kevinvanderwijst.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Kevin van der Wijst">Kevin van der Wijst</a></li>
 <li><a href="https://kristianhjelle.com/?ref=daniel.pizza" target="_blank" rel="external" title="Kristian Hjelle">Kristian Hjelle</a></li>
@@ -42,6 +43,7 @@ Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, o
 <li><a href="https://samuelbeek.com/?ref=daniel.pizza" target="_blank" rel="external" title="Samuel Beek">Samuel Beek</a></li>
 <li><a href="https://sannedv.com/?ref=daniel.pizza" target="_blank" rel="external" title="Sanne de Vries">Sanne de Vries</a></li>
 <li><a href="https://scheiber.space/?ref=daniel.pizza" target="_blank" rel="external" title="Simon Scheiber">Simon Scheiber</a></li>
+<li><a href="https://www.stangrootes.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Stan Grootes">Stan Grootes</a></li>
 <li><a href="http://thomasenjurgen.nl?ref=daniel.pizza" target="_blank" rel="external" title="Thomas &amp; Jurgen">Thomas &amp; Jurgen</a></li>
 <li><a href="https://thomasmoes.com/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Moes">Thomas Moes</a></li>
 <li><a href="https://www.offinga.xyz/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Offinga">Thomas Offinga</a></li>
