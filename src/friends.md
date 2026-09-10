@@ -22,6 +22,7 @@ bodyClass: bg-blue
 <li><a href="https://jankeesvw.com/?ref=daniel.pizza" target="_blank" rel="external" title="Jankees van Woezik">Jankees van Woezik</a></li>
 <li><a href="https://johanbakken.com/?ref=daniel.pizza" target="_blank" rel="external" title="Johan Bakken">Johan Bakken</a></li>
 <li><a href="https://jordivanderoord.com/?ref=daniel.pizza" target="_blank" rel="external" title="Jordi van der Oord">Jordi van der Oord</a></li>
+<li><a href="https://www.stijlfigurant.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Kasper Kuipers">Kasper Kuipers</a></li>
 <li><a href="https://www.kevinvanderwijst.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Kevin van der Wijst">Kevin van der Wijst</a></li>
 <li><a href="https://larixkortbeek.com/?ref=daniel.pizza" target="_blank" rel="external" title="Larix Kortbeek">Larix Kortbeek</a></li>
 <li><a href="https://www.lenkoster.com/?ref=daniel.pizza" target="_blank" rel="external" title="Len Koster">Len Koster</a></li>
@@ -31,6 +32,7 @@ bodyClass: bg-blue
 <li><a href="https://niekdekker.com/?ref=daniel.pizza" target="_blank" rel="external" title="Niek Dekker">Niek Dekker</a></li>
 <li><a href="https://nogood.studio/?ref=daniel.pizza" target="_blank" rel="external" title="NoGood Studio">NoGood Studio</a></li>
 <li><a href="https://onnobla.se/?ref=daniel.pizza" target="_blank" rel="external" title="Onno Blase">Onno Blase</a></li>
+<li><a href="https://pieter-de-jong.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Pieter de Jong">Pieter de Jong</a></li>
 <li><a href="https://pixelrock.blog/?ref=daniel.pizza" target="_blank" rel="external" title="Pim Coumans">Pim Coumans</a></li>
 <li><a href="http://remyvdw.nl?ref=daniel.pizza" target="_blank" rel="external" title="Remy van der Winden">Remy van der Winden</a></li>
 <li><a href="https://www.robertvklinken.com/?ref=daniel.pizza" target="_blank" rel="external" title="Robert van Klinken">Robert van Klinken</a></li>
@@ -43,6 +45,7 @@ bodyClass: bg-blue
 <li><a href="https://thomasschrijer.com/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Schrijer">Thomas Schrijer</a></li>
 <li><a href="https://timokuilder.com/?ref=daniel.pizza" target="_blank" rel="external" title="Timo Kuilder">Timo Kuilder</a></li>
 <li><a href="https://baeck.no/?ref=daniel.pizza" target="_blank" rel="external" title="Tobias Bæck">Tobias Bæck</a></li>
+<li><a href="https://www.studioyave.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Yasmin Veenman">Yasmin Veenman</a></li>
 </ul>
 
 If you keep a website, make a /friends page of your own and point it at the people you like.
