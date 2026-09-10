@@ -21,6 +21,7 @@ Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, o
 <li><a href="https://erikgelderblom.com/?ref=daniel.pizza" target="_blank" rel="external" title="Erik Gelderblom">Erik Gelderblom</a></li>
 <li><a href="https://ezekielaquino.com/?ref=daniel.pizza" target="_blank" rel="external" title="Ezekiel Aquino">Ezekiel Aquino</a></li>
 <li><a href="https://www.frederiquematti.com/?ref=daniel.pizza" target="_blank" rel="external" title="Frederique Matti">Frederique Matti</a></li>
+<li><a href="https://icodavids.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Ico Davids">Ico Davids</a></li>
 <li><a href="https://ilseweisfelt.com/?ref=daniel.pizza" target="_blank" rel="external" title="Ilse Weisfelt">Ilse Weisfelt</a></li>
 <li><a href="http://iriscuppen.com?ref=daniel.pizza" target="_blank" rel="external" title="Iris Cuppen">Iris Cuppen</a></li>
 <li><a href="https://jankeesvw.com/?ref=daniel.pizza" target="_blank" rel="external" title="Jankees van Woezik">Jankees van Woezik</a></li>
