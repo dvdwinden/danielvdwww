@@ -9,6 +9,8 @@ bodyClass: bg-blue
 
 <span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: September 2026</span>
 
+Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, or extensively. Visit their sites, and have a click around.
+
 <ul class="friends-index">
 <li><a href="https://a-antonov.com/?ref=daniel.pizza" target="_blank" rel="external" title="Alexander Antonov">Alexander Antonov</a></li>
 <li><a href="https://www.ananta.work/?ref=daniel.pizza" target="_blank" rel="external" title="Ananta Mulyono">Ananta Mulyono</a></li>
@@ -24,6 +26,7 @@ bodyClass: bg-blue
 <li><a href="https://jordivanderoord.com/?ref=daniel.pizza" target="_blank" rel="external" title="Jordi van der Oord">Jordi van der Oord</a></li>
 <li><a href="https://www.stijlfigurant.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Kasper Kuipers">Kasper Kuipers</a></li>
 <li><a href="https://www.kevinvanderwijst.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Kevin van der Wijst">Kevin van der Wijst</a></li>
+<li><a href="https://kristianhjelle.com/?ref=daniel.pizza" target="_blank" rel="external" title="Kristian Hjelle">Kristian Hjelle</a></li>
 <li><a href="https://larixkortbeek.com/?ref=daniel.pizza" target="_blank" rel="external" title="Larix Kortbeek">Larix Kortbeek</a></li>
 <li><a href="https://www.lenkoster.com/?ref=daniel.pizza" target="_blank" rel="external" title="Len Koster">Len Koster</a></li>
 <li><a href="https://www.lilialuganskaia.com/?ref=daniel.pizza" target="_blank" rel="external" title="Lilia Luganskaia">Lilia Luganskaia</a></li>
@@ -47,7 +50,5 @@ bodyClass: bg-blue
 <li><a href="https://baeck.no/?ref=daniel.pizza" target="_blank" rel="external" title="Tobias Bæck">Tobias Bæck</a></li>
 <li><a href="https://www.studioyave.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Yasmin Veenman">Yasmin Veenman</a></li>
 </ul>
-
-If you keep a website, make a /friends page of your own and point it at the people you like.
 
 _The /friends page is an idea by [Nick Gray](https://slashfriends.org/?ref=daniel.pizza "slashfriends.org")._
