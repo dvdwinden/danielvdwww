@@ -9,8 +9,6 @@ bodyClass: bg-blue
 
 <span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: September 2026</span>
 
-Most of the internet I enjoy is made by people I know. Below are friends, collaborators and studiomates—some I met through work, some through [_TRANSCRIPT_](http://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine"), some at [Ghost](https://ghost.org/?ref=daniel.pizza "Ghost"), and some I simply share a room with—all of whom keep a website worth your time.
-
 <ul class="friends-index">
 <li><a href="https://a-antonov.com/?ref=daniel.pizza" target="_blank" rel="external" title="Alexander Antonov">Alexander Antonov</a></li>
 <li><a href="https://daniellockyer.com/?ref=daniel.pizza" target="_blank" rel="external" title="Daniel Lockyer">Daniel Lockyer</a></li>
