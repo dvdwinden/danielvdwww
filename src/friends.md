@@ -33,7 +33,6 @@ Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, o
 <li><a href="https://marcvermeeren.com/?ref=daniel.pizza" target="_blank" rel="external" title="Marc Vermeeren">Marc Vermeeren</a></li>
 <li><a href="https://megans.website/?ref=daniel.pizza" target="_blank" rel="external" title="Megan Pearson">Megan Pearson</a></li>
 <li><a href="https://niekdekker.com/?ref=daniel.pizza" target="_blank" rel="external" title="Niek Dekker">Niek Dekker</a></li>
-<li><a href="https://nogood.studio/?ref=daniel.pizza" target="_blank" rel="external" title="NoGood Studio">NoGood Studio</a></li>
 <li><a href="https://onnobla.se/?ref=daniel.pizza" target="_blank" rel="external" title="Onno Blase">Onno Blase</a></li>
 <li><a href="https://pieter-de-jong.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Pieter de Jong">Pieter de Jong</a></li>
 <li><a href="https://pixelrock.blog/?ref=daniel.pizza" target="_blank" rel="external" title="Pim Coumans">Pim Coumans</a></li>
@@ -45,6 +44,7 @@ Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, o
 <li><a href="http://thomasenjurgen.nl?ref=daniel.pizza" target="_blank" rel="external" title="Thomas &amp; Jurgen">Thomas &amp; Jurgen</a></li>
 <li><a href="https://thomasmoes.com/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Moes">Thomas Moes</a></li>
 <li><a href="https://www.offinga.xyz/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Offinga">Thomas Offinga</a></li>
+<li><a href="https://nogood.studio/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Rohlfs">Thomas Rohlfs</a></li>
 <li><a href="https://thomasschrijer.com/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Schrijer">Thomas Schrijer</a></li>
 <li><a href="https://timokuilder.com/?ref=daniel.pizza" target="_blank" rel="external" title="Timo Kuilder">Timo Kuilder</a></li>
 <li><a href="https://baeck.no/?ref=daniel.pizza" target="_blank" rel="external" title="Tobias Bæck">Tobias Bæck</a></li>
