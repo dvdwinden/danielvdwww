@@ -14,6 +14,7 @@ Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, o
 <ul class="friends-index">
 <li><a href="https://a-antonov.com/?ref=daniel.pizza" target="_blank" rel="external" title="Alexander Antonov">Alexander Antonov</a></li>
 <li><a href="https://www.ananta.work/?ref=daniel.pizza" target="_blank" rel="external" title="Ananta Mulyono">Ananta Mulyono</a></li>
+<li><a href="https://azizfirat.com/?ref=daniel.pizza" target="_blank" rel="external" title="Aziz Firat">Aziz Firat</a></li>
 <li><a href="https://www.ciaolemagne.com/?ref=daniel.pizza" target="_blank" rel="external" title="Charlie Jermyn">Charlie Jermyn</a></li>
 <li><a href="https://daniellockyer.com/?ref=daniel.pizza" target="_blank" rel="external" title="Daniel Lockyer">Daniel Lockyer</a></li>
 <li><a href="http://djordje.work/?ref=daniel.pizza" target="_blank" rel="external" title="Đorđe Vlaisavljević">Đorđe Vlaisavljević</a></li>
@@ -43,6 +44,7 @@ Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, o
 <li><a href="https://samuelbeek.com/?ref=daniel.pizza" target="_blank" rel="external" title="Samuel Beek">Samuel Beek</a></li>
 <li><a href="https://sannedv.com/?ref=daniel.pizza" target="_blank" rel="external" title="Sanne de Vries">Sanne de Vries</a></li>
 <li><a href="https://scheiber.space/?ref=daniel.pizza" target="_blank" rel="external" title="Simon Scheiber">Simon Scheiber</a></li>
+<li><a href="https://sodo.is/?ref=daniel.pizza" target="_blank" rel="external" title="Sodbileg Gansukh">Sodbileg Gansukh</a></li>
 <li><a href="https://www.stangrootes.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Stan Grootes">Stan Grootes</a></li>
 <li><a href="http://thomasenjurgen.nl?ref=daniel.pizza" target="_blank" rel="external" title="Thomas &amp; Jurgen">Thomas &amp; Jurgen</a></li>
 <li><a href="https://thomasmoes.com/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Moes">Thomas Moes</a></li>
