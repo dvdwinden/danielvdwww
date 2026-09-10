@@ -36,6 +36,6 @@ bodyClass: bg-blue
 <li><a href="https://timokuilder.com/?ref=daniel.pizza" target="_blank" rel="external" title="Timo Kuilder">Timo Kuilder</a></li>
 </ul>
 
-If you keep a website, make a /friends page of your own and point it at the people you like. It’s a small, generous thing to do.
+If you keep a website, make a /friends page of your own and point it at the people you like.
 
 _The /friends page is an idea by [Nick Gray](https://slashfriends.org/?ref=daniel.pizza "slashfriends.org")._
