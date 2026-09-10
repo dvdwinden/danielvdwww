@@ -1799,3 +1799,70 @@ ul.list-none {
         margin: 0.75rem 0.75rem 0.75rem 0;
     }
 }
+
+/* ==========================================================================
+   FRIENDS INDEX
+
+   The rule-separated rows on /friends: a name on the leading edge, what that
+   person does on the trailing edge. The same row idiom as the library list,
+   minus the default prose underline—two dozen underlined names in a column
+   read as noise, so the underline waits for a hover.
+   ========================================================================== */
+
+.prose .friend-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid theme("colors.gray.950 / 10%");
+}
+
+.prose .friend-row:first-child {
+    border-top: 1px solid theme("colors.gray.950 / 10%");
+}
+
+.dark .prose .friend-row,
+.dark .prose .friend-row:first-child {
+    border-color: rgb(255 255 255 / 0.08);
+}
+
+.prose .friend-row a {
+    min-width: 0;
+    font-family: theme("fontFamily.serif");
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.prose .friend-row a:hover {
+    text-decoration: underline;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.dark .prose .friend-row a:hover {
+    text-decoration-color: theme("colors.hover-dark");
+}
+
+.prose .friend-row span {
+    flex: 0 1 auto;
+    font-family: theme("fontFamily.sans");
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    text-align: right;
+    text-wrap: balance;
+    color: rgb(0 0 0 / 0.5);
+}
+
+.dark .prose .friend-row span {
+    color: rgb(255 255 255 / 0.45);
+}
+
+@media (max-width: 30rem) {
+    .prose .friend-row {
+        gap: 1rem;
+    }
+}
