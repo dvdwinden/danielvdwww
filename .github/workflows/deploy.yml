@@ -74,7 +74,7 @@ jobs:
             echo "📋 All changed files:"
             echo "$ALL_CHANGED" | sed 's/^/  - /'
             
-            CHANGED_IMAGES=$(echo "$ALL_CHANGED" | grep "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null | tr '\n' ',' || echo "")
+            CHANGED_IMAGES=$(echo "$ALL_CHANGED" | grep -E "^src/assets/.*\.(jpg|jpeg|png|webp|avif|JPG|PNG)$" 2>/dev/null | tr '\n' ',' || echo "")
           else
             echo "⚠️ Cannot diff against HEAD~1, treating as full build"
             CHANGED_IMAGES="full_build"
