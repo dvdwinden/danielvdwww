@@ -211,6 +211,11 @@
         window.GITHUB_USERNAME = 'dvdwinden';
         window.GITHUB_CONTRIBUTIONS = {{ githubContributions.contributionsByDate | dump | safe }};
         window.GITHUB_LAST_UPDATED = '{{ githubContributions.lastUpdated }}';
+
+        // Set training data. Aggregated counts only — the intervals.icu key
+        // stays a build-time secret and is never exposed here.
+        window.TRAINING_ACTIVITY = {{ trainingActivities.activityByDate | dump | safe }};
+        window.TRAINING_LAST_UPDATED = '{{ trainingActivities.lastUpdated }}';
         {% endif %}
     </script>
     <script src="/js/dark-mode.js"></script>
@@ -218,5 +223,6 @@
     <script src="/js/lastfm-live.js"></script>
     {% if page.url == '/now/' %}
     <script src="/js/github-live.js"></script>
+    <script src="/js/training-live.js"></script>
     {% endif %}
 </html>

@@ -97,6 +97,7 @@ Tailwind configuration in `tailwind.config.js`:
 
 `src/_data/` contains JavaScript files that fetch data at build time:
 - `githubContributions.js` - Fetches GitHub activity data
+- `trainingActivities.js` - Fetches training activities from intervals.icu (which syncs from COROS)
 - `metadata.json` - Site metadata (title, description, URL)
 
 Data is available in templates as global variables (e.g., `{{ githubContributions.contributionsByDate }}`).
@@ -116,10 +117,18 @@ Data is available in templates as global variables (e.g., `{{ githubContribution
 Required for API integrations (set in `.env` locally, GitHub Secrets in CI):
 - `LASTFM_API_KEY` - Last.fm API access
 - `LASTFM_USERNAME` - Last.fm username
-- `STRAVA_CLIENT_ID` - Strava API client
-- `STRAVA_CLIENT_SECRET` - Strava API secret
-- `STRAVA_REFRESH_TOKEN` - Strava OAuth refresh token
 - `GITHUB_TOKEN` - GitHub API access (GH_PAT in CI)
+- `INTERVALS_ATHLETE_ID` - intervals.icu athlete ID (e.g. `i123456`)
+- `INTERVALS_API_KEY` - intervals.icu personal API key
+
+Both intervals.icu values come from Settings → Developer Settings on
+intervals.icu. The key is build-time only: `trainingActivities.js` reads it,
+aggregates activities per day, and only the aggregate reaches the browser. Never
+add it to the `env` global in `.eleventy.js`, which is exposed to the client.
+
+Missing or rejected credentials **fail the build** rather than silently
+rendering an empty graph — that failure mode is why the previous Strava
+calendar went unnoticed for months.
 
 ### Content Frontmatter
 
