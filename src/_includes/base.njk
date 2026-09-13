@@ -112,6 +112,11 @@
     <meta name="mobile-web-app-capable" content="yes">
 
     <meta name="view-transition" content="same-origin">
+    {% if noViewTransition %}
+    <!-- Both documents must opt in for a cross-document view transition to
+         run, so this turns it off in both directions: a hard cut in and out. -->
+    <style>@view-transition { navigation: none; }</style>
+    {% endif %}
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden" href="/feed.xml">

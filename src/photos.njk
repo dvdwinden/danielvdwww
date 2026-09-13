@@ -6,6 +6,10 @@ bodyClass: bg-cream
 # Photographs read better against a dark ground, so this page stays dark
 # whatever the reader's theme, and drops the toggle.
 forceDark: true
+# Forced dark means this page's background sits outside the site's colour
+# morph, which left the transition running one-sided: a second-long fade of
+# the light ground in and out. A hard cut reads better than that.
+noViewTransition: true
 permalink: photos/index.html
 # Share image: a collage of four frames on the page's dark ground, built at
 # 2400x1260 so the 1200px rendition the og tags point at is a clean 2:1 fit.

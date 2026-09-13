@@ -137,14 +137,34 @@ iframe {
    VIEW TRANSITIONS & ANIMATIONS
    ========================================================================== */
 
-/* Define animation variables */
+/* Define animation variables.
+   Kept short on purpose: while a view transition runs, the captured elements
+   (here the whole page) don't respond to hit-testing, so this is also the
+   window in which the nav ignores clicks. */
 :root {
-    --view-transition-duration: 1s;
+    --view-transition-duration: 0.3s;
     --view-transition-easing: linear;
 }
 
 @view-transition {
     navigation: auto;
+}
+
+/* A colour fade isn't motion, but the transition also holds the page
+   unresponsive for its duration, so readers who asked for less of this get a
+   plain cut instead. */
+@media (prefers-reduced-motion: reduce) {
+    @view-transition {
+        navigation: none;
+    }
+}
+
+/* Only the background takes part. The root is opted out so the browser
+   doesn't also snapshot the whole document for a group that never animates;
+   the content is named only so it can be swapped hard rather than
+   cross-faded along with the background. */
+:root {
+    view-transition-name: none;
 }
 
 #page-background {
@@ -169,36 +189,26 @@ html.dark #page-background {
     @apply text-gray-900 dark:text-gray-300;
 }
 
-/* Reset transforms during capture */
-::view-transition-old(content) {
-    transform: none !important;
-    position: fixed !important;
-    inset: 0 !important;
-}
-
-/* Hide old content immediately */
+/* Swap the content hard: old gone and new shown from the first frame. */
 ::view-transition-old(content) {
     animation: none;
     opacity: 0;
 }
 
-/* Show new content immediately */
 ::view-transition-new(content) {
     animation: none;
     opacity: 1;
-    transform: translateY(0) !important;
-    top: 0 !important;
 }
 
-/* Smooth background color morph */
+/* No group moves or resizes; the only animation is the background's
+   cross-fade, whose old/new images inherit this duration. */
+::view-transition-group(*) {
+    animation: none;
+}
+
 ::view-transition-group(bg) {
     animation-duration: var(--view-transition-duration);
     animation-timing-function: var(--view-transition-easing);
-}
-
-/* Make sure the rest of the element's don't animate or scroll */
-::view-transition-group(*) {
-    animation: none;
 }
 
 /* Dark mode toggle animation */
