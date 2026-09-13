@@ -116,6 +116,14 @@ Data is available in templates as global variables (e.g., `{{ githubContribution
 - Uses `--incremental` flag when no images changed and cache hit
 - Sets `CHANGED_IMAGES` env var to inform Eleventy which images to process
 - Always rebuilds CSS after Eleventy (TailwindCSS scans full site)
+- Runs nightly (`cron: '20 4 * * *'`, UTC) so the build-time data — the
+  training calendar in particular — refreshes without a push
+
+The nightly run is deliberately **never incremental**. No source file has
+changed between nightly runs, so Eleventy would leave the cached
+`_site/now/index.html` untouched and redeploy stale data. A full build is
+cheap here anyway: `CHANGED_IMAGES` is empty, so `needsProcessing()` skips
+every image and the build is seconds rather than minutes.
 
 ### Environment Variables
 

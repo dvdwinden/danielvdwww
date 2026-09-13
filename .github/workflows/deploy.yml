@@ -4,6 +4,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  # 04:20 UTC — 06:20 in Amsterdam over summer, 05:20 in winter. Early enough
+  # that COROS has had the night to sync into intervals.icu, so the graph picks
+  # up yesterday's session. GitHub runs cron in UTC and doesn't follow DST, and
+  # it delays jobs scheduled on the hour, hence the odd minute.
+  schedule:
+    - cron: '20 4 * * *'
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -119,8 +125,14 @@ jobs:
           INTERVALS_ATHLETE_ID: ${{ secrets.INTERVALS_ATHLETE_ID }}
           INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
         run: |
-          # Use incremental build for faster processing
-          if [ "${{ steps.changes.outputs.images-changed }}" = "false" ] && [ "${{ steps.cache-eleventy.outputs.cache-hit }}" = "true" ]; then
+          # Use incremental build for faster processing.
+          #
+          # Never incremental on the nightly run: no source file has changed, so
+          # Eleventy would leave the cached _site/now/index.html in place and
+          # deploy yesterday's training data — the graph would silently stop
+          # moving. A full build here is still cheap, because CHANGED_IMAGES is
+          # empty and needsProcessing() skips every image.
+          if [ "${{ steps.changes.outputs.images-changed }}" = "false" ] && [ "${{ steps.cache-eleventy.outputs.cache-hit }}" = "true" ] && [ "${{ github.event_name }}" != "schedule" ]; then
             echo "🚀 Using incremental build (no image changes, cache hit)"
             NODE_ENV=production node --max-old-space-size=4096 ./node_modules/.bin/eleventy --incremental
           else
