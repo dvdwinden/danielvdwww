@@ -21,10 +21,10 @@ class TrainingCalendar {
   getActivityColor(seconds) {
     const minutes = seconds / 60;
     if (minutes <= 0) return 'bg-black/5 dark:bg-white/10';
-    if (minutes < 30) return 'bg-orange-300 dark:bg-orange-900';
-    if (minutes < 60) return 'bg-orange-500 dark:bg-orange-700';
-    if (minutes < 90) return 'bg-orange-600 dark:bg-orange-600';
-    return 'bg-orange-700 dark:bg-orange-500';
+    if (minutes < 30) return 'bg-red-300 dark:bg-red-900';
+    if (minutes < 60) return 'bg-red-500 dark:bg-red-700';
+    if (minutes < 90) return 'bg-red-600 dark:bg-red-600';
+    return 'bg-red-700 dark:bg-red-500';
   }
 
   describe(day) {

@@ -96,7 +96,18 @@ module.exports = {
         'cream': '#faf6e8',
         'amber': '#efe9e2',
         'blue': '#ededea',
-        'red': '#fae8e8',
+        // DEFAULT keeps `bg-red` (page backgrounds, matched in dark-mode.js)
+        // working; the ramp is for the training calendar, which needs shades.
+        // Declaring the key as a bare string would drop Tailwind's own red
+        // scale entirely — the same trap `amber`, `blue` and `green` sit in.
+        'red': {
+          DEFAULT: '#fae8e8',
+          300: '#fca5a5',
+          500: '#ef4444',
+          600: '#dc2626',
+          700: '#b91c1c',
+          900: '#7f1d1d',
+        },
         'black': '#2a2a28',
         'hover': '#8b5050',
         'hover-dark': '#b87878',

@@ -87,6 +87,11 @@ All collections automatically filter out drafts (`draft: true` in frontmatter).
 Tailwind configuration in `tailwind.config.js`:
 - **Dark Mode**: Class-based (`darkMode: 'class'`)
 - **Custom Colors**: beige, brown, green, stone, cream, amber, blue, red, black, hover variants, highlight, purple
+  - Most are declared as bare strings, which *replaces* Tailwind's own scale for
+    that name — so `bg-amber-500`, `bg-blue-500` and `bg-green-500` do not exist.
+    `red` is the exception: it's an object with a `DEFAULT` (so `bg-red` still
+    works) plus a 300–900 ramp for the training calendar. Follow that shape when
+    a custom colour needs shades.
 - **Custom Fonts**:
   - Sans: Degular (custom webfont)
   - Serif: Blanco (custom webfont)
