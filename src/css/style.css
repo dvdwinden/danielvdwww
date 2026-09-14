@@ -1631,6 +1631,48 @@ ul.list-none {
     text-transform: uppercase;
 }
 
+/* ==========================================================================
+   NARROW SCREENS
+   Three things that work in a wide column and not in a narrow one.
+   ========================================================================== */
+@media (max-width: 640px) {
+    /* Date above the entry rather than beside it: a 6rem column plus a wrapping
+       title leaves the title about 12 characters to work with. */
+    .entry-list > div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .entry-list > div > span {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: -0.5rem;
+    }
+
+    /* Caption and dots stack instead of competing for the same row. */
+    .figure-cycle {
+        grid-template-columns: 1fr;
+    }
+
+    .figure-cycle figcaption,
+    .figure-cycle-dots {
+        grid-column: 1;
+    }
+
+    .figure-cycle-dots {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+}
+
+/* The Library's covers are the point of that page; Trema's are a bonus on a
+   hover the phone cannot perform, and the fixed panel lands over the text. */
+@media (hover: none) and (pointer: coarse) {
+    .trema-item .book-cover {
+        display: none;
+    }
+}
+
 /* Resume */
 .resume {
     margin-top: 8rem;

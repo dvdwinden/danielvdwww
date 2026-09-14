@@ -166,7 +166,7 @@ In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings 
 
 <section class="resume">
   <h2 class="work-title">Resumé</h2>
-  <div class="flex flex-col">
+  <div class="entry-list flex flex-col">
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2025–now</span>
       <p class="my-4">Senior Product Designer at <a href="https://enode.com/?ref=daniel.pizza" title="Enode" target="_blank" rel="external">Enode</a></p>
@@ -206,7 +206,7 @@ In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings 
 
   <figure class="photo-tinted"><picture>{% image "src/assets/work/daniel-square@2x.webp", "Me, speaking at a launch", "(min-width: 640px) 512px, 100vw" %}</picture></figure>
 
-  <div class="flex flex-col">
+  <div class="entry-list flex flex-col">
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">OCT 2025</span>
       <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue four</p>

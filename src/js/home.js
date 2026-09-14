@@ -1,38 +1,3 @@
-// Trema rows borrow the Library's .book-item/.book-cover hover, which is pure
-// CSS on pointer devices. Touch devices need the same scroll-driven reveal
-// /library gets from library.js, which isn't loaded on the homepage.
-(function () {
-  if (!window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
-
-  const rows = document.querySelectorAll('.trema-item.book-item');
-  if (!rows.length) return;
-
-  let currentCover = null;
-  let currentRow = null;
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-
-      const cover = entry.target.querySelector('.book-cover');
-      if (!cover) return;
-
-      if (currentCover && currentCover !== cover) currentCover.classList.remove('visible');
-      if (currentRow && currentRow !== entry.target) currentRow.classList.remove('active');
-
-      cover.classList.add('visible');
-      entry.target.classList.add('active');
-      currentCover = cover;
-      currentRow = entry.target;
-    });
-  }, {
-    threshold: [0, 0.5, 1],
-    rootMargin: '-25% 0px -25% 0px'
-  });
-
-  rows.forEach(row => observer.observe(row));
-})();
-
 // Cross-fade through each .figure-cycle's frames. It auto-advances only while
 // the figure is on screen and unhovered. The arrows and dots are built from the
 // frame count, so adding a frame to the markup is all it takes.
