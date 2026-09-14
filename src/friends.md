@@ -17,6 +17,7 @@ Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, o
 <li><a href="https://azizfirat.com/?ref=daniel.pizza" target="_blank" rel="external" title="Aziz Firat">Aziz Firat</a></li>
 <li><a href="https://www.ciaolemagne.com/?ref=daniel.pizza" target="_blank" rel="external" title="Charlie Jermyn">Charlie Jermyn</a></li>
 <li><a href="https://daniellockyer.com/?ref=daniel.pizza" target="_blank" rel="external" title="Daniel Lockyer">Daniel Lockyer</a></li>
+<li><a href="https://davidvanzeggeren.com/?ref=daniel.pizza" target="_blank" rel="external" title="David van Zeggeren">David van Zeggeren</a></li>
 <li><a href="http://djordje.work/?ref=daniel.pizza" target="_blank" rel="external" title="Đorđe Vlaisavljević">Đorđe Vlaisavljević</a></li>
 <li><a href="https://erikgelderblom.com/?ref=daniel.pizza" target="_blank" rel="external" title="Erik Gelderblom">Erik Gelderblom</a></li>
 <li><a href="https://ezekielaquino.com/?ref=daniel.pizza" target="_blank" rel="external" title="Ezekiel Aquino">Ezekiel Aquino</a></li>
