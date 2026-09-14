@@ -18,7 +18,7 @@ This was an incredibly fruitful week. I’ve gone deeper than I ever have on a p
 
 <figure class="w-full">
     {% retinaImage "src/assets/journal/aulus-les-bains09.jpg", "Part of the storage room at Camp." %}
-    <figcaption class="pl-8 sm:pl-0">Part of the storage room at <em>Camp</em>.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">Part of the storage room at <em>Camp</em></figcaption>
   </figure>
 
 As the building’s filled with instruments, here’s what I’ve had coming out of my headphones during the past six days: two albums by Floating Points, [_Elaenia_](https://floatingpoints.bandcamp.com/album/elaenia-10-year-anniversary) and [_Promises_](https://floatingpoints.bandcamp.com/album/promises); Makaya McCraven’s [_In These Times_](https://intlanthem.bandcamp.com/album/in-these-times); Darkside’s [_Psychic_](https://darkside.bandcamp.com/album/psychic); Nicolas Jaar’s [_Pomegranates_](https://nicolasjaar.bandcamp.com/album/pomegranates); Nala Sinephro’s [_Endlessness_](https://nalasinephro.bandcamp.com/album/endlessness); Jonny Greenwood’s soundtrack for [_Phantom Thread_](https://www.nonesuch.com/albums/phantom-thread-soundtrack). (And, in-between all that, [Charlie Jermyn’s latest radioshow](https://on.soundcloud.com/T0ZJxpDw2fvbP50d1w))

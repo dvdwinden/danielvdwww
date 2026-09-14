@@ -20,7 +20,7 @@ I keep chipping away at a variety of personal projects. We still have copies of 
 <figure class="w-full">
   {% retinaImage "src/assets/now/trema-homepage-facelift.png", "(A facelift for Trema’s homepage)" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    A facelift for Trema’s homepage.
+    A facelift for Trema’s homepage
   </figcaption>
 </figure>
 </div>

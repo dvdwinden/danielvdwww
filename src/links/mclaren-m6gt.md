@@ -21,7 +21,7 @@ The _Special Operations_ team at McLaren restored the McLaren M6GT, a car design
 <figure>
   {% retinaImage "src/assets/links/mclaren-m6gt-dashboard.jpg", "(The dashboard of the McLaren M6GT)" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Details of the <em>McLaren M6GT</em>.
+    Details of the <em>McLaren M6GT</em>
   </figcaption>
 </figure>
 

@@ -33,7 +33,7 @@ I started excavating a childhood memory I hadn’t thought about in forever, and
 
 <figure class="w-full">
   {% retinaImage "src/assets/journal/aulus-les-bains08.jpg", "A passage from Bird by Bird, by Anne Lamott." %}
-  <figcaption class="pl-8 sm:pl-0">A passage from <em>Bird by Bird</em>, by Anne Lamott.</figcaption>
+  <figcaption class="pl-8 sm:pl-0">A passage from <em>Bird by Bird</em>, by Anne Lamott</figcaption>
 </figure>
 
 And this has been really fascinating, these past few days: learning more about how my writing process plays out when given a good chunk of dedicated time. Switching between writing on my computer, analysing my own writing by filling pages in my notebook, and reading other people’s writing. Using every day to improve the writing I have, focusing on one or two sections of a piece, rather than scrapping everything and starting over or directing my attention to something new entirely: I feel I’ve learned how to better use the tools at my disposal, if you will. 

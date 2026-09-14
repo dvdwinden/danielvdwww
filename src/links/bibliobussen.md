@@ -10,7 +10,7 @@ external_url: https://www.flickr.com/photos/25681716@N03/with/3171031441?ref=dan
 <figure>
   {% retinaImage "src/assets/links/bibliobus.jpg", "(An example of a Bibliobus)" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    An example of a <em>Bibliobus</em>.
+    An example of a <em>Bibliobus</em>
   </figcaption>
 </figure>
 

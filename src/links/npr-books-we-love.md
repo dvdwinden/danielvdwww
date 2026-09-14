@@ -10,7 +10,7 @@ external_url: https://apps.npr.org/best-books/#view=covers&year=2025/?ref=daniel
 <figure>
   {% retinaImage "src/assets/links/npr-books-we-love.png", "NPR’s “Books We Love”" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Great reads, thoughtfully curated by <em>NPR</em>.
+    Great reads, thoughtfully curated by <em>NPR</em>
   </figcaption>
 </figure>
 

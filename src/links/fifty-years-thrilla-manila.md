@@ -10,7 +10,7 @@ external_url: https://www.theatlantic.com/magazine/archive/2025/10/ali-frazier-t
 <figure>
   {% retinaImage "src/assets/links/thrilla-manila.avif", "Photo by Neil Leifer for Sports Illustrated." %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Photo by Neil Leifer for <em>Sports Illustrated</em>.
+    Photo by Neil Leifer for <em>Sports Illustrated</em>
   </figcaption>
 </figure>
 

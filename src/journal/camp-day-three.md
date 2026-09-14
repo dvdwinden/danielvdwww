@@ -30,7 +30,7 @@ The climb was quite steep at times, but well manageable. The most treacherous bi
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/aulus-les-bains06.png", "Cascade d’Ars." %}
-    <figcaption class="pl-8 sm:pl-0"><em>Cascade d’Ars</em>, up close.</figcaption>
+    <figcaption class="pl-8 sm:pl-0"><em>Cascade d’Ars</em>, up close</figcaption>
   </figure>
 </div>
 

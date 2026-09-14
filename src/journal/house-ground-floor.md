@@ -33,7 +33,7 @@ The house we found has been renovated a few times over the years, with notable p
 
 <figure class="w-full">
   {% retinaImage "src/assets/journal/house-november.webp", "The house in November of 2021." %}
-  <figcaption class="pl-8 sm:pl-0">The house in November of 2021.</figcaption>
+  <figcaption class="pl-8 sm:pl-0">The house in November of 2021</figcaption>
 </figure>
 
 Seen from the sidewalk, the house looks small and low, especially in comparison to the neighbours on the left. But, the total living space makes up a comfortable 93m². The garden is roughly 14 meters long, and about 4 meters wide, and skirts up to a canal. The front of the house borders a somewhat busy street, but the windows are well shielded from passers-by and very well insulated. In its current layout, the house has an open and spacious ground floor, and two bedrooms and a bathroom on the top floor. 
@@ -43,7 +43,7 @@ Seen from the sidewalk, the house looks small and low, especially in comparison 
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/ground-floor.webp", "The current layout of the ground floor." %}
-    <figcaption class="pl-8 sm:pl-0">The current layout of the ground floor.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The current layout of the ground floor</figcaption>
   </figure>
 </div>
 
@@ -54,7 +54,7 @@ As you can see in the drawing above, the living room is wide open. The house use
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/first-floor.webp", "The current layout of the first floor." %}
-    <figcaption class="pl-8 sm:pl-0">The current layout of the first floor.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The current layout of the first floor</figcaption>
   </figure>
 </div>
 

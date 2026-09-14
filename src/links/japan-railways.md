@@ -23,7 +23,7 @@ image:
 <figure>
     {% retinaImage "src/assets/links/japan-railways-application.jpg", "Workers applying the JR branding. Image courtesy of NDC" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Workers applying the JR branding. Image courtesy of NDC.
+    Workers applying the JR branding. Image courtesy of NDC
   </figcaption>
 </figure>
 

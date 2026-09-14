@@ -94,7 +94,7 @@ _Hail to the Thief_ always flew a bit under the radar for me. Overshadowed by th
   </figure>
   <figure class="w-full mt-4">
     {% retinaImage "src/assets/journal/radiohead-london-alex-lake.jpg", "Radiohead performing in London (photo by Alex Lake)" %}
-    <figcaption class="pl-8 sm:pl-0">Radiohead performing in London in 2025 (photos by Alex Lake).</figcaption>
+    <figcaption class="pl-8 sm:pl-0">Radiohead performing in London in 2025 (photos by Alex Lake)</figcaption>
   </figure>
 </div>
 
@@ -171,7 +171,7 @@ The lyrics on his solo album are sometimes prophetic, often gorgeous, sometimes 
 <div class="sm:mt-16 mt-0 mb-16">
   <figure class="w-full mt-4">
     {% retinaImage "src/assets/journal/cameron-winter-tivoli.jpg", "Cameron Winter performing in Utrecht" %}
-    <figcaption class="pl-8 sm:pl-0">Cameron Winter performing in Utrecht, the Netherlands.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">Cameron Winter performing in Utrecht, the Netherlands</figcaption>
   </figure>
 </div>
 
