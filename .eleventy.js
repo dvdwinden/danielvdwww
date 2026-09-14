@@ -126,6 +126,20 @@ module.exports = function (eleventyConfig) {
     LASTFM_USERNAME: process.env.LASTFM_USERNAME || "dvdwinden"
   });
 
+  // Look up a Trema post's cover on its own site. The stored external_url
+  // carries a ?ref= param, and a couple have a doubled trailing slash, so both
+  // sides of the comparison get normalised. Returns null when the feed didn't
+  // load or the post isn't in it, and the caller falls back to a local image.
+  eleventyConfig.addFilter("tremaCover", function (url, covers) {
+    if (!url || !covers) return null;
+    const normalize = value => String(value).split(/[?#]/)[0].replace(/\/+$/, '');
+    const key = normalize(url);
+    for (const [link, image] of Object.entries(covers)) {
+      if (normalize(link) === key) return image;
+    }
+    return null;
+  });
+
   // Add regexMatch filter
   eleventyConfig.addFilter("regexMatch", function (str, pattern) {
     const regex = new RegExp(pattern);
@@ -851,20 +865,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon.png");
 
+  // Third-party favicons used by bookmark cards (skipped by image optimization)
+  eleventyConfig.addPassthroughCopy("src/assets/icons");
+
   // Bookmark card icons. Marks served at 16px, and the optimizeImages
   // transform deliberately leaves them alone, so the original has to be
   // copied across — nothing else puts a src/assets file in _site.
   eleventyConfig.addPassthroughCopy("src/assets/bookmarks/icons");
 
-  // Copy hero images referenced in CSS
-  eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square@2x.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/studio-square.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/studio-square@2x.webp");
-
   // Don't passthrough asset directories since they're handled by the image optimization
   // Only passthrough files that should not be optimized
   eleventyConfig.addPassthroughCopy("src/assets/**/*.mp4");
+  eleventyConfig.addPassthroughCopy("src/assets/**/*.webm");
   eleventyConfig.addPassthroughCopy("src/assets/**/*.pdf");
 
   // Copy fonts directory for custom fonts

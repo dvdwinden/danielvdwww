@@ -144,6 +144,11 @@ iframe {
 :root {
     --view-transition-duration: 0.3s;
     --view-transition-easing: linear;
+    /* Step-through cursors: a dark disc behind a white chevron, so they read
+       against any backdrop. Shared by the photo lightbox and the homepage
+       image cycles, which navigate the same way. */
+    --cursor-prev: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='36'%20height='36'%3E%3Ccircle%20cx='18'%20cy='18'%20r='17'%20fill='black'%20fill-opacity='.55'/%3E%3Cpath%20d='M21%2012%2015%2018%2021%2024'%20fill='none'%20stroke='white'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E");
+    --cursor-next: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='36'%20height='36'%3E%3Ccircle%20cx='18'%20cy='18'%20r='17'%20fill='black'%20fill-opacity='.55'/%3E%3Cpath%20d='M15%2012%2021%2018%2015%2024'%20fill='none'%20stroke='white'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 @view-transition {
@@ -395,10 +400,13 @@ figcaption,
     line-height: 1.25;
 }
 
+/* The shorthand has to come first: after text-decoration-color it resets the
+   colour back to currentColor, which made caption underlines full-strength
+   black where prose links get grey. */
 figcaption a {
     color: theme("colors.black");
-    text-decoration-color: theme("colors.gray.400");
     text-decoration: underline;
+    text-decoration-color: theme("colors.gray.400");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     transition: color 0.2s;
@@ -582,11 +590,11 @@ span.testimonial {
    behind a white chevron so they read against any tint. Hotspot centred;
    the resize cursors are the fallback if the image is refused. */
 .lightbox-prev {
-    cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='36'%20height='36'%3E%3Ccircle%20cx='18'%20cy='18'%20r='17'%20fill='black'%20fill-opacity='.55'/%3E%3Cpath%20d='M21%2012%2015%2018%2021%2024'%20fill='none'%20stroke='white'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") 18 18, w-resize;
+    cursor: var(--cursor-prev) 18 18, w-resize;
 }
 
 .lightbox-next {
-    cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='36'%20height='36'%3E%3Ccircle%20cx='18'%20cy='18'%20r='17'%20fill='black'%20fill-opacity='.55'/%3E%3Cpath%20d='M15%2012%2021%2018%2015%2024'%20fill='none'%20stroke='white'%20stroke-width='1.25'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") 18 18, e-resize;
+    cursor: var(--cursor-next) 18 18, e-resize;
 }
 
 /* The figure fills the dialog to centre the photo, which would otherwise
@@ -892,67 +900,28 @@ article time {
    ========================================================================== */
 
 /* Hero images */
-.hero-images {
-    position: absolute;
-    top: 25vh;
-    left: 18%;
-    right: 0;
-    z-index: 1;
-    pointer-events: none;
-    content-visibility: auto;
-    contain: layout style paint;
-    will-change: transform;
-}
-
-.hero-image {
-    @apply relative;
+/* Greyscale photos laid over a light blue and multiplied — the treatment the
+   homepage hero used, kept now that these live inside the prose column. The
+   blue is fixed rather than themed, so they read the same in either mode. */
+.prose figure.photo-tinted {
+    margin: 2rem 0;
     background-color: hsl(200, 50%, 90%);
-    background-blend-mode: multiply;
-    background-size: contain;
     border-radius: 0.1875rem;
+    overflow: hidden;
+}
+
+.prose .photo-tinted picture,
+.prose .photo-tinted img {
+    display: block;
+    margin: 0;
     width: 100%;
-    max-width: 360px;
-    height: 360px;
-    pointer-events: none;
-    will-change: transform;
-    transform: translateZ(0);
-    contain: layout paint style;
-    contain-intrinsic-size: 360px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0;
 }
 
-.hero-image.daniel {
-    background-image: image-set(
-        url("/assets/work/daniel-square.webp") 1x,
-        url("/assets/work/daniel-square@2x.webp") 2x
-    );
-    background-size: cover;
-    background-position: center;
-
-    @supports not (
-        background-image: image-set(url("/assets/work/daniel-square.webp") 1x)
-    ) {
-        background-image: url("/assets/work/daniel-square-optimized.png");
-    }
-
-    @apply mr-auto my-8 sm:my-24;
-    margin-top: -180px;
-    margin-left: 70px;
-}
-
-.hero-image.studio {
-    background-image: image-set(
-        url("/assets/work/studio-square.webp") 1x,
-        url("/assets/work/studio-square@2x.webp") 2x
-    );
-    background-size: cover;
-
-    @supports not (
-        background-image: image-set(url("/assets/work/studio-square.webp") 1x)
-    ) {
-        background-image: url("/assets/work/studio-square-optimized.png");
-    }
-
-    @apply mr-auto my-8 sm:my-24;
+.prose .photo-tinted img {
+    mix-blend-mode: multiply;
 }
 
 /* Buttons and CTAs */
@@ -1096,6 +1065,15 @@ span.testimonial picture img {
 /* Newsletter list */
 ul.newsletter picture {
     margin-bottom: 1rem;
+}
+
+/* Same treatment as the homepage hover covers, and as Trema's own posts: the
+   books sit on a transparent ground, so layered drop-shadows follow their
+   silhouette where a box-shadow would frame the empty space around them. */
+ul.newsletter picture img {
+    filter:
+        drop-shadow(1px 1px 1px rgba(40, 40, 40, 0.14))
+        drop-shadow(16px 18px 14px rgba(40, 40, 40, 0.34));
 }
 
 ul.newsletter h2 {
@@ -1315,9 +1293,10 @@ ul.list-none {
     margin-bottom: 1.5rem;
 }
 
-.prose h2.home-subtitle {
-    font-size: 2.5rem;
-    margin-bottom: 0;
+/* The gap under this used to come from .introduction's margin-top, which the
+   opening paragraph no longer sits inside. */
+.prose h1.home-subtitle {
+    margin-bottom: 1.25rem;
 }
 
 .prose h3.work-desc {
@@ -1327,11 +1306,329 @@ ul.list-none {
     margin-top: -1.5rem;
 }
 
+.prose h2.section-title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   TREMA LIST (latest newsletter entries)
+   ========================================================================== */
+
+.prose ul.trema-list {
+    list-style: none;
+    margin: 1.5rem 0 1rem;
+    padding: 0;
+}
+
+/* Rows match the Speaking list: title left, small-caps date right, hairline
+   rule between. Hovering a row reveals its cover via the shared .book-cover. */
+.prose ul.trema-list li.trema-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.dark .prose ul.trema-list li.trema-item {
+    border-bottom-color: rgb(255 255 255 / 0.1);
+}
+
+.prose ul.trema-list li a {
+    display: block;
+    margin: 1rem 0;
+    font-family: theme("fontFamily.serif");
+    font-size: theme("fontSize.base");
+    line-height: 1.5;
+    color: inherit;
+    text-decoration: none;
+}
+
+.prose ul.trema-list li a:hover {
+    color: theme("colors.hover");
+    text-decoration: underline;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* Trema's covers are photographs sitting on a transparent ground, so the frame
+   the Library covers get would just draw a box around empty space. Wider than
+   186px too, since the book only fills part of the image. */
+/* Taller than a Library cover, so it hangs low off the row it belongs to
+   unless it is lifted. */
+.trema-item .book-cover {
+    top: -3rem;
+}
+
+/* The covers are photographed books on a transparent ground, so they take
+   Trema's own treatment: layered drop-shadows, which follow the book's
+   silhouette where a box-shadow would draw a rectangle around it. Lifted from
+   .article-image img in the Trema theme. */
+.trema-item .book-cover img,
+.trema-item .book-cover picture img {
+    width: 240px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    filter:
+        drop-shadow(1px 1px 1px rgba(40, 40, 40, 0.14))
+        drop-shadow(16px 18px 14px rgba(40, 40, 40, 0.34));
+}
+
+.trema-date {
+    font-family: theme("fontFamily.sans");
+    font-size: theme("fontSize.xs");
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: rgb(107 114 128);
+}
+
+/* Sits under the right-hand date column and borrows its small-caps treatment,
+   so it reads as part of the list rather than a loose link below it. */
+.prose p.trema-more {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.prose p.trema-more a {
+    font-family: theme("fontFamily.sans");
+    font-size: theme("fontSize.xs");
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(107 114 128);
+    text-decoration: none;
+}
+
+.prose p.trema-more a:hover {
+    color: theme("colors.hover");
+    text-decoration: underline;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   FIGURE CYCLE
+   Auto-cycling image set inside the prose column. Frames are stacked in a
+   box of a fixed ratio (override per figure with --cycle-ratio) and
+   cross-faded by home.js; with one frame it is just a plain figure.
+   ========================================================================== */
+/* The disc is a child of the figure rather than the frame box, so it can
+   overhang the image instead of being clipped by the frame's overflow. */
+/* Two columns so the caption and the dots share one row under the image,
+   caption left and dots right. The frames span both; the cursor disc is
+   absolutely positioned, so grid never places it. */
+.figure-cycle {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    column-gap: 1.5rem;
+}
+
+.figure-cycle-frames {
+    grid-column: 1 / -1;
+}
+
+.figure-cycle figcaption {
+    grid-column: 1;
+}
+
+.figure-cycle-frames {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--cycle-ratio, 3 / 2);
+    overflow: hidden;
+    border-radius: 0.1875rem;
+}
+
+.figure-cycle-frame {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.45s ease-in-out;
+}
+
+/* Until home.js marks the figure ready, the first frame shows on its own, so
+   the box is never empty and the set degrades to a static image without JS. */
+.figure-cycle-frame:not(:first-child) {
+    opacity: 0;
+}
+
+.figure-cycle.is-ready .figure-cycle-frame {
+    opacity: 0;
+}
+
+.figure-cycle.is-ready .figure-cycle-frame.is-active {
+    opacity: 1;
+}
+
+/* Unscoped from .prose: a cycle can also sit in a breakout block outside the
+   column, as the NoGood one does. */
+.figure-cycle-frame picture,
+.figure-cycle-frame img,
+.figure-cycle-frame video {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .figure-cycle-frame {
+        transition: none;
+    }
+}
+
+/* Controls, all built by home.js. Each arrow is a half-width overlay, so the
+   glyph fades in over whichever side the pointer is on and the whole half is
+   the hit area. */
+.figure-cycle-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.figure-cycle-arrow--prev {
+    left: 0;
+    justify-content: flex-start;
+}
+
+.figure-cycle-arrow--next {
+    right: 0;
+    justify-content: flex-end;
+}
+
+/* Navigation matches the photo lightbox: the chevron is the cursor itself, so
+   there is no element to track or clip. This glyph is the keyboard equivalent,
+   parked at the edge of whichever half has focus. */
+.figure-cycle-arrow:focus-visible {
+    opacity: 1;
+}
+
+.figure-cycle-arrow--prev {
+    cursor: var(--cursor-prev) 18 18, w-resize;
+}
+
+.figure-cycle-arrow--next {
+    cursor: var(--cursor-next) 18 18, e-resize;
+}
+
+/* A disc behind the glyph, so it stays legible over any image. */
+.figure-cycle-arrow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    background: rgb(0 0 0 / 0.55);
+    color: #fff;
+    font-family: theme("fontFamily.sans");
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.figure-cycle-dots {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.figure-cycle:hover .figure-cycle-dots,
+.figure-cycle:focus-within .figure-cycle-dots {
+    opacity: 1;
+}
+
+/* No hover to reveal them on touch, so leave them up. */
+@media (hover: none) {
+    .figure-cycle-dots {
+        opacity: 1;
+    }
+}
+
+.figure-cycle-dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: 0.25;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.figure-cycle-dot:hover,
+.figure-cycle-dot:focus-visible {
+    opacity: 0.6;
+}
+
+.figure-cycle-dot.is-active {
+    opacity: 0.9;
+}
+
 /* Introduction */
 .introduction {
     margin-bottom: 4rem;
     margin-top: 1rem;
     text-wrap: pretty;
+}
+
+/* Rows in the resumé and speaking lists. The prose line-height of 1.5 is set
+   for running text and reads loose on a title that wraps to two lines. */
+.prose p.my-4 {
+    line-height: 1.3;
+}
+
+/* A muted sub-label under a resumé title, for the one entry that needs to say
+   how the work was done. It sits in the title's column, so the date column and
+   the grid are left alone. */
+.prose p.my-4 .resume-note {
+    display: block;
+    margin-top: 0.2rem;
+    font-family: theme("fontFamily.sans");
+    font-size: theme("fontSize.xs");
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(107 114 128);
+}
+
+/* Faux small caps for initialisms. Blanco's webfont ships no smcp/c2sc, so
+   font-variant-caps has nothing to draw from and these are scaled capitals
+   instead. Scaling thins the strokes against the surrounding lowercase, so the
+   weight steps up to 500 to put the colour back — Blanco Medium and Degular's
+   variable axis both cover it. Tracking is opened up because capitals need
+   more of it than lowercase. Family and colour are inherited, so this works in
+   a serif sentence and in the sans footer alike. */
+.smallcaps {
+    font-size: 0.82em;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 /* Resume */
@@ -1390,6 +1687,22 @@ ul.list-none {
 .dark .prose p a:hover {
     color: theme("colors.hover-dark");
     background: none;
+    text-decoration: underline;
+    text-decoration-color: theme("colors.hover-dark");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* `.dark .prose a` above matches the homepage's work titles and Trema entries
+   at equal specificity but later in the file, so it would otherwise
+   re-underline them. Restate the intent with `.dark` in front. */
+.dark .prose ul.trema-list li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dark .prose ul.trema-list li a:hover {
+    color: theme("colors.hover-dark");
     text-decoration: underline;
     text-decoration-color: theme("colors.hover-dark");
     text-decoration-thickness: 1px;
@@ -1475,10 +1788,6 @@ ul.list-none {
     text-underline-offset: 3px;
 }
 
-.dark .hero-image {
-    background-color: hsl(204, 17%, 89%);
-}
-
 .dark .book-item a {
     color: theme("colors.white");
     text-decoration: none;
@@ -1493,76 +1802,7 @@ ul.list-none {
    RESPONSIVE DESIGN
    ========================================================================== */
 
-/* Hero image responsive styling */
-@media (max-width: 1400px) {
-    /* For 1400px and below, show images side-by-side above content */
-    .hero-images {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        z-index: auto;
-        pointer-events: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-        transform: translateZ(0);
-    }
-
-    .hero-image {
-        pointer-events: auto;
-        max-width: 360px;
-        height: 360px;
-        contain-intrinsic-size: 360px;
-    }
-
-    .hero-image.studio,
-    .hero-image.daniel {
-        margin: 0;
-    }
-
-    .hero-image.daniel {
-        margin-left: -120px;
-        margin-top: 100px;
-    }
-
-    div.prose {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1024px) {
-    .hero-image {
-        max-width: 320px;
-        height: 320px;
-        contain-intrinsic-size: 320px;
-    }
-
-    .hero-image.daniel {
-        margin-left: -160px;
-    }
-}
-
 @media (max-width: 768px) {
-    .hero-images {
-        height: auto;
-        margin-top: 0;
-    }
-
-    .hero-image {
-        max-width: 280px;
-        height: 280px;
-        contain-intrinsic-size: 280px;
-    }
-
-    .hero-image.daniel {
-        margin-left: -140px;
-    }
-
     /* Mobile typography adjustments */
     .prose h1 {
         font-size: 2rem;
@@ -1600,16 +1840,6 @@ ul.list-none {
         font-size: 1.5rem;
     }
 
-    .hero-image {
-        max-width: 240px;
-        height: 240px;
-        contain-intrinsic-size: 240px;
-    }
-
-    .hero-image.daniel {
-        margin-left: -120px;
-    }
-
     .prose h1 {
         font-size: 2rem;
     }
@@ -1629,12 +1859,6 @@ ul.list-none {
 
     .site-footer ul li a {
         font-size: 1rem;
-    }
-}
-
-@media (min-width: 1401px) {
-    .hero-image {
-        max-width: 28%;
     }
 }
 

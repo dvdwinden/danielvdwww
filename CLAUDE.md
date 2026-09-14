@@ -180,6 +180,7 @@ Use the `bookmark` shortcode to render a link as a card — title, blurb, and a 
 | `label` | The anchor's `title` attribute. Defaults to `title`. |
 | `external` | Overrides the auto-detected `target="_blank" rel="external"`. |
 
+Descriptions can be soft-wrapped across lines — whitespace is collapsed so the card stays a single HTML block and markdown-it doesn't split it into paragraphs. Text is escaped, so ampersands and quotes can be written as-is. The `optimizeImages` transform skips any `<img class="bookmark-icon">`, so icons are served at their natural size rather than swapped for a `<picture>`.
 Descriptions can be soft-wrapped across lines — whitespace is collapsed so the card stays a single HTML block and markdown-it doesn't split it into paragraphs. Text is escaped, so ampersands and quotes can be written as-is. The `optimizeImages` transform skips any `<img class="bookmark-icon">`, so icons are served at their natural size rather than swapped for a `<picture>`. Card thumbnails (`<img class="bookmark-image">`) take the opposite route: they're given their own 128/256px widths rather than the narrow-column defaults, whose smallest width is 800px.
 
 Styles live in the `BOOKMARK CARDS` section of `src/css/style.css`.
