@@ -45,6 +45,7 @@ The people I appreciate, and the websites they keep. Friends or collaborators; s
 <li><a href="https://www.rowan.io/?ref=daniel.pizza" target="_blank" rel="external" title="Rowan Zajkowski">Rowan Zajkowski</a></li>
 <li><a href="https://samuelbeek.com/?ref=daniel.pizza" target="_blank" rel="external" title="Samuel Beek">Samuel Beek</a></li>
 <li><a href="https://sannedv.com/?ref=daniel.pizza" target="_blank" rel="external" title="Sanne de Vries">Sanne de Vries</a></li>
+<li><a href="https://www.sannewijbenga.com/?ref=daniel.pizza" target="_blank" rel="external" title="Sanne Wijbenga">Sanne Wijbenga</a></li>
 <li><a href="https://scheiber.space/?ref=daniel.pizza" target="_blank" rel="external" title="Simon Scheiber">Simon Scheiber</a></li>
 <li><a href="https://sodo.is/?ref=daniel.pizza" target="_blank" rel="external" title="Sodbileg Gansukh">Sodbileg Gansukh</a></li>
 <li><a href="https://www.stangrootes.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Stan Grootes">Stan Grootes</a></li>
