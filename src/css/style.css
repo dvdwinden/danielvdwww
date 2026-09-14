@@ -1639,31 +1639,57 @@ ul.list-none {
    ========================================================================== */
 @media (max-width: 640px) {
     /* Date above the entry rather than beside it: a 6rem column plus a wrapping
-       title leaves the title about 12 characters to work with. */
+       title leaves the title about 12 characters to work with. The row owns the
+       spacing, so a date sits tight under its own title and clear of the rule
+       above it — even gaps read as one long list rather than a set of entries. */
     .entry-list > div {
         flex-direction: column;
         align-items: flex-start;
+        padding: 1.1rem 0;
     }
 
     .entry-list > div > span {
         width: auto;
-        margin-right: 0;
-        margin-bottom: -0.5rem;
+        margin: 0 0 0.3rem;
     }
 
-    /* Caption and dots stack instead of competing for the same row. */
+    .entry-list > div > p {
+        margin: 0;
+    }
+
+    /* The dots move onto the image: no hover to reveal them here, and below the
+       frame they cost a row of height the caption already needs. Same grid cell
+       as the frames, pinned to its bottom edge. */
     .figure-cycle {
         grid-template-columns: 1fr;
     }
 
-    .figure-cycle figcaption,
-    .figure-cycle-dots {
+    .figure-cycle figcaption {
         grid-column: 1;
     }
 
     .figure-cycle-dots {
-        justify-content: flex-start;
-        margin-top: 1rem;
+        grid-row: 1;
+        grid-column: 1;
+        align-self: end;
+        justify-self: center;
+        z-index: 3;
+        margin: 0 0 0.75rem;
+        padding: 0.4rem 0.6rem;
+        border-radius: 999px;
+        background: rgb(0 0 0 / 0.45);
+        opacity: 1;
+    }
+
+    /* White on the disc, rather than currentColor, which has to survive a light
+       green plate and a near-black diagram in the same set. */
+    .figure-cycle-dot {
+        background: #fff;
+        opacity: 0.45;
+    }
+
+    .figure-cycle-dot.is-active {
+        opacity: 1;
     }
 }
 
