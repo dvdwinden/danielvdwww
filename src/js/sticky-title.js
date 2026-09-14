@@ -28,7 +28,12 @@
   sticky.setAttribute("aria-hidden", "true");
   sticky.textContent = heading.textContent.trim();
 
-  document.body.append(scrim, sticky);
+  // Inside #page-content, not on the body: that element carries a
+  // view-transition-name and so opens its own stacking context, which keeps the
+  // header's z-50 local to it. Appended to the body, the scrim would paint over
+  // the whole thing — name and theme toggle included — whatever its z-index.
+  const host = document.getElementById("page-content") || document.body;
+  host.append(scrim, sticky);
 
   // Each template paints its own page colour on #page-background via a utility
   // class, and the dark toggle swaps it at runtime, so the scrim reads the

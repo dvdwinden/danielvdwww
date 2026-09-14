@@ -1712,20 +1712,22 @@ ul.list-none {
     top: 0;
     left: 0;
     right: 0;
-    height: 7rem;
+    height: 5rem;
     z-index: 40;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.25s ease-in-out;
     /* Fades out rather than stopping at an edge, so there is no line across the
        page where the scrim ends. The colour follows the page, which each
-       template sets on #page-background. */
-    background: linear-gradient(
-        to bottom,
-        var(--scrim) 0%,
-        color-mix(in srgb, var(--scrim) 85%, transparent) 45%,
-        color-mix(in srgb, var(--scrim) 0%, transparent) 100%
-    );
+       template sets on #page-background.
+
+       Masked rather than a colour-stop gradient: the minifier rewrites 0% as 0
+       inside color-mix, which only takes a percentage, and one invalid stop
+       drops the whole background. A mask also avoids fading through
+       transparent black, which greys a light ground on the way out. */
+    background: var(--scrim);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
 }
 
 .sticky-title {
@@ -1752,9 +1754,14 @@ ul.list-none {
     color: theme("colors.white");
 }
 
-.page-scrim.is-visible,
 .sticky-title.is-visible {
     opacity: 1;
+}
+
+/* Enough to lift the title off whatever is behind it, not a bar across the
+   page. */
+.page-scrim.is-visible {
+    opacity: 0.85;
 }
 
 .sticky-title.is-visible {
