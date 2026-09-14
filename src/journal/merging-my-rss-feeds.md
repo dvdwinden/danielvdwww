@@ -7,7 +7,7 @@ tags: [internet, reading]
 description: I’m making a small change to the RSS feeds on my site. If you use any of them, have a quick read.
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
 
 <h1>Merging my RSS feeds</h1>
 <span class="font-sans text-sm">September 30, 2025</span>

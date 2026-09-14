@@ -12,7 +12,7 @@ image:
   objectPosition: center
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
 
 <h1>2025 in music</h1>
 <span class="font-sans text-sm">January 1, 2026</span>

@@ -5,7 +5,7 @@ description: Designer in Amsterdam. I design software at Enode, previously Ghost
 bodyClass: bg-blue
 ---
 
-<div class="relative w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert main-content">
+<div class="relative w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[12vh] pt-[6vh] dark:prose-invert main-content">
 
 <h1 class="home-subtitle mt-0 text-black dark:text-white">Designer, writer, reader.</h1>
 

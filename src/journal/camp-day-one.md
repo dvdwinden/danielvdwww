@@ -11,7 +11,7 @@ image:
   title: "The first day of my weeklong writing residency at Camp, in Aulus-les-Bains."
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (I)</h1>
 <span class="font-sans text-sm">November 13, 2025</span>

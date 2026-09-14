@@ -11,7 +11,7 @@ image:
   title: "Designing the ground floor of our home"
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
 
 <h1>Designing the ground floor of our home</h1>
 <span class="font-sans text-sm">March 13, 2023</span>

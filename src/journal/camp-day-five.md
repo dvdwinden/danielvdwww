@@ -12,7 +12,7 @@ image:
   objectPosition: bottom
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (V)</h1>
 <span class="font-sans text-sm">November 17, 2025</span>

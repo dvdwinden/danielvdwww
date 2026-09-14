@@ -7,7 +7,7 @@ tags: [residency]
 description: Editing, re-reading, and wrapping up.
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (VI)</h1>
 <span class="font-sans text-sm">November 18, 2025</span>

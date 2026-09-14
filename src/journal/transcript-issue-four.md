@@ -11,7 +11,7 @@ image:
   title: "The fourth and final issue of our magazine just came back from the printer’s, and we’re hosting an evening to celebrate one last time."
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
 
 <h1><em>TRANSCRIPT</em> ISSUE FOUR: release and launch party</h1>
 <span class="font-sans text-sm">October 1, 2025</span>

@@ -7,7 +7,7 @@ tags: [residency]
 description: Patterns are emerging, and I wrote a poem today.
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (IV)</h1>
 <span class="font-sans text-sm">November 16, 2025</span>
