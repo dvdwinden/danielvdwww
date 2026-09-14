@@ -1716,7 +1716,9 @@ ul.list-none {
     z-index: 40;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.25s ease-in-out;
+    /* A touch behind the title, so the ground arrives first and the text
+       settles onto it. */
+    transition: opacity 0.4s ease-out;
     /* Fades out rather than stopping at an edge, so there is no line across the
        page where the scrim ends. The colour follows the page, which each
        template sets on #page-background.
@@ -1740,10 +1742,12 @@ ul.list-none {
     text-overflow: ellipsis;
     pointer-events: none;
     opacity: 0;
-    transform: translateY(-0.25rem);
+    /* Rises into place, following the heading it replaces — which is leaving
+       upward — rather than dropping in against it. */
+    transform: translateY(0.6rem);
     transition:
-        opacity 0.25s ease-in-out,
-        transform 0.25s ease-in-out;
+        opacity 0.32s ease-out,
+        transform 0.42s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .dark .sticky-title {
