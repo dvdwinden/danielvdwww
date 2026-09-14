@@ -1069,8 +1069,10 @@ ul.newsletter picture {
 
 /* Same treatment as the homepage hover covers, and as Trema's own posts: the
    books sit on a transparent ground, so layered drop-shadows follow their
-   silhouette where a box-shadow would frame the empty space around them. */
-ul.newsletter picture img {
+   silhouette where a box-shadow would frame the empty space around them.
+   Matched on the img directly — optimizeImages rewrites these without the
+   <picture> wrapper the shortcode emits. */
+ul.newsletter img {
     filter:
         drop-shadow(1px 1px 1px rgba(40, 40, 40, 0.14))
         drop-shadow(16px 18px 14px rgba(40, 40, 40, 0.34));
