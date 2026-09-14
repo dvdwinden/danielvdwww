@@ -9,7 +9,7 @@ bodyClass: bg-blue
 
 <span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: September 2026</span>
 
-Folks I appreciate. Friends, and collaborators who I’ve worked with briefly, or extensively. Visit their sites, and have a click around.
+The people I appreciate, and the websites they keep. Friends or collaborators; some I’ve worked with briefly, others for years.
 
 <ul class="friends-index">
 <li><a href="https://a-antonov.com/?ref=daniel.pizza" target="_blank" rel="external" title="Alexander Antonov">Alexander Antonov</a></li>
