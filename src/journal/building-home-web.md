@@ -11,7 +11,7 @@ image:
   title: "On building a home on the web (I)"
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>On building a home on the web (I)</h1>
 <span class="font-sans text-sm">February 25, 2022</span>

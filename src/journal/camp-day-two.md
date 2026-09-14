@@ -7,7 +7,7 @@ tags: [residency]
 description: On day two of my writing residency, I made it to 2.647 words.
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (II)</h1>
 <span class="font-sans text-sm">November 14, 2025</span>

@@ -10,7 +10,7 @@ image:
   alt: "Still from Memoria (2022)"
   title: "On the big screen, intimacy is what you’ll find"
 ---
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>On the big screen, intimacy is what you’ll find</h1>
 <span class="font-sans text-sm">May 10, 2022</span>

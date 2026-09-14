@@ -7,7 +7,7 @@ tags: [internet, reading]
 description: Since launching my new website, I’ve found my way back to using RSS.
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>Returning to RSS</h1>
 <span class="font-sans text-sm">August 20, 2025</span>

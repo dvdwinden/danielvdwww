@@ -164,7 +164,7 @@
 
         <main id="main-content" class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]" role="main">
             <div class="w-full max-w-[1400px]">
-                <div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[12vh] pt-[6vh] pb-32 dark:prose-invert">
+                <div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[12.5vh] pt-[6vh] pb-32 dark:prose-invert">
                     {% if page.filePathStem.startsWith("/newsletter/") %}
                         {% if image and image.src %}
                         <figure class="not-prose mb-8">
@@ -213,6 +213,7 @@
         window.GITHUB_LAST_UPDATED = '{{ githubContributions.lastUpdated }}';
         {% endif %}
     </script>
+    <script src="/js/sticky-title.js"></script>
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
     <script src="/js/lastfm-live.js"></script>

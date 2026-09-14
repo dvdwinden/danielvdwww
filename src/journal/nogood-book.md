@@ -11,7 +11,7 @@ image:
   title: "Writing the NoGood book" 
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>Writing the NoGood book</h1>
 <span class="font-sans text-sm">July 9, 2026</span>

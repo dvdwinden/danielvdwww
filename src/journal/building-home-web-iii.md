@@ -11,7 +11,7 @@ image:
 description: Fifteen months after rebuilding my site, a look at what I’ve actually done with it—and why a page you own beats a timeline you don’t.
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>On building a home on the web (III)</h1>
 <span class="font-sans text-sm">September 8, 2026</span>

@@ -11,7 +11,7 @@ image:
   title: "A fresh coat of paint for Trema, my publication about the books I loved reading"
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>A fresh coat of paint for Trema, my publication about the books I loved reading</h1>
 <span class="font-sans text-sm">September 8, 2025</span>

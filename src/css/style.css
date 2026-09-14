@@ -1701,6 +1701,73 @@ ul.list-none {
     }
 }
 
+/* ==========================================================================
+   STICKY PAGE TITLE
+   Built by sticky-title.js, desktop only. A small echo of the page's heading
+   rises to the header line once the real one has scrolled past it, over a
+   scrim that keeps whatever passes underneath legible.
+   ========================================================================== */
+.page-scrim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7rem;
+    z-index: 40;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    /* Fades out rather than stopping at an edge, so there is no line across the
+       page where the scrim ends. The colour follows the page, which each
+       template sets on #page-background. */
+    background: linear-gradient(
+        to bottom,
+        var(--scrim) 0%,
+        color-mix(in srgb, var(--scrim) 85%, transparent) 45%,
+        color-mix(in srgb, var(--scrim) 0%, transparent) 100%
+    );
+}
+
+.sticky-title {
+    position: fixed;
+    top: 1.5rem;
+    z-index: 45;
+    font-family: theme("fontFamily.sans");
+    font-size: theme("fontSize.md");
+    font-weight: 500;
+    line-height: 1.5;
+    color: theme("colors.black");
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-0.25rem);
+    transition:
+        opacity 0.25s ease-in-out,
+        transform 0.25s ease-in-out;
+}
+
+.dark .sticky-title {
+    color: theme("colors.white");
+}
+
+.page-scrim.is-visible,
+.sticky-title.is-visible {
+    opacity: 1;
+}
+
+.sticky-title.is-visible {
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-scrim,
+    .sticky-title {
+        transition: none;
+    }
+}
+
 /* Resume */
 .resume {
     margin-top: 8rem;
