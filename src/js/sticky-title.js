@@ -51,10 +51,22 @@
     attributeFilter: ["class"],
   });
 
+  // Match the header's name rather than restating its type here, so the two
+  // sit on one baseline and stay matched if the header ever changes.
+  const name = document.querySelector("header a");
+
   function place() {
     const rect = heading.getBoundingClientRect();
     sticky.style.left = rect.left + "px";
     sticky.style.width = rect.width + "px";
+
+    if (!name) return;
+    const from = getComputedStyle(name);
+    sticky.style.top = name.getBoundingClientRect().top + window.scrollY + "px";
+    sticky.style.fontSize = from.fontSize;
+    sticky.style.lineHeight = from.lineHeight;
+    sticky.style.fontWeight = from.fontWeight;
+    sticky.style.letterSpacing = from.letterSpacing;
   }
 
   place();
@@ -63,7 +75,12 @@
   // so the swap happens where the eye already is.
   const observer = new IntersectionObserver(
     ([entry]) => {
-      const gone = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+      // Compared against the margin-adjusted root, not the viewport top. A
+      // short heading leaves that root while its own top is still positive —
+      // somewhere between 0 and the margin — so testing top < 0 missed the
+      // crossing and only caught up once the page had scrolled well past.
+      const line = entry.rootBounds ? entry.rootBounds.top : 0;
+      const gone = !entry.isIntersecting && entry.boundingClientRect.top < line;
       scrim.classList.toggle("is-visible", gone);
       sticky.classList.toggle("is-visible", gone);
     },

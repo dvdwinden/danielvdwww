@@ -1732,12 +1732,8 @@ ul.list-none {
 
 .sticky-title {
     position: fixed;
-    top: 1.5rem;
     z-index: 45;
     font-family: theme("fontFamily.sans");
-    font-size: theme("fontSize.md");
-    font-weight: 500;
-    line-height: 1.5;
     color: theme("colors.black");
     white-space: nowrap;
     overflow: hidden;
