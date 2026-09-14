@@ -1,7 +1,7 @@
 ---
 layout: narrow.njk
 title: Friends
-description: The people I like, and the websites they keep (part of slashfriends.org).
+description: The people I appreciate, and the websites they keep. Friends or collaborators; some I’ve worked with briefly, others for years.
 bodyClass: bg-blue
 ---
 
