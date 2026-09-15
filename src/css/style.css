@@ -1715,7 +1715,9 @@ ul.list-none {
     top: 0;
     left: 0;
     right: 0;
-    height: 5rem;
+    /* Deep enough for a solid band behind the header line (the header is
+       padded 1.5rem and its text runs to about 3.25rem) with the fade below. */
+    height: 6rem;
     z-index: 40;
     pointer-events: none;
     opacity: 0;
@@ -1729,10 +1731,14 @@ ul.list-none {
        Masked rather than a colour-stop gradient: the minifier rewrites 0% as 0
        inside color-mix, which only takes a percentage, and one invalid stop
        drops the whole background. A mask also avoids fading through
-       transparent black, which greys a light ground on the way out. */
+       transparent black, which greys a light ground on the way out.
+
+       Held solid through the header line, then faded: a plain 0-to-100% ramp
+       was already half gone where the title sits, so long book titles read
+       straight through it. */
     background: var(--scrim);
-    -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 60%, transparent 100%);
 }
 
 .sticky-title {
@@ -1761,10 +1767,10 @@ ul.list-none {
     opacity: 1;
 }
 
-/* Enough to lift the title off whatever is behind it, not a bar across the
-   page. */
+/* Near-solid behind the title; the mask's fade keeps it from reading as a bar
+   across the page. */
 .page-scrim.is-visible {
-    opacity: 0.85;
+    opacity: 0.96;
 }
 
 .sticky-title.is-visible {
