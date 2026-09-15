@@ -1071,11 +1071,14 @@ ul.newsletter picture {
    books sit on a transparent ground, so layered drop-shadows follow their
    silhouette where a box-shadow would frame the empty space around them.
    Matched on the img directly — optimizeImages rewrites these without the
-   <picture> wrapper the shortcode emits. */
+   <picture> wrapper the shortcode emits.
+   Kept tighter than Trema's 16px/18px/14px: WebKit clips the shadow at the
+   image's own edge, and at phone width the transparent ground below the book
+   is only 16–30px, so the bigger shadow ended in a hard line. */
 ul.newsletter img {
     filter:
         drop-shadow(1px 1px 1px rgba(40, 40, 40, 0.14))
-        drop-shadow(16px 18px 14px rgba(40, 40, 40, 0.34));
+        drop-shadow(5px 7px 7px rgba(40, 40, 40, 0.3));
 }
 
 ul.newsletter h2 {
