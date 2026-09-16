@@ -35,7 +35,7 @@ I think an in-depth post on the project with more visual material will follow.
 
 ## Outside of work
 
-Still, strangely: I’ve [read](/library "My library") more than I normally do. I think I wrote a bit more than usual, too. The [NoGood book](/journal/nogood-book/ "Writing the NoGood book") hit its buyers’ doormats this summer, and I’m proud of writing and editing that monograph.
+Still, strangely: I’ve [read](/library "My library") more than I normally do. I think I wrote a bit more than usual, too—the [NoGood book](/journal/nogood-book/ "Writing the NoGood book") hit its buyers’ doormats this summer, and I’m proud of writing and editing that monograph.
 
 I’ve [reflected](/journal/building-home-web-iii/ "On building a home on the web (III)") on what the last year-or-so of keeping this website brought me, and realised it’s never been more alive. It’s expanded greatly since its launch in June of last year, and during my holiday—I couldn’t resist—I built a page to house my [photography](/photos "My photography"). Now I can tailor my [Instagram feed](https://instagram.com/dvdwinden "My Instagram") entirely to [Trema](https://trema.website?ref=daniel.pizza "Trema, my monthly newsletter on books worth reading"), and rid it of the personal things I’d allowed to creep on there, after [_TRANSCRIPT_](https://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") concluded.
 
@@ -48,7 +48,7 @@ I’ve [reflected](/journal/building-home-web-iii/ "On building a home on the we
 
 Aside from all this, I’m still chipping away at a website for illustrator Ilse Weisfelt in the evenings.
 
-## Movement
+## Outside my door
 
 Tennis took centre stage this summer: despite the sport’s incredible mental difficulty (especially brutal when you play it competitively), the distraction it provides me from work does force me to stay sane during busy periods.
 
@@ -58,7 +58,7 @@ With the competitive season behind me, running is moving back to the foreground,
 
 <div id="training-calendar" style="display: none;" class="mt-16 mb-16"></div>
 
-<p class="mt-12 font-sans text-sm leading-relaxed tracking-wide text-black/50 dark:text-white/50">
+<p class="mt-12 font-sans text-sm leading-snug tracking-wide text-black/50 dark:text-white/50">
   Last updated in {{ page.inputPath | lastModified("MMMM 'of' yyyy") }}. The /now page is based on an idea by
   <a href="https://nownownow.com/about" title="The /now page movement, by Derek Sivers" rel="external" target="_blank">Derek Sivers</a>.
 </p>
