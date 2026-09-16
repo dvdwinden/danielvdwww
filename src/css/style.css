@@ -1708,7 +1708,8 @@ ul.list-none {
    STICKY PAGE TITLE
    Built by sticky-title.js, desktop only. A small echo of the page's heading
    rises to the header line once the real one has scrolled past it, over a
-   scrim that keeps whatever passes underneath legible.
+   scrim that keeps whatever passes underneath legible. The echo is a child of
+   the header; the scrim sits in #page-content, below it.
    ========================================================================== */
 .page-scrim {
     position: fixed;
@@ -1742,8 +1743,15 @@ ul.list-none {
 }
 
 .sticky-title {
-    position: fixed;
-    z-index: 45;
+    /* Absolute inside the fixed header, whose padding box spans the viewport:
+       the left edge JS measures is still a viewport coordinate, while the
+       vertical place comes from the header's own box rather than a measured
+       one — nothing to get stale, and nothing to go wrong when the page is
+       restored already scrolled. Centred on the header line, as the name
+       beside it is, so the two share a baseline whatever the tallest item in
+       the row turns out to be. */
+    position: absolute;
+    top: 50%;
     font-family: theme("fontFamily.sans");
     color: theme("colors.black");
     white-space: nowrap;
@@ -1753,7 +1761,7 @@ ul.list-none {
     opacity: 0;
     /* Rises into place, following the heading it replaces — which is leaving
        upward — rather than dropping in against it. */
-    transform: translateY(0.6rem);
+    transform: translateY(calc(-50% + 0.6rem));
     transition:
         opacity 0.32s ease-out,
         transform 0.42s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1774,7 +1782,7 @@ ul.list-none {
 }
 
 .sticky-title.is-visible {
-    transform: translateY(0);
+    transform: translateY(-50%);
 }
 
 @media (prefers-reduced-motion: reduce) {
