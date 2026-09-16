@@ -7,11 +7,9 @@ bodyClass: bg-blue
 
 # Now
 
-<div class="-mt-4 font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated in September of 2026</div>
-
 </div>
 
-<div>
+<div class="-mt-32 sm:pt-4 pt-2">
 <figure class="w-full">
   <video autoplay loop muted playsinline class="w-full" preload="metadata" aria-label="An aerial view at dusk of houses connected to the grid">
     <source src="/assets/work/enode-grid.webm" type="video/webm">
@@ -25,17 +23,21 @@ bodyClass: bg-blue
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
-Over the past several months I’ve been knee-deep in Enode’s [rebrand](https://www.linkedin.com/feed/update/urn:li:activity:7505548693413089280/ "Announcing the Enode rebrand on LinkedIn"). It was a rewarding yet challenging project, one that saw me work closely with [Kristian](https://kristianhjelle.com?ref=daniel.pizza "Kristian Hjelle") and [Studio Oker](https://oker.com?ref=daniel.pizza "Studio Oker") to revamp our visual and written language, from scratch, culminating in the launch of our [new website](https://enode.com?ref=daniel.pizza "Enode"). A Sardinian holiday in September was much needed.
+## Rebranding Enode
 
-I think a post on the project with more visual material will follow.
+Over the past several months I’ve been knee-deep in Enode’s [rebrand](https://www.linkedin.com/feed/update/urn:li:activity:7505548693413089280/ "Announcing the Enode rebrand on LinkedIn"). It was a rewarding yet challenging project. It saw me work closely with [Kristian](https://kristianhjelle.com?ref=daniel.pizza "Kristian Hjelle") and [Studio Oker](https://oker.com?ref=daniel.pizza "Studio Oker") to revamp our brand identity from scratch, culminating in the launch of our [new website](https://enode.com?ref=daniel.pizza "Enode").
+
+New typography, new colours, a new logo. New language, new illustrations, new 3<span class="smallcaps">D</span> renders. Juggling external collaborators, internal stakeholders, and a variety of work streams. A Sardinian holiday in September was much needed.
+
+I think an in-depth post on the project with more visual material will follow.
 
 <div id="github-calendar" style="display: none;" class="mt-16 mb-16"></div>
 
 ## Outside of work
 
-Still, I’ve [read](/library "My library") more than I normally do. I wrote more than usual, too, with the [NoGood book](/journal/nogood-book/ "Writing the NoGood book") hitting doormats this summer.
+Still, strangely: I’ve [read](/library "My library") more than I normally do. I think I wrote a bit more than usual, too. The [NoGood book](/journal/nogood-book/ "Writing the NoGood book") hit its buyers’ doormats this summer, and I’m proud of writing and editing that monograph.
 
-I’ve [reflected](/journal/building-home-web-iii/ "On building a home on the web (III)") on what the last year-or-so of this website brought me, and built a page to house my [photography](/photos "My photography"), so I could tailor my [Instagram feed](https://instagram.com/dvdwinden "My Instagram") entirely to [Trema](https://trema.website?ref=daniel.pizza "Trema, my monthly newsletter on books worth reading"). And I’m still chipping away at a website for illustrator Ilse Weisfelt in the evenings.
+I’ve [reflected](/journal/building-home-web-iii/ "On building a home on the web (III)") on what the last year-or-so of keeping this website brought me, and realised it’s never been more alive. It’s expanded greatly since its launch in June of last year, and during my holiday—I couldn’t resist—I built a page to house my [photography](/photos "My photography"). Now I can tailor my [Instagram feed](https://instagram.com/dvdwinden "My Instagram") entirely to [Trema](https://trema.website?ref=daniel.pizza "Trema, my monthly newsletter on books worth reading"), and rid it of the personal things I’d allowed to creep on there, after [_TRANSCRIPT_](https://transcriptmag.store?ref=daniel.pizza "TRANSCRIPT Magazine") concluded.
 
 {% bookmark
   url="/journal/building-home-web-iii/",
@@ -44,12 +46,19 @@ I’ve [reflected](/journal/building-home-web-iii/ "On building a home on the we
     done with it—and why a page you own beats a timeline you don’t."
 %}
 
-## Tennis and running
+Aside from all this, I’m still chipping away at a website for illustrator Ilse Weisfelt in the evenings.
 
-Tennis took centre stage this summer: despite the mental difficulty of it, the distraction from work does force me to stay sane during busy periods. I played eight tournaments and reached my first final (and finished runner-up).
+## Movement
 
-Fourteen matches played: 7 won, 7 lost. My best summer total so far. With the competitive season behind me, running is back to the foreground.
+Tennis took centre stage this summer: despite the sport’s incredible mental difficulty (especially brutal when you play it competitively), the distraction it provides me from work does force me to stay sane during busy periods.
+
+I played eight tournaments and reached my first final (and finished runner-up). Fourteen matches played: 7 won, 7 lost. My best summer total so far.
+
+With the competitive season behind me, running is moving back to the foreground, with a 5<span class="smallcaps">K</span> race coming up in November where I can see if my improved, more patient training is paying off.
 
 <div id="training-calendar" style="display: none;" class="mt-16 mb-16"></div>
 
-_The /now page is based on an idea by [Derek Sivers](https://nownownow.com/about "The /now page movement, by Derek Sivers")._
+<p class="mt-12 font-sans text-sm leading-relaxed tracking-wide text-black/50 dark:text-white/50">
+  Last updated in {{ page.inputPath | lastModified("MMMM 'of' yyyy") }}. The /now page is based on an idea by
+  <a href="https://nownownow.com/about" title="The /now page movement, by Derek Sivers" rel="external" target="_blank">Derek Sivers</a>.
+</p>
