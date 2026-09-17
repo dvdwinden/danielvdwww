@@ -11,7 +11,7 @@ bodyClass: bg-blue
 
 <span class="callout">I care about the story as much as the typography it’s set in.</span>
 
-For over a decade I’ve worked on digital products, websites and web apps—used by energy companies, publishers, furniture makers, financial institutions and the people who design robotic warehouses. I’m as comfortable putting together a briefing as I am polishing an interaction. I can do the work, or build and lead the team, as I have for years.
+For over a decade I’ve worked on digital products, websites and web apps: software for energy retailers, furniture makers, financial institutions and robotics companies. For journalists, designers and consumers. I’m as comfortable putting together a briefing as I am polishing an interaction; I can do the work, or build and lead the team, as I have for years.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -39,32 +39,41 @@ For over a decade I’ve worked on digital products, websites and web apps—use
 <div class="sm:mt-16 mt-8 sm:mb-16 mb-8">
   <figure class="figure-cycle w-full" style="--cycle-ratio: 2 / 1">
     <div class="figure-cycle-frames">
+      <div class="figure-cycle-frame">{% image "src/assets/work/enode-social-icon.png", "The Enode icon" %}</div>
+      <div class="figure-cycle-frame">{% image "src/assets/work/enode-logo.png", "The Enode logo" %}</div>
       <div class="figure-cycle-frame">
         <video autoplay loop muted playsinline preload="metadata" aria-label="A home with solar panels, a heat pump and an EV charging in the garage">
           <source src="/assets/work/enode-home.webm" type="video/webm" />
           <source src="/assets/work/enode-home.mp4" type="video/mp4" />
         </video>
       </div>
-      <div class="figure-cycle-frame">{% image "src/assets/work/enode-wordmark.png", "The Enode wordmark" %}</div>
       <div class="figure-cycle-frame">{% image "src/assets/work/enode-type.png", "Enode Sans and Enode Mono, the brand’s typefaces" %}</div>
-      <div class="figure-cycle-frame">{% image "src/assets/work/enode-icons.png", "Icons for the Enode platform" %}</div>
       <div class="figure-cycle-frame">{% image "src/assets/work/enode-next-grid.png", "“The Next Grid”" %}</div>
+      <div class="figure-cycle-frame">{% image "src/assets/work/enode-invisible-enabler.png", "“We’re the invisible enabler of a connected energy system.”" %}</div>
       <div class="figure-cycle-frame">
-        <video autoplay loop muted playsinline preload="metadata" aria-label="An aerial view at dusk of houses connected to the grid">
-          <source src="/assets/work/enode-grid.webm" type="video/webm" />
-          <source src="/assets/work/enode-grid.mp4" type="video/mp4" />
+        <video autoplay loop muted playsinline preload="metadata" aria-label="The enabler grid: a field of dots blooming in waves">
+          <source src="/assets/work/enode-enabler-dark.webm" type="video/webm" />
+          <source src="/assets/work/enode-enabler-dark.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="figure-cycle-frame">
-        <video autoplay loop muted playsinline preload="metadata" aria-label="A walk across a diagram of the Enode platform">
-          <source src="/assets/work/enode-platform.webm" type="video/webm" />
+        <!-- mp4 only: VP9 lands 33% heavier than h264 on this dark, near-flat
+             diagram, so a webm here would cost every browser that prefers it. -->
+        <video autoplay loop muted playsinline preload="metadata" aria-label="The five layers of the Enode platform, stacked and turning">
           <source src="/assets/work/enode-platform.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="figure-cycle-frame">
-        <video autoplay loop muted playsinline preload="metadata" aria-label="The enabler grid: a field of dots blooming in waves">
-          <source src="/assets/work/enode-enabler.webm" type="video/webm" />
-          <source src="/assets/work/enode-enabler.mp4" type="video/mp4" />
+        <video autoplay loop muted playsinline preload="metadata" aria-label="A pan across the home energy coordination diagram">
+          <source src="/assets/work/enode-hec.webm" type="video/webm" />
+          <source src="/assets/work/enode-hec.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="figure-cycle-frame">{% image "src/assets/work/enode-icons.png", "Icons for the Enode platform" %}</div>
+      <div class="figure-cycle-frame">
+        <video autoplay loop muted playsinline preload="metadata" aria-label="An aerial view at dusk of homes connected to the energy grid">
+          <source src="/assets/work/enode-grid.webm" type="video/webm" />
+          <source src="/assets/work/enode-grid.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -76,7 +85,7 @@ For over a decade I’ve worked on digital products, websites and web apps—use
 
 <section class="introduction">
 
-At [Enode](https://enode.com?ref=daniel.pizza "Enode") I mostly design software: tools for energy retailers and the teams trading behind them. This year, though, I led our rebrand: giving shape to how the company looks and sounds, and designing and building its new website from scratch.
+At [Enode](https://enode.com?ref=daniel.pizza "Enode") I mostly design software for energy retailers and traders. This year, though, I led our rebrand: giving shape to how the company looks and sounds, and designing and building its new website from scratch.
 
 {% bookmark
   url="https://enode.com?ref=daniel.pizza",

@@ -382,9 +382,11 @@ html.dark #page-background {
 }
 
 /* Callout */
+/* Display size wants less leading than body copy: at 1.75rem the 1.5 rhythm
+   the rest of the page runs on pulls the two lines apart. */
 .callout {
     font-size: 1.75rem;
-    line-height: 1.4;
+    line-height: 1.2;
     color: theme("colors.black");
 }
 

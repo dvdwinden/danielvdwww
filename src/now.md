@@ -11,12 +11,17 @@ bodyClass: bg-blue
 
 <div class="-mt-32 sm:pt-4 pt-2">
 <figure class="w-full">
-  <video autoplay loop muted playsinline class="w-full" preload="metadata" aria-label="An aerial view at dusk of houses connected to the grid">
+  <!-- The square crop below md, the way enode.com serves its heroes: `media` on
+       a <source> is the one form the browser resolves BEFORE fetching, so a
+       phone lands exactly one file rather than the wide render it then crops. -->
+  <video autoplay loop muted playsinline class="w-full" preload="metadata" aria-label="An aerial view at dusk of homes connected to the energy grid">
+    <source media="(max-width: 767.98px)" src="/assets/work/enode-grid-square.webm" type="video/webm">
+    <source media="(max-width: 767.98px)" src="/assets/work/enode-grid-square.mp4" type="video/mp4">
     <source src="/assets/work/enode-grid.webm" type="video/webm">
     <source src="/assets/work/enode-grid.mp4" type="video/mp4">
   </video>
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Aerial view of houses connected to the grid. Courtesy of Mirrorr Studio for the Enode rebrand.
+    Aerial view of homes connected to the energy grid. Courtesy of Mirrorr Studio, for the Enode rebrand.
   </figcaption>
 </figure>
 </div>
