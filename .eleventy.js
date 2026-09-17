@@ -192,6 +192,22 @@ module.exports = function (eleventyConfig) {
         });
   });
 
+  // eleventy-img reuses any output that already sits at the name it would
+  // write, and our filenameFormat is name + width alone, with no content hash.
+  // So an edited source keeps serving its old renditions — from _site locally,
+  // or from the restored image cache in CI. Clear the widths we are about to
+  // write before writing them.
+  function clearOutputs(outputDir, originalName, widths) {
+    for (const width of widths) {
+      const outputFile = path.join(outputDir, `${originalName}-${width}.${OUTPUT_FORMAT}`);
+      try {
+        if (fs.existsSync(outputFile)) fs.unlinkSync(outputFile);
+      } catch (err) {
+        console.warn(`Could not clear ${outputFile}:`, err.message);
+      }
+    }
+  }
+
   // Process an image and return metadata
   async function processImage(srcPath, widths = DEFAULT_WIDTHS) {
     // Already processed?
@@ -224,8 +240,11 @@ module.exports = function (eleventyConfig) {
     console.log(`Processing image: ${srcPath} (${originalName}${originalExt})`);
 
     try {
+      const resolvedWidths = widthsFor(srcPath, widths);
+      clearOutputs(outputDir, originalName, resolvedWidths);
+
       const metadata = await Image(srcPath, {
-        widths: widthsFor(srcPath, widths),
+        widths: resolvedWidths,
         formats: ["webp"],
         outputDir: outputDir,
         urlPath: `/${urlPath}/`,
@@ -259,8 +278,11 @@ module.exports = function (eleventyConfig) {
     const originalName = path.basename(parsedPath.name);
 
     try {
+      const resolvedWidths = widthsFor(srcPath, widths);
+      clearOutputs(outputDir, originalName, resolvedWidths);
+
       return await Image(srcPath, {
-        widths: widthsFor(srcPath, widths),
+        widths: resolvedWidths,
         formats: ["webp"],
         outputDir: outputDir,
         urlPath: `/${urlPath}/`,
@@ -318,20 +340,21 @@ module.exports = function (eleventyConfig) {
       const outputDir = path.join("./_site", path.dirname(relativePath));
       const originalName = path.basename(parsedPath.name);
 
-      // Check if any of the output files exist and are newer than source
+      // Only skip when every width is present and newer than the source. One
+      // fresh rendition used to be enough, which let a single regenerated width
+      // mask its stale siblings — the page then served the old image at every
+      // size a browser actually picks.
       for (const width of DEFAULT_WIDTHS) {
         const outputFile = path.join(outputDir, `${originalName}-${width}.${OUTPUT_FORMAT}`);
-        if (fs.existsSync(outputFile)) {
-          const outputStats = fs.statSync(outputFile);
-          // If output is newer than source, no need to process
-          if (outputStats.mtime > srcStats.mtime) {
-            return false;
-          }
+        if (!fs.existsSync(outputFile)) {
+          return true;
+        }
+        if (fs.statSync(outputFile).mtime <= srcStats.mtime) {
+          return true;
         }
       }
 
-      // If we get here, either no output files exist or source is newer
-      return true;
+      return false;
     } catch (err) {
       // If there's any error checking, assume we need to process
       return true;
