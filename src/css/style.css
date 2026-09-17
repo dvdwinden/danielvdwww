@@ -1660,9 +1660,10 @@ ul.list-none {
         margin: 0;
     }
 
-    /* The dots move onto the image: no hover to reveal them here, and below the
-       frame they cost a row of height the caption already needs. Same grid cell
-       as the frames, pinned to its bottom edge. */
+    /* No controls on a phone: the arrows are a hover affordance the touch
+       screen cannot offer, and their halves would turn a tap on the image into
+       a jump. The dots go with them, leaving the set to cycle on its own.
+       display: none takes the buttons out of the tab order too. */
     .figure-cycle {
         grid-template-columns: 1fr;
     }
@@ -1671,28 +1672,9 @@ ul.list-none {
         grid-column: 1;
     }
 
+    .figure-cycle-arrow,
     .figure-cycle-dots {
-        grid-row: 1;
-        grid-column: 1;
-        align-self: end;
-        justify-self: center;
-        z-index: 3;
-        margin: 0 0 0.75rem;
-        padding: 0.4rem 0.6rem;
-        border-radius: 999px;
-        background: rgb(0 0 0 / 0.45);
-        opacity: 1;
-    }
-
-    /* White on the disc, rather than currentColor, which has to survive a light
-       green plate and a near-black diagram in the same set. */
-    .figure-cycle-dot {
-        background: #fff;
-        opacity: 0.45;
-    }
-
-    .figure-cycle-dot.is-active {
-        opacity: 1;
+        display: none;
     }
 }
 
