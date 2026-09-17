@@ -1899,19 +1899,82 @@ ul.list-none {
     }
 }
 
-@media (max-width: 480px) {
+/* Phones read a narrower column, so the 20px body would only fit ~37
+   characters per line. Dropping to 19px (and trimming the gutter) brings the
+   measure back to ~41 — closer to the 45–75 range prose wants.
+
+   Every heading that carries its own size steps down here too, so the whole
+   scale moves at one breakpoint instead of three. The .work-* pair keeps its
+   one step above the plain h2/h3 it sits beside on the home page. */
+@media (max-width: 640px) {
+    .prose {
+        font-size: 1.1875rem;
+        line-height: 1.55;
+    }
+
+    /* Nothing renders an h3 today, but the base rule holds it at 1.5rem — which
+       is where h2 lands on a phone, so the first `###` written would read as a
+       second h2. A step below keeps the tiers apart. */
+    .prose h3 {
+        font-size: 1.375rem;
+    }
+
+    .prose h2.section-title {
+        font-size: 1.5rem;
+    }
+
     .prose h2.work-title {
         font-size: 1.75rem;
     }
 
-    .prose h3.work-desc {
-        font-size: 1.5rem;
+    /* .trema-list is .not-prose, so it hard-codes the body size and leading
+       rather than inheriting them. The size follows the body; the leading does
+       not — these are titles, and a wrapped one at 1.55 drifts away from the
+       row it belongs to. */
+    .prose ul.trema-list li a {
+        font-size: 1.1875rem;
+        line-height: 1.3;
     }
 
-    .prose h1 {
-        font-size: 2rem;
+    /* 285 rows of 22px title over 18px author is a lot of weight for an index,
+       and heavier than the 19px body beside it. A step down each keeps the row
+       readable without the list shouting. */
+    .book-item a.font-serif {
+        font-size: 1.25rem;
     }
 
+    .book-item .flex-col span.font-serif {
+        font-size: 1rem;
+    }
+
+    /* Both lists side by side need ~370px and the column is ~350, so they used
+       to wrap raggedly into each other. Stack them instead: text links on one
+       row, icons on the next, each wide enough to stay on one line. */
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: 1.25rem;
+    }
+
+    .site-footer ul {
+        width: 100%;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+
+    .site-footer ul + ul {
+        gap: 1.25rem;
+    }
+
+    /* 14px serif is a thin tap target; the extra room a stacked footer buys
+       goes back into size. */
+    .site-footer a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
     figcaption,
     .prose figcaption {
         padding-left: 0 !important;
@@ -1919,14 +1982,6 @@ ul.list-none {
 
     .site-footer {
         margin: 4rem 0 6rem 0;
-    }
-
-    .site-footer ul {
-        gap: 0.5rem;
-    }
-
-    .site-footer ul li a {
-        font-size: 1rem;
     }
 }
 
