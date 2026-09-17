@@ -166,12 +166,16 @@ In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings 
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
 
+I enjoyed our collaboration very much, and wrote a few words about it in my journal. I look forward to taking on more, similar work—writing, editing, or both.
+
 {% bookmark
   url="/journal/nogood-book/",
   title="Writing the NoGood book",
   description="A gentle introduction to my friend Thomas’s moniker, NoGood—an exercise
     in restraint, written through hours of conversation. The book is out now."
 %}
+
+---
 
 <section class="resume" id="resume">
   <h2 class="work-title">Resumé</h2>

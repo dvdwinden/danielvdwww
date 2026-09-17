@@ -1698,7 +1698,8 @@ ul.list-none {
 
 /* Resume */
 .resume {
-    margin-top: 8rem;
+    /* A rule separates this from the NoGood section, as between every other
+       pair, so the gap above comes from the rule's own margin. */
     margin-bottom: 4rem;
     /* The homepage intro links here, and the header floats over the page. */
     scroll-margin-top: 6rem;
