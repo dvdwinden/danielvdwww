@@ -1884,8 +1884,10 @@ ul.list-none {
         font-size: 1.5rem;
     }
 
+    /* Display type, so it holds more of its desktop size than the body does:
+       one step down from 1.75rem rather than two. */
     .callout {
-        font-size: 1.5rem;
+        font-size: 1.625rem;
     }
 
     .site-footer {
