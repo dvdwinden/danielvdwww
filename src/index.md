@@ -11,7 +11,7 @@ bodyClass: bg-blue
 
 <span class="callout">I care about the story as much as the typography it’s set in.</span>
 
-For over a decade I’ve worked on digital products, websites and web apps: software for energy retailers, furniture makers, financial institutions and robotics companies. For journalists, designers and consumers. I’m as comfortable putting together a briefing as I am polishing an interaction; I can do the work, or build and lead the team, as I have for years.
+For over a decade I’ve worked on digital products, websites and web apps: software for energy retailers, furniture makers, financial institutions and robotics companies. For journalists, designers and consumers. I’m as comfortable putting together a briefing as I am polishing an interaction; I can do the work, or build and lead the team, as I have <a href="#resume" title="Jump to my resumé">for years</a>.
 
   <div class="bg-white dark:bg-gray-900/20 border border-gray-200 dark:border-gray-700 rounded-lg py-3 pl-3 pr-6">
     <div class="flex justify-between items-center">
@@ -173,7 +173,7 @@ In 2026 I wrote and edited the NoGood art book, taking Thomas Rohlfs’ musings 
     in restraint, written through hours of conversation. The book is out now."
 %}
 
-<section class="resume">
+<section class="resume" id="resume">
   <h2 class="work-title">Resumé</h2>
   <div class="entry-list flex flex-col">
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">

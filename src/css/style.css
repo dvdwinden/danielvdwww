@@ -62,6 +62,14 @@ nav a:focus-visible {
 @tailwind components;
 @tailwind utilities;
 
+/* In-page jumps glide rather than cut, so the reader keeps their place on the
+   way down. Honoured only when the reader hasn't asked for less motion. */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 /* ==========================================================================
    FONT STYLES
    Note: @font-face declarations are inlined in HTML <head> for faster discovery.
@@ -1692,6 +1700,8 @@ ul.list-none {
 .resume {
     margin-top: 8rem;
     margin-bottom: 4rem;
+    /* The homepage intro links here, and the header floats over the page. */
+    scroll-margin-top: 6rem;
 }
 
 .resume ul {
