@@ -2056,6 +2056,15 @@ ul.list-none {
     flex: 1 1 auto;
 }
 
+/* Card text is a label, not prose, so it opts out of the `text-wrap: pretty`
+   it inherits from .prose. In a box this narrow pretty buys nothing — it never
+   saved a line in testing — and it costs width: one blurb's longest line went
+   from 285px to 246px inside the same 311px box. */
+.bookmark-title,
+.bookmark-description {
+    text-wrap: wrap;
+}
+
 .bookmark-title {
     font-family: theme("fontFamily.sans");
     font-size: 1.125rem;
@@ -2156,6 +2165,11 @@ ul.list-none {
         width: 5rem;
         height: 5rem;
         margin: 0.75rem 0.75rem 0.75rem 0;
+    }
+
+    /* 20px of side padding is a lot to spend out of a ~350px card. */
+    .bookmark-content {
+        padding: 0.875rem 1rem;
     }
 }
 
