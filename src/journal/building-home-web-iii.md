@@ -79,6 +79,6 @@ Matthias Ott made a version of this argument in 2019, in [_Into the Personal-Web
 
 He suggests keeping a links section for exactly this reason: find a good thought on somebody else’s site, write about it, link to it, and over the years you’ve built an archive for yourself and for anyone who wanders in.
 
-For a while I thought of my links as the filler between real posts. Matthias is right that they’re the connective tissue. Roughly five hundred people read the things I collect every month, and now and again I find a link back from somebody else’s site. The site ebbs and flows, but it doesn’t lie dormant. It’s one more corner of the web, kept on purpose.
+For a while I thought of my links as the filler between real posts. Matthias is right that they’re the connective tissue. Roughly five hundred people read the things I collect every month, and now and again I find a link back from somebody else’s site. My activity on the site ebbs and flows, but the pages stay put—and every so often somebody follows a link to the corner I keep on the internet.
 
 </div>
