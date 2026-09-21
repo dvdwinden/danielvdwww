@@ -192,14 +192,37 @@ module.exports = function (eleventyConfig) {
         });
   });
 
+  // Output files this process has already cleared. See clearOutputs.
+  const CLEARED_OUTPUTS = new Set();
+
   // eleventy-img reuses any output that already sits at the name it would
   // write, and our filenameFormat is name + width alone, with no content hash.
   // So an edited source keeps serving its old renditions — from _site locally,
   // or from the restored image cache in CI. Clear the widths we are about to
   // write before writing them.
+  //
+  // Once per file per build, though, and that "once" is load-bearing. The job
+  // that writes these is memoized inside eleventy-img on src + options: call it
+  // a second time with the same arguments and it hands back the metadata it
+  // resolved the first time without touching the disk. So a second clear of the
+  // same widths deletes renditions that nothing will write again — and the
+  // second call is the normal case, because the optimizeImages transform runs
+  // once per output page and the same photograph appears on a post, on an index
+  // and on every tag page it belongs to.
+  //
+  // That is how /assets/journal/nogood06-*.webp 404'd from July until today:
+  // deleted by a later page's pass, never rewritten, and skipped by every build
+  // since because the source file hadn't changed. Which image loses depends on
+  // the order pages happen to be rendered in, so it moves around between builds
+  // — the run that finally restored nogood06 took out nogood05 instead. Two
+  // silent ENOENTs in the same run are the same bug caught mid-act: eleventy-img
+  // returning memoized metadata and then statting a file that had just been
+  // deleted out from under it.
   function clearOutputs(outputDir, originalName, widths) {
     for (const width of widths) {
       const outputFile = path.join(outputDir, `${originalName}-${width}.${OUTPUT_FORMAT}`);
+      if (CLEARED_OUTPUTS.has(outputFile)) continue;
+      CLEARED_OUTPUTS.add(outputFile);
       try {
         if (fs.existsSync(outputFile)) fs.unlinkSync(outputFile);
       } catch (err) {
