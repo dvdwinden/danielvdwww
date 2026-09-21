@@ -1,10 +1,15 @@
 {#
     Webmentions for the current page.
 
-    Renders nothing at all unless this page has actually been mentioned, which
-    is what lets it be dropped into both layouts without gating on page type.
-    Set `showWebmentions: false` in a page's frontmatter to suppress it anyway.
-    (Not `webmentions: false` — that name would shadow the global data below.)
+    Renders nothing at all unless this page has actually been mentioned, and
+    only on writing: a post in links/, journal/ or newsletter/. The homepage,
+    /photos/ and the other standing pages collect plenty of Bluesky likes by
+    way of Bridgy, but a facepile under a page that isn't a piece of writing
+    is just noise — those pages stay clean.
+
+    `showWebmentions: true` in a page's frontmatter forces it on anyway, and
+    `false` forces it off a post. (Not `webmentions: false` — that name would
+    shadow the global data below.)
 
     Nothing here is piped through `| safe`. All of it was written by strangers;
     src/_data/webmentions.js reduces it to plain text and validated URLs, and
@@ -36,7 +41,14 @@
 {% endmacro %}
 
 {% set wm = webmentions.byUrl[page.url] %}
-{% if wm and wm.total and showWebmentions != false %}
+{# Posts live in these three directories; everything else is a standing page. #}
+{% set isPost = page.filePathStem.startsWith("/links/")
+    or page.filePathStem.startsWith("/journal/")
+    or page.filePathStem.startsWith("/newsletter/") %}
+{% set show = isPost %}
+{% if showWebmentions == true %}{% set show = true %}{% endif %}
+{% if showWebmentions == false %}{% set show = false %}{% endif %}
+{% if wm and wm.total and show %}
 {% set conversation = wm.replies.concat(wm.mentions) %}
 {% set facepile = wm.likes.concat(wm.reposts) %}
 {# Capped: the label above already carries the true count, and a popular post
