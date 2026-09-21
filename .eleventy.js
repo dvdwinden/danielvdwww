@@ -192,39 +192,63 @@ module.exports = function (eleventyConfig) {
         });
   });
 
-  // Output files this process has already cleared. See clearOutputs.
-  const CLEARED_OUTPUTS = new Set();
+  // Images whose renditions have already been cleared in this build.
+  const CLEARED_SOURCES = new Set();
 
   // eleventy-img reuses any output that already sits at the name it would
   // write, and our filenameFormat is name + width alone, with no content hash.
   // So an edited source keeps serving its old renditions — from _site locally,
-  // or from the restored image cache in CI. Clear the widths we are about to
-  // write before writing them.
+  // or from the restored image cache in CI. Clear them before writing.
   //
-  // Once per file per build, though, and that "once" is load-bearing. The job
-  // that writes these is memoized inside eleventy-img on src + options: call it
-  // a second time with the same arguments and it hands back the metadata it
-  // resolved the first time without touching the disk. So a second clear of the
-  // same widths deletes renditions that nothing will write again — and the
-  // second call is the normal case, because the optimizeImages transform runs
-  // once per output page and the same photograph appears on a post, on an index
-  // and on every tag page it belongs to.
+  // Two rules make that safe, and both are load-bearing. Clear every rendition
+  // of an image at once, the first time the build touches it, and never again;
+  // and clear only what is actually stale.
+  //
+  // The reason is that deleting and rewriting are done by different passes. One
+  // image goes through here several times per build at different width sets —
+  // processAllImages at the defaults, the retina shortcode at 1x/2x, and the
+  // optimizeImages transform once per output page, which means a post, an index
+  // and every tag page it appears on. The rewrite is memoized inside
+  // eleventy-img on src + options, so a repeat call with the same arguments
+  // returns the first call's metadata without touching the disk. Delete per
+  // width-set, per pass, and a later pass eventually removes a rendition that
+  // nothing afterwards will write again.
   //
   // That is how /assets/journal/nogood06-*.webp 404'd from July until today:
-  // deleted by a later page's pass, never rewritten, and skipped by every build
-  // since because the source file hadn't changed. Which image loses depends on
-  // the order pages happen to be rendered in, so it moves around between builds
-  // — the run that finally restored nogood06 took out nogood05 instead. Two
-  // silent ENOENTs in the same run are the same bug caught mid-act: eleventy-img
-  // returning memoized metadata and then statting a file that had just been
-  // deleted out from under it.
-  function clearOutputs(outputDir, originalName, widths) {
-    for (const width of widths) {
-      const outputFile = path.join(outputDir, `${originalName}-${width}.${OUTPUT_FORMAT}`);
-      if (CLEARED_OUTPUTS.has(outputFile)) continue;
-      CLEARED_OUTPUTS.add(outputFile);
+  // deleted by a later page's pass, never rewritten, then skipped by every
+  // build after, because the source itself never changed. Which image loses
+  // depends on the order pages render in, so it moves — the run that restored
+  // nogood06 took out nogood05, and a build after that took out two others.
+  function clearOutputs(outputDir, originalName) {
+    const key = path.join(outputDir, originalName);
+    if (CLEARED_SOURCES.has(key)) return;
+    CLEARED_SOURCES.add(key);
+
+    const sourceDir = path.join('src', path.relative('./_site', outputDir));
+    const sourceFile = SUPPORTED_IMAGE_EXTENSIONS
+      .map(ext => path.join(sourceDir, `${originalName}${ext}`))
+      .find(f => fs.existsSync(f));
+    // Nothing to date the renditions against, so nothing to call stale.
+    if (!sourceFile) return;
+
+    let srcMtime;
+    let entries;
+    try {
+      srcMtime = fs.statSync(sourceFile).mtime;
+      entries = fs.readdirSync(outputDir);
+    } catch (err) {
+      return;
+    }
+
+    const escaped = originalName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const rendition = new RegExp(`^${escaped}-\\d+\\.${OUTPUT_FORMAT}$`);
+
+    for (const name of entries) {
+      if (!rendition.test(name)) continue;
+      const outputFile = path.join(outputDir, name);
       try {
-        if (fs.existsSync(outputFile)) fs.unlinkSync(outputFile);
+        if (fs.statSync(outputFile).mtime > srcMtime) continue;
+        fs.unlinkSync(outputFile);
       } catch (err) {
         console.warn(`Could not clear ${outputFile}:`, err.message);
       }
@@ -264,7 +288,7 @@ module.exports = function (eleventyConfig) {
 
     try {
       const resolvedWidths = widthsFor(srcPath, widths);
-      clearOutputs(outputDir, originalName, resolvedWidths);
+      clearOutputs(outputDir, originalName);
 
       const metadata = await Image(srcPath, {
         widths: resolvedWidths,
@@ -302,7 +326,7 @@ module.exports = function (eleventyConfig) {
 
     try {
       const resolvedWidths = widthsFor(srcPath, widths);
-      clearOutputs(outputDir, originalName, resolvedWidths);
+      clearOutputs(outputDir, originalName);
 
       return await Image(srcPath, {
         widths: resolvedWidths,
