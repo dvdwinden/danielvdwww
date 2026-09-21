@@ -40,3 +40,6 @@ src/journal/drafts/
 
 # Documentation files with sensitive info
 POSSE_SETUP.md
+
+# Claude Code: local settings and scratch worktrees
+.claude/
