@@ -39,6 +39,7 @@ The people I appreciate, and the websites they keep. Friends or collaborators; s
 <li><a href="https://niekdekker.com/?ref=daniel.pizza" target="_blank" rel="external" title="Niek Dekker">Niek Dekker</a></li>
 <li><a href="https://onnobla.se/?ref=daniel.pizza" target="_blank" rel="external" title="Onno Blase">Onno Blase</a></li>
 <li><a href="https://pieter-de-jong.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Pieter de Jong">Pieter de Jong</a></li>
+<li><a href="https://pim.fyi/?ref=daniel.pizza" target="_blank" rel="external" title="Pim Coumans">Pim Coumans</a></li>
 <li><a href="http://remyvdw.nl?ref=daniel.pizza" target="_blank" rel="external" title="Remy van der Winden">Remy van der Winden</a></li>
 <li><a href="https://rickpastoor.com/?ref=daniel.pizza" target="_blank" rel="external" title="Rick Pastoor">Rick Pastoor</a></li>
 <li><a href="https://www.robertvanklinken.com/?ref=daniel.pizza" target="_blank" rel="external" title="Robert van Klinken">Robert van Klinken</a></li>
