@@ -181,7 +181,22 @@
 
         <main id="main-content" class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-5 sm:px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]" role="main">
             <div class="w-full max-w-[1400px]">
+                {# A post is wrapped in an h-entry so that other people's
+                   sites can read it when I link to them; h-entry-meta.njk
+                   explains why, and carries the properties the markdown can't.
+                   Both elements are plain blocks with no styles of their own,
+                   so the prose column the markdown opens inside `content` is
+                   laid out exactly as before. Standing pages get neither. #}
+                {% if isPost %}
+                <article class="h-entry">
+                    {% include "h-entry-meta.njk" %}
+                    <div class="e-content">
+                        {{ content | safe }}
+                    </div>
+                </article>
+                {% else %}
                 {{ content | safe }}
+                {% endif %}
                 {# Journal posts open their own prose column inside the
                    markdown, so this one is aligned to the same measure rather
                    than inherited. Renders nothing on pages without mentions. #}

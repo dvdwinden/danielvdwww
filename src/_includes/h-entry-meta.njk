@@ -1,0 +1,40 @@
+{#
+    The machine-readable half of a post's microformats2 h-entry.
+
+    The visible half — headline, date, body — is written inside each post's own
+    markdown, where a layout can't reach in to hang classes on it. Rather than
+    retrofit `class="p-name"` onto a hundred-odd h1s, the properties a parser
+    needs are stated once, here, as `<data>` and `<time>` elements that render
+    nothing. The `h-entry` wrapper and the `e-content` around the body are in
+    base.njk and narrow.njk, because only a layout knows where the body starts.
+
+    This is the outgoing counterpart to webmentions.njk. A receiving site parses
+    these when I link to it, and without an h-entry a good many receivers drop
+    the mention on the floor rather than render it — Matthias Ott's Craft plugin
+    throws "No h-entry found in source HTML" and discards the job. The ones that
+    are more forgiving show a bare URL where a title, a date and a name belong.
+
+    p-summary earns its place. The IndieWeb comments algorithm, which is what
+    receivers run to turn an h-entry into a line of text, only falls back to the
+    summary when e-content is too long to quote whole — which for a post here is
+    always. Without it other sites quote the first 150 characters of the piece:
+    headline, date and half a sentence, run together. With it they quote the
+    description I wrote for exactly that purpose.
+
+    The author h-card sits inside the entry rather than in header.njk because
+    the header's card is deliberately homepage-only — a *representative* h-card
+    is one whose u-url matches the page it's on, and that's true of "/" alone.
+    This is a plain author card, nested in the entry it belongs to, which is
+    what p-author asks for.
+#}
+<data class="p-name" value="{{ title }}"></data>
+{% if description %}<data class="p-summary" value="{{ description }}"></data>{% endif %}
+<time class="dt-published" datetime="{{ page.date | date("yyyy-MM-dd'T'HH:mm:ssZZ") }}"></time>
+<data class="u-url" value="{{ metadata.url }}{{ page.url }}"></data>
+<span class="p-author h-card">
+    <data class="p-name" value="{{ metadata.author.name }}"></data>
+    <data class="u-url" value="{{ metadata.author.url }}/"></data>
+    {# The same square the homepage uses, at the width it already serves, so a
+       receiver that copies the avatar isn't handed a fresh render to cache. #}
+    <data class="u-photo" value="{{ metadata.url }}/assets/work/daniel-square@2x-800.webp"></data>
+</span>

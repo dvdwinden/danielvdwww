@@ -42,9 +42,8 @@
 
 {% set wm = webmentions.byUrl[page.url] %}
 {# Posts live in these three directories; everything else is a standing page. #}
-{% set isPost = page.filePathStem.startsWith("/links/")
-    or page.filePathStem.startsWith("/journal/")
-    or page.filePathStem.startsWith("/newsletter/") %}
+{# `isPost` is computed in src/_data/eleventyComputed.js, so this file and the
+   two layouts that wrap a post in an h-entry all agree on what a post is. #}
 {% set show = isPost %}
 {% if showWebmentions == true %}{% set show = true %}{% endif %}
 {% if showWebmentions == false %}{% set show = false %}{% endif %}

@@ -167,6 +167,26 @@
         <main id="main-content" class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-5 sm:px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]" role="main">
             <div class="w-full max-w-[1400px]">
                 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[12.5vh] pt-[6vh] pb-32 dark:prose-invert">
+                    {# A post is wrapped in an h-entry so that other people's
+                       sites can read it when I link to them; h-entry-meta.njk
+                       explains why, and carries the properties the markdown
+                       can't. Two details keep the wrapper invisible:
+
+                       `[&>:first-child]:mt-0` restores the rule the wrapper
+                       displaces — Tailwind's prose zeroes the top margin of its
+                       *own* first child, which is now this article rather than
+                       the piece's opening figure or headline.
+
+                       And the meta goes last. Its `<data>` elements are empty,
+                       but they are still elements, and at the top they'd take
+                       `:first-child` for themselves and leave the figure its
+                       2em. Microformats don't care about order.
+
+                       The wrapper closes before the webmentions: those are
+                       other people's h-cites, and nesting them in my entry
+                       would file them as part of it. Standing pages get none
+                       of this. #}
+                    {% if isPost %}<article class="h-entry [&>:first-child]:mt-0">{% endif %}
                     {% if page.filePathStem.startsWith("/newsletter/") %}
                         {% if image and image.src %}
                         <figure class="not-prose mb-8">
@@ -175,7 +195,9 @@
                         {% endif %}
                         <h1>{% if external_url %}<a href="{{ external_url }}" rel="external" target="_blank">{{ title }}</a>{% else %}{{ title }}{% endif %}</h1>
                     {% endif %}
+                    {% if isPost %}<div class="e-content">{% endif %}
                     {{ content | safe }}
+                    {% if isPost %}</div>{% endif %}
                     {% if tags %}
                     <ul class="mt-6 font-sans text-sm tracking-wide text-gray-500 dark:text-gray-600 flex flex-wrap items-center gap-x-2 not-prose" style="list-style: none; padding: 0;">
                       {% for tag in tags | sort %}
@@ -190,12 +212,13 @@
                         {% set displayTag = tag | capitalize %}
                       {% endif %}
                       <li class="flex items-center gap-x-2">
-                        <a href="/links/{{ tag | slugify }}/" class="text-gray-500 dark:text-gray-600 hover:text-gray-700 dark:hover:text-gray-500" style="text-decoration: none;">{{ displayTag }}</a>
+                        <a href="/links/{{ tag | slugify }}/" class="{% if isPost %}p-category {% endif %}text-gray-500 dark:text-gray-600 hover:text-gray-700 dark:hover:text-gray-500" style="text-decoration: none;">{{ displayTag }}</a>
                         {% if not loop.last %}<span aria-hidden="true">·</span>{% endif %}
                       </li>
                       {% endfor %}
                     </ul>
                     {% endif %}
+                    {% if isPost %}{% include "h-entry-meta.njk" %}</article>{% endif %}
                     {# Sits inside the prose column here, unlike base.njk. The
                        WEBMENTIONS styles are scoped under `.webmentions` so
                        they outrank this site's own `.prose h2`/`blockquote`
