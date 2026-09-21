@@ -14,7 +14,7 @@ external_url: https://www.theverge.com/decoder-podcast-with-nilay-patel/760522/o
   </figcaption>
 </figure>
 
-[Steph “kepano” Ango](https://stephango.com/ "kepano’s personal website"), the CEO of [Obsidian](http://obsidian.md/?ref=daniel.pizza "Obsidian, note taking app"), was [interviewed by Casey Newton for Decoder](https://www.theverge.com/decoder-podcast-with-nilay-patel/760522/obsidian-ceo-steph-ango-kepano-productivity-software-notes-app?ref=daniel.pizza "Interview with Steph 'kepano' Ango on The Verge"). I appreciate how he—and in turn, Obsidian—thinks about building their product. They’re a small team and, while they’re ambitious, they’re not looking to raise (or make) hundreds of millions of dollars.
+[Steph “kepano” Ango](https://stephango.com/ "kepano’s personal website"), the CEO of [Obsidian](http://obsidian.md/?ref=daniel.pizza "Obsidian, note taking app"), was [interviewed by Casey Newton for Decoder](https://www.theverge.com/decoder-podcast-with-nilay-patel/760522/obsidian-ceo-steph-ango-kepano-productivity-software-notes-app?ref=daniel.pizza "Interview with Steph ‘kepano’ Ango on The Verge"). I appreciate how he—and in turn, Obsidian—thinks about building their product. They’re a small team and, while they’re ambitious, they’re not looking to raise (or make) hundreds of millions of dollars.
 
 > We’re not trying to take over the world. We’re not trying to be the next Microsoft. That makes it a lot easier to make long-term decisions that we feel are better for ourselves or for our users. It’s the tool that we want to use all day long. So, it’s okay if people leave.
 

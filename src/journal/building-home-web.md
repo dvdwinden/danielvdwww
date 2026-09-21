@@ -66,7 +66,7 @@ This rise in newsletter subscriptions hints at feed-fatigue, even if an email in
 
 That is to say, I’m seeing personality seep back into the web. 
 
-I’ve seen websites as reading lists ([Thijs](https://thijs.niks.nu/ "Thijs Niks"), [Mandy](https://aworkinglibrary.com/ "Mandy Brown")) or personal operating systems ([Brian](https://brianlovin.com/ "Brian Lovin"), [Rauno](https://rauno.me/ "Rauno Freiberg")), websites that house obsessions ([Folkert](https://folkert.link/ "Folkert Gorter")) or  ... whatever we shall call [Aneta’s](https://www.seksyplanety.com/ "Seksy Planety") fun-lovin' website: things are getting personal again!
+I’ve seen websites as reading lists ([Thijs](https://thijs.niks.nu/ "Thijs Niks"), [Mandy](https://aworkinglibrary.com/ "Mandy Brown")) or personal operating systems ([Brian](https://brianlovin.com/ "Brian Lovin"), [Rauno](https://rauno.me/ "Rauno Freiberg")), websites that house obsessions ([Folkert](https://folkert.link/ "Folkert Gorter")) or  ... whatever we shall call [Aneta’s](https://www.seksyplanety.com/ "Seksy Planety") fun-lovin’ website: things are getting personal again!
 </div>
 
 <div class="sm:mt-32 mt-16 mb-16">

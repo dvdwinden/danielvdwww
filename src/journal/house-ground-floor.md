@@ -65,7 +65,7 @@ The first floor layout is a bit more boxy, and doesn’t extend quite as far as 
 ## Drawing up a plan for the future
 We knew we wanted to replace the bathroom shortly after moving in. It was constructed poorly, and the furniture & fixtures are outdated. Considering this, we wanted to make sure we weighed our options right from the start, and potentially take on multiple projects in one go.
 
-We asked a friend of my partners' for help. Hallstein Guthu is the founder of a [Norwegian architecture studio](https://hallstein.no/ "Hallstein"), and they helped us workshop and draw up a plan we could work towards. 
+We asked a friend of my partners’ for help. Hallstein Guthu is the founder of a [Norwegian architecture studio](https://hallstein.no/ "Hallstein"), and they helped us workshop and draw up a plan we could work towards. 
 
 I’ll run through the sketches below. Drawn by Hallstein and his colleague Zoe, taking you through our thinking along the way.
 
@@ -174,7 +174,7 @@ Which brings us to the final version of the ground floor, seen below, along with
 
 > Perhaps the greatest illusion of all, is the illusion a home will ever be finished.
 
-<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— Freely translated from Andrea Prins' “Wonen” (2021)</span>
+<span class="uppercase font-sans text-sm mt-0 font-semibold tracking-wide text-black/50 dark:text-white/30 testimonial">— Freely translated from Andrea Prins’ “Wonen” (2021)</span>
 
 ## A North Star
 The plan outlined above is, of course, a costly endeavour. Given the current price of labour and materials, taking up the project in one go is something we can not afford to do. Since creating these sketches together with HALLSTEIN, however, we’ve worked on smaller projects on the first floor of our house, as well as a larger project I may write about later.
