@@ -57,7 +57,6 @@ The people I appreciate, and the websites they keep. Friends or collaborators; s
 <li><a href="https://thomasschrijer.com/?ref=daniel.pizza" target="_blank" rel="external" title="Thomas Schrijer">Thomas Schrijer</a></li>
 <li><a href="https://timokuilder.com/?ref=daniel.pizza" target="_blank" rel="external" title="Timo Kuilder">Timo Kuilder</a></li>
 <li><a href="https://baeck.no/?ref=daniel.pizza" target="_blank" rel="external" title="Tobias Bæck">Tobias Bæck</a></li>
-<li><a href="https://www.studioyave.nl/?ref=daniel.pizza" target="_blank" rel="external" title="Yasmin Veenman">Yasmin Veenman</a></li>
 </ul>
 
 <p class="mt-12 font-sans text-sm leading-snug tracking-wide text-black/50 dark:text-white/50">
