@@ -80,8 +80,19 @@ jobs:
             CHANGED_IMAGES="full_build"
           fi
           
+          # A manual run is the escape hatch for an image the diff-based path
+          # missed: once an image is skipped, it is never revisited, because
+          # nothing about it changes in any later commit. Saying so explicitly
+          # matters — the condition below is also true on a dispatch whose last
+          # commit touched no image at all, and it used to export CHANGED_IMAGES
+          # empty in that case, which Eleventy reads as "skip every image". The
+          # one run that is supposed to rebuild everything rebuilt nothing.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            CHANGED_IMAGES="full_build"
+          fi
+
           # Check if images have changed
-          if [ -n "$CHANGED_IMAGES" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ -n "$CHANGED_IMAGES" ]; then
             echo "images-changed=true" >> $GITHUB_OUTPUT
             if [ "$CHANGED_IMAGES" = "full_build" ]; then
               echo "🖼️ Full image build (no previous commit or manual trigger)"
