@@ -2555,18 +2555,25 @@ ul.list-none {
        6px gap. A face is small by design; it shouldn't also be hard to hit. */
     padding: 0.375rem;
     margin: -0.375rem;
+}
+
+.webmentions .webmention-faces .webmention-avatar {
     transition: box-shadow 0.2s;
 }
 
 /* The same move a bookmark card makes: a 1px edge in the hover red, nothing
    else. No lift — the faces don't overlap any more, so there is nothing to
-   lift clear of, and this site's hover states don't move things. */
-.webmentions .webmention-faces a:hover,
-.webmentions .webmention-faces a:focus-visible {
+   lift clear of, and this site's hover states don't move things.
+
+   The ring goes on the disc rather than on the link box around it: that box
+   is the tap target and is 6px larger on every side, so a ring drawn there
+   floats away from the face it belongs to. */
+.webmentions .webmention-faces a:hover .webmention-avatar,
+.webmentions .webmention-faces a:focus-visible .webmention-avatar {
     box-shadow: 0 0 0 1px theme("colors.hover");
 }
 
-.dark .webmentions .webmention-faces a:hover,
-.dark .webmentions .webmention-faces a:focus-visible {
+.dark .webmentions .webmention-faces a:hover .webmention-avatar,
+.dark .webmentions .webmention-faces a:focus-visible .webmention-avatar {
     box-shadow: 0 0 0 1px theme("colors.hover-dark");
 }
