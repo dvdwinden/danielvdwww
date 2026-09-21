@@ -16,7 +16,7 @@ description: Fifteen months after rebuilding my site, a look at what I’ve actu
 <h1>On building a home on the web (III)</h1>
 <span class="font-sans text-sm">September 8, 2026</span>
 
-In June of last year, over the course of nine or ten days, I [built the first version of the site you’re reading now](/journal/building-home-web-ii/ "On building a home on the web (II)"). I moved it off [Framer](https://framer.com?ref=daniel.pizza "Framer") because I wanted to feel in control again; the canvas is great for design, but it never felt right for *building* a website. I started my career as a front-end developer, and no-code tools still feel to me the way Dreamweaver did back then.
+In June of last year, over the course of nine or ten days, I [built the first version of the site you’re reading now](/journal/building-home-web-ii/ "On building a home on the web (II)"). I moved it off [Framer](https://framer.com?ref=daniel.pizza "Framer") because I wanted to be in the code again; the canvas is great for design, but it puts a layer between you and what you’re building. (I started my career as a front-end developer, and no-code tools still feel to me the way Dreamweaver did back then.)
 
 Fifteen months on, I’ve taken stock.
 
