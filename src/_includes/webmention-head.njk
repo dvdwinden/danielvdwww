@@ -1,0 +1,17 @@
+{#
+    Webmention endpoint discovery.
+
+    A sending site fetches one of my pages, looks for these, and POSTs the
+    notification to whichever it finds. The site is static, so both point at
+    webmention.io, which holds the endpoint on its behalf — src/_data/webmentions.js
+    pulls what it collects back in at build time.
+
+    The pingback endpoint is webmention.io's bridge for the older protocol, so
+    blogs still sending pingbacks are handled without a second service.
+
+    Both URLs are built from metadata.webmention.domain, which must be exactly
+    the domain the webmention.io account was created under — the same string
+    the API is queried with in src/_data/webmentions.js. See WEBMENTIONS.md.
+#}
+<link rel="webmention" href="https://webmention.io/{{ metadata.webmention.domain }}/webmention">
+<link rel="pingback" href="https://webmention.io/{{ metadata.webmention.domain }}/xmlrpc">

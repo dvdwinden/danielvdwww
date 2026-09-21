@@ -15,6 +15,9 @@ This is a personal website and blog built with Eleventy (11ty) static site gener
 ## Development Commands
 
 ```bash
+# Run the webmention data-layer tests
+npm test
+
 # Start development server with live reload
 npm run dev
 
@@ -97,10 +100,36 @@ Tailwind configuration in `tailwind.config.js`:
 
 `src/_data/` contains JavaScript files that fetch data at build time:
 - `githubContributions.js` - Fetches GitHub activity data
+- `webmentions.js` - Fetches webmentions from webmention.io (see below)
 - `trainingActivities.js` - Fetches a year of activities from intervals.icu (which syncs from COROS) and aggregates them per day
-- `metadata.json` - Site metadata (title, description, URL)
+- `metadata.json` - Site metadata (title, description, URL, webmention domain)
 
 Data is available in templates as global variables (e.g., `{{ githubContributions.contributionsByDate }}`).
+
+### Webmentions
+
+Replies, likes and reposts from other people's sites, shown under a post.
+Full setup and rationale in `WEBMENTIONS.md`; the short version:
+
+- **Receiving**: `webmention-head.njk` advertises a webmention.io endpoint built
+  from `metadata.webmention.domain`. `_data/webmentions.js` fetches from the
+  JF2 API, merges into `.cache/webmentions.json` keyed on `wm-id`, and returns
+  `{ byUrl, total, lastFetched }` grouped by normalised page path.
+- **Displaying**: `webmentions.njk` is included by both layouts and renders
+  nothing unless the current page has mentions, so it needs no per-page gating.
+  `showWebmentions: false` in frontmatter suppresses it.
+- **Sending**: `npm run webmentions:send -- --latest 5` (or a path). Speaks the
+  protocol directly against the local `_site` build; run it after a deploy.
+- **Identity**: `rel="me"` on the footer profile links, plus a representative
+  `h-card` on the homepage via `header.njk`.
+
+Two things to keep in mind when touching this:
+
+- **Mention content is untrusted.** `webmentions.js` reduces it to plain text,
+  rejects any non-`http(s)` URL, and requires `https` author photos. Never add
+  `| safe` to anything in `webmentions.njk`.
+- Requires `WEBMENTION_IO_TOKEN`. Without it the build succeeds and renders no
+  mentions — deliberately not a hard failure, unlike `GITHUB_TOKEN`.
 
 ### CI/CD Optimization
 
@@ -118,6 +147,7 @@ Required for API integrations (set in `.env` locally, GitHub Secrets in CI):
 - `LASTFM_API_KEY` - Last.fm API access
 - `LASTFM_USERNAME` - Last.fm username
 - `GITHUB_TOKEN` - GitHub API access (GH_PAT in CI)
+- `WEBMENTION_IO_TOKEN` - webmention.io API key (optional; omitting it renders no mentions)
 - `INTERVALS_ATHLETE_ID` - intervals.icu athlete ID (e.g. `i123456`)
 - `INTERVALS_API_KEY` - intervals.icu personal API key
 
