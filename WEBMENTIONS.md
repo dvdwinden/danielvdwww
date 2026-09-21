@@ -94,6 +94,22 @@ Then open <http://localhost:8080/journal/building-home-web/>. Leave
 `WEBMENTION_IO_TOKEN` unset while doing this, or the real fetch will merge over
 the fixtures. Delete `.cache/webmentions.json` when you're done.
 
+## Tests
+
+```bash
+npm test    # node scripts/test-webmentions.js
+```
+
+Covers the data layer, which is the part worth pinning down: URL schemes,
+markup stripping (including encoded and double-encoded payloads), author names
+and initials, target-path normalisation, and the grouping. `webmentions.js`
+exports its helpers as `module.exports.internals` for this; nothing in the
+build uses them.
+
+The display was checked separately against a larger fixture set — long names,
+an unbreakable URL, RTL and emoji, a reply past the truncation limit, and 40-odd
+likes — at phone and desktop widths in both colour schemes.
+
 ## Sending
 
 Run it after a deploy — the receiving site verifies a mention by fetching the

@@ -196,6 +196,12 @@
                       {% endfor %}
                     </ul>
                     {% endif %}
+                    {# Sits inside the prose column here, unlike base.njk. The
+                       WEBMENTIONS styles are scoped under `.webmentions` so
+                       they outrank this site's own `.prose h2`/`blockquote`
+                       rules, which are plain descendant selectors that
+                       `not-prose` cannot hold off. Renders nothing on pages
+                       without mentions. #}
                     {% include "webmentions.njk" %}
                     <div class="w-full max-w-lg ml-auto prose prose-lg font-serif dark:prose-invert">
                         {% include "footer.njk" %}

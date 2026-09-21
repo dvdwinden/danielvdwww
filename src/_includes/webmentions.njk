@@ -11,14 +11,42 @@
     Nunjucks' autoescaping is the second half of that. Styles live in the
     WEBMENTIONS section of src/css/style.css.
 #}
+{% macro avatar(author) %}
+{#
+    The initial is always rendered; the photo, when there is one, sits on top of
+    it. A photo that 404s or is blocked removes itself and the initial is
+    already there underneath — which is what the fixtures exercise, since their
+    author photos point at hosts that don't resolve. Without this an author
+    whose avatar has rotted gets a broken-image glyph in the byline.
+#}
+<span class="webmention-avatar" aria-hidden="true">
+    <span class="webmention-avatar-initial">{{ author.initial }}</span>
+    {% if author.photo %}
+    <img
+        class="webmention-avatar-photo"
+        src="{{ author.photo }}"
+        alt=""
+        width="32"
+        height="32"
+        loading="lazy"
+        decoding="async"
+        onerror="this.remove()">
+    {% endif %}
+</span>
+{% endmacro %}
+
 {% set wm = webmentions.byUrl[page.url] %}
 {% if wm and wm.total and showWebmentions != false %}
 {% set conversation = wm.replies.concat(wm.mentions) %}
 {% set facepile = wm.likes.concat(wm.reposts) %}
+{# Capped: the label above already carries the true count, and a popular post
+   bridged from Bluesky can collect hundreds of likes — which wrap into a wall
+   of discs on a phone long before they tell the reader anything more. #}
+{% set faces = facepile.slice(0, 24) %}
 
 <section class="webmentions not-prose" aria-labelledby="webmentions-heading">
     <h2 id="webmentions-heading" class="webmentions-heading">
-        Elsewhere on the web
+        Responses
     </h2>
 
     {% if conversation.length %}
@@ -26,25 +54,10 @@
         {% for mention in conversation %}
         <li class="webmention">
             <div class="webmention-byline">
-                {% if mention.author.photo %}
-                <img
-                    class="webmention-avatar"
-                    src="{{ mention.author.photo }}"
-                    alt=""
-                    width="32"
-                    height="32"
-                    loading="lazy"
-                    decoding="async">
-                {% else %}
-                {# A consistent placeholder keeps the byline's baseline steady
-                   whether or not an author has a photo. #}
-                <span class="webmention-avatar webmention-avatar-empty" aria-hidden="true">
-                    {{ mention.author.name | first }}
-                </span>
-                {% endif %}
+                {{ avatar(mention.author) }}
 
                 <span class="webmention-byline-text">
-                    <span class="webmention-author">
+                    <span class="webmention-author" dir="auto">
                         {% if mention.author.url %}
                         <a href="{{ mention.author.url }}" rel="external nofollow noopener" target="_blank">{{ mention.author.name }}</a>
                         {% else %}
@@ -52,23 +65,20 @@
                         {% endif %}
                     </span>
                     <span class="webmention-meta">
-                        {% if mention.property == 'in-reply-to' %}replied{% else %}mentioned this{% endif %}
-                        {% if mention.published %}
-                        ·
-                        <time datetime="{{ mention.published }}">{{ mention.publishedDisplay }}</time>
-                        {% endif %}
+                        {% if mention.property == 'in-reply-to' %}replied{% else %}mentioned this{% endif %}{% if mention.published %} on
+                        <time datetime="{{ mention.published }}">{{ mention.publishedDisplay }}</time>{% endif %}
                     </span>
                 </span>
             </div>
 
             {% if mention.title and mention.property != 'in-reply-to' %}
-            <p class="webmention-title">
+            <p class="webmention-title" dir="auto">
                 <a href="{{ mention.source }}" rel="external nofollow noopener" target="_blank">{{ mention.title }}</a>
             </p>
             {% endif %}
 
             {% if mention.content %}
-            <blockquote class="webmention-content" cite="{{ mention.source }}">
+            <blockquote class="webmention-content" cite="{{ mention.source }}" dir="auto">
                 {{ mention.content }}
             </blockquote>
             {% endif %}
@@ -92,7 +102,7 @@
             · {{ wm.reposts.length }} repost{% if wm.reposts.length != 1 %}s{% endif %}{% endif %}
         </h3>
         <ul class="webmention-faces">
-            {% for mention in facepile %}
+            {% for mention in faces %}
             <li>
                 {# The link is labelled rather than relying on the image, whose
                    alt is empty: a screen reader announcing forty filenames is
@@ -103,20 +113,7 @@
                     target="_blank"
                     aria-label="{{ mention.author.name }}{% if mention.property == 'like-of' %} liked{% else %} reposted{% endif %} this"
                     title="{{ mention.author.name }}">
-                    {% if mention.author.photo %}
-                    <img
-                        class="webmention-avatar"
-                        src="{{ mention.author.photo }}"
-                        alt=""
-                        width="32"
-                        height="32"
-                        loading="lazy"
-                        decoding="async">
-                    {% else %}
-                    <span class="webmention-avatar webmention-avatar-empty" aria-hidden="true">
-                        {{ mention.author.name | first }}
-                    </span>
-                    {% endif %}
+                    {{ avatar(mention.author) }}
                 </a>
             </li>
             {% endfor %}

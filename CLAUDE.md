@@ -15,6 +15,9 @@ This is a personal website and blog built with Eleventy (11ty) static site gener
 ## Development Commands
 
 ```bash
+# Run the webmention data-layer tests
+npm test
+
 # Start development server with live reload
 npm run dev
 

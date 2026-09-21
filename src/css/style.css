@@ -2230,8 +2230,14 @@ ul.list-none {
    under a post. Written by src/_includes/webmentions.njk; the data comes from
    src/_data/webmentions.js.
 
-   The block sits inside the same measure as the prose but opts out of the
-   typography plugin (`not-prose`), because a reply is a quotation of someone
+   Every rule is scoped under `.webmentions`. The section is `not-prose`, but
+   this file's own `.prose h2` and `.prose blockquote` rules are plain
+   descendant selectors that `not-prose` cannot hold off — on a Links post,
+   which includes the section inside its prose column, an unscoped heading came
+   out at 28px and the quotes picked up italics and a border. The extra class
+   wins on specificity wherever the section is dropped.
+
+   A reply is a quotation of someone
    else's writing rather than a continuation of mine — it wants a quieter,
    smaller voice than the article it hangs off.
    ========================================================================== */
@@ -2255,7 +2261,7 @@ ul.list-none {
 /* A label rather than a headline. The post's own h1 should stay the loudest
    thing on the page, so this leans on tracking and case for hierarchy instead
    of size. */
-.webmentions-heading {
+.webmentions .webmentions-heading {
     margin: 0 0 1.75rem;
     font-family: theme("fontFamily.sans");
     font-size: 0.8125rem;
@@ -2266,7 +2272,7 @@ ul.list-none {
     color: rgb(0 0 0 / 0.45);
 }
 
-.dark .webmentions-heading {
+.dark .webmentions .webmentions-heading {
     color: rgb(255 255 255 / 0.4);
 }
 
@@ -2274,7 +2280,7 @@ ul.list-none {
    The conversation: replies and mentions
    -------------------------------------------------------------------------- */
 
-.webmentions-list {
+.webmentions .webmentions-list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -2283,7 +2289,7 @@ ul.list-none {
     gap: 2rem;
 }
 
-.webmention {
+.webmentions .webmention {
     /* Hangs the avatar into the left margin on a wide screen so the quoted
        text keeps the same left edge as the article above it. Collapses to a
        normal stacked byline below the breakpoint, where there is no margin to
@@ -2291,14 +2297,14 @@ ul.list-none {
     position: relative;
 }
 
-.webmention-byline {
+.webmentions .webmention-byline {
     display: flex;
     align-items: center;
     gap: 0.625rem;
     margin-bottom: 0.5rem;
 }
 
-.webmention-byline-text {
+.webmentions .webmention-byline-text {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -2306,29 +2312,35 @@ ul.list-none {
     min-width: 0;
 }
 
-.webmention-avatar {
+/* The disc is the placeholder, always present: the initial sits in it and a
+   photo, when there is one, covers it. Nothing here depends on the photo
+   loading, so a dead avatar URL degrades to the initial instead of a broken
+   image. */
+.webmentions .webmention-avatar {
+    position: relative;
     display: block;
     width: 2rem;
     height: 2rem;
     margin: 0;
     border-radius: 9999px;
     flex: none;
-    object-fit: cover;
+    overflow: hidden;
     /* gray.100 (#f3f4f6) is nearer the grounds still, so the disc behind an
        author's initial barely read at all. */
     background: rgb(0 0 0 / 0.07);
 }
 
-.dark .webmention-avatar {
+.dark .webmentions .webmention-avatar {
     background: rgb(255 255 255 / 0.08);
 }
 
-/* Stands in for a missing photo. The initial keeps the row's rhythm without
-   pretending to be a portrait. */
-.webmention-avatar-empty {
+/* The initial keeps the row's rhythm without pretending to be a portrait. */
+.webmentions .webmention-avatar-initial {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     font-family: theme("fontFamily.sans");
     font-size: 0.875rem;
     font-weight: 600;
@@ -2337,11 +2349,21 @@ ul.list-none {
     color: rgb(0 0 0 / 0.4);
 }
 
-.dark .webmention-avatar-empty {
+.dark .webmentions .webmention-avatar-initial {
     color: rgb(255 255 255 / 0.4);
 }
 
-.webmention-author {
+.webmentions .webmention-avatar-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 9999px;
+    object-fit: cover;
+}
+
+.webmentions .webmention-author {
     font-family: theme("fontFamily.sans");
     font-size: 1rem;
     font-weight: 600;
@@ -2349,21 +2371,30 @@ ul.list-none {
     color: theme("colors.black");
 }
 
-.dark .webmention-author {
+.dark .webmentions .webmention-author {
     color: theme("colors.white");
 }
 
-.webmention-author a {
+.webmentions .webmention-author a {
     color: inherit;
     text-decoration: none;
+    transition: color 0.2s;
 }
 
-.webmention-author a:hover {
+.webmentions .webmention-author a:hover {
+    color: theme("colors.hover");
     text-decoration: underline;
-    text-underline-offset: 0.15em;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
-.webmention-meta {
+.dark .webmentions .webmention-author a:hover {
+    color: theme("colors.hover-dark");
+    text-decoration-color: theme("colors.hover-dark");
+}
+
+.webmentions .webmention-meta {
     font-family: theme("fontFamily.sans");
     font-size: 0.875rem;
     line-height: 1.3;
@@ -2371,13 +2402,13 @@ ul.list-none {
     color: rgb(0 0 0 / 0.45);
 }
 
-.dark .webmention-meta {
+.dark .webmentions .webmention-meta {
     color: rgb(255 255 255 / 0.4);
 }
 
 /* A mention that carries a headline of its own — a blog post linking here,
    rather than a one-line reply — leads with it. */
-.webmention-title {
+.webmentions .webmention-title {
     margin: 0 0 0.375rem;
     font-family: theme("fontFamily.sans");
     font-size: 1.0625rem;
@@ -2385,26 +2416,40 @@ ul.list-none {
     line-height: 1.3;
 }
 
-.webmention-title a {
+.webmentions .webmention-title a {
     color: theme("colors.black");
     text-decoration: none;
+    transition: color 0.2s;
 }
 
-.dark .webmention-title a {
+.dark .webmentions .webmention-title a {
     color: theme("colors.white");
 }
 
-.webmention-title a:hover {
+.webmentions .webmention-title a:hover {
+    color: theme("colors.hover");
     text-decoration: underline;
-    text-underline-offset: 0.15em;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.dark .webmentions .webmention-title a:hover {
+    color: theme("colors.hover-dark");
+    text-decoration-color: theme("colors.hover-dark");
 }
 
 /* Serif, because it is prose — but a step down from the article's own size, and
-   set on a hairline rule rather than in a box. Someone else's words, quoted. */
-.webmention-content {
+   set flush rather than in a box or on a rule. The byline above it already says
+   these are someone else's words; a quote rule on top of that is one marker too
+   many, and it pushed every reply a third indent to the right. */
+.webmentions .webmention-content {
     margin: 0;
-    padding: 0 0 0 1rem;
-    border-left: 2px solid rgb(0 0 0 / 0.22);
+    padding: 0;
+    /* Explicit, not merely absent: on a Links post `.prose blockquote` supplies
+       a left border and italics, and a rule that simply doesn't mention them
+       lets them through. */
+    border: 0;
     font-family: theme("fontFamily.serif");
     font-size: 1.0625rem;
     font-style: normal;
@@ -2415,12 +2460,11 @@ ul.list-none {
     overflow-wrap: break-word;
 }
 
-.dark .webmention-content {
-    border-left-color: rgb(255 255 255 / 0.22);
+.dark .webmentions .webmention-content {
     color: rgb(255 255 255 / 0.7);
 }
 
-.webmention-source {
+.webmentions .webmention-source {
     display: inline-block;
     margin-top: 0.625rem;
     font-family: theme("fontFamily.sans");
@@ -2428,19 +2472,22 @@ ul.list-none {
     letter-spacing: 0.01em;
     color: rgb(0 0 0 / 0.5);
     text-decoration: none;
+    transition: color 0.2s;
 }
 
-.dark .webmention-source {
+.dark .webmentions .webmention-source {
     color: rgb(255 255 255 / 0.45);
 }
 
-.webmention-source:hover {
+.webmentions .webmention-source:hover {
     color: theme("colors.hover");
     text-decoration: underline;
-    text-underline-offset: 0.15em;
+    text-decoration-color: theme("colors.hover");
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
 }
 
-.dark .webmention-source:hover {
+.dark .webmentions .webmention-source:hover {
     color: theme("colors.hover-dark");
 }
 
@@ -2448,11 +2495,11 @@ ul.list-none {
    The facepile: likes and reposts
    -------------------------------------------------------------------------- */
 
-.webmention-facepile {
+.webmentions .webmention-facepile {
     margin-top: 2.5rem;
 }
 
-.webmention-facepile-label {
+.webmentions .webmention-facepile-label {
     margin: 0 0 0.875rem;
     font-family: theme("fontFamily.sans");
     font-size: 0.875rem;
@@ -2462,7 +2509,7 @@ ul.list-none {
     color: rgb(0 0 0 / 0.45);
 }
 
-.dark .webmention-facepile-label {
+.dark .webmentions .webmention-facepile-label {
     color: rgb(255 255 255 / 0.4);
 }
 
@@ -2470,61 +2517,56 @@ ul.list-none {
    forty of them should read as one texture rather than forty items. The ring
    separates each face from the one behind it, and picks up the page's own
    background so it works over any bodyClass. */
-.webmention-faces {
+/* Laid out in a row with a gap rather than overlapped behind rings. The
+   overlap needs a ring in the page's own colour to separate one face from the
+   next, and posts here set their ground per page via `bodyClass` — so any
+   fixed ring colour is wrong somewhere. A gap is right on every ground, and it
+   stops a row of initials reading as a Venn diagram when the photos are
+   missing. */
+.webmentions .webmention-faces {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 0.375rem;
     margin: 0;
-    padding: 0 0 0 0.375rem;
+    padding: 0;
     list-style: none;
-    row-gap: 0.375rem;
 }
 
-.webmention-faces li {
-    margin: 0 0 0 -0.375rem;
+.webmentions .webmention-faces li {
+    margin: 0;
 }
 
-.webmention-faces a {
+/* A step smaller than the byline avatars: these are a tally, not a byline. */
+.webmentions .webmention-faces .webmention-avatar {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.webmentions .webmention-faces .webmention-avatar-initial {
+    font-size: 0.75rem;
+}
+
+.webmentions .webmention-faces a {
     display: block;
     border-radius: 9999px;
-    /* `box-shadow` rather than `border`, so the ring doesn't take part in
-       layout and the faces overlap by a predictable amount. */
-    box-shadow: 0 0 0 2px theme("colors.white");
-    transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
+    /* Padding grows the tap target past the 28px disc without moving anything:
+       the negative margin gives the space back, so the row still reads with a
+       6px gap. A face is small by design; it shouldn't also be hard to hit. */
+    padding: 0.375rem;
+    margin: -0.375rem;
+    transition: box-shadow 0.2s;
 }
 
-.dark .webmention-faces a {
-    box-shadow: 0 0 0 2px theme("colors.black");
+/* The same move a bookmark card makes: a 1px edge in the hover red, nothing
+   else. No lift — the faces don't overlap any more, so there is nothing to
+   lift clear of, and this site's hover states don't move things. */
+.webmentions .webmention-faces a:hover,
+.webmentions .webmention-faces a:focus-visible {
+    box-shadow: 0 0 0 1px theme("colors.hover");
 }
 
-/* Lifts the hovered face clear of its neighbours so it can actually be read.
-   `position: relative` raises it above the ones stacked after it. */
-.webmention-faces a:hover,
-.webmention-faces a:focus-visible {
-    position: relative;
-    z-index: 1;
-    transform: translateY(-2px);
-    box-shadow:
-        0 0 0 2px theme("colors.white"),
-        0 0 0 4px theme("colors.hover");
-}
-
-.dark .webmention-faces a:hover,
-.dark .webmention-faces a:focus-visible {
-    box-shadow:
-        0 0 0 2px theme("colors.black"),
-        0 0 0 4px theme("colors.hover-dark");
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .webmention-faces a {
-        transition: none;
-    }
-
-    .webmention-faces a:hover,
-    .webmention-faces a:focus-visible {
-        transform: none;
-    }
+.dark .webmentions .webmention-faces a:hover,
+.dark .webmentions .webmention-faces a:focus-visible {
+    box-shadow: 0 0 0 1px theme("colors.hover-dark");
 }

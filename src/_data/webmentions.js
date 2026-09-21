@@ -101,33 +101,60 @@ function safePhotoUrl(value) {
   return url;
 }
 
+// Entities are decoded so a reader sees "Tom & Jerry" rather than
+// "Tom &amp; Jerry" — webmention.io's text rendering keeps some of them.
+const ENTITIES = [
+  [/&nbsp;/gi, ' '],
+  [/&lt;/gi, '<'],
+  [/&gt;/gi, '>'],
+  [/&quot;/gi, '"'],
+  [/&#0?39;/g, "'"],
+  [/&apos;/gi, "'"],
+  [/&amp;/gi, '&'],
+];
+
+function decodeEntities(text) {
+  return ENTITIES.reduce((acc, [pattern, char]) => acc.replace(pattern, char), text);
+}
+
+// Strip anything tag-shaped and decode entities, then do it again until the
+// string stops changing, so neither "&lt;script&gt;" nor a doubly-encoded
+// "&amp;lt;script&amp;gt;" can surface as visible markup. Nunjucks escapes
+// whatever comes out of here regardless — that is what keeps the page safe.
+// This is the cosmetic half: nobody wants to read a stranger's angle brackets.
+function stripMarkup(value) {
+  let text = String(value || '');
+  for (let pass = 0; pass < 4; pass += 1) {
+    // Script and style elements lose their contents as well as their tags:
+    // that text was never meant to be read, and dropping only the tags would
+    // leave "alert('xss')" sitting in the middle of someone's reply.
+    const next = decodeEntities(text)
+      .replace(/<(script|style)\b[^>]*>[\s\S]*?(<\/\1\s*>|$)/gi, ' ')
+      .replace(/<[^>]*>/g, ' ');
+    if (next === text) break;
+    text = next;
+  }
+  // A final strip, so the last decode can never leave a tag behind.
+  return text.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
 // Reduce a mention's content to plain text. webmention.io hands back both an
-// HTML and a text rendering; the text one is used, because the alternative is
-// either shipping a sanitiser dependency or trusting a stranger's markup with
-// `| safe`. A quoted reply doesn't need formatting, and this way there is no
-// sanitiser to get wrong.
+// HTML and a text rendering; the text one is preferred, because the alternative
+// is either shipping a sanitiser dependency or trusting a stranger's markup
+// with `| safe`. A quoted reply doesn't need formatting, and this way there is
+// no sanitiser to get wrong. Either rendering goes through stripMarkup, since
+// the "text" one is only plain by convention — senders put tags in it.
 function plainText(content) {
   if (!content) return '';
 
-  let text =
+  const raw =
     typeof content === 'string'
       ? content
       : typeof content.text === 'string' && content.text
         ? content.text
-        // Fall back to flattening the HTML: entities are decoded after tags
-        // are stripped, so an escaped "&lt;script&gt;" in the source can't be
-        // turned into a real tag by this function.
-        : String(content.html || '').replace(/<[^>]*>/g, ' ');
+        : String(content.html || '');
 
-  text = text
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#0?39;/g, "'")
-    .replace(/&amp;/g, '&')
-    .replace(/\s+/g, ' ')
-    .trim();
+  const text = stripMarkup(raw);
 
   if (text.length <= MAX_CONTENT_LENGTH) {
     return text;
@@ -139,12 +166,27 @@ function plainText(content) {
   return `${(lastSpace > MAX_CONTENT_LENGTH * 0.6 ? clipped.slice(0, lastSpace) : clipped).trimEnd()}…`;
 }
 
+// The letter for the avatar disc. Nunjucks' `first` filter takes the first
+// UTF-16 code unit, which cuts an emoji in half and renders as a replacement
+// character — so the initial is picked here, from the first actual letter or
+// digit in the name, stepping over emoji and punctuation. An name with none
+// (a name that is only emoji) gets an empty disc, which is the right answer.
+function authorInitial(name) {
+  for (const char of String(name || '')) {
+    if (/\p{L}|\p{N}/u.test(char)) return char.toLocaleUpperCase();
+  }
+  return '';
+}
+
 // A display name for the author. Falls back to their domain, because an
 // anonymous-looking avatar with no name at all reads as broken.
 function authorName(author) {
+  // A name is markup-stripped like everything else, and a name that was
+  // nothing but markup strips down to nothing — so it falls through to the
+  // domain rather than rendering as a row of escaped angle brackets.
   const name =
-    author && typeof author.name === 'string' ? author.name.trim() : '';
-  if (name) return name.replace(/\s+/g, ' ').slice(0, 80);
+    author && typeof author.name === 'string' ? stripMarkup(author.name) : '';
+  if (name) return name.slice(0, 80);
 
   const url = safeUrl(author && author.url);
   if (url) {
@@ -216,11 +258,15 @@ function normalise(entry) {
     property,
     target,
     source,
-    author: {
-      name: authorName(author),
-      url: safeUrl(author.url),
-      photo: safePhotoUrl(author.photo),
-    },
+    author: (() => {
+      const name = authorName(author);
+      return {
+        name,
+        initial: authorInitial(name),
+        url: safeUrl(author.url),
+        photo: safePhotoUrl(author.photo),
+      };
+    })(),
     // The mention's own title, where it has one — a blog post replying to mine
     // reads better as its headline than as the first 500 characters of its body.
     title: typeof entry.name === 'string' ? plainText(entry.name).slice(0, 140) : '',
@@ -229,7 +275,7 @@ function normalise(entry) {
     // here rather than in the template because the site's `date` filter takes a
     // JS Date and these arrive as ISO strings.
     published: isValidDate ? publishedDate.toISO() : null,
-    publishedDisplay: isValidDate ? publishedDate.toFormat('d LLLL yyyy') : '',
+    publishedDisplay: isValidDate ? publishedDate.toFormat('LLLL d, yyyy') : '',
     // Sort key. `wm-received` is when my endpoint saw it, which is the one
     // timestamp I can trust — `published` is whatever the sender claimed.
     received: entry['wm-received'] || published || null,
@@ -420,4 +466,19 @@ module.exports = async function () {
     // next build then asks for the same window again and nothing is lost.
     return buildResult(cache.mentions, cache.lastFetched);
   }
+};
+
+// Exported for scripts/test-webmentions.js. Nothing in the build uses these —
+// Eleventy only ever calls the function above — but the sanitising is the part
+// of this file most worth pinning down, and it isn't reachable otherwise.
+module.exports.internals = {
+  safeUrl,
+  safePhotoUrl,
+  stripMarkup,
+  plainText,
+  authorName,
+  authorInitial,
+  targetPath,
+  normalise,
+  buildResult,
 };
