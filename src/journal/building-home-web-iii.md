@@ -16,7 +16,11 @@ description: Fifteen months after rebuilding my site, a look at what I’ve actu
 <h1>On building a home on the web (III)</h1>
 <span class="font-sans text-sm">September 8, 2026</span>
 
-In June of last year, over the course of nine or ten days, I [built the first version of the site you’re reading now](/journal/building-home-web-ii/ "On building a home on the web (II)"). I moved it off [Framer](https://framer.com?ref=daniel.pizza "Framer") because I wanted to feel in control again; the canvas is great for design, but it never felt right for building a website. I started my career as a front-end developer, and no-code tools *still* feel to me the way Dreamweaver did back then. Fifteen months on, I’ve taken stock.
+In June of last year, over the course of nine or ten days, I [built the first version of the site you’re reading now](/journal/building-home-web-ii/ "On building a home on the web (II)"). I moved it off [Framer](https://framer.com?ref=daniel.pizza "Framer") because I wanted to feel in control again; the canvas is great for design, but it never felt right for *building* a website. I started my career as a front-end developer, and no-code tools still feel to me the way Dreamweaver did back then.
+
+Fifteen months on, I’ve taken stock.
+
+## A quiet Journal, a busier Links page
 
 The [Journal](/journal/ "My Journal"), which I assumed would be the heart of it, has been quiet: I’ve published a dozen posts or so, six of them written in a single week at [a writing residency in the Pyrenees](/journal/camp-france/ "A residency in the Pyrenees"). Some of that I’ll blame on the year I’ve had—a stretch of contracting, then [joining Enode full-time](/journal/next-chapter-at-enode/ "The next chapter of my career"), and [an art book to write and edit](/journal/nogood-book/ "Writing the NoGood book"). With so many projects going on, writing about the work tends to lose out to *doing* the work. But, I’d still like to lower my bar for publishing, and train that muscle.
 
@@ -33,7 +37,7 @@ On the [Links page](/links/ "My Links"), my blog of sorts, I’ve published eigh
 
 I spent most of the year extending what I’d started. I built a [Library](/library/ "My Library") for the books I’ve read, and wired it up to my monthly recommendations on [Trema](https://trema.website?ref=daniel.pizza "Trema"), narrowing the gap between my two sites. I [found my way back to RSS](/journal/returning-to-rss/ "Returning to RSS") for reading the authors I follow online, and made sure my own site had [one cohesive feed](/journal/merging-my-rss-feeds/ "Merging my RSS feeds") on offer, too. Less visibly, I regrouped the Journal by year, moved to the variable cut of [Degular](https://ohnotype.co/fonts/degular?ref=daniel.pizza "Degular by Oh No Type Co") for proper italics, and rebuilt the image processing, so the site now weighs well under half what it did.
 
-And, this week I added a [Photos page](/photos/ "Photos"), as my photos were the last thing I still handed over to somebody else’s feed (Instagram). I’d rather they lived here, in an order I chose. More on that soon, in a separate post. The homepage is under construction, too. A new version is on its way.
+And this week I added a [Photos page](/photos/ "Photos"), as my photos were the last thing I still handed over to somebody else’s feed (Instagram). I’d rather they lived here, in an order I chose. More on that soon, in a separate post.
 
 {% bookmark
   url="/photos/",
@@ -45,11 +49,17 @@ And, this week I added a [Photos page](/photos/ "Photos"), as my photos were the
     stepped-gable facade."
 %}
 
+The [homepage](/ "Daniël van der Winden") got a rebuild, too. Where previously it focused primarily on my efforts as a designer, it now presents a bit of a broader picture of what I do, folding in my reading and writing habits, too.
+
+## Publishing without a feed’s demands
+
 I keep coming back to the links I published, though. After the August peak the pace settled: two or three a month since the new year, sometimes just one. I read that as a failure of discipline at first, then decided it’s a realistic rate—how often I come across something worth keeping or sharing. Four a week was the enthusiasm of a new toy. Two or three a month I could keep doing for a decade.
 
 And that, I think, is the appeal. A timeline on social media asks you to keep talking at the speed of everyone else’s attention, but nobody has all that many thoughts worth sharing. A page you own doesn’t punish you for going quiet through February, and it doesn’t reward you for posting eleven times on a Tuesday. It just holds whatever you put there.
 
 Some of the older links I’ve put up date back to 2022. They’re still sitting at the same addresses—while nothing I posted to Twitter survived, and not only because of the platform’s demise. Even at the platform’s healthiest, a post had a useful life of a few hours before it fell through the floor of the feed. My archive was technically present, but practically unreachable, even for me.
+
+## The links as connective tissue
 
 Then, this spring, an email arrived. A teacher who runs a graphic design and coding bootcamp had three students putting together a beginner’s guide to web design for the rest of their group. Somewhere in their research they’d landed on my Links page, and found it useful enough to ask her to write and say thank you.
 
@@ -69,6 +79,6 @@ Matthias Ott made a version of this argument in 2019, in [_Into the Personal-Web
 
 He suggests keeping a links section for exactly this reason: find a good thought on somebody else’s site, write about it, link to it, and over the years you’ve built an archive for yourself and for anyone who wanders in.
 
-For a while I thought of my links as the filler between real posts. He’s right that they’re the connective tissue. Roughly five hundred people read the things I collect every month, and now and again I find a link back from somebody else’s site. The site ebbs and flows, but it doesn’t lie dormant. It’s one more corner of the web that somebody keeps on purpose.
+For a while I thought of my links as the filler between real posts. Matthias is right that they’re the connective tissue. Roughly five hundred people read the things I collect every month, and now and again I find a link back from somebody else’s site. The site ebbs and flows, but it doesn’t lie dormant. It’s one more corner of the web, kept on purpose.
 
 </div>
