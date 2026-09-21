@@ -10,7 +10,7 @@ external_url: https://www.nytimes.com/interactive/2025/11/20/us/typewriter-repai
 <figure>
   {% retinaImage "src/assets/links/bremerton-typewriter-company.webp", "Bremerton Typewriter Company”" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    <em>Bremerton Typewriter Company</em>, photography by Ruth Fremson.
+    <em>Bremerton Typewriter Company</em>, photography by Ruth Fremson
   </figcaption>
 </figure>
 

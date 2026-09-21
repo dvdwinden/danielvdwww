@@ -10,7 +10,7 @@ external_url: https://www.cined.com/behind-the-masterful-cinematography-of-nosfe
 <figure>
   {% retinaImage "src/assets/links/nosferatu.jpeg", "A still from Nosferatu (2024)" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    A still from Robert Eggers' <em>Nosferatu</em> (2024).
+    A still from Robert Eggers' <em>Nosferatu</em> (2024)
   </figcaption>
 </figure>
 
@@ -21,7 +21,7 @@ I watched it projected on a wall, sound blasting through a great installation, a
 <figure>
   {% retinaImage "src/assets/links/nosferatu02.jpg", "A still from Nosferatu (2024)" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    A still from Robert Eggers' <em>Nosferatu</em> (2024).
+    A still from Robert Eggers' <em>Nosferatu</em> (2024)
   </figcaption>
 </figure>
 

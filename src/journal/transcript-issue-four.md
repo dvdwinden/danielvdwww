@@ -11,7 +11,7 @@ image:
   title: "The fourth and final issue of our magazine just came back from the printer’s, and we’re hosting an evening to celebrate one last time."
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1><em>TRANSCRIPT</em> ISSUE FOUR: release and launch party</h1>
 <span class="font-sans text-sm">October 1, 2025</span>
@@ -27,7 +27,7 @@ Our [first issue](http://transcriptmag.store/issue-one?ref=daniel.pizza "TRANSCR
         <source src="/assets/journal/transcript-issue-four.mp4" type="video/mp4">
         A quick flickthrough of the fourth issue of <em>TRANSCRIPT</em>.
     </video>
-    <figcaption class="pl-8 sm:pl-0">A quick flickthrough of the fourth issue of <em>TRANSCRIPT</em>.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">A quick flickthrough of the fourth issue of <em>TRANSCRIPT</em></figcaption>
 </figure>
 
 For the launch of our three previous issues we’ve hosted an event at [Perdu](https://perdu.nl/en/?ref=daniel.pizza "Perdu"), an Amsterdam-based bookstore and theatre, where one or two of our contributors [read their pieces](https://www.instagram.com/p/DKrGC4fo7eC/?img_index=1 "A recap of our last event on Instagram") to a small but appreciative audience. For our fourth and final issue, we’re doing something a little more special. 

@@ -126,6 +126,20 @@ module.exports = function (eleventyConfig) {
     LASTFM_USERNAME: process.env.LASTFM_USERNAME || "dvdwinden"
   });
 
+  // Look up a Trema post's cover on its own site. The stored external_url
+  // carries a ?ref= param, and a couple have a doubled trailing slash, so both
+  // sides of the comparison get normalised. Returns null when the feed didn't
+  // load or the post isn't in it, and the caller falls back to a local image.
+  eleventyConfig.addFilter("tremaCover", function (url, covers) {
+    if (!url || !covers) return null;
+    const normalize = value => String(value).split(/[?#]/)[0].replace(/\/+$/, '');
+    const key = normalize(url);
+    for (const [link, image] of Object.entries(covers)) {
+      if (normalize(link) === key) return image;
+    }
+    return null;
+  });
+
   // Add regexMatch filter
   eleventyConfig.addFilter("regexMatch", function (str, pattern) {
     const regex = new RegExp(pattern);
@@ -178,6 +192,22 @@ module.exports = function (eleventyConfig) {
         });
   });
 
+  // eleventy-img reuses any output that already sits at the name it would
+  // write, and our filenameFormat is name + width alone, with no content hash.
+  // So an edited source keeps serving its old renditions — from _site locally,
+  // or from the restored image cache in CI. Clear the widths we are about to
+  // write before writing them.
+  function clearOutputs(outputDir, originalName, widths) {
+    for (const width of widths) {
+      const outputFile = path.join(outputDir, `${originalName}-${width}.${OUTPUT_FORMAT}`);
+      try {
+        if (fs.existsSync(outputFile)) fs.unlinkSync(outputFile);
+      } catch (err) {
+        console.warn(`Could not clear ${outputFile}:`, err.message);
+      }
+    }
+  }
+
   // Process an image and return metadata
   async function processImage(srcPath, widths = DEFAULT_WIDTHS) {
     // Already processed?
@@ -210,8 +240,11 @@ module.exports = function (eleventyConfig) {
     console.log(`Processing image: ${srcPath} (${originalName}${originalExt})`);
 
     try {
+      const resolvedWidths = widthsFor(srcPath, widths);
+      clearOutputs(outputDir, originalName, resolvedWidths);
+
       const metadata = await Image(srcPath, {
-        widths: widthsFor(srcPath, widths),
+        widths: resolvedWidths,
         formats: ["webp"],
         outputDir: outputDir,
         urlPath: `/${urlPath}/`,
@@ -245,8 +278,11 @@ module.exports = function (eleventyConfig) {
     const originalName = path.basename(parsedPath.name);
 
     try {
+      const resolvedWidths = widthsFor(srcPath, widths);
+      clearOutputs(outputDir, originalName, resolvedWidths);
+
       return await Image(srcPath, {
-        widths: widthsFor(srcPath, widths),
+        widths: resolvedWidths,
         formats: ["webp"],
         outputDir: outputDir,
         urlPath: `/${urlPath}/`,
@@ -304,20 +340,21 @@ module.exports = function (eleventyConfig) {
       const outputDir = path.join("./_site", path.dirname(relativePath));
       const originalName = path.basename(parsedPath.name);
 
-      // Check if any of the output files exist and are newer than source
+      // Only skip when every width is present and newer than the source. One
+      // fresh rendition used to be enough, which let a single regenerated width
+      // mask its stale siblings — the page then served the old image at every
+      // size a browser actually picks.
       for (const width of DEFAULT_WIDTHS) {
         const outputFile = path.join(outputDir, `${originalName}-${width}.${OUTPUT_FORMAT}`);
-        if (fs.existsSync(outputFile)) {
-          const outputStats = fs.statSync(outputFile);
-          // If output is newer than source, no need to process
-          if (outputStats.mtime > srcStats.mtime) {
-            return false;
-          }
+        if (!fs.existsSync(outputFile)) {
+          return true;
+        }
+        if (fs.statSync(outputFile).mtime <= srcStats.mtime) {
+          return true;
         }
       }
 
-      // If we get here, either no output files exist or source is newer
-      return true;
+      return false;
     } catch (err) {
       // If there's any error checking, assume we need to process
       return true;
@@ -851,20 +888,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/assets/favicon.png");
 
+  // Third-party favicons used by bookmark cards (skipped by image optimization)
+  eleventyConfig.addPassthroughCopy("src/assets/icons");
+
   // Bookmark card icons. Marks served at 16px, and the optimizeImages
   // transform deliberately leaves them alone, so the original has to be
   // copied across — nothing else puts a src/assets file in _site.
   eleventyConfig.addPassthroughCopy("src/assets/bookmarks/icons");
 
-  // Copy hero images referenced in CSS
-  eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/daniel-square@2x.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/studio-square.webp");
-  eleventyConfig.addPassthroughCopy("src/assets/work/studio-square@2x.webp");
-
   // Don't passthrough asset directories since they're handled by the image optimization
   // Only passthrough files that should not be optimized
   eleventyConfig.addPassthroughCopy("src/assets/**/*.mp4");
+  eleventyConfig.addPassthroughCopy("src/assets/**/*.webm");
   eleventyConfig.addPassthroughCopy("src/assets/**/*.pdf");
 
   // Copy fonts directory for custom fonts

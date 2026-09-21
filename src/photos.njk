@@ -6,13 +6,42 @@ bodyClass: bg-cream
 # Photographs read better against a dark ground, so this page stays dark
 # whatever the reader's theme, and drops the toggle.
 forceDark: true
+# Forced dark means this page's background sits outside the site's colour
+# morph, which left the transition running one-sided: a second-long fade of
+# the light ground in and out. A hard cut reads better than that.
+noViewTransition: true
 permalink: photos/index.html
+# Share image: a collage of four frames on the page's dark ground, built at
+# 2400x1260 so the 1200px rendition the og tags point at is a clean 2:1 fit.
+image:
+  src: /assets/photos/photos-share.jpg
+  alt: "Four photographs side by side: a chapel at the end of a lane, a farmhouse in low sun, a greengrocer's display, and beach umbrellas."
 # Newest first. The date drives the order, not the position in this list, so
 # a new photo can be added anywhere; the grid placement is then worked out
 # from the resulting sequence. Photos sharing a month hold the order below.
 # The two marked approximate have no month to hand, only a season read off
 # the photograph itself.
 photos:
+  - src: src/assets/photos/walking-into-the-sea.jpg
+    date: "2026-09"
+    caption: "Santa Reparata, Sardinia (2026)"
+    alt: "A man in a bucket hat walking down the sand towards a turquoise sea, granite rocks at the left edge of the bay."
+    orientation: portrait
+  - src: src/assets/photos/renault-on-the-corner.jpg
+    date: "2026-09"
+    caption: "Santa Teresa Gallura, Sardinia (2026)"
+    alt: "A white Renault 4 parked on a sunlit corner below a no-entry sign, a scooter and shuttered houses behind."
+    orientation: portrait
+  - src: src/assets/photos/star-map-at-dusk.jpg
+    date: "2026-09"
+    caption: "Rena Majore, Sardinia (2026)"
+    alt: "Seen over her shoulder, someone holding up a phone showing a star map against a blue and orange dusk sky."
+    orientation: landscape
+  - src: src/assets/photos/salvatore-on-the-rock.jpg
+    date: "2026-09"
+    caption: "Salvatore at Cala Sambuco, Sardinia (2026)"
+    alt: "A guide in a sun hat and yellow shorts standing on a granite boulder above the sea, mid-sentence."
+    orientation: portrait
   - src: src/assets/photos/alley-and-gable.png
     date: "2026-08"
     caption: "Antwerp, Belgium (2026)"
@@ -22,11 +51,6 @@ photos:
     date: "2026-08"
     caption: "Antwerp, Belgium (2026)"
     alt: "Black and white: figures at night under a scatter of blown-out lights, most of the frame in darkness."
-    orientation: portrait
-  - src: src/assets/photos/table-between-courses.jpg
-    date: "2026-06"
-    caption: "Oslo, Norway (2026)"
-    alt: "A wooden table mid-meal: olives, crisps, bread, a dish of ice, and half-drunk glasses."
     orientation: portrait
   - src: src/assets/photos/books-on-a-stool.jpg
     date: "2026-05"
@@ -43,6 +67,16 @@ photos:
     caption: "Noordhollands Duinreservaat, the Netherlands (2026)"
     alt: "Black and white: someone crouching in dune grassland to hold a pale dog on a lead, low dunes and flat sky behind."
     orientation: portrait
+  - src: src/assets/photos/cottages-under-wires.jpg
+    date: "2026-04"
+    caption: "The Cotswolds, England (2026)"
+    alt: "White cottages with brick chimneys behind a hedge, power lines cutting across a deep blue sky."
+    orientation: portrait
+  - src: src/assets/photos/path-up-the-down.jpg
+    date: "2026-04"
+    caption: "The Cotswolds, England (2026)"
+    alt: "A mown grass path rising between two green banks to a lone tree, a contrail across the sky."
+    orientation: portrait
   - src: src/assets/photos/goal-in-the-field.jpg
     date: "2025-10"
     caption: "Villedieu, France (2025)"
@@ -58,6 +92,21 @@ photos:
     caption: "Villedieu, France (2025)"
     alt: "A gap in a hedge looking out over rows of vines, with fields and low hills beyond."
     orientation: landscape
+  - src: src/assets/photos/beach-umbrellas.jpg
+    date: "2025-09"
+    caption: "Ravenna, Italy (2025)"
+    alt: "Rows of empty sunbeds and furled blue umbrellas on a sandy beach, the sea a thin line behind."
+    orientation: portrait
+  - src: src/assets/photos/ridge-path.jpg
+    date: "2025-09"
+    caption: "Gotthard Pass, Switzerland (2025)"
+    alt: "A footpath along a grassy ridge towards a few pines and a bench, a forested valley and bare peaks beyond."
+    orientation: portrait
+  - src: src/assets/photos/chapel-at-the-end-of-the-lane.jpg
+    date: "2025-08"
+    caption: "Antwerp, Belgium (2025)"
+    alt: "A narrow lane between dark brick houses, opening onto a white gabled chapel with a red door."
+    orientation: portrait
   - src: src/assets/photos/park-in-the-evening.jpg
     date: "2025-07" # approximate: full summer leaf
     caption: "Amsterdam, the Netherlands (2025)"
@@ -78,9 +127,109 @@ photos:
     caption: "Rotterdam, the Netherlands (2025)"
     alt: "A spiral-bound copy of TRANSCRIPT Issue Two on a wooden desk, beside tulips in a glass and a bird-painted tin."
     orientation: landscape
+  - src: src/assets/photos/greengrocer.jpg
+    date: "2025-02"
+    caption: "Paris, France (2025)"
+    alt: "A greengrocer's display piled with grapes, figs, clementines and avocados, prices chalked on green boards."
+    orientation: landscape
+  - src: src/assets/photos/metro-tunnel.jpg
+    date: "2025-02"
+    caption: "Paris, France (2025)"
+    alt: "A dim métro tunnel: tracks curving past a soot-black wall hung with a red-and-white marker and a mirror."
+    orientation: portrait
+  - src: src/assets/photos/dessert-collage.jpg
+    date: "2025-02"
+    caption: "Paris, France (2025)"
+    alt: "A wall papered edge to edge with cut-out pictures of cakes, jellies and fruit, a round mirror doubling the collage."
+    orientation: portrait
+  - src: src/assets/photos/poster-between-brick-walls.jpg
+    date: "2025-01"
+    caption: "Schiedam, the Netherlands (2025)"
+    alt: "Seen between two brick walls, a poster with a black brushstroke and the letter A, lit by a slice of evening sun."
+    orientation: portrait
+  - src: src/assets/photos/farmhouse-doors-and-dog.jpg
+    date: "2024-12"
+    caption: "Canlers, France (2024)"
+    alt: "Low sun on a whitewashed farm building with two pale blue doors, a white dog running across the grass."
+    orientation: landscape
+  - src: src/assets/photos/dog-in-the-doorway-light.jpg
+    date: "2024-12"
+    caption: "Canlers, France (2024)"
+    alt: "Black and white: a scruffy dog lying on a blanket in a patch of sunlight from a glazed door."
+    orientation: portrait
+  - src: src/assets/photos/unmade-bed.jpg
+    date: "2024-12"
+    caption: "Canlers, France (2024)"
+    alt: "Black and white: an unmade bed with striped sheets, a wall lamp, and a small painting of a gull above it."
+    orientation: landscape
+  - src: src/assets/photos/sea-in-fog.jpg
+    date: "2024-12"
+    caption: "Dunkirk, France (2024)"
+    alt: "A calm sea fading into fog, the horizon lost between grey-green water and white sky."
+    orientation: landscape
+  - src: src/assets/photos/flowers-and-damask.jpg
+    date: "2024-11"
+    caption: "Springkell, Scotland (2024)"
+    alt: "A vase of deep red hydrangeas and thistles beside a lamp and a stack of books, against damask wallpaper."
+    orientation: portrait
+  - src: src/assets/photos/rocking-horse.jpg
+    date: "2024-11"
+    caption: "Springkell, Scotland (2024)"
+    alt: "A dappled grey rocking horse against a bare white wall, half hidden behind the arm of a striped sofa."
+    orientation: portrait
+  - src: src/assets/photos/globe-at-the-window.jpg
+    date: "2024-11"
+    caption: "Springkell, Scotland (2024)"
+    alt: "An old globe by a sash window with gold curtains, clipped shrubs and parkland outside in low sun."
+    orientation: portrait
+  - src: src/assets/photos/boats-at-dusk.jpg
+    date: "2024-05"
+    caption: "Cortez, Florida (2024)"
+    alt: "Small fishing boats tied up at a wooden dock at dusk, the water flat and the sky fading from blue to pink."
+    orientation: portrait
+  - src: src/assets/photos/cortez-post-office.jpg
+    date: "2024-05"
+    caption: "Cortez, Florida (2024)"
+    alt: "A pink clapboard post office with a wreath on the door, seen through a hibiscus bush over the bonnet of a silver car."
+    orientation: portrait
+  - src: src/assets/photos/beach-through-the-pines.jpg
+    date: "2024-05"
+    caption: "Cortez, Florida (2024)"
+    alt: "Beachgoers in folding chairs in the shade of a clump of pines and a palm, pale sand and turquoise water beyond."
+    orientation: portrait
+  - src: src/assets/photos/corvette-and-yellow-umbrellas.jpg
+    date: "2024-05"
+    caption: "Cortez, Florida (2024)"
+    alt: "The red bonnet of an old Corvette in front of a waterside bar with yellow umbrellas and a leaning palm."
+    orientation: portrait
+  - src: src/assets/photos/fried-chicken-sign.jpg
+    date: "2024-05"
+    caption: "New Orleans, Louisiana (2024)"
+    alt: "A neon fried chicken sign lit at dusk on the corner of an orange building with a blue doorway, power lines overhead."
+    orientation: portrait
+  - src: src/assets/photos/fence-down-the-bank.jpg
+    date: "2024-05"
+    caption: "Vuurtoreneiland, the Netherlands (2024)"
+    alt: "Looking straight down a grassy bank to the water, a low wooden fence running diagonally across the slope."
+    orientation: portrait
+  - src: src/assets/photos/keyboard-and-charcuterie.jpg
+    date: "2024-04"
+    caption: "Lyons-la-Forêt, France (2024)"
+    alt: "A mechanical keyboard on a laptop beside a board of cured meats, a bowl of olives and a box of matches."
+    orientation: landscape
+  - src: src/assets/photos/rolled-poster.jpg
+    date: "2024-01"
+    caption: "Rotterdam, the Netherlands (2024)"
+    alt: "A half-unrolled poster on a wooden floor: a black and white face looking through a window pane under bold lettering."
+    orientation: landscape
+  - src: src/assets/photos/pool-reflection.jpg
+    date: "2024-01"
+    caption: "Mallorca, Spain (2024)"
+    alt: "Leaves on the floor of a pale blue pool, an orange tree reflected in the surface above."
+    orientation: landscape
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[25vh] pt-[6vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif lg:pt-[12.5vh] pt-[6vh] dark:prose-invert">
   <h1>Photos</h1>
   <p>Taken with an Olympus AF-10 and an AF-10 Super, usually on Kodak Ultramax, and never edited.</p>
 </div>

@@ -11,7 +11,7 @@ image:
   title: "A residency in the Pyrenees"
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>A residency in the Pyrenees</h1>
 <span class="font-sans text-sm">July 16, 2025</span>

@@ -25,12 +25,12 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <title>{% if title %}
         {% if page.url == '/' %}
-            Daniël van der Winden · Software designer & writer
+            Daniël van der Winden · Designer, writer, reader
         {% else %}
             {{ title }} · Daniël van der Winden
         {% endif %}
     {% else %}
-        Daniël van der Winden · Software designer & writer
+        Daniël van der Winden · Designer, writer, reader
     {% endif %}</title>
     <meta name="description" content="{{ description or site.description }}">
     <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
@@ -102,16 +102,17 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
-    <!-- Pre-load hero images -->
-    <link rel="preload" href="/assets/work/studio-square.webp" as="image" type="image/webp" fetchpriority="high">
-    <link rel="preload" href="/assets/work/daniel-square.webp" as="image" type="image/webp" fetchpriority="high">
-
     <meta name="theme-color" content="#ededea" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="mobile-web-app-capable" content="yes">
 
     <meta name="view-transition" content="same-origin">
+    {% if noViewTransition %}
+    <!-- Both documents must opt in for a cross-document view transition to
+         run, so this turns it off in both directions: a hard cut in and out. -->
+    <style>@view-transition { navigation: none; }</style>
+    {% endif %}
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/atom+xml" title="Daniël van der Winden" href="/feed.xml">
@@ -122,7 +123,7 @@
     {% endif %}
 
     <!-- Open Graph meta tags -->
-    <meta property="og:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Software designer & writer{% endif %}">
+    <meta property="og:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Designer, writer, reader{% endif %}">
     <meta property="og:description" content="{{ description or metadata.description }}">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
     <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}">
@@ -136,22 +137,22 @@
     <meta property="og:image:alt" content="{{ image.alt or title }}">
     {% else %}
     <!-- Use default share image -->
-    <meta property="og:image" content="https://www.daniel.pizza/assets/share-image-1200.jpeg">
-    <meta property="og:image:alt" content="Daniël van der Winden">
+    <meta property="og:image" content="https://www.daniel.pizza/assets/share-image-1200.webp">
+    <meta property="og:image:alt" content="Daniël van der Winden, reading at a TRANSCRIPT launch">
     {% endif %}
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     
     <!-- Twitter Card meta tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Software designer & writer{% endif %}">
+    <meta name="twitter:title" content="{% if title %}{{ title }} · Daniël van der Winden{% else %}Daniël van der Winden · Designer, writer, reader{% endif %}">
     <meta name="twitter:description" content="{{ description or metadata.description }}">
     {% if image and image.src %}
     <meta name="twitter:image" content="{{ ogImageUrl }}">
     <meta name="twitter:image:alt" content="{{ image.alt or title }}">
     {% else %}
-    <meta name="twitter:image" content="https://www.daniel.pizza/assets/share-image-1200.jpeg">
-    <meta name="twitter:image:alt" content="Daniël van der Winden">
+    <meta name="twitter:image" content="https://www.daniel.pizza/assets/share-image-1200.webp">
+    <meta name="twitter:image:alt" content="Daniël van der Winden, reading at a TRANSCRIPT launch">
     {% endif %}
     <script>
       // Reveal content once fonts are ready (background stays visible during load)
@@ -178,7 +179,7 @@
             </div>
         </nav>
 
-        <main id="main-content" class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]" role="main">
+        <main id="main-content" class="ml-0 lg:ml-80 mr-0 lg:mr-32 pt-20 px-5 sm:px-6 lg:px-12 flex-1 flex justify-end max-w-[1600px]" role="main">
             <div class="w-full max-w-[1400px]">
                 {{ content | safe }}
                 {# Journal posts open their own prose column inside the
@@ -204,10 +205,17 @@
         window.GITHUB_CONTRIBUTIONS = {{ githubContributions.contributionsByDate | dump | safe }};
         window.GITHUB_LAST_UPDATED = '{{ githubContributions.lastUpdated }}';
     </script>
+    {# Not on a journal post: the piece has its own title and a long read under
+       it, and a second copy of that title riding the top is one thing too many. #}
+    {% if not page.url.startsWith('/journal/') %}
+    {% endif %}
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
     <script src="/js/lastfm-live.js"></script>
     <script src="/js/github-live.js"></script>
+    {% if page.url == '/' %}
+    <script src="/js/home.js"></script>
+    {% endif %}
     {% if page.url == '/photos/' %}
     <script src="/js/photo-lightbox.js"></script>
     {% endif %}

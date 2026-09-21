@@ -55,9 +55,9 @@ jobs:
         with:
           path: |
             _site/assets
-          key: ${{ runner.os }}-images-v2-${{ hashFiles('src/assets/**/*.{jpg,jpeg,png,webp,avif,JPG,PNG}') }}-${{ hashFiles('.eleventy.js') }}
+          key: ${{ runner.os }}-images-v3-${{ hashFiles('src/assets/**/*.{jpg,jpeg,png,webp,avif,JPG,PNG}') }}-${{ hashFiles('.eleventy.js') }}
           restore-keys: |
-            ${{ runner.os }}-images-v2-
+            ${{ runner.os }}-images-v3-
 
       - name: Install dependencies
         run: npm ci
@@ -74,7 +74,7 @@ jobs:
             echo "📋 All changed files:"
             echo "$ALL_CHANGED" | sed 's/^/  - /'
             
-            CHANGED_IMAGES=$(echo "$ALL_CHANGED" | grep "src/assets/.*\.(jpg\|jpeg\|png\|webp\|avif\|JPG\|PNG)" 2>/dev/null | tr '\n' ',' || echo "")
+            CHANGED_IMAGES=$(echo "$ALL_CHANGED" | grep -E "^src/assets/.*\.(jpg|jpeg|png|webp|avif|JPG|PNG)$" 2>/dev/null | tr '\n' ',' || echo "")
           else
             echo "⚠️ Cannot diff against HEAD~1, treating as full build"
             CHANGED_IMAGES="full_build"
@@ -123,6 +123,8 @@ jobs:
           # above, so a build that can't reach webmention.io still renders
           # everything received up to the previous one.
           WEBMENTION_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
+          INTERVALS_ATHLETE_ID: ${{ secrets.INTERVALS_ATHLETE_ID }}
+          INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
         run: |
           # Use incremental build for faster processing
           if [ "${{ steps.changes.outputs.images-changed }}" = "false" ] && [ "${{ steps.cache-eleventy.outputs.cache-hit }}" = "true" ]; then

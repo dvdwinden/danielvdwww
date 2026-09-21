@@ -10,7 +10,7 @@ external_url: https://www.newyorker.com/magazine/2025/09/29/the-art-of-the-imper
 <figure>
   {% retinaImage "src/assets/links/art-of-the-impersonal-essay.webp", "Illustration by Pierre Buttin." %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-   Illustration by Pierre Buttin.
+   Illustration by Pierre Buttin
   </figcaption>
 </figure>
 

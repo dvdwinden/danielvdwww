@@ -11,7 +11,7 @@ image:
   title: "On building a home on the web (II)"
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>On building a home on the web (II)</h1>
 <span class="font-sans text-sm">June 25, 2025</span>
@@ -35,7 +35,7 @@ It was around this time that [Framer](http://framer.com?rel=daniel.pizza "Framer
   <br />
    <figure class="w-full">
     {% retinaImage "src/assets/journal/daniel-pizza-2.png", "The previous version of my personal website" %}
-    <figcaption class="pl-8 sm:pl-0">The previous version of my personal website.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The previous version of my personal website</figcaption>
   </figure>
 </div>
 
@@ -76,7 +76,7 @@ I made one quick sketch in Figma (below) and started building immediately after 
 <div class="sm:mt-32 mt-16 mb-16">
    <figure class="w-full">
     {% retinaImage "src/assets/journal/daniel-pizza-4.png", "The sketch I made for this website" %}
-    <figcaption class="pl-8 sm:pl-0">The sketch I made for this website.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The sketch I made for this website</figcaption>
   </figure>
 </div>
 

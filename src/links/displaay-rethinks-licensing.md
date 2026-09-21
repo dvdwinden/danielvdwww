@@ -10,7 +10,7 @@ external_url: https://the-brandidentity.com/typeface/displaay-rethinks-licensing
 <figure>
   {% retinaImage "src/assets/links/displaay-licensing.webp", "Who cares about fonts?" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-   T-shirt design by Andrea Vacovská, photography by Viktorie Macánová.
+   T-shirt design by Andrea Vacovská, photography by Viktorie Macánová
   </figcaption>
 </figure>
 

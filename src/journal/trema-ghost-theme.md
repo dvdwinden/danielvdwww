@@ -11,7 +11,7 @@ image:
   title: "A fresh coat of paint for Trema, my publication about the books I loved reading"
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>A fresh coat of paint for Trema, my publication about the books I loved reading</h1>
 <span class="font-sans text-sm">September 8, 2025</span>
@@ -34,7 +34,7 @@ Building my personal website (this one, right here), a month or two ago, sped up
 </figure>
 <figure class="w-full mt-4">
   {% retinaImage "src/assets/journal/blanco-specimen.png", "A look at the Blanco type specimen", 1200 %}
-  <figcaption class="pl-8 sm:pl-0">Examples taken from the <em>Degular</em> and <em>Blanco</em> type specimens, by Oh No Type Co. and Foster Type.</figcaption>
+  <figcaption class="pl-8 sm:pl-0">Examples taken from the <em>Degular</em> and <em>Blanco</em> type specimens, by Oh No Type Co. and Foster Type</figcaption>
 </figure>
 
 While building this site, I had decided to include a page, [_/newsletter_](/newsletter "Newsletter"), where I’d link to my posts on Trema. To make that page feel warmer, I had the idea to photograph every book I’d recommended. I’d relied on digital images up until then, and I thought this change would make the page come across a tad more human, resembling a glance at my bookshelves rather than a peek at my computer’s file system. Testing this approach with some photographs, I liked the outcome, and the digital images from before immediately felt very sterile in comparison.
@@ -53,7 +53,7 @@ I mocked up a little sketch in Figma and decided to start building it straight a
 </figure>
 <figure class="w-full mt-4">
   {% retinaImage "src/assets/journal/figma-sketch-trema.png", "My Figma sketch for Trema", 1200 %}
-  <figcaption class="pl-8 sm:pl-0">A look at a few of the references I’d collected, and the initial Figma sketch I made for Trema.</figcaption>
+  <figcaption class="pl-8 sm:pl-0">A look at a few of the references I’d collected, and the initial Figma sketch I made for Trema</figcaption>
 </figure>
 </div>
 
@@ -67,7 +67,7 @@ Using Ghost’s built-in tags a little creatively I could accommodate the design
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full mt-4">
     {% retinaImage "src/assets/journal/trema-book-page.png", "The page for a book recommendation; the heart of my publication.", 1200 %}
-    <figcaption class="pl-8 sm:pl-0">The template for a book recommendation; the heart of my publication.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The template for a book recommendation; the heart of my publication</figcaption>
   </figure>
 </div>
 
@@ -88,7 +88,7 @@ The index I kept fairly simple, pulling out my latest few recommendations across
         <source src="/assets/journal/trema-clickthrough-no-padding.mp4" type="video/mp4">
         Clicking through Trema, tumbling down the rabbit hole.
     </video>
-    <figcaption class="pl-8 sm:pl-0">Clicking through Trema, tumbling down the rabbit hole.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">Clicking through Trema, tumbling down the rabbit hole</figcaption>
 </figure>
 </div>
 

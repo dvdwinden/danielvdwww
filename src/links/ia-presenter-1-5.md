@@ -10,7 +10,7 @@ external_url: https://ia.net/topics/a-presentation-app-that-works-on-your-phone?
 <figure>
   {% retinaImage "src/assets/links/ia-presenter.png", "iA Presenter." %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    iA Presenter. Image by <em>Information Architects</em>.
+    iA Presenter. Image by <em>Information Architects</em>
   </figcaption>
 </figure>
 

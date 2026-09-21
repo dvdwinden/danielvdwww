@@ -10,7 +10,7 @@ external_url: https://www.theparisreview.org/blog/2018/06/08/ode-to-the-dinkus/?
 <figure>
   {% retinaImage "src/assets/links/asterism.jpg", "The Dinkus" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    The Dinkus.
+    The Dinkus
   </figcaption>
 </figure>
 

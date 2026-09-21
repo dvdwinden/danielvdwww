@@ -43,3 +43,5 @@ POSSE_SETUP.md
 
 # Eleventy data cache (webmention history, see WEBMENTIONS.md)
 .cache/
+# Claude Code: local settings and scratch worktrees
+.claude/

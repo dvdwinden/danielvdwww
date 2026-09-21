@@ -10,7 +10,7 @@ external_url: https://www.nytimes.com/2024/12/23/style/teddy-blanks-typeface-des
 <figure>
   {% retinaImage "src/assets/links/teddy-blanks.webp", "Teddy Blanks. Photo by Graham Dickie for The New York Times." %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Teddy Blanks. Photo by Graham Dickie for <em>The New York Times</em>.
+    Teddy Blanks. Photo by Graham Dickie for <em>The New York Times</em>
   </figcaption>
 </figure>
 

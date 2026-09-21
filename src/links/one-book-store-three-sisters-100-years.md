@@ -10,7 +10,7 @@ external_url: https://www.nytimes.com/2025/11/01/nyregion/three-sisters-argosy-b
 <figure>
   {% retinaImage "src/assets/links/argosy.webp", "Photo by Anna Watts for The New York Times." %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-   Photo by Anna Watts for The New York Times.
+   Photo by Anna Watts for The New York Times
   </figcaption>
 </figure>
 

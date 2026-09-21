@@ -11,7 +11,7 @@ image:
   title: "The first day of my weeklong writing residency at Camp, in Aulus-les-Bains."
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (I)</h1>
 <span class="font-sans text-sm">November 13, 2025</span>
@@ -27,7 +27,7 @@ I’m writing this journal entry at night, on the first day of a weeklong reside
         <source src="/assets/journal/aulus-les-bains.mp4" type="video/mp4">
         As seen from my window, in Aulus-les-Bains.
     </video>
-    <figcaption class="pl-8 sm:pl-0">As seen from my window, in Aulus-les-Bains.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">As seen from my window, in Aulus-les-Bains</figcaption>
 </figure>
 
 There’s a group of nine, maybe ten of us here—I haven’t counted—and most are musicians. _Camp_ comes with plenty of instruments and recording equipment, and they often host music-related workshops, so it seems to be a popular destination for the musically inclined. Arriving here yesterday evening, after a beautiful two-hour drive from Toulouse, I enjoyed sharing a nice meal with likeminded people, all here to make things over the course of one or two weeks. 

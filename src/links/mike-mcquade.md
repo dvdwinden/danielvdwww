@@ -16,7 +16,7 @@ external_url: https://mikemcquade.com/?ref=daniel.pizza
 <figure>
   {% retinaImage "src/assets/links/mcquade-03.jpg", "(Mike McQuade)" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    The collage work of Mike McQuade.
+    The collage work of Mike McQuade
   </figcaption>
 </figure>
 

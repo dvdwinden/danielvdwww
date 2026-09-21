@@ -10,7 +10,7 @@ external_url: https://www.inconspicuous.info/p/h-bomb-a-frank-lloyd-wright-typog
 <figure>
   {% retinaImage "src/assets/links/frank-lloyd-wright.webp", "(The Frank Lloyd Wright Foundation Archives)" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Image from <em>The Frank Lloyd Wright Foundation Archives</em>.
+    Image from <em>The Frank Lloyd Wright Foundation Archives</em>
   </figcaption>
 </figure>
 

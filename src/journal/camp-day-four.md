@@ -7,7 +7,7 @@ tags: [residency]
 description: Patterns are emerging, and I wrote a poem today.
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (IV)</h1>
 <span class="font-sans text-sm">November 16, 2025</span>
@@ -21,7 +21,7 @@ Dinner is usually ready around 20:00, and after dinner I’ve mostly gotten back
         <source src="/assets/journal/aulus-les-bains-timelapse.mp4" type="video/mp4">
         Typing away, today.
     </video>
-    <figcaption class="pl-8 sm:pl-0">Typing away, today.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">Typing away, today</figcaption>
 </figure>
 
 This morning I accidentally slept in and woke up at 9:58. At 10:00 I was at my desk to participate in the online writing workshop by [_Short Pieces That Move_](https://www.instagram.com/shortpiecesthatmove/?hl=en), which was once again exhilarating. Hosted by [Kate Briggs](https://fitzcarraldoeditions.com/authors/kate-briggs/?ref=daniel.pizza), and with about twenty people in attendance, she brought out poem titles by [Wadih Sa’adeh](https://en.wikipedia.org/wiki/Wadih_Sa%27adeh) for us to read (from [_A Horse at the Door_](https://tenementpress.com/Wadih-Saadeh?ref=daniel.pizza)), and we wrote our own following their structure. After that exercise we zeroed in on a full poem by Sa’adeh, titled _A distant point_. Reading it aloud, responding to it. Then, picking a favourite title created by yourself or anyone else, writing your own poem to mimic the shape of Sa’adeh’s, and sharing it with the group. 
@@ -32,7 +32,7 @@ These workshops are always incredibly energising—the writing exercises usually
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/who-interrogated-the-waterfall.png", "Who Interrogated the Waterfall?" %}
-    <figcaption class="pl-8 sm:pl-0"><em>Who Interrogated the Waterfall?</em>, flanked by comments from other participants.</figcaption>
+    <figcaption class="pl-8 sm:pl-0"><em>Who Interrogated the Waterfall?</em>, flanked by comments from other participants</figcaption>
   </figure>
 </div>
 

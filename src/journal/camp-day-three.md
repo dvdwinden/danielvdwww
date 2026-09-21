@@ -11,7 +11,7 @@ image:
   title: "Day three. Making use of the weather to climb up to Cascade d’Ars."
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (III)</h1>
 <span class="font-sans text-sm">November 15, 2025</span>
@@ -30,7 +30,7 @@ The climb was quite steep at times, but well manageable. The most treacherous bi
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/aulus-les-bains06.png", "Cascade d’Ars." %}
-    <figcaption class="pl-8 sm:pl-0"><em>Cascade d’Ars</em>, up close.</figcaption>
+    <figcaption class="pl-8 sm:pl-0"><em>Cascade d’Ars</em>, up close</figcaption>
   </figure>
 </div>
 

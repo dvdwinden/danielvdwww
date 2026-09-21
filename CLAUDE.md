@@ -98,6 +98,7 @@ Tailwind configuration in `tailwind.config.js`:
 `src/_data/` contains JavaScript files that fetch data at build time:
 - `githubContributions.js` - Fetches GitHub activity data
 - `webmentions.js` - Fetches webmentions from webmention.io (see below)
+- `trainingActivities.js` - Fetches a year of activities from intervals.icu (which syncs from COROS) and aggregates them per day
 - `metadata.json` - Site metadata (title, description, URL, webmention domain)
 
 Data is available in templates as global variables (e.g., `{{ githubContributions.contributionsByDate }}`).
@@ -142,11 +143,25 @@ Two things to keep in mind when touching this:
 Required for API integrations (set in `.env` locally, GitHub Secrets in CI):
 - `LASTFM_API_KEY` - Last.fm API access
 - `LASTFM_USERNAME` - Last.fm username
-- `STRAVA_CLIENT_ID` - Strava API client
-- `STRAVA_CLIENT_SECRET` - Strava API secret
-- `STRAVA_REFRESH_TOKEN` - Strava OAuth refresh token
 - `GITHUB_TOKEN` - GitHub API access (GH_PAT in CI)
 - `WEBMENTION_IO_TOKEN` - webmention.io API key (optional; omitting it renders no mentions)
+- `INTERVALS_ATHLETE_ID` - intervals.icu athlete ID (e.g. `i123456`)
+- `INTERVALS_API_KEY` - intervals.icu personal API key
+
+Both intervals.icu values come from Settings → Developer Settings on
+intervals.icu. COROS has no API a build can call — it is partner-gated, and its
+MCP server is interactive OAuth — so intervals.icu sits in between: it already
+syncs completed activities from the watch, and hands every user a personal key
+that works as a build secret.
+
+The key is build-time only: `trainingActivities.js` reads it, aggregates every
+sport per day, and only those daily totals reach the browser. Never add it to the
+`env` global in `.eleventy.js`, which is exposed to the client.
+
+Missing or rejected credentials **fail the build** rather than silently
+rendering an empty graph — that failure mode is why the previous Strava
+calendar went unnoticed for months. Transient network errors still let a deploy
+through.
 
 ### Content Frontmatter
 
@@ -207,6 +222,7 @@ Use the `bookmark` shortcode to render a link as a card — title, blurb, and a 
 | `label` | The anchor's `title` attribute. Defaults to `title`. |
 | `external` | Overrides the auto-detected `target="_blank" rel="external"`. |
 
+Descriptions can be soft-wrapped across lines — whitespace is collapsed so the card stays a single HTML block and markdown-it doesn't split it into paragraphs. Text is escaped, so ampersands and quotes can be written as-is. The `optimizeImages` transform skips any `<img class="bookmark-icon">`, so icons are served at their natural size rather than swapped for a `<picture>`.
 Descriptions can be soft-wrapped across lines — whitespace is collapsed so the card stays a single HTML block and markdown-it doesn't split it into paragraphs. Text is escaped, so ampersands and quotes can be written as-is. The `optimizeImages` transform skips any `<img class="bookmark-icon">`, so icons are served at their natural size rather than swapped for a `<picture>`. Card thumbnails (`<img class="bookmark-image">`) take the opposite route: they're given their own 128/256px widths rather than the narrow-column defaults, whose smallest width is 800px.
 
 Styles live in the `BOOKMARK CARDS` section of `src/css/style.css`.

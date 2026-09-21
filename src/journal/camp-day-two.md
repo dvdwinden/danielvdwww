@@ -7,7 +7,7 @@ tags: [residency]
 description: On day two of my writing residency, I made it to 2.647 words.
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>Aulus-les-Bains (II)</h1>
 <span class="font-sans text-sm">November 14, 2025</span>
@@ -20,7 +20,7 @@ Over lunch, we spoke quite a bit about what I’m writing about (time, my anxiet
 
 <figure class="w-full">
   {% retinaImage "src/assets/journal/aulus-les-bains02.JPG", "The desk at which I’m spending the day." %}
-  <figcaption class="pl-8 sm:pl-0">The desk at which I’m spending the day.</figcaption>
+  <figcaption class="pl-8 sm:pl-0">The desk at which I’m spending the day</figcaption>
 </figure>
 
 I stopped writing around 16:00, read a bit, then fell asleep. It feels great to be writing five, six hours per day (perhaps I’m finding it easier because I’m writing in my native language for the first time in forever), but it is draining, too.

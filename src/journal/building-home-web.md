@@ -11,7 +11,7 @@ image:
   title: "On building a home on the web (I)"
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>On building a home on the web (I)</h1>
 <span class="font-sans text-sm">February 25, 2022</span>
@@ -26,7 +26,7 @@ I remember following people like [Jason Santa Maria](https://jasonsantamaria.com
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/building-home-web.avif", "The websites of Jeffrey Zeldman (2004), Jason Santa Maria (2008), and Jessica Hische (2012)." %}
-    <figcaption class="pl-8 sm:pl-0">The websites of Jeffrey Zeldman (2004), Jason Santa Maria (2008), and Jessica Hische (2012).</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The websites of Jeffrey Zeldman (2004), Jason Santa Maria (2008), and Jessica Hische (2012)</figcaption>
   </figure>
 </div>
 
@@ -52,7 +52,7 @@ With the rise of social media, our personal websites went stale or disappeared a
 
 <figure class="w-full">
   {% retinaImage "src/assets/journal/personal-websites-siteinspire.avif", "The “personal websites” category on Siteinspire, with two additions in the past year." %}
-  <figcaption class="pl-8 sm:pl-0">The “personal websites” category on Siteinspire, with two additions in the past year.</figcaption>
+  <figcaption class="pl-8 sm:pl-0">The “personal websites” category on Siteinspire, with two additions in the past year</figcaption>
 </figure>
 
 It’s as if our social media profiles became where we could flaunt our personality, depending on the platform (_if you want hot takes, see my Twitter! For lukewarm takes, browse my LinkedIn!_). As if professional achievements couldn’t be mixed with personality or personal interests, the personal website morphed into a bit of a billboard: two sentences about what we do, a resumé, and a list of clients. It felt as if our personality and sense of experimentation needed to disappear from the web unless someone paid us to show it.
@@ -72,7 +72,7 @@ I’ve seen websites as reading lists ([Thijs](https://thijs.niks.nu/ "Thijs Nik
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
     {% retinaImage "src/assets/journal/fun-personal-websites.avif", "The websites of Brian Lovin, Folkert Gorter and Aneta Junkova." %}
-    <figcaption class="pl-8 sm:pl-0">The websites of Brian Lovin, Folkert Gorter and Aneta Junkova.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The websites of Brian Lovin, Folkert Gorter and Aneta Junkova</figcaption>
   </figure>
 </div>
 

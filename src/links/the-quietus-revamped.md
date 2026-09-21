@@ -19,7 +19,7 @@ Earlier this year I noticed [_The Quietus_](https://thequietus.com/?ref=daniel.p
 <figure>
   {% retinaImage "src/assets/links/the-quietus02.avif", "The revamped The Quietus, on mobile" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    The revamped <em>The Quietus</em>, all images courtesy of 11:11.
+    The revamped <em>The Quietus</em>, all images courtesy of 11:11
   </figcaption>
 </figure>
 

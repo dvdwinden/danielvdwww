@@ -10,7 +10,7 @@ external_url: https://www.theverge.com/decoder-podcast-with-nilay-patel/760522/o
 <figure>
   {% retinaImage "src/assets/links/kepano.webp", "Photo by Obsidian, image editing by The Verge" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    Photo by Obsidian, image editing by The Verge.
+    Photo by Obsidian, image editing by The Verge
   </figcaption>
 </figure>
 

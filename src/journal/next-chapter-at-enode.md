@@ -13,7 +13,7 @@ image:
   objectPosition: center
 ---
 
-<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[25vh] dark:prose-invert">
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif pt-[12.5vh] dark:prose-invert">
 
 <h1>The next chapter of my career: advancing the transition to sustainable energy at Enode</h1>
 <span class="font-sans text-sm">January 5, 2026</span>
@@ -40,7 +40,7 @@ My place was on the _Experience_ team, designing software for the people who use
   </figure>
   <figure class="w-full mt-4">
     {% retinaImage "src/assets/journal/enode-ui-02.png", "Example of Enode UI", 1400 %}
-    <figcaption class="pl-8 sm:pl-0">Examples of the software I work on at Enode.</figcaption>
+    <figcaption class="pl-8 sm:pl-0">Examples of the software I work on at Enode</figcaption>
   </figure>
 </div>
 

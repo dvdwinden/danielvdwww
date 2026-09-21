@@ -10,7 +10,7 @@ external_url: https://www.theparisreview.org/blog/2026/01/14/ten-writing-prompts
 <figure>
   {% retinaImage "src/assets/links/ten-writing-prompts.webp", "Three Six Five by Lucy Ives." %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
-    <em>Three Six Five</em> by Lucy Ives.
+    <em>Three Six Five</em> by Lucy Ives
   </figcaption>
 </figure>
 
