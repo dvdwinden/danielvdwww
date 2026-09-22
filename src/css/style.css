@@ -410,6 +410,22 @@ figcaption,
     line-height: 1.25;
 }
 
+/* Figures stacked back to back read as one run of images, so they sit closer
+   together than a figure does to body text. Both sides are set because
+   adjacent margins collapse to the larger of the two. */
+.prose figure + figure {
+    margin-top: 0.75em;
+}
+
+.prose figure:has(+ figure) {
+    margin-bottom: 0.75em;
+}
+
+/* The photo grid spaces its own items with a gap. */
+.prose .photo-grid figure + figure {
+    margin-top: 0;
+}
+
 /* The shorthand has to come first: after text-decoration-color it resets the
    colour back to currentColor, which made caption underlines full-strength
    black where prose links get grey. */
