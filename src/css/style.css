@@ -1648,6 +1648,28 @@ ul.list-none {
     color: rgb(107 114 128);
 }
 
+/* The marker tying four rows to the one note underneath. It is muted so it
+   reads as an aside rather than a second piece of the title, and raised by
+   hand: <sup> at this size lifts the asterisk clear off the cap line. The note
+   itself takes the /now and /friends footnote classes, so the marker inherits
+   its size there and only needs the lead trimmed. */
+.prose .entry-note-marker {
+    font-family: theme("fontFamily.sans");
+    font-size: theme("fontSize.sm");
+    vertical-align: baseline;
+    position: relative;
+    top: -0.15em;
+    margin-left: 0.15em;
+    color: inherit;
+    opacity: 0.5;
+}
+
+.prose p > .entry-note-marker:first-child {
+    margin-left: 0;
+    margin-right: 0.1em;
+    opacity: 1;
+}
+
 /* Faux small caps for initialisms. Blanco's webfont ships no smcp/c2sc, so
    font-variant-caps has nothing to draw from and these are scaled capitals
    instead. Scaling thins the strokes against the surrounding lowercase, so the

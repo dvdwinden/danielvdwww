@@ -204,7 +204,7 @@ I enjoyed our collaboration very much, and wrote a few words about it in my jour
   <div class="entry-list flex flex-col">
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">OCT 2025</span>
-      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue four</p>
+      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue four<sup class="entry-note-marker">*</sup></p>
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">JUL 2025</span>
@@ -213,7 +213,7 @@ I enjoyed our collaboration very much, and wrote a few words about it in my jour
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">JUN 2025</span>
-      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue three</p>
+      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue three<sup class="entry-note-marker">*</sup></p>
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">JAN 2025</span>
@@ -223,11 +223,13 @@ I enjoyed our collaboration very much, and wrote a few words about it in my jour
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">JAN 2025</span>
-      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue two</p>
+      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue two<sup class="entry-note-marker">*</sup></p>
     </div>
     <div class="flex items-baseline">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">SEP 2024</span>
-      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue one</p>
+      <p class="my-4"><em>TRANSCRIPT</em> Magazine launch, issue one<sup class="entry-note-marker">*</sup></p>
     </div>
   </div>
+
+  <p class="mt-6 font-sans text-sm leading-snug tracking-wide text-black/50 dark:text-white/50"><span class="entry-note-marker">*</span> With <a href="https://iriscuppen.com?ref=daniel.pizza" title="Iris Cuppen" rel="external" target="_blank">Iris Cuppen</a>.</p>
 </div>
