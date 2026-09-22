@@ -145,10 +145,33 @@ test('authorName strips markup and falls back to the domain', () => {
   );
 });
 
+test('authorName falls back to the source host when the author is empty', () => {
+  // A page with no h-card at all sends every author field as an empty string.
+  assert.equal(
+    authorName({ name: '', photo: '', url: '' }, 'https://nogood.studio/archive/'),
+    'nogood.studio'
+  );
+  assert.equal(
+    authorName({}, 'https://www.example.com/links/'),
+    'example.com',
+    'www. should be dropped from the source too'
+  );
+  assert.equal(
+    authorName({ name: '', url: 'https://author.example/' }, 'https://aggregator.example/'),
+    'author.example',
+    'the author\u2019s own domain wins over the linking page'
+  );
+});
+
 test('authorName falls back to Someone when there is nothing usable', () => {
   assert.equal(authorName({}), 'Someone');
   assert.equal(authorName(null), 'Someone');
   assert.equal(authorName({ name: '<b></b>', url: 'javascript:alert(1)' }), 'Someone');
+  assert.equal(
+    authorName({}, 'javascript:alert(1)'),
+    'Someone',
+    'an unsafe source URL is no better than none'
+  );
 });
 
 test('authorName caps a very long name', () => {

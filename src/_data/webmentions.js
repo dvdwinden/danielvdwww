@@ -178,9 +178,25 @@ function authorInitial(name) {
   return '';
 }
 
-// A display name for the author. Falls back to their domain, because an
+// The host of a URL, without its "www.", or null if there isn't one to take.
+function hostOf(value) {
+  const url = safeUrl(value);
+  if (!url) return null;
+  try {
+    return new URL(url).host.replace(/^www\./, '') || null;
+  } catch (e) {
+    return null;
+  }
+}
+
+// A display name for the author. Falls back to a domain, because an
 // anonymous-looking avatar with no name at all reads as broken.
-function authorName(author) {
+//
+// `sourceUrl` is the page that did the linking. A site with no h-card at all —
+// a plain list of links, say — sends an author with every field empty, and
+// there is no author URL to fall back to; naming the site that linked is both
+// truthful and more use to a reader than "Someone".
+function authorName(author, sourceUrl) {
   // A name is markup-stripped like everything else, and a name that was
   // nothing but markup strips down to nothing — so it falls through to the
   // domain rather than rendering as a row of escaped angle brackets.
@@ -188,15 +204,7 @@ function authorName(author) {
     author && typeof author.name === 'string' ? stripMarkup(author.name) : '';
   if (name) return name.slice(0, 80);
 
-  const url = safeUrl(author && author.url);
-  if (url) {
-    try {
-      return new URL(url).host.replace(/^www\./, '');
-    } catch (e) {
-      /* fall through */
-    }
-  }
-  return 'Someone';
+  return hostOf(author && author.url) || hostOf(sourceUrl) || 'Someone';
 }
 
 // ----------------------------------------------------------------------------
@@ -259,7 +267,7 @@ function normalise(entry) {
     target,
     source,
     author: (() => {
-      const name = authorName(author);
+      const name = authorName(author, source);
       return {
         name,
         initial: authorInitial(name),
