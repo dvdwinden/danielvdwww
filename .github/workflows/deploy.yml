@@ -5,6 +5,19 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+  # Webmentions, GitHub contributions and training data are all fetched at
+  # build time, so they only reach the site when something builds — and
+  # between posts, nothing does. A reply could sit at webmention.io for a
+  # fortnight. This is the heartbeat that brings them in on its own.
+  #
+  # Three-hourly: often enough that a mention appears the same day, rare
+  # enough to stay well inside the free minutes. The offset minute keeps it
+  # off the top of the hour, where GitHub queues the most scheduled jobs and
+  # delays them longest. Note a run can still be skipped under load — cron
+  # here is best-effort, which is fine for a heartbeat and would not be for
+  # anything that had to happen exactly once.
+  schedule:
+    - cron: '17 */3 * * *'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -89,6 +102,16 @@ jobs:
           # one run that is supposed to rebuild everything rebuilt nothing.
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             CHANGED_IMAGES="full_build"
+          fi
+
+          # A scheduled run is not responding to a commit at all — it exists to
+          # pull in webmentions and the other build-time APIs. HEAD~1..HEAD is
+          # then whatever was last pushed, possibly days ago, so the diff would
+          # keep naming the same images and reprocessing them every three hours
+          # to produce identical files. Nothing changed since the last run; say
+          # so, and let the heartbeat stay cheap.
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            CHANGED_IMAGES=""
           fi
 
           # Check if images have changed
