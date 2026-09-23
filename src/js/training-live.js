@@ -30,6 +30,14 @@ class TrainingLive {
     return 'bg-orange-600 dark:bg-orange-400';
   }
 
+  // Striped when tennis took most of the day's time, solid otherwise — so a
+  // warm-up jog before a match still reads as a tennis day.
+  static isTennis(day) {
+    if (!day || !day.sports) return false;
+    const tennis = (day.sports.Tennis && day.sports.Tennis.s) || 0;
+    return tennis > 0 && tennis * 2 >= day.seconds;
+  }
+
   // Local date parts: toISOString() would shift every cell back a day here.
   static key(date) {
     return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
@@ -88,12 +96,15 @@ class TrainingLive {
               ${week.map((entry) => {
                 if (!entry) return '<div class="w-2.5 h-2.5"></div>';
                 const seconds = entry.day ? entry.day.seconds : 0;
-                return `<div class="w-2.5 h-2.5 rounded-sm ${this.getColor(seconds)} border border-black/5 dark:border-white/10 transition-colors cursor-pointer" data-date="${entry.date}" data-text="${this.escape(this.describe(entry.day))}"></div>`;
+                return `<div class="w-2.5 h-2.5 rounded-sm ${this.getColor(seconds)}${TrainingLive.isTennis(entry.day) ? ' training-tennis' : ''} border border-black/5 dark:border-white/10 transition-colors cursor-pointer" data-date="${entry.date}" data-text="${this.escape(this.describe(entry.day))}"></div>`;
               }).join('')}
             </div>
           `).join('')}
         </div>
-        <figcaption class="mt-2">My recent running and tennis.</figcaption>
+        <figcaption class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-orange-400 dark:bg-orange-700 border border-black/5 dark:border-white/10"></span>Running</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-orange-400 dark:bg-orange-700 training-tennis border border-black/5 dark:border-white/10"></span>Tennis</span>
+        </figcaption>
       </div>
     `;
     container.style.display = 'block';

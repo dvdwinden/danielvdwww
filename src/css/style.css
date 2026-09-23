@@ -2615,3 +2615,29 @@ ul.list-none {
 .dark .webmentions .webmention-faces a:focus-visible .webmention-avatar {
     box-shadow: 0 0 0 1px theme("colors.hover-dark");
 }
+
+/* TRAINING CALENDAR
+   Tennis days carry diagonal stripes over their orange so they read apart
+   from runs without a second hue — the shade still means time spent. Light
+   stripes on the light page, dark stripes on the dark one, so the pattern
+   holds up on every shade of the scale.
+
+   The pattern starts at the border edge: from the default padding edge it
+   tiles again under the translucent 1px border, and the break at the edge
+   reads as a bevel. */
+.training-tennis {
+    background-origin: border-box;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgb(255 255 255 / 0.35) 0 1.5px,
+        transparent 1.5px 3.5px
+    );
+}
+
+.dark .training-tennis {
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgb(0 0 0 / 0.3) 0 1.5px,
+        transparent 1.5px 3.5px
+    );
+}
