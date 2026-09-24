@@ -132,12 +132,12 @@ The shadow also depends on the book. A thick hardcover sits higher off the table
   <figure class="w-full">
     <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-14-figma-three-shadows.png", "The glow, tail and contact shadow as drop shadows in Figma", 1200 %}</span>
     <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-14-figma-three-shadows-dark.png", "The glow, tail and contact shadow as drop shadows in Figma", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0">The glow, the tail and the core, as three drop shadows in Figma</figcaption>
+    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto">The glow, the tail and the core, as three drop shadows in Figma</figcaption>
   </figure>
   <figure class="w-full mt-4">
     <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-13-figma-style-dialog.png", "The Book light effect style in Figma", 1200 %}</span>
     <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-13-figma-style-dialog-dark.png", "The Book light effect style in Figma", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0">The effect style that holds them, used on every cover in the Instagram file</figcaption>
+    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto">The effect style that holds them, used on every cover in the Instagram file</figcaption>
   </figure>
 </div>
 
@@ -199,7 +199,7 @@ What did help was the same thing that fixed the lighting: testing on the real de
   <figure class="w-full">
     <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-15-four-covers.png", "Harlem Shuffle, The Memory Police, The Wild Birds and Greyhound, each lit with Book light", 1200 %}</span>
     <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-15-four-covers-dark.png", "Harlem Shuffle, The Memory Police, The Wild Birds and Greyhound, each lit with Book light", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0">Four more covers under the same light: <em>Harlem Shuffle</em>, <em>The Memory Police</em>, <em>The Wild Birds</em> and <em>Greyhound</em></figcaption>
+    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto">Four more covers under the same light: <em>Harlem Shuffle</em>, <em>The Memory Police</em>, <em>The Wild Birds</em> and <em>Greyhound</em></figcaption>
   </figure>
 </div>
 
