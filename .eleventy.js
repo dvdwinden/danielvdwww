@@ -78,6 +78,12 @@ function isFaviconFile(filePath) {
   return fileName.includes('favicon') || fileName.includes('apple-touch-icon');
 }
 
+// Animated images (e.g. animated WebP) live in src/assets/animations and are copied
+// as-is: the optimizer would flatten them to their first frame
+function isAnimationFile(filePath) {
+  return filePath.includes('assets/animations/');
+}
+
 // Return a simple img tag for files that shouldn't be optimized
 function getFallbackImageTag(src, alt) {
   return `<img src="${src}" alt="${alt}" title="${alt}" loading="lazy" />`;
@@ -438,7 +444,7 @@ module.exports = function (eleventyConfig) {
 
     // Filter out favicon files - they should not be processed by the image optimization system
     const faviconFiles = imageFiles.filter(isFaviconFile);
-    const filesToProcess = imageFiles.filter(file => !isFaviconFile(file));
+    const filesToProcess = imageFiles.filter(file => !isFaviconFile(file) && !isAnimationFile(file));
 
     // Filter to only process images that have changed or don't have output
     const filesToActuallyProcess = filesToProcess.filter(file => {
@@ -629,6 +635,9 @@ module.exports = function (eleventyConfig) {
 
       // Skip favicon files
       if (isFaviconFile(src)) continue;
+
+      // Skip animations, which are served as-is
+      if (isAnimationFile(src)) continue;
 
       // Skip bookmark card icons. They're 16px marks served at their natural
       // size, and swapping them for a <picture> would drop them out of the
@@ -948,6 +957,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/**/*.mp4");
   eleventyConfig.addPassthroughCopy("src/assets/**/*.webm");
   eleventyConfig.addPassthroughCopy("src/assets/**/*.pdf");
+  eleventyConfig.addPassthroughCopy("src/assets/animations");
 
   // Copy fonts directory for custom fonts
   eleventyConfig.addPassthroughCopy("src/assets/fonts");

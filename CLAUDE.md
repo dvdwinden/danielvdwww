@@ -44,6 +44,7 @@ The codebase features a sophisticated image optimization system in `.eleventy.js
 - **Original Files**: Original images remain in `src/` but are NOT copied to `_site/` - only optimized WebP versions are deployed
 - **Caching**: Two-level cache system (IMAGE_CACHE and FILE_PATH_CACHE) prevents reprocessing
 - **Incremental Builds**: In CI/CD, only changed images are processed (determined via Git diff)
+- **Animations**: Animated images (e.g. animated WebP) go in `src/assets/animations/`, which is copied as-is and skipped by the optimizer (it would flatten them to their first frame). Prefer these over MP4 when an animation has to match the page background: browsers render video colour inconsistently, so a video's background never quite matches the CSS colour around it
 - **Multiple Shortcodes**:
   - `{% image src, alt, sizes %}` - Standard responsive images
   - `{% retinaImage src, alt, maxWidth %}` - Retina-optimized images (1x and 2x)
