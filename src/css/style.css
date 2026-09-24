@@ -1433,7 +1433,9 @@ ul.list-none {
    (600x991, the book ~78% of its width). 1em is 1% of that width: font sizes
    always resolve to pixels, so Safari gets plain lengths rather than container
    units it mis-measures. The white glow up and left comes first, so the
-   shadows that copy it land mostly under the book. Plain drop-shadows, since
+   shadows that copy it land mostly under the book. It reaches half as far as
+   Trema's: at 6% white on the dark ground, the far edge of Trema's glow shows
+   as a faint box. Plain drop-shadows, since
    Safari mis-renders SVG filters on images.
    ========================================================================== */
 .trema-item .book-cover img,
@@ -1452,7 +1454,7 @@ ul.newsletter img {
     background-image: linear-gradient(transparent, transparent);
     pointer-events: none;
     filter:
-        drop-shadow(-6.96em -8.53em 10.66em var(--glow))
+        drop-shadow(-3.5em -4.25em 5.5em var(--glow))
         drop-shadow(9.36em 8.11em calc(3.96em + var(--nudge, 0px)) var(--core))
         drop-shadow(14.79em 11.63em 14em var(--tail));
 }
