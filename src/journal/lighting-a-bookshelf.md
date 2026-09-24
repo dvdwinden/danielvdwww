@@ -19,7 +19,9 @@ image:
 
 Every book on [Trema](http://trema.website?ref=daniel.pizza "Trema") sits on a small coloured card: pistachio for fiction, powder blue for non-fiction. For a long time the covers just sat on those cards like stickers.
 
-It was Instagram that made me notice. When I started posting my book recommendations there, I saw the covers bigger, and more often, than I ever had on the website, and I was frankly a little appalled by how I’d handled the shading. So, over the past few days, I gave them some light, as if each book were lying on a table by a window.
+It was Instagram that made me notice. When I started posting my book recommendations there, I saw the covers bigger, and more often, than I ever had on the website, and I was frankly a little appalled by how I’d handled the shading.
+
+It bothered me because realism is the whole point. I [photograph the books I recommend myself](/journal/trema-ghost-theme/ "A fresh coat of paint for Trema"), instead of using the publisher’s artwork,, because I don’t want the covers to look digital. I want Trema to feel like a book nook: something tactile, a stack of real books you could pick up. A flat, generic shadow undoes all of that, so the more real the light, the better. So, over the past few days, I gave the covers some light, as if each book were lying on a table by a window.
 
 </div>
 
