@@ -35,9 +35,10 @@ const BOOKMARK_IMAGE_SIZES = "112px";
 // scans: grain is high-frequency noise and it is the first thing a lossy
 // encoder throws away, so photographs come out looking smoothed rather than
 // sharp. Anything under a path listed here is encoded at the higher quality
-// instead.
+// instead. The Book light post's images are on the list for a similar reason:
+// soft shadows and dark gradients band at 70.
 const DEFAULT_WEBP_QUALITY = 70;
-const HIGH_QUALITY_WEBP_PATHS = ['assets/photos/'];
+const HIGH_QUALITY_WEBP_PATHS = ['assets/photos/', 'assets/journal/book-light-'];
 const HIGH_WEBP_QUALITY = 90;
 
 // The same paths also get a rendition at the source's own width (null means
