@@ -19,9 +19,9 @@ image:
 
 Every book on [Trema](http://trema.website?ref=daniel.pizza "Trema") sits on a small coloured card: pistachio for fiction, powder blue for non-fiction. When I started the publication, those covers were digital: artwork I’d downloaded from publishers’ websites. Later, I started [photographing the books themselves](/journal/trema-ghost-theme/ "A fresh coat of paint for Trema"), and bought paper copies of the ones I’d read on my Kindle so I could. The photos made the books feel real, but on the website they still sat on their cards like stickers.
 
-It was Instagram that made me notice. When I started posting my book recommendations there, I saw the covers bigger, and more often, than I ever had on the website, and I was frankly a little appalled by how I’d handled the shading.
+It was Instagram that made me notice. When I started posting my book recommendations there, I saw the covers bigger, and more often, than I ever had on the website, and I was a little appalled by how I’d handled the shading.
 
-It bothered me because realism is the whole point. I photograph the books because I don’t want them to look digital. I want Trema to feel like a book nook: something tactile, a stack of real books you could pick up. A flat, generic shadow undoes all of that, so the more real the light, the better. So, over the past few days, I gave the covers some light, as if each book were lying on a table by a window.
+It bothered me because I’m after realism. I photograph the books because I don’t want them to look digital. I want Trema to feel like a book nook: something tactile, a stack of real books you could pick up. A flat, generic shadow works against that, so I wanted the light to be as real as I could make it. Over the past few days, I gave the covers some light, as if each book were lying on a table by a window.
 
 </div>
 
@@ -124,7 +124,7 @@ I ended up calling it _Book light_. It has four parts, and every size is a fract
 
 In Figma, the glow, tail and core are three drop shadows saved together as one effect style, and the falloff is part of the card’s fill. Every cover in the file I make Trema’s Instagram posts in uses them, so the posts and the website are lit the same way.
 
-The shadow also depends on the book. A thick hardcover sits higher off the table than a slim paperback, so it casts a longer shadow, and every cover comes in a thin and a thick version. How I decide which is decidedly low-tech: I take the book off the shelf and look at it. On Trema that’s a hidden tag on the post, and in Figma it’s a choice between two styles.
+The shadow also depends on the book. A thick hardcover sits higher off the table than a slim paperback, so it casts a longer shadow, and every cover comes in a thin and a thick version. I decide which by taking the book off the shelf and looking at it. On Trema that’s a hidden tag on the post, and in Figma it’s a choice between two styles.
 
 </div>
 
@@ -172,7 +172,7 @@ It didn’t stop there. Seeing the light in the browser, on real covers at real 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 ## Then Safari
-In Chrome, it worked almost straight away. Safari was another story. It kept drawing the shadows wrong, in five different ways: cutting them off while a cover moved on hover, leaving old scraps of shadow behind, cropping the shadow to a neat rectangle around the book, or only half redrawing it after a cover loaded.
+In Chrome, it worked almost straight away. Safari kept drawing the shadows wrong, in five different ways: cutting them off while a cover moved on hover, leaving old scraps of shadow behind, cropping the shadow to a neat rectangle around the book, or only half redrawing it after a cover loaded.
 
 </div>
 
@@ -190,7 +190,7 @@ Each of those had its own fix, and none of them were anything I’d have found o
 
 That nudge was the most stubborn part. The first version changed the shadow by a hundredth of a pixel for a moment, which was enough on my Mac. On my iPhone, the shadows were still cut off, and differently every time I loaded the page. Claude’s first guess at a fix didn’t help, and we threw it away.
 
-What did help was the same thing that fixed the lighting: looking at the real thing instead of guessing. I plugged my iPhone into my Mac, and Claude could then open pages in Safari on the phone, load a cover late on purpose, and take screenshots of what happened. It turned out iPhones simply ignore a change as small as a hundredth of a pixel. Swapping it for a change they do notice fixed it, and the screenshots from the phone showed the difference.
+What did help was the same thing that fixed the lighting: testing on the real device instead of guessing. I plugged my iPhone into my Mac, and Claude could then open pages in Safari on the phone, load a cover late on purpose, and take screenshots of what happened. It turned out iPhones ignore a change as small as a hundredth of a pixel. Swapping it for a change they do notice fixed it, and the screenshots from the phone showed the difference.
 
 </div>
 
@@ -205,10 +205,10 @@ What did help was the same thing that fixed the lighting: looking at the real th
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 ## What I’d keep
-The back and forth is what I’d keep most. A photo told us what real light does, Figma was where I could see it and judge it, and the code was where it had to hold up, on every cover, at every size, in every browser. None of the three would have got there alone.
+The back and forth is what I’d keep most. A photo told us what real light does, Figma was where I could see it and judge it, and the code was where it had to hold up, on every cover, at every size, in every browser.
 
 Both halves of this project also came down to the same lesson. The lighting only came together once we measured real photos instead of going from memory, and the iPhone bug only went away once we tested on the phone itself instead of guessing.
 
-Working this way also changed what my job was. I didn’t write most of the code, but I made every call on how it should look, and I was the one who noticed when something was off. That turned out to be most of the work.
+Working this way also changed what my job was. I didn’t write most of the code, but I made every call on how it should look, and I was the one who noticed when something was off.
 
 </div>
