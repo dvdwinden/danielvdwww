@@ -29,7 +29,7 @@ It bothered me because I’m after realism. I photograph the books because I don
   <figure class="w-full">
     <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-11-before-after.png", "The Chronicles of DOOM on Trema, without light and with it", 1200 %}</span>
     <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-11-before-after-dark.png", "The Chronicles of DOOM on Trema, without light and with it", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0">The same cover without light, and with Book light</figcaption>
+    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto">The same cover without light, and with Book light</figcaption>
   </figure>
 </div>
 
@@ -50,7 +50,7 @@ The first version was the kind of shadow you find in a good <span class="smallca
   <figure class="w-full">
     <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-01-02-no-light-generic.png", "The cover without a shadow, next to the same cover with a faint, neutral, layered shadow", 1200 %}</span>
     <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-01-02-no-light-generic-dark.png", "The cover without a shadow, next to the same cover with a faint, neutral, layered shadow", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0">No light at all, and the generic shadow: soft, neutral, and easy to miss</figcaption>
+    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto">No light at all, and the generic shadow: soft, neutral, and easy to miss</figcaption>
   </figure>
 </div>
 
@@ -77,9 +77,9 @@ In Figma I tried a lot of lighting: hard sun, a higher sun, late afternoon, a lo
 
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
-    <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-04-hard-sun.png", "An exploration with a crisp, hard sun shadow", 1200 %}</span>
-    <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-04-hard-sun-dark.png", "An exploration with a crisp, hard sun shadow", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0">One of the explorations: a crisp, hard sun</figcaption>
+    <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-04-three-suns.png", "Three sun explorations: a hard sun, a higher sun and a low evening sun", 1200 %}</span>
+    <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-04-three-suns-dark.png", "Three sun explorations: a hard sun, a higher sun and a low evening sun", 1200 %}</span>
+    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto">Three of the explorations: a hard sun, a higher sun and a low evening sun</figcaption>
   </figure>
 </div>
 
@@ -132,12 +132,12 @@ The shadow also depends on the book. A thick hardcover sits higher off the table
   <figure class="w-full">
     <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-14-figma-three-shadows.png", "The glow, tail and contact shadow as drop shadows in Figma", 1200 %}</span>
     <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-14-figma-three-shadows-dark.png", "The glow, tail and contact shadow as drop shadows in Figma", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto">The glow, the tail and the core, as three drop shadows in Figma</figcaption>
+    <figcaption class="pl-8 sm:pl-0">The glow, the tail and the core, as three drop shadows in Figma</figcaption>
   </figure>
   <figure class="w-full mt-4">
     <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-13-figma-style-dialog.png", "The Book light effect style in Figma", 1200 %}</span>
     <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-13-figma-style-dialog-dark.png", "The Book light effect style in Figma", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto">The effect style that holds them, used on every cover in the Instagram file</figcaption>
+    <figcaption class="pl-8 sm:pl-0 sm:max-w-lg sm:ml-auto text-balance">The effect style that holds them, used on every cover in the Instagram file</figcaption>
   </figure>
 </div>
 
@@ -172,7 +172,7 @@ It didn’t stop there. Seeing the light in the browser, on real covers at real 
 
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
-## Then Safari
+## Five ways to lose a shadow
 In Chrome, it worked almost straight away. Safari kept drawing the shadows wrong, in five different ways: cutting them off while a cover moved on hover, leaving old scraps of shadow behind, cropping the shadow to a neat rectangle around the book, or only half redrawing it after a cover loaded.
 
 </div>
