@@ -199,7 +199,7 @@ html.dark #page-background {
     view-transition-name: content;
     position: relative;
     min-height: 100vh;
-    @apply text-gray-900 dark:text-gray-300;
+    @apply text-gray-900 dark:text-neutral-300;
 }
 
 /* Swap the content hard: old gone and new shown from the first frame. */
@@ -1881,8 +1881,8 @@ ul.newsletter img {
 }
 
 .dark .prose .cta-button:hover {
-    background: theme("colors.gray.100");
-    color: theme("colors.gray.600");
+    background: theme("colors.neutral.100");
+    color: theme("colors.neutral.600");
     text-decoration: none;
     transition:
         background 0.2s,
@@ -1897,7 +1897,7 @@ ul.newsletter img {
 }
 
 .dark .prose .cta-link:hover {
-    color: theme("colors.gray.300");
+    color: theme("colors.neutral.300");
     text-decoration: none;
     transition: color 0.2s;
     background: none;
@@ -1911,11 +1911,11 @@ ul.newsletter img {
 
 .dark figcaption a {
     color: theme("colors.white");
-    text-decoration-color: theme("colors.gray.500");
+    text-decoration-color: theme("colors.neutral.500");
 }
 
 .dark figcaption a:hover {
-    color: theme("colors.gray.300");
+    color: theme("colors.neutral.300");
 }
 
 .dark .callout {
@@ -1923,20 +1923,20 @@ ul.newsletter img {
 }
 
 .dark .site-footer ul li a {
-    color: theme("colors.gray.400");
+    color: theme("colors.neutral.400");
     text-decoration: none;
 }
 
 .dark .site-footer ul li a:hover {
-    color: theme("colors.gray.100");
+    color: theme("colors.neutral.100");
 }
 
 .dark .site-footer a.underline-custom {
     text-decoration: underline;
-    text-decoration-color: theme("colors.gray.400");
+    text-decoration-color: theme("colors.neutral.400");
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
-    color: theme("colors.gray.100");
+    color: theme("colors.neutral.100");
 }
 
 .dark ul.links li a:hover h2 {

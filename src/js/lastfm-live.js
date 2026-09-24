@@ -86,7 +86,7 @@ class LastFMLive {
       console.log('LastFM: Updating container with now playing');
       container.innerHTML = `
         <div class="lastfm ">
-          Now playing: <a href="${nowPlaying.url}" target="_blank" rel="noopener" class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-gray-100">${nowPlaying.artist} — ${nowPlaying.title}</a>
+          Now playing: <a href="${nowPlaying.url}" target="_blank" rel="noopener" class="text-black/65 dark:text-white/80 hover:text-gray-900 dark:hover:text-neutral-100">${nowPlaying.artist} — ${nowPlaying.title}</a>
         </div>
       `;
       container.style.display = 'block';

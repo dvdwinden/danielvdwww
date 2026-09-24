@@ -89,7 +89,7 @@ class TrainingLive {
 
     container.innerHTML = `
       <div class="training-calendar w-full relative">
-        <div id="training-tooltip" class="absolute hidden bg-gray-900 dark:bg-gray-700 text-white text-xs font-sans px-2 py-1 rounded shadow-lg pointer-events-none z-50 whitespace-nowrap"></div>
+        <div id="training-tooltip" class="absolute hidden bg-gray-900 dark:bg-neutral-700 text-white text-xs font-sans px-2 py-1 rounded shadow-lg pointer-events-none z-50 whitespace-nowrap"></div>
         <div class="flex gap-1 overflow-hidden">
           ${weeks.map((week) => `
             <div class="flex flex-col gap-1 flex-shrink-0">

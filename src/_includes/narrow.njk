@@ -199,7 +199,7 @@
                     {{ content | safe }}
                     {% if isPost %}</div>{% endif %}
                     {% if tags %}
-                    <ul class="mt-6 font-sans text-sm tracking-wide text-gray-500 dark:text-gray-600 flex flex-wrap items-center gap-x-2 not-prose" style="list-style: none; padding: 0;">
+                    <ul class="mt-6 font-sans text-sm tracking-wide text-gray-500 dark:text-neutral-600 flex flex-wrap items-center gap-x-2 not-prose" style="list-style: none; padding: 0;">
                       {% for tag in tags | sort %}
                       {% set displayTag = tag %}
                       {% if tag == "iOS" %}
@@ -212,7 +212,7 @@
                         {% set displayTag = tag | capitalize %}
                       {% endif %}
                       <li class="flex items-center gap-x-2">
-                        <a href="/links/{{ tag | slugify }}/" class="{% if isPost %}p-category {% endif %}text-gray-500 dark:text-gray-600 hover:text-gray-700 dark:hover:text-gray-500" style="text-decoration: none;">{{ displayTag }}</a>
+                        <a href="/links/{{ tag | slugify }}/" class="{% if isPost %}p-category {% endif %}text-gray-500 dark:text-neutral-600 hover:text-gray-700 dark:hover:text-neutral-500" style="text-decoration: none;">{{ displayTag }}</a>
                         {% if not loop.last %}<span aria-hidden="true">·</span>{% endif %}
                       </li>
                       {% endfor %}
