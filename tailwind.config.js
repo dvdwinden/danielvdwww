@@ -72,6 +72,10 @@ module.exports = {
               'font-weight': '400',
               'font-size': '0.95em',
             },
+            // Oldstyle figures for list numbers, so they sit with Blanco's lowercase
+            'ol > li::marker': {
+              'font-variant-numeric': 'oldstyle-nums',
+            },
           },
         },
         invert: {
