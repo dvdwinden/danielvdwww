@@ -112,14 +112,6 @@ I ended up calling it _Book light_. It has four parts, and every size is a fract
   </figure>
 </div>
 
-<div class="sm:mt-32 mt-16 mb-16">
-  <figure class="w-full">
-    <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-12-shadow-closeup.png", "A close-up of the cover’s bottom-right corner and its shadow", 1200 %}</span>
-    <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-12-shadow-closeup-dark.png", "A close-up of the cover’s bottom-right corner and its shadow", 1200 %}</span>
-    <figcaption class="pl-8 sm:pl-0">Up close: the tight core along the book’s edge, and the tail fading out down and to the right</figcaption>
-  </figure>
-</div>
-
 <div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
 
 In Figma, the glow, tail and core are three drop shadows saved together as one effect style, and the falloff is part of the card’s fill. Every cover in the file I make Trema’s Instagram posts in uses them, so the posts and the website are lit the same way.
@@ -156,9 +148,24 @@ Because every value was already a fraction of the cover’s width, getting it on
 }
 ```
 
-The first three lines are the colours of the glow, the core and the tail. The rest say how far each shadow moves and how soft it is, as a share of the cover’s width. In dark mode the glow gets much fainter and the shadows turn black, because a slate-blue shadow on a dark card looks like a pale halo.
+The first three lines are the colours of the glow, the core and the tail. The rest say how far each shadow moves and how soft it is, as a share of the cover’s width.
+
+</div>
+
+<div class="sm:mt-32 mt-16 mb-16">
+  <figure class="w-full">
+    <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-12-shadow-closeup.png", "A close-up of the cover’s bottom-right corner and its shadow", 1200 %}</span>
+    <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-12-shadow-closeup-dark.png", "A close-up of the cover’s bottom-right corner and its shadow", 1200 %}</span>
+    <figcaption class="pl-8 sm:pl-0">Those ratios up close: the tight core along the book’s edge, and the tail fading out down and to the right</figcaption>
+  </figure>
+</div>
+
+<div class="w-full max-w-lg ml-auto prose prose-lg font-serif sm:mt-24 mt-16 dark:prose-invert">
+
 
 It didn’t stop there. Seeing the light in the browser, on real covers at real sizes, sent me back to Figma more than once, for a longer shadow for thicker hardcovers, for instance. Whatever changed there went straight back into the code, and because both sides speak in the same fractions of a cover’s width, that took minutes rather than days.
+
+In dark mode the glow gets much fainter and the shadows turn black, because a slate-blue shadow on a dark card looks like a pale halo.
 
 </div>
 
