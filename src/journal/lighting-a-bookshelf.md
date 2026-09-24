@@ -164,7 +164,8 @@ It didn’t stop there. Seeing the light in the browser, on real covers at real 
 
 <div class="sm:mt-32 mt-16 mb-16">
   <figure class="w-full">
-    {% retinaImage "src/assets/journal/book-light-09-dark.png", "The cover in dark mode, with black shadows and a faint glow", 1200 %}
+    <span class="block dark:hidden">{% retinaImage "src/assets/journal/book-light-09-dark.png", "The cover in dark mode, with black shadows and a faint glow", 1200 %}</span>
+    <span class="hidden dark:block">{% retinaImage "src/assets/journal/book-light-09-dark-dark.png", "The cover in dark mode, with black shadows and a faint glow", 1200 %}</span>
     <figcaption class="pl-8 sm:pl-0">Dark mode: a fainter glow, and black shadows instead of slate blue</figcaption>
   </figure>
 </div>
