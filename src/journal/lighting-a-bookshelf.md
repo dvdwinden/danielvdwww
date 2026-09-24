@@ -17,11 +17,11 @@ image:
 <h1>Lighting a bookshelf</h1>
 <span class="font-sans text-sm">September 24, 2026</span>
 
-Every book on [Trema](http://trema.website?ref=daniel.pizza "Trema") sits on a small coloured card: pistachio for fiction, powder blue for non-fiction. For a long time the covers just sat on those cards like stickers.
+Every book on [Trema](http://trema.website?ref=daniel.pizza "Trema") sits on a small coloured card: pistachio for fiction, powder blue for non-fiction. When I started the publication, those covers were digital: artwork I’d downloaded from publishers’ websites. Later, I started [photographing the books themselves](/journal/trema-ghost-theme/ "A fresh coat of paint for Trema"), and bought paper copies of the ones I’d read on my Kindle so I could. The photos made the books feel real, but on the website they still sat on their cards like stickers.
 
 It was Instagram that made me notice. When I started posting my book recommendations there, I saw the covers bigger, and more often, than I ever had on the website, and I was frankly a little appalled by how I’d handled the shading.
 
-It bothered me because realism is the whole point. I [photograph the books I recommend myself](/journal/trema-ghost-theme/ "A fresh coat of paint for Trema"), instead of using the publisher’s artwork,, because I don’t want the covers to look digital. I want Trema to feel like a book nook: something tactile, a stack of real books you could pick up. A flat, generic shadow undoes all of that, so the more real the light, the better. So, over the past few days, I gave the covers some light, as if each book were lying on a table by a window.
+It bothered me because realism is the whole point. I photograph the books because I don’t want them to look digital. I want Trema to feel like a book nook: something tactile, a stack of real books you could pick up. A flat, generic shadow undoes all of that, so the more real the light, the better. So, over the past few days, I gave the covers some light, as if each book were lying on a table by a window.
 
 </div>
 
