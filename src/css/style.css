@@ -1093,18 +1093,17 @@ ul.newsletter picture {
     margin-bottom: 1rem;
 }
 
-/* Same treatment as the homepage hover covers, and as Trema's own posts: the
-   books sit on a transparent ground, so layered drop-shadows follow their
-   silhouette where a box-shadow would frame the empty space around them.
-   Matched on the img directly — optimizeImages rewrites these without the
-   <picture> wrapper the shortcode emits.
-   Kept tighter than Trema's 16px/18px/14px: WebKit clips the shadow at the
-   image's own edge, and at phone width the transparent ground below the book
-   is only 16–30px, so the bigger shadow ended in a hard line. */
+/* The books sit on a transparent ground, so they take Trema's Book light (see
+   BOOK LIGHT below). Matched on the img directly — optimizeImages rewrites
+   these without the <picture> wrapper the shortcode emits. The book fills about
+   37% of these landscape images against 78% of Trema's portrait canvas, which
+   the shadow is measured on, hence 47.5% of the row. */
+ul.newsletter li {
+    container-type: inline-size;
+}
+
 ul.newsletter img {
-    filter:
-        drop-shadow(1px 1px 1px rgba(40, 40, 40, 0.14))
-        drop-shadow(5px 7px 7px rgba(40, 40, 40, 0.3));
+    --w: 47.5cqw;
 }
 
 ul.newsletter h2 {
@@ -1397,18 +1396,24 @@ ul.list-none {
 }
 
 /* The covers are photographed books on a transparent ground, so they take
-   Trema's own treatment: layered drop-shadows, which follow the book's
-   silhouette where a box-shadow would draw a rectangle around it. Lifted from
-   .article-image img in the Trema theme. */
+   Trema's Book light (see BOOK LIGHT below), which follows the book's
+   silhouette where a box-shadow would draw a rectangle around it. These are
+   Trema's own portrait covers, so --w is simply the rendered width. */
 .trema-item .book-cover img,
 .trema-item .book-cover picture img {
+    --w: 240px;
     width: 240px;
     border: 0;
     border-radius: 0;
     box-shadow: none;
-    filter:
-        drop-shadow(1px 1px 1px rgba(40, 40, 40, 0.14))
-        drop-shadow(16px 18px 14px rgba(40, 40, 40, 0.34));
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .trema-item .book-cover img,
+    .trema-item .book-cover picture img {
+        --w: 120px;
+        width: 120px;
+    }
 }
 
 .trema-date {
@@ -1418,6 +1423,55 @@ ul.list-none {
     text-transform: uppercase;
     white-space: nowrap;
     color: rgb(107 114 128);
+}
+
+/* ==========================================================================
+   BOOK LIGHT
+   Lifted from the Trema theme (assets/css/screen.css, "Book light"): soft
+   window light from the top left. A tight contact shadow and a soft tail down
+   and right, scaled to --w, the width of the book's canvas in Trema's covers
+   (600x991, the book ~78% of its width). 1em is 1% of that width: font sizes
+   always resolve to pixels, so Safari gets plain lengths rather than container
+   units it mis-measures. No white glow — on these plain page grounds Trema
+   leaves it off too. Plain drop-shadows, since Safari mis-renders SVG filters
+   on images.
+   ========================================================================== */
+.trema-item .book-cover img,
+ul.newsletter img {
+    --core: rgba(40, 40, 40, 0.18);
+    --tail: rgba(40, 40, 40, 0.28);
+    font-size: calc(var(--w) / 100);
+    /* Safari clips a drop-shadow to the image's own box. Transparent padding
+       makes the box big enough, the negative margin keeps the layout still, and
+       a (transparent) background stops WebKit drawing a bare image layer that
+       crops the shadow to the picture. */
+    box-sizing: content-box;
+    padding: 30em;
+    margin: -30em;
+    background-image: linear-gradient(transparent, transparent);
+    pointer-events: none;
+    filter:
+        drop-shadow(9.36em 8.11em calc(3.96em + var(--nudge, 0px)) var(--core))
+        drop-shadow(14.79em 11.63em 14em var(--tail));
+}
+
+/* The list images span the column, so only pad them vertically: sideways the
+   book has a third of the image to spare, and padding would scroll the page. */
+ul.newsletter img {
+    padding: 30em 0;
+    margin: -30em 0;
+}
+
+.dark .trema-item .book-cover img,
+.dark ul.newsletter img {
+    --core: rgba(0, 0, 0, 0.4);
+    --tail: rgba(0, 0, 0, 0.55);
+}
+
+/* An invisible change to the filter that forces Safari to redraw the whole
+   shadow (see js/book-light.js) */
+.is-repainting {
+    --nudge: 0.01px;
 }
 
 /* Sits under the right-hand date column and borrows its small-caps treatment,

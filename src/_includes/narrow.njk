@@ -252,6 +252,9 @@
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
     <script src="/js/lastfm-live.js"></script>
+    {% if page.url.startsWith('/newsletter/') %}
+    <script src="/js/book-light.js"></script>
+    {% endif %}
     {% if page.url == '/now/' %}
     <script src="/js/github-live.js"></script>
     <script src="/js/training-live.js"></script>
