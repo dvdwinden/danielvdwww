@@ -2118,8 +2118,8 @@ ul.newsletter img {
 }
 
 .dark .prose a.bookmark-card {
-    border-color: theme("colors.gray.700");
-    background: rgb(17 24 39 / 0.2);
+    border-color: rgb(255 255 255 / 0.1);
+    background: rgb(0 0 0 / 0.2);
 }
 
 .prose a.bookmark-card:hover {
