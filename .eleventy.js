@@ -1411,10 +1411,18 @@ module.exports = function (eleventyConfig) {
 
   // Add a custom markdown-it renderer to handle image processing in markdown files
   const markdownIt = require("markdown-it");
+  // Syntax highlighting for fenced code blocks, done at build time so no Prism JS ships
+  const Prism = require("prismjs");
+  require("prismjs/components/")(["css", "javascript", "markup", "bash", "json"]);
   const markdownItOptions = {
     html: true,
     breaks: true,
-    linkify: true
+    linkify: true,
+    highlight: (code, lang) => {
+      const grammar = lang && Prism.languages[lang];
+      if (!grammar) return "";
+      return `<pre class="language-${lang}"><code class="language-${lang}">${Prism.highlight(code, grammar, lang)}</code></pre>`;
+    }
   };
 
   const markdownLib = markdownIt(markdownItOptions).disable('image');

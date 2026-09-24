@@ -1504,6 +1504,45 @@ ul.newsletter img {
 }
 
 /* ==========================================================================
+   CODE BLOCKS
+   Prism token colours for fenced code, highlighted at build time (see the
+   markdown-it `highlight` option in .eleventy.js). Muted, warm colours from
+   the site's palette, so code reads as part of the page rather than an editor.
+   ========================================================================== */
+.prose pre[class*="language-"] {
+    line-height: 1.45;
+    border-radius: 0.5rem;
+}
+
+.token.comment { color: rgba(0, 0, 0, 0.4); font-style: italic; }
+.token.punctuation { color: rgba(0, 0, 0, 0.4); }
+.token.selector,
+.token.tag { color: theme("colors.brown"); }
+.token.property,
+.token.attr-name,
+.token.keyword { color: theme("colors.hover"); }
+.token.function { color: #4e6b45; }
+.token.number,
+.token.unit { color: #3b5577; }
+.token.string,
+.token.attr-value,
+.token.url { color: #4e6b45; }
+
+.dark .token.comment,
+.dark .token.punctuation { color: rgba(255, 255, 255, 0.4); }
+.dark .token.selector,
+.dark .token.tag { color: #d6b45c; }
+.dark .token.property,
+.dark .token.attr-name,
+.dark .token.keyword { color: theme("colors.hover-dark"); }
+.dark .token.function,
+.dark .token.string,
+.dark .token.attr-value,
+.dark .token.url { color: #9fbf94; }
+.dark .token.number,
+.dark .token.unit { color: #9db4d6; }
+
+/* ==========================================================================
    FIGURE CYCLE
    Auto-cycling image set inside the prose column. Frames are stacked in a
    box of a fixed ratio (override per figure with --cycle-ratio) and

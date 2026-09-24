@@ -85,6 +85,11 @@ module.exports = {
             'pre': {
               'background-color': 'rgba(0, 0, 0, 0.25)',
             },
+            // Inline code's background shouldn't reach the code inside a block,
+            // or every line gets its own dark strip
+            'pre code': {
+              'background-color': 'transparent',
+            },
           },
         },
       },
