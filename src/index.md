@@ -184,7 +184,7 @@ I enjoyed our collaboration very much, and wrote a few words about it in my jour
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2015–2019</span>
-      <p class="my-4">Designer and Head of <span class="smallcaps">AMS</span> at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken &amp; Bæck</a></p>
+      <p class="my-4">Product Designer and Head of <span class="smallcaps">AMS</span> at <a href="https://bakkenbaeck.com?ref=daniel.pizza" title="Bakken &amp; Bæck" rel="nofollow" target="_blank">Bakken &amp; Bæck</a></p>
     </div>
     <div class="flex items-baseline border-b border-black/10 dark:border-white/10">
       <span class="text-xs uppercase tracking-widest text-gray-500 mr-6 w-24 shrink-0 whitespace-nowrap font-sans">2014–2015</span>
