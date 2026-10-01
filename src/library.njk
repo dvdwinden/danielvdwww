@@ -52,6 +52,36 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
 <li
     class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+    data-genre="fiction"
+    data-lang="en"
+    data-gender="male"
+>
+    <div class="book-cover">
+        {% image "src/assets/library/colson-whitehead-crook-manifesto.jpg",
+        "Crook Manifesto cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+        <a
+            href="https://app.thestorygraph.com/books/797c6559-e016-40ac-a12a-ffa5ee764984"
+            class="font-serif text-lg font-medium"
+            target="_blank"
+            rel="external"
+            title="Crook Manifesto by Colson Whitehead"
+            >Crook Manifesto</a
+        >
+        <span
+            class="font-serif text-md text-black/70 dark:text-white/60 italic"
+            >Colson Whitehead</span
+        >
+    </div>
+    <span
+        class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+    >
+        SEP
+    </span>
+</li>
+<li
+    class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
     data-genre="non-fiction"
     data-lang="en"
     data-gender="male"
