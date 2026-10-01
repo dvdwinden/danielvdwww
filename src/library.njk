@@ -52,6 +52,36 @@ bodyClass: bg-amber
 <ul class="list-none p-0 m-0">
 <li
     class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+    data-genre="non-fiction"
+    data-lang="en"
+    data-gender="female"
+>
+    <div class="book-cover">
+        {% image "src/assets/library/zadie-smith-dead-and-alive.jpg",
+        "Dead and Alive cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+        <a
+            href="https://app.thestorygraph.com/books/b92e5668-b0ef-4eee-9e31-eb7b6ebb0c9d"
+            class="font-serif text-lg font-medium"
+            target="_blank"
+            rel="external"
+            title="Dead and Alive by Zadie Smith"
+            >Dead and Alive</a
+        >
+        <span
+            class="font-serif text-md text-black/70 dark:text-white/60 italic"
+            >Zadie Smith</span
+        >
+    </div>
+    <span
+        class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+    >
+        SEP
+    </span>
+</li>
+<li
+    class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
     data-genre="fiction"
     data-lang="en"
     data-gender="male"
