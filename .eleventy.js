@@ -1290,10 +1290,13 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  // Capitalize first letter of a string (used for tag display)
+  // Capitalize first letter of a string (used for tag display). Acronyms are
+  // uppercased in full, so `ai` and `AI` in frontmatter both read as "AI".
+  const ACRONYMS = new Set(["ai"]);
   eleventyConfig.addFilter("capitalize", function (value) {
     if (!value) return value;
     const str = String(value);
+    if (ACRONYMS.has(str.toLowerCase())) return str.toUpperCase();
     return str.charAt(0).toUpperCase() + str.slice(1);
   });
 
