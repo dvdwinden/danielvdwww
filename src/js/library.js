@@ -79,8 +79,18 @@
       .slice(0, 5);
 
     if (topAuthors.length >= 5) {
-      const formatted = topAuthors.map(([name, count]) => `${name} (${count})`);
-      topAuthorsElement.textContent = `Since I started keeping this list, the five authors I’ve read most are ${formatted.slice(0, 4).join(', ')} and ${formatted[4]}.`;
+      // Built from nodes rather than markup so author names are never parsed
+      // as HTML. The count is muted, and joined to the name with a no-break
+      // space so it never wraps onto a line of its own.
+      const parts = ['Since I started keeping this list, the five authors I’ve read most are '];
+      topAuthors.forEach(([name, count], i) => {
+        const countSpan = document.createElement('span');
+        countSpan.className = 'text-black/50 dark:text-white/40';
+        countSpan.textContent = `(${count})`;
+        parts.push(`${name} `, countSpan);
+        parts.push(i < 3 ? ', ' : i === 3 ? ' and ' : '.');
+      });
+      topAuthorsElement.replaceChildren(...parts);
     }
   }
 })();
