@@ -82,7 +82,7 @@
       // Built from nodes rather than markup so author names are never parsed
       // as HTML. The count is muted, and joined to the name with a no-break
       // space so it never wraps onto a line of its own.
-      const parts = ['Since I started keeping this list, the five authors I’ve read most are '];
+      const parts = ['Since I started keeping this library, the five authors I’ve read most are '];
       topAuthors.forEach(([name, count], i) => {
         const countSpan = document.createElement('span');
         countSpan.className = 'text-black/50 dark:text-white/40';
