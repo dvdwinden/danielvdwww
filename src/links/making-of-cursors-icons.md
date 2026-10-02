@@ -36,7 +36,7 @@ The icons sit perfectly next to _Cursor Gothic_, and I love seeing this level of
 Marek walks through the explorations, the dead ends and the reasoning behind every decision, and with this case study he’s created a generous resource for anyone learning the craft.
 
 <figure>
-  {% retinaImage "src/assets/links/cursor-icons-menu.png", "A context menu in Cursor with icons for split, pin, rename, mark as unread, copy, export, fork, move and archive" %}
+  {% retinaImage "src/assets/links/cursor-icons-menu.jpg", "A context menu in Cursor with icons for split, pin, rename, mark as unread, copy, export, fork, move and archive" %}
   <figcaption class="pl-8 sm:pl-0 font-sans tracking-wide">
     The icons in one of Cursor’s context menus
   </figcaption>
