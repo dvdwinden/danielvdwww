@@ -346,6 +346,22 @@ module.exports = function (eleventyConfig) {
     }
   }
 
+  // Whether any width of this image is already in _site. Images narrower than
+  // the smallest width come out at their own width, so this matches on the
+  // name rather than on a fixed list of widths.
+  function hasRenditions(srcPath) {
+    const relativePath = srcPath.replace(/^src\//, '');
+    const outputDir = path.join("./_site", path.dirname(relativePath));
+    const originalName = path.parse(relativePath).name;
+    const escaped = originalName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const rendition = new RegExp(`^${escaped}-\\d+\\.${OUTPUT_FORMAT}$`);
+    try {
+      return fs.readdirSync(outputDir).some(file => rendition.test(file));
+    } catch {
+      return false;
+    }
+  }
+
   // Check if an image needs processing based on modification times
   function needsProcessing(srcPath) {
     try {
@@ -357,6 +373,16 @@ module.exports = function (eleventyConfig) {
         // In GitHub Actions, rely on Git to tell us what changed
         // since _site directory is always fresh
         const changedFiles = process.env.CHANGED_IMAGES;
+
+        // The diff only says what changed, not what is missing. _site/assets
+        // comes back from a cache, and a restore can lack an image that no
+        // later commit touches — it was then skipped on every build, leaving
+        // its <picture> pointing at files that 404. Whatever the diff says,
+        // an image with no renditions at all gets built.
+        if (!hasRenditions(srcPath)) {
+          console.log(`🔄 Processing ${srcPath} (no renditions in _site)`);
+          return true;
+        }
 
         if (changedFiles === '') {
           // Empty string means no image changes detected
