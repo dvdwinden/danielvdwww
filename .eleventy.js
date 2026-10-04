@@ -346,24 +346,29 @@ module.exports = function (eleventyConfig) {
     }
   }
 
-  // Whether any width of this image is already in _site. Images narrower than
-  // the smallest width come out at their own width, so this matches on the
-  // name rather than on a fixed list of widths.
-  function hasRenditions(srcPath) {
+  // Whether every default width of this image is already in _site. Which
+  // widths Image() actually writes depends on the source size — oversized ones
+  // collapse to the source width, or are dropped near it — so ask it rather
+  // than guess. 1.25 is its default minimumThreshold, which processImage
+  // leaves alone. Other widths (bookmark thumbnails, breakout images) are
+  // ignored: they say nothing about the defaults, which the page links.
+  async function hasRenditions(srcPath) {
     const relativePath = srcPath.replace(/^src\//, '');
     const outputDir = path.join("./_site", path.dirname(relativePath));
     const originalName = path.parse(relativePath).name;
-    const escaped = originalName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const rendition = new RegExp(`^${escaped}-\\d+\\.${OUTPUT_FORMAT}$`);
     try {
-      return fs.readdirSync(outputDir).some(file => rendition.test(file));
+      const { width } = await sharp(srcPath).metadata();
+      const expected = Image.getWidths(width, widthsFor(srcPath, DEFAULT_WIDTHS), false, 1.25);
+      return expected.every(w =>
+        fs.existsSync(path.join(outputDir, `${originalName}-${w}.${OUTPUT_FORMAT}`))
+      );
     } catch {
       return false;
     }
   }
 
   // Check if an image needs processing based on modification times
-  function needsProcessing(srcPath) {
+  async function needsProcessing(srcPath) {
     try {
       // In CI environments, check if we're in GitHub Actions
       const isCI = process.env.CI === 'true';
@@ -378,9 +383,9 @@ module.exports = function (eleventyConfig) {
         // comes back from a cache, and a restore can lack an image that no
         // later commit touches — it was then skipped on every build, leaving
         // its <picture> pointing at files that 404. Whatever the diff says,
-        // an image with no renditions at all gets built.
-        if (!hasRenditions(srcPath)) {
-          console.log(`🔄 Processing ${srcPath} (no renditions in _site)`);
+        // an image missing any of its renditions gets built.
+        if (!(await hasRenditions(srcPath))) {
+          console.log(`🔄 Processing ${srcPath} (renditions missing from _site)`);
           return true;
         }
 
@@ -467,12 +472,12 @@ module.exports = function (eleventyConfig) {
     const filesToProcess = imageFiles.filter(file => !isFaviconFile(file));
 
     // Filter to only process images that have changed or don't have output
-    const filesToActuallyProcess = filesToProcess.filter(file => {
-      const needsWork = needsProcessing(file);
-      if (!needsWork) {
+    const needsWork = await Promise.all(filesToProcess.map(needsProcessing));
+    const filesToActuallyProcess = filesToProcess.filter((file, i) => {
+      if (!needsWork[i]) {
         console.log(`⚡ Skipping ${file} (already processed and up to date)`);
       }
-      return needsWork;
+      return needsWork[i];
     });
 
     console.log(`Found ${imageFiles.length} total images`);
