@@ -107,7 +107,7 @@ html {
 
 html.dark {
     /* Dark mode background - will be overridden by JS if needed */
-    background-color: #222;
+    background-color: #23211e;
 }
 
 body {
