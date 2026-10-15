@@ -13,18 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
       document.head.appendChild(themeColorMeta);
     }
 
-    // Check if we're in dark mode first
-    if (html.classList.contains('dark')) {
-      themeColorMeta.content = '#222';
-      html.style.backgroundColor = '#222';
-      return;
-    }
-
-    // Check the page background class to determine the appropriate theme color
     const pageBackground = document.getElementById('page-background');
     let backgroundColor = '#ededea'; // Default fallback (bg-blue)
 
-    if (pageBackground) {
+    if (html.classList.contains('dark')) {
+      // Matches html.dark #page-background in style.css
+      backgroundColor = '#23211e';
+    } else if (pageBackground) {
+      // Check the page background class to determine the appropriate theme color
       const backgroundClasses = pageBackground.className;
 
       if (backgroundClasses.includes('bg-stone')) {
@@ -49,6 +45,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set both theme-color meta tag and html background color
     themeColorMeta.content = backgroundColor;
     html.style.backgroundColor = backgroundColor;
+
+    // Safari 26 ignores theme-color and tints its toolbar from this fixed
+    // background layer instead, but only looks again after a layout: a
+    // colour change alone leaves the toolbar on the old theme. Taking the
+    // layer out of layout and back within the same frame makes it re-read.
+    if (pageBackground) {
+      pageBackground.style.display = 'none';
+      void pageBackground.offsetHeight;
+      pageBackground.style.display = '';
+    }
   }
 
   // Some pages are dark by design and carry no toggle. Leave the class the
