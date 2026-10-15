@@ -13,14 +13,18 @@ document.addEventListener('DOMContentLoaded', function () {
       document.head.appendChild(themeColorMeta);
     }
 
+    // Check if we're in dark mode first
+    if (html.classList.contains('dark')) {
+      themeColorMeta.content = '#222';
+      html.style.backgroundColor = '#222';
+      return;
+    }
+
+    // Check the page background class to determine the appropriate theme color
     const pageBackground = document.getElementById('page-background');
     let backgroundColor = '#ededea'; // Default fallback (bg-blue)
 
-    if (html.classList.contains('dark')) {
-      // Matches html.dark #page-background in style.css
-      backgroundColor = '#23211e';
-    } else if (pageBackground) {
-      // Check the page background class to determine the appropriate theme color
+    if (pageBackground) {
       const backgroundClasses = pageBackground.className;
 
       if (backgroundClasses.includes('bg-stone')) {
@@ -45,27 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set both theme-color meta tag and html background color
     themeColorMeta.content = backgroundColor;
     html.style.backgroundColor = backgroundColor;
-  }
-
-  // Safari 26 ignores theme-color and tints its toolbar from the fixed
-  // background layer, sampled on load. Changing that layer's colour later
-  // leaves the toolbar on the old theme; a fixed layer appearing makes Safari
-  // sample again. So hide it for one rendered frame and bring it back. The
-  // html background behind it is the new colour by then, so nothing visibly
-  // changes: the wait outlasts the 0.25s delay on .dark in style.css.
-  let retintTimer;
-  function retintToolbar() {
-    const pageBackground = document.getElementById('page-background');
-    if (!pageBackground) return;
-    clearTimeout(retintTimer);
-    retintTimer = setTimeout(() => {
-      pageBackground.style.display = 'none';
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          pageBackground.style.display = '';
-        });
-      });
-    }, 500);
   }
 
   // Some pages are dark by design and carry no toggle. Leave the class the
@@ -103,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
   systemDarkQuery.addEventListener('change', () => {
     if (!localStorage.getItem('theme')) {
       applyTheme();
-      retintToolbar();
     }
   });
 
@@ -127,6 +109,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     applyTheme();
-    retintToolbar();
   });
 });
