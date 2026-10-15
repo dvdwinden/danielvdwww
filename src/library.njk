@@ -58,6 +58,36 @@ bodyClass: bg-amber
     data-gender="female"
 >
     <div class="book-cover">
+        {% image "src/assets/library/sarah-wynn-williams-careless-people.jpg",
+        "Careless People cover", "120px" %}
+    </div>
+    <div class="flex flex-col">
+        <a
+            href="https://app.thestorygraph.com/books/c3a9e6d3-cebe-4723-8951-3d6f3fd7865e"
+            class="font-serif text-lg font-medium"
+            target="_blank"
+            rel="external"
+            title="Careless People by Sarah Wynn-Williams"
+            >Careless People</a
+        >
+        <span
+            class="font-serif text-md text-black/70 dark:text-white/60 italic"
+            >Sarah Wynn-Williams</span
+        >
+    </div>
+    <span
+        class="text-xs uppercase font-semibold tracking-widest text-gray-500 ml-4 whitespace-nowrap font-sans"
+    >
+        OCT
+    </span>
+</li>
+<li
+    class="flex items-baseline justify-between border-b border-gray-950/10 dark:border-white/5 pb-3 book-item"
+    data-genre="non-fiction"
+    data-lang="en"
+    data-gender="female"
+>
+    <div class="book-cover">
         {% image "src/assets/library/zadie-smith-dead-and-alive.jpg",
         "Dead and Alive cover", "120px" %}
     </div>
@@ -9215,17 +9245,17 @@ bodyClass: bg-amber
     class="mt-12 font-sans text-sm leading-snug tracking-wide text-black/50 dark:text-white/50"
 >
     This page was last updated on {{ page.inputPath | lastModified }}. The
-    library holds <span id="book-count">283</span> books —
-    <span id="count-fiction">136</span> fiction,
-    <span id="count-non-fiction">140</span> non-fiction and
+    library holds <span id="book-count">288</span> books —
+    <span id="count-fiction">138</span> fiction,
+    <span id="count-non-fiction">143</span> non-fiction and
     <span id="count-poetry">7</span> poetry — written by
-    <span id="count-writers">230</span> writers, of whom
-    <span id="count-female">111</span> are women,
-    <span id="count-male">118</span> are men and
+    <span id="count-writers">233</span> writers, of whom
+    <span id="count-female">112</span> are women,
+    <span id="count-male">120</span> are men and
     <span id="count-nonbinary">1</span>
     <span id="nonbinary-verb">is</span> non-binary. I’ve read
     <span id="count-nl">63</span> of them in Dutch and
-    <span id="count-en">220</span> in English.
+    <span id="count-en">225</span> in English.
 </p>
 
 <script src="/js/library.js"></script>
