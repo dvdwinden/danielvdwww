@@ -45,16 +45,27 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set both theme-color meta tag and html background color
     themeColorMeta.content = backgroundColor;
     html.style.backgroundColor = backgroundColor;
+  }
 
-    // Safari 26 ignores theme-color and tints its toolbar from this fixed
-    // background layer instead, but only looks again after a layout: a
-    // colour change alone leaves the toolbar on the old theme. Taking the
-    // layer out of layout and back within the same frame makes it re-read.
-    if (pageBackground) {
+  // Safari 26 ignores theme-color and tints its toolbar from the fixed
+  // background layer, sampled on load. Changing that layer's colour later
+  // leaves the toolbar on the old theme; a fixed layer appearing makes Safari
+  // sample again. So hide it for one rendered frame and bring it back. The
+  // html background behind it is the new colour by then, so nothing visibly
+  // changes: the wait outlasts the 0.25s delay on .dark in style.css.
+  let retintTimer;
+  function retintToolbar() {
+    const pageBackground = document.getElementById('page-background');
+    if (!pageBackground) return;
+    clearTimeout(retintTimer);
+    retintTimer = setTimeout(() => {
       pageBackground.style.display = 'none';
-      void pageBackground.offsetHeight;
-      pageBackground.style.display = '';
-    }
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          pageBackground.style.display = '';
+        });
+      });
+    }, 500);
   }
 
   // Some pages are dark by design and carry no toggle. Leave the class the
@@ -92,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
   systemDarkQuery.addEventListener('change', () => {
     if (!localStorage.getItem('theme')) {
       applyTheme();
+      retintToolbar();
     }
   });
 
@@ -115,5 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     applyTheme();
+    retintToolbar();
   });
 });
