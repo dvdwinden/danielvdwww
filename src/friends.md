@@ -7,13 +7,14 @@ bodyClass: bg-blue
 
 # Friends
 
-<span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: September 2026</span>
+<span class="font-sans text-sm font-medium uppercase tracking-widest text-black/50 dark:text-white/50">Last updated: October 2026</span>
 
 The people I appreciate, and the websites they keep. Friends or collaborators; some I’ve worked with briefly, others for years.
 
 <ul class="friends-index">
 <li><a href="https://a-antonov.com/?ref=daniel.pizza" target="_blank" rel="external" title="Alexander Antonov">Alexander Antonov</a></li>
 <li><a href="https://www.ananta.work/?ref=daniel.pizza" target="_blank" rel="external" title="Ananta Mulyono">Ananta Mulyono</a></li>
+<li><a href="https://augustskare.no/?ref=daniel.pizza" target="_blank" rel="external" title="August Skare">August Skare</a></li>
 <li><a href="https://azizfirat.com/?ref=daniel.pizza" target="_blank" rel="external" title="Aziz Firat">Aziz Firat</a></li>
 <li><a href="https://www.ciaolemagne.com/?ref=daniel.pizza" target="_blank" rel="external" title="Charlie Jermyn">Charlie Jermyn</a></li>
 <li><a href="https://daniellockyer.com/?ref=daniel.pizza" target="_blank" rel="external" title="Daniel Lockyer">Daniel Lockyer</a></li>
