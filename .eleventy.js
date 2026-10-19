@@ -40,6 +40,12 @@ const DEFAULT_WEBP_QUALITY = 70;
 const HIGH_QUALITY_WEBP_PATHS = ['assets/photos/'];
 const HIGH_WEBP_QUALITY = 90;
 
+// Screenshots of small text on a dark ground soften at 70: the encoder halves
+// colour resolution, which smears light strokes into the dark around them.
+// These get a higher quality and sharp's smart subsampling instead.
+const SCREENSHOT_WEBP_PATHS = ['assets/journal/proza-hero', 'assets/journal/proza-phones', 'assets/journal/trema-light', 'assets/journal/trema-dark'];
+const SCREENSHOT_WEBP_QUALITY = 85;
+
 // The same paths also get a rendition at the source's own width (null means
 // "original" to eleventy-img). The default widths stop at 1800, which on a
 // large display leaves an enlarged photograph below one image pixel per CSS
@@ -50,12 +56,16 @@ function widthsFor(srcPath, widths) {
   return wantsFull && widths.indexOf(null) === -1 ? widths.concat([null]) : widths;
 }
 
-// Pick the WebP quality for a given source path.
-function webpQualityFor(srcPath) {
+// Pick the WebP encoder options for a given source path.
+function webpOptionsFor(srcPath) {
   const normalized = String(srcPath).replace(/\\/g, '/');
-  return HIGH_QUALITY_WEBP_PATHS.some(p => normalized.includes(p))
-    ? HIGH_WEBP_QUALITY
-    : DEFAULT_WEBP_QUALITY;
+  if (HIGH_QUALITY_WEBP_PATHS.some(p => normalized.includes(p))) {
+    return { quality: HIGH_WEBP_QUALITY };
+  }
+  if (SCREENSHOT_WEBP_PATHS.some(p => normalized.includes(p))) {
+    return { quality: SCREENSHOT_WEBP_QUALITY, smartSubsample: true };
+  }
+  return { quality: DEFAULT_WEBP_QUALITY };
 }
 
 // ============================================================================
@@ -299,9 +309,7 @@ module.exports = function (eleventyConfig) {
           // Use original filename with width and format - keep format extension
           return `${originalName}-${width}.${format}`;
         },
-        sharpWebpOptions: {
-          quality: webpQualityFor(srcPath)
-        }
+        sharpWebpOptions: webpOptionsFor(srcPath)
       });
 
       // Cache the result
@@ -336,9 +344,7 @@ module.exports = function (eleventyConfig) {
         filenameFormat: function (id, src, width, format) {
           return `${originalName}-${width}.${format}`;
         },
-        sharpWebpOptions: {
-          quality: webpQualityFor(srcPath)
-        }
+        sharpWebpOptions: webpOptionsFor(srcPath)
       });
     } catch (err) {
       console.error(`Error processing image ${srcPath} at custom widths:`, err);
