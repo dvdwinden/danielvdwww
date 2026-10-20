@@ -2118,9 +2118,13 @@ ul.newsletter img {
    capture's own coordinates, and lengths inside a screen in cqw so the
    frame's details scale with it.
    ========================================================================== */
+/* Capped at the 1400px the layout had before it widened on large screens:
+   past that, the screenshot's type grows bigger than the post's own. */
 .device-stage {
     position: relative;
     container-type: inline-size;
+    max-width: 1400px;
+    margin-left: auto;
 }
 
 .device-layer {
