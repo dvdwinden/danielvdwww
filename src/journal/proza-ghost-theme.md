@@ -3,7 +3,7 @@ layout: base.njk
 title: "Why I made Proza, a typographic theme for Ghost"
 bodyClass: bg-stone
 date: 2026-10-20T10:20:00+02:00
-draft: true
+draft: false
 tags: [design, typography, ghost, publishing]
 description: People kept asking whether they could use Trema’s theme. I said no, because it’s mine. But the question pointed at a gap, so I made something for everyone else.
 image:
