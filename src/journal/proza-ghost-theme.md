@@ -5,7 +5,7 @@ bodyClass: bg-stone
 date: 2026-10-20T10:20:00+02:00
 draft: false
 tags: [design, typography, ghost, publishing]
-description: People kept asking whether they could use Trema’s theme. I said no, because it’s mine. But the question pointed at a gap, so I made something for everyone else.
+description: What I learned designing Trema, my book publication, turned into Proza: a typographic theme for anyone on Ghost who cares about how their writing reads.
 image:
   src: /assets/journal/proza-hero.png
   alt: "Proza, a typographic theme for Ghost"
