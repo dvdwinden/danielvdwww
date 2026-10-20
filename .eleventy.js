@@ -43,7 +43,7 @@ const HIGH_WEBP_QUALITY = 90;
 // Screenshots of small text on a dark ground soften at 70: the encoder halves
 // colour resolution, which smears light strokes into the dark around them.
 // These get a higher quality and sharp's smart subsampling instead.
-const SCREENSHOT_WEBP_PATHS = ['assets/journal/proza-hero', 'assets/journal/proza-phones', 'assets/journal/trema-light', 'assets/journal/trema-dark'];
+const SCREENSHOT_WEBP_PATHS = ['assets/journal/proza-hero', 'assets/journal/proza-og', 'assets/journal/proza-phones', 'assets/journal/trema-light', 'assets/journal/trema-dark'];
 const SCREENSHOT_WEBP_QUALITY = 85;
 
 // Screenshots of text are also kept at 3x, with a width for each common
