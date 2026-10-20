@@ -46,6 +46,14 @@ const HIGH_WEBP_QUALITY = 90;
 const SCREENSHOT_WEBP_PATHS = ['assets/journal/proza-hero', 'assets/journal/proza-phones', 'assets/journal/trema-light', 'assets/journal/trema-dark'];
 const SCREENSHOT_WEBP_QUALITY = 85;
 
+// Screenshots of text are also kept at 3x, with a width for each common
+// display scale, so a browser can pick one it shows at a whole ratio: an
+// image of text resampled by an odd factor (2800px drawn at 2100, on a 4K
+// screen at 1.5x) goes soft where a photograph wouldn't show it.
+const SCREENSHOT_EXTRA_WIDTHS = [2100, 4200];
+const isScreenshot = (srcPath) =>
+  SCREENSHOT_WEBP_PATHS.some(p => String(srcPath).replace(/\\/g, '/').includes(p));
+
 // The same paths also get a rendition at the source's own width (null means
 // "original" to eleventy-img). The default widths stop at 1800, which on a
 // large display leaves an enlarged photograph below one image pixel per CSS
@@ -733,8 +741,9 @@ module.exports = function (eleventyConfig) {
             try {
               const { width: srcW } = await sharp(bFilePath).metadata();
               if (srcW) {
-                const topWidth = Math.min(2800, srcW);
-                widths = [...new Set([...BREAKOUT_WIDTHS, topWidth])]
+                const shot = isScreenshot(bFilePath);
+                const topWidth = Math.min(shot ? 4200 : 2800, srcW);
+                widths = [...new Set([...BREAKOUT_WIDTHS, ...(shot ? SCREENSHOT_EXTRA_WIDTHS : []), topWidth])]
                   .filter(w => w <= srcW)
                   .sort((a, b) => a - b);
               }
