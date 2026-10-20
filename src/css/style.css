@@ -2229,6 +2229,41 @@ ul.newsletter img {
     88%, 100% { transform: translateY(var(--distance)); }
 }
 
+/* On phones, a row of devices becomes a column staggered left, right, left,
+   each one overlapping the lower part of the one above */
+.device-stagger {
+    --width: 56%;
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+}
+
+.device-stagger > * {
+    width: var(--width);
+    /* Phone corners, scaled from the 1404px composite to this width */
+    border-radius: 5.944cqw;
+    box-shadow: 0 0.75rem 2rem rgb(40 30 20 / 0.16);
+}
+
+.dark .device-stagger > * {
+    box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 0.5);
+}
+
+.device-stagger > :nth-child(even) {
+    align-self: flex-end;
+}
+
+/* Each phone starts 48% of the way down the one before it */
+.device-stagger > * + * {
+    margin-top: calc(var(--width) * -2.1654 * 0.52);
+}
+
+.device-stagger img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .device-page {
         animation: none;

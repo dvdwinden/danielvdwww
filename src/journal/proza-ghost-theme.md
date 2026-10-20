@@ -111,6 +111,7 @@ The [demo site](https://proza.site/?ref=daniel.pizza "The Proza demo") is set up
 
 <div class="sm:mt-32 mt-16 mb-16">
 <figure class="w-full">
+  <div class="hidden sm:block">
   <div class="device-stage" style="aspect-ratio: 1404 / 900">
     <div class="device-layer" style="position: relative">
       <div class="dark:hidden">{% retinaImage "src/assets/journal/proza-phones-static-light.png", "Proza on three phones: the home page, a post, and the same post in dark mode, scrolling", 1400 %}</div>
@@ -122,6 +123,27 @@ The [demo site](https://proza.site/?ref=daniel.pizza "The Proza demo") is set up
       <div class="device-page" style="--distance: -59.09%">
         <div class="dark:hidden">{% retinaImage "src/assets/journal/proza-phones-page-light.png", "", 415 %}</div>
         <div class="hidden dark:block">{% retinaImage "src/assets/journal/proza-phones-page-dark.png", "", 415 %}</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="device-stagger sm:hidden">
+    <div>
+      <div class="dark:hidden">{% retinaImage "src/assets/journal/proza-phone-home-light.png", "Proza’s home page on a phone", 415 %}</div>
+      <div class="hidden dark:block">{% retinaImage "src/assets/journal/proza-phone-home-dark.png", "Proza’s home page on a phone, in dark mode", 415 %}</div>
+    </div>
+    <div>
+      <div class="dark:hidden">{% retinaImage "src/assets/journal/proza-phone-post-light.png", "A post in Proza on a phone", 415 %}</div>
+      <div class="hidden dark:block">{% retinaImage "src/assets/journal/proza-phone-post-dark.png", "A post in Proza on a phone, in dark mode", 415 %}</div>
+    </div>
+    <div class="device-stage" style="aspect-ratio: 1247 / 2700">
+      <div class="device-screen is-inverted" style="inset: 0; border-radius: 10.615cqw">
+        <span class="device-topfade" style="height: 15.439cqw"></span>
+        <span class="device-island" style="width: 32.063cqw; height: 9.416cqw; top: 2.798cqw"></span>
+        <div class="device-page" style="--distance: -59.09%">
+          <div class="dark:hidden">{% retinaImage "src/assets/journal/proza-phones-page-light.png", "The same post in dark mode, scrolling", 415 %}</div>
+          <div class="hidden dark:block">{% retinaImage "src/assets/journal/proza-phones-page-dark.png", "The same post in light mode, scrolling", 415 %}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -140,8 +162,14 @@ Trema keeps its own theme, and it hasn’t stood still since that first post. In
 
 <div class="sm:mt-32 mt-16 mb-16">
 <figure class="w-full">
-  <div class="dark:hidden">{% retinaImage "src/assets/journal/trema-light.png", "Trema on a laptop, showing The Silver Book by Olivia Laing, and on a phone, Frog and Other Essays by Anne Fadiman", 1200 %}</div>
-  <div class="hidden dark:block">{% retinaImage "src/assets/journal/trema-dark.png", "Trema in dark mode on a laptop, showing The Silver Book by Olivia Laing, and on a phone, Frog and Other Essays by Anne Fadiman", 1200 %}</div>
+  <div class="hidden sm:block">
+  <div class="dark:hidden">{% retinaImage "src/assets/journal/trema-light.png", "Trema on a laptop and a phone: the page for Frog and Other Essays by Anne Fadiman, with its cover, and the opening of the recommendation", 1200 %}</div>
+  <div class="hidden dark:block">{% retinaImage "src/assets/journal/trema-dark.png", "Trema in dark mode on a laptop and a phone: the page for Frog and Other Essays by Anne Fadiman, with its cover, and the opening of the recommendation", 1200 %}</div>
+  </div>
+  <div class="sm:hidden" style="margin: -9.307%">
+    <div class="dark:hidden">{% retinaImage "src/assets/journal/trema-mobile.png", "Trema on two phones: the page for Frog and Other Essays by Anne Fadiman, with its cover, and the opening of the recommendation", 1200 %}</div>
+    <div class="hidden dark:block">{% retinaImage "src/assets/journal/trema-mobile-dark.png", "Trema on two phones in dark mode: the page for Frog and Other Essays by Anne Fadiman, with its cover, and the opening of the recommendation", 1200 %}</div>
+  </div>
 </figure>
 </div>
 
