@@ -68,7 +68,7 @@ I started with the typeface, and set the theme in [_Literata_](https://fonts.goo
 
 > [Literata 3](https://www.type-together.com/literata-font?ref=daniel.pizza "Literata by TypeTogether") is a typeface conceived for intensive editorial use, especially on screens of all sorts. Its main potential is in digital publishing, whether on the Web, electronic press, or mobile applications. You can set entire books, magazines, apps, and newspapers in this one typeface, all while using less bandwidth than you’d ever dreamed.
 
-To balance the serif, the smaller parts of the page—navigation, dates, captions—are set in [_Source Sans 3_](https://fonts.google.com/specimen/Source+Sans+3?ref=daniel.pizza "Source Sans 3 on Google Fonts"), Paul D. Hunt’s open-source sans for Adobe. Both are bundled with the theme, so they load from the reader’s own site, not from Google.
+To balance the serif, the smaller parts of the page—navigation, dates, captions—are set in [_Source Sans 3_](https://fonts.google.com/specimen/Source+Sans+3?ref=daniel.pizza "Source Sans 3 on Google Fonts"), Paul D. Hunt’s open-source sans for Adobe. Both are bundled with the theme, so they’re served from the publication’s own domain, not from Google.
 
 </div>
 
