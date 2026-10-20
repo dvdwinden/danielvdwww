@@ -37,7 +37,7 @@ Scrolling through [Ghost’s marketplace](https://ghost.org/themes/?ref=daniel.p
 
 </div>
 
-<div class="sm:mt-32 mt-16 mb-16 max-w-[1400px] ml-auto">
+<div class="sm:mt-32 mt-16 mb-16">
 <figure class="w-full">
   <div class="hidden sm:block">
     <div class="device-stage" style="aspect-ratio: 1524 / 1000">
@@ -72,7 +72,7 @@ To balance the serif, the smaller parts of the page—navigation, dates, caption
 
 </div>
 
-<div class="sm:mt-32 mt-16 mb-16 max-w-[1400px] ml-auto">
+<div class="sm:mt-32 mt-16 mb-16">
 <figure class="w-full">
   {% retinaImage "src/assets/journal/literata-weights.png", "Literata’s weights, from extralight to black italic, in Latin, Greek and Cyrillic", 1200 %}
 </figure>
@@ -109,7 +109,7 @@ The [demo site](https://proza.site/?ref=daniel.pizza "The Proza demo") is set up
 
 </div>
 
-<div class="sm:mt-32 mt-16 mb-16 max-w-[1400px] ml-auto">
+<div class="sm:mt-32 mt-16 mb-16">
 <figure class="w-full">
   <div class="device-stage" style="aspect-ratio: 1404 / 900">
     <div class="device-layer" style="position: relative">
@@ -138,7 +138,7 @@ Trema keeps its own theme, and it hasn’t stood still since that first post. In
 
 </div>
 
-<div class="sm:mt-32 mt-16 mb-16 max-w-[1400px] ml-auto">
+<div class="sm:mt-32 mt-16 mb-16">
 <figure class="w-full">
   <div class="dark:hidden">{% retinaImage "src/assets/journal/trema-light.png", "Trema on a laptop, showing The Silver Book by Olivia Laing, and on a phone, Frog and Other Essays by Anne Fadiman", 1200 %}</div>
   <div class="hidden dark:block">{% retinaImage "src/assets/journal/trema-dark.png", "Trema in dark mode on a laptop, showing The Silver Book by Olivia Laing, and on a phone, Frog and Other Essays by Anne Fadiman", 1200 %}</div>

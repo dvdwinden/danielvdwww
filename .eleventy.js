@@ -16,11 +16,11 @@ const SUPPORTED_IMAGE_EXTENSIONS = ['.avif', '.webp', '.jpg', '.jpeg', '.png', '
 const OUTPUT_FORMAT = 'webp';
 const DEFAULT_WIDTHS = [800, 1200, 1800];
 // "Breakout" images escape the ~512px prose column and span the wide
-// max-w-[1400px] container (1800px from a 1920px viewport), so on a 2x display
-// they need up to ~2800px to stay sharp. These widths/sizes are applied automatically to any image whose
+// max-w-[1400px] container, so on a 2x display they need up to ~2800px to stay
+// sharp. These widths/sizes are applied automatically to any image whose
 // nearest max-width ancestor is the wide container (see optimizeImages).
 const BREAKOUT_WIDTHS = [800, 1200, 1800, 2800];
-const BREAKOUT_SIZES = "(min-width: 1920px) min(1800px, calc(100vw - 544px)), (min-width: 1024px) min(1400px, calc(100vw - 544px)), calc(100vw - 48px)";
+const BREAKOUT_SIZES = "(min-width: 1024px) min(1400px, calc(100vw - 544px)), calc(100vw - 48px)";
 
 // Bookmark card thumbnails sit in a fixed square slot (7rem, 5rem on a narrow
 // screen — see the BOOKMARK CARDS section of style.css), so a 1x/2x pair is
