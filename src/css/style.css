@@ -389,6 +389,15 @@ html.dark #page-background {
     background: none;
 }
 
+/* A link inside bold text keeps the bold, so it reads as part of the phrase
+   rather than dropping back to regular weight mid-word. Hover still wins on
+   specificity. */
+.prose strong a,
+.dark .prose strong a {
+    font-weight: inherit;
+    color: inherit;
+}
+
 /* Callout */
 /* Display size wants less leading than body copy: at 1.75rem the 1.5 rhythm
    the rest of the page runs on pulls the two lines apart. */
@@ -1903,14 +1912,16 @@ ul.newsletter img {
     background: none;
 }
 
+/* Body text's tone, a step back, as in light mode; white read brighter than
+   the paragraphs it sits beside. */
 .dark figcaption,
 .dark .prose figcaption {
-    color: theme("colors.white");
-    opacity: 0.95;
+    color: theme("colors.neutral.300");
+    opacity: 0.85;
 }
 
 .dark figcaption a {
-    color: theme("colors.white");
+    color: theme("colors.neutral.300");
     text-decoration-color: theme("colors.neutral.500");
 }
 
@@ -2091,6 +2102,137 @@ ul.newsletter img {
 #top-authors:empty,
 #book-count:not(.js-loaded) {
     visibility: hidden;
+}
+
+/* ==========================================================================
+   DEVICE SCROLLS
+
+   A device screenshot whose page scrolls on its own, for posts about the
+   site's or a theme's design. The static parts are a transparent image laid
+   over the stage; each scrolling screen is a frame holding one tall capture
+   of the page, moved with a transform. That stays as sharp as a still, runs
+   at the display's refresh rate and needs no background to match the page,
+   which a video can't promise.
+
+   Positions and sizes are set inline as percentages of the stage, from the
+   capture's own coordinates, and lengths inside a screen in cqw so the
+   frame's details scale with it.
+   ========================================================================== */
+.device-stage {
+    position: relative;
+    container-type: inline-size;
+}
+
+.device-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.device-layer img,
+.device-page img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.device-screen {
+    --screen: #fdfdfb;
+    position: absolute;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--screen);
+}
+
+.dark .device-screen {
+    --screen: #151515;
+}
+
+/* A screen showing the opposite scheme to the page, as a contrast */
+.device-screen.is-inverted {
+    --screen: #151515;
+}
+
+.dark .device-screen.is-inverted {
+    --screen: #fdfdfb;
+}
+
+/* The page fades out at the bottom of the screen, as in the stills */
+.device-screen::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 22%;
+    z-index: 2;
+    background: linear-gradient(to bottom, transparent, var(--screen) 85%);
+}
+
+/* A hairline where the screen meets a page of the same tone */
+.device-screen.has-ring::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgb(40 30 20 / 0.12);
+}
+
+.dark .device-screen.has-ring::before {
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1);
+}
+
+.device-dots {
+    position: absolute;
+    z-index: 2;
+    top: 0.66cqw;
+    left: 0.79cqw;
+    display: flex;
+    gap: 0.39cqw;
+}
+
+.device-dots i {
+    width: 0.79cqw;
+    height: 0.79cqw;
+    border-radius: 50%;
+    background: hsl(20 5% 8% / 0.12);
+}
+
+.dark .device-dots i {
+    background: hsl(20 5% 21%);
+}
+
+/* iPhone 16 Pro proportions, with the scrolled page fading out beneath it */
+.device-island {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: #000;
+}
+
+.device-topfade {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 1;
+    background: linear-gradient(to top, transparent, var(--screen) 70%);
+}
+
+.device-page {
+    animation: device-scroll var(--duration, 16s) ease-in-out infinite;
+    will-change: transform;
+}
+
+/* Hold at the top, scroll, hold at the bottom, then start again */
+@keyframes device-scroll {
+    0%, 8% { transform: translateY(0); }
+    88%, 100% { transform: translateY(var(--distance)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .device-page {
+        animation: none;
+    }
 }
 
 /* ==========================================================================

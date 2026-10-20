@@ -16,6 +16,8 @@ image:
 <h1>A fresh coat of paint for Trema, my publication about the books I loved reading</h1>
 <span class="font-sans text-sm">September 8, 2025</span>
 
+_Update, October 2026: Trema has been redesigned again since I wrote this, so the screenshots below show an earlier version. Visit [Trema](https://www.trema.website/?ref=daniel.pizza "Trema") to see it as it is now, or read about [Proza](/journal/proza-ghost-theme/ "Why I made Proza, a typographic theme for Ghost"), the theme for everyone else that grew out of it._
+
 {% retinaImage "src/assets/journal/trema-featured-img.png", "Trema", 1200 %}
 
 In December of 2022 I started [Trema](http://trema.website?refdaniel.pizza "Trema"), a website and monthly newsletter where I could write, briefly, about the books I loved reading. Primarily, it was a way for me to practice such writing. Secondarily, I think my friends appreciated me leaving them to it, channeling my ramblings about books they must read into a centralised location they could choose to ignore. 
