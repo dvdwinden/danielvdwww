@@ -43,7 +43,7 @@ Scrolling through [Ghost’s marketplace](https://ghost.org/themes/?ref=daniel.p
     <div class="device-stage" style="aspect-ratio: 1524 / 1000">
       <div class="device-screen has-ring" style="left: 11.549%; top: 0; width: 87.927%; height: 90%; border-radius: 0.787cqw">
         <span class="device-dots"><i></i><i></i><i></i></span>
-        <div class="device-page" style="--distance: -48%; --duration: 18s">
+        <div class="device-page" style="--distance: -64%; --duration: 18s">
           <div class="dark:hidden">{% retinaImage "src/assets/journal/proza-hero-page-light.png", "", 1340 %}</div>
           <div class="hidden dark:block">{% retinaImage "src/assets/journal/proza-hero-page-dark.png", "", 1340 %}</div>
         </div>
