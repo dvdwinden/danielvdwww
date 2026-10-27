@@ -4,7 +4,7 @@ title: "On finding a job as a (Senior) Product Designer"
 bodyClass: bg-stone
 draft: true
 date: 2025-08-08
-tags: [jobs, product design]
+tags: [work, product design]
 description: ...
 ---
 

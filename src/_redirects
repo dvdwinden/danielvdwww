@@ -4,3 +4,12 @@
 # Redirect old reading URL to new library URL
 /reading/*  /library/:splat  301!
 /reading  /library  301!
+
+# Merged link tags
+/links/artificial-intelligence/*  /links/ai/  301!
+/links/film/*  /links/cinema/  301!
+/links/brands/*  /links/branding/  301!
+/links/websites/*  /links/web/  301!
+/links/personal-web/*  /links/web/  301!
+/links/computers/*  /links/technology/  301!
+/links/gadgets/*  /links/technology/  301!

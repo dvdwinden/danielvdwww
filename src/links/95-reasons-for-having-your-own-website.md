@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "95 reasons for having your own website"
 date: 2026-08-05T11:04:00+02:00
-tags: [websites, development]
+tags: [web, development]
 external_url: https://bellkiosk.website/blog/reasons-to-website.html?ref=daniel.pizza
 bodyClass: bg-green
 ---

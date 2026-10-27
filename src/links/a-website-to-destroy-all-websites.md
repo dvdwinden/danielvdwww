@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "A website to destroy all websites"
 date: 2026-01-02T20:17:00+02:00
-tags: [websites, publishing]
+tags: [web, publishing]
 external_url: https://henry.codes/writing/a-website-to-destroy-all-websites/?ref=daniel.pizza
 ---
 <h1><a href="{{ external_url }}">{{ title }}</a></h1>

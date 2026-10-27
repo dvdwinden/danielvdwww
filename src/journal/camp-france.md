@@ -3,7 +3,7 @@ layout: base.njk
 title: "A residency in the Pyrenees"
 bodyClass: bg-stone
 date: 2025-07-16
-tags: [writing, camp residency]
+tags: [writing, residency]
 description: I’m traveling to the French Pyrenees in November for a week-long writing residency.
 image:
   src: /assets/journal/pyrenees.jpg

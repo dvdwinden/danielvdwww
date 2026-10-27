@@ -3,7 +3,7 @@ layout: base.njk
 title: "The next chapter of my career: advancing the transition to sustainable energy at Enode"
 bodyClass: bg-stone
 date: 2026-01-05T09:20:02+02:00
-tags: [career, design]
+tags: [work, design]
 draft: false
 description: After a transitional year I’m joining Enode full-time.
 image:

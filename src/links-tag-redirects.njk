@@ -1,0 +1,33 @@
+---
+# Tags that were merged into another. GitHub Pages can't send a real 301, so
+# each old tag page becomes a stub that sends visitors (and search engines,
+# via the canonical) on to the tag it was folded into. Mirrored in _redirects.
+redirects:
+  - { from: artificial-intelligence, to: ai, name: AI }
+  - { from: film, to: cinema, name: Cinema }
+  - { from: brands, to: branding, name: Branding }
+  - { from: websites, to: web, name: Web }
+  - { from: personal-web, to: web, name: Web }
+  - { from: computers, to: technology, name: Technology }
+  - { from: gadgets, to: technology, name: Technology }
+pagination:
+  data: redirects
+  size: 1
+  alias: redirect
+permalink: "links/{{ redirect.from }}/index.html"
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/links/{{ redirect.to }}/">
+  <link rel="canonical" href="/links/{{ redirect.to }}/">
+  <meta name="robots" content="noindex">
+  <title>Redirecting to Links / {{ redirect.name }}...</title>
+  <script>window.location.replace("/links/{{ redirect.to }}/");</script>
+</head>
+<body>
+  <p>Redirecting to <a href="/links/{{ redirect.to }}/">Links / {{ redirect.name }}</a>...</p>
+</body>
+</html>

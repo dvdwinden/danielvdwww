@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "Taste at speed"
 date: 2025-01-07
-tags: [essay, design, AI]
+tags: [essay, design, ai]
 external_url: https://carly.substack.com/p/taste-at-speed
 bodyClass: bg-green
 ---

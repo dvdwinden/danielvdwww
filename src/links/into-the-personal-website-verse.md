@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "Into The Personal Website Verse"
 date: 2025-06-27
-tags: [internet, personal web]
+tags: [internet, web]
 external_url: https://matthiasott.com/articles/into-the-personal-website-verse?ref=daniel.pizza
 bodyClass: bg-green
 ---
