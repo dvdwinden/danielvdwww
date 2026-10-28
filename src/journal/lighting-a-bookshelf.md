@@ -167,6 +167,8 @@ It didn’t stop there. Seeing the light in the browser, on real covers at real 
 
 In dark mode the glow gets much fainter and the shadows turn black, because a slate-blue shadow on a dark card looks like a pale halo.
 
+That faint glow had one more surprise in it. Over a flat dark page it has only a dozen or so shades of grey to fade through, and on a good screen each of them shows as a ring around the book. Blurring it more makes the rings wider, not fainter. What fixed it was a layer of faint grain over the whole page in dark mode, so the steps have something to hide in. Trema’s light cards already had a grain like it. The dark pages hadn’t needed one until the glow arrived.
+
 </div>
 
 <div class="sm:mt-32 mt-16 mb-16">
