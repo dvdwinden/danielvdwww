@@ -37,7 +37,10 @@ const BOOKMARK_IMAGE_SIZES = "112px";
 // sharp. Anything under a path listed here is encoded at the higher quality
 // instead.
 const DEFAULT_WEBP_QUALITY = 70;
-const HIGH_QUALITY_WEBP_PATHS = ['assets/photos/'];
+// The composed share images (assets/share-*.png) are in here too: they are
+// grids of book covers, and the og:image tags point at the full 2400px
+// rendition so the covers stay legible.
+const HIGH_QUALITY_WEBP_PATHS = ['assets/photos/', 'assets/share-'];
 const HIGH_WEBP_QUALITY = 90;
 
 // Screenshots of small text on a dark ground soften at 70: the encoder halves

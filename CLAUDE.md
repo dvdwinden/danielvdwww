@@ -29,6 +29,9 @@ npm run build:css
 
 # Check for large assets (>5MB)
 npm run check:assets
+
+# Regenerate the Library and Newsletter share images (og:image)
+npm run share-images
 ```
 
 Development server runs on `http://localhost:8080` with live reload. The `dev` command runs Eleventy and Tailwind CSS in watch mode concurrently.
@@ -229,6 +232,28 @@ Descriptions can be soft-wrapped across lines — whitespace is collapsed so the
 Descriptions can be soft-wrapped across lines — whitespace is collapsed so the card stays a single HTML block and markdown-it doesn't split it into paragraphs. Text is escaped, so ampersands and quotes can be written as-is. The `optimizeImages` transform skips any `<img class="bookmark-icon">`, so icons are served at their natural size rather than swapped for a `<picture>`. Card thumbnails (`<img class="bookmark-image">`) take the opposite route: they're given their own 128/256px widths rather than the narrow-column defaults, whose smallest width is 800px.
 
 Styles live in the `BOOKMARK CARDS` section of `src/css/style.css`.
+
+### Share Images
+
+`share-image.njk`, included by both layouts, emits the `og:image` and
+`twitter:image` tags. A page with `image.src` uses the pipeline's 1200px
+rendition of it; anything else gets the default photo, `share-image.png`.
+
+Four standing pages have a composed picture instead of a photo:
+`links-share.jpg` and `photos-share.jpg` (collages, made by hand),
+`share-journal.png` (a sheet of six hero images), `share-library.png` (the
+twelve newest covers) and `share-newsletter.png` (the covers of the twelve
+books most recently recommended, matched from the Trema posts to their
+Library entries by title). The last three are drawn by
+`scripts/build-share-images.js` from what the pages contain: run
+`npm run share-images` after adding books or a newsletter post, then commit
+the PNGs. The Journal one lists its images by hand in the script. A cover
+whose thumbprint nearly matches one already placed is passed over, so a run
+of one publisher's series doesn't fill the grid.
+
+The `share-*` images are in `HIGH_QUALITY_WEBP_PATHS`, so the pipeline keeps a
+full-size 2400px rendition, and `share-image.njk` points the tags at that one
+for them.
 
 ### Tag System
 
