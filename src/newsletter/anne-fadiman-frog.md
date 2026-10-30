@@ -2,7 +2,7 @@
 layout: narrow.njk
 title: "Anne Fadiman: Frog and Other Essays (2026)"
 date: 2026-07-06
-tags: [fiction]
+tags: [non-fiction]
 external_url: https://www.trema.website/anne-fadiman-frog/?ref=daniel.pizza
 image:
   src: /assets/newsletter/anne-fadiman-frog.webp
