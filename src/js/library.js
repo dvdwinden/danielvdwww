@@ -1,6 +1,7 @@
-// Count book items and update the count dynamically
+// Count book items and update the count dynamically. Books still being
+// read sit in the “Currently reading” list and are left out of every stat.
 (function () {
-  const bookItems = document.querySelectorAll('.book-item');
+  const bookItems = document.querySelectorAll('.book-item:not([data-status="reading"])');
   const countElement = document.getElementById('book-count');
   if (countElement && bookItems.length > 0) {
     countElement.textContent = bookItems.length;
