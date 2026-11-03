@@ -1008,7 +1008,8 @@ article time {
     @apply text-gray-600 text-sm;
 }
 
-.tag {
+/* Not the Prism .token.tag spans in code blocks */
+.tag:not(.token) {
     @apply bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs mr-2;
 }
 
@@ -2738,4 +2739,45 @@ ul.newsletter img {
         rgb(0 0 0 / 0.3) 0 1.5px,
         transparent 1.5px 3.5px
     );
+}
+
+/* ==========================================================================
+   BOOK LIGHT FIGURES
+   The figures in the “Lighting Trema’s books” post are cover cutouts on a
+   transparent ground (see scripts/book-light-figures.js), so the page shows
+   through and the shadows sit in the alpha channel. The single-cover scenes
+   get a panel in light mode; in dark mode everything sits straight on the
+   page. The shadows' alpha is dithered by the script, so no grain is needed
+   here to hide the steps a soft glow makes over near-black.
+   ========================================================================== */
+.book-light-scene {
+    position: relative;
+}
+
+.book-light-scene img {
+    border-radius: 0;
+}
+
+.book-light-panel {
+    background: #dedcd5;
+    border: 1px solid #c5c3bc;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+/* Figures that sit in the text column rather than across the page */
+.prose figure.book-light-inline {
+    margin: 2.5rem 0;
+}
+
+.book-light-panel-dark {
+    background: #23211e;
+    border-color: #3a3835;
+}
+
+/* In dark mode nothing is boxed: the scenes sit straight on the page */
+.dark .book-light-panel {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
 }
