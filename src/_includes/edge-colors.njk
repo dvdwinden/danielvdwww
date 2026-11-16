@@ -1,0 +1,50 @@
+{#
+    The colours behind mobile Safari's status bar and bottom controls.
+
+    Safari reads them off the page: whatever is fixed along the top and bottom
+    of the viewport, and failing that the document background. So the edge
+    strips and the html and body backgrounds are all painted from one pair of
+    values, --edge-top-background and --edge-bottom-background (see EDGE
+    COLOURS in style.css, which also sets out how Safari chooses), and those
+    follow the page's ground unless something that covers the page sets them:
+    the photo lightbox does, to its tint. The theme-color tag is for browsers
+    that still use one, and it can't read a custom property, so the script
+    below copies the top colour into it.
+
+    Must come after the stylesheet, which is where the values are defined.
+#}
+<meta name="theme-color" content="{{ bodyClass | groundColor }}">
+<script>
+  (function () {
+    var root = document.documentElement;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    var TOP = '--edge-top-background';
+    var BOTTOM = '--edge-bottom-background';
+
+    // Read the value itself rather than the html background it paints: a
+    // custom property is never mid-transition.
+    function sync() {
+      var top = getComputedStyle(root).getPropertyValue(TOP).trim();
+      if (top) meta.content = top;
+    }
+
+    window.edgeColors = {
+      // Call after anything that changes the ground, such as the theme.
+      sync: sync,
+      // Something covers the page: take its colours for the edges.
+      set: function (top, bottom) {
+        root.style.setProperty(TOP, top);
+        root.style.setProperty(BOTTOM, bottom || top);
+        sync();
+      },
+      // It is gone: back to the page's own ground.
+      reset: function () {
+        root.style.removeProperty(TOP);
+        root.style.removeProperty(BOTTOM);
+        sync();
+      }
+    };
+
+    sync();
+  })();
+</script>

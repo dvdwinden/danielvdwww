@@ -1435,6 +1435,14 @@ module.exports = function (eleventyConfig) {
     return pages;
   });
 
+  // A page names its ground as a Tailwind class (`bodyClass: bg-green`). The
+  // layouts need the colour itself, to hand to CSS as --ground-light and to the
+  // theme-color tag, so read it from the same palette Tailwind builds from.
+  const GROUNDS = require("./tailwind.config.js").theme.extend.colors;
+  eleventyConfig.addFilter("groundColor", (bodyClass) => {
+    return GROUNDS[String(bodyClass || "").replace(/^bg-/, "")] || GROUNDS.blue;
+  });
+
   eleventyConfig.addFilter("date", (dateObj, format = "LLL yyyy") => {
     return DateTime.fromJSDate(dateObj).toFormat(format);
   });

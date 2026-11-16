@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"{% if forceDark %} data-force-dark="true"{% endif %}>
+<html lang="en"{% if forceDark %} data-force-dark="true"{% endif %} style="--ground-light: {{ bodyClass | groundColor }}">
 <head>
 	<script>
 	  // Apply dark mode immediately to prevent flash
@@ -102,8 +102,7 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
-    <meta name="theme-color" content="#ededea" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+    {% include "edge-colors.njk" %}
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="mobile-web-app-capable" content="yes">
 
@@ -144,7 +143,15 @@
 </head>
 <body class="min-h-screen font-sans overflow-x-hidden">
     <!-- Background layer -->
-    <div id="page-background" class="fixed inset-0 -z-10 {{ bodyClass }}"></div>
+    <div id="page-background" class="fixed inset-0 -z-10"></div>
+
+    {# A thin strip along the top of the viewport, in the colour mobile Safari
+       should carry into its status bar; see EDGE COLOURS in style.css. A
+       direct child of the body, so that nothing transformed contains it and
+       it stays fixed to the viewport. There is deliberately none at the
+       bottom: with nothing fixed there Safari lets the page run on under its
+       controls, where a strip would have it cut the page off with a solid bar. #}
+    <div class="edge-top" aria-hidden="true"></div>
 
     <!-- Skip navigation for keyboard users -->
     <a href="#main-content" class="skip-link">Skip to main content</a>

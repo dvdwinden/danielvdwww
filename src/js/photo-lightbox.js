@@ -26,6 +26,16 @@
   // photo, or closed.
   let loadToken = 0;
 
+  // The dialog covers the page, so while it is open its tint is what meets the
+  // top and bottom of the screen. Hand the same value to the edge strips, the
+  // document backgrounds and the theme-color tag (see edge-colors.njk), or
+  // mobile Safari keeps the page's ground in its status bar and controls.
+  const FALLBACK_TINT = "rgb(28, 28, 26)";
+
+  function tintEdges(tint) {
+    if (window.edgeColors) window.edgeColors.set(tint);
+  }
+
   // Checked at the moment of the tap rather than cached, so a device that can
   // do both answers to whichever is in use.
   function isTouch() {
@@ -138,7 +148,7 @@
     if (!img) return;
 
     const token = ++loadToken;
-    const tint = trigger.dataset.tint || "rgb(28, 28, 26)";
+    const tint = trigger.dataset.tint || FALLBACK_TINT;
     const caption = trigger.dataset.caption || "";
     const alt = img.alt || "";
 
@@ -147,6 +157,7 @@
     const paint = function (src) {
       dialog.style.setProperty("--photo-tint", tint);
       dialog.style.setProperty("--photo-ink", inkFor(tint));
+      tintEdges(tint);
       imgEl.src = src;
       imgEl.alt = alt;
       captionEl.textContent = caption;
@@ -198,6 +209,9 @@
     usedKeyboard = false;
     show(index);
     dialog.showModal();
+    // A photo that is still loading hasn't painted, so the dialog is showing
+    // the tint it last had. Match that until the photo arrives with its own.
+    tintEdges(dialog.style.getPropertyValue("--photo-tint") || FALLBACK_TINT);
     // Take focus onto the dialog itself. Otherwise it lands on the close
     // button, which then lights up the moment any key is pressed - including
     // an arrow key that has nothing to do with closing.
@@ -254,6 +268,9 @@
   });
 
   dialog.addEventListener("close", function () {
+    // The page is showing again: give the edges back to its ground.
+    if (window.edgeColors) window.edgeColors.reset();
+
     // Drop the source so a large image isn't held in memory.
     imgEl.removeAttribute("src");
 

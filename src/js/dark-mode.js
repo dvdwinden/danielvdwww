@@ -4,51 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const html = document.documentElement;
   const systemDarkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-  // Function to update theme color meta tag and html background color
+  // The ground is a custom property that follows the `dark` class (see EDGE
+  // COLOURS in style.css), so the page, the edge strips and the document
+  // backgrounds have already changed. Only the theme-color tag needs telling.
   function updateThemeColor() {
-    let themeColorMeta = document.querySelector('meta[name="theme-color"]');
-    if (!themeColorMeta) {
-      themeColorMeta = document.createElement('meta');
-      themeColorMeta.name = 'theme-color';
-      document.head.appendChild(themeColorMeta);
-    }
-
-    // Check if we're in dark mode first
-    if (html.classList.contains('dark')) {
-      themeColorMeta.content = '#222';
-      html.style.backgroundColor = '#222';
-      return;
-    }
-
-    // Check the page background class to determine the appropriate theme color
-    const pageBackground = document.getElementById('page-background');
-    let backgroundColor = '#ededea'; // Default fallback (bg-blue)
-
-    if (pageBackground) {
-      const backgroundClasses = pageBackground.className;
-
-      if (backgroundClasses.includes('bg-stone')) {
-        backgroundColor = '#e8e6e0';
-      } else if (backgroundClasses.includes('bg-blue')) {
-        backgroundColor = '#ededea';
-      } else if (backgroundClasses.includes('bg-green')) {
-        backgroundColor = '#e3e7df';
-      } else if (backgroundClasses.includes('bg-amber')) {
-        backgroundColor = '#efe9e2';
-      } else if (backgroundClasses.includes('bg-beige')) {
-        backgroundColor = '#fcf8e8';
-      } else if (backgroundClasses.includes('bg-cream')) {
-        backgroundColor = '#faf6e8';
-      } else if (backgroundClasses.includes('bg-red')) {
-        backgroundColor = '#fae8e8';
-      } else if (backgroundClasses.includes('bg-purple')) {
-        backgroundColor = '#faf0f5';
-      }
-    }
-
-    // Set both theme-color meta tag and html background color
-    themeColorMeta.content = backgroundColor;
-    html.style.backgroundColor = backgroundColor;
+    if (window.edgeColors) window.edgeColors.sync();
   }
 
   // Some pages are dark by design and carry no toggle. Leave the class the

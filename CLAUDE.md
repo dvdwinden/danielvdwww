@@ -101,6 +101,39 @@ Tailwind configuration in `tailwind.config.js`:
 - **Custom Typography**: Base font size is 1.25rem (20px) with 1.5 line height
 - **Font Loading**: Fonts preloaded in base.njk for performance
 
+### Edge Colours (mobile Safari's status bar and bottom controls)
+
+Safari colours its chrome from the page, so everything it can read is painted
+from one pair of custom properties, `--edge-top-background` and
+`--edge-bottom-background` (the `EDGE COLOURS` section of `src/css/style.css`):
+the `html` and `body` backgrounds, the fixed `.edge-top` strip in both layouts,
+and the `.edge-top` / `.edge-bottom` pair inside the photo lightbox. Both follow `--ground`, the page's colour:
+`--ground-light`, set on `<html>` from `bodyClass` by the `groundColor` filter,
+or the dark ground under `html.dark`.
+
+Safari takes each bar's colour from the topmost fixed element at that edge, and
+only from that element's own `background-color`. The strips exist to be that
+element, which is why they sit above everything, carry the colour themselves
+rather than on a pseudo-element, and are over 10px tall and over 0.1 opacity.
+The comment above `EDGE COLOURS` has the rules, read from WebKit's source.
+
+The page has no bottom strip on purpose. A bar coloured from a fixed element is
+filled solid, which cuts the text off in a hard line above the bottom controls;
+with nothing fixed there the page runs on beneath them and the bar falls back
+to the `body` background.
+
+- `edge-colors.njk`, included by both layouts, emits the single `theme-color`
+  tag and defines `window.edgeColors`: `sync()` after a theme change, `set(top,
+  bottom)` when something covers the page, `reset()` when it goes. The photo
+  lightbox uses the last two for its tint.
+- Don't set a background on `html`, `body` or `#page-background` any other way,
+  and don't add a second `theme-color` tag: a value that isn't derived from
+  these properties is how the chrome ends up a different colour from the page.
+- Anything that covers the viewport in the top layer (a modal `<dialog>`, a
+  popover) hides the page's strips from Safari and needs a pair of its own, as
+  the photo lightbox has. Without them the bars keep the colour they had.
+- Fixed elements ignore the body's safe-area padding; inset them with `env()`.
+
 ### Data Files
 
 `src/_data/` contains JavaScript files that fetch data at build time:

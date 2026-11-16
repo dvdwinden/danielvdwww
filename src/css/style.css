@@ -95,25 +95,119 @@ nav a:focus-visible {
    ========================================================================== */
 
 /* Basic element styling */
+/* EDGE COLOURS
+   Mobile Safari colours its status bar and bottom controls from the page, and
+   everything it could read is painted from the one pair of values below, so
+   the browser's chrome can't disagree with the page.
+
+   --ground is the page's own colour: --ground-light, which each layout sets on
+   <html> from the page's bodyClass, or the dark ground. The two edge values
+   follow it unless something covering the page overrides them on <html>, as
+   the photo lightbox does with its tint (window.edgeColors, edge-colors.njk).
+
+   How Safari chooses, since it decides what the strips further down must be
+   (WebKit, LocalFrameView::fixedContainerEdges). At each edge it looks 4px in
+   from the middle for whatever is fixed or sticky there, and:
+   - if that is about as wide as the viewport but not as tall, the bar takes
+     its background-color, read from its style again every time a fixed layer
+     repaints. Colour painted by a pseudo-element or a child is not read: the
+     edge is photographed once instead and that colour is kept for as long as
+     the element stays there. That is what the site's fixed header did to the
+     status bar, which is why a theme change never reached it;
+   - if it is about the size of the viewport, as the lightbox is, the bar keeps
+     whatever colour it already had and only takes the element's own when it
+     had none. The first photo's tint stuck to the bottom bar that way, and
+     the status bar never left the page's ground;
+   - if nothing is there, the bar falls back to the document background, and
+     at the bottom the page carries on underneath the controls.
+   A bar that takes a fixed element's colour is filled solid with it, which at
+   the bottom cuts the text off in a hard line above the controls. So the page
+   has a strip at the top only, where the status bar is solid either way, and
+   leaves the bottom to the body background. The lightbox is one flat colour
+   and would otherwise hold on to a stale one, so it has a strip at each edge. */
+:root {
+    --ground: var(--ground-light, theme("colors.blue"));
+    --edge-top-background: var(--ground);
+    --edge-bottom-background: var(--ground);
+}
+
+html.dark {
+    --ground: #23211e;
+    /* The dark-mode rule further down holds `.dark` colours back a quarter of
+       a second. Not this background: it has to turn with the body, the strips
+       and the page, or the top edge is briefly the odd one out. */
+    transition: color 0s 0.25s;
+}
+
 html {
     overflow-y: scroll;
-    /* Background color will be set dynamically by JavaScript to match page background */
-    /* Default fallback for initial render before JS loads */
-    background-color: #ededea;
+    /* What shows above the page: overscroll, and the status bar. */
+    background-color: var(--edge-top-background);
     min-height: 100%;
     min-height: -webkit-fill-available;
     /* iOS Safari fix */
 }
 
-html.dark {
-    /* Dark mode background - will be overridden by JS if needed */
-    background-color: #222;
-}
-
 body {
-    /* Extend background into safe areas on iOS */
+    /* What shows below the page, behind the bottom controls. */
+    background-color: var(--edge-bottom-background);
+    /* The viewport covers the safe areas (viewport-fit=cover), so the
+       backgrounds run to the glass and the content is padded back inside. */
     padding: env(safe-area-inset-top) env(safe-area-inset-right)
         env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* The strips. On top of everything, because Safari only reads the topmost
+   fixed thing at each edge; nearly transparent, so that being on top costs
+   the content beneath nothing (under 0.1 Safari counts an element as hidden
+   and looks past it; the colour it takes is the full one either way); as tall
+   as the safe area there and never under 12px. The lightbox's pair sits
+   inside the dialog, because a modal dialog is above even the page's strip.
+
+   Only where there are such bars to colour: iOS and iPadOS are what answer
+   to -webkit-touch-callout. */
+.edge-top,
+.edge-bottom {
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 90;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .edge-top,
+    .edge-bottom {
+        display: block;
+    }
+}
+
+.edge-top {
+    top: 0;
+    height: max(12px, env(safe-area-inset-top));
+    background-color: var(--edge-top-background);
+}
+
+.edge-bottom {
+    bottom: 0;
+    height: max(12px, env(safe-area-inset-bottom));
+    background-color: var(--edge-bottom-background);
+}
+
+/* Fixed chrome takes no part in the body's padding, so it is brought inside
+   the safe areas here. */
+#page-content > header {
+    padding-top: calc(1.5rem + env(safe-area-inset-top));
+    padding-left: calc(1.5rem + env(safe-area-inset-left));
+    padding-right: calc(1.5rem + env(safe-area-inset-right));
+}
+
+#page-content > nav {
+    margin-bottom: env(safe-area-inset-bottom);
+    margin-left: env(safe-area-inset-left);
+    margin-right: env(safe-area-inset-right);
 }
 
 img,
@@ -181,6 +275,7 @@ iframe {
 }
 
 #page-background {
+    background-color: var(--ground);
     view-transition-name: bg;
     transform: translateZ(0);
     /* Extend background into safe areas on iOS */
@@ -192,7 +287,6 @@ iframe {
 
 html.dark #page-background {
     view-transition-name: none;
-    background-color: #23211e !important;
 }
 
 #page-content {
@@ -582,12 +676,22 @@ span.testimonial {
     overflow: hidden;
     background-color: var(--photo-tint, #1c1c1a);
     cursor: zoom-out;
-    /* Arrowing between photos shifts the backdrop from one tint to the next. */
+}
+
+/* Arrowing between photos shifts the backdrop from one tint to the next. The
+   edge strips make the same shift on the same curve, because they are what
+   mobile Safari colours its bars from: left to cut straight to the new tint,
+   the bars arrive a third of a second ahead of the backdrop between them. */
+#photo-lightbox,
+#photo-lightbox .edge-top,
+#photo-lightbox .edge-bottom {
     transition: background-color 0.35s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #photo-lightbox {
+    #photo-lightbox,
+    #photo-lightbox .edge-top,
+    #photo-lightbox .edge-bottom {
         transition: none;
     }
 }
@@ -655,7 +759,10 @@ span.testimonial {
     box-sizing: border-box;
     height: 100%;
     margin: 0;
-    padding: 5vmin;
+    padding: max(5vmin, env(safe-area-inset-top))
+        max(5vmin, env(safe-area-inset-right))
+        max(5vmin, env(safe-area-inset-bottom))
+        max(5vmin, env(safe-area-inset-left));
 }
 
 .lightbox-image {
@@ -677,8 +784,8 @@ span.testimonial {
 
 .lightbox-close {
     position: absolute;
-    top: 1rem;
-    right: 1.25rem;
+    top: calc(1rem + env(safe-area-inset-top));
+    right: calc(1.25rem + env(safe-area-inset-right));
     z-index: 1;
     display: flex;
     align-items: center;

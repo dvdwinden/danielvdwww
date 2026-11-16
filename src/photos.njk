@@ -265,6 +265,11 @@ photos:
 </div>
 
 <dialog id="photo-lightbox" aria-label="Enlarged photograph" tabindex="-1" autofocus>
+  {# The dialog covers the page's own edge strips, so it carries a pair: they
+     are what mobile Safari reads the bar colours from while it is open. See
+     EDGE COLOURS in style.css. #}
+  <div class="edge-top" aria-hidden="true"></div>
+  <div class="edge-bottom" aria-hidden="true"></div>
   <div class="lightbox-nav lightbox-prev" aria-hidden="true"></div>
   <div class="lightbox-nav lightbox-next" aria-hidden="true"></div>
   <button type="button" class="lightbox-close" aria-label="Close">
