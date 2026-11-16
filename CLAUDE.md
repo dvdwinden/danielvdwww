@@ -52,6 +52,8 @@ The codebase features a sophisticated image optimization system in `.eleventy.js
   - `{% retinaImage src, alt, maxWidth %}` - Retina-optimized images (1x and 2x)
 - **Transform Hook**: `optimizeImages` transform automatically processes `<img>` tags in HTML
 - **Favicon Exclusion**: Files containing "favicon" or "apple-touch-icon" bypass optimization
+- **Clearing Renditions**: `clearOutputs` deletes an image's stale renditions only while `processAllImages` runs, before any page renders. Never call it from a page-level pass: in CI every cached rendition looks stale, and a pass that clears without rewriting the default widths leaves pages linking files that 404
+- **Repair Pass**: after every build, `repairMissingRenditions` reads the written pages back, rebuilds any linked rendition `_site` lacks, and fails a CI build if one can't be rebuilt
 
 The system converts images to WebP format at multiple widths and generates `<picture>` elements with proper srcsets. This optimization reduces deployment size from ~341MB to ~128MB (62% reduction).
 

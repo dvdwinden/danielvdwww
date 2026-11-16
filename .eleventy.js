@@ -216,14 +216,20 @@ module.exports = function (eleventyConfig) {
   // Images whose renditions have already been cleared in this build.
   const CLEARED_SOURCES = new Set();
 
+  // True only while processAllImages runs, before any page is rendered. It is
+  // the one window in which a rendition may be deleted: see clearOutputs.
+  let PREPROCESSING_IMAGES = false;
+
   // eleventy-img reuses any output that already sits at the name it would
   // write, and our filenameFormat is name + width alone, with no content hash.
   // So an edited source keeps serving its old renditions — from _site locally,
   // or from the restored image cache in CI. Clear them before writing.
   //
-  // Two rules make that safe, and both are load-bearing. Clear every rendition
+  // Three rules make that safe, and all are load-bearing. Clear every rendition
   // of an image at once, the first time the build touches it, and never again;
-  // and clear only what is actually stale.
+  // clear only what is actually stale; and clear only while pre-processing,
+  // before the first page renders, where the same step goes straight on to
+  // rewrite the default widths every page links.
   //
   // The reason is that deleting and rewriting are done by different passes. One
   // image goes through here several times per build at different width sets —
@@ -240,7 +246,21 @@ module.exports = function (eleventyConfig) {
   // build after, because the source itself never changed. Which image loses
   // depends on the order pages render in, so it moves — the run that restored
   // nogood06 took out nogood05, and a build after that took out two others.
+  //
+  // The third rule is there because "stale" is read off file dates, and a CI
+  // checkout stamps every source with the time of the run, which makes every
+  // rendition restored from the image cache look stale. When the first pass to
+  // touch an image was the bookmark thumbnail one, it cleared the lot and wrote
+  // back only its own 128/256px pair, so the widths the pages link were gone:
+  // alley-and-gable 404'd on /photos for exactly that reason, as did the two
+  // other images used as card thumbnails. Pre-processing is where the build
+  // decides which images are out of date; one it passed over was judged
+  // current, so nothing that runs later has grounds to delete its files. A
+  // delete in the middle of the render also lands after other pages have
+  // linked, or reused, the very files it removes.
   function clearOutputs(outputDir, originalName) {
+    if (!PREPROCESSING_IMAGES) return;
+
     const key = path.join(outputDir, originalName);
     if (CLEARED_SOURCES.has(key)) return;
     CLEARED_SOURCES.add(key);
@@ -336,6 +356,11 @@ module.exports = function (eleventyConfig) {
   // Unlike processImage(), this does not short-circuit on the default-widths
   // cache, so it can generate additional widths (e.g. a retina variant) for a
   // single image without affecting any other image.
+  //
+  // It adds files and never clears any: see the third rule above clearOutputs.
+  // A source that changed has already been through pre-processing by the time
+  // a page asks for extra widths, and that cleared every stale rendition of it,
+  // these widths included.
   async function processImageWidths(srcPath, widths) {
     const relativePath = srcPath.replace(/^src\//, '');
     const parsedPath = path.parse(relativePath);
@@ -345,7 +370,6 @@ module.exports = function (eleventyConfig) {
 
     try {
       const resolvedWidths = widthsFor(srcPath, widths);
-      clearOutputs(outputDir, originalName);
 
       return await Image(srcPath, {
         widths: resolvedWidths,
@@ -456,8 +480,17 @@ module.exports = function (eleventyConfig) {
     }
   }
 
-  // Process all images in a directory
+  // Process all images in a directory. Renditions may only be cleared in here.
   async function processAllImages() {
+    PREPROCESSING_IMAGES = true;
+    try {
+      await preprocessImages();
+    } finally {
+      PREPROCESSING_IMAGES = false;
+    }
+  }
+
+  async function preprocessImages() {
     // Ensure output directories exist
     const dirs = [
       "_site/assets",
@@ -583,6 +616,95 @@ module.exports = function (eleventyConfig) {
     console.log("Pre-processing all images...");
     await processAllImages();
   });
+
+  // Everything above decides ahead of time which renditions to build and which
+  // to trust from a previous run, and each time that reasoning has been wrong a
+  // picture has 404'd on the live site until somebody happened to notice. The
+  // written pages are the only honest list of what is needed. So once they are
+  // out, read them back: a rendition a page links that _site lacks is rebuilt
+  // from its source, whatever caused it to go missing, and one that can't be
+  // rebuilt fails a CI build before it deploys.
+  //
+  // Only a page this build wrote can fail it. _site comes back from a cache in
+  // CI and nothing ever empties it, so it also holds pages whose posts are long
+  // deleted; those get the same repair, but a dead link on one of them is not
+  // worth blocking every deploy over, and no later build could clear it.
+  const RENDITION_URL = new RegExp(`/assets/[^"'\\s,()<>]+?-\\d+\\.${OUTPUT_FORMAT}`, 'g');
+  const renditionFile = url => {
+    let decoded = url;
+    try { decoded = decodeURI(url); } catch { /* keep it as written */ }
+    return path.join('_site', decoded);
+  };
+
+  async function repairMissingRenditions({ results = [] } = {}) {
+    const written = new Set(
+      results.filter(r => r.outputPath).map(r => path.normalize(r.outputPath))
+    );
+
+    // Each missing rendition, with a page that links it for the report: one
+    // from this build where there is one.
+    const missing = new Map();
+    for (const page of await glob('_site/**/*.html')) {
+      const current = written.has(path.normalize(page));
+      const html = await fs.promises.readFile(page, 'utf8');
+      for (const url of html.match(RENDITION_URL) || []) {
+        if (fs.existsSync(renditionFile(url))) continue;
+        if (!missing.has(url) || (current && !missing.get(url).current)) {
+          missing.set(url, { page, current });
+        }
+      }
+    }
+    if (missing.size === 0) return;
+
+    // Group by source, so an image missing several widths is read once.
+    const sources = new Map();
+    for (const url of missing.keys()) {
+      const [, dir, name, width] = renditionFile(url)
+        .match(new RegExp(`^_site/(.+)/([^/]+)-(\\d+)\\.${OUTPUT_FORMAT}$`));
+      // The extension is a stand-in: findFileWithExtension swaps it for each
+      // format a source can be in.
+      const source = await findFileWithExtension(path.join('src', dir, `${name}.${OUTPUT_FORMAT}`));
+      if (!source) continue;
+      if (!sources.has(source)) sources.set(source, { dir, name, widths: new Set() });
+      sources.get(source).widths.add(Number(width));
+    }
+
+    for (const [source, { dir, name, widths }] of sources) {
+      console.warn(`🩹 Rebuilding ${[...widths].sort((a, b) => a - b).join(', ')}px of ${source}: linked by a page, missing from _site`);
+      try {
+        await Image(source, {
+          widths: [...widths],
+          formats: [OUTPUT_FORMAT],
+          outputDir: path.join('./_site', dir),
+          urlPath: `/${dir}/`,
+          filenameFormat: (id, src, width, format) => `${name}-${width}.${format}`,
+          sharpWebpOptions: webpOptionsFor(source),
+          // eleventy-img remembers which files it has seen and written in this
+          // process, and would otherwise answer from that memory instead of
+          // looking at a disk something has since deleted from.
+          useCache: false
+        });
+      } catch (err) {
+        console.error(`Error rebuilding ${source}:`, err);
+      }
+    }
+
+    const broken = [...missing].filter(([url]) => !fs.existsSync(renditionFile(url)));
+    if (broken.length === 0) return;
+
+    const report = list => list.map(([url, { page }]) => `  ${url}  (linked from ${page})`).join('\n');
+    const fatal = broken.filter(([, { current }]) => current);
+    if (fatal.length > 0 && process.env.GITHUB_ACTIONS === 'true') {
+      throw new Error(
+        `${fatal.length} image rendition(s) are linked by a page but missing from _site, ` +
+        `and could not be rebuilt from a source in src/assets:\n${report(fatal)}\n` +
+        `Deploying would publish broken images, so the build stops here.`
+      );
+    }
+    console.warn(`⚠️  ${broken.length} image rendition(s) are linked by a page but missing from _site:\n${report(broken)}`);
+  }
+
+  eleventyConfig.on("eleventy.after", repairMissingRenditions);
 
   async function imageShortcode(src, alt, sizes = "(min-width: 1024px) 100vw, 50vw") {
     // Skip favicon files
