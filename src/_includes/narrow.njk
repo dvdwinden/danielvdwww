@@ -226,11 +226,8 @@
         </main>
     </div>
 
+    {% if page.url == '/now/' %}
     <script>
-        // Set Last.fm configuration from environment variables
-        window.LASTFM_API_KEY = '{{ env.LASTFM_API_KEY | trim }}';
-        window.LASTFM_USERNAME = '{{ env.LASTFM_USERNAME | trim }}';
-        {% if page.url == '/now/' %}
         // Set GitHub data
         window.GITHUB_USERNAME = 'dvdwinden';
         window.GITHUB_CONTRIBUTIONS = {{ githubContributions.contributionsByDate | dump | safe }};
@@ -239,11 +236,10 @@
         // Set training data. Aggregated days only — the intervals.icu key
         // stays a build-time secret and is never exposed here.
         window.TRAINING_ACTIVITY = {{ trainingActivities.activityByDate | dump | safe }};
-        {% endif %}
     </script>
+    {% endif %}
     <script src="/js/dark-mode.js"></script>
     <script src="/js/header-scroll.js"></script>
-    <script src="/js/lastfm-live.js"></script>
     {% if page.url.startsWith('/newsletter/') %}
     <script src="/js/book-light.js"></script>
     {% endif %}

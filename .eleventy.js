@@ -142,9 +142,7 @@ function normalizeSrcPath(src) {
 module.exports = function (eleventyConfig) {
   // Add environment variables to global data
   eleventyConfig.addGlobalData("env", {
-    NODE_ENV: process.env.NODE_ENV || "development",
-    LASTFM_API_KEY: process.env.LASTFM_API_KEY || "",
-    LASTFM_USERNAME: process.env.LASTFM_USERNAME || "dvdwinden"
+    NODE_ENV: process.env.NODE_ENV || "development"
   });
 
   // Look up a Trema post's cover on its own site. The stored external_url

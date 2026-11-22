@@ -1004,26 +1004,6 @@ nav.pagination a:hover {
     color: theme("colors.gray.900");
 }
 
-.site-footer div.lastfm {
-    width: 100%;
-    flex-basis: 100%;
-    order: 3;
-    font-size: 0.875rem !important;
-    display: block;
-}
-
-.site-footer div.lastfm a {
-    text-decoration: none;
-}
-
-.site-footer div.lastfm a:hover {
-    transition: color 0.2s;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-    background: none;
-}
-
 /* Article styling */
 article header {
     @apply bg-transparent border-0 p-0 mb-8;
