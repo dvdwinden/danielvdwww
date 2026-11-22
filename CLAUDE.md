@@ -182,8 +182,6 @@ Two things to keep in mind when touching this:
 ### Environment Variables
 
 Required for API integrations (set in `.env` locally, GitHub Secrets in CI):
-- `LASTFM_API_KEY` - Last.fm API access
-- `LASTFM_USERNAME` - Last.fm username
 - `GITHUB_TOKEN` - GitHub API access (GH_PAT in CI)
 - `WEBMENTION_IO_TOKEN` - webmention.io API key (optional; omitting it renders no mentions)
 - `INTERVALS_ATHLETE_ID` - intervals.icu athlete ID (e.g. `i123456`)
