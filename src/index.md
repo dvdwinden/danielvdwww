@@ -84,7 +84,7 @@ For over a decade I’ve worked on digital products, websites and web apps: soft
 
 <section class="introduction">
 
-I’m Head of Design at [Enode](https://enode.com?ref=daniel.pizza "Enode"), where we build software for energy retailers and traders. This year I led our rebrand: giving shape to how the company looks and sounds, and designing and building its new website from scratch. Now I get to carry that work into the product, and grow the team that brings it to life.
+This year I led [Enode](https://enode.com?ref=daniel.pizza "Enode")’s rebrand: giving shape to how the company looks and sounds, and designing and building its new website from scratch. Now, as Head of Design, I get to carry that into the product.
 
 {% bookmark
   url="https://enode.com?ref=daniel.pizza",
