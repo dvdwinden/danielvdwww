@@ -10,6 +10,56 @@
 
   const cycles = [];
 
+  // A reveal is a still that draws itself in: a short video laid over the image
+  // it ends on, hidden until it can play from its first frame without a wait.
+  // Until then the image is the frame, as it is for anyone who has asked for
+  // less motion or less data, or whose browser won't play it. Nothing is
+  // fetched before the figure is on screen.
+  const connection = navigator.connection;
+  const canReveal = !reduceMotion && !(connection && connection.saveData);
+  const smallScreen = window.matchMedia('(max-width: 767.98px)');
+
+  // One download each, played from memory after that. Left to stream it, a
+  // browser goes back to the server every time the frame comes round, and
+  // these come round every half minute. A failed fetch leaves the still.
+  function warm(frame) {
+    const video = frame && frame.querySelector('video[data-reveal]');
+    if (!video || !canReveal || video.dataset.warm) return;
+    video.dataset.warm = 'true';
+    const url = (smallScreen.matches && video.dataset.revealSmall) || video.dataset.reveal;
+    fetch(url, { priority: 'low' })
+      .then(response => (response.ok ? response.blob() : Promise.reject(response.status)))
+      .then(blob => {
+        video.preload = 'auto';
+        video.src = URL.createObjectURL(blob);
+      })
+      .catch(() => {});
+  }
+
+  function reveal(video, active) {
+    if (!active) {
+      video.pause();
+      return;
+    }
+    if (!canReveal) return;
+
+    // Decided the moment the frame starts fading in, never part-way: swapping
+    // the finished still for an empty first frame in plain sight would flash.
+    const ready = video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA;
+    video.classList.toggle('is-live', ready);
+    if (ready) video.currentTime = 0;
+    else warm(video.parentElement);
+    if (!video.src) return;
+
+    // Some browsers decode nothing until told to play, so one that isn't ready
+    // is played out of sight and stopped again; it is ready the next time round.
+    const played = video.play();
+    if (!played) return;
+    played.then(() => {
+      if (!video.classList.contains('is-live')) video.pause();
+    }).catch(() => video.classList.remove('is-live'));
+  }
+
   figures.forEach(figure => {
     const frames = Array.from(figure.querySelectorAll('.figure-cycle-frame'));
     if (!frames.length) return;
@@ -20,6 +70,7 @@
     let timer = null;
     // Once someone works the controls themselves, stop advancing on our own.
     let manual = false;
+    let inView = false;
 
     function show(i) {
       index = (i + frames.length) % frames.length;
@@ -29,7 +80,9 @@
         frame.setAttribute('aria-hidden', active ? 'false' : 'true');
         // A frame can hold a video; no point decoding one nobody can see.
         const video = frame.querySelector('video');
-        if (video) {
+        if (video && video.hasAttribute('data-reveal')) {
+          reveal(video, active);
+        } else if (video) {
           if (active) {
             const played = video.play();
             if (played) played.catch(() => {});
@@ -42,6 +95,11 @@
         dot.classList.toggle('is-active', n === index);
         dot.setAttribute('aria-current', n === index ? 'true' : 'false');
       });
+      // Fetch the reveals either side, so they're in hand when their turn comes.
+      if (inView) {
+        warm(frames[(index + 1) % frames.length]);
+        warm(frames[(index - 1 + frames.length) % frames.length]);
+      }
     }
 
     function start() {
@@ -56,6 +114,7 @@
 
     // Scrolled out of view: hold the frame, and stop any video with it.
     function suspend() {
+      inView = false;
       stop();
       frames.forEach(frame => {
         const video = frame.querySelector('video');
@@ -114,6 +173,7 @@
     // Back in view: re-assert the current frame, which restarts its video, then
     // resume advancing.
     function enter() {
+      inView = true;
       show(index);
       start();
     }

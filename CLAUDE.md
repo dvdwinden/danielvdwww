@@ -266,6 +266,29 @@ Descriptions can be soft-wrapped across lines — whitespace is collapsed so the
 
 Styles live in the `BOOKMARK CARDS` section of `src/css/style.css`.
 
+### Reveals in the Homepage Carousel
+
+Four frames of the Enode carousel on the homepage (the type specimen, the two
+statements and the icons) are stills that draw themselves in. Each frame keeps
+its still as an ordinary `{% image %}`, with a `<video data-reveal>` laid over
+it; `home.js` shows the video only once it can play from its first frame, and
+plays it from the start each time the frame comes round. Other carousel videos
+are plain loops that resume where they left off.
+
+- **The still is the fallback, not a poster.** It is what shows without
+  JavaScript, under `prefers-reduced-motion`, with Save-Data on, while the video
+  is still downloading, and when a browser refuses to play it. So a video has to
+  end on a frame identical to its still.
+- **Nothing loads up front.** The video has no `src` or `<source>`; `home.js`
+  fetches `data-reveal` (or `data-reveal-small` under 768px) once the figure is
+  on screen, one frame ahead of need, and plays it from memory. Don't add
+  `autoplay` or a `<source>`: either makes every visitor download it at page load.
+- **The videos are generated**, by `python3 scripts/build-type-animations.py`
+  (numpy, Pillow, ffmpeg) from the PNG stills of the same name. Change a still
+  and its video is stale until that is run again; the script fails if a video
+  wouldn't end on its still. The motion is enode.com's reveal, and its values
+  are constants at the top of the script.
+
 ### Share Images
 
 `share-image.njk`, included by both layouts, emits the `og:image` and

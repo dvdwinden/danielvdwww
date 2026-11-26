@@ -33,9 +33,25 @@ For over a decade I’ve worked on digital products, websites and web apps: soft
           <source src="/assets/work/enode-home.mp4" type="video/mp4" />
         </video>
       </div>
-      <div class="figure-cycle-frame">{% image "src/assets/work/enode-type.png", "Enode Sans and Enode Mono, the brand’s typefaces" %}</div>
-      <div class="figure-cycle-frame">{% image "src/assets/work/enode-next-grid.png", "“The Next Grid”" %}</div>
-      <div class="figure-cycle-frame">{% image "src/assets/work/enode-invisible-enabler.png", "“We’re the invisible enabler of a connected energy system.”" %}</div>
+      <!-- Reveals: these three, and the icons further down. Each still stays
+           in the page and its video, the same still drawing itself in, is laid
+           over it once it can play (data-reveal, see home.js). The image
+           carries the alt text; the video is the same thing again, so it is
+           hidden from assistive tech. home.js fetches the file, the half-size
+           one on a phone, so there is no <source> here and nothing loads
+           without it. Made by scripts/build-type-animations.py. -->
+      <div class="figure-cycle-frame">
+        {% image "src/assets/work/enode-type.png", "Enode Sans and Enode Mono, the brand’s typefaces" %}
+        <video loop muted playsinline preload="none" data-reveal="/assets/work/enode-type.mp4" data-reveal-small="/assets/work/enode-type-small.mp4" aria-hidden="true"></video>
+      </div>
+      <div class="figure-cycle-frame">
+        {% image "src/assets/work/enode-next-grid.png", "“The Next Grid”" %}
+        <video loop muted playsinline preload="none" data-reveal="/assets/work/enode-next-grid.mp4" data-reveal-small="/assets/work/enode-next-grid-small.mp4" aria-hidden="true"></video>
+      </div>
+      <div class="figure-cycle-frame">
+        {% image "src/assets/work/enode-invisible-enabler.png", "“We’re the invisible enabler of a connected energy system.”" %}
+        <video loop muted playsinline preload="none" data-reveal="/assets/work/enode-invisible-enabler.mp4" data-reveal-small="/assets/work/enode-invisible-enabler-small.mp4" aria-hidden="true"></video>
+      </div>
       <div class="figure-cycle-frame">
         <!-- mp4 only: VP9 lands 33% heavier than h264 on this dark, near-flat
              diagram, so a webm here would cost every browser that prefers it. -->
@@ -49,7 +65,10 @@ For over a decade I’ve worked on digital products, websites and web apps: soft
           <source src="/assets/work/enode-hec.mp4" type="video/mp4" />
         </video>
       </div>
-      <div class="figure-cycle-frame">{% image "src/assets/work/enode-icons.png", "Icons for the Enode platform" %}</div>
+      <div class="figure-cycle-frame">
+        {% image "src/assets/work/enode-icons.png", "Icons for the Enode platform" %}
+        <video loop muted playsinline preload="none" data-reveal="/assets/work/enode-icons.mp4" data-reveal-small="/assets/work/enode-icons-small.mp4" aria-hidden="true"></video>
+      </div>
       <div class="figure-cycle-frame">
         <video autoplay loop muted playsinline preload="metadata" aria-label="An aerial view at dusk of homes connected to the energy grid">
           <source src="/assets/work/enode-grid.webm" type="video/webm" />
