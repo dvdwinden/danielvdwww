@@ -102,7 +102,7 @@ class TrainingLive {
           `).join('')}
         </div>
         <figcaption class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
-          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-orange-400 dark:bg-orange-700 border border-black/5 dark:border-white/10"></span>Running</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-orange-400 dark:bg-orange-700 border border-black/5 dark:border-white/10"></span>Running, walking, workouts</span>
           <span class="inline-flex items-center gap-1.5"><span class="inline-block w-2.5 h-2.5 rounded-sm bg-orange-400 dark:bg-orange-700 training-tennis border border-black/5 dark:border-white/10"></span>Tennis</span>
         </figcaption>
       </div>

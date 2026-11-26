@@ -11,8 +11,10 @@ const WINDOW_DAYS = 372;
 
 // COROS only reaches back to the day the watch was paired; everything before
 // that lives in a one-off Strava export, parsed into trainingBackfill.json.
-// Live days win on a collision — the same session synced through intervals.icu
-// carries better numbers than the CSV row does.
+// The odd session logged on the phone without the watch is added there by hand
+// too: Strava is the only place it exists, and the build never talks to
+// Strava. Live days win on a collision — the same session synced through
+// intervals.icu carries better numbers than the CSV row does.
 function merge(live) {
   const cutoff = new Date();
   cutoff.setDate(cutoff.getDate() - WINDOW_DAYS);
