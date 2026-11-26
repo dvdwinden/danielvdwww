@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Designer, writer, reader
-description: Designer in Amsterdam. I design software at Enode, previously Ghost and Bakken & Bæck. I write Trema, a monthly newsletter about books worth reading.
+description: Designer in Amsterdam. Head of Design at Enode, previously Ghost and Bakken & Bæck. I write Trema, a monthly newsletter about books worth reading.
 bodyClass: bg-blue
 ---
 
@@ -21,8 +21,12 @@ For over a decade I’ve worked on digital products, websites and web apps: soft
 <div class="sm:mt-16 mt-8 sm:mb-16 mb-8">
   <figure class="figure-cycle w-full" style="--cycle-ratio: 2 / 1">
     <div class="figure-cycle-frames">
-      <div class="figure-cycle-frame">{% image "src/assets/work/enode-social-icon.png", "The Enode icon" %}</div>
-      <div class="figure-cycle-frame">{% image "src/assets/work/enode-logo.png", "The Enode logo" %}</div>
+      <div class="figure-cycle-frame">
+        <video autoplay loop muted playsinline preload="metadata" aria-label="The Enode logo: the mark draws itself, then the wordmark fades in beside it">
+          <source src="/assets/work/enode-logo-loop.webm" type="video/webm" />
+          <source src="/assets/work/enode-logo-loop.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div class="figure-cycle-frame">
         <video autoplay loop muted playsinline preload="metadata" aria-label="A home with solar panels, a heat pump and an EV charging in the garage">
           <source src="/assets/work/enode-home.webm" type="video/webm" />
@@ -32,12 +36,6 @@ For over a decade I’ve worked on digital products, websites and web apps: soft
       <div class="figure-cycle-frame">{% image "src/assets/work/enode-type.png", "Enode Sans and Enode Mono, the brand’s typefaces" %}</div>
       <div class="figure-cycle-frame">{% image "src/assets/work/enode-next-grid.png", "“The Next Grid”" %}</div>
       <div class="figure-cycle-frame">{% image "src/assets/work/enode-invisible-enabler.png", "“We’re the invisible enabler of a connected energy system.”" %}</div>
-      <div class="figure-cycle-frame">
-        <video autoplay loop muted playsinline preload="metadata" aria-label="The enabler grid: a field of dots blooming in waves">
-          <source src="/assets/work/enode-enabler-dark.webm" type="video/webm" />
-          <source src="/assets/work/enode-enabler-dark.mp4" type="video/mp4" />
-        </video>
-      </div>
       <div class="figure-cycle-frame">
         <!-- mp4 only: VP9 lands 33% heavier than h264 on this dark, near-flat
              diagram, so a webm here would cost every browser that prefers it. -->
@@ -67,7 +65,7 @@ For over a decade I’ve worked on digital products, websites and web apps: soft
 
 <section class="introduction">
 
-At [Enode](https://enode.com?ref=daniel.pizza "Enode") I mostly design software for energy retailers and traders. This year, though, I led our rebrand: giving shape to how the company looks and sounds, and designing and building its new website from scratch.
+I’m Head of Design at [Enode](https://enode.com?ref=daniel.pizza "Enode"), where we build software for energy retailers and traders. This year I led our rebrand: giving shape to how the company looks and sounds, and designing and building its new website from scratch. Now I get to carry that work into the product, and grow the team that brings it to life.
 
 {% bookmark
   url="https://enode.com?ref=daniel.pizza",
