@@ -1676,15 +1676,17 @@ ul.newsletter img {
 }
 
 /* A reveal: a video of the still drawing itself in, laid over that still and
-   out of sight until home.js has it ready to play from the start. */
+   out of sight until home.js has it ready to play from the start. Hidden with
+   opacity, not visibility: home.js plays it out of sight to get iOS Safari to
+   decode it, and Safari won't play a muted video it counts as invisible. */
 .figure-cycle-frame video[data-reveal] {
     position: absolute;
     inset: 0;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .figure-cycle-frame video[data-reveal].is-live {
-    visibility: visible;
+    opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {

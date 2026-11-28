@@ -32,8 +32,22 @@
       .then(blob => {
         video.preload = 'auto';
         video.src = URL.createObjectURL(blob);
+        prime(video);
       })
       .catch(() => {});
+  }
+
+  // iOS Safari decodes nothing until a video is played, whatever preload says,
+  // so a reveal fetched a frame ahead still had no frame to show when its turn
+  // came, and the still stood in every time. Play it out of sight as soon as
+  // it arrives and stop it at once; reveal() rewinds it when the turn comes.
+  function prime(video) {
+    if (video.classList.contains('is-live')) return;
+    const played = video.play();
+    if (!played) return;
+    played.then(() => {
+      if (!video.classList.contains('is-live')) video.pause();
+    }).catch(() => {});
   }
 
   function reveal(video, active) {
