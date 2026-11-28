@@ -197,11 +197,19 @@ body {
 }
 
 /* Fixed chrome takes no part in the body's padding, so it is brought inside
-   the safe areas here. */
+   the safe areas here. The side padding matches <main>'s (px-5 sm:px-6), so
+   the name lines up with the content's left edge. */
 #page-content > header {
+    --header-inline: 1.25rem;
     padding-top: calc(1.5rem + env(safe-area-inset-top));
-    padding-left: calc(1.5rem + env(safe-area-inset-left));
-    padding-right: calc(1.5rem + env(safe-area-inset-right));
+    padding-left: calc(var(--header-inline) + env(safe-area-inset-left));
+    padding-right: calc(var(--header-inline) + env(safe-area-inset-right));
+}
+
+@media (min-width: 640px) {
+    #page-content > header {
+        --header-inline: 1.5rem;
+    }
 }
 
 #page-content > nav {
